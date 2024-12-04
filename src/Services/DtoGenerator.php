@@ -28,6 +28,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\XmlRoot;
+use Katalam\OpenImmo\Facades\TranslationService;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\PhpNamespace;
@@ -83,7 +84,7 @@ class DtoGenerator
             ->replace('-', '_')
             ->studly()
             ->toString();
-        $className = TypeUtil::translateClass($className);
+        $className = TranslationService::translateClass($className);
 
         $namespace = (new PhpNamespace($this->namespace))
             ->addUse(XmlRoot::class, 'XmlRoot')
@@ -176,7 +177,7 @@ class DtoGenerator
             ->replace('-', '_')
             ->camel()
             ->toString();
-        $propertyName = TypeUtil::translateProperties($propertyName);
+        $propertyName = TranslationService::translateProperty($propertyName);
 
         if (array_key_exists($propertyName, $class->getProperties())) {
             return;
@@ -298,7 +299,7 @@ class DtoGenerator
             ->replace('-', '_')
             ->camel()
             ->toString();
-        $propertyName = TypeUtil::translateAttributes($propertyName);
+        $propertyName = TranslationService::translateAttribute($propertyName);
 
         $xsdType = TypeUtil::extractTypeForPhp($attribute->getType());
         $phpType = TypeUtil::getValidPhpType($xsdType);
@@ -341,15 +342,14 @@ class DtoGenerator
                 switch ($type) {
                     case 'enumeration':
                         $prefix = str($name)->upper();
-                        $prefix = str(TypeUtil::translateConstants($prefix->toString()));
-                        File::append('log.txt', $prefix.PHP_EOL);
+                        $prefix = str(TranslationService::translateConstant($prefix->toString()));
                         collect($options)
                             ->each(function (array $option) use ($class, $prefix) {
                                 $name = str(data_get($option, 'value'))
                                     ->replace(['-', ' '], '_')
                                     ->upper()
                                     ->toString();
-                                $name = TypeUtil::translateConstants($name);
+                                $name = TranslationService::translateConstant($name);
 
                                 $constantName = $prefix->append('_')->append($name)->toString();
 

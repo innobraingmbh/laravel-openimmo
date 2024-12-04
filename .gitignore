@@ -5,7 +5,7 @@
 /composer.lock
 /skeleton/bootstrap/cache/*
 !/skeleton/bootstrap/cache/.gitkeep
-/skeleton/storage/*
-!/skeleton/storage/.gitkeep
+/skeleton/storage/app/OpenImmo/*
+!/skeleton/storage/app/OpenImmo/.gitkeep
 /.phpunit.cache/
 /build/

@@ -38,6 +38,6 @@ class Generate extends Command
         }
 
         $apiGenerator = new DtoGenerator;
-        $apiGenerator->generate(storage_path('openimmo_127c.xsd'));
+        $apiGenerator->generate(storage_path('app/OpenImmo/openimmo_127c.xsd'));
     }
 }
