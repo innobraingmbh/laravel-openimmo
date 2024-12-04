@@ -1,81 +1,97 @@
 {
-    "name": "ujamii/openimmo",
-    "description": "OpenImmo library for PHP8. Read and write OpenImmo xml format with JMS Serializer.",
-    "type": "library",
-    "license": "GPL-3.0-only",
+    "name": "katalam/laravel-openimmo",
+    "description": "This is my package laravel-openimmo",
+    "keywords": [
+        "Katalam",
+        "laravel",
+        "laravel-openimmo"
+    ],
+    "homepage": "https://github.com/katalam/laravel-openimmo",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Michael Grundkötter",
-            "email": "mg@ujamii.com",
-            "homepage": "https://www.ujamii.com",
+            "name": "Bruno Görß",
+            "email": "bruno.goerss@inno-brain.de",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=8.1",
+        "php": "^8.2",
         "ext-dom": "*",
         "ext-simplexml": "*",
+        "goetas-webservices/xsd-reader": "*",
+        "goetas-webservices/xsd2php": "dev-master",
+        "illuminate/contracts": "^10.0||^11.0",
+        "spatie/laravel-package-tools": "^1.16",
         "jms/serializer": "^2.1 || ^3.5",
         "doctrine/annotations": "^2.0"
     },
     "require-dev": {
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.1.1||^7.10.0",
+        "larastan/larastan": "^2.9",
+        "orchestra/testbench": "^9.0.0||^8.22.0",
+        "pestphp/pest": "^v3.6.0",
+        "pestphp/pest-plugin-arch": "^v3.0.0",
+        "pestphp/pest-plugin-laravel": "^v3.0.0",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-phpunit": "^1.3",
         "ext-json": "*",
-        "goetas-webservices/xsd-reader": "^0.4",
-        "phpunit/phpunit": ">=7.5 <10",
-        "phpstan/phpstan": "^1.0 || ^2.0",
-        "infection/infection": ">=0.16",
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "rector/rector": ">=0.18",
-        "symfony/serializer": "^5.3 || ^6.0",
-        "nette/php-generator": "^4.0"
+       "phpstan/phpstan": "^1.0 || ^2.0",
+       "infection/infection": ">=0.16",
+       "friendsofphp/php-cs-fixer": "^3.0",
+       "rector/rector": ">=0.18",
+       "symfony/serializer": "^5.3 || ^6.0",
+       "nette/php-generator": "^4.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ujamii\\OpenImmo\\": "src"
+            "Katalam\\OpenImmo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ujamii\\OpenImmo\\Tests\\": "tests"
+            "Katalam\\OpenImmo\\Tests\\": "tests/",
+            "Workbench\\App\\": "skeleton/app/"
         }
     },
     "scripts": {
-        "generate-api": [
-            "php -f ./generate-api.php",
-            "@php-cs-fixer"
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-openimmo --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
         ],
-        "phpunit": "vendor/bin/phpunit -c build/config/phpunit.xml.dist",
-        "phpstan": "vendor/bin/phpstan --memory-limit=1G analyse -c build/config/phpstan.neon",
-        "phpstan-baseline": "vendor/bin/phpstan --memory-limit=1G analyse -c build/config/phpstan.neon -b build/config/phpstan-baseline.neon",
-        "rector": "vendor/bin/rector process src tests -c build/config/rector.php --xdebug",
-        "php-cs-fixer": "vendor/bin/php-cs-fixer fix --config build/config/cs.php",
-        "infection": "vendor/bin/infection --only-covered --configuration=./build/config/infection.json.dist --threads=8 --min-msi=99",
-        "infection-rebuild": [
-            "@infection",
-            "@generate-api"
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
         ],
-        "testall": [
-            "@generate-api",
-            "@phpunit",
-            "@phpstan",
-            "@infection-rebuild"
-        ]
-    },
-    "scripts-descriptions": {
-        "generate-api": "Re-creates all the API classes. This tasks expects you have downloaded the xsd file (http://www.openimmo.de/go.php/p/24/download.htm)",
-        "phpunit": "Runs the unit tests in this package, configured in build/config/phpunit.xml.dist.",
-        "phpstan": "Runs static code analysis, configured in build/config/phpstan.neon.",
-        "rector": "Runs rector on the src and tests directories, configured in build/config/rector.php.",
-        "php-cs-fixer": "Applies code style rules (PSR-12 and some more) to src and tests as configured in build/config/cs.php.",
-        "infection": "Runs mutation testing, configured in build/config/infection.json.dist.",
-        "infection-rebuild": "Runs mutation testing and re-creates all API classes afterwards, as the folder gets wiped during mutation tests.",
-        "testall": "Runs the whole set of tests."
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
     },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
-            "infection/extension-installer": true
+            "infection/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Katalam\\OpenImmo\\OpenImmoServiceProvider"
+            ],
+            "aliases": {
+                "LaravelOpenimmo": "Katalam\\OpenImmo\\Facades\\LaravelOpenimmo"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

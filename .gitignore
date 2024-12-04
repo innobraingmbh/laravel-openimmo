@@ -1,6 +1,11 @@
 /vendor/
 /.idea
 /example/*
-/build/coverage
+/build/*
 /composer.lock
-/build/cache/*
+/skeleton/bootstrap/cache/*
+!/skeleton/bootstrap/cache/.gitkeep
+/skeleton/storage/*
+!/skeleton/storage/.gitkeep
+/.phpunit.cache/
+/build/
