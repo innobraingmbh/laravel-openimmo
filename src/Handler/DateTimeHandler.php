@@ -1,52 +1,53 @@
 <?php
 
-namespace Ujamii\OpenImmo\Handler;
+declare(strict_types=1);
 
+namespace Katalam\OpenImmo\Handler;
+
+use DateTime;
+use DOMText;
+use Exception;
 use JMS\Serializer\GraphNavigatorInterface;
 use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\XmlDeserializationVisitor;
 use JMS\Serializer\XmlSerializationVisitor;
+use SimpleXMLElement;
 
 /**
  * Class DateTimeHandler
+ *
  * @see https://github.com/schmittjoh/serializer/blob/master/doc/handlers.rst
  */
 class DateTimeHandler implements SubscribingHandlerInterface
 {
-    /**
-     * @return array|array[]
-     */
-    public static function getSubscribingMethods()
+    public static function getSubscribingMethods(): array
     {
         return [
             [
                 'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
-                'format'    => 'xml',
-                'type'      => 'DateTime',
-                'method'    => 'serializeDateTimeToXml',
+                'format' => 'xml',
+                'type' => 'DateTime',
+                'method' => 'serializeDateTimeToXml',
             ],
             [
                 'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
-                'format'    => 'xml',
-                'type'      => 'DateTime',
-                'method'    => 'deserializeDateTimeToXml',
+                'format' => 'xml',
+                'type' => 'DateTime',
+                'method' => 'deserializeDateTimeToXml',
             ],
         ];
     }
 
-    /**
-     * @param array<string> $type
-     */
-    public function serializeDateTimeToXml(XmlSerializationVisitor $visitor, \DateTime $date, array $type): \DOMText
+    public function serializeDateTimeToXml(XmlSerializationVisitor $visitor, DateTime $date, array $type): DOMText
     {
-        return new \DOMText($date->format($type['params'][0]));
+        return new DOMText($date->format($type['params'][0]));
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
-    public function deserializeDateTimeToXml(XmlDeserializationVisitor $visitor, \SimpleXMLElement $dateAsString): \DateTime
+    public function deserializeDateTimeToXml(XmlDeserializationVisitor $visitor, SimpleXMLElement $dateAsString): DateTime
     {
-        return new \DateTime((string) $dateAsString);
+        return new DateTime((string) $dateAsString);
     }
 }
