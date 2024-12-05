@@ -47,9 +47,21 @@ class DtoGenerator
 
     public function setTargetFolder(string $targetFolder): self
     {
+        $targetFolder = str($targetFolder)
+            ->rtrim('/')
+            ->append('/')
+            ->toString();
+
+        File::ensureDirectoryExists($targetFolder);
+
         $this->targetFolder = $targetFolder;
 
         return $this;
+    }
+
+    public function getTargetFolder(): string
+    {
+        return $this->targetFolder;
     }
 
     public function setWipeTargetFolder(bool $wipeTargetFolder = true): self
@@ -344,7 +356,7 @@ class DtoGenerator
                                 $class->addConstant($constantName, data_get($option, 'value'));
                             });
 
-                        $property->addComment("@see $prefix* constants")
+                        $property->addComment("@see {$prefix}_* constants")
                             ->setValue(TypeUtil::getDefaultValueForType($property->getType(), false))
                             ->setNullable(false);
                         break;
@@ -414,7 +426,9 @@ class DtoGenerator
         $files = File::files($this->targetFolder);
 
         foreach ($files as $file) {
-            File::delete((string) $file);
+            if ($file->getExtension() === 'php') {
+                File::delete((string) $file);
+            }
         }
     }
 }

@@ -7,5 +7,7 @@
 !/skeleton/bootstrap/cache/.gitkeep
 /skeleton/storage/app/OpenImmo/*
 !/skeleton/storage/app/OpenImmo/.gitkeep
+/skeleton/storage/app/Dtos/*
+!/skeleton/storage/app/Dtos/.gitkeep
 /.phpunit.cache/
 /build/
