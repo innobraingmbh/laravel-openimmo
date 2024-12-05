@@ -151,4 +151,22 @@ class TypeUtil
     {
         return strtoupper($property->getName()).'_* constants' === CodeGenUtil::getAnnotationFromProperty($property, 'see');
     }
+
+    public static function camelize(string $key): string
+    {
+        return str($key)
+            ->lower()
+            ->replace('-', '_')
+            ->camel()
+            ->toString();
+    }
+
+    public static function studly(string $key): string
+    {
+        return str($key)
+            ->lower()
+            ->replace('-', '_')
+            ->studly()
+            ->toString();
+    }
 }

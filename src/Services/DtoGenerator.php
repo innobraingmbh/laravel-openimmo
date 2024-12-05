@@ -79,11 +79,7 @@ class DtoGenerator
 
     protected function parseElement(ElementDef $element): void
     {
-        $className = str($element->getName())
-            ->lower()
-            ->replace('-', '_')
-            ->studly()
-            ->toString();
+        $className = TypeUtil::studly($element->getName());
         $className = TranslationService::translateClass($className);
 
         $namespace = (new PhpNamespace($this->namespace))
@@ -172,11 +168,7 @@ class DtoGenerator
 
     protected function parseProperty(Element|ElementRef|ElementDef|Sequence|ElementItem $property, ClassType $class, PhpNamespace $namespace): void
     {
-        $propertyName = str($property->getName())
-            ->lower()
-            ->replace('-', '_')
-            ->camel()
-            ->toString();
+        $propertyName = TypeUtil::camelize($property->getName());
         $propertyName = TranslationService::translateProperty($propertyName);
 
         if (array_key_exists($propertyName, $class->getProperties())) {
@@ -242,19 +234,11 @@ class DtoGenerator
             if ($property->getReferencedElement()->getType() instanceof SimpleType) {
                 $propertyType = TypeUtil::extractTypeForPhp($property->getReferencedElement()->getType());
             } else {
-                $propertyType = str($property->getReferencedElement()->getName())
-                    ->lower()
-                    ->replace('-', '_')
-                    ->camel()
-                    ->toString();
+                $propertyType = TypeUtil::camelize($property->getReferencedElement()->getName());
             }
         } elseif ($property->getType() instanceof ComplexType) {
             $this->referencedInlineElements[] = $property;
-            $propertyName = str($property->getName())
-                ->lower()
-                ->replace('-', '_')
-                ->camel()
-                ->toString();
+            $propertyName = TypeUtil::camelize($property->getName());
             $propertyType = TypeUtil::extractTypeForPhp($property->getType(), $propertyName);
         } else {
             $propertyType = TypeUtil::extractTypeForPhp($property->getType());
@@ -294,11 +278,7 @@ class DtoGenerator
 
     protected function parseAttribute(Attribute $attribute, ClassType $class, PhpNamespace $namespace): void
     {
-        $propertyName = str($attribute->getName())
-            ->lower()
-            ->replace('-', '_')
-            ->camel()
-            ->toString();
+        $propertyName = TypeUtil::camelize($attribute->getName());
         $propertyName = TranslationService::translateAttribute($propertyName);
 
         $xsdType = TypeUtil::extractTypeForPhp($attribute->getType());
