@@ -1,0 +1,92 @@
+{
+  "geo": {
+	"userDefinedAnyfield": [
+	],
+	"userDefinedExtend": [
+	],
+	"userDefinedSimplefield": [
+	]
+  },
+  "contactPerson": {
+	"salutation": "Herr",
+	"otherEmail": [
+	],
+	"name": "John Doe",
+	"otherPhoneNumber": [
+	],
+	"userDefinedAnyfield": [
+	],
+	"userDefinedExtend": [
+	],
+	"userDefinedSimplefield": [
+	]
+  },
+  "propertyCategory": {
+	"typeOfUse": {
+	  "commercial": false,
+	  "living": false
+	},
+	"propertyType": {
+	  "officesPractices": [
+	  ],
+	  "retail": [
+	  ],
+	  "commercialLeisureProperty": [
+	  ],
+	  "hospitality": [
+	  ],
+	  "plot": [
+	  ],
+	  "hallsStorageProduction": [
+	  ],
+	  "house": [
+	  ],
+	  "agricultureAndForestry": [
+	  ],
+	  "propertyTypeAdditional": [
+	  ],
+	  "parking": [
+	  ],
+	  "other": [
+	  ],
+	  "apartment": [
+	  ],
+	  "rooms": [
+	  ],
+	  "apartmentBuildingInvestmentProperty": [
+	  ]
+	},
+	"userDefinedAnyfield": [
+	],
+	"userDefinedExtend": [
+	],
+	"userDefinedSimplefield": [
+	],
+	"marketingType": {
+	  "purchase": true,
+	  "rentLease": false
+	}
+  },
+  "userDefinedAnyfield": [
+  ],
+  "userDefinedExtend": [
+  ],
+  "userDefinedSimplefield": [
+  ],
+  "technicalManagement": {
+	"action": {
+	  "actionType": "CHANGE"
+	},
+	"externalPropertyNumber": "456",
+	"openImmoObjectId": "123",
+	"statusFrom": "2021-06-30T09:54:33+00:00",
+	"userDefinedAnyfield": [
+	],
+	"userDefinedExtend": [
+	],
+	"userDefinedSimplefield": [
+	]
+  },
+  "additionalAddress": [
+  ]
+}

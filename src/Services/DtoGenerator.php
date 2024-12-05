@@ -247,6 +247,7 @@ class DtoGenerator
                 $propertyType = TypeUtil::extractTypeForPhp($property->getReferencedElement()->getType());
             } else {
                 $propertyType = TypeUtil::camelize($property->getReferencedElement()->getName());
+                $propertyType = ucfirst(TranslationService::translateProperty($propertyType));
             }
         } elseif ($property->getType() instanceof ComplexType) {
             $this->referencedInlineElements[] = $property;
