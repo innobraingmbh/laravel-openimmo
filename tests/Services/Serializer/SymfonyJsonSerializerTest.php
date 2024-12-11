@@ -14,6 +14,7 @@ use Katalam\OpenImmo\Dtos\SportDistances;
 use Katalam\OpenImmo\Dtos\TechnicalManagement;
 use Katalam\OpenImmo\Dtos\Transfer;
 use Katalam\OpenImmo\Dtos\TypeOfUse;
+use Katalam\OpenImmo\Facades\OpenImmoService;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
@@ -74,7 +75,7 @@ test('write real estate json', function () {
 
     $realEstate->setTechnicalManagement($technicalManagement);
 
-    $generatedJson = serializeObjectIntoJson($realEstate);
+    $generatedJson = OpenImmoService::serializeObjectIntoJson($realEstate);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });
@@ -93,7 +94,7 @@ test('write transfer json', function () {
         ->setTimestamp(new DateTime('2014-06-01T10:00:00'))
         ->setRegionId('ABCD143');
 
-    $generatedJson = serializeObjectIntoJson($transfer);
+    $generatedJson = OpenImmoService::serializeObjectIntoJson($transfer);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });
@@ -103,7 +104,7 @@ test('write distance json', function () {
 
     $distances = (new SportDistances(SportDistances::DISTANCE_TO_SPORT_LAKE, 15));
 
-    $generatedJson = serializeObjectIntoJson($distances);
+    $generatedJson = OpenImmoService::serializeObjectIntoJson($distances);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });

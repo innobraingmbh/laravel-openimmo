@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use JMS\Serializer\Handler\HandlerRegistryInterface;
-use JMS\Serializer\SerializerBuilder;
 use Katalam\OpenImmo\Dtos\Apartment;
 use Katalam\OpenImmo\Dtos\ContactPerson;
 use Katalam\OpenImmo\Dtos\Distances;
@@ -22,23 +20,9 @@ use Katalam\OpenImmo\Dtos\SportDistances;
 use Katalam\OpenImmo\Dtos\Transfer;
 use Katalam\OpenImmo\Dtos\TypeOfUse;
 use Katalam\OpenImmo\Dtos\View;
-use Katalam\OpenImmo\Handler\DateTimeHandler;
+use Katalam\OpenImmo\Facades\OpenImmoService;
 
 use function PHPUnit\Framework\assertXmlStringEqualsXmlString;
-
-function getSerializer()
-{
-    return SerializerBuilder::create()
-        ->configureHandlers(function (HandlerRegistryInterface $registry): void {
-            $registry->registerSubscribingHandler(new DateTimeHandler);
-        })
-        ->build();
-}
-
-function serializeObject(mixed $object): string
-{
-    return getSerializer()->serialize($object, 'xml');
-}
 
 test('wrote real estate xml', function () {
     $xml = File::get(base_path('../tests/fixtures/RealEstate.xml'));
@@ -46,7 +30,7 @@ test('wrote real estate xml', function () {
     $object = new RealEstate;
     $object->setContactPerson((new ContactPerson)->setSalutation('Herr'));
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     // as soon as https://github.com/schmittjoh/serializer/pull/883 is merged, the <name/> can be removed
     assertXmlStringEqualsXmlString($xml, $generatedXml);
@@ -66,7 +50,7 @@ test('write transfer xml', function () {
         ->setTimestamp(new DateTime('2014-06-01T10:00:00'))
         ->setRegionId('ABCD143');
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -84,7 +68,7 @@ test('write transfer xml real world', function () {
         ->setTechnicalEmail('xxx@xxx.de')
         ->setTimestamp(new DateTime('2019-09-30T12:42:27.000+00:00'));
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -98,7 +82,7 @@ test('write type of use xml', function () {
         ->setFacility(false)
         ->setWaz(false);
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -108,7 +92,7 @@ test('write distance to sport xml', function () {
 
     $object = (new SportDistances(SportDistances::DISTANCE_TO_SPORT_LAKE, 15));
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -126,7 +110,7 @@ test('write infrastructure xml', function () {
             new Distances(Distances::DISTANCE_TO_MAIN_SCHOOL, 22.0),
         ]);
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -142,7 +126,7 @@ test('write provider xml', function () {
         ]);
 
     // as soon as https://github.com/schmittjoh/serializer/pull/883 is merged, the <openimmo_anid/> can be removed
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -159,7 +143,7 @@ test('write object category xml', function () {
             ])->setPropertyTypeAdditional(['Dachgeschoss']),
         );
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -169,7 +153,7 @@ test('write complex type mixed xml', function () {
 
     $object = (new ExternalCommission(false, 'k.A.'));
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });
@@ -182,7 +166,7 @@ test('write complex type xml', function () {
             new Field('abc', '100', ['int'], ['kauf']),
         ]);
 
-    $generatedXml = serializeObject($object);
+    $generatedXml = OpenImmoService::serializeObjectIntoXml($object);
 
     assertXmlStringEqualsXmlString($xml, $generatedXml);
 });

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use JMS\Serializer\Handler\HandlerRegistryInterface;
-use JMS\Serializer\SerializerBuilder;
 use Katalam\OpenImmo\Dtos\Apartment;
 use Katalam\OpenImmo\Dtos\Attachment;
 use Katalam\OpenImmo\Dtos\Evaluation;
@@ -18,21 +16,7 @@ use Katalam\OpenImmo\Dtos\PropertyCategory;
 use Katalam\OpenImmo\Dtos\RealEstate;
 use Katalam\OpenImmo\Dtos\Rooms;
 use Katalam\OpenImmo\Dtos\Transfer;
-use Katalam\OpenImmo\Handler\DateTimeHandler;
-
-function getDeserializer()
-{
-    return SerializerBuilder::create()
-        ->configureHandlers(function (HandlerRegistryInterface $registry): void {
-            $registry->registerSubscribingHandler(new DateTimeHandler);
-        })
-        ->build();
-}
-
-function deserializeObject(string $object, string $classFqn = OpenImmo::class)
-{
-    return getDeserializer()->deserialize($object, $classFqn, 'xml');
-}
+use Katalam\OpenImmo\Facades\OpenImmoService;
 
 test('read xml', function () {
     $file = Storage::get('OpenImmo/openimmo-data_127.xml');
@@ -53,7 +37,7 @@ test('read xml', function () {
         ->setRegionId('ABCD143');
 
     /** @var OpenImmo $openImmo */
-    $openImmo = deserializeObject($file);
+    $openImmo = OpenImmoService::deserializeObjectFromXml($file);
 
     expect($openImmo->getTransfer())->toEqual($transfer)
         ->and($openImmo->getProvider())->toHaveCount(1)
@@ -98,7 +82,7 @@ test('read property category', function () {
     $xml = File::get(base_path('../tests/fixtures/PropertyCategory.xml'));
 
     /** @var PropertyCategory $object */
-    $object = deserializeObject($xml, PropertyCategory::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, PropertyCategory::class);
 
     expect($object->getTypeOfUse()->getLiving())->toBeTrue()
         ->and($object->getTypeOfUse()->getCommercial())->toBeFalse()
@@ -112,7 +96,7 @@ test('read attachment xml', function () {
     $xml = File::get(base_path('../tests/fixtures/Attachment.xml'));
 
     /** @var Attachment $object */
-    $object = deserializeObject($xml, Attachment::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, Attachment::class);
 
     expect($object->getLocation())->toBe(Attachment::LOCATION_EXTERNAL)
         ->and($object->getGroup())->toBe(Attachment::GROUP_IMAGE)
@@ -123,7 +107,7 @@ test('datetime with microseconds', function () {
     $xml = File::get(base_path('../tests/fixtures/TransferWithMicroseconds.xml'));
 
     /** @var Transfer $object */
-    $object = deserializeObject($xml, Transfer::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, Transfer::class);
 
     expect($object->getType())->toBe(Transfer::TYPE_ONLINE)
         ->and($object->getScope())->toBe(Transfer::SCOPE_FULL)
@@ -137,7 +121,7 @@ test('read external commission', function () {
     $xml = File::get(base_path('../tests/fixtures/ExternalCommission.xml'));
 
     /** @var ExternalCommission $object */
-    $object = deserializeObject($xml, ExternalCommission::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, ExternalCommission::class);
 
     expect($object->getWithVAT())->toBeTrue()
         ->and($object->getValue())->toBe('12354,12 €');
@@ -147,7 +131,7 @@ test('read complex type', function () {
     $xml = File::get(base_path('../tests/fixtures/ComplexType.xml'));
 
     /** @var Evaluation $object */
-    $object = deserializeObject($xml, Evaluation::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, Evaluation::class);
 
     expect($object->getField())->toHaveCount(1)
         ->and($object->getField()[0]->getMode())->toBe(['kauf'])
@@ -160,7 +144,7 @@ test('read complex type arrays', function () {
     $xml = File::get(base_path('../tests/fixtures/ComplexTypeArray.xml'));
 
     /** @var Evaluation $object */
-    $object = deserializeObject($xml, Evaluation::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, Evaluation::class);
 
     expect($object->getField())->toHaveCount(1)
         ->and($object->getField()[0]->getMode())->toBe(['kauf', 'miete', 'pacht'])
@@ -173,7 +157,7 @@ test('read user defined simple fields', function () {
     $xml = File::get(base_path('../tests/fixtures/UserDefinedSimpleFields.xml'));
 
     /** @var Geo $object */
-    $object = deserializeObject($xml, Geo::class);
+    $object = OpenImmoService::deserializeObjectFromXml($xml, Geo::class);
 
     expect($object->getPostalCode())->toBe('01809')
         ->and($object->getCity())->toBe('Heidenau')
