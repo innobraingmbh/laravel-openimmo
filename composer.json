@@ -22,7 +22,7 @@
         "doctrine/annotations": "^2.0",
         "driftingly/rector-laravel": "^1.2",
         "goetas-webservices/xsd-reader": "*",
-        "goetas-webservices/xsd2php": "dev-master",
+        "goetas-webservices/xsd2php": "*",
         "illuminate/contracts": "^10.0||^11.0",
         "jms/serializer": "^2.1 || ^3.5",
         "spatie/laravel-package-tools": "^1.16"
@@ -94,6 +94,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
