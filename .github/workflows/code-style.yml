@@ -1,4 +1,4 @@
-name: PHP code quality
+name: Code Style
 
 on:
   push:
