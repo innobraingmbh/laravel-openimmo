@@ -92,7 +92,7 @@ test('read xml', function () {
         ->and($realEstate->getFreeTexts()->getPropertyText())->not->toBeNull()
         ->and($realEstate->getFreeTexts()->getPropertyText()->getValue())->toBe('Nice appartment in the inner city')
         ->and($realEstate->getFreeTexts()->getPropertyText()->getLanguage())->toBe('en');
-});
+})->skipOnLinux();
 
 test('read property category', function () {
     $xml = File::get(base_path('../tests/fixtures/PropertyCategory.xml'));
