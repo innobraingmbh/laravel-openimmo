@@ -34,7 +34,7 @@ jobs:
       run: composer install --no-interaction --no-progress
 
     - name: Run PHPStan
-      run: composer run phpstan
+      run: composer analyse
 
   test:
     name: Tests on PHP ${{ matrix.php }}
