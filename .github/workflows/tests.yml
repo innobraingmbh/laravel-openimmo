@@ -69,24 +69,3 @@ jobs:
 
     - name: Run test suite
       run: composer test
-
-  rector:
-    name: Rector
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@2.31.1
-        with:
-          php-version: '8.2'
-          tools: composer
-          coverage: none
-
-      - name: composer install
-        run: composer install --no-interaction --no-progress
-
-      - name: Execute Rector
-        run: vendor/bin/rector --dry-run

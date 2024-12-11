@@ -1,8 +1,8 @@
 # This is my package laravel-openimmo
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/katalam/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/katalam/laravel-openimmo)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions?query=workflow%3Atests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions?query=workflow%3A"Code+Style"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/katalam/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/katalam/laravel-openimmo)
 
 This package is a fork from the initial work [ujamii/openimmo](https://github.com/ujamii/openimmo)
