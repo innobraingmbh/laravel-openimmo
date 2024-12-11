@@ -1,0 +1,8 @@
+<objektkategorie>
+	<nutzungsart GEWERBE="false" WOHNEN="true"/>
+	<vermarktungsart KAUF="false" MIETE_PACHT="true"/>
+	<objektart>
+		<wohnung wohnungtyp="MAISONETTE"/>
+		<objektart_zusatz>Dachgeschoss</objektart_zusatz>
+	</objektart>
+</objektkategorie>

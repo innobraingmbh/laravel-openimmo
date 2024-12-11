@@ -1,0 +1,6 @@
+<infrastruktur>
+	<zulieferung>false</zulieferung>
+	<ausblick blick="BERGE"/>
+	<distanzen distanz_zu="HAUPTSCHULE">22.0</distanzen>
+	<distanzen_sport distanz_zu_sport="SEE">15.0</distanzen_sport>
+</infrastruktur>

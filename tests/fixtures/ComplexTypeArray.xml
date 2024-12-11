@@ -1,0 +1,12 @@
+<bewertung>
+	<feld>
+		<modus>kauf</modus>
+		<modus>miete</modus>
+		<modus>pacht</modus>
+		<name>abc</name>
+		<typ>int</typ>
+		<typ>float</typ>
+		<typ>string</typ>
+		<wert>100</wert>
+	</feld>
+</bewertung>

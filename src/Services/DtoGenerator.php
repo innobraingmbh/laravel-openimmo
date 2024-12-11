@@ -87,9 +87,13 @@ class DtoGenerator
                     $this->parseElement($element);
                 }
             });
+        collect($this->referencedInlineElements)
+            ->each(function (Element $element) {
+                $this->parseElement($element);
+            });
     }
 
-    protected function parseElement(ElementDef $element): void
+    protected function parseElement(ElementDef|Element $element): void
     {
         $className = TypeUtil::studly($element->getName());
         $className = TranslationService::translateClass($className);
@@ -224,7 +228,7 @@ class DtoGenerator
             $classProperty->setValue(null);
         } else {
             $classProperty
-                ->setValue(TypeUtil::getDefaultValueForType($phpType, $nullable))
+                ->setValue(TypeUtil::getDefaultValueForType($phpType, false))
                 ->addComment('@SkipWhenEmpty');
             $namespace->addUse(SkipWhenEmpty::class);
         }
@@ -237,6 +241,10 @@ class DtoGenerator
             );
         }
 
+        $propertyName = $property->getName();
+        $classProperty->addComment("@SerializedName(\"$propertyName\")");
+        $namespace->addUse(SerializedName::class);
+
         CodeGenUtil::generateGetterAndSetter($classProperty, $class, true, $nullable);
     }
 
@@ -246,12 +254,13 @@ class DtoGenerator
             if ($property->getReferencedElement()->getType() instanceof SimpleType) {
                 $propertyType = TypeUtil::extractTypeForPhp($property->getReferencedElement()->getType());
             } else {
-                $propertyType = TypeUtil::camelize($property->getReferencedElement()->getName());
-                $propertyType = ucfirst(TranslationService::translateProperty($propertyType));
+                $propertyType = TypeUtil::studly($property->getReferencedElement()->getName());
+                $propertyType = TranslationService::translateClass($propertyType);
             }
         } elseif ($property->getType() instanceof ComplexType) {
             $this->referencedInlineElements[] = $property;
-            $propertyName = TypeUtil::camelize($property->getName());
+            $propertyName = TypeUtil::studly($property->getName());
+            $propertyName = TranslationService::translateClass($propertyName);
             $propertyType = TypeUtil::extractTypeForPhp($property->getType(), $propertyName);
         } else {
             $propertyType = TypeUtil::extractTypeForPhp($property->getType());
@@ -308,7 +317,7 @@ class DtoGenerator
 
         $namespace->addUse(Type::class);
 
-        $this->addSerializedNameIfNecessary($attribute, $property, $namespace);
+        $this->addSerializedName($attribute, $property, $namespace);
         $commentEqualsRequired = $this->addUseCommentIfPresent($attribute, $property);
         if ($commentEqualsRequired === true) {
             $nullable = false;
@@ -387,16 +396,13 @@ class DtoGenerator
     }
 
     /**
-     * Serialized names may differ from property names.
+     * Serialized names differ from property names.
      */
-    private function addSerializedNameIfNecessary(Attribute $attribute, Property $property, PhpNamespace $namespace): void
+    private function addSerializedName(Attribute $attribute, Property $property, PhpNamespace $namespace): void
     {
-        $attributeName = $attribute->getName();
-
-        if (strtolower($attributeName) !== $attributeName) {
-            $property->addComment('@SerializedName("'.$attributeName.'")');
-            $namespace->addUse(SerializedName::class);
-        }
+        $propertyName = $attribute->getName();
+        $property->addComment("@SerializedName(\"$propertyName\")");
+        $namespace->addUse(SerializedName::class);
     }
 
     private function addUseCommentIfPresent(Attribute $attribute, Property $property): ?true

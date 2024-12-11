@@ -1,0 +1,8 @@
+<bewertung>
+	<feld>
+		<name>abc</name>
+		<wert>100</wert>
+		<typ>int</typ>
+		<modus>kauf</modus>
+	</feld>
+</bewertung>

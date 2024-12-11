@@ -1,0 +1,12 @@
+<geo>
+	<plz>01809</plz>
+	<ort>Heidenau</ort>
+	<strasse>Dr.-Otto-Nuschke-Straße</strasse>
+	<hausnummer>2</hausnummer>
+	<land iso_land="DEU"/>
+	<etage>0</etage>
+	<wohnungsnr>8.1.1</wohnungsnr>
+	<regionaler_zusatz>Mügeln</regionaler_zusatz>
+	<user_defined_simplefield feldname="ZONE">Mügeln</user_defined_simplefield>
+	<user_defined_simplefield feldname="regionaler_zusatz_gruppe"></user_defined_simplefield>
+</geo>
