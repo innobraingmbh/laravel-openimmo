@@ -1,0 +1,77 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Katalam\OpenImmo\Dtos;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class MaxRentalPeriod
+ * Maximalzeitraum für den die Immobilie gemietet werdenkann, Optionen nicht kombinierbar, vorrangig bei WaZ
+ *
+ * @XmlRoot("max_mietdauer")
+ */
+class MaxRentalPeriod
+{
+    public const MAX_DURATION_DAY = 'TAG';
+
+    public const MAX_DURATION_WEEK = 'WOCHE';
+
+    public const MAX_DURATION_MONTH = 'MONAT';
+
+    public const MAX_DURATION_YEAR = 'JAHR';
+
+    /**
+     * @Type("string")
+     *
+     * @XmlAttribute
+     *
+     * @SerializedName("max_dauer")
+     * optional
+     *
+     * @see MAX_DURATION_* constants
+     */
+    protected string $maxDuration = '';
+
+    /**
+     * @Inline
+     *
+     * @Type("string")
+     */
+    protected ?string $value = null;
+
+    public function __construct(string $maxDuration = '', ?string $value = null)
+    {
+        $this->maxDuration = $maxDuration;
+        $this->value = $value;
+    }
+
+    public function getMaxDuration(): ?string
+    {
+        return $this->maxDuration;
+    }
+
+    public function setMaxDuration(?string $maxDuration): MaxRentalPeriod
+    {
+        $this->maxDuration = $maxDuration;
+
+        return $this;
+    }
+
+    public function getValue(): ?string
+    {
+        return $this->value;
+    }
+
+    public function setValue(?string $value): MaxRentalPeriod
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

@@ -1,0 +1,67 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Katalam\OpenImmo\Dtos;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class NetReserves
+ * Vorhanden Rücklagen bei einem Kauf Objekt, UmSt. im Attribut.
+ *
+ * @XmlRoot("ruecklagenetto")
+ */
+class NetReserves
+{
+    /**
+     * @Type("float")
+     *
+     * @XmlAttribute
+     *
+     * @SerializedName("ruecklageust")
+     * optional
+     */
+    protected ?float $reserveVAT = null;
+
+    /**
+     * @Inline
+     *
+     * @Type("float")
+     */
+    protected ?float $value = null;
+
+    public function __construct(?float $reserveVAT = null, ?float $value = null)
+    {
+        $this->reserveVAT = $reserveVAT;
+        $this->value = $value;
+    }
+
+    public function getReserveVAT(): ?float
+    {
+        return $this->reserveVAT;
+    }
+
+    public function setReserveVAT(?float $reserveVAT): NetReserves
+    {
+        $this->reserveVAT = $reserveVAT;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): NetReserves
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

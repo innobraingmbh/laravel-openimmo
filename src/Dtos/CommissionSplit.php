@@ -1,0 +1,75 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Katalam\OpenImmo\Dtos;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class CommissionSplit
+ * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
+ *
+ * @XmlRoot("provision_teilen")
+ */
+class CommissionSplit
+{
+    public const VALUE_ABSOLUTE = 'absolut';
+
+    public const VALUE_PERCENT = 'prozent';
+
+    public const VALUE_TEXT = 'text';
+
+    /**
+     * @Type("string")
+     *
+     * @XmlAttribute
+     *
+     * @SerializedName("wert")
+     * optional
+     *
+     * @see VALUE_* constants
+     */
+    protected string $worth = '';
+
+    /**
+     * @Inline
+     *
+     * @Type("string")
+     */
+    protected ?string $value = null;
+
+    public function __construct(string $worth = '', ?string $value = null)
+    {
+        $this->worth = $worth;
+        $this->value = $value;
+    }
+
+    public function getWorth(): ?string
+    {
+        return $this->worth;
+    }
+
+    public function setWorth(?string $worth): CommissionSplit
+    {
+        $this->worth = $worth;
+
+        return $this;
+    }
+
+    public function getValue(): ?string
+    {
+        return $this->value;
+    }
+
+    public function setValue(?string $value): CommissionSplit
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

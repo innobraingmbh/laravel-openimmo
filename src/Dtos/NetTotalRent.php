@@ -1,0 +1,67 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Katalam\OpenImmo\Dtos;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class NetTotalRent
+ * Gesamtsumme der Mietkosten, UmSt. im Attribut.
+ *
+ * @XmlRoot("summemietenetto")
+ */
+class NetTotalRent
+{
+    /**
+     * @Type("float")
+     *
+     * @XmlAttribute
+     *
+     * @SerializedName("summemieteust")
+     * optional
+     */
+    protected ?float $totalRentVAT = null;
+
+    /**
+     * @Inline
+     *
+     * @Type("float")
+     */
+    protected ?float $value = null;
+
+    public function __construct(?float $totalRentVAT = null, ?float $value = null)
+    {
+        $this->totalRentVAT = $totalRentVAT;
+        $this->value = $value;
+    }
+
+    public function getTotalRentVAT(): ?float
+    {
+        return $this->totalRentVAT;
+    }
+
+    public function setTotalRentVAT(?float $totalRentVAT): NetTotalRent
+    {
+        $this->totalRentVAT = $totalRentVAT;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): NetTotalRent
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

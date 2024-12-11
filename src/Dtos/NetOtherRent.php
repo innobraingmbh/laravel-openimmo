@@ -1,0 +1,67 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Katalam\OpenImmo\Dtos;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class NetOtherRent
+ * Ergänzenden Mietkosten, UmSt. im Attribut.
+ *
+ * @XmlRoot("sonstigemietenetto")
+ */
+class NetOtherRent
+{
+    /**
+     * @Type("float")
+     *
+     * @XmlAttribute
+     *
+     * @SerializedName("sonstigemieteust")
+     * optional
+     */
+    protected ?float $otherRentVAT = null;
+
+    /**
+     * @Inline
+     *
+     * @Type("float")
+     */
+    protected ?float $value = null;
+
+    public function __construct(?float $otherRentVAT = null, ?float $value = null)
+    {
+        $this->otherRentVAT = $otherRentVAT;
+        $this->value = $value;
+    }
+
+    public function getOtherRentVAT(): ?float
+    {
+        return $this->otherRentVAT;
+    }
+
+    public function setOtherRentVAT(?float $otherRentVAT): NetOtherRent
+    {
+        $this->otherRentVAT = $otherRentVAT;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): NetOtherRent
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}
