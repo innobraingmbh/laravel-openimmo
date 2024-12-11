@@ -35,22 +35,19 @@ class Plot
 
     public const PROPERTY_TYPE_LAKESIDE_PROPERTY = 'SEELIEGENSCHAFT';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("grundst_typ")
-     * optional
-     *
-     * @see PROPERTY_TYPE_* constants
-     */
-    protected string $plotType = '';
-
-    public function __construct(string $plotType = '')
-    {
-        $this->plotType = $plotType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("grundst_typ")
+         * optional
+         *
+         * @see PROPERTY_TYPE_* constants
+         */
+        protected string $plotType = ''
+    ) {}
 
     public function getPlotType(): ?string
     {

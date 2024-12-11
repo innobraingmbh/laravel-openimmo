@@ -17,53 +17,44 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Field
 {
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("name")
-     */
-    protected string $name = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("wert")
-     */
-    protected string $value = '';
-
-    /**
-     * @XmlList(inline = true, entry = "typ")
-     *
-     * @Type("array<string>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("typ")
-     */
-    protected array $type = [];
-
-    /**
-     * @XmlList(inline = true, entry = "modus")
-     *
-     * @Type("array<string>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("modus")
-     */
-    protected array $mode = [];
-
-    public function __construct(string $name = '', string $value = '', array $type = [], array $mode = [])
-    {
-        $this->name = $name;
-        $this->value = $value;
-        $this->type = $type;
-        $this->mode = $mode;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("name")
+         */
+        protected string $name = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("wert")
+         */
+        protected string $value = '',
+        /**
+         * @XmlList(inline = true, entry = "typ")
+         *
+         * @Type("array<string>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("typ")
+         */
+        protected array $type = [],
+        /**
+         * @XmlList(inline = true, entry = "modus")
+         *
+         * @Type("array<string>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("modus")
+         */
+        protected array $mode = []
+    ) {}
 
     public function getName(): string
     {

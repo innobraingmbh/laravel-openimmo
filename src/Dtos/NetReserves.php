@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetReserves
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ruecklageust")
-     * optional
-     */
-    protected ?float $reserveVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $reserveVAT = null, ?float $value = null)
-    {
-        $this->reserveVAT = $reserveVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ruecklageust")
+         * optional
+         */
+        protected ?float $reserveVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getReserveVAT(): ?float
     {

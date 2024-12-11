@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetOtherRent
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("sonstigemieteust")
-     * optional
-     */
-    protected ?float $otherRentVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $otherRentVAT = null, ?float $value = null)
-    {
-        $this->otherRentVAT = $otherRentVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("sonstigemieteust")
+         * optional
+         */
+        protected ?float $otherRentVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getOtherRentVAT(): ?float
     {

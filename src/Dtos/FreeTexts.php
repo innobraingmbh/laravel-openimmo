@@ -17,111 +17,80 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class FreeTexts
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("objekttitel")
-     */
-    protected ?string $propertyTitle = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("dreizeiler")
-     */
-    protected ?string $threeLines = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("lage")
-     */
-    protected ?string $location = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("ausstatt_beschr")
-     */
-    protected ?string $equipmentDescription = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("objektbeschreibung")
-     */
-    protected ?string $propertyDescription = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("sonstige_angaben")
-     */
-    protected ?string $otherInformation = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PropertyText")
-     *
-     * @SerializedName("objekt_text")
-     */
-    protected ?PropertyText $propertyText = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $propertyTitle = null,
-        ?string $threeLines = null,
-        ?string $location = null,
-        ?string $equipmentDescription = null,
-        ?string $propertyDescription = null,
-        ?string $otherInformation = null,
-        ?PropertyText $propertyText = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->propertyTitle = $propertyTitle;
-        $this->threeLines = $threeLines;
-        $this->location = $location;
-        $this->equipmentDescription = $equipmentDescription;
-        $this->propertyDescription = $propertyDescription;
-        $this->otherInformation = $otherInformation;
-        $this->propertyText = $propertyText;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("objekttitel")
+         */
+        protected ?string $propertyTitle = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("dreizeiler")
+         */
+        protected ?string $threeLines = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("lage")
+         */
+        protected ?string $location = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("ausstatt_beschr")
+         */
+        protected ?string $equipmentDescription = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("objektbeschreibung")
+         */
+        protected ?string $propertyDescription = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("sonstige_angaben")
+         */
+        protected ?string $otherInformation = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PropertyText")
+         *
+         * @SerializedName("objekt_text")
+         */
+        protected ?PropertyText $propertyText = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getPropertyTitle(): ?string
     {

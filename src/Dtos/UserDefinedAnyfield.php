@@ -15,17 +15,14 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class UserDefinedAnyfield
 {
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(?string $value = null)
-    {
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getValue(): ?string
     {

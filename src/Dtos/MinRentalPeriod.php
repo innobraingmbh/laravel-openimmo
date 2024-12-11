@@ -26,30 +26,25 @@ class MinRentalPeriod
 
     public const MIN_DURATION_YEAR = 'JAHR';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("min_dauer")
-     * optional
-     *
-     * @see MIN_DURATION_* constants
-     */
-    protected string $minDuration = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $minDuration = '', ?string $value = null)
-    {
-        $this->minDuration = $minDuration;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("min_dauer")
+         * optional
+         *
+         * @see MIN_DURATION_* constants
+         */
+        protected string $minDuration = '',
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getMinDuration(): ?string
     {

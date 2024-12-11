@@ -18,128 +18,94 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Provider
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("anbieternr")
-     */
-    protected ?string $providerNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("firma")
-     */
-    protected string $company = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("openimmo_anid")
-     */
-    protected string $openImmoAnid = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("lizenzkennung")
-     */
-    protected ?string $licenseIdentifier = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Attachment")
-     *
-     * @SerializedName("anhang")
-     */
-    protected ?Attachment $attachment = null;
-
-    /**
-     * @XmlList(inline = true, entry = "immobilie")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\RealEstate>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("immobilie")
-     */
-    protected array $realEstate = [];
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("impressum")
-     */
-    protected ?string $imprint = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ImprintStructure")
-     *
-     * @SerializedName("impressum_strukt")
-     */
-    protected ?ImprintStructure $imprintStructure = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $providerNumber = null,
-        string $company = '',
-        string $openImmoAnid = '',
-        ?string $licenseIdentifier = null,
-        ?Attachment $attachment = null,
-        array $realEstate = [],
-        ?string $imprint = null,
-        ?ImprintStructure $imprintStructure = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->providerNumber = $providerNumber;
-        $this->company = $company;
-        $this->openImmoAnid = $openImmoAnid;
-        $this->licenseIdentifier = $licenseIdentifier;
-        $this->attachment = $attachment;
-        $this->realEstate = $realEstate;
-        $this->imprint = $imprint;
-        $this->imprintStructure = $imprintStructure;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("anbieternr")
+         */
+        protected ?string $providerNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("firma")
+         */
+        protected string $company = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("openimmo_anid")
+         */
+        protected string $openImmoAnid = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("lizenzkennung")
+         */
+        protected ?string $licenseIdentifier = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Attachment")
+         *
+         * @SerializedName("anhang")
+         */
+        protected ?Attachment $attachment = null,
+        /**
+         * @XmlList(inline = true, entry = "immobilie")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\RealEstate>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("immobilie")
+         */
+        protected array $realEstate = [],
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("impressum")
+         */
+        protected ?string $imprint = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ImprintStructure")
+         *
+         * @SerializedName("impressum_strukt")
+         */
+        protected ?ImprintStructure $imprintStructure = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getProviderNumber(): ?string
     {

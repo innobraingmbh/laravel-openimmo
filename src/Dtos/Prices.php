@@ -18,659 +18,448 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Prices
 {
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PurchasePrice")
-     *
-     * @SerializedName("kaufpreis")
-     */
-    protected ?PurchasePrice $purchasePrice = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetPurchasePrice")
-     *
-     * @SerializedName("kaufpreisnetto")
-     */
-    protected ?NetPurchasePrice $purchasePriceNet = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kaufpreisbrutto")
-     */
-    protected ?float $purchasePriceGross = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nettokaltmiete")
-     */
-    protected ?float $netColdRent = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kaltmiete")
-     */
-    protected ?float $coldRent = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("warmmiete")
-     */
-    protected ?float $warmRent = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nebenkosten")
-     */
-    protected ?float $additionalCosts = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("heizkosten_enthalten")
-     */
-    protected ?bool $heatingCostsIncluded = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("heizkosten")
-     */
-    protected ?float $heatingCosts = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("zzg_mehrwertsteuer")
-     */
-    protected ?bool $plusVAT = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("mietzuschlaege")
-     */
-    protected ?float $rentSurcharges = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetMainRent")
-     *
-     * @SerializedName("hauptmietzinsnetto")
-     */
-    protected ?NetMainRent $netMainRent = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("pauschalmiete")
-     */
-    protected ?float $flatRent = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetOperatingCosts")
-     *
-     * @SerializedName("betriebskostennetto")
-     */
-    protected ?NetOperatingCosts $netOperatingCosts = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetEVB")
-     *
-     * @SerializedName("evbnetto")
-     */
-    protected ?NetEVB $netUnitValue = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetTotalRent")
-     *
-     * @SerializedName("gesamtmietenetto")
-     */
-    protected ?NetTotalRent $totalRentNet = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("gesamtmietebrutto")
-     */
-    protected ?float $totalRentGross = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetTotalCost")
-     *
-     * @SerializedName("gesamtbelastungnetto")
-     */
-    protected ?NetTotalCost $totalCostNet = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("gesamtbelastungbrutto")
-     */
-    protected ?float $totalCostGross = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\TotalCostsPerSqmFrom")
-     *
-     * @SerializedName("gesamtkostenprom2von")
-     */
-    protected ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetHeatingCosts")
-     *
-     * @SerializedName("heizkostennetto")
-     */
-    protected ?NetHeatingCosts $netHeatingCosts = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetMonthlyCosts")
-     *
-     * @SerializedName("monatlichekostennetto")
-     */
-    protected ?NetMonthlyCosts $monthlyCostsNet = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("monatlichekostenbrutto")
-     */
-    protected ?float $monthlyCostsGross = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\AdditionalCostsPerSqmFrom")
-     *
-     * @SerializedName("nebenkostenprom2von")
-     */
-    protected ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetReserves")
-     *
-     * @SerializedName("ruecklagenetto")
-     */
-    protected ?NetReserves $reservesNet = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetOtherCosts")
-     *
-     * @SerializedName("sonstigekostennetto")
-     */
-    protected ?NetOtherCosts $otherCostsNet = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetOtherRent")
-     *
-     * @SerializedName("sonstigemietenetto")
-     */
-    protected ?NetOtherRent $otherRentNet = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetRentPerSqmFrom")
-     *
-     * @SerializedName("nettomieteprom2von")
-     */
-    protected ?NetRentPerSqmFrom $netRentPerSqmFrom = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("pacht")
-     */
-    protected ?float $lease = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("erbpacht")
-     */
-    protected ?float $leasehold = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("hausgeld")
-     */
-    protected ?float $maintenanceFee = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("abstand")
-     */
-    protected ?float $distance = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("preis_zeitraum_von")
-     */
-    protected ?DateTime $priceTimeRangeFrom = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("preis_zeitraum_bis")
-     */
-    protected ?DateTime $priceTimeRangeTo = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PriceTimeUnit")
-     *
-     * @SerializedName("preis_zeiteinheit")
-     */
-    protected ?PriceTimeUnit $priceTimeUnit = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("mietpreis_pro_qm")
-     */
-    protected ?float $rentPricePerSqm = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kaufpreis_pro_qm")
-     */
-    protected ?float $purchasePricePerSqm = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("provisionspflichtig")
-     */
-    protected ?bool $commissionRequired = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\CommissionSplit")
-     *
-     * @SerializedName("provision_teilen")
-     */
-    protected ?CommissionSplit $commissionSplit = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\InternalCommission")
-     *
-     * @SerializedName("innen_courtage")
-     */
-    protected ?InternalCommission $internalCommission = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ExternalCommission")
-     *
-     * @SerializedName("aussen_courtage")
-     */
-    protected ?ExternalCommission $externalCommission = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("courtage_hinweis")
-     */
-    protected ?string $commissionNote = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\NetCommission")
-     *
-     * @SerializedName("provisionnetto")
-     */
-    protected ?NetCommission $commissionNet = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("provisionbrutto")
-     */
-    protected ?float $commissionGross = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Currency")
-     *
-     * @SerializedName("waehrung")
-     */
-    protected ?Currency $currency = null;
-
-    /**
-     * @Type("float")
-     * Maximum precision: 2
-     * Minimum value (inclusive): 0
-     *
-     * @SerializedName("mwst_satz")
-     */
-    protected ?float $vatRate = null;
-
-    /**
-     * @Type("float")
-     * Maximum precision: 2
-     * Minimum value (inclusive): 0
-     *
-     * @SerializedName("mwst_gesamt")
-     */
-    protected ?float $totalVAT = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("freitext_preis")
-     */
-    protected ?string $freeTextPrice = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("x_fache")
-     */
-    protected ?string $xTimes = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nettorendite")
-     */
-    protected ?float $netYield = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nettorendite_soll")
-     */
-    protected ?float $targetNetYield = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nettorendite_ist")
-     */
-    protected ?float $actualNetYield = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ActualRentalIncome")
-     *
-     * @SerializedName("mieteinnahmen_ist")
-     */
-    protected ?ActualRentalIncome $actualRentalIncome = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\TargetRentalIncome")
-     *
-     * @SerializedName("mieteinnahmen_soll")
-     */
-    protected ?TargetRentalIncome $targetRentalIncome = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("erschliessungskosten")
-     */
-    protected ?float $developmentCosts = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kaution")
-     */
-    protected ?float $deposit = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("kaution_text")
-     */
-    protected ?string $depositText = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("geschaeftsguthaben")
-     */
-    protected ?float $businessAssets = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingCarport")
-     *
-     * @SerializedName("stp_carport")
-     */
-    protected ?ParkingCarport $parkingCarport = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingDuplex")
-     *
-     * @SerializedName("stp_duplex")
-     */
-    protected ?ParkingDuplex $parkingDuplex = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingOutdoor")
-     *
-     * @SerializedName("stp_freiplatz")
-     */
-    protected ?ParkingOutdoor $parkingOutdoor = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingGarage")
-     *
-     * @SerializedName("stp_garage")
-     */
-    protected ?ParkingGarage $parkingGarage = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingMultiStorey")
-     *
-     * @SerializedName("stp_parkhaus")
-     */
-    protected ?ParkingMultiStorey $parkingMultiStorey = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ParkingUnderground")
-     *
-     * @SerializedName("stp_tiefgarage")
-     */
-    protected ?ParkingUnderground $parkingUnderground = null;
-
-    /**
-     * @XmlList(inline = true, entry = "stp_sonstige")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\ParkingOther>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("stp_sonstige")
-     */
-    protected array $parkingOther = [];
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("richtpreis")
-     */
-    protected ?float $guidePrice = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("richtpreisprom2")
-     */
-    protected ?float $guidePricePerSqm = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?PurchasePrice $purchasePrice = null,
-        ?NetPurchasePrice $purchasePriceNet = null,
-        ?float $purchasePriceGross = null,
-        ?float $netColdRent = null,
-        ?float $coldRent = null,
-        ?float $warmRent = null,
-        ?float $additionalCosts = null,
-        ?bool $heatingCostsIncluded = null,
-        ?float $heatingCosts = null,
-        ?bool $plusVAT = null,
-        ?float $rentSurcharges = null,
-        ?NetMainRent $netMainRent = null,
-        ?float $flatRent = null,
-        ?NetOperatingCosts $netOperatingCosts = null,
-        ?NetEVB $netUnitValue = null,
-        ?NetTotalRent $totalRentNet = null,
-        ?float $totalRentGross = null,
-        ?NetTotalCost $totalCostNet = null,
-        ?float $totalCostGross = null,
-        ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null,
-        ?NetHeatingCosts $netHeatingCosts = null,
-        ?NetMonthlyCosts $monthlyCostsNet = null,
-        ?float $monthlyCostsGross = null,
-        ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null,
-        ?NetReserves $reservesNet = null,
-        ?NetOtherCosts $otherCostsNet = null,
-        ?NetOtherRent $otherRentNet = null,
-        ?NetRentPerSqmFrom $netRentPerSqmFrom = null,
-        ?float $lease = null,
-        ?float $leasehold = null,
-        ?float $maintenanceFee = null,
-        ?float $distance = null,
-        ?DateTime $priceTimeRangeFrom = null,
-        ?DateTime $priceTimeRangeTo = null,
-        ?PriceTimeUnit $priceTimeUnit = null,
-        ?float $rentPricePerSqm = null,
-        ?float $purchasePricePerSqm = null,
-        ?bool $commissionRequired = null,
-        ?CommissionSplit $commissionSplit = null,
-        ?InternalCommission $internalCommission = null,
-        ?ExternalCommission $externalCommission = null,
-        ?string $commissionNote = null,
-        ?NetCommission $commissionNet = null,
-        ?float $commissionGross = null,
-        ?Currency $currency = null,
-        ?float $vatRate = null,
-        ?float $totalVAT = null,
-        ?string $freeTextPrice = null,
-        ?string $xTimes = null,
-        ?float $netYield = null,
-        ?float $targetNetYield = null,
-        ?float $actualNetYield = null,
-        ?ActualRentalIncome $actualRentalIncome = null,
-        ?TargetRentalIncome $targetRentalIncome = null,
-        ?float $developmentCosts = null,
-        ?float $deposit = null,
-        ?string $depositText = null,
-        ?float $businessAssets = null,
-        ?ParkingCarport $parkingCarport = null,
-        ?ParkingDuplex $parkingDuplex = null,
-        ?ParkingOutdoor $parkingOutdoor = null,
-        ?ParkingGarage $parkingGarage = null,
-        ?ParkingMultiStorey $parkingMultiStorey = null,
-        ?ParkingUnderground $parkingUnderground = null,
-        array $parkingOther = [],
-        ?float $guidePrice = null,
-        ?float $guidePricePerSqm = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->purchasePrice = $purchasePrice;
-        $this->purchasePriceNet = $purchasePriceNet;
-        $this->purchasePriceGross = $purchasePriceGross;
-        $this->netColdRent = $netColdRent;
-        $this->coldRent = $coldRent;
-        $this->warmRent = $warmRent;
-        $this->additionalCosts = $additionalCosts;
-        $this->heatingCostsIncluded = $heatingCostsIncluded;
-        $this->heatingCosts = $heatingCosts;
-        $this->plusVAT = $plusVAT;
-        $this->rentSurcharges = $rentSurcharges;
-        $this->netMainRent = $netMainRent;
-        $this->flatRent = $flatRent;
-        $this->netOperatingCosts = $netOperatingCosts;
-        $this->netUnitValue = $netUnitValue;
-        $this->totalRentNet = $totalRentNet;
-        $this->totalRentGross = $totalRentGross;
-        $this->totalCostNet = $totalCostNet;
-        $this->totalCostGross = $totalCostGross;
-        $this->totalCostsPerSqmFrom = $totalCostsPerSqmFrom;
-        $this->netHeatingCosts = $netHeatingCosts;
-        $this->monthlyCostsNet = $monthlyCostsNet;
-        $this->monthlyCostsGross = $monthlyCostsGross;
-        $this->additionalCostsPerSqmFrom = $additionalCostsPerSqmFrom;
-        $this->reservesNet = $reservesNet;
-        $this->otherCostsNet = $otherCostsNet;
-        $this->otherRentNet = $otherRentNet;
-        $this->netRentPerSqmFrom = $netRentPerSqmFrom;
-        $this->lease = $lease;
-        $this->leasehold = $leasehold;
-        $this->maintenanceFee = $maintenanceFee;
-        $this->distance = $distance;
-        $this->priceTimeRangeFrom = $priceTimeRangeFrom;
-        $this->priceTimeRangeTo = $priceTimeRangeTo;
-        $this->priceTimeUnit = $priceTimeUnit;
-        $this->rentPricePerSqm = $rentPricePerSqm;
-        $this->purchasePricePerSqm = $purchasePricePerSqm;
-        $this->commissionRequired = $commissionRequired;
-        $this->commissionSplit = $commissionSplit;
-        $this->internalCommission = $internalCommission;
-        $this->externalCommission = $externalCommission;
-        $this->commissionNote = $commissionNote;
-        $this->commissionNet = $commissionNet;
-        $this->commissionGross = $commissionGross;
-        $this->currency = $currency;
-        $this->vatRate = $vatRate;
-        $this->totalVAT = $totalVAT;
-        $this->freeTextPrice = $freeTextPrice;
-        $this->xTimes = $xTimes;
-        $this->netYield = $netYield;
-        $this->targetNetYield = $targetNetYield;
-        $this->actualNetYield = $actualNetYield;
-        $this->actualRentalIncome = $actualRentalIncome;
-        $this->targetRentalIncome = $targetRentalIncome;
-        $this->developmentCosts = $developmentCosts;
-        $this->deposit = $deposit;
-        $this->depositText = $depositText;
-        $this->businessAssets = $businessAssets;
-        $this->parkingCarport = $parkingCarport;
-        $this->parkingDuplex = $parkingDuplex;
-        $this->parkingOutdoor = $parkingOutdoor;
-        $this->parkingGarage = $parkingGarage;
-        $this->parkingMultiStorey = $parkingMultiStorey;
-        $this->parkingUnderground = $parkingUnderground;
-        $this->parkingOther = $parkingOther;
-        $this->guidePrice = $guidePrice;
-        $this->guidePricePerSqm = $guidePricePerSqm;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PurchasePrice")
+         *
+         * @SerializedName("kaufpreis")
+         */
+        protected ?PurchasePrice $purchasePrice = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetPurchasePrice")
+         *
+         * @SerializedName("kaufpreisnetto")
+         */
+        protected ?NetPurchasePrice $purchasePriceNet = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kaufpreisbrutto")
+         */
+        protected ?float $purchasePriceGross = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nettokaltmiete")
+         */
+        protected ?float $netColdRent = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kaltmiete")
+         */
+        protected ?float $coldRent = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("warmmiete")
+         */
+        protected ?float $warmRent = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nebenkosten")
+         */
+        protected ?float $additionalCosts = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("heizkosten_enthalten")
+         */
+        protected ?bool $heatingCostsIncluded = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("heizkosten")
+         */
+        protected ?float $heatingCosts = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("zzg_mehrwertsteuer")
+         */
+        protected ?bool $plusVAT = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("mietzuschlaege")
+         */
+        protected ?float $rentSurcharges = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetMainRent")
+         *
+         * @SerializedName("hauptmietzinsnetto")
+         */
+        protected ?NetMainRent $netMainRent = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("pauschalmiete")
+         */
+        protected ?float $flatRent = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetOperatingCosts")
+         *
+         * @SerializedName("betriebskostennetto")
+         */
+        protected ?NetOperatingCosts $netOperatingCosts = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetEVB")
+         *
+         * @SerializedName("evbnetto")
+         */
+        protected ?NetEVB $netUnitValue = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetTotalRent")
+         *
+         * @SerializedName("gesamtmietenetto")
+         */
+        protected ?NetTotalRent $totalRentNet = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("gesamtmietebrutto")
+         */
+        protected ?float $totalRentGross = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetTotalCost")
+         *
+         * @SerializedName("gesamtbelastungnetto")
+         */
+        protected ?NetTotalCost $totalCostNet = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("gesamtbelastungbrutto")
+         */
+        protected ?float $totalCostGross = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\TotalCostsPerSqmFrom")
+         *
+         * @SerializedName("gesamtkostenprom2von")
+         */
+        protected ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetHeatingCosts")
+         *
+         * @SerializedName("heizkostennetto")
+         */
+        protected ?NetHeatingCosts $netHeatingCosts = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetMonthlyCosts")
+         *
+         * @SerializedName("monatlichekostennetto")
+         */
+        protected ?NetMonthlyCosts $monthlyCostsNet = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("monatlichekostenbrutto")
+         */
+        protected ?float $monthlyCostsGross = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\AdditionalCostsPerSqmFrom")
+         *
+         * @SerializedName("nebenkostenprom2von")
+         */
+        protected ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetReserves")
+         *
+         * @SerializedName("ruecklagenetto")
+         */
+        protected ?NetReserves $reservesNet = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetOtherCosts")
+         *
+         * @SerializedName("sonstigekostennetto")
+         */
+        protected ?NetOtherCosts $otherCostsNet = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetOtherRent")
+         *
+         * @SerializedName("sonstigemietenetto")
+         */
+        protected ?NetOtherRent $otherRentNet = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetRentPerSqmFrom")
+         *
+         * @SerializedName("nettomieteprom2von")
+         */
+        protected ?NetRentPerSqmFrom $netRentPerSqmFrom = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("pacht")
+         */
+        protected ?float $lease = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("erbpacht")
+         */
+        protected ?float $leasehold = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("hausgeld")
+         */
+        protected ?float $maintenanceFee = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("abstand")
+         */
+        protected ?float $distance = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("preis_zeitraum_von")
+         */
+        protected ?DateTime $priceTimeRangeFrom = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("preis_zeitraum_bis")
+         */
+        protected ?DateTime $priceTimeRangeTo = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PriceTimeUnit")
+         *
+         * @SerializedName("preis_zeiteinheit")
+         */
+        protected ?PriceTimeUnit $priceTimeUnit = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("mietpreis_pro_qm")
+         */
+        protected ?float $rentPricePerSqm = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kaufpreis_pro_qm")
+         */
+        protected ?float $purchasePricePerSqm = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("provisionspflichtig")
+         */
+        protected ?bool $commissionRequired = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\CommissionSplit")
+         *
+         * @SerializedName("provision_teilen")
+         */
+        protected ?CommissionSplit $commissionSplit = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\InternalCommission")
+         *
+         * @SerializedName("innen_courtage")
+         */
+        protected ?InternalCommission $internalCommission = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ExternalCommission")
+         *
+         * @SerializedName("aussen_courtage")
+         */
+        protected ?ExternalCommission $externalCommission = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("courtage_hinweis")
+         */
+        protected ?string $commissionNote = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\NetCommission")
+         *
+         * @SerializedName("provisionnetto")
+         */
+        protected ?NetCommission $commissionNet = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("provisionbrutto")
+         */
+        protected ?float $commissionGross = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Currency")
+         *
+         * @SerializedName("waehrung")
+         */
+        protected ?Currency $currency = null,
+        /**
+         * @Type("float")
+         * Maximum precision: 2
+         * Minimum value (inclusive): 0
+         *
+         * @SerializedName("mwst_satz")
+         */
+        protected ?float $vatRate = null,
+        /**
+         * @Type("float")
+         * Maximum precision: 2
+         * Minimum value (inclusive): 0
+         *
+         * @SerializedName("mwst_gesamt")
+         */
+        protected ?float $totalVAT = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("freitext_preis")
+         */
+        protected ?string $freeTextPrice = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("x_fache")
+         */
+        protected ?string $xTimes = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nettorendite")
+         */
+        protected ?float $netYield = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nettorendite_soll")
+         */
+        protected ?float $targetNetYield = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nettorendite_ist")
+         */
+        protected ?float $actualNetYield = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ActualRentalIncome")
+         *
+         * @SerializedName("mieteinnahmen_ist")
+         */
+        protected ?ActualRentalIncome $actualRentalIncome = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\TargetRentalIncome")
+         *
+         * @SerializedName("mieteinnahmen_soll")
+         */
+        protected ?TargetRentalIncome $targetRentalIncome = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("erschliessungskosten")
+         */
+        protected ?float $developmentCosts = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kaution")
+         */
+        protected ?float $deposit = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("kaution_text")
+         */
+        protected ?string $depositText = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("geschaeftsguthaben")
+         */
+        protected ?float $businessAssets = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingCarport")
+         *
+         * @SerializedName("stp_carport")
+         */
+        protected ?ParkingCarport $parkingCarport = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingDuplex")
+         *
+         * @SerializedName("stp_duplex")
+         */
+        protected ?ParkingDuplex $parkingDuplex = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingOutdoor")
+         *
+         * @SerializedName("stp_freiplatz")
+         */
+        protected ?ParkingOutdoor $parkingOutdoor = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingGarage")
+         *
+         * @SerializedName("stp_garage")
+         */
+        protected ?ParkingGarage $parkingGarage = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingMultiStorey")
+         *
+         * @SerializedName("stp_parkhaus")
+         */
+        protected ?ParkingMultiStorey $parkingMultiStorey = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ParkingUnderground")
+         *
+         * @SerializedName("stp_tiefgarage")
+         */
+        protected ?ParkingUnderground $parkingUnderground = null,
+        /**
+         * @XmlList(inline = true, entry = "stp_sonstige")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\ParkingOther>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("stp_sonstige")
+         */
+        protected array $parkingOther = [],
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("richtpreis")
+         */
+        protected ?float $guidePrice = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("richtpreisprom2")
+         */
+        protected ?float $guidePricePerSqm = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getPurchasePrice(): ?PurchasePrice
     {

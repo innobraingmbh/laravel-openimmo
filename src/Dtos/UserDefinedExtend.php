@@ -17,21 +17,18 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class UserDefinedExtend
 {
-    /**
-     * @XmlList(inline = true, entry = "feld")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Field>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("feld")
-     */
-    protected array $field = [];
-
-    public function __construct(array $field = [])
-    {
-        $this->field = $field;
-    }
+    public function __construct(
+        /**
+         * @XmlList(inline = true, entry = "feld")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Field>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("feld")
+         */
+        protected array $field = []
+    ) {}
 
     /**
      * Returns array of array

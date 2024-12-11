@@ -29,22 +29,19 @@ class Other
 
     public const OTHER_TYPE_OTHER = 'SONSTIGE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("sonstige_typ")
-     * optional
-     *
-     * @see OTHER_TYPE_* constants
-     */
-    protected string $otherType = '';
-
-    public function __construct(string $otherType = '')
-    {
-        $this->otherType = $otherType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("sonstige_typ")
+         * optional
+         *
+         * @see OTHER_TYPE_* constants
+         */
+        protected string $otherType = ''
+    ) {}
 
     public function getOtherType(): ?string
     {

@@ -18,191 +18,148 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class PropertyType
 {
-    /**
-     * @XmlList(inline = true, entry = "zimmer")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Rooms>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("zimmer")
-     */
-    protected array $rooms = [];
-
-    /**
-     * @XmlList(inline = true, entry = "wohnung")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Apartment>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("wohnung")
-     */
-    protected array $apartment = [];
-
-    /**
-     * @XmlList(inline = true, entry = "haus")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\House>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("haus")
-     */
-    protected array $house = [];
-
-    /**
-     * @XmlList(inline = true, entry = "grundstueck")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Plot>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("grundstueck")
-     */
-    protected array $plot = [];
-
-    /**
-     * @XmlList(inline = true, entry = "buero_praxen")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\OfficePractices>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("buero_praxen")
-     */
-    protected array $officesPractices = [];
-
-    /**
-     * @XmlList(inline = true, entry = "einzelhandel")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Retail>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("einzelhandel")
-     */
-    protected array $retail = [];
-
-    /**
-     * @XmlList(inline = true, entry = "gastgewerbe")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Hospitality>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("gastgewerbe")
-     */
-    protected array $hospitality = [];
-
-    /**
-     * @XmlList(inline = true, entry = "hallen_lager_prod")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\HallsStorageProduction>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("hallen_lager_prod")
-     */
-    protected array $hallsStorageProduction = [];
-
-    /**
-     * @XmlList(inline = true, entry = "land_und_forstwirtschaft")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\AgricultureAndForestry>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("land_und_forstwirtschaft")
-     */
-    protected array $agricultureAndForestry = [];
-
-    /**
-     * @XmlList(inline = true, entry = "parken")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Parking>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("parken")
-     */
-    protected array $parking = [];
-
-    /**
-     * @XmlList(inline = true, entry = "sonstige")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Other>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("sonstige")
-     */
-    protected array $other = [];
-
-    /**
-     * @XmlList(inline = true, entry = "freizeitimmobilie_gewerblich")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\CommercialLeisureProperty>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("freizeitimmobilie_gewerblich")
-     */
-    protected array $commercialLeisureProperty = [];
-
-    /**
-     * @XmlList(inline = true, entry = "zinshaus_renditeobjekt")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("zinshaus_renditeobjekt")
-     */
-    protected array $apartmentBuildingInvestmentProperty = [];
-
-    /**
-     * @XmlList(inline = true, entry = "objektart_zusatz")
-     *
-     * @Type("array<string>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("objektart_zusatz")
-     */
-    protected array $propertyTypeAdditional = [];
-
     public function __construct(
-        array $rooms = [],
-        array $apartment = [],
-        array $house = [],
-        array $plot = [],
-        array $officesPractices = [],
-        array $retail = [],
-        array $hospitality = [],
-        array $hallsStorageProduction = [],
-        array $agricultureAndForestry = [],
-        array $parking = [],
-        array $other = [],
-        array $commercialLeisureProperty = [],
-        array $apartmentBuildingInvestmentProperty = [],
-        array $propertyTypeAdditional = [],
-    ) {
-        $this->rooms = $rooms;
-        $this->apartment = $apartment;
-        $this->house = $house;
-        $this->plot = $plot;
-        $this->officesPractices = $officesPractices;
-        $this->retail = $retail;
-        $this->hospitality = $hospitality;
-        $this->hallsStorageProduction = $hallsStorageProduction;
-        $this->agricultureAndForestry = $agricultureAndForestry;
-        $this->parking = $parking;
-        $this->other = $other;
-        $this->commercialLeisureProperty = $commercialLeisureProperty;
-        $this->apartmentBuildingInvestmentProperty = $apartmentBuildingInvestmentProperty;
-        $this->propertyTypeAdditional = $propertyTypeAdditional;
-    }
+        /**
+         * @XmlList(inline = true, entry = "zimmer")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Rooms>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("zimmer")
+         */
+        protected array $rooms = [],
+        /**
+         * @XmlList(inline = true, entry = "wohnung")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Apartment>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("wohnung")
+         */
+        protected array $apartment = [],
+        /**
+         * @XmlList(inline = true, entry = "haus")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\House>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("haus")
+         */
+        protected array $house = [],
+        /**
+         * @XmlList(inline = true, entry = "grundstueck")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Plot>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("grundstueck")
+         */
+        protected array $plot = [],
+        /**
+         * @XmlList(inline = true, entry = "buero_praxen")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\OfficePractices>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("buero_praxen")
+         */
+        protected array $officesPractices = [],
+        /**
+         * @XmlList(inline = true, entry = "einzelhandel")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Retail>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("einzelhandel")
+         */
+        protected array $retail = [],
+        /**
+         * @XmlList(inline = true, entry = "gastgewerbe")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Hospitality>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("gastgewerbe")
+         */
+        protected array $hospitality = [],
+        /**
+         * @XmlList(inline = true, entry = "hallen_lager_prod")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\HallsStorageProduction>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("hallen_lager_prod")
+         */
+        protected array $hallsStorageProduction = [],
+        /**
+         * @XmlList(inline = true, entry = "land_und_forstwirtschaft")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\AgricultureAndForestry>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("land_und_forstwirtschaft")
+         */
+        protected array $agricultureAndForestry = [],
+        /**
+         * @XmlList(inline = true, entry = "parken")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Parking>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("parken")
+         */
+        protected array $parking = [],
+        /**
+         * @XmlList(inline = true, entry = "sonstige")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Other>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("sonstige")
+         */
+        protected array $other = [],
+        /**
+         * @XmlList(inline = true, entry = "freizeitimmobilie_gewerblich")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\CommercialLeisureProperty>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("freizeitimmobilie_gewerblich")
+         */
+        protected array $commercialLeisureProperty = [],
+        /**
+         * @XmlList(inline = true, entry = "zinshaus_renditeobjekt")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("zinshaus_renditeobjekt")
+         */
+        protected array $apartmentBuildingInvestmentProperty = [],
+        /**
+         * @XmlList(inline = true, entry = "objektart_zusatz")
+         *
+         * @Type("array<string>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("objektart_zusatz")
+         */
+        protected array $propertyTypeAdditional = []
+    ) {}
 
     /**
      * Returns array of array

@@ -17,69 +17,53 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class HeatingType
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("OFEN")
-     * optional
-     */
-    protected ?bool $stove = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ETAGE")
-     * optional
-     */
-    protected ?bool $floor = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ZENTRAL")
-     * optional
-     */
-    protected ?bool $central = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FERN")
-     * optional
-     */
-    protected ?bool $remote = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FUSSBODEN")
-     * optional
-     */
-    protected ?bool $flooring = null;
-
     public function __construct(
-        ?bool $stove = null,
-        ?bool $floor = null,
-        ?bool $central = null,
-        ?bool $remote = null,
-        ?bool $flooring = null,
-    ) {
-        $this->stove = $stove;
-        $this->floor = $floor;
-        $this->central = $central;
-        $this->remote = $remote;
-        $this->flooring = $flooring;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("OFEN")
+         * optional
+         */
+        protected ?bool $stove = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ETAGE")
+         * optional
+         */
+        protected ?bool $floor = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ZENTRAL")
+         * optional
+         */
+        protected ?bool $central = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FERN")
+         * optional
+         */
+        protected ?bool $remote = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FUSSBODEN")
+         * optional
+         */
+        protected ?bool $flooring = null
+    ) {}
 
     public function getStove(): ?bool
     {

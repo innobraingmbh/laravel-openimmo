@@ -23,544 +23,372 @@ class Equipment
 
     public const EQUIPMENT_CATEGORY_LUXURY = 'LUXUS';
 
-    /**
-     * @Type("string")
-     *
-     * @see EQUIPMENT_CATEGORY_* constants
-     *
-     * @SerializedName("ausstatt_kategorie")
-     */
-    protected string $equipmentCategory = '';
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("wg_geeignet")
-     */
-    protected ?bool $suitableForSharedFlat = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("raeume_veraenderbar")
-     */
-    protected ?bool $roomsModifiable = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Bathroom")
-     *
-     * @SerializedName("bad")
-     */
-    protected ?Bathroom $bathroom = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Kitchen")
-     *
-     * @SerializedName("kueche")
-     */
-    protected ?Kitchen $kitchen = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Floor")
-     *
-     * @SerializedName("boden")
-     */
-    protected ?Floor $floor = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("kamin")
-     */
-    protected ?bool $fireplace = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\HeatingType")
-     *
-     * @SerializedName("heizungsart")
-     */
-    protected ?HeatingType $heatingType = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\HeatingSystem")
-     *
-     * @SerializedName("befeuerung")
-     */
-    protected ?HeatingSystem $heating = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("klimatisiert")
-     */
-    protected ?bool $airConditioned = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Elevator")
-     *
-     * @SerializedName("fahrstuhl")
-     */
-    protected ?Elevator $elevator = null;
-
-    /**
-     * @XmlList(inline = true, entry = "stellplatzart")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\ParkingSpaceType>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("stellplatzart")
-     */
-    protected array $parkingSpaceType = [];
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("gartennutzung")
-     */
-    protected ?bool $gardenUse = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\BalconyTerraceOrientation")
-     *
-     * @SerializedName("ausricht_balkon_terrasse")
-     */
-    protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Furnished")
-     *
-     * @SerializedName("moebliert")
-     */
-    protected ?Furnished $furnished = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("rollstuhlgerecht")
-     */
-    protected ?bool $wheelchairAccessible = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("kabel_sat_tv")
-     */
-    protected ?bool $cableSatelliteTV = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("dvbt")
-     */
-    protected ?bool $digitalTerrestrialTV = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("barrierefrei")
-     */
-    protected ?bool $barrierFree = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("sauna")
-     */
-    protected ?bool $sauna = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("swimmingpool")
-     */
-    protected ?bool $swimmingPool = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("wasch_trockenraum")
-     */
-    protected ?bool $laundryDryingRoom = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("wintergarten")
-     */
-    protected ?bool $winterGarden = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("dv_verkabelung")
-     */
-    protected ?bool $dataProcessingCabling = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("rampe")
-     */
-    protected ?bool $ramp = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("hebebuehne")
-     */
-    protected ?bool $liftPlatform = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("kran")
-     */
-    protected ?bool $crane = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("gastterrasse")
-     */
-    protected ?bool $guestTerrace = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("stromanschlusswert")
-     */
-    protected ?string $electricityConnectionValue = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("kantine_cafeteria")
-     */
-    protected ?bool $canteenCafeteria = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("teekueche")
-     */
-    protected ?bool $kitchenette = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("hallenhoehe")
-     */
-    protected ?float $hallHeight = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\AttachedGastronomy")
-     *
-     * @SerializedName("angeschl_gastronomie")
-     */
-    protected ?AttachedGastronomy $attachedGastronomy = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("brauereibindung")
-     */
-    protected ?bool $breweryTie = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("sporteinrichtungen")
-     */
-    protected ?bool $sportsFacilities = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("wellnessbereich")
-     */
-    protected ?bool $wellnessArea = null;
-
-    /**
-     * @XmlList(inline = true, entry = "serviceleistungen")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Services>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("serviceleistungen")
-     */
-    protected array $services = [];
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("telefon_ferienimmobilie")
-     */
-    protected ?bool $holidayPropertyPhone = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\BroadbandAccess")
-     *
-     * @SerializedName("breitband_zugang")
-     */
-    protected ?BroadbandAccess $broadbandAccess = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("umts_empfang")
-     */
-    protected ?bool $umtsReception = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\SecurityTechnology")
-     *
-     * @SerializedName("sicherheitstechnik")
-     */
-    protected ?SecurityTechnology $securityTechnology = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Basement")
-     *
-     * @SerializedName("unterkellert")
-     */
-    protected ?Basement $basement = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("abstellraum")
-     */
-    protected ?bool $storageRoom = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("fahrradraum")
-     */
-    protected ?bool $bicycleRoom = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("rolladen")
-     */
-    protected ?bool $shutters = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\RoofShape")
-     *
-     * @SerializedName("dachform")
-     */
-    protected ?RoofShape $roofShape = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ConstructionMethod")
-     *
-     * @SerializedName("bauweise")
-     */
-    protected ?ConstructionMethod $constructionMethod = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\DevelopmentStage")
-     *
-     * @SerializedName("ausbaustufe")
-     */
-    protected ?DevelopmentStage $developmentStage = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\EnergyType")
-     *
-     * @SerializedName("energietyp")
-     */
-    protected ?EnergyType $energyType = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("bibliothek")
-     */
-    protected ?bool $library = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("dachboden")
-     */
-    protected ?bool $attic = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("gaestewc")
-     */
-    protected ?bool $guestToilet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("kabelkanaele")
-     */
-    protected ?bool $cableChannels = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("seniorengerecht")
-     */
-    protected ?bool $seniorFriendly = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        string $equipmentCategory = '',
-        ?bool $suitableForSharedFlat = null,
-        ?bool $roomsModifiable = null,
-        ?Bathroom $bathroom = null,
-        ?Kitchen $kitchen = null,
-        ?Floor $floor = null,
-        ?bool $fireplace = null,
-        ?HeatingType $heatingType = null,
-        ?HeatingSystem $heating = null,
-        ?bool $airConditioned = null,
-        ?Elevator $elevator = null,
-        array $parkingSpaceType = [],
-        ?bool $gardenUse = null,
-        ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
-        ?Furnished $furnished = null,
-        ?bool $wheelchairAccessible = null,
-        ?bool $cableSatelliteTV = null,
-        ?bool $digitalTerrestrialTV = null,
-        ?bool $barrierFree = null,
-        ?bool $sauna = null,
-        ?bool $swimmingPool = null,
-        ?bool $laundryDryingRoom = null,
-        ?bool $winterGarden = null,
-        ?bool $dataProcessingCabling = null,
-        ?bool $ramp = null,
-        ?bool $liftPlatform = null,
-        ?bool $crane = null,
-        ?bool $guestTerrace = null,
-        ?string $electricityConnectionValue = null,
-        ?bool $canteenCafeteria = null,
-        ?bool $kitchenette = null,
-        ?float $hallHeight = null,
-        ?AttachedGastronomy $attachedGastronomy = null,
-        ?bool $breweryTie = null,
-        ?bool $sportsFacilities = null,
-        ?bool $wellnessArea = null,
-        array $services = [],
-        ?bool $holidayPropertyPhone = null,
-        ?BroadbandAccess $broadbandAccess = null,
-        ?bool $umtsReception = null,
-        ?SecurityTechnology $securityTechnology = null,
-        ?Basement $basement = null,
-        ?bool $storageRoom = null,
-        ?bool $bicycleRoom = null,
-        ?bool $shutters = null,
-        ?RoofShape $roofShape = null,
-        ?ConstructionMethod $constructionMethod = null,
-        ?DevelopmentStage $developmentStage = null,
-        ?EnergyType $energyType = null,
-        ?bool $library = null,
-        ?bool $attic = null,
-        ?bool $guestToilet = null,
-        ?bool $cableChannels = null,
-        ?bool $seniorFriendly = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->equipmentCategory = $equipmentCategory;
-        $this->suitableForSharedFlat = $suitableForSharedFlat;
-        $this->roomsModifiable = $roomsModifiable;
-        $this->bathroom = $bathroom;
-        $this->kitchen = $kitchen;
-        $this->floor = $floor;
-        $this->fireplace = $fireplace;
-        $this->heatingType = $heatingType;
-        $this->heating = $heating;
-        $this->airConditioned = $airConditioned;
-        $this->elevator = $elevator;
-        $this->parkingSpaceType = $parkingSpaceType;
-        $this->gardenUse = $gardenUse;
-        $this->balconyTerraceOrientation = $balconyTerraceOrientation;
-        $this->furnished = $furnished;
-        $this->wheelchairAccessible = $wheelchairAccessible;
-        $this->cableSatelliteTV = $cableSatelliteTV;
-        $this->digitalTerrestrialTV = $digitalTerrestrialTV;
-        $this->barrierFree = $barrierFree;
-        $this->sauna = $sauna;
-        $this->swimmingPool = $swimmingPool;
-        $this->laundryDryingRoom = $laundryDryingRoom;
-        $this->winterGarden = $winterGarden;
-        $this->dataProcessingCabling = $dataProcessingCabling;
-        $this->ramp = $ramp;
-        $this->liftPlatform = $liftPlatform;
-        $this->crane = $crane;
-        $this->guestTerrace = $guestTerrace;
-        $this->electricityConnectionValue = $electricityConnectionValue;
-        $this->canteenCafeteria = $canteenCafeteria;
-        $this->kitchenette = $kitchenette;
-        $this->hallHeight = $hallHeight;
-        $this->attachedGastronomy = $attachedGastronomy;
-        $this->breweryTie = $breweryTie;
-        $this->sportsFacilities = $sportsFacilities;
-        $this->wellnessArea = $wellnessArea;
-        $this->services = $services;
-        $this->holidayPropertyPhone = $holidayPropertyPhone;
-        $this->broadbandAccess = $broadbandAccess;
-        $this->umtsReception = $umtsReception;
-        $this->securityTechnology = $securityTechnology;
-        $this->basement = $basement;
-        $this->storageRoom = $storageRoom;
-        $this->bicycleRoom = $bicycleRoom;
-        $this->shutters = $shutters;
-        $this->roofShape = $roofShape;
-        $this->constructionMethod = $constructionMethod;
-        $this->developmentStage = $developmentStage;
-        $this->energyType = $energyType;
-        $this->library = $library;
-        $this->attic = $attic;
-        $this->guestToilet = $guestToilet;
-        $this->cableChannels = $cableChannels;
-        $this->seniorFriendly = $seniorFriendly;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @see EQUIPMENT_CATEGORY_* constants
+         *
+         * @SerializedName("ausstatt_kategorie")
+         */
+        protected string $equipmentCategory = '',
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("wg_geeignet")
+         */
+        protected ?bool $suitableForSharedFlat = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("raeume_veraenderbar")
+         */
+        protected ?bool $roomsModifiable = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Bathroom")
+         *
+         * @SerializedName("bad")
+         */
+        protected ?Bathroom $bathroom = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Kitchen")
+         *
+         * @SerializedName("kueche")
+         */
+        protected ?Kitchen $kitchen = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Floor")
+         *
+         * @SerializedName("boden")
+         */
+        protected ?Floor $floor = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("kamin")
+         */
+        protected ?bool $fireplace = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\HeatingType")
+         *
+         * @SerializedName("heizungsart")
+         */
+        protected ?HeatingType $heatingType = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\HeatingSystem")
+         *
+         * @SerializedName("befeuerung")
+         */
+        protected ?HeatingSystem $heating = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("klimatisiert")
+         */
+        protected ?bool $airConditioned = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Elevator")
+         *
+         * @SerializedName("fahrstuhl")
+         */
+        protected ?Elevator $elevator = null,
+        /**
+         * @XmlList(inline = true, entry = "stellplatzart")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\ParkingSpaceType>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("stellplatzart")
+         */
+        protected array $parkingSpaceType = [],
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("gartennutzung")
+         */
+        protected ?bool $gardenUse = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\BalconyTerraceOrientation")
+         *
+         * @SerializedName("ausricht_balkon_terrasse")
+         */
+        protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Furnished")
+         *
+         * @SerializedName("moebliert")
+         */
+        protected ?Furnished $furnished = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("rollstuhlgerecht")
+         */
+        protected ?bool $wheelchairAccessible = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("kabel_sat_tv")
+         */
+        protected ?bool $cableSatelliteTV = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("dvbt")
+         */
+        protected ?bool $digitalTerrestrialTV = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("barrierefrei")
+         */
+        protected ?bool $barrierFree = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("sauna")
+         */
+        protected ?bool $sauna = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("swimmingpool")
+         */
+        protected ?bool $swimmingPool = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("wasch_trockenraum")
+         */
+        protected ?bool $laundryDryingRoom = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("wintergarten")
+         */
+        protected ?bool $winterGarden = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("dv_verkabelung")
+         */
+        protected ?bool $dataProcessingCabling = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("rampe")
+         */
+        protected ?bool $ramp = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("hebebuehne")
+         */
+        protected ?bool $liftPlatform = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("kran")
+         */
+        protected ?bool $crane = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("gastterrasse")
+         */
+        protected ?bool $guestTerrace = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("stromanschlusswert")
+         */
+        protected ?string $electricityConnectionValue = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("kantine_cafeteria")
+         */
+        protected ?bool $canteenCafeteria = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("teekueche")
+         */
+        protected ?bool $kitchenette = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("hallenhoehe")
+         */
+        protected ?float $hallHeight = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\AttachedGastronomy")
+         *
+         * @SerializedName("angeschl_gastronomie")
+         */
+        protected ?AttachedGastronomy $attachedGastronomy = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("brauereibindung")
+         */
+        protected ?bool $breweryTie = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("sporteinrichtungen")
+         */
+        protected ?bool $sportsFacilities = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("wellnessbereich")
+         */
+        protected ?bool $wellnessArea = null,
+        /**
+         * @XmlList(inline = true, entry = "serviceleistungen")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Services>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("serviceleistungen")
+         */
+        protected array $services = [],
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("telefon_ferienimmobilie")
+         */
+        protected ?bool $holidayPropertyPhone = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\BroadbandAccess")
+         *
+         * @SerializedName("breitband_zugang")
+         */
+        protected ?BroadbandAccess $broadbandAccess = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("umts_empfang")
+         */
+        protected ?bool $umtsReception = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\SecurityTechnology")
+         *
+         * @SerializedName("sicherheitstechnik")
+         */
+        protected ?SecurityTechnology $securityTechnology = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Basement")
+         *
+         * @SerializedName("unterkellert")
+         */
+        protected ?Basement $basement = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("abstellraum")
+         */
+        protected ?bool $storageRoom = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("fahrradraum")
+         */
+        protected ?bool $bicycleRoom = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("rolladen")
+         */
+        protected ?bool $shutters = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\RoofShape")
+         *
+         * @SerializedName("dachform")
+         */
+        protected ?RoofShape $roofShape = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ConstructionMethod")
+         *
+         * @SerializedName("bauweise")
+         */
+        protected ?ConstructionMethod $constructionMethod = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\DevelopmentStage")
+         *
+         * @SerializedName("ausbaustufe")
+         */
+        protected ?DevelopmentStage $developmentStage = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\EnergyType")
+         *
+         * @SerializedName("energietyp")
+         */
+        protected ?EnergyType $energyType = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("bibliothek")
+         */
+        protected ?bool $library = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("dachboden")
+         */
+        protected ?bool $attic = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("gaestewc")
+         */
+        protected ?bool $guestToilet = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("kabelkanaele")
+         */
+        protected ?bool $cableChannels = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("seniorengerecht")
+         */
+        protected ?bool $seniorFriendly = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getEquipmentCategory(): ?string
     {

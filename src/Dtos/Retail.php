@@ -35,22 +35,19 @@ class Retail
 
     public const TRADE_TYPE_EXHIBITION_SPACE = 'AUSSTELLUNGSFLAECHE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("handel_typ")
-     * optional
-     *
-     * @see TRADE_TYPE_* constants
-     */
-    protected string $tradeType = '';
-
-    public function __construct(string $tradeType = '')
-    {
-        $this->tradeType = $tradeType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("handel_typ")
+         * optional
+         *
+         * @see TRADE_TYPE_* constants
+         */
+        protected string $tradeType = ''
+    ) {}
 
     public function getTradeType(): ?string
     {

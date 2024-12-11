@@ -21,22 +21,19 @@ class Furnished
 
     public const FURNISHED_PARTIAL = 'TEIL';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("moeb")
-     * optional
-     *
-     * @see FURNISHED_* constants
-     */
-    protected string $furnished = '';
-
-    public function __construct(string $furnished = '')
-    {
-        $this->furnished = $furnished;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("moeb")
+         * optional
+         *
+         * @see FURNISHED_* constants
+         */
+        protected string $furnished = ''
+    ) {}
 
     public function getFurnished(): ?string
     {

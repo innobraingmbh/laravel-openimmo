@@ -17,63 +17,44 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Auction
 {
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("zwangsversteigerung")
-     */
-    protected ?bool $forcedSale = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("aktenzeichen")
-     */
-    protected ?string $fileNumber = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-     *
-     * @SerializedName("zvtermin")
-     */
-    protected ?DateTime $forcedSaleDate = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-     *
-     * @SerializedName("zusatztermin")
-     */
-    protected ?DateTime $additionalDate = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("amtsgericht")
-     */
-    protected ?string $districtCourt = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("verkehrswert")
-     */
-    protected ?float $marketValue = null;
-
     public function __construct(
-        ?bool $forcedSale = null,
-        ?string $fileNumber = null,
-        ?DateTime $forcedSaleDate = null,
-        ?DateTime $additionalDate = null,
-        ?string $districtCourt = null,
-        ?float $marketValue = null,
-    ) {
-        $this->forcedSale = $forcedSale;
-        $this->fileNumber = $fileNumber;
-        $this->forcedSaleDate = $forcedSaleDate;
-        $this->additionalDate = $additionalDate;
-        $this->districtCourt = $districtCourt;
-        $this->marketValue = $marketValue;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("zwangsversteigerung")
+         */
+        protected ?bool $forcedSale = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("aktenzeichen")
+         */
+        protected ?string $fileNumber = null,
+        /**
+         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
+         *
+         * @SerializedName("zvtermin")
+         */
+        protected ?DateTime $forcedSaleDate = null,
+        /**
+         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
+         *
+         * @SerializedName("zusatztermin")
+         */
+        protected ?DateTime $additionalDate = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("amtsgericht")
+         */
+        protected ?string $districtCourt = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("verkehrswert")
+         */
+        protected ?float $marketValue = null
+    ) {}
 
     public function getForcedSale(): ?bool
     {

@@ -16,69 +16,53 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class DevelopmentStage
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BAUSATZHAUS")
-     * optional
-     */
-    protected ?bool $prefabricatedHouse = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("AUSBAUHAUS")
-     * optional
-     */
-    protected ?bool $expandableHouse = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SCHLUESSELFERTIGMITKELLER")
-     * optional
-     */
-    protected ?bool $turnkeyWithBasement = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SCHLUESSELFERTIGOHNEBODENPLATTE")
-     * optional
-     */
-    protected ?bool $turnkeyWithoutFoundation = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SCHLUESSELFERTIGMITBODENPLATTE")
-     * optional
-     */
-    protected ?bool $turnkeyWithFoundation = null;
-
     public function __construct(
-        ?bool $prefabricatedHouse = null,
-        ?bool $expandableHouse = null,
-        ?bool $turnkeyWithBasement = null,
-        ?bool $turnkeyWithoutFoundation = null,
-        ?bool $turnkeyWithFoundation = null,
-    ) {
-        $this->prefabricatedHouse = $prefabricatedHouse;
-        $this->expandableHouse = $expandableHouse;
-        $this->turnkeyWithBasement = $turnkeyWithBasement;
-        $this->turnkeyWithoutFoundation = $turnkeyWithoutFoundation;
-        $this->turnkeyWithFoundation = $turnkeyWithFoundation;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BAUSATZHAUS")
+         * optional
+         */
+        protected ?bool $prefabricatedHouse = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("AUSBAUHAUS")
+         * optional
+         */
+        protected ?bool $expandableHouse = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SCHLUESSELFERTIGMITKELLER")
+         * optional
+         */
+        protected ?bool $turnkeyWithBasement = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SCHLUESSELFERTIGOHNEBODENPLATTE")
+         * optional
+         */
+        protected ?bool $turnkeyWithoutFoundation = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SCHLUESSELFERTIGMITBODENPLATTE")
+         * optional
+         */
+        protected ?bool $turnkeyWithFoundation = null
+    ) {}
 
     public function getPrefabricatedHouse(): ?bool
     {

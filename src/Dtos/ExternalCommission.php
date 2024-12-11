@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ExternalCommission
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("mit_mwst")
-     * optional
-     */
-    protected ?bool $withVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(?bool $withVAT = null, ?string $value = null)
-    {
-        $this->withVAT = $withVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("mit_mwst")
+         * optional
+         */
+        protected ?bool $withVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getWithVAT(): ?bool
     {

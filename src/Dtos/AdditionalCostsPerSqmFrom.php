@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class AdditionalCostsPerSqmFrom
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("nebenkostenprom2bis")
-     * optional
-     */
-    protected ?float $additionalCostsPerSqmTo = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $additionalCostsPerSqmTo = null, ?float $value = null)
-    {
-        $this->additionalCostsPerSqmTo = $additionalCostsPerSqmTo;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("nebenkostenprom2bis")
+         * optional
+         */
+        protected ?float $additionalCostsPerSqmTo = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getAdditionalCostsPerSqmTo(): ?float
     {

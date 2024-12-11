@@ -47,30 +47,25 @@ class Distances
 
     public const DISTANCE_TO_RESTAURANTS = 'GASTSTAETTEN';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("distanz_zu")
-     * required
-     *
-     * @see DISTANCE_TO_* constants
-     */
-    protected string $distanceTo = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(string $distanceTo = '', ?float $value = null)
-    {
-        $this->distanceTo = $distanceTo;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("distanz_zu")
+         * required
+         *
+         * @see DISTANCE_TO_* constants
+         */
+        protected string $distanceTo = '',
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getDistanceTo(): string
     {

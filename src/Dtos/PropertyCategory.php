@@ -17,75 +17,56 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class PropertyCategory
 {
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\TypeOfUse")
-     *
-     * @SerializedName("nutzungsart")
-     */
-    protected ?TypeOfUse $typeOfUse = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\MarketingType")
-     *
-     * @SerializedName("vermarktungsart")
-     */
-    protected ?MarketingType $marketingType = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PropertyType")
-     *
-     * @SerializedName("objektart")
-     */
-    protected ?PropertyType $propertyType = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?TypeOfUse $typeOfUse = null,
-        ?MarketingType $marketingType = null,
-        ?PropertyType $propertyType = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->typeOfUse = $typeOfUse;
-        $this->marketingType = $marketingType;
-        $this->propertyType = $propertyType;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\TypeOfUse")
+         *
+         * @SerializedName("nutzungsart")
+         */
+        protected ?TypeOfUse $typeOfUse = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\MarketingType")
+         *
+         * @SerializedName("vermarktungsart")
+         */
+        protected ?MarketingType $marketingType = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PropertyType")
+         *
+         * @SerializedName("objektart")
+         */
+        protected ?PropertyType $propertyType = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getTypeOfUse(): ?TypeOfUse
     {

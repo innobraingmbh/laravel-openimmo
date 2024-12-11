@@ -17,241 +17,168 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Geo
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("plz")
-     */
-    protected ?string $postalCode = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("ort")
-     */
-    protected ?string $city = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\GeoCoordinates")
-     *
-     * @SerializedName("geokoordinaten")
-     */
-    protected ?GeoCoordinates $geoCoordinates = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("strasse")
-     */
-    protected ?string $street = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("hausnummer")
-     */
-    protected ?string $houseNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("bundesland")
-     */
-    protected ?string $state = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Country")
-     *
-     * @SerializedName("land")
-     */
-    protected ?Country $country = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("gemeindecode")
-     */
-    protected ?string $municipalityCode = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("flur")
-     */
-    protected ?string $corridor = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("flurstueck")
-     */
-    protected ?string $parcel = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("gemarkung")
-     */
-    protected ?string $cadastralDistrict = null;
-
-    /**
-     * @Type("int")
-     * Minimum value (inclusive): -2147483648
-     * Maximum value (inclusive): 2147483647
-     *
-     * @SerializedName("etage")
-     */
-    protected ?int $floor = null;
-
-    /**
-     * @Type("int")
-     * Minimum value (inclusive): -2147483648
-     * Maximum value (inclusive): 2147483647
-     *
-     * @SerializedName("anzahl_etagen")
-     */
-    protected ?int $numberOfFloors = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\LocationInBuilding")
-     *
-     * @SerializedName("lage_im_bau")
-     */
-    protected ?LocationInBuilding $locationInBuilding = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("wohnungsnr")
-     */
-    protected ?string $apartmentNumber = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\LocationArea")
-     *
-     * @SerializedName("lage_gebiet")
-     */
-    protected ?LocationArea $areaLocation = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("regionaler_zusatz")
-     */
-    protected ?string $regionalAddition = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("karten_makro")
-     */
-    protected ?bool $macroMap = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("karten_mikro")
-     */
-    protected ?bool $microMap = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("virtuelletour")
-     */
-    protected ?bool $virtualTour = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("luftbildern")
-     */
-    protected ?bool $aerialPhotos = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $postalCode = null,
-        ?string $city = null,
-        ?GeoCoordinates $geoCoordinates = null,
-        ?string $street = null,
-        ?string $houseNumber = null,
-        ?string $state = null,
-        ?Country $country = null,
-        ?string $municipalityCode = null,
-        ?string $corridor = null,
-        ?string $parcel = null,
-        ?string $cadastralDistrict = null,
-        ?int $floor = null,
-        ?int $numberOfFloors = null,
-        ?LocationInBuilding $locationInBuilding = null,
-        ?string $apartmentNumber = null,
-        ?LocationArea $areaLocation = null,
-        ?string $regionalAddition = null,
-        ?bool $macroMap = null,
-        ?bool $microMap = null,
-        ?bool $virtualTour = null,
-        ?bool $aerialPhotos = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->postalCode = $postalCode;
-        $this->city = $city;
-        $this->geoCoordinates = $geoCoordinates;
-        $this->street = $street;
-        $this->houseNumber = $houseNumber;
-        $this->state = $state;
-        $this->country = $country;
-        $this->municipalityCode = $municipalityCode;
-        $this->corridor = $corridor;
-        $this->parcel = $parcel;
-        $this->cadastralDistrict = $cadastralDistrict;
-        $this->floor = $floor;
-        $this->numberOfFloors = $numberOfFloors;
-        $this->locationInBuilding = $locationInBuilding;
-        $this->apartmentNumber = $apartmentNumber;
-        $this->areaLocation = $areaLocation;
-        $this->regionalAddition = $regionalAddition;
-        $this->macroMap = $macroMap;
-        $this->microMap = $microMap;
-        $this->virtualTour = $virtualTour;
-        $this->aerialPhotos = $aerialPhotos;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("plz")
+         */
+        protected ?string $postalCode = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("ort")
+         */
+        protected ?string $city = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\GeoCoordinates")
+         *
+         * @SerializedName("geokoordinaten")
+         */
+        protected ?GeoCoordinates $geoCoordinates = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("strasse")
+         */
+        protected ?string $street = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("hausnummer")
+         */
+        protected ?string $houseNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("bundesland")
+         */
+        protected ?string $state = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Country")
+         *
+         * @SerializedName("land")
+         */
+        protected ?Country $country = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("gemeindecode")
+         */
+        protected ?string $municipalityCode = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("flur")
+         */
+        protected ?string $corridor = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("flurstueck")
+         */
+        protected ?string $parcel = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("gemarkung")
+         */
+        protected ?string $cadastralDistrict = null,
+        /**
+         * @Type("int")
+         * Minimum value (inclusive): -2147483648
+         * Maximum value (inclusive): 2147483647
+         *
+         * @SerializedName("etage")
+         */
+        protected ?int $floor = null,
+        /**
+         * @Type("int")
+         * Minimum value (inclusive): -2147483648
+         * Maximum value (inclusive): 2147483647
+         *
+         * @SerializedName("anzahl_etagen")
+         */
+        protected ?int $numberOfFloors = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\LocationInBuilding")
+         *
+         * @SerializedName("lage_im_bau")
+         */
+        protected ?LocationInBuilding $locationInBuilding = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("wohnungsnr")
+         */
+        protected ?string $apartmentNumber = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\LocationArea")
+         *
+         * @SerializedName("lage_gebiet")
+         */
+        protected ?LocationArea $areaLocation = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("regionaler_zusatz")
+         */
+        protected ?string $regionalAddition = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("karten_makro")
+         */
+        protected ?bool $macroMap = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("karten_mikro")
+         */
+        protected ?bool $microMap = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("virtuelletour")
+         */
+        protected ?bool $virtualTour = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("luftbildern")
+         */
+        protected ?bool $aerialPhotos = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getPostalCode(): ?string
     {

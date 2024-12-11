@@ -54,75 +54,56 @@ class Attachment
 
     public const GROUP_PROPERTY_URL = 'ANBOBJURL';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("location")
-     * required
-     *
-     * @see LOCATION_* constants
-     */
-    protected string $location = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("gruppe")
-     * optional
-     *
-     * @see GROUP_* constants
-     */
-    protected string $group = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("anhangtitel")
-     */
-    protected ?string $attachmentTitle = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("format")
-     */
-    protected string $format = '';
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Check")
-     *
-     * @SerializedName("check")
-     */
-    protected ?Check $check = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Data")
-     *
-     * @SerializedName("daten")
-     */
-    protected ?Data $data = null;
-
     public function __construct(
-        string $location = '',
-        string $group = '',
-        ?string $attachmentTitle = null,
-        string $format = '',
-        ?Check $check = null,
-        ?Data $data = null,
-    ) {
-        $this->location = $location;
-        $this->group = $group;
-        $this->attachmentTitle = $attachmentTitle;
-        $this->format = $format;
-        $this->check = $check;
-        $this->data = $data;
-    }
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("location")
+         * required
+         *
+         * @see LOCATION_* constants
+         */
+        protected string $location = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("gruppe")
+         * optional
+         *
+         * @see GROUP_* constants
+         */
+        protected string $group = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("anhangtitel")
+         */
+        protected ?string $attachmentTitle = null,
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("format")
+         */
+        protected string $format = '',
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Check")
+         *
+         * @SerializedName("check")
+         */
+        protected ?Check $check = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Data")
+         *
+         * @SerializedName("daten")
+         */
+        protected ?Data $data = null
+    ) {}
 
     public function getLocation(): string
     {

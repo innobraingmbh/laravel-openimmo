@@ -17,92 +17,70 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Infrastructure
 {
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("zulieferung")
-     */
-    protected ?bool $supply = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\View")
-     *
-     * @SerializedName("ausblick")
-     */
-    protected ?View $view = null;
-
-    /**
-     * @XmlList(inline = true, entry = "distanzen")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\Distances>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("distanzen")
-     */
-    protected array $distances = [];
-
-    /**
-     * @XmlList(inline = true, entry = "distanzen_sport")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\SportDistances>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("distanzen_sport")
-     */
-    protected array $sportDistances = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?bool $supply = null,
-        ?View $view = null,
-        array $distances = [],
-        array $sportDistances = [],
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->supply = $supply;
-        $this->view = $view;
-        $this->distances = $distances;
-        $this->sportDistances = $sportDistances;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("zulieferung")
+         */
+        protected ?bool $supply = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\View")
+         *
+         * @SerializedName("ausblick")
+         */
+        protected ?View $view = null,
+        /**
+         * @XmlList(inline = true, entry = "distanzen")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\Distances>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("distanzen")
+         */
+        protected array $distances = [],
+        /**
+         * @XmlList(inline = true, entry = "distanzen_sport")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\SportDistances>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("distanzen_sport")
+         */
+        protected array $sportDistances = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getSupply(): ?bool
     {

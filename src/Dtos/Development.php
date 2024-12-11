@@ -25,22 +25,19 @@ class Development
 
     public const DEVELOPMENT_ATTRIBUTE_USUALLY_DEVELOPED = 'ORTSUEBLICHERSCHLOSSEN';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("erschl_attr")
-     * optional
-     *
-     * @see DEVELOPMENT_ATTRIBUTE_* constants
-     */
-    protected string $developmentAttribute = '';
-
-    public function __construct(string $developmentAttribute = '')
-    {
-        $this->developmentAttribute = $developmentAttribute;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("erschl_attr")
+         * optional
+         *
+         * @see DEVELOPMENT_ATTRIBUTE_* constants
+         */
+        protected string $developmentAttribute = ''
+    ) {}
 
     public function getDevelopmentAttribute(): ?string
     {

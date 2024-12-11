@@ -17,31 +17,26 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Elevator
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PERSONEN")
-     * optional
-     */
-    protected ?bool $persons = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LASTEN")
-     * optional
-     */
-    protected ?bool $encumbrances = null;
-
-    public function __construct(?bool $persons = null, ?bool $encumbrances = null)
-    {
-        $this->persons = $persons;
-        $this->encumbrances = $encumbrances;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PERSONEN")
+         * optional
+         */
+        protected ?bool $persons = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LASTEN")
+         * optional
+         */
+        protected ?bool $encumbrances = null
+    ) {}
 
     public function getPersons(): ?bool
     {

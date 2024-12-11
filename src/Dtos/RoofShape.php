@@ -16,93 +16,71 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class RoofShape
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KRUEPPELWALMDACH")
-     * optional
-     */
-    protected ?bool $truncatedHipRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MANSARDDACH")
-     * optional
-     */
-    protected ?bool $mansardRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PULTDACH")
-     * optional
-     */
-    protected ?bool $shedRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SATTELDACH")
-     * optional
-     */
-    protected ?bool $saddleRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WALMDACH")
-     * optional
-     */
-    protected ?bool $hipRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FLACHDACH")
-     * optional
-     */
-    protected ?bool $flatRoof = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PYRAMIDENDACH")
-     * optional
-     */
-    protected ?bool $pyramidRoof = null;
-
     public function __construct(
-        ?bool $truncatedHipRoof = null,
-        ?bool $mansardRoof = null,
-        ?bool $shedRoof = null,
-        ?bool $saddleRoof = null,
-        ?bool $hipRoof = null,
-        ?bool $flatRoof = null,
-        ?bool $pyramidRoof = null,
-    ) {
-        $this->truncatedHipRoof = $truncatedHipRoof;
-        $this->mansardRoof = $mansardRoof;
-        $this->shedRoof = $shedRoof;
-        $this->saddleRoof = $saddleRoof;
-        $this->hipRoof = $hipRoof;
-        $this->flatRoof = $flatRoof;
-        $this->pyramidRoof = $pyramidRoof;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KRUEPPELWALMDACH")
+         * optional
+         */
+        protected ?bool $truncatedHipRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MANSARDDACH")
+         * optional
+         */
+        protected ?bool $mansardRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PULTDACH")
+         * optional
+         */
+        protected ?bool $shedRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SATTELDACH")
+         * optional
+         */
+        protected ?bool $saddleRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WALMDACH")
+         * optional
+         */
+        protected ?bool $hipRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FLACHDACH")
+         * optional
+         */
+        protected ?bool $flatRoof = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PYRAMIDENDACH")
+         * optional
+         */
+        protected ?bool $pyramidRoof = null
+    ) {}
 
     public function getTruncatedHipRoof(): ?bool
     {

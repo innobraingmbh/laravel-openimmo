@@ -21,22 +21,19 @@ class Age
 
     public const AGE_ATTRIBUTE_NEW_CONSTRUCTION = 'NEUBAU';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("alter_attr")
-     * optional
-     *
-     * @see AGE_ATTRIBUTE_* constants
-     */
-    protected string $ageAttribute = '';
-
-    public function __construct(string $ageAttribute = '')
-    {
-        $this->ageAttribute = $ageAttribute;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("alter_attr")
+         * optional
+         *
+         * @see AGE_ATTRIBUTE_* constants
+         */
+        protected string $ageAttribute = ''
+    ) {}
 
     public function getAgeAttribute(): ?string
     {

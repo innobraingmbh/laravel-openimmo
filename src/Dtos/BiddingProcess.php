@@ -19,111 +19,80 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class BiddingProcess
 {
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("beginn_angebotsphase")
-     */
-    protected ?DateTime $startOfOfferPhase = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("besichtigungstermin")
-     */
-    protected ?DateTime $viewingAppointment = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("besichtigungstermin_2")
-     */
-    protected ?DateTime $viewingAppointment2 = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-     *
-     * @SerializedName("beginn_bietzeit")
-     */
-    protected ?DateTime $startOfBiddingTime = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("ende_bietzeit")
-     */
-    protected ?DateTime $endOfBiddingTime = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("hoechstgebot_zeigen")
-     */
-    protected ?bool $showHighestBid = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("mindestpreis")
-     */
-    protected ?float $minimumPrice = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?DateTime $startOfOfferPhase = null,
-        ?DateTime $viewingAppointment = null,
-        ?DateTime $viewingAppointment2 = null,
-        ?DateTime $startOfBiddingTime = null,
-        ?DateTime $endOfBiddingTime = null,
-        ?bool $showHighestBid = null,
-        ?float $minimumPrice = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->startOfOfferPhase = $startOfOfferPhase;
-        $this->viewingAppointment = $viewingAppointment;
-        $this->viewingAppointment2 = $viewingAppointment2;
-        $this->startOfBiddingTime = $startOfBiddingTime;
-        $this->endOfBiddingTime = $endOfBiddingTime;
-        $this->showHighestBid = $showHighestBid;
-        $this->minimumPrice = $minimumPrice;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("beginn_angebotsphase")
+         */
+        protected ?DateTime $startOfOfferPhase = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("besichtigungstermin")
+         */
+        protected ?DateTime $viewingAppointment = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("besichtigungstermin_2")
+         */
+        protected ?DateTime $viewingAppointment2 = null,
+        /**
+         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
+         *
+         * @SerializedName("beginn_bietzeit")
+         */
+        protected ?DateTime $startOfBiddingTime = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("ende_bietzeit")
+         */
+        protected ?DateTime $endOfBiddingTime = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("hoechstgebot_zeigen")
+         */
+        protected ?bool $showHighestBid = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("mindestpreis")
+         */
+        protected ?float $minimumPrice = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getStartOfOfferPhase(): ?DateTime
     {

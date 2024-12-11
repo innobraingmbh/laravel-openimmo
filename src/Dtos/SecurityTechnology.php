@@ -17,42 +17,35 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class SecurityTechnology
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ALARMANLAGE")
-     * optional
-     */
-    protected ?bool $alarmSystem = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KAMERA")
-     * optional
-     */
-    protected ?bool $camera = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("POLIZEIRUF")
-     * optional
-     */
-    protected ?bool $policeCall = null;
-
-    public function __construct(?bool $alarmSystem = null, ?bool $camera = null, ?bool $policeCall = null)
-    {
-        $this->alarmSystem = $alarmSystem;
-        $this->camera = $camera;
-        $this->policeCall = $policeCall;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ALARMANLAGE")
+         * optional
+         */
+        protected ?bool $alarmSystem = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KAMERA")
+         * optional
+         */
+        protected ?bool $camera = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("POLIZEIRUF")
+         * optional
+         */
+        protected ?bool $policeCall = null
+    ) {}
 
     public function getAlarmSystem(): ?bool
     {

@@ -23,40 +23,33 @@ class Photo
 
     public const LOCATION_REMOTE = 'REMOTE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("location")
-     * required
-     *
-     * @see LOCATION_* constants
-     */
-    protected string $location = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("format")
-     */
-    protected string $format = '';
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Data")
-     *
-     * @SerializedName("daten")
-     */
-    protected ?Data $data = null;
-
-    public function __construct(string $location = '', string $format = '', ?Data $data = null)
-    {
-        $this->location = $location;
-        $this->format = $format;
-        $this->data = $data;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("location")
+         * required
+         *
+         * @see LOCATION_* constants
+         */
+        protected string $location = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("format")
+         */
+        protected string $format = '',
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Data")
+         *
+         * @SerializedName("daten")
+         */
+        protected ?Data $data = null
+    ) {}
 
     public function getLocation(): string
     {

@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetPurchasePrice
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("kaufpreisust")
-     * optional
-     */
-    protected ?float $purchasePriceVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $purchasePriceVAT = null, ?float $value = null)
-    {
-        $this->purchasePriceVAT = $purchasePriceVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("kaufpreisust")
+         * optional
+         */
+        protected ?float $purchasePriceVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getPurchasePriceVAT(): ?float
     {

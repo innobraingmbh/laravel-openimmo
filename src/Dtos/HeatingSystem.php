@@ -17,333 +17,251 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class HeatingSystem
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("OEL")
-     * optional
-     */
-    protected ?bool $oil = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("GAS")
-     * optional
-     */
-    protected ?bool $gas = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ELEKTRO")
-     * optional
-     */
-    protected ?bool $electric = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ALTERNATIV")
-     * optional
-     */
-    protected ?bool $alternative = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SOLAR")
-     * optional
-     */
-    protected ?bool $solar = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ERDWAERME")
-     * optional
-     */
-    protected ?bool $geothermal = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LUFTWP")
-     * optional
-     */
-    protected ?bool $airHeatPump = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FERN")
-     * optional
-     */
-    protected ?bool $remote = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BLOCK")
-     * optional
-     */
-    protected ?bool $block = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WASSER-ELEKTRO")
-     * optional
-     */
-    protected ?bool $waterElectric = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PELLET")
-     * optional
-     */
-    protected ?bool $pellet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KOHLE")
-     * optional
-     */
-    protected ?bool $coal = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("HOLZ")
-     * optional
-     */
-    protected ?bool $wood = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FLUESSIGGAS")
-     * optional
-     */
-    protected ?bool $liquidGas = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ERDGAS_LEICHT")
-     * optional
-     */
-    protected ?bool $lightNaturalGas = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ERDGAS_SCHWER")
-     * optional
-     */
-    protected ?bool $heavyNaturalGas = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FERNWAERME_DAMPF")
-     * optional
-     */
-    protected ?bool $districtHeatingVapor = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NAHWAERME")
-     * optional
-     */
-    protected ?bool $localHeating = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WAERMELIEFERUNG")
-     * optional
-     */
-    protected ?bool $heatSupply = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BIOENERGIE")
-     * optional
-     */
-    protected ?bool $bioEnergy = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WINDENERGIE")
-     * optional
-     */
-    protected ?bool $windEnergy = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WASSERENERGIE")
-     * optional
-     */
-    protected ?bool $waterEnergy = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("UMWELTWAERME")
-     * optional
-     */
-    protected ?bool $environmentalHeat = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KWK_FOSSIL")
-     * optional
-     */
-    protected ?bool $chpFossil = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KWK_ERNEUERBAR")
-     * optional
-     */
-    protected ?bool $chpRenewable = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KWK_REGENERATIV")
-     * optional
-     */
-    protected ?bool $chpRegenerative = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KWK_BIO")
-     * optional
-     */
-    protected ?bool $chpBio = null;
-
     public function __construct(
-        ?bool $oil = null,
-        ?bool $gas = null,
-        ?bool $electric = null,
-        ?bool $alternative = null,
-        ?bool $solar = null,
-        ?bool $geothermal = null,
-        ?bool $airHeatPump = null,
-        ?bool $remote = null,
-        ?bool $block = null,
-        ?bool $waterElectric = null,
-        ?bool $pellet = null,
-        ?bool $coal = null,
-        ?bool $wood = null,
-        ?bool $liquidGas = null,
-        ?bool $lightNaturalGas = null,
-        ?bool $heavyNaturalGas = null,
-        ?bool $districtHeatingVapor = null,
-        ?bool $localHeating = null,
-        ?bool $heatSupply = null,
-        ?bool $bioEnergy = null,
-        ?bool $windEnergy = null,
-        ?bool $waterEnergy = null,
-        ?bool $environmentalHeat = null,
-        ?bool $chpFossil = null,
-        ?bool $chpRenewable = null,
-        ?bool $chpRegenerative = null,
-        ?bool $chpBio = null,
-    ) {
-        $this->oil = $oil;
-        $this->gas = $gas;
-        $this->electric = $electric;
-        $this->alternative = $alternative;
-        $this->solar = $solar;
-        $this->geothermal = $geothermal;
-        $this->airHeatPump = $airHeatPump;
-        $this->remote = $remote;
-        $this->block = $block;
-        $this->waterElectric = $waterElectric;
-        $this->pellet = $pellet;
-        $this->coal = $coal;
-        $this->wood = $wood;
-        $this->liquidGas = $liquidGas;
-        $this->lightNaturalGas = $lightNaturalGas;
-        $this->heavyNaturalGas = $heavyNaturalGas;
-        $this->districtHeatingVapor = $districtHeatingVapor;
-        $this->localHeating = $localHeating;
-        $this->heatSupply = $heatSupply;
-        $this->bioEnergy = $bioEnergy;
-        $this->windEnergy = $windEnergy;
-        $this->waterEnergy = $waterEnergy;
-        $this->environmentalHeat = $environmentalHeat;
-        $this->chpFossil = $chpFossil;
-        $this->chpRenewable = $chpRenewable;
-        $this->chpRegenerative = $chpRegenerative;
-        $this->chpBio = $chpBio;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("OEL")
+         * optional
+         */
+        protected ?bool $oil = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("GAS")
+         * optional
+         */
+        protected ?bool $gas = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ELEKTRO")
+         * optional
+         */
+        protected ?bool $electric = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ALTERNATIV")
+         * optional
+         */
+        protected ?bool $alternative = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SOLAR")
+         * optional
+         */
+        protected ?bool $solar = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ERDWAERME")
+         * optional
+         */
+        protected ?bool $geothermal = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LUFTWP")
+         * optional
+         */
+        protected ?bool $airHeatPump = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FERN")
+         * optional
+         */
+        protected ?bool $remote = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BLOCK")
+         * optional
+         */
+        protected ?bool $block = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WASSER-ELEKTRO")
+         * optional
+         */
+        protected ?bool $waterElectric = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PELLET")
+         * optional
+         */
+        protected ?bool $pellet = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KOHLE")
+         * optional
+         */
+        protected ?bool $coal = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("HOLZ")
+         * optional
+         */
+        protected ?bool $wood = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FLUESSIGGAS")
+         * optional
+         */
+        protected ?bool $liquidGas = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ERDGAS_LEICHT")
+         * optional
+         */
+        protected ?bool $lightNaturalGas = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ERDGAS_SCHWER")
+         * optional
+         */
+        protected ?bool $heavyNaturalGas = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FERNWAERME_DAMPF")
+         * optional
+         */
+        protected ?bool $districtHeatingVapor = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NAHWAERME")
+         * optional
+         */
+        protected ?bool $localHeating = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WAERMELIEFERUNG")
+         * optional
+         */
+        protected ?bool $heatSupply = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BIOENERGIE")
+         * optional
+         */
+        protected ?bool $bioEnergy = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WINDENERGIE")
+         * optional
+         */
+        protected ?bool $windEnergy = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WASSERENERGIE")
+         * optional
+         */
+        protected ?bool $waterEnergy = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("UMWELTWAERME")
+         * optional
+         */
+        protected ?bool $environmentalHeat = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KWK_FOSSIL")
+         * optional
+         */
+        protected ?bool $chpFossil = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KWK_ERNEUERBAR")
+         * optional
+         */
+        protected ?bool $chpRenewable = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KWK_REGENERATIV")
+         * optional
+         */
+        protected ?bool $chpRegenerative = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KWK_BIO")
+         * optional
+         */
+        protected ?bool $chpBio = null
+    ) {}
 
     public function getOil(): ?bool
     {

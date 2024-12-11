@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class UserDefinedSimplefield
 {
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("feldname")
-     * required
-     */
-    protected string $fieldName = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $fieldName = '', ?string $value = null)
-    {
-        $this->fieldName = $fieldName;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("feldname")
+         * required
+         */
+        protected string $fieldName = '',
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getFieldName(): string
     {

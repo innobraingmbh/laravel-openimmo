@@ -19,28 +19,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class PropertyText
 {
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("lang")
-     * required
-     */
-    protected string $language = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $language = '', ?string $value = null)
-    {
-        $this->language = $language;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("lang")
+         * required
+         */
+        protected string $language = '',
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getLanguage(): string
     {

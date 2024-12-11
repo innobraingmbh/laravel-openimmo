@@ -33,30 +33,25 @@ class SportDistances
 
     public const DISTANCE_TO_SPORT_LOCAL_RECREATION = 'NAHERHOLUNG';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("distanz_zu_sport")
-     * required
-     *
-     * @see DISTANCE_TO_SPORT_* constants
-     */
-    protected string $distanceToSport = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(string $distanceToSport = '', ?float $value = null)
-    {
-        $this->distanceToSport = $distanceToSport;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("distanz_zu_sport")
+         * required
+         *
+         * @see DISTANCE_TO_SPORT_* constants
+         */
+        protected string $distanceToSport = '',
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getDistanceToSport(): string
     {

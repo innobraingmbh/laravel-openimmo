@@ -17,454 +17,309 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Areas
 {
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("wohnflaeche")
-     */
-    protected ?float $livingArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("nutzflaeche")
-     */
-    protected ?float $usableArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("gesamtflaeche")
-     */
-    protected ?float $totalArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("ladenflaeche")
-     */
-    protected ?float $shopArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("lagerflaeche")
-     */
-    protected ?float $storageArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("verkaufsflaeche")
-     */
-    protected ?float $salesArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("freiflaeche")
-     */
-    protected ?float $openSpace = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("bueroflaeche")
-     */
-    protected ?float $officeArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("bueroteilflaeche")
-     */
-    protected ?float $partialOfficeArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("fensterfront")
-     */
-    protected ?float $windowFront = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("verwaltungsflaeche")
-     */
-    protected ?float $administrativeArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("gastroflaeche")
-     */
-    protected ?float $gastronomyArea = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("grz")
-     */
-    protected ?string $siteOccupancyIndex = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("gfz")
-     */
-    protected ?string $floorAreaRatio = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("bmz")
-     */
-    protected ?string $floorSpaceIndex = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("bgf")
-     */
-    protected ?string $grossFloorArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("grundstuecksflaeche")
-     */
-    protected ?float $plotArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("sonstflaeche")
-     */
-    protected ?float $otherArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_zimmer")
-     */
-    protected ?float $numberOfRooms = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_schlafzimmer")
-     */
-    protected ?float $numberOfBedrooms = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_badezimmer")
-     */
-    protected ?float $numberOfBathrooms = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_sep_wc")
-     */
-    protected ?float $numberOfSeparateToilets = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_balkone")
-     */
-    protected ?float $numberOfBalconies = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_terrassen")
-     */
-    protected ?float $numberOfTerraces = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_logia")
-     */
-    protected ?float $numberOfLoggias = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("balkon_terrasse_flaeche")
-     */
-    protected ?float $balconyTerraceArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_wohn_schlafzimmer")
-     */
-    protected ?float $numberOfLivingBedrooms = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("gartenflaeche")
-     */
-    protected ?float $gardenArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kellerflaeche")
-     */
-    protected ?float $basementArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("fensterfront_qm")
-     */
-    protected ?float $windowFrontSqm = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("grundstuecksfront")
-     */
-    protected ?float $plotFront = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("dachbodenflaeche")
-     */
-    protected ?float $atticArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("teilbar_ab")
-     */
-    protected ?float $divisibleFrom = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("beheizbare_flaeche")
-     */
-    protected ?float $heatedArea = null;
-
-    /**
-     * @Type("int")
-     * Minimum value (inclusive): 1
-     *
-     * @SerializedName("anzahl_stellplaetze")
-     */
-    protected ?int $numberOfParkingSpaces = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("plaetze_gastraum")
-     */
-    protected ?float $diningRoomSeats = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_betten")
-     */
-    protected ?float $numberOfBeds = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_tagungsraeume")
-     */
-    protected ?float $numberOfMeetingRooms = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("vermietbare_flaeche")
-     */
-    protected ?float $rentableArea = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_wohneinheiten")
-     */
-    protected ?float $numberOfResidentialUnits = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("anzahl_gewerbeeinheiten")
-     */
-    protected ?float $numberOfCommercialUnits = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("einliegerwohnung")
-     */
-    protected ?bool $grannyFlat = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("kubatur")
-     */
-    protected ?float $cubature = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("flaechevon")
-     */
-    protected ?float $areaFrom = null;
-
-    /**
-     * @Type("float")
-     *
-     * @SerializedName("flaechebis")
-     */
-    protected ?float $areaTo = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?float $livingArea = null,
-        ?float $usableArea = null,
-        ?float $totalArea = null,
-        ?float $shopArea = null,
-        ?float $storageArea = null,
-        ?float $salesArea = null,
-        ?float $openSpace = null,
-        ?float $officeArea = null,
-        ?float $partialOfficeArea = null,
-        ?float $windowFront = null,
-        ?float $administrativeArea = null,
-        ?float $gastronomyArea = null,
-        ?string $siteOccupancyIndex = null,
-        ?string $floorAreaRatio = null,
-        ?string $floorSpaceIndex = null,
-        ?string $grossFloorArea = null,
-        ?float $plotArea = null,
-        ?float $otherArea = null,
-        ?float $numberOfRooms = null,
-        ?float $numberOfBedrooms = null,
-        ?float $numberOfBathrooms = null,
-        ?float $numberOfSeparateToilets = null,
-        ?float $numberOfBalconies = null,
-        ?float $numberOfTerraces = null,
-        ?float $numberOfLoggias = null,
-        ?float $balconyTerraceArea = null,
-        ?float $numberOfLivingBedrooms = null,
-        ?float $gardenArea = null,
-        ?float $basementArea = null,
-        ?float $windowFrontSqm = null,
-        ?float $plotFront = null,
-        ?float $atticArea = null,
-        ?float $divisibleFrom = null,
-        ?float $heatedArea = null,
-        ?int $numberOfParkingSpaces = null,
-        ?float $diningRoomSeats = null,
-        ?float $numberOfBeds = null,
-        ?float $numberOfMeetingRooms = null,
-        ?float $rentableArea = null,
-        ?float $numberOfResidentialUnits = null,
-        ?float $numberOfCommercialUnits = null,
-        ?bool $grannyFlat = null,
-        ?float $cubature = null,
-        ?float $areaFrom = null,
-        ?float $areaTo = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->livingArea = $livingArea;
-        $this->usableArea = $usableArea;
-        $this->totalArea = $totalArea;
-        $this->shopArea = $shopArea;
-        $this->storageArea = $storageArea;
-        $this->salesArea = $salesArea;
-        $this->openSpace = $openSpace;
-        $this->officeArea = $officeArea;
-        $this->partialOfficeArea = $partialOfficeArea;
-        $this->windowFront = $windowFront;
-        $this->administrativeArea = $administrativeArea;
-        $this->gastronomyArea = $gastronomyArea;
-        $this->siteOccupancyIndex = $siteOccupancyIndex;
-        $this->floorAreaRatio = $floorAreaRatio;
-        $this->floorSpaceIndex = $floorSpaceIndex;
-        $this->grossFloorArea = $grossFloorArea;
-        $this->plotArea = $plotArea;
-        $this->otherArea = $otherArea;
-        $this->numberOfRooms = $numberOfRooms;
-        $this->numberOfBedrooms = $numberOfBedrooms;
-        $this->numberOfBathrooms = $numberOfBathrooms;
-        $this->numberOfSeparateToilets = $numberOfSeparateToilets;
-        $this->numberOfBalconies = $numberOfBalconies;
-        $this->numberOfTerraces = $numberOfTerraces;
-        $this->numberOfLoggias = $numberOfLoggias;
-        $this->balconyTerraceArea = $balconyTerraceArea;
-        $this->numberOfLivingBedrooms = $numberOfLivingBedrooms;
-        $this->gardenArea = $gardenArea;
-        $this->basementArea = $basementArea;
-        $this->windowFrontSqm = $windowFrontSqm;
-        $this->plotFront = $plotFront;
-        $this->atticArea = $atticArea;
-        $this->divisibleFrom = $divisibleFrom;
-        $this->heatedArea = $heatedArea;
-        $this->numberOfParkingSpaces = $numberOfParkingSpaces;
-        $this->diningRoomSeats = $diningRoomSeats;
-        $this->numberOfBeds = $numberOfBeds;
-        $this->numberOfMeetingRooms = $numberOfMeetingRooms;
-        $this->rentableArea = $rentableArea;
-        $this->numberOfResidentialUnits = $numberOfResidentialUnits;
-        $this->numberOfCommercialUnits = $numberOfCommercialUnits;
-        $this->grannyFlat = $grannyFlat;
-        $this->cubature = $cubature;
-        $this->areaFrom = $areaFrom;
-        $this->areaTo = $areaTo;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("wohnflaeche")
+         */
+        protected ?float $livingArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("nutzflaeche")
+         */
+        protected ?float $usableArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("gesamtflaeche")
+         */
+        protected ?float $totalArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("ladenflaeche")
+         */
+        protected ?float $shopArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("lagerflaeche")
+         */
+        protected ?float $storageArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("verkaufsflaeche")
+         */
+        protected ?float $salesArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("freiflaeche")
+         */
+        protected ?float $openSpace = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("bueroflaeche")
+         */
+        protected ?float $officeArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("bueroteilflaeche")
+         */
+        protected ?float $partialOfficeArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("fensterfront")
+         */
+        protected ?float $windowFront = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("verwaltungsflaeche")
+         */
+        protected ?float $administrativeArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("gastroflaeche")
+         */
+        protected ?float $gastronomyArea = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("grz")
+         */
+        protected ?string $siteOccupancyIndex = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("gfz")
+         */
+        protected ?string $floorAreaRatio = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("bmz")
+         */
+        protected ?string $floorSpaceIndex = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("bgf")
+         */
+        protected ?string $grossFloorArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("grundstuecksflaeche")
+         */
+        protected ?float $plotArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("sonstflaeche")
+         */
+        protected ?float $otherArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_zimmer")
+         */
+        protected ?float $numberOfRooms = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_schlafzimmer")
+         */
+        protected ?float $numberOfBedrooms = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_badezimmer")
+         */
+        protected ?float $numberOfBathrooms = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_sep_wc")
+         */
+        protected ?float $numberOfSeparateToilets = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_balkone")
+         */
+        protected ?float $numberOfBalconies = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_terrassen")
+         */
+        protected ?float $numberOfTerraces = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_logia")
+         */
+        protected ?float $numberOfLoggias = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("balkon_terrasse_flaeche")
+         */
+        protected ?float $balconyTerraceArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_wohn_schlafzimmer")
+         */
+        protected ?float $numberOfLivingBedrooms = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("gartenflaeche")
+         */
+        protected ?float $gardenArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kellerflaeche")
+         */
+        protected ?float $basementArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("fensterfront_qm")
+         */
+        protected ?float $windowFrontSqm = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("grundstuecksfront")
+         */
+        protected ?float $plotFront = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("dachbodenflaeche")
+         */
+        protected ?float $atticArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("teilbar_ab")
+         */
+        protected ?float $divisibleFrom = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("beheizbare_flaeche")
+         */
+        protected ?float $heatedArea = null,
+        /**
+         * @Type("int")
+         * Minimum value (inclusive): 1
+         *
+         * @SerializedName("anzahl_stellplaetze")
+         */
+        protected ?int $numberOfParkingSpaces = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("plaetze_gastraum")
+         */
+        protected ?float $diningRoomSeats = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_betten")
+         */
+        protected ?float $numberOfBeds = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_tagungsraeume")
+         */
+        protected ?float $numberOfMeetingRooms = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("vermietbare_flaeche")
+         */
+        protected ?float $rentableArea = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_wohneinheiten")
+         */
+        protected ?float $numberOfResidentialUnits = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("anzahl_gewerbeeinheiten")
+         */
+        protected ?float $numberOfCommercialUnits = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("einliegerwohnung")
+         */
+        protected ?bool $grannyFlat = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("kubatur")
+         */
+        protected ?float $cubature = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("flaechevon")
+         */
+        protected ?float $areaFrom = null,
+        /**
+         * @Type("float")
+         *
+         * @SerializedName("flaechebis")
+         */
+        protected ?float $areaTo = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getLivingArea(): ?float
     {

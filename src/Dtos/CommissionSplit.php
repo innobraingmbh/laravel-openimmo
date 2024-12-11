@@ -24,30 +24,25 @@ class CommissionSplit
 
     public const VALUE_TEXT = 'text';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("wert")
-     * optional
-     *
-     * @see VALUE_* constants
-     */
-    protected string $worth = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $worth = '', ?string $value = null)
-    {
-        $this->worth = $worth;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("wert")
+         * optional
+         *
+         * @see VALUE_* constants
+         */
+        protected string $worth = '',
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getWorth(): ?string
     {

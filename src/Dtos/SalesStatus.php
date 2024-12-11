@@ -23,22 +23,19 @@ class SalesStatus
 
     public const CONDITION_SOLD = 'VERKAUFT';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("stand")
-     * optional
-     *
-     * @see CONDITION_* constants
-     */
-    protected string $status = '';
-
-    public function __construct(string $status = '')
-    {
-        $this->status = $status;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("stand")
+         * optional
+         *
+         * @see CONDITION_* constants
+         */
+        protected string $status = ''
+    ) {}
 
     public function getStatus(): ?string
     {

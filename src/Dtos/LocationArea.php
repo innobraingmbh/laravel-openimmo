@@ -43,22 +43,19 @@ class LocationArea
 
     public const AREAS_SECONDARY = '1B';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("gebiete")
-     * optional
-     *
-     * @see AREAS_* constants
-     */
-    protected string $areas = '';
-
-    public function __construct(string $areas = '')
-    {
-        $this->areas = $areas;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("gebiete")
+         * optional
+         *
+         * @see AREAS_* constants
+         */
+        protected string $areas = ''
+    ) {}
 
     public function getAreas(): ?string
     {

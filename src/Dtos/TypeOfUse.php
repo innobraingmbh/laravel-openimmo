@@ -17,57 +17,44 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class TypeOfUse
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WOHNEN")
-     * required
-     */
-    protected bool $living = false;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("GEWERBE")
-     * required
-     */
-    protected bool $commercial = false;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ANLAGE")
-     * optional
-     */
-    protected ?bool $facility = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WAZ")
-     * optional
-     */
-    protected ?bool $waz = null;
-
     public function __construct(
-        bool $living = false,
-        bool $commercial = false,
-        ?bool $facility = null,
-        ?bool $waz = null,
-    ) {
-        $this->living = $living;
-        $this->commercial = $commercial;
-        $this->facility = $facility;
-        $this->waz = $waz;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WOHNEN")
+         * required
+         */
+        protected bool $living = false,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("GEWERBE")
+         * required
+         */
+        protected bool $commercial = false,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ANLAGE")
+         * optional
+         */
+        protected ?bool $facility = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WAZ")
+         * optional
+         */
+        protected ?bool $waz = null
+    ) {}
 
     public function getLiving(): bool
     {

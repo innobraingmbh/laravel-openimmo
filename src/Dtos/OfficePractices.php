@@ -37,22 +37,19 @@ class OfficePractices
 
     public const OFFICE_TYPE_SHARED_OFFICE = 'SHARED_OFFICE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("buero_typ")
-     * optional
-     *
-     * @see OFFICE_TYPE_* constants
-     */
-    protected string $officeType = '';
-
-    public function __construct(string $officeType = '')
-    {
-        $this->officeType = $officeType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("buero_typ")
+         * optional
+         *
+         * @see OFFICE_TYPE_* constants
+         */
+        protected string $officeType = ''
+    ) {}
 
     public function getOfficeType(): ?string
     {

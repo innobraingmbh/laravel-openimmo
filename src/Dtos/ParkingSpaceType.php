@@ -17,81 +17,62 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ParkingSpaceType
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("GARAGE")
-     * optional
-     */
-    protected ?bool $garage = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("TIEFGARAGE")
-     * optional
-     */
-    protected ?bool $undergroundParking = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("CARPORT")
-     * optional
-     */
-    protected ?bool $carport = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FREIPLATZ")
-     * optional
-     */
-    protected ?bool $openSpace = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PARKHAUS")
-     * optional
-     */
-    protected ?bool $parkingGarage = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("DUPLEX")
-     * optional
-     */
-    protected ?bool $duplex = null;
-
     public function __construct(
-        ?bool $garage = null,
-        ?bool $undergroundParking = null,
-        ?bool $carport = null,
-        ?bool $openSpace = null,
-        ?bool $parkingGarage = null,
-        ?bool $duplex = null,
-    ) {
-        $this->garage = $garage;
-        $this->undergroundParking = $undergroundParking;
-        $this->carport = $carport;
-        $this->openSpace = $openSpace;
-        $this->parkingGarage = $parkingGarage;
-        $this->duplex = $duplex;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("GARAGE")
+         * optional
+         */
+        protected ?bool $garage = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("TIEFGARAGE")
+         * optional
+         */
+        protected ?bool $undergroundParking = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("CARPORT")
+         * optional
+         */
+        protected ?bool $carport = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FREIPLATZ")
+         * optional
+         */
+        protected ?bool $openSpace = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PARKHAUS")
+         * optional
+         */
+        protected ?bool $parkingGarage = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("DUPLEX")
+         * optional
+         */
+        protected ?bool $duplex = null
+    ) {}
 
     public function getGarage(): ?bool
     {

@@ -45,22 +45,19 @@ class AgricultureAndForestry
 
     public const LAND_TYPE_HUNTING_GROUND = 'JAGDREVIER';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("land_typ")
-     * optional
-     *
-     * @see LAND_TYPE_* constants
-     */
-    protected string $countryType = '';
-
-    public function __construct(string $countryType = '')
-    {
-        $this->countryType = $countryType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("land_typ")
+         * optional
+         *
+         * @see LAND_TYPE_* constants
+         */
+        protected string $countryType = ''
+    ) {}
 
     public function getCountryType(): ?string
     {

@@ -23,22 +23,19 @@ class CommercialLeisureProperty
 
     public const LEISURE_TYPE_LEISURE_FACILITY = 'FREIZEITANLAGE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("freizeit_typ")
-     * optional
-     *
-     * @see LEISURE_TYPE_* constants
-     */
-    protected string $leisureType = '';
-
-    public function __construct(string $leisureType = '')
-    {
-        $this->leisureType = $leisureType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("freizeit_typ")
+         * optional
+         *
+         * @see LEISURE_TYPE_* constants
+         */
+        protected string $leisureType = ''
+    ) {}
 
     public function getLeisureType(): ?string
     {

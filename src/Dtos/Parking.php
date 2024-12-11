@@ -37,22 +37,19 @@ class Parking
 
     public const PARKING_TYPE_PARKING_SPACE_WITH_ELECTRICITY = 'PARKPLATZ_STROM';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("parken_typ")
-     * optional
-     *
-     * @see PARKING_TYPE_* constants
-     */
-    protected string $parkingType = '';
-
-    public function __construct(string $parkingType = '')
-    {
-        $this->parkingType = $parkingType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("parken_typ")
+         * optional
+         *
+         * @see PARKING_TYPE_* constants
+         */
+        protected string $parkingType = ''
+    ) {}
 
     public function getParkingType(): ?string
     {

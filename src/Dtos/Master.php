@@ -21,28 +21,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Master
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("visible")
-     * required
-     */
-    protected bool $visible = false;
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(bool $visible = false, ?string $value = null)
-    {
-        $this->visible = $visible;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("visible")
+         * required
+         */
+        protected bool $visible = false,
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getVisible(): bool
     {

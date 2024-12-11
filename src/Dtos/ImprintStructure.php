@@ -17,119 +17,88 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ImprintStructure
 {
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("firmenname")
-     */
-    protected string $companyName = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("firmenanschrift")
-     */
-    protected string $companyAddress = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("telefon")
-     */
-    protected string $phone = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("vertretungsberechtigter")
-     */
-    protected string $authorizedRepresentative = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("berufsaufsichtsbehoerde")
-     */
-    protected string $professionalSupervisoryAuthority = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("handelsregister")
-     */
-    protected string $commercialRegister = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("handelsregister_nr")
-     */
-    protected string $commercialRegisterNumber = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("umsst-id")
-     */
-    protected string $vatId = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("steuernummer")
-     */
-    protected string $taxNumber = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("weiteres")
-     */
-    protected string $additional = '';
-
     public function __construct(
-        string $companyName = '',
-        string $companyAddress = '',
-        string $phone = '',
-        string $authorizedRepresentative = '',
-        string $professionalSupervisoryAuthority = '',
-        string $commercialRegister = '',
-        string $commercialRegisterNumber = '',
-        string $vatId = '',
-        string $taxNumber = '',
-        string $additional = '',
-    ) {
-        $this->companyName = $companyName;
-        $this->companyAddress = $companyAddress;
-        $this->phone = $phone;
-        $this->authorizedRepresentative = $authorizedRepresentative;
-        $this->professionalSupervisoryAuthority = $professionalSupervisoryAuthority;
-        $this->commercialRegister = $commercialRegister;
-        $this->commercialRegisterNumber = $commercialRegisterNumber;
-        $this->vatId = $vatId;
-        $this->taxNumber = $taxNumber;
-        $this->additional = $additional;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("firmenname")
+         */
+        protected string $companyName = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("firmenanschrift")
+         */
+        protected string $companyAddress = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("telefon")
+         */
+        protected string $phone = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("vertretungsberechtigter")
+         */
+        protected string $authorizedRepresentative = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("berufsaufsichtsbehoerde")
+         */
+        protected string $professionalSupervisoryAuthority = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("handelsregister")
+         */
+        protected string $commercialRegister = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("handelsregister_nr")
+         */
+        protected string $commercialRegisterNumber = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("umsst-id")
+         */
+        protected string $vatId = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("steuernummer")
+         */
+        protected string $taxNumber = '',
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("weiteres")
+         */
+        protected string $additional = ''
+    ) {}
 
     public function getCompanyName(): string
     {

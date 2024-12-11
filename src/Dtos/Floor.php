@@ -17,177 +17,134 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Floor
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FLIESEN")
-     * optional
-     */
-    protected ?bool $tiles = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("STEIN")
-     * optional
-     */
-    protected ?bool $stone = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("TEPPICH")
-     * optional
-     */
-    protected ?bool $carpet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PARKETT")
-     * optional
-     */
-    protected ?bool $parquet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FERTIGPARKETT")
-     * optional
-     */
-    protected ?bool $finishedParquet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LAMINAT")
-     * optional
-     */
-    protected ?bool $laminate = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("DIELEN")
-     * optional
-     */
-    protected ?bool $floorboards = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KUNSTSTOFF")
-     * optional
-     */
-    protected ?bool $plastic = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ESTRICH")
-     * optional
-     */
-    protected ?bool $screed = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("DOPPELBODEN")
-     * optional
-     */
-    protected ?bool $raisedFloor = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LINOLEUM")
-     * optional
-     */
-    protected ?bool $linoleum = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MARMOR")
-     * optional
-     */
-    protected ?bool $marble = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("TERRAKOTTA")
-     * optional
-     */
-    protected ?bool $terracotta = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("GRANIT")
-     * optional
-     */
-    protected ?bool $granite = null;
-
     public function __construct(
-        ?bool $tiles = null,
-        ?bool $stone = null,
-        ?bool $carpet = null,
-        ?bool $parquet = null,
-        ?bool $finishedParquet = null,
-        ?bool $laminate = null,
-        ?bool $floorboards = null,
-        ?bool $plastic = null,
-        ?bool $screed = null,
-        ?bool $raisedFloor = null,
-        ?bool $linoleum = null,
-        ?bool $marble = null,
-        ?bool $terracotta = null,
-        ?bool $granite = null,
-    ) {
-        $this->tiles = $tiles;
-        $this->stone = $stone;
-        $this->carpet = $carpet;
-        $this->parquet = $parquet;
-        $this->finishedParquet = $finishedParquet;
-        $this->laminate = $laminate;
-        $this->floorboards = $floorboards;
-        $this->plastic = $plastic;
-        $this->screed = $screed;
-        $this->raisedFloor = $raisedFloor;
-        $this->linoleum = $linoleum;
-        $this->marble = $marble;
-        $this->terracotta = $terracotta;
-        $this->granite = $granite;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FLIESEN")
+         * optional
+         */
+        protected ?bool $tiles = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("STEIN")
+         * optional
+         */
+        protected ?bool $stone = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("TEPPICH")
+         * optional
+         */
+        protected ?bool $carpet = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PARKETT")
+         * optional
+         */
+        protected ?bool $parquet = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FERTIGPARKETT")
+         * optional
+         */
+        protected ?bool $finishedParquet = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LAMINAT")
+         * optional
+         */
+        protected ?bool $laminate = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("DIELEN")
+         * optional
+         */
+        protected ?bool $floorboards = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KUNSTSTOFF")
+         * optional
+         */
+        protected ?bool $plastic = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ESTRICH")
+         * optional
+         */
+        protected ?bool $screed = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("DOPPELBODEN")
+         * optional
+         */
+        protected ?bool $raisedFloor = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LINOLEUM")
+         * optional
+         */
+        protected ?bool $linoleum = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MARMOR")
+         * optional
+         */
+        protected ?bool $marble = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("TERRAKOTTA")
+         * optional
+         */
+        protected ?bool $terracotta = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("GRANIT")
+         * optional
+         */
+        protected ?bool $granite = null
+    ) {}
 
     public function getTiles(): ?bool
     {

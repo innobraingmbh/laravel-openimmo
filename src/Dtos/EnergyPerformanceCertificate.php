@@ -35,186 +35,128 @@ class EnergyPerformanceCertificate
 
     public const BUILDING_TYPE_NON_RESIDENTIAL = 'nichtwohn';
 
-    /**
-     * @Type("string")
-     *
-     * @see PARTITION_* constants
-     *
-     * @SerializedName("epart")
-     */
-    protected string $energyCertificateType = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("gueltig_bis")
-     */
-    protected ?string $validUntil = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("energieverbrauchkennwert")
-     */
-    protected ?string $energyConsumptionValue = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("mitwarmwasser")
-     */
-    protected ?bool $withHotWater = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("endenergiebedarf")
-     */
-    protected ?string $finalEnergyDemand = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("primaerenergietraeger")
-     */
-    protected ?string $primaryEnergySource = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("stromwert")
-     */
-    protected ?string $electricityValue = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("waermewert")
-     */
-    protected ?string $heatValue = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("wertklasse")
-     */
-    protected ?string $valueClass = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("baujahr")
-     */
-    protected ?string $yearOfConstruction = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("ausstelldatum")
-     */
-    protected ?DateTime $issueDate = null;
-
-    /**
-     * @Type("string")
-     *
-     * @see VINTAGE_* constants
-     *
-     * @SerializedName("jahrgang")
-     */
-    protected string $year = '';
-
-    /**
-     * @Type("string")
-     *
-     * @see BUILDING_TYPE_* constants
-     *
-     * @SerializedName("gebaeudeart")
-     */
-    protected string $buildingType = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("epasstext")
-     */
-    protected ?string $energyCertificateText = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("geg2018")
-     */
-    protected ?string $buildingEnergyAct2018 = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("hwbwert")
-     */
-    protected ?string $heatingDemandValue = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("hwbklasse")
-     */
-    protected ?string $heatingDemandClass = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("fgeewert")
-     */
-    protected ?string $energyEfficiencyValue = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("fgeeklasse")
-     */
-    protected ?string $energyEfficiencyClass = null;
-
     public function __construct(
-        string $energyCertificateType = '',
-        ?string $validUntil = null,
-        ?string $energyConsumptionValue = null,
-        ?bool $withHotWater = null,
-        ?string $finalEnergyDemand = null,
-        ?string $primaryEnergySource = null,
-        ?string $electricityValue = null,
-        ?string $heatValue = null,
-        ?string $valueClass = null,
-        ?string $yearOfConstruction = null,
-        ?DateTime $issueDate = null,
-        string $year = '',
-        string $buildingType = '',
-        ?string $energyCertificateText = null,
-        ?string $buildingEnergyAct2018 = null,
-        ?string $heatingDemandValue = null,
-        ?string $heatingDemandClass = null,
-        ?string $energyEfficiencyValue = null,
-        ?string $energyEfficiencyClass = null,
-    ) {
-        $this->energyCertificateType = $energyCertificateType;
-        $this->validUntil = $validUntil;
-        $this->energyConsumptionValue = $energyConsumptionValue;
-        $this->withHotWater = $withHotWater;
-        $this->finalEnergyDemand = $finalEnergyDemand;
-        $this->primaryEnergySource = $primaryEnergySource;
-        $this->electricityValue = $electricityValue;
-        $this->heatValue = $heatValue;
-        $this->valueClass = $valueClass;
-        $this->yearOfConstruction = $yearOfConstruction;
-        $this->issueDate = $issueDate;
-        $this->year = $year;
-        $this->buildingType = $buildingType;
-        $this->energyCertificateText = $energyCertificateText;
-        $this->buildingEnergyAct2018 = $buildingEnergyAct2018;
-        $this->heatingDemandValue = $heatingDemandValue;
-        $this->heatingDemandClass = $heatingDemandClass;
-        $this->energyEfficiencyValue = $energyEfficiencyValue;
-        $this->energyEfficiencyClass = $energyEfficiencyClass;
-    }
+        /**
+         * @Type("string")
+         *
+         * @see PARTITION_* constants
+         *
+         * @SerializedName("epart")
+         */
+        protected string $energyCertificateType = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("gueltig_bis")
+         */
+        protected ?string $validUntil = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("energieverbrauchkennwert")
+         */
+        protected ?string $energyConsumptionValue = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("mitwarmwasser")
+         */
+        protected ?bool $withHotWater = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("endenergiebedarf")
+         */
+        protected ?string $finalEnergyDemand = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("primaerenergietraeger")
+         */
+        protected ?string $primaryEnergySource = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("stromwert")
+         */
+        protected ?string $electricityValue = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("waermewert")
+         */
+        protected ?string $heatValue = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("wertklasse")
+         */
+        protected ?string $valueClass = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("baujahr")
+         */
+        protected ?string $yearOfConstruction = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("ausstelldatum")
+         */
+        protected ?DateTime $issueDate = null,
+        /**
+         * @Type("string")
+         *
+         * @see VINTAGE_* constants
+         *
+         * @SerializedName("jahrgang")
+         */
+        protected string $year = '',
+        /**
+         * @Type("string")
+         *
+         * @see BUILDING_TYPE_* constants
+         *
+         * @SerializedName("gebaeudeart")
+         */
+        protected string $buildingType = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("epasstext")
+         */
+        protected ?string $energyCertificateText = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("geg2018")
+         */
+        protected ?string $buildingEnergyAct2018 = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("hwbwert")
+         */
+        protected ?string $heatingDemandValue = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("hwbklasse")
+         */
+        protected ?string $heatingDemandClass = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("fgeewert")
+         */
+        protected ?string $energyEfficiencyValue = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("fgeeklasse")
+         */
+        protected ?string $energyEfficiencyClass = null
+    ) {}
 
     public function getEnergyCertificateType(): ?string
     {

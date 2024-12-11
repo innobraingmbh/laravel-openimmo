@@ -25,22 +25,19 @@ class Action
 
     public const ACTION_TYPE_REFERENCE = 'REFERENZ';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("aktionart")
-     * optional
-     *
-     * @see ACTION_TYPE_* constants
-     */
-    protected string $actionType = '';
-
-    public function __construct(string $actionType = '')
-    {
-        $this->actionType = $actionType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("aktionart")
+         * optional
+         *
+         * @see ACTION_TYPE_* constants
+         */
+        protected string $actionType = ''
+    ) {}
 
     public function getActionType(): ?string
     {

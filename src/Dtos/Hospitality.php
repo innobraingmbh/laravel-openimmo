@@ -39,22 +39,19 @@ class Hospitality
 
     public const HOSPITALITY_TYPE_ONE_ROOM_ESTABLISHMENT = 'EINRAUMLOKAL';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("gastgew_typ")
-     * optional
-     *
-     * @see HOSPITALITY_TYPE_* constants
-     */
-    protected string $hospitalityType = '';
-
-    public function __construct(string $hospitalityType = '')
-    {
-        $this->hospitalityType = $hospitalityType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("gastgew_typ")
+         * optional
+         *
+         * @see HOSPITALITY_TYPE_* constants
+         */
+        protected string $hospitalityType = ''
+    ) {}
 
     public function getHospitalityType(): ?string
     {

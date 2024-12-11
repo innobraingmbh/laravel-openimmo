@@ -17,69 +17,53 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Bathroom
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("DUSCHE")
-     * optional
-     */
-    protected ?bool $shower = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WANNE")
-     * optional
-     */
-    protected ?bool $bathtub = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FENSTER")
-     * optional
-     */
-    protected ?bool $window = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BIDET")
-     * optional
-     */
-    protected ?bool $bidet = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PISSOIR")
-     * optional
-     */
-    protected ?bool $urinal = null;
-
     public function __construct(
-        ?bool $shower = null,
-        ?bool $bathtub = null,
-        ?bool $window = null,
-        ?bool $bidet = null,
-        ?bool $urinal = null,
-    ) {
-        $this->shower = $shower;
-        $this->bathtub = $bathtub;
-        $this->window = $window;
-        $this->bidet = $bidet;
-        $this->urinal = $urinal;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("DUSCHE")
+         * optional
+         */
+        protected ?bool $shower = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WANNE")
+         * optional
+         */
+        protected ?bool $bathtub = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FENSTER")
+         * optional
+         */
+        protected ?bool $window = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BIDET")
+         * optional
+         */
+        protected ?bool $bidet = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PISSOIR")
+         * optional
+         */
+        protected ?bool $urinal = null
+    ) {}
 
     public function getShower(): ?bool
     {

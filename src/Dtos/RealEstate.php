@@ -18,196 +18,138 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class RealEstate
 {
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PropertyCategory")
-     *
-     * @SerializedName("objektkategorie")
-     */
-    protected ?PropertyCategory $propertyCategory = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Geo")
-     *
-     * @SerializedName("geo")
-     */
-    protected ?Geo $geo = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ContactPerson")
-     *
-     * @SerializedName("kontaktperson")
-     */
-    protected ?ContactPerson $contactPerson = null;
-
-    /**
-     * @XmlList(inline = true, entry = "weitere_adresse")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\AdditionalAddress>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("weitere_adresse")
-     */
-    protected array $additionalAddress = [];
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Prices")
-     *
-     * @SerializedName("preise")
-     */
-    protected ?Prices $prices = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\BiddingProcess")
-     *
-     * @SerializedName("bieterverfahren")
-     */
-    protected ?BiddingProcess $biddingProcess = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Auction")
-     *
-     * @SerializedName("versteigerung")
-     */
-    protected ?Auction $auction = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Areas")
-     *
-     * @SerializedName("flaechen")
-     */
-    protected ?Areas $areas = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Equipment")
-     *
-     * @SerializedName("ausstattung")
-     */
-    protected ?Equipment $equipment = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\ConditionInformation")
-     *
-     * @SerializedName("zustand_angaben")
-     */
-    protected ?ConditionInformation $conditionInformation = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Evaluation")
-     *
-     * @SerializedName("bewertung")
-     */
-    protected ?Evaluation $evaluation = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Infrastructure")
-     *
-     * @SerializedName("infrastruktur")
-     */
-    protected ?Infrastructure $infrastructure = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\FreeTexts")
-     *
-     * @SerializedName("freitexte")
-     */
-    protected ?FreeTexts $freeTexts = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Attachments")
-     *
-     * @SerializedName("anhaenge")
-     */
-    protected ?Attachments $attachments = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\PropertyManagement")
-     *
-     * @SerializedName("verwaltung_objekt")
-     */
-    protected ?PropertyManagement $propertyManagement = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\TechnicalManagement")
-     *
-     * @SerializedName("verwaltung_techn")
-     */
-    protected ?TechnicalManagement $technicalManagement = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?PropertyCategory $propertyCategory = null,
-        ?Geo $geo = null,
-        ?ContactPerson $contactPerson = null,
-        array $additionalAddress = [],
-        ?Prices $prices = null,
-        ?BiddingProcess $biddingProcess = null,
-        ?Auction $auction = null,
-        ?Areas $areas = null,
-        ?Equipment $equipment = null,
-        ?ConditionInformation $conditionInformation = null,
-        ?Evaluation $evaluation = null,
-        ?Infrastructure $infrastructure = null,
-        ?FreeTexts $freeTexts = null,
-        ?Attachments $attachments = null,
-        ?PropertyManagement $propertyManagement = null,
-        ?TechnicalManagement $technicalManagement = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->propertyCategory = $propertyCategory;
-        $this->geo = $geo;
-        $this->contactPerson = $contactPerson;
-        $this->additionalAddress = $additionalAddress;
-        $this->prices = $prices;
-        $this->biddingProcess = $biddingProcess;
-        $this->auction = $auction;
-        $this->areas = $areas;
-        $this->equipment = $equipment;
-        $this->conditionInformation = $conditionInformation;
-        $this->evaluation = $evaluation;
-        $this->infrastructure = $infrastructure;
-        $this->freeTexts = $freeTexts;
-        $this->attachments = $attachments;
-        $this->propertyManagement = $propertyManagement;
-        $this->technicalManagement = $technicalManagement;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PropertyCategory")
+         *
+         * @SerializedName("objektkategorie")
+         */
+        protected ?PropertyCategory $propertyCategory = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Geo")
+         *
+         * @SerializedName("geo")
+         */
+        protected ?Geo $geo = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ContactPerson")
+         *
+         * @SerializedName("kontaktperson")
+         */
+        protected ?ContactPerson $contactPerson = null,
+        /**
+         * @XmlList(inline = true, entry = "weitere_adresse")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\AdditionalAddress>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("weitere_adresse")
+         */
+        protected array $additionalAddress = [],
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Prices")
+         *
+         * @SerializedName("preise")
+         */
+        protected ?Prices $prices = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\BiddingProcess")
+         *
+         * @SerializedName("bieterverfahren")
+         */
+        protected ?BiddingProcess $biddingProcess = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Auction")
+         *
+         * @SerializedName("versteigerung")
+         */
+        protected ?Auction $auction = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Areas")
+         *
+         * @SerializedName("flaechen")
+         */
+        protected ?Areas $areas = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Equipment")
+         *
+         * @SerializedName("ausstattung")
+         */
+        protected ?Equipment $equipment = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\ConditionInformation")
+         *
+         * @SerializedName("zustand_angaben")
+         */
+        protected ?ConditionInformation $conditionInformation = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Evaluation")
+         *
+         * @SerializedName("bewertung")
+         */
+        protected ?Evaluation $evaluation = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Infrastructure")
+         *
+         * @SerializedName("infrastruktur")
+         */
+        protected ?Infrastructure $infrastructure = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\FreeTexts")
+         *
+         * @SerializedName("freitexte")
+         */
+        protected ?FreeTexts $freeTexts = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Attachments")
+         *
+         * @SerializedName("anhaenge")
+         */
+        protected ?Attachments $attachments = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\PropertyManagement")
+         *
+         * @SerializedName("verwaltung_objekt")
+         */
+        protected ?PropertyManagement $propertyManagement = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\TechnicalManagement")
+         *
+         * @SerializedName("verwaltung_techn")
+         */
+        protected ?TechnicalManagement $technicalManagement = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getPropertyCategory(): ?PropertyCategory
     {

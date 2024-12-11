@@ -17,373 +17,261 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ContactPerson
 {
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("email_zentrale")
-     */
-    protected ?string $centralEmail = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("email_direkt")
-     */
-    protected ?string $directEmail = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("tel_zentrale")
-     */
-    protected ?string $centralPhoneNumber = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("tel_durchw")
-     */
-    protected ?string $phoneExtension = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("tel_fax")
-     */
-    protected ?string $faxNumber = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("tel_handy")
-     */
-    protected ?string $mobileNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("name")
-     */
-    protected string $name = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("vorname")
-     */
-    protected ?string $firstName = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("titel")
-     */
-    protected ?string $title = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("anrede")
-     */
-    protected ?string $salutation = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("position")
-     */
-    protected ?string $position = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("anrede_brief")
-     */
-    protected ?string $letterSalutation = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("firma")
-     */
-    protected ?string $company = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("zusatzfeld")
-     */
-    protected ?string $additionalField = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("strasse")
-     */
-    protected ?string $street = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("hausnummer")
-     */
-    protected ?string $houseNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("plz")
-     */
-    protected ?string $postalCode = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("ort")
-     */
-    protected ?string $city = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("postfach")
-     */
-    protected ?string $poBox = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("postf_plz")
-     */
-    protected ?string $poBoxPostalCode = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("postf_ort")
-     */
-    protected ?string $poBoxCity = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Country")
-     *
-     * @SerializedName("land")
-     */
-    protected ?Country $country = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("email_privat")
-     */
-    protected ?string $privateEmail = null;
-
-    /**
-     * @XmlList(inline = true, entry = "email_sonstige")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\OtherEmail>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("email_sonstige")
-     */
-    protected array $otherEmail = [];
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("email_feedback")
-     */
-    protected ?string $feedbackEmail = null;
-
-    /**
-     * @Type("string")
-     * Minimum length: 1
-     *
-     * @SerializedName("tel_privat")
-     */
-    protected ?string $privatePhoneNumber = null;
-
-    /**
-     * @XmlList(inline = true, entry = "tel_sonstige")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\OtherPhone>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("tel_sonstige")
-     */
-    protected array $otherPhoneNumber = [];
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("url")
-     */
-    protected ?string $url = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("adressfreigabe")
-     */
-    protected ?bool $addressRelease = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("personennummer")
-     */
-    protected ?string $personNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("immobilientreuhaenderid")
-     */
-    protected ?string $propertyTrusteeId = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Photo")
-     *
-     * @SerializedName("foto")
-     */
-    protected ?Photo $photo = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("referenz_id")
-     */
-    protected ?string $referenceId = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("freitextfeld")
-     */
-    protected ?string $freeTextField = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $centralEmail = null,
-        ?string $directEmail = null,
-        ?string $centralPhoneNumber = null,
-        ?string $phoneExtension = null,
-        ?string $faxNumber = null,
-        ?string $mobileNumber = null,
-        string $name = '',
-        ?string $firstName = null,
-        ?string $title = null,
-        ?string $salutation = null,
-        ?string $position = null,
-        ?string $letterSalutation = null,
-        ?string $company = null,
-        ?string $additionalField = null,
-        ?string $street = null,
-        ?string $houseNumber = null,
-        ?string $postalCode = null,
-        ?string $city = null,
-        ?string $poBox = null,
-        ?string $poBoxPostalCode = null,
-        ?string $poBoxCity = null,
-        ?Country $country = null,
-        ?string $privateEmail = null,
-        array $otherEmail = [],
-        ?string $feedbackEmail = null,
-        ?string $privatePhoneNumber = null,
-        array $otherPhoneNumber = [],
-        ?string $url = null,
-        ?bool $addressRelease = null,
-        ?string $personNumber = null,
-        ?string $propertyTrusteeId = null,
-        ?Photo $photo = null,
-        ?string $referenceId = null,
-        ?string $freeTextField = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->centralEmail = $centralEmail;
-        $this->directEmail = $directEmail;
-        $this->centralPhoneNumber = $centralPhoneNumber;
-        $this->phoneExtension = $phoneExtension;
-        $this->faxNumber = $faxNumber;
-        $this->mobileNumber = $mobileNumber;
-        $this->name = $name;
-        $this->firstName = $firstName;
-        $this->title = $title;
-        $this->salutation = $salutation;
-        $this->position = $position;
-        $this->letterSalutation = $letterSalutation;
-        $this->company = $company;
-        $this->additionalField = $additionalField;
-        $this->street = $street;
-        $this->houseNumber = $houseNumber;
-        $this->postalCode = $postalCode;
-        $this->city = $city;
-        $this->poBox = $poBox;
-        $this->poBoxPostalCode = $poBoxPostalCode;
-        $this->poBoxCity = $poBoxCity;
-        $this->country = $country;
-        $this->privateEmail = $privateEmail;
-        $this->otherEmail = $otherEmail;
-        $this->feedbackEmail = $feedbackEmail;
-        $this->privatePhoneNumber = $privatePhoneNumber;
-        $this->otherPhoneNumber = $otherPhoneNumber;
-        $this->url = $url;
-        $this->addressRelease = $addressRelease;
-        $this->personNumber = $personNumber;
-        $this->propertyTrusteeId = $propertyTrusteeId;
-        $this->photo = $photo;
-        $this->referenceId = $referenceId;
-        $this->freeTextField = $freeTextField;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("email_zentrale")
+         */
+        protected ?string $centralEmail = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("email_direkt")
+         */
+        protected ?string $directEmail = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("tel_zentrale")
+         */
+        protected ?string $centralPhoneNumber = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("tel_durchw")
+         */
+        protected ?string $phoneExtension = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("tel_fax")
+         */
+        protected ?string $faxNumber = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("tel_handy")
+         */
+        protected ?string $mobileNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("name")
+         */
+        protected string $name = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("vorname")
+         */
+        protected ?string $firstName = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("titel")
+         */
+        protected ?string $title = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("anrede")
+         */
+        protected ?string $salutation = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("position")
+         */
+        protected ?string $position = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("anrede_brief")
+         */
+        protected ?string $letterSalutation = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("firma")
+         */
+        protected ?string $company = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("zusatzfeld")
+         */
+        protected ?string $additionalField = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("strasse")
+         */
+        protected ?string $street = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("hausnummer")
+         */
+        protected ?string $houseNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("plz")
+         */
+        protected ?string $postalCode = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("ort")
+         */
+        protected ?string $city = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("postfach")
+         */
+        protected ?string $poBox = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("postf_plz")
+         */
+        protected ?string $poBoxPostalCode = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("postf_ort")
+         */
+        protected ?string $poBoxCity = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Country")
+         *
+         * @SerializedName("land")
+         */
+        protected ?Country $country = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("email_privat")
+         */
+        protected ?string $privateEmail = null,
+        /**
+         * @XmlList(inline = true, entry = "email_sonstige")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\OtherEmail>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("email_sonstige")
+         */
+        protected array $otherEmail = [],
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("email_feedback")
+         */
+        protected ?string $feedbackEmail = null,
+        /**
+         * @Type("string")
+         * Minimum length: 1
+         *
+         * @SerializedName("tel_privat")
+         */
+        protected ?string $privatePhoneNumber = null,
+        /**
+         * @XmlList(inline = true, entry = "tel_sonstige")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\OtherPhone>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("tel_sonstige")
+         */
+        protected array $otherPhoneNumber = [],
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("url")
+         */
+        protected ?string $url = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("adressfreigabe")
+         */
+        protected ?bool $addressRelease = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("personennummer")
+         */
+        protected ?string $personNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("immobilientreuhaenderid")
+         */
+        protected ?string $propertyTrusteeId = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Photo")
+         *
+         * @SerializedName("foto")
+         */
+        protected ?Photo $photo = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("referenz_id")
+         */
+        protected ?string $referenceId = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("freitextfeld")
+         */
+        protected ?string $freeTextField = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getCentralEmail(): ?string
     {

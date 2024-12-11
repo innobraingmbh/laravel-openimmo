@@ -25,22 +25,19 @@ class PriceTimeUnit
 
     public const TIME_UNIT_YEAR = 'JAHR';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("zeiteinheit")
-     * optional
-     *
-     * @see TIME_UNIT_* constants
-     */
-    protected string $timeUnit = '';
-
-    public function __construct(string $timeUnit = '')
-    {
-        $this->timeUnit = $timeUnit;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("zeiteinheit")
+         * optional
+         *
+         * @see TIME_UNIT_* constants
+         */
+        protected string $timeUnit = ''
+    ) {}
 
     public function getTimeUnit(): ?string
     {

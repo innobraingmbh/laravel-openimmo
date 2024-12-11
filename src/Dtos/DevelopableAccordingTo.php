@@ -31,22 +31,19 @@ class DevelopableAccordingTo
 
     public const BUILDABLE_ATTRIBUTE_BUILDABLE_LAND_WITHOUT_DEVELOPMENT_PLAN = 'BAULAND_OHNE_B_PLAN';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("bebaubar_attr")
-     * optional
-     *
-     * @see BUILDABLE_ATTRIBUTE_* constants
-     */
-    protected string $developableAttribute = '';
-
-    public function __construct(string $developableAttribute = '')
-    {
-        $this->developableAttribute = $developableAttribute;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("bebaubar_attr")
+         * optional
+         *
+         * @see BUILDABLE_ATTRIBUTE_* constants
+         */
+        protected string $developableAttribute = ''
+    ) {}
 
     public function getDevelopableAttribute(): ?string
     {

@@ -18,178 +18,126 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class TechnicalManagement
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("objektnr_intern")
-     */
-    protected ?string $internalPropertyNumber = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("objektnr_extern")
-     */
-    protected string $externalPropertyNumber = '';
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Action")
-     *
-     * @SerializedName("aktion")
-     */
-    protected ?Action $action = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("aktiv_von")
-     */
-    protected ?DateTime $activeFrom = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("aktiv_bis")
-     */
-    protected ?DateTime $activeTo = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("openimmo_obid")
-     */
-    protected string $openImmoObjectId = '';
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("kennung_ursprung")
-     */
-    protected ?string $originIdentifier = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d'>")
-     *
-     * @SerializedName("stand_vom")
-     */
-    protected ?DateTime $statusFrom = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @SerializedName("weitergabe_generell")
-     */
-    protected ?bool $generalForwarding = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("weitergabe_positiv")
-     */
-    protected ?string $positiveForwarding = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("weitergabe_negativ")
-     */
-    protected ?string $negativeForwarding = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("gruppen_kennung")
-     */
-    protected ?string $groupIdentifier = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Master")
-     *
-     * @SerializedName("master")
-     */
-    protected ?Master $master = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("sprache")
-     */
-    protected ?string $language = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $internalPropertyNumber = null,
-        string $externalPropertyNumber = '',
-        ?Action $action = null,
-        ?DateTime $activeFrom = null,
-        ?DateTime $activeTo = null,
-        string $openImmoObjectId = '',
-        ?string $originIdentifier = null,
-        ?DateTime $statusFrom = null,
-        ?bool $generalForwarding = null,
-        ?string $positiveForwarding = null,
-        ?string $negativeForwarding = null,
-        ?string $groupIdentifier = null,
-        ?Master $master = null,
-        ?string $language = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->internalPropertyNumber = $internalPropertyNumber;
-        $this->externalPropertyNumber = $externalPropertyNumber;
-        $this->action = $action;
-        $this->activeFrom = $activeFrom;
-        $this->activeTo = $activeTo;
-        $this->openImmoObjectId = $openImmoObjectId;
-        $this->originIdentifier = $originIdentifier;
-        $this->statusFrom = $statusFrom;
-        $this->generalForwarding = $generalForwarding;
-        $this->positiveForwarding = $positiveForwarding;
-        $this->negativeForwarding = $negativeForwarding;
-        $this->groupIdentifier = $groupIdentifier;
-        $this->master = $master;
-        $this->language = $language;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("objektnr_intern")
+         */
+        protected ?string $internalPropertyNumber = null,
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("objektnr_extern")
+         */
+        protected string $externalPropertyNumber = '',
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Action")
+         *
+         * @SerializedName("aktion")
+         */
+        protected ?Action $action = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("aktiv_von")
+         */
+        protected ?DateTime $activeFrom = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("aktiv_bis")
+         */
+        protected ?DateTime $activeTo = null,
+        /**
+         * @Type("string")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("openimmo_obid")
+         */
+        protected string $openImmoObjectId = '',
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("kennung_ursprung")
+         */
+        protected ?string $originIdentifier = null,
+        /**
+         * @Type("DateTime<'Y-m-d'>")
+         *
+         * @SerializedName("stand_vom")
+         */
+        protected ?DateTime $statusFrom = null,
+        /**
+         * @Type("bool")
+         *
+         * @SerializedName("weitergabe_generell")
+         */
+        protected ?bool $generalForwarding = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("weitergabe_positiv")
+         */
+        protected ?string $positiveForwarding = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("weitergabe_negativ")
+         */
+        protected ?string $negativeForwarding = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("gruppen_kennung")
+         */
+        protected ?string $groupIdentifier = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Master")
+         *
+         * @SerializedName("master")
+         */
+        protected ?Master $master = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("sprache")
+         */
+        protected ?string $language = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getInternalPropertyNumber(): ?string
     {

@@ -29,41 +29,34 @@ class OtherPhone
 
     public const PHONE_TYPE_OTHER_PHONE = 'TEL_SONSTIGE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("telefonart")
-     * optional
-     *
-     * @see PHONE_TYPE_* constants
-     */
-    protected string $phoneType = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("bemerkung")
-     * optional
-     */
-    protected ?string $remark = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $phoneType = '', ?string $remark = null, ?string $value = null)
-    {
-        $this->phoneType = $phoneType;
-        $this->remark = $remark;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("telefonart")
+         * optional
+         *
+         * @see PHONE_TYPE_* constants
+         */
+        protected string $phoneType = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("bemerkung")
+         * optional
+         */
+        protected ?string $remark = null,
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getPhoneType(): ?string
     {

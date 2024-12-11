@@ -41,22 +41,19 @@ class HallsStorageProduction
 
     public const HALL_TYPE_COLD_STORAGE = 'KUEHLHAUS';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("hallen_typ")
-     * optional
-     *
-     * @see HALL_TYPE_* constants
-     */
-    protected string $hallType = '';
-
-    public function __construct(string $hallType = '')
-    {
-        $this->hallType = $hallType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("hallen_typ")
+         * optional
+         *
+         * @see HALL_TYPE_* constants
+         */
+        protected string $hallType = ''
+    ) {}
 
     public function getHallType(): ?string
     {

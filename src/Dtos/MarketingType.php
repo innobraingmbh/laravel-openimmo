@@ -17,57 +17,44 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class MarketingType
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KAUF")
-     * required
-     */
-    protected bool $purchase = false;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MIETE_PACHT")
-     * required
-     */
-    protected bool $rentLease = false;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ERBPACHT")
-     * optional
-     */
-    protected ?bool $leasehold = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LEASING")
-     * optional
-     */
-    protected ?bool $leasing = null;
-
     public function __construct(
-        bool $purchase = false,
-        bool $rentLease = false,
-        ?bool $leasehold = null,
-        ?bool $leasing = null,
-    ) {
-        $this->purchase = $purchase;
-        $this->rentLease = $rentLease;
-        $this->leasehold = $leasehold;
-        $this->leasing = $leasing;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KAUF")
+         * required
+         */
+        protected bool $purchase = false,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MIETE_PACHT")
+         * required
+         */
+        protected bool $rentLease = false,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ERBPACHT")
+         * optional
+         */
+        protected ?bool $leasehold = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LEASING")
+         * optional
+         */
+        protected ?bool $leasing = null
+    ) {}
 
     public function getPurchase(): bool
     {

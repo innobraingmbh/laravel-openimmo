@@ -45,22 +45,19 @@ class Apartment
 
     public const APARTMENT_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("wohnungtyp")
-     * optional
-     *
-     * @see APARTMENT_TYPE_* constants
-     */
-    protected string $apartmentType = '';
-
-    public function __construct(string $apartmentType = '')
-    {
-        $this->apartmentType = $apartmentType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("wohnungtyp")
+         * optional
+         *
+         * @see APARTMENT_TYPE_* constants
+         */
+        protected string $apartmentType = ''
+    ) {}
 
     public function getApartmentType(): ?string
     {

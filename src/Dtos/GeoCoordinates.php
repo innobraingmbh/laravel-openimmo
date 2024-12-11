@@ -17,31 +17,26 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class GeoCoordinates
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("breitengrad")
-     * required
-     */
-    protected float $latitude = 0.0;
-
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("laengengrad")
-     * required
-     */
-    protected float $longitude = 0.0;
-
-    public function __construct(float $latitude = 0.0, float $longitude = 0.0)
-    {
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("breitengrad")
+         * required
+         */
+        protected float $latitude = 0.0,
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("laengengrad")
+         * required
+         */
+        protected float $longitude = 0.0
+    ) {}
 
     public function getLatitude(): float
     {

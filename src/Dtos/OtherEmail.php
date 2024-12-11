@@ -25,41 +25,34 @@ class OtherEmail
 
     public const EMAIL_TYPE_OTHER_MARKETING = 'EM_SONSTIGE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("emailart")
-     * optional
-     *
-     * @see EMAIL_TYPE_* constants
-     */
-    protected string $emailType = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("bemerkung")
-     * optional
-     */
-    protected ?string $remark = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $emailType = '', ?string $remark = null, ?string $value = null)
-    {
-        $this->emailType = $emailType;
-        $this->remark = $remark;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("emailart")
+         * optional
+         *
+         * @see EMAIL_TYPE_* constants
+         */
+        protected string $emailType = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("bemerkung")
+         * optional
+         */
+        protected ?string $remark = null,
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getEmailType(): ?string
     {

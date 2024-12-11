@@ -23,22 +23,19 @@ class Basement
 
     public const CELLAR_PARTIAL = 'TEIL';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("keller")
-     * optional
-     *
-     * @see CELLAR_* constants
-     */
-    protected string $basement = '';
-
-    public function __construct(string $basement = '')
-    {
-        $this->basement = $basement;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("keller")
+         * optional
+         *
+         * @see CELLAR_* constants
+         */
+        protected string $basement = ''
+    ) {}
 
     public function getBasement(): ?string
     {

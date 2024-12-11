@@ -17,105 +17,80 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class BalconyTerraceOrientation
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NORD")
-     * optional
-     */
-    protected ?bool $north = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("OST")
-     * optional
-     */
-    protected ?bool $east = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SUED")
-     * optional
-     */
-    protected ?bool $south = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WEST")
-     * optional
-     */
-    protected ?bool $west = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NORDOST")
-     * optional
-     */
-    protected ?bool $northeast = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NORDWEST")
-     * optional
-     */
-    protected ?bool $northwest = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SUEDOST")
-     * optional
-     */
-    protected ?bool $southeast = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("SUEDWEST")
-     * optional
-     */
-    protected ?bool $southwest = null;
-
     public function __construct(
-        ?bool $north = null,
-        ?bool $east = null,
-        ?bool $south = null,
-        ?bool $west = null,
-        ?bool $northeast = null,
-        ?bool $northwest = null,
-        ?bool $southeast = null,
-        ?bool $southwest = null,
-    ) {
-        $this->north = $north;
-        $this->east = $east;
-        $this->south = $south;
-        $this->west = $west;
-        $this->northeast = $northeast;
-        $this->northwest = $northwest;
-        $this->southeast = $southeast;
-        $this->southwest = $southwest;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NORD")
+         * optional
+         */
+        protected ?bool $north = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("OST")
+         * optional
+         */
+        protected ?bool $east = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SUED")
+         * optional
+         */
+        protected ?bool $south = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WEST")
+         * optional
+         */
+        protected ?bool $west = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NORDOST")
+         * optional
+         */
+        protected ?bool $northeast = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NORDWEST")
+         * optional
+         */
+        protected ?bool $northwest = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SUEDOST")
+         * optional
+         */
+        protected ?bool $southeast = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("SUEDWEST")
+         * optional
+         */
+        protected ?bool $southwest = null
+    ) {}
 
     public function getNorth(): ?bool
     {

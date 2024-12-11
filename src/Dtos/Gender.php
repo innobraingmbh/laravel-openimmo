@@ -24,22 +24,19 @@ class Gender
 
     public const GENDER_ATTRIBUTE_FEMALE_ONLY = 'NUR_FRAU';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("geschl_attr")
-     * optional
-     *
-     * @see GENDER_ATTRIBUTE_* constants
-     */
-    protected string $genderAttribute = '';
-
-    public function __construct(string $genderAttribute = '')
-    {
-        $this->genderAttribute = $genderAttribute;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("geschl_attr")
+         * optional
+         *
+         * @see GENDER_ATTRIBUTE_* constants
+         */
+        protected string $genderAttribute = ''
+    ) {}
 
     public function getGenderAttribute(): ?string
     {

@@ -16,42 +16,35 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ConstructionMethod
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MASSIV")
-     * optional
-     */
-    protected ?bool $solid = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("FERTIGTEILE")
-     * optional
-     */
-    protected ?bool $prefabricatedParts = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("HOLZ")
-     * optional
-     */
-    protected ?bool $wood = null;
-
-    public function __construct(?bool $solid = null, ?bool $prefabricatedParts = null, ?bool $wood = null)
-    {
-        $this->solid = $solid;
-        $this->prefabricatedParts = $prefabricatedParts;
-        $this->wood = $wood;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MASSIV")
+         * optional
+         */
+        protected ?bool $solid = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("FERTIGTEILE")
+         * optional
+         */
+        protected ?bool $prefabricatedParts = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("HOLZ")
+         * optional
+         */
+        protected ?bool $wood = null
+    ) {}
 
     public function getSolid(): ?bool
     {

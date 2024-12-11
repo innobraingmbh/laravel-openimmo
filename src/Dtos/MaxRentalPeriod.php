@@ -26,30 +26,25 @@ class MaxRentalPeriod
 
     public const MAX_DURATION_YEAR = 'JAHR';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("max_dauer")
-     * optional
-     *
-     * @see MAX_DURATION_* constants
-     */
-    protected string $maxDuration = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("string")
-     */
-    protected ?string $value = null;
-
-    public function __construct(string $maxDuration = '', ?string $value = null)
-    {
-        $this->maxDuration = $maxDuration;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("max_dauer")
+         * optional
+         *
+         * @see MAX_DURATION_* constants
+         */
+        protected string $maxDuration = '',
+        /**
+         * @Inline
+         *
+         * @Type("string")
+         */
+        protected ?string $value = null
+    ) {}
 
     public function getMaxDuration(): ?string
     {

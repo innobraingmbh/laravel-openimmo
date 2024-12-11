@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetRentPerSqmFrom
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("nettomieteprom2bis")
-     * optional
-     */
-    protected ?float $netRentPerSqmTo = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $netRentPerSqmTo = null, ?float $value = null)
-    {
-        $this->netRentPerSqmTo = $netRentPerSqmTo;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("nettomieteprom2bis")
+         * optional
+         */
+        protected ?float $netRentPerSqmTo = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getNetRentPerSqmTo(): ?float
     {

@@ -16,25 +16,20 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Data
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("pfad")
-     */
-    protected ?string $path = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("anhanginhalt")
-     */
-    protected ?string $attachmentContent = null;
-
-    public function __construct(?string $path = null, ?string $attachmentContent = null)
-    {
-        $this->path = $path;
-        $this->attachmentContent = $attachmentContent;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("pfad")
+         */
+        protected ?string $path = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("anhanginhalt")
+         */
+        protected ?string $attachmentContent = null
+    ) {}
 
     public function getPath(): ?string
     {

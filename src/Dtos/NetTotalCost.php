@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetTotalCost
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("gesamtbelastungust")
-     * optional
-     */
-    protected ?float $totalCostVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $totalCostVAT = null, ?float $value = null)
-    {
-        $this->totalCostVAT = $totalCostVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("gesamtbelastungust")
+         * optional
+         */
+        protected ?float $totalCostVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getTotalCostVAT(): ?float
     {

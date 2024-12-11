@@ -32,123 +32,95 @@ class Transfer
 
     public const MODE_DELETE = 'DELETE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("art")
-     * required
-     *
-     * @see TYPE_* constants
-     */
-    protected string $type = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("umfang")
-     * required
-     *
-     * @see SCOPE_* constants
-     */
-    protected string $scope = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("modus")
-     * optional
-     *
-     * @see MODE_* constants
-     */
-    protected string $mode = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("version")
-     * required
-     */
-    protected string $version = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("sendersoftware")
-     * required
-     */
-    protected string $senderSoftware = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("senderversion")
-     * required
-     */
-    protected string $senderVersion = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("techn_email")
-     * optional
-     */
-    protected ?string $technicalEmail = null;
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("regi_id")
-     * optional
-     */
-    protected ?string $regionId = null;
-
-    /**
-     * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("timestamp")
-     * optional
-     */
-    protected ?DateTime $timestamp = null;
-
     public function __construct(
-        string $type = '',
-        string $scope = '',
-        string $mode = '',
-        string $version = '',
-        string $senderSoftware = '',
-        string $senderVersion = '',
-        ?string $technicalEmail = null,
-        ?string $regionId = null,
-        ?DateTime $timestamp = null,
-    ) {
-        $this->type = $type;
-        $this->scope = $scope;
-        $this->mode = $mode;
-        $this->version = $version;
-        $this->senderSoftware = $senderSoftware;
-        $this->senderVersion = $senderVersion;
-        $this->technicalEmail = $technicalEmail;
-        $this->regionId = $regionId;
-        $this->timestamp = $timestamp;
-    }
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("art")
+         * required
+         *
+         * @see TYPE_* constants
+         */
+        protected string $type = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("umfang")
+         * required
+         *
+         * @see SCOPE_* constants
+         */
+        protected string $scope = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("modus")
+         * optional
+         *
+         * @see MODE_* constants
+         */
+        protected string $mode = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("version")
+         * required
+         */
+        protected string $version = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("sendersoftware")
+         * required
+         */
+        protected string $senderSoftware = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("senderversion")
+         * required
+         */
+        protected string $senderVersion = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("techn_email")
+         * optional
+         */
+        protected ?string $technicalEmail = null,
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("regi_id")
+         * optional
+         */
+        protected ?string $regionId = null,
+        /**
+         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("timestamp")
+         * optional
+         */
+        protected ?DateTime $timestamp = null
+    ) {}
 
     public function getType(): string
     {

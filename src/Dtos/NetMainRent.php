@@ -17,28 +17,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetMainRent
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("hauptmietzinsust")
-     * optional
-     */
-    protected ?float $mainRentVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $mainRentVAT = null, ?float $value = null)
-    {
-        $this->mainRentVAT = $mainRentVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("hauptmietzinsust")
+         * optional
+         */
+        protected ?float $mainRentVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getMainRentVAT(): ?float
     {

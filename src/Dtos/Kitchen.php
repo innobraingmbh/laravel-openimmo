@@ -17,42 +17,35 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Kitchen
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("EBK")
-     * optional
-     */
-    protected ?bool $builtInKitchen = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("OFFEN")
-     * optional
-     */
-    protected ?bool $open = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PANTRY")
-     * optional
-     */
-    protected ?bool $pantry = null;
-
-    public function __construct(?bool $builtInKitchen = null, ?bool $open = null, ?bool $pantry = null)
-    {
-        $this->builtInKitchen = $builtInKitchen;
-        $this->open = $open;
-        $this->pantry = $pantry;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("EBK")
+         * optional
+         */
+        protected ?bool $builtInKitchen = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("OFFEN")
+         * optional
+         */
+        protected ?bool $open = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PANTRY")
+         * optional
+         */
+        protected ?bool $pantry = null
+    ) {}
 
     public function getBuiltInKitchen(): ?bool
     {

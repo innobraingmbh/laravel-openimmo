@@ -25,22 +25,19 @@ class View
 
     public const VIEW_SEA = 'MEER';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("blick")
-     * optional
-     *
-     * @see VIEW_* constants
-     */
-    protected string $view = '';
-
-    public function __construct(string $view = '')
-    {
-        $this->view = $view;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("blick")
+         * optional
+         *
+         * @see VIEW_* constants
+         */
+        protected string $view = ''
+    ) {}
 
     public function getView(): ?string
     {

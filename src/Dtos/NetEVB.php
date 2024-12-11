@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetEVB
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("evbust")
-     * optional
-     */
-    protected ?float $unitValueTaxVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $unitValueTaxVAT = null, ?float $value = null)
-    {
-        $this->unitValueTaxVAT = $unitValueTaxVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("evbust")
+         * optional
+         */
+        protected ?float $unitValueTaxVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getUnitValueTaxVAT(): ?float
     {

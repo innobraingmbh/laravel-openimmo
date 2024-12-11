@@ -17,69 +17,53 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Services
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BETREUTES_WOHNEN")
-     * optional
-     */
-    protected ?bool $assistedLiving = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("CATERING")
-     * optional
-     */
-    protected ?bool $catering = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("REINIGUNG")
-     * optional
-     */
-    protected ?bool $cleaning = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("EINKAUF")
-     * optional
-     */
-    protected ?bool $shopping = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("WACHDIENST")
-     * optional
-     */
-    protected ?bool $securityService = null;
-
     public function __construct(
-        ?bool $assistedLiving = null,
-        ?bool $catering = null,
-        ?bool $cleaning = null,
-        ?bool $shopping = null,
-        ?bool $securityService = null,
-    ) {
-        $this->assistedLiving = $assistedLiving;
-        $this->catering = $catering;
-        $this->cleaning = $cleaning;
-        $this->shopping = $shopping;
-        $this->securityService = $securityService;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BETREUTES_WOHNEN")
+         * optional
+         */
+        protected ?bool $assistedLiving = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("CATERING")
+         * optional
+         */
+        protected ?bool $catering = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("REINIGUNG")
+         * optional
+         */
+        protected ?bool $cleaning = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("EINKAUF")
+         * optional
+         */
+        protected ?bool $shopping = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("WACHDIENST")
+         * optional
+         */
+        protected ?bool $securityService = null
+    ) {}
 
     public function getAssistedLiving(): ?bool
     {

@@ -67,22 +67,19 @@ class House
 
     public const HOUSE_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("haustyp")
-     * optional
-     *
-     * @see HOUSE_TYPE_* constants
-     */
-    protected string $houseType = '';
-
-    public function __construct(string $houseType = '')
-    {
-        $this->houseType = $houseType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("haustyp")
+         * optional
+         *
+         * @see HOUSE_TYPE_* constants
+         */
+        protected string $houseType = ''
+    ) {}
 
     public function getHouseType(): ?string
     {

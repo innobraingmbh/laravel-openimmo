@@ -17,31 +17,26 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class AttachedGastronomy
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("HOTELRESTAURANT")
-     * optional
-     */
-    protected ?bool $hotelRestaurant = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("BAR")
-     * optional
-     */
-    protected ?bool $cash = null;
-
-    public function __construct(?bool $hotelRestaurant = null, ?bool $cash = null)
-    {
-        $this->hotelRestaurant = $hotelRestaurant;
-        $this->cash = $cash;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("HOTELRESTAURANT")
+         * optional
+         */
+        protected ?bool $hotelRestaurant = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("BAR")
+         * optional
+         */
+        protected ?bool $cash = null
+    ) {}
 
     public function getHotelRestaurant(): ?bool
     {

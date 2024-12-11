@@ -16,117 +16,89 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class EnergyType
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("PASSIVHAUS")
-     * optional
-     */
-    protected ?bool $passiveHouse = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NIEDRIGENERGIE")
-     * optional
-     */
-    protected ?bool $lowEnergy = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("NEUBAUSTANDARD")
-     * optional
-     */
-    protected ?bool $newBuildingStandard = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KFW40")
-     * optional
-     */
-    protected ?bool $kfw40 = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KFW60")
-     * optional
-     */
-    protected ?bool $kfw60 = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KFW55")
-     * optional
-     */
-    protected ?bool $kfw55 = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("KFW70")
-     * optional
-     */
-    protected ?bool $kfw70 = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MINERGIEBAUWEISE")
-     * optional
-     */
-    protected ?bool $minEnergieConstruction = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("MINERGIE_ZERTIFIZIERT")
-     * optional
-     */
-    protected ?bool $minEnergieCertified = null;
-
     public function __construct(
-        ?bool $passiveHouse = null,
-        ?bool $lowEnergy = null,
-        ?bool $newBuildingStandard = null,
-        ?bool $kfw40 = null,
-        ?bool $kfw60 = null,
-        ?bool $kfw55 = null,
-        ?bool $kfw70 = null,
-        ?bool $minEnergieConstruction = null,
-        ?bool $minEnergieCertified = null,
-    ) {
-        $this->passiveHouse = $passiveHouse;
-        $this->lowEnergy = $lowEnergy;
-        $this->newBuildingStandard = $newBuildingStandard;
-        $this->kfw40 = $kfw40;
-        $this->kfw60 = $kfw60;
-        $this->kfw55 = $kfw55;
-        $this->kfw70 = $kfw70;
-        $this->minEnergieConstruction = $minEnergieConstruction;
-        $this->minEnergieCertified = $minEnergieCertified;
-    }
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("PASSIVHAUS")
+         * optional
+         */
+        protected ?bool $passiveHouse = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NIEDRIGENERGIE")
+         * optional
+         */
+        protected ?bool $lowEnergy = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("NEUBAUSTANDARD")
+         * optional
+         */
+        protected ?bool $newBuildingStandard = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KFW40")
+         * optional
+         */
+        protected ?bool $kfw40 = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KFW60")
+         * optional
+         */
+        protected ?bool $kfw60 = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KFW55")
+         * optional
+         */
+        protected ?bool $kfw55 = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("KFW70")
+         * optional
+         */
+        protected ?bool $kfw70 = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MINERGIEBAUWEISE")
+         * optional
+         */
+        protected ?bool $minEnergieConstruction = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("MINERGIE_ZERTIFIZIERT")
+         * optional
+         */
+        protected ?bool $minEnergieCertified = null
+    ) {}
 
     public function getPassiveHouse(): ?bool
     {

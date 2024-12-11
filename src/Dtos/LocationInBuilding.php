@@ -17,53 +17,44 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class LocationInBuilding
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("LINKS")
-     * optional
-     */
-    protected ?bool $left = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("RECHTS")
-     * optional
-     */
-    protected ?bool $right = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("VORNE")
-     * optional
-     */
-    protected ?bool $front = null;
-
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("HINTEN")
-     * optional
-     */
-    protected ?bool $rear = null;
-
-    public function __construct(?bool $left = null, ?bool $right = null, ?bool $front = null, ?bool $rear = null)
-    {
-        $this->left = $left;
-        $this->right = $right;
-        $this->front = $front;
-        $this->rear = $rear;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("LINKS")
+         * optional
+         */
+        protected ?bool $left = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("RECHTS")
+         * optional
+         */
+        protected ?bool $right = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("VORNE")
+         * optional
+         */
+        protected ?bool $front = null,
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("HINTEN")
+         * optional
+         */
+        protected ?bool $rear = null
+    ) {}
 
     public function getLeft(): ?bool
     {

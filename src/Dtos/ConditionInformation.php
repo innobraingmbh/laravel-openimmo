@@ -17,151 +17,108 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ConditionInformation
 {
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("baujahr")
-     */
-    protected ?string $yearOfConstruction = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("letztemodernisierung")
-     */
-    protected ?string $lastModernization = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Condition")
-     *
-     * @SerializedName("zustand")
-     */
-    protected ?Condition $condition = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Age")
-     *
-     * @SerializedName("alter")
-     */
-    protected ?Age $age = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\DevelopableAccordingTo")
-     *
-     * @SerializedName("bebaubar_nach")
-     */
-    protected ?DevelopableAccordingTo $developableAccordingTo = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\Development")
-     *
-     * @SerializedName("erschliessung")
-     */
-    protected ?Development $development = null;
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\DevelopmentScope")
-     *
-     * @SerializedName("erschliessung_umfang")
-     */
-    protected ?DevelopmentScope $developmentScope = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("bauzone")
-     */
-    protected ?string $constructionZone = null;
-
-    /**
-     * @Type("string")
-     *
-     * @SerializedName("altlasten")
-     */
-    protected ?string $contamination = null;
-
-    /**
-     * @XmlList(inline = true, entry = "energiepass")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\EnergyPerformanceCertificate>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("energiepass")
-     */
-    protected array $energyCertificate = [];
-
-    /**
-     * @Type("Katalam\OpenImmo\Dtos\SalesStatus")
-     *
-     * @SerializedName("verkaufstatus")
-     */
-    protected ?SalesStatus $salesStatus = null;
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_simplefield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_simplefield")
-     */
-    protected array $userDefinedSimplefield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_anyfield")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_anyfield")
-     */
-    protected array $userDefinedAnyfield = [];
-
-    /**
-     * @XmlList(inline = true, entry = "user_defined_extend")
-     *
-     * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
-     *
-     * @SkipWhenEmpty
-     *
-     * @SerializedName("user_defined_extend")
-     */
-    protected array $userDefinedExtend = [];
-
     public function __construct(
-        ?string $yearOfConstruction = null,
-        ?string $lastModernization = null,
-        ?Condition $condition = null,
-        ?Age $age = null,
-        ?DevelopableAccordingTo $developableAccordingTo = null,
-        ?Development $development = null,
-        ?DevelopmentScope $developmentScope = null,
-        ?string $constructionZone = null,
-        ?string $contamination = null,
-        array $energyCertificate = [],
-        ?SalesStatus $salesStatus = null,
-        array $userDefinedSimplefield = [],
-        array $userDefinedAnyfield = [],
-        array $userDefinedExtend = [],
-    ) {
-        $this->yearOfConstruction = $yearOfConstruction;
-        $this->lastModernization = $lastModernization;
-        $this->condition = $condition;
-        $this->age = $age;
-        $this->developableAccordingTo = $developableAccordingTo;
-        $this->development = $development;
-        $this->developmentScope = $developmentScope;
-        $this->constructionZone = $constructionZone;
-        $this->contamination = $contamination;
-        $this->energyCertificate = $energyCertificate;
-        $this->salesStatus = $salesStatus;
-        $this->userDefinedSimplefield = $userDefinedSimplefield;
-        $this->userDefinedAnyfield = $userDefinedAnyfield;
-        $this->userDefinedExtend = $userDefinedExtend;
-    }
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("baujahr")
+         */
+        protected ?string $yearOfConstruction = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("letztemodernisierung")
+         */
+        protected ?string $lastModernization = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Condition")
+         *
+         * @SerializedName("zustand")
+         */
+        protected ?Condition $condition = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Age")
+         *
+         * @SerializedName("alter")
+         */
+        protected ?Age $age = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\DevelopableAccordingTo")
+         *
+         * @SerializedName("bebaubar_nach")
+         */
+        protected ?DevelopableAccordingTo $developableAccordingTo = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\Development")
+         *
+         * @SerializedName("erschliessung")
+         */
+        protected ?Development $development = null,
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\DevelopmentScope")
+         *
+         * @SerializedName("erschliessung_umfang")
+         */
+        protected ?DevelopmentScope $developmentScope = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("bauzone")
+         */
+        protected ?string $constructionZone = null,
+        /**
+         * @Type("string")
+         *
+         * @SerializedName("altlasten")
+         */
+        protected ?string $contamination = null,
+        /**
+         * @XmlList(inline = true, entry = "energiepass")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\EnergyPerformanceCertificate>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("energiepass")
+         */
+        protected array $energyCertificate = [],
+        /**
+         * @Type("Katalam\OpenImmo\Dtos\SalesStatus")
+         *
+         * @SerializedName("verkaufstatus")
+         */
+        protected ?SalesStatus $salesStatus = null,
+        /**
+         * @XmlList(inline = true, entry = "user_defined_simplefield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_simplefield")
+         */
+        protected array $userDefinedSimplefield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_anyfield")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_anyfield")
+         */
+        protected array $userDefinedAnyfield = [],
+        /**
+         * @XmlList(inline = true, entry = "user_defined_extend")
+         *
+         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         *
+         * @SkipWhenEmpty
+         *
+         * @SerializedName("user_defined_extend")
+         */
+        protected array $userDefinedExtend = []
+    ) {}
 
     public function getYearOfConstruction(): ?string
     {

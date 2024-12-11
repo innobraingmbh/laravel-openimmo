@@ -19,22 +19,19 @@ class Rooms
 {
     public const ROOM_TYPE_ROOM = 'ZIMMER';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("zimmertyp")
-     * optional
-     *
-     * @see ROOM_TYPE_* constants
-     */
-    protected string $roomType = '';
-
-    public function __construct(string $roomType = '')
-    {
-        $this->roomType = $roomType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("zimmertyp")
+         * optional
+         *
+         * @see ROOM_TYPE_* constants
+         */
+        protected string $roomType = ''
+    ) {}
 
     public function getRoomType(): ?string
     {

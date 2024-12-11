@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class NetOperatingCosts
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("betriebskostenust")
-     * optional
-     */
-    protected ?float $operatingCostsVAT = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?float $operatingCostsVAT = null, ?float $value = null)
-    {
-        $this->operatingCostsVAT = $operatingCostsVAT;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("betriebskostenust")
+         * optional
+         */
+        protected ?float $operatingCostsVAT = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getOperatingCostsVAT(): ?float
     {

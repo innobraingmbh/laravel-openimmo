@@ -381,22 +381,19 @@ class Currency
 
     public const ISO_CURRENCY_ZWD = 'ZWD';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("iso_waehrung")
-     * optional
-     *
-     * @see ISO_CURRENCY_* constants
-     */
-    protected string $isoCurrency = '';
-
-    public function __construct(string $isoCurrency = '')
-    {
-        $this->isoCurrency = $isoCurrency;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("iso_waehrung")
+         * optional
+         *
+         * @see ISO_CURRENCY_* constants
+         */
+        protected string $isoCurrency = ''
+    ) {}
 
     public function getIsoCurrency(): ?string
     {

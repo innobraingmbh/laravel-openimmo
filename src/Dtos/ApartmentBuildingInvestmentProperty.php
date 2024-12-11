@@ -43,22 +43,19 @@ class ApartmentBuildingInvestmentProperty
 
     public const INTEREST_TYPE_ASSISTED_LIVING = 'BETREUTES-WOHNEN';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("zins_typ")
-     * optional
-     *
-     * @see INTEREST_TYPE_* constants
-     */
-    protected string $interestType = '';
-
-    public function __construct(string $interestType = '')
-    {
-        $this->interestType = $interestType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("zins_typ")
+         * optional
+         *
+         * @see INTEREST_TYPE_* constants
+         */
+        protected string $interestType = ''
+    ) {}
 
     public function getInterestType(): ?string
     {

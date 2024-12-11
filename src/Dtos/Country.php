@@ -481,22 +481,19 @@ class Country
 
     public const ISO_COUNTRY_ZWE = 'ZWE';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("iso_land")
-     * optional
-     *
-     * @see ISO_COUNTRY_* constants
-     */
-    protected string $isoCountry = '';
-
-    public function __construct(string $isoCountry = '')
-    {
-        $this->isoCountry = $isoCountry;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("iso_land")
+         * optional
+         *
+         * @see ISO_COUNTRY_* constants
+         */
+        protected string $isoCountry = ''
+    ) {}
 
     public function getIsoCountry(): ?string
     {

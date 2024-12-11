@@ -16,47 +16,37 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ParkingDuplex
 {
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("stellplatzmiete")
-     * optional
-     */
-    protected ?float $parkingSpaceRent = null;
-
-    /**
-     * @Type("float")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("stellplatzkaufpreis")
-     * optional
-     */
-    protected ?float $parkingSpacePurchasePrice = null;
-
-    /**
-     * @Type("int")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("anzahl")
-     * optional
-     * Minimum value (inclusive): -2147483648
-     * Maximum value (inclusive): 2147483647
-     */
-    protected ?int $quantity = null;
-
     public function __construct(
-        ?float $parkingSpaceRent = null,
-        ?float $parkingSpacePurchasePrice = null,
-        ?int $quantity = null,
-    ) {
-        $this->parkingSpaceRent = $parkingSpaceRent;
-        $this->parkingSpacePurchasePrice = $parkingSpacePurchasePrice;
-        $this->quantity = $quantity;
-    }
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("stellplatzmiete")
+         * optional
+         */
+        protected ?float $parkingSpaceRent = null,
+        /**
+         * @Type("float")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("stellplatzkaufpreis")
+         * optional
+         */
+        protected ?float $parkingSpacePurchasePrice = null,
+        /**
+         * @Type("int")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("anzahl")
+         * optional
+         * Minimum value (inclusive): -2147483648
+         * Maximum value (inclusive): 2147483647
+         */
+        protected ?int $quantity = null
+    ) {}
 
     public function getParkingSpaceRent(): ?float
     {

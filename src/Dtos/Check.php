@@ -25,30 +25,25 @@ class Check
 
     public const CONTACT_TYPE_ETAG = 'ETAG';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("ctype")
-     * required
-     *
-     * @see CONTACT_TYPE_* constants
-     */
-    protected string $contentType = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-     */
-    protected ?DateTime $value = null;
-
-    public function __construct(string $contentType = '', ?DateTime $value = null)
-    {
-        $this->contentType = $contentType;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("ctype")
+         * required
+         *
+         * @see CONTACT_TYPE_* constants
+         */
+        protected string $contentType = '',
+        /**
+         * @Inline
+         *
+         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
+         */
+        protected ?DateTime $value = null
+    ) {}
 
     public function getContentType(): string
     {

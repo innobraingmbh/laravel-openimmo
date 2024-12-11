@@ -18,28 +18,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class PurchasePrice
 {
-    /**
-     * @Type("bool")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("auf_anfrage")
-     * optional
-     */
-    protected ?bool $onRequest = null;
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(?bool $onRequest = null, ?float $value = null)
-    {
-        $this->onRequest = $onRequest;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("bool")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("auf_anfrage")
+         * optional
+         */
+        protected ?bool $onRequest = null,
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getOnRequest(): ?bool
     {

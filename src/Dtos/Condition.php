@@ -49,22 +49,19 @@ class Condition
 
     public const CONDITION_TYPE_PLANNED = 'PROJEKTIERT';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("zustand_art")
-     * optional
-     *
-     * @see CONDITION_TYPE_* constants
-     */
-    protected string $conditionType = '';
-
-    public function __construct(string $conditionType = '')
-    {
-        $this->conditionType = $conditionType;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("zustand_art")
+         * optional
+         *
+         * @see CONDITION_TYPE_* constants
+         */
+        protected string $conditionType = ''
+    ) {}
 
     public function getConditionType(): ?string
     {

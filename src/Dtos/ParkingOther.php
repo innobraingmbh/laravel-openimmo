@@ -30,33 +30,28 @@ class ParkingOther
 
     public const PLACE_TYPE_OTHER = 'SONSTIGES';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("platzart")
-     * optional
-     *
-     * @see PLACE_TYPE_* constants
-     */
-    protected string $spaceType = '';
-
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("bemerkung")
-     * optional
-     */
-    protected ?string $remark = null;
-
-    public function __construct(string $spaceType = '', ?string $remark = null)
-    {
-        $this->spaceType = $spaceType;
-        $this->remark = $remark;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("platzart")
+         * optional
+         *
+         * @see PLACE_TYPE_* constants
+         */
+        protected string $spaceType = '',
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("bemerkung")
+         * optional
+         */
+        protected ?string $remark = null
+    ) {}
 
     public function getSpaceType(): ?string
     {

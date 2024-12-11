@@ -26,30 +26,25 @@ class TargetRentalIncome
 
     public const PERIOD_YEAR = 'JAHR';
 
-    /**
-     * @Type("string")
-     *
-     * @XmlAttribute
-     *
-     * @SerializedName("periode")
-     * optional
-     *
-     * @see PERIOD_* constants
-     */
-    protected string $period = '';
-
-    /**
-     * @Inline
-     *
-     * @Type("float")
-     */
-    protected ?float $value = null;
-
-    public function __construct(string $period = '', ?float $value = null)
-    {
-        $this->period = $period;
-        $this->value = $value;
-    }
+    public function __construct(
+        /**
+         * @Type("string")
+         *
+         * @XmlAttribute
+         *
+         * @SerializedName("periode")
+         * optional
+         *
+         * @see PERIOD_* constants
+         */
+        protected string $period = '',
+        /**
+         * @Inline
+         *
+         * @Type("float")
+         */
+        protected ?float $value = null
+    ) {}
 
     public function getPeriod(): ?string
     {
