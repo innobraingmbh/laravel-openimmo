@@ -17,7 +17,7 @@ it('can set existing target folder', function () {
     $generator = new DtoGenerator;
     $generator->setTargetFolder($folder);
 
-    expect($generator->getTargetFolder())->toBe($folder);
+    expect($generator->getTargetFolder())->toBe($folder.'/');
 });
 
 it('throws exception when setting non-existing target folder', function () {

@@ -33,7 +33,8 @@ function getExampleData(string $type): mixed
 function testClassProperty(ClassType $class, Property $property): void
 {
     $type = TypeUtil::OPENIMMO_NAMESPACE.$class->getName();
-    $subject = new $type;$property->getType();
+    $subject = new $type;
+    $property->getType();
     $testValue = getExampleData($property->getType());
     $propertyName = $property->getName();
 

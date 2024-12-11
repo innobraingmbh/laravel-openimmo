@@ -22,7 +22,7 @@ use Symfony\Component\Serializer\Serializer;
 
 use function PHPUnit\Framework\assertJsonStringEqualsJsonString;
 
-function getSerializer(): Serializer
+function getJsonSerializer(): Serializer
 {
     return new Serializer([
         new DateTimeNormalizer,
@@ -32,9 +32,9 @@ function getSerializer(): Serializer
     ]);
 }
 
-function serializeObject(mixed $object): string
+function serializeObjectIntoJson(mixed $object): string
 {
-    return getSerializer()->serialize($object, JsonEncoder::FORMAT, [
+    return getJsonSerializer()->serialize($object, JsonEncoder::FORMAT, [
         AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
         AbstractObjectNormalizer::PRESERVE_EMPTY_OBJECTS => false,
         'json_encode_options' => JSON_PRESERVE_ZERO_FRACTION,
@@ -74,7 +74,7 @@ test('write real estate json', function () {
 
     $realEstate->setTechnicalManagement($technicalManagement);
 
-    $generatedJson = serializeObject($realEstate);
+    $generatedJson = serializeObjectIntoJson($realEstate);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });
@@ -93,7 +93,7 @@ test('write transfer json', function () {
         ->setTimestamp(new DateTime('2014-06-01T10:00:00'))
         ->setRegionId('ABCD143');
 
-    $generatedJson = serializeObject($transfer);
+    $generatedJson = serializeObjectIntoJson($transfer);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });
@@ -103,7 +103,7 @@ test('write distance json', function () {
 
     $distances = (new SportDistances(SportDistances::DISTANCE_TO_SPORT_LAKE, 15));
 
-    $generatedJson = serializeObject($distances);
+    $generatedJson = serializeObjectIntoJson($distances);
 
     assertJsonStringEqualsJsonString($json, $generatedJson);
 });

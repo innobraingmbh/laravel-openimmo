@@ -21,7 +21,6 @@ function prepareStorage(): void
     });
 }
 
-
 describe('works', function () {
     test('classes', function () {
         prepareStorage();

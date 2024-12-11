@@ -20,7 +20,7 @@ use Katalam\OpenImmo\Dtos\Rooms;
 use Katalam\OpenImmo\Dtos\Transfer;
 use Katalam\OpenImmo\Handler\DateTimeHandler;
 
-function getSerializer()
+function getDeserializer()
 {
     return SerializerBuilder::create()
         ->configureHandlers(function (HandlerRegistryInterface $registry): void {
@@ -31,7 +31,7 @@ function getSerializer()
 
 function deserializeObject(string $object, string $classFqn = OpenImmo::class)
 {
-    return getSerializer()->deserialize($object, $classFqn, 'xml');
+    return getDeserializer()->deserialize($object, $classFqn, 'xml');
 }
 
 test('read xml', function () {

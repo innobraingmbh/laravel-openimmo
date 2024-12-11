@@ -8,6 +8,7 @@ use Katalam\OpenImmo\Tests\TestCase;
 
 test('generate api class complex type', function () {
     TranslationService::addFakeProperty('feld');
+    TranslationService::addFakeClass('Feld');
 
     /** @var TestCase $this */
     $generatedClass = $this->getGeneratedClassFromFile('user_defined_extend');

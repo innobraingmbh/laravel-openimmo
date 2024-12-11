@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Storage;
 use Katalam\OpenImmo\Services\DtoGenerator;
 use Katalam\OpenImmo\Services\TypeUtil;
 use Nette\PhpGenerator\ClassType;
-
 use ReflectionClass;
 
 use function PHPUnit\Framework\assertFileExists;
