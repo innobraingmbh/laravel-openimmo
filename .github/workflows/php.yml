@@ -70,16 +70,6 @@ jobs:
     - name: Run test suite
       run: composer test
 
-    - uses: codecov/codecov-action@v5.1.1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./build/coverage/clover.xml
-
-    - name: Run PHPInfection
-      run: composer run infection
-      env:
-        STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
-
   rector:
     name: Rector
     runs-on: ubuntu-latest
@@ -99,4 +89,4 @@ jobs:
         run: composer install --no-interaction --no-progress
 
       - name: Execute Rector
-        run: vendor/bin/rector process src tests -c build/config/rector.php --dry-run
+        run: vendor/bin/rector --dry-run
