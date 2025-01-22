@@ -20,7 +20,6 @@
         "ext-dom": "*",
         "ext-simplexml": "*",
         "doctrine/annotations": "^2.0",
-        "driftingly/rector-laravel": "^1.2",
         "goetas-webservices/xsd-reader": "*",
         "goetas-webservices/xsd2php": "*",
         "illuminate/contracts": "^10.0||^11.0",
@@ -29,6 +28,7 @@
         "symfony/serializer": "^5.3 || ^6.0"
     },
     "require-dev": {
+        "driftingly/rector-laravel": "^1.2",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
         "larastan/larastan": "^2.9",
