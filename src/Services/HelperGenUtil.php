@@ -12,9 +12,9 @@ use ReflectionProperty;
 
 class HelperGenUtil
 {
-    private readonly PhpFile $phpFile;
-
     protected string $targetFile = './src/helpers.php';
+
+    private readonly PhpFile $phpFile;
 
     private array $recursionBlocker = [];
 
