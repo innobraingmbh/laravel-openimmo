@@ -42,7 +42,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@2.31.1
         with:
-          php-version: '8.2'
+          php-version: '8.4'
           tools: composer
           coverage: none
 
