@@ -9,12 +9,12 @@ use Nette\PhpGenerator\Property;
 
 class CodeGenUtil
 {
-    public const DESCRIPTION_PART_DELIMITER = PHP_EOL;
+    public const string DESCRIPTION_PART_DELIMITER = PHP_EOL;
 
     /**
      * Adds a new description part to the given class property.
      */
-    public static function addDescriptionPart(Property $classProperty, string $descriptionPart, string $separator = self::DESCRIPTION_PART_DELIMITER): void
+    public function addDescriptionPart(Property $classProperty, string $descriptionPart, string $separator = self::DESCRIPTION_PART_DELIMITER): void
     {
         if (trim($descriptionPart) === '') {
             return;
@@ -29,13 +29,13 @@ class CodeGenUtil
         $classProperty->setComment(implode($separator, $currentDescriptionParts));
     }
 
-    public static function generateGetterAndSetter(Property $property, ClassType $class, bool $fluentApi = true, bool $nullable = false): void
+    public function generateGetterAndSetter(Property $property, ClassType $class, bool $fluentApi = true, bool $nullable = false): void
     {
-        self::generateGetter($property, $class, $nullable);
-        self::generateSetter($property, $class, $fluentApi, $nullable);
+        $this->generateGetter($property, $class, $nullable);
+        $this->generateSetter($property, $class, $fluentApi, $nullable);
     }
 
-    public static function generateGetter(Property $property, ClassType $class, bool $nullable): void
+    public function generateGetter(Property $property, ClassType $class, bool $nullable): void
     {
         $propertyType = $property->getType();
         $returnsArray = $propertyType === 'array';
@@ -54,7 +54,7 @@ class CodeGenUtil
         }
     }
 
-    public static function generateSetter(Property $property, ClassType $class, bool $fluentApi, bool $nullable): void
+    public function generateSetter(Property $property, ClassType $class, bool $fluentApi, bool $nullable): void
     {
         $setter = $class->addMethod('set'.ucfirst($property->getName()));
         $propertyType = $property->getType();
@@ -66,13 +66,13 @@ class CodeGenUtil
 
         $setterCode = '$this->'.$property->getName().' = $'.$property->getName().';';
         if ($fluentApi) {
-            $setter->setReturnType('\\'.TypeUtil::OPENIMMO_NAMESPACE.$class->getName());
+            $setter->setReturnType('\\'.DtoGenerator::NAMESPACE.'\\'.$class->getName());
             $setterCode .= PHP_EOL.'return $this;';
         }
         $setter->setBody($setterCode);
     }
 
-    public static function getAnnotationFromProperty(Property $property, string $annotation): ?string
+    public function getAnnotationFromProperty(Property $property, string $annotation): ?string
     {
         $commentLines = explode(self::DESCRIPTION_PART_DELIMITER, $property->getComment() ?? '');
         foreach ($commentLines as $commentLine) {

@@ -8,13 +8,12 @@ use DateTime;
 use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexType;
 use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexTypeSimpleContent;
 use GoetasWebservices\XML\XSDReader\Schema\Type\Type;
+use Katalam\OpenImmo\Facades\CodeGenUtil;
 use Nette\PhpGenerator\Property;
 
 class TypeUtil
 {
-    public const OPENIMMO_NAMESPACE = 'Katalam\\OpenImmo\\Dtos\\';
-
-    public static function getTypeForSerializer(string $type): string
+    public function getTypeForSerializer(string $type): string
     {
         $isPlural = str_ends_with($type, '[]');
         $singular = str_replace('[]', '', $type);
@@ -54,8 +53,8 @@ class TypeUtil
                 break;
 
             default:
-                $ns = self::OPENIMMO_NAMESPACE;
-                $type = $ns.$singular;
+                $ns = DtoGenerator::NAMESPACE;
+                $type = $ns.'\\'.$singular;
                 break;
         }
 
@@ -66,7 +65,7 @@ class TypeUtil
         return $type;
     }
 
-    public static function getValidPhpType(string $propertyType): string
+    public function getValidPhpType(string $propertyType): string
     {
         $isPlural = str_ends_with($propertyType, '[]');
         if ($isPlural) {
@@ -107,14 +106,14 @@ class TypeUtil
                 break;
 
             default:
-                $className = '\\'.self::OPENIMMO_NAMESPACE.$propertyType;
-                $propertyType = $className;
+                $ns = DtoGenerator::NAMESPACE;
+                $propertyType = '\\'.$ns.'\\'.$propertyType;
         }
 
         return $propertyType;
     }
 
-    public static function getDefaultValueForType(string $propertyType, bool $nullable): float|false|int|array|string|null
+    public function getDefaultValueForType(string $propertyType, bool $nullable): float|false|int|array|string|null
     {
         $defaultValue = match ($propertyType) {
             'float' => 0.0,
@@ -128,7 +127,7 @@ class TypeUtil
         return $nullable ? null : $defaultValue;
     }
 
-    public static function extractTypeForPhp(Type $typeFromXsd, ?string $propertyName = null): ?string
+    public function extractTypeForPhp(Type $typeFromXsd, ?string $propertyName = null): ?string
     {
         $type = 'string';
 
@@ -147,12 +146,12 @@ class TypeUtil
         return $type;
     }
 
-    public static function isConstantsBasedProperty(Property $property): bool
+    public function isConstantsBasedProperty(Property $property): bool
     {
         return strtoupper($property->getName()).'_* constants' === CodeGenUtil::getAnnotationFromProperty($property, 'see');
     }
 
-    public static function camelize(string $key): string
+    public function camelize(string $key): string
     {
         return str($key)
             ->lower()
@@ -161,7 +160,7 @@ class TypeUtil
             ->toString();
     }
 
-    public static function studly(string $key): string
+    public function studly(string $key): string
     {
         return str($key)
             ->lower()

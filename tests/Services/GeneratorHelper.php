@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Katalam\OpenImmo\Tests\Services;
 
 use Illuminate\Support\Facades\Storage;
+use Katalam\OpenImmo\Facades\TypeUtil;
 use Katalam\OpenImmo\Services\DtoGenerator;
-use Katalam\OpenImmo\Services\TypeUtil;
 use Nette\PhpGenerator\ClassType;
 use ReflectionClass;
 
@@ -102,7 +102,7 @@ trait GeneratorHelper
 
             $setter = $class->getMethod('set'.ucfirst($propertyName));
             expect($setter->getVisibility())->toBe('public')
-                ->and($setter->getReturnType())->toBe('\\'.TypeUtil::OPENIMMO_NAMESPACE.$class->getName())
+                ->and($setter->getReturnType())->toBe('\\'.DtoGenerator::NAMESPACE.'\\'.$class->getName())
                 ->and($setter->getParameters())->toHaveKey($propertyName)
                 ->and($setter->getParameters()[$propertyName]->getType())->toBe($phpType);
         }

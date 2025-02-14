@@ -28,7 +28,10 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\XmlRoot;
+use Katalam\OpenImmo\Facades\CodeGenUtil;
+use Katalam\OpenImmo\Facades\HelperGenUtil;
 use Katalam\OpenImmo\Facades\TranslationService;
+use Katalam\OpenImmo\Facades\TypeUtil;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\PhpNamespace;
@@ -37,13 +40,13 @@ use Nette\PhpGenerator\Visibility;
 
 class DtoGenerator
 {
+    public const string NAMESPACE = 'Katalam\\OpenImmo\\Dtos';
+
     protected string $targetFolder = './src/Dtos/';
 
     protected bool $wipeTargetFolder = true;
 
     protected array $referencedInlineElements = [];
-
-    private string $namespace = 'Katalam\\OpenImmo\\Dtos';
 
     public function setTargetFolder(string $targetFolder): self
     {
@@ -91,6 +94,8 @@ class DtoGenerator
             ->each(function (Element $element) {
                 $this->parseElement($element);
             });
+
+        HelperGenUtil::generate();
     }
 
     protected function parseElement(ElementDef|Element $element): void
@@ -98,7 +103,7 @@ class DtoGenerator
         $className = TypeUtil::studly($element->getName());
         $className = TranslationService::translateClass($className);
 
-        $namespace = (new PhpNamespace($this->namespace))
+        $namespace = new PhpNamespace(self::NAMESPACE)
             ->addUse(XmlRoot::class, 'XmlRoot')
             ->addUse(Type::class, 'Type');
 
@@ -217,7 +222,7 @@ class DtoGenerator
         $nullable = ! $isArray && $property->getMin() === 0;
 
         // if the property type is an object, it should be nullable
-        if ($phpType === '\DateTime' || str_starts_with($serializerType, TypeUtil::OPENIMMO_NAMESPACE)) {
+        if ($phpType === '\DateTime' || str_starts_with($serializerType, self::NAMESPACE)) {
             $nullable = true;
         }
 
@@ -275,11 +280,7 @@ class DtoGenerator
 
     protected function parseSimpleValue(?Extension $extension, ClassType $class, PhpNamespace $namespace): void
     {
-        if (is_null($extension)) {
-            $xsdType = 'string';
-        } else {
-            $xsdType = TypeUtil::extractTypeForPhp($extension->getBase());
-        }
+        $xsdType = is_null($extension) ? 'string' : TypeUtil::extractTypeForPhp($extension->getBase());
 
         $propertyType = TypeUtil::getValidPhpType($xsdType);
 

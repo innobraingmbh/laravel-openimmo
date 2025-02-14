@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Services\TypeUtil;
+use Katalam\OpenImmo\Facades\TypeUtil;
 use Nette\PhpGenerator\Property;
 
 test('camelize', function (string $input, string $expected) {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Katalam\OpenImmo\Services\TypeUtil;
+use Katalam\OpenImmo\Services\DtoGenerator;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Property;
 use Random\RandomException;
@@ -32,7 +32,7 @@ function getExampleData(string $type): mixed
 
 function testClassProperty(ClassType $class, Property $property): void
 {
-    $type = TypeUtil::OPENIMMO_NAMESPACE.$class->getName();
+    $type = DtoGenerator::NAMESPACE.'\\'.$class->getName();
     $subject = new $type;
     $property->getType();
     $testValue = getExampleData($property->getType());
@@ -59,4 +59,4 @@ test('dto values working', function () {
             testClassProperty($class, $property);
         });
     });
-});
+})->addToAssertionCount(1);

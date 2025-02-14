@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Services\CodeGenUtil;
+use Katalam\OpenImmo\Facades\CodeGenUtil;
 use Nette\PhpGenerator\Property;
 
 it('can add description', function () {
@@ -12,7 +12,7 @@ it('can add description', function () {
     CodeGenUtil::addDescriptionPart($property, 'really!');
 
     expect($property->getComment())
-        ->toBe('foobar makes the world go round'.CodeGenUtil::DESCRIPTION_PART_DELIMITER.'really!');
+        ->toBe('foobar makes the world go round'.PHP_EOL.'really!');
 });
 
 it('cannot have empty description', function () {

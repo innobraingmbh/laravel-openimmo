@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Services\TypeUtil;
+use Katalam\OpenImmo\Services\DtoGenerator;
 use Katalam\OpenImmo\Tests\TestCase;
 
 test('generate api class complex type', function () {
@@ -22,7 +22,7 @@ test('array getter does not return null for new class', function () {
     /** @var TestCase $this */
     $generatedClass = $this->getGeneratedClassFromFile('user_defined_extend');
 
-    $className = TypeUtil::OPENIMMO_NAMESPACE.$generatedClass->getName();
+    $className = DtoGenerator::NAMESPACE.'\\'.$generatedClass->getName();
 
     $instance = new $className;
     expect($instance->getField())->toBe([]);

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Services\TypeUtil;
+use Katalam\OpenImmo\Services\DtoGenerator;
 use Katalam\OpenImmo\Tests\TestCase;
 
 test('generate type with restrictions', function () {
@@ -33,7 +33,7 @@ test('generate type with restrictions', function () {
 
     require_once storage_path("app/Dtos/{$generatedClass->getName()}.php");
 
-    $className = TypeUtil::OPENIMMO_NAMESPACE.$generatedClass->getName();
+    $className = DtoGenerator::NAMESPACE.'\\'.$generatedClass->getName();
 
     $subject = new $className;
     expect($subject->getMwstSatz())->toBe(0.0);
