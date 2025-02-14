@@ -14,6 +14,8 @@ class HelperGenUtil
 {
     private readonly PhpFile $phpFile;
 
+    protected string $targetFile = './src/helpers.php';
+
     private array $recursionBlocker = [];
 
     private array $blacklistHelperFunctionNames = [
@@ -46,7 +48,7 @@ class HelperGenUtil
     private function printFile(): void
     {
         $code = (new Printer)->printFile($this->phpFile);
-        File::put('helpers.php', $code);
+        File::put($this->targetFile, $code);
     }
 
     private function loopProperties(ReflectionProperty $property, array $classes): void

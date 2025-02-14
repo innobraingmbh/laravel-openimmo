@@ -49,7 +49,10 @@
     "autoload": {
         "psr-4": {
             "Katalam\\OpenImmo\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
