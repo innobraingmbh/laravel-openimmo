@@ -1,8 +1,8 @@
 # This is my package laravel-openimmo
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/innobrainbmgh/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/innobrainbmgh/laravel-openimmo/actions/workflows/tests.yml?query=branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/innobrainbmgh/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/innobraingmbh/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/tests.yml?query=branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/innobraingmbh/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
 
 This package is a fork from the initial work [ujamii/openimmo](https://github.com/ujamii/openimmo)
