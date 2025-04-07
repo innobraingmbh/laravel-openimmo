@@ -47,9 +47,9 @@ class OpenImmoService
         return $this->jsonSerializer;
     }
 
-    public function deserializeObjectFromXml(string $object, string $classFqn = OpenImmo::class): mixed
+    public function deserializeObjectFromXml(string $xml, string $classFqn = OpenImmo::class): mixed
     {
-        return $this->serializer->deserialize($object, $classFqn, 'xml');
+        return $this->serializer->deserialize($xml, $classFqn, 'xml');
     }
 
     public function serializeObjectIntoXml(mixed $object): string
@@ -57,9 +57,9 @@ class OpenImmoService
         return $this->serializer->serialize($object, 'xml');
     }
 
-    public function deserializeObjectFromJson(string $object, string $classFqn = OpenImmo::class): mixed
+    public function deserializeObjectFromJson(string $json, string $classFqn = OpenImmo::class): mixed
     {
-        return $this->jsonSerializer->deserialize($object, $classFqn, 'json');
+        return $this->jsonSerializer->deserialize($json, $classFqn, 'json');
     }
 
     public function serializeObjectIntoJson(mixed $object): string

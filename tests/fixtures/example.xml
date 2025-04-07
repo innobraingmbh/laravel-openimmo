@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openimmo>
+  <anbieter>
+    <firma><![CDATA[]]></firma>
+    <openimmo_anid><![CDATA[]]></openimmo_anid>
+    <immobilie>
+      <geo>
+        <plz><![CDATA[97084]]></plz>
+        <ort><![CDATA[Heidingsfeld, Heidingsfeld]]></ort>
+        <strasse><![CDATA[]]></strasse>
+        <hausnummer><![CDATA[]]></hausnummer>
+      </geo>
+      <preise>
+        <kaltmiete>940.0</kaltmiete>
+        <nebenkosten>322.0</nebenkosten>
+        <heizkosten_enthalten>true</heizkosten_enthalten>
+      </preise>
+      <flaechen>
+        <wohnflaeche>72.3</wohnflaeche>
+        <anzahl_zimmer>2.0</anzahl_zimmer>
+      </flaechen>
+      <ausstattung>
+        <ausstatt_kategorie><![CDATA[]]></ausstatt_kategorie>
+        <heizungsart FUSSBODEN="true"/>
+        <befeuerung LUFTWP="true"/>
+        <fahrstuhl PERSONEN="true"/>
+        <wasch_trockenraum>true</wasch_trockenraum>
+        <unterkellert keller="TEIL"/>
+      </ausstattung>
+      <freitexte>
+        <objekttitel><![CDATA[Reinkommen, wohlfühlen, losleben!]]></objekttitel>
+        <lage><![CDATA[Heidingsfeld war von 1367 bis 1929 eine eigenständige Stadt und wurde am 1. Januar 1930 auf Wunsch der Bürger nach Würzburg eingemeindet. Daher leitet sich die heutige umgangssprachliche Bezeichnung "Städtle" (für den Heidingsfelder Altort) ab, da Heidingsfeld quasi eine kleine Stadt in der großen Stadt Würzburg darstellt.<br>Heidingsfeld, besitzt heute eine attraktive Lage , sowohl für Familien, Studenten und Senioren, wie auch für Gewerbetreibende.<br>Bus- und Straßenbahnanschluss, Nahversorger, Ärzte, Restaurants und ein vielfältiges Sportangebot befinden sich in der direkten Nachbarschaft. Gleichzeitig finden Sie eine sehr grüne und naturbelassene Umgebung vor, welche zu ausgedehnten Spaziergängen und anderen Freizeitaktivitäten in der Natur einlädt. Das macht die Katzenberg Terrassen so charmant und attraktiv.]]></lage>
+        <sonstige_angaben><![CDATA[Sonstiges
+Da der Versand des Exposés automatisch erfolgt, werden Nachrichten im Bemerkungsfeld nicht gelesen.<br><br>Bitte fordern Sie zunächst über das Feld "Anbieter kontaktieren" das Exposé bei uns an. Falls Sie danach weitere Fragen zur Immobilie haben, rufen Sie uns gerne unter 0931-304998888 an oder schreiben Sie uns eine E-Mail an info@vr-ism.de
+
+Stichworte
+Bundesland: Bayern]]></sonstige_angaben>
+        <objekt_text lang=""><![CDATA[Diese Wohnung beeindruckt mit ihrem großzügigen Grundriss, der eine angenehme Wohnatmosphäre schafft und viel Platz für Ihre individuellen Wünsche bietet.<br><br>Die Zwei-Zimmer-Wohnung erstreckt sich über ca. 72 Quadratmeter und ist bequem mit dem Aufzug erreichbar. Das lichtdurchflutete Wohnzimmer überzeugt mit großen Fensterflächen, die reichlich Tageslicht einlassen und den Parkettboden zum Strahlen bringen. Hier finden sowohl eine gemütliche Sofaecke als auch ein großzügiger Esstisch ihren Platz - ideal für entspannte Abende und gesellige Dinner.<br><br>Die Küche ist offen gestaltet und bietet ausreichend Platz für eine großzügige Küchenzeile. Zudem bietet sie Zugang zu einer praktischen Abstellkammer, die zusätzlichen Stauraum bereitstellt.<br><br>Das Schlafzimmer ist funktional geschnitten und bietet Platz für Ihre Einrichtungsideen. Das moderne Badezimmer ist mit einer Dusche ausgestattet. <br><br>Zur Wohnung gehört außerdem ein eigenes Kellerabteil, und ein separater Waschmaschinenraum steht den Mietern des Hauses zur Verfügung. Für Ihr Fahrzeug ist ein Tiefgaragenstellplatz reserviert.<br><br>Auf dem Grundstück finden Sie einen zentralen Aufenthaltsbereich mit Sitzgelegenheiten sowie einen Spielplatz für Kinder. Während die Kleinen dort spielen, können Sie den Abend entspannt auf Ihrem Balkon ausklingen lassen.<br><br>Die Wohnungsbilder dienen als Referenz und zeigen die Wohnung im leerstehenden Zustand.]]></objekt_text>
+      </freitexte>
+      <anhaenge>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[Wohn- und Essbereich]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/d/4/9/1/d4914757-64f5-445f-bacf-6864049ee582.jpg?ci_seal=2160fcbf17847c3246e63bd5556372126c89dec7]]></pfad>
+          </daten>
+        </anhang>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[Balkon]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/3/0/a/5/30a50499-0b6b-4540-aa5b-21577d671480.jpg?ci_seal=81928e8421ced2471125320ee522faf4e2897c91]]></pfad>
+          </daten>
+        </anhang>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[Wohnzimmer]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/4/5/1/0/4510056d-1260-4e83-a8e6-85880a356eb7.jpg?ci_seal=37ed5cd7915f743bc3c17ef427f115e5b707ec14]]></pfad>
+          </daten>
+        </anhang>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[offene Küche]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/1/2/9/0/12905bcd-c91a-4a76-add1-1cf2532a35f0.jpg?ci_seal=5d4e019c3089ea2d9d369949e3c907e2a2b3ded6]]></pfad>
+          </daten>
+        </anhang>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[Schlafzimmer]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/2/d/8/d/2d8d9766-30f6-4370-ac0c-2c9af3ea4682.jpg?ci_seal=6e35e944f6124a6a4edda253cbcfbd4bf6d4ff83]]></pfad>
+          </daten>
+        </anhang>
+        <anhang location="" gruppe="">
+          <anhangtitel><![CDATA[Bad mit Dusche]]></anhangtitel>
+          <format><![CDATA[]]></format>
+          <daten>
+            <pfad><![CDATA[https://mms.immowelt.de/4/e/7/2/4e72cf28-7724-4ff0-8546-f9f48f41f1cc.jpg?ci_seal=772a6891638395c5712d512fb9adf8d7d5d00567]]></pfad>
+          </daten>
+        </anhang>
+      </anhaenge>
+      <verwaltung_techn>
+        <objektnr_extern><![CDATA[8333]]></objektnr_extern>
+        <openimmo_obid><![CDATA[]]></openimmo_obid>
+        <kennung_ursprung><![CDATA[immowelt]]></kennung_ursprung>
+        <stand_vom>2025-04-01</stand_vom>
+        <sprache><![CDATA[de-DE]]></sprache>
+      </verwaltung_techn>
+    </immobilie>
+  </anbieter>
+</openimmo>
