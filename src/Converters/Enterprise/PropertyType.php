@@ -30,57 +30,57 @@ trait PropertyType
             $category = 'zimmer';
         } elseif ($apartments = $propertyType->getApartment()) {
             $type = 'wohnung';
-            /** @var Apartment $apartment */
+            /** @var Apartment|null $apartment */
             $apartment = data_get($apartments, 0);
             $category = $apartment?->getApartmentType();
         } elseif ($houses = $propertyType->getHouse()) {
             $type = 'haus';
-            /** @var House $house */
+            /** @var House|null $house */
             $house = data_get($houses, 0);
             $category = $house?->getHouseType();
         } elseif ($plots = $propertyType->getPlot()) {
             $type = 'grundstueck';
-            /** @var Plot $plot */
+            /** @var Plot|null $plot */
             $plot = data_get($plots, 0);
             $category = $plot?->getPlotType();
         } elseif ($officePractices = $propertyType->getOfficesPractices()) {
             $type = 'buero_praxen';
-            /** @var OfficePractices $officePractice */
+            /** @var OfficePractices|null $officePractice */
             $officePractice = data_get($officePractices, 0);
             $category = $officePractice?->getOfficeType();
         } elseif ($retails = $propertyType->getRetail()) {
             $type = 'einzelhandel';
-            /** @var Retail $retail */
+            /** @var Retail|null $retail */
             $retail = data_get($retails, 0);
             $category = $retail?->getTradeType();
         } elseif ($hospitalities = $propertyType->getHospitality()) {
             $type = 'gastgewerbe';
-            /** @var Hospitality $hospitality */
+            /** @var Hospitality|null $hospitality */
             $hospitality = data_get($hospitalities, 0);
             $category = $hospitality?->getHospitalityType();
         } elseif ($hallsStorageProduction = $propertyType->getHallsStorageProduction()) {
             $type = 'hallen_lager_prod';
-            /** @var HallsStorageProduction $hallStorageProduction */
+            /** @var HallsStorageProduction|null $hallStorageProduction */
             $hallStorageProduction = data_get($hallsStorageProduction, 0);
             $category = $hallStorageProduction?->getHallType();
         } elseif ($agricultureAndForestrys = $propertyType->getAgricultureAndForestry()) {
             $type = 'land_und_forstwirtschaft';
-            /** @var AgricultureAndForestry $agricultureAndForestry */
+            /** @var AgricultureAndForestry|null $agricultureAndForestry */
             $agricultureAndForestry = data_get($agricultureAndForestrys, 0);
             $category = $agricultureAndForestry?->getCountryType();
         } elseif ($parkings = $propertyType->getParking()) {
             $type = 'parken';
-            /** @var Parking $parking */
+            /** @var Parking|null $parking */
             $parking = data_get($parkings, 0);
             $category = $parking?->getParkingType();
         } elseif ($commercialLeisurePropertys = $propertyType->getCommercialLeisureProperty()) {
             $type = 'freizeitimmobilie_gewerblich';
-            /** @var CommercialLeisureProperty $commercialLeisureProperty */
+            /** @var CommercialLeisureProperty|null $commercialLeisureProperty */
             $commercialLeisureProperty = data_get($commercialLeisurePropertys, 0);
             $category = $commercialLeisureProperty?->getLeisureType();
         } elseif ($apartmentBuildingInvestmentPropertys = $propertyType->getApartmentBuildingInvestmentProperty()) {
             $type = 'zinshaus_renditeobjekt';
-            /** @var ApartmentBuildingInvestmentProperty $apartmentBuildingInvestmentProperty */
+            /** @var ApartmentBuildingInvestmentProperty|null $apartmentBuildingInvestmentProperty */
             $apartmentBuildingInvestmentProperty = data_get($apartmentBuildingInvestmentPropertys, 0);
             $category = $apartmentBuildingInvestmentProperty?->getInterestType();
         }

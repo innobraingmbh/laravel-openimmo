@@ -11,7 +11,7 @@ trait Prices
         $prices = getPrices($this->openImmo);
 
         $result = [
-            'kaufpreis' => $this->parseFloat($prices->getPurchasePrice()),
+            'kaufpreis' => $this->parseFloat($prices->getPurchasePrice()?->getValue()),
             'kaltmiete' => $this->parseFloat($prices->getColdRent()),
             'heizkosten' => $this->parseFloat($prices->getHeatingCosts()),
             'waehrung' => $prices->getCurrency()?->getIsoCurrency(),

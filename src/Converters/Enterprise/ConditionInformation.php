@@ -26,7 +26,7 @@ trait ConditionInformation
         }
 
         $energyPasses = $conditionInformation->getEnergyCertificate();
-        /** @var EnergyPerformanceCertificate $energyPass */
+        /** @var EnergyPerformanceCertificate|null $energyPass */
         $energyPass = data_get($energyPasses, 0);
         if ($energyPass) {
             $result['energieausweis_gueltig_bis'] = $energyPass->getValidUntil();

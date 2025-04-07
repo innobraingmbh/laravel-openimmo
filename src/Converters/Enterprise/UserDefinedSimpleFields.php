@@ -17,6 +17,7 @@ trait UserDefinedSimpleFields
         foreach ($fields as $field) {
             match ($field->getFieldName()) {
                 'anzahl_garagen' => $result['anzahl_garagen'] = $field->getValue(),
+                default => null,
             };
         }
 
