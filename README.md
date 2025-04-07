@@ -33,8 +33,8 @@ return [
 ## Usage
 
 ```php
-    $xml = File::get(__DIR__.'/../fixtures/example.xml');
-    $openImmo = OpenImmoService::deserializeObjectFromXml($xml);
+$xml = File::get(__DIR__.'/../fixtures/example.xml');
+$openImmo = OpenImmoService::deserializeObjectFromXml($xml);
 ```
 
 ## Testing
