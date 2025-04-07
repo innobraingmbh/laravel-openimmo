@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Handler;
+namespace Innobrain\OpenImmo\Handler;
 
 use DateTime;
 use DOMText;

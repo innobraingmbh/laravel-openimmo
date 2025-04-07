@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
 use GoetasWebservices\XML\XSDReader\Exception\IOException;
 use GoetasWebservices\XML\XSDReader\Schema\Attribute\Attribute;
@@ -20,6 +20,10 @@ use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexTypeSimpleContent;
 use GoetasWebservices\XML\XSDReader\Schema\Type\SimpleType;
 use GoetasWebservices\XML\XSDReader\SchemaReader;
 use Illuminate\Support\Facades\File;
+use Innobrain\OpenImmo\Facades\CodeGenUtil;
+use Innobrain\OpenImmo\Facades\HelperGenUtil;
+use Innobrain\OpenImmo\Facades\TranslationService;
+use Innobrain\OpenImmo\Facades\TypeUtil;
 use InvalidArgumentException;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
@@ -28,10 +32,6 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
 use JMS\Serializer\Annotation\XmlList;
 use JMS\Serializer\Annotation\XmlRoot;
-use Katalam\OpenImmo\Facades\CodeGenUtil;
-use Katalam\OpenImmo\Facades\HelperGenUtil;
-use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Facades\TypeUtil;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\PhpNamespace;
@@ -40,7 +40,7 @@ use Nette\PhpGenerator\Visibility;
 
 class DtoGenerator
 {
-    public const string NAMESPACE = 'Katalam\\OpenImmo\\Dtos';
+    public const string NAMESPACE = 'Innobrain\\OpenImmo\\Dtos';
 
     protected string $targetFolder = './src/Dtos/';
 

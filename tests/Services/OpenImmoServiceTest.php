@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
+use Innobrain\OpenImmo\Services\OpenImmoService;
 use JMS\Serializer\Serializer;
-use Katalam\OpenImmo\Services\OpenImmoService;
 use Symfony\Component\Serializer\Serializer as JsonSerializer;
 
 test('correct construct', function () {

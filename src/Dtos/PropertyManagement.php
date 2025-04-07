@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
 use JMS\Serializer\Annotation\SerializedName;
@@ -44,13 +44,13 @@ class PropertyManagement
          */
         protected ?DateTime $toDate = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\MinRentalPeriod")
+         * @Type("Innobrain\OpenImmo\Dtos\MinRentalPeriod")
          *
          * @SerializedName("min_mietdauer")
          */
         protected ?MinRentalPeriod $minRentalPeriod = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\MaxRentalPeriod")
+         * @Type("Innobrain\OpenImmo\Dtos\MaxRentalPeriod")
          *
          * @SerializedName("max_mietdauer")
          */
@@ -111,7 +111,7 @@ class PropertyManagement
          */
         protected ?bool $pets = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Gender")
+         * @Type("Innobrain\OpenImmo\Dtos\Gender")
          *
          * @SerializedName("geschlecht")
          */
@@ -149,7 +149,7 @@ class PropertyManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -159,7 +159,7 @@ class PropertyManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -169,7 +169,7 @@ class PropertyManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

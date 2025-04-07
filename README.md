@@ -1,9 +1,9 @@
 # This is my package laravel-openimmo
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/katalam/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/katalam/laravel-openimmo)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions/workflows/tests.yml?query=branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/katalam/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/katalam/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/katalam/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/katalam/laravel-openimmo)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/innobrainbmgh/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/innobrainbmgh/laravel-openimmo/actions/workflows/tests.yml?query=branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/innobrainbmgh/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
 
 This package is a fork from the initial work [ujamii/openimmo](https://github.com/ujamii/openimmo)
 The package aims to provide a better integration in Laravel and to provide a more modern codebase.
@@ -14,7 +14,7 @@ Also the package aimed to translate all german to english translations and to pr
 You can install the package via composer:
 
 ```bash
-composer require katalam/laravel-openimmo
+composer require innobrain/laravel-openimmo
 ```
 
 You can publish the config file with:
@@ -33,8 +33,8 @@ return [
 ## Usage
 
 ```php
-$laravelOpenimmo = new Katalam\LaravelOpenimmo();
-echo $laravelOpenimmo->echoPhrase('Hello, Katalam!');
+    $xml = File::get(__DIR__.'/../fixtures/example.xml');
+    $openImmo = OpenImmoService::deserializeObjectFromXml($xml);
 ```
 
 ## Testing
@@ -58,7 +58,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [Michael Grundkötter](https://github.com/mgrundkoetter)
-- [Bruno Görß](https://github.com/Katalam)
+- [Bruno Görß](https://github.com/Innobrain)
 - [All Contributors](../../contributors)
 
 ## License

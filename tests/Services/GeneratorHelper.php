@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Tests\Services;
+namespace Innobrain\OpenImmo\Tests\Services;
 
 use Illuminate\Support\Facades\Storage;
-use Katalam\OpenImmo\Facades\TypeUtil;
-use Katalam\OpenImmo\Services\DtoGenerator;
+use Innobrain\OpenImmo\Facades\TypeUtil;
+use Innobrain\OpenImmo\Services\DtoGenerator;
 use Nette\PhpGenerator\ClassType;
 use ReflectionClass;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Services\DtoGenerator;
-use Katalam\OpenImmo\Tests\TestCase;
+use Innobrain\OpenImmo\Facades\TranslationService;
+use Innobrain\OpenImmo\Services\DtoGenerator;
+use Innobrain\OpenImmo\Tests\TestCase;
 
 test('generate type with restrictions', function () {
     TranslationService::addFakeClass('TypeWithRestrictions');

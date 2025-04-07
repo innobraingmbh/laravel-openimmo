@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -55,7 +55,7 @@ class FreeTexts
          */
         protected ?string $otherInformation = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PropertyText")
+         * @Type("Innobrain\OpenImmo\Dtos\PropertyText")
          *
          * @SerializedName("objekt_text")
          */
@@ -63,7 +63,7 @@ class FreeTexts
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -73,7 +73,7 @@ class FreeTexts
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -83,7 +83,7 @@ class FreeTexts
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

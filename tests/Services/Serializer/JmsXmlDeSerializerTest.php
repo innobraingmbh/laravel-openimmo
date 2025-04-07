@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use Katalam\OpenImmo\Dtos\Apartment;
-use Katalam\OpenImmo\Dtos\Attachment;
-use Katalam\OpenImmo\Dtos\Evaluation;
-use Katalam\OpenImmo\Dtos\ExternalCommission;
-use Katalam\OpenImmo\Dtos\Geo;
-use Katalam\OpenImmo\Dtos\OpenImmo;
-use Katalam\OpenImmo\Dtos\OtherEmail;
-use Katalam\OpenImmo\Dtos\Photo;
-use Katalam\OpenImmo\Dtos\PropertyCategory;
-use Katalam\OpenImmo\Dtos\RealEstate;
-use Katalam\OpenImmo\Dtos\Rooms;
-use Katalam\OpenImmo\Dtos\Transfer;
-use Katalam\OpenImmo\Facades\OpenImmoService;
+use Innobrain\OpenImmo\Dtos\Apartment;
+use Innobrain\OpenImmo\Dtos\Attachment;
+use Innobrain\OpenImmo\Dtos\Evaluation;
+use Innobrain\OpenImmo\Dtos\ExternalCommission;
+use Innobrain\OpenImmo\Dtos\Geo;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\OtherEmail;
+use Innobrain\OpenImmo\Dtos\Photo;
+use Innobrain\OpenImmo\Dtos\PropertyCategory;
+use Innobrain\OpenImmo\Dtos\RealEstate;
+use Innobrain\OpenImmo\Dtos\Rooms;
+use Innobrain\OpenImmo\Dtos\Transfer;
+use Innobrain\OpenImmo\Facades\OpenImmoService;
 
 test('read xml', function () {
     $file = Storage::get('OpenImmo/openimmo-data_127.xml');

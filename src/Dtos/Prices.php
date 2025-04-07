@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
 use JMS\Serializer\Annotation\SerializedName;
@@ -20,13 +20,13 @@ class Prices
 {
     public function __construct(
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PurchasePrice")
+         * @Type("Innobrain\OpenImmo\Dtos\PurchasePrice")
          *
          * @SerializedName("kaufpreis")
          */
         protected ?PurchasePrice $purchasePrice = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetPurchasePrice")
+         * @Type("Innobrain\OpenImmo\Dtos\NetPurchasePrice")
          *
          * @SerializedName("kaufpreisnetto")
          */
@@ -86,7 +86,7 @@ class Prices
          */
         protected ?float $rentSurcharges = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetMainRent")
+         * @Type("Innobrain\OpenImmo\Dtos\NetMainRent")
          *
          * @SerializedName("hauptmietzinsnetto")
          */
@@ -98,19 +98,19 @@ class Prices
          */
         protected ?float $flatRent = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetOperatingCosts")
+         * @Type("Innobrain\OpenImmo\Dtos\NetOperatingCosts")
          *
          * @SerializedName("betriebskostennetto")
          */
         protected ?NetOperatingCosts $netOperatingCosts = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetEVB")
+         * @Type("Innobrain\OpenImmo\Dtos\NetEVB")
          *
          * @SerializedName("evbnetto")
          */
         protected ?NetEVB $netUnitValue = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetTotalRent")
+         * @Type("Innobrain\OpenImmo\Dtos\NetTotalRent")
          *
          * @SerializedName("gesamtmietenetto")
          */
@@ -122,7 +122,7 @@ class Prices
          */
         protected ?float $totalRentGross = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetTotalCost")
+         * @Type("Innobrain\OpenImmo\Dtos\NetTotalCost")
          *
          * @SerializedName("gesamtbelastungnetto")
          */
@@ -134,19 +134,19 @@ class Prices
          */
         protected ?float $totalCostGross = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\TotalCostsPerSqmFrom")
+         * @Type("Innobrain\OpenImmo\Dtos\TotalCostsPerSqmFrom")
          *
          * @SerializedName("gesamtkostenprom2von")
          */
         protected ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetHeatingCosts")
+         * @Type("Innobrain\OpenImmo\Dtos\NetHeatingCosts")
          *
          * @SerializedName("heizkostennetto")
          */
         protected ?NetHeatingCosts $netHeatingCosts = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetMonthlyCosts")
+         * @Type("Innobrain\OpenImmo\Dtos\NetMonthlyCosts")
          *
          * @SerializedName("monatlichekostennetto")
          */
@@ -158,31 +158,31 @@ class Prices
          */
         protected ?float $monthlyCostsGross = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\AdditionalCostsPerSqmFrom")
+         * @Type("Innobrain\OpenImmo\Dtos\AdditionalCostsPerSqmFrom")
          *
          * @SerializedName("nebenkostenprom2von")
          */
         protected ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetReserves")
+         * @Type("Innobrain\OpenImmo\Dtos\NetReserves")
          *
          * @SerializedName("ruecklagenetto")
          */
         protected ?NetReserves $reservesNet = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetOtherCosts")
+         * @Type("Innobrain\OpenImmo\Dtos\NetOtherCosts")
          *
          * @SerializedName("sonstigekostennetto")
          */
         protected ?NetOtherCosts $otherCostsNet = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetOtherRent")
+         * @Type("Innobrain\OpenImmo\Dtos\NetOtherRent")
          *
          * @SerializedName("sonstigemietenetto")
          */
         protected ?NetOtherRent $otherRentNet = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetRentPerSqmFrom")
+         * @Type("Innobrain\OpenImmo\Dtos\NetRentPerSqmFrom")
          *
          * @SerializedName("nettomieteprom2von")
          */
@@ -224,7 +224,7 @@ class Prices
          */
         protected ?DateTime $priceTimeRangeTo = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PriceTimeUnit")
+         * @Type("Innobrain\OpenImmo\Dtos\PriceTimeUnit")
          *
          * @SerializedName("preis_zeiteinheit")
          */
@@ -248,19 +248,19 @@ class Prices
          */
         protected ?bool $commissionRequired = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\CommissionSplit")
+         * @Type("Innobrain\OpenImmo\Dtos\CommissionSplit")
          *
          * @SerializedName("provision_teilen")
          */
         protected ?CommissionSplit $commissionSplit = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\InternalCommission")
+         * @Type("Innobrain\OpenImmo\Dtos\InternalCommission")
          *
          * @SerializedName("innen_courtage")
          */
         protected ?InternalCommission $internalCommission = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ExternalCommission")
+         * @Type("Innobrain\OpenImmo\Dtos\ExternalCommission")
          *
          * @SerializedName("aussen_courtage")
          */
@@ -272,7 +272,7 @@ class Prices
          */
         protected ?string $commissionNote = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\NetCommission")
+         * @Type("Innobrain\OpenImmo\Dtos\NetCommission")
          *
          * @SerializedName("provisionnetto")
          */
@@ -284,7 +284,7 @@ class Prices
          */
         protected ?float $commissionGross = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Currency")
+         * @Type("Innobrain\OpenImmo\Dtos\Currency")
          *
          * @SerializedName("waehrung")
          */
@@ -336,13 +336,13 @@ class Prices
          */
         protected ?float $actualNetYield = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ActualRentalIncome")
+         * @Type("Innobrain\OpenImmo\Dtos\ActualRentalIncome")
          *
          * @SerializedName("mieteinnahmen_ist")
          */
         protected ?ActualRentalIncome $actualRentalIncome = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\TargetRentalIncome")
+         * @Type("Innobrain\OpenImmo\Dtos\TargetRentalIncome")
          *
          * @SerializedName("mieteinnahmen_soll")
          */
@@ -372,37 +372,37 @@ class Prices
          */
         protected ?float $businessAssets = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingCarport")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingCarport")
          *
          * @SerializedName("stp_carport")
          */
         protected ?ParkingCarport $parkingCarport = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingDuplex")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingDuplex")
          *
          * @SerializedName("stp_duplex")
          */
         protected ?ParkingDuplex $parkingDuplex = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingOutdoor")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingOutdoor")
          *
          * @SerializedName("stp_freiplatz")
          */
         protected ?ParkingOutdoor $parkingOutdoor = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingGarage")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingGarage")
          *
          * @SerializedName("stp_garage")
          */
         protected ?ParkingGarage $parkingGarage = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingMultiStorey")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingMultiStorey")
          *
          * @SerializedName("stp_parkhaus")
          */
         protected ?ParkingMultiStorey $parkingMultiStorey = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ParkingUnderground")
+         * @Type("Innobrain\OpenImmo\Dtos\ParkingUnderground")
          *
          * @SerializedName("stp_tiefgarage")
          */
@@ -410,7 +410,7 @@ class Prices
         /**
          * @XmlList(inline = true, entry = "stp_sonstige")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\ParkingOther>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\ParkingOther>")
          *
          * @SkipWhenEmpty
          *
@@ -432,7 +432,7 @@ class Prices
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -442,7 +442,7 @@ class Prices
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -452,7 +452,7 @@ class Prices
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

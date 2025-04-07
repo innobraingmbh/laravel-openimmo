@@ -1,12 +1,12 @@
 {
-    "name": "katalam/laravel-openimmo",
+    "name": "innobrain/laravel-openimmo",
     "description": "This is my package laravel-openimmo",
     "keywords": [
-        "Katalam",
+        "Innobrain",
         "laravel",
         "laravel-openimmo"
     ],
-    "homepage": "https://github.com/katalam/laravel-openimmo",
+    "homepage": "https://github.com/innobrain/laravel-openimmo",
     "license": "MIT",
     "authors": [
         {
@@ -48,7 +48,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Katalam\\OpenImmo\\": "src/"
+            "Innobrain\\OpenImmo\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -56,7 +56,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Katalam\\OpenImmo\\Tests\\": "tests/",
+            "Innobrain\\OpenImmo\\Tests\\": "tests/",
             "Workbench\\App\\": "skeleton/app/"
         }
     },
@@ -90,10 +90,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Katalam\\OpenImmo\\OpenImmoServiceProvider"
+                "Innobrain\\OpenImmo\\OpenImmoServiceProvider"
             ],
             "aliases": {
-                "LaravelOpenimmo": "Katalam\\OpenImmo\\Facades\\LaravelOpenimmo"
+                "LaravelOpenimmo": "Innobrain\\OpenImmo\\Facades\\LaravelOpenimmo"
             }
         }
     },

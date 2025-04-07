@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Facades;
+namespace Innobrain\OpenImmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Katalam\OpenImmo\Services\HelperGenUtil
+ * @see \Innobrain\OpenImmo\Services\HelperGenUtil
  *
  * @method static void generate()
  */
@@ -15,6 +15,6 @@ class HelperGenUtil extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Katalam\OpenImmo\Services\HelperGenUtil::class;
+        return \Innobrain\OpenImmo\Services\HelperGenUtil::class;
     }
 }

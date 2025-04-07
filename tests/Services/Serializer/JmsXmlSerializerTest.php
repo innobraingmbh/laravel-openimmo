@@ -3,24 +3,24 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Katalam\OpenImmo\Dtos\Apartment;
-use Katalam\OpenImmo\Dtos\ContactPerson;
-use Katalam\OpenImmo\Dtos\Distances;
-use Katalam\OpenImmo\Dtos\Evaluation;
-use Katalam\OpenImmo\Dtos\ExternalCommission;
-use Katalam\OpenImmo\Dtos\Field;
-use Katalam\OpenImmo\Dtos\Infrastructure;
-use Katalam\OpenImmo\Dtos\MarketingType;
-use Katalam\OpenImmo\Dtos\OpenImmo;
-use Katalam\OpenImmo\Dtos\PropertyCategory;
-use Katalam\OpenImmo\Dtos\PropertyType;
-use Katalam\OpenImmo\Dtos\Provider;
-use Katalam\OpenImmo\Dtos\RealEstate;
-use Katalam\OpenImmo\Dtos\SportDistances;
-use Katalam\OpenImmo\Dtos\Transfer;
-use Katalam\OpenImmo\Dtos\TypeOfUse;
-use Katalam\OpenImmo\Dtos\View;
-use Katalam\OpenImmo\Facades\OpenImmoService;
+use Innobrain\OpenImmo\Dtos\Apartment;
+use Innobrain\OpenImmo\Dtos\ContactPerson;
+use Innobrain\OpenImmo\Dtos\Distances;
+use Innobrain\OpenImmo\Dtos\Evaluation;
+use Innobrain\OpenImmo\Dtos\ExternalCommission;
+use Innobrain\OpenImmo\Dtos\Field;
+use Innobrain\OpenImmo\Dtos\Infrastructure;
+use Innobrain\OpenImmo\Dtos\MarketingType;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\PropertyCategory;
+use Innobrain\OpenImmo\Dtos\PropertyType;
+use Innobrain\OpenImmo\Dtos\Provider;
+use Innobrain\OpenImmo\Dtos\RealEstate;
+use Innobrain\OpenImmo\Dtos\SportDistances;
+use Innobrain\OpenImmo\Dtos\Transfer;
+use Innobrain\OpenImmo\Dtos\TypeOfUse;
+use Innobrain\OpenImmo\Dtos\View;
+use Innobrain\OpenImmo\Facades\OpenImmoService;
 
 use function PHPUnit\Framework\assertXmlStringEqualsXmlString;
 

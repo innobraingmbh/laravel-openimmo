@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Console\Commands;
+namespace Innobrain\OpenImmo\Console\Commands;
 
 use GoetasWebservices\XML\XSDReader\Exception\IOException;
 use Illuminate\Console\Command;
-use Katalam\OpenImmo\Services\DtoGenerator;
+use Innobrain\OpenImmo\Services\DtoGenerator;
 
 class Generate extends Command
 {

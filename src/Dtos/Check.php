@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
 use JMS\Serializer\Annotation\Inline;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Enterprise;
+namespace Innobrain\OpenImmo\Converters\Enterprise;
 
-use Katalam\OpenImmo\Dtos\UserDefinedSimplefield;
+use Innobrain\OpenImmo\Dtos\UserDefinedSimplefield;
 
 trait Provision
 {

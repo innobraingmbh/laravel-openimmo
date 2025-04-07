@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+use Innobrain\OpenImmo\Facades\TranslationService;
+use Innobrain\OpenImmo\Tests\TestCase;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
-use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Tests\TestCase;
 
 test('generate api class complex mixed type', function () {
     TranslationService::addFakeClass('ComplexMixedType');

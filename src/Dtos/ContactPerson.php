@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -153,7 +153,7 @@ class ContactPerson
          */
         protected ?string $poBoxCity = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Country")
+         * @Type("Innobrain\OpenImmo\Dtos\Country")
          *
          * @SerializedName("land")
          */
@@ -168,7 +168,7 @@ class ContactPerson
         /**
          * @XmlList(inline = true, entry = "email_sonstige")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\OtherEmail>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\OtherEmail>")
          *
          * @SkipWhenEmpty
          *
@@ -192,7 +192,7 @@ class ContactPerson
         /**
          * @XmlList(inline = true, entry = "tel_sonstige")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\OtherPhone>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\OtherPhone>")
          *
          * @SkipWhenEmpty
          *
@@ -224,7 +224,7 @@ class ContactPerson
          */
         protected ?string $propertyTrusteeId = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Photo")
+         * @Type("Innobrain\OpenImmo\Dtos\Photo")
          *
          * @SerializedName("foto")
          */
@@ -244,7 +244,7 @@ class ContactPerson
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -254,7 +254,7 @@ class ContactPerson
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -264,7 +264,7 @@ class ContactPerson
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -19,19 +19,19 @@ class PropertyCategory
 {
     public function __construct(
         /**
-         * @Type("Katalam\OpenImmo\Dtos\TypeOfUse")
+         * @Type("Innobrain\OpenImmo\Dtos\TypeOfUse")
          *
          * @SerializedName("nutzungsart")
          */
         protected ?TypeOfUse $typeOfUse = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\MarketingType")
+         * @Type("Innobrain\OpenImmo\Dtos\MarketingType")
          *
          * @SerializedName("vermarktungsart")
          */
         protected ?MarketingType $marketingType = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PropertyType")
+         * @Type("Innobrain\OpenImmo\Dtos\PropertyType")
          *
          * @SerializedName("objektart")
          */
@@ -39,7 +39,7 @@ class PropertyCategory
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -49,7 +49,7 @@ class PropertyCategory
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -59,7 +59,7 @@ class PropertyCategory
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

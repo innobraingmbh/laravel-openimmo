@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -48,7 +48,7 @@ class Provider
          */
         protected ?string $licenseIdentifier = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Attachment")
+         * @Type("Innobrain\OpenImmo\Dtos\Attachment")
          *
          * @SerializedName("anhang")
          */
@@ -56,7 +56,7 @@ class Provider
         /**
          * @XmlList(inline = true, entry = "immobilie")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\RealEstate>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\RealEstate>")
          *
          * @SkipWhenEmpty
          *
@@ -70,7 +70,7 @@ class Provider
          */
         protected ?string $imprint = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ImprintStructure")
+         * @Type("Innobrain\OpenImmo\Dtos\ImprintStructure")
          *
          * @SerializedName("impressum_strukt")
          */
@@ -78,7 +78,7 @@ class Provider
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -88,7 +88,7 @@ class Provider
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -98,7 +98,7 @@ class Provider
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Manager;
-use Katalam\OpenImmo\Converters\Concerns\ConverterInterface;
-use Katalam\OpenImmo\Converters\EnterpriseConverter;
-use Katalam\OpenImmo\Dtos\OpenImmo;
-use Katalam\OpenImmo\Enums\ConverterDriver;
+use Innobrain\OpenImmo\Converters\Concerns\ConverterInterface;
+use Innobrain\OpenImmo\Converters\EnterpriseConverter;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Enums\ConverterDriver;
 
 class FormatConverterService extends Manager implements ConverterInterface
 {

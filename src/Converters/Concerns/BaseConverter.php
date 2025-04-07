@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Concerns;
+namespace Innobrain\OpenImmo\Converters\Concerns;
 
-use Katalam\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
 
 class BaseConverter
 {

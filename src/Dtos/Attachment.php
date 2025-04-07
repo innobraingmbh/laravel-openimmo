@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -92,13 +92,13 @@ class Attachment
          */
         protected string $format = '',
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Check")
+         * @Type("Innobrain\OpenImmo\Dtos\Check")
          *
          * @SerializedName("check")
          */
         protected ?Check $check = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Data")
+         * @Type("Innobrain\OpenImmo\Dtos\Data")
          *
          * @SerializedName("daten")
          */

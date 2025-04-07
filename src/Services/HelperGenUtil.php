@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Facades\File;
-use Katalam\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Nette\PhpGenerator\PhpFile;
 use ReflectionClass;
 use ReflectionProperty;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -22,7 +22,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "zimmer")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Rooms>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Rooms>")
          *
          * @SkipWhenEmpty
          *
@@ -32,7 +32,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "wohnung")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Apartment>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Apartment>")
          *
          * @SkipWhenEmpty
          *
@@ -42,7 +42,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "haus")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\House>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\House>")
          *
          * @SkipWhenEmpty
          *
@@ -52,7 +52,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "grundstueck")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Plot>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Plot>")
          *
          * @SkipWhenEmpty
          *
@@ -62,7 +62,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "buero_praxen")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\OfficePractices>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\OfficePractices>")
          *
          * @SkipWhenEmpty
          *
@@ -72,7 +72,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "einzelhandel")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Retail>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Retail>")
          *
          * @SkipWhenEmpty
          *
@@ -82,7 +82,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "gastgewerbe")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Hospitality>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Hospitality>")
          *
          * @SkipWhenEmpty
          *
@@ -92,7 +92,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "hallen_lager_prod")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\HallsStorageProduction>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\HallsStorageProduction>")
          *
          * @SkipWhenEmpty
          *
@@ -102,7 +102,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "land_und_forstwirtschaft")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\AgricultureAndForestry>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\AgricultureAndForestry>")
          *
          * @SkipWhenEmpty
          *
@@ -112,7 +112,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "parken")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Parking>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Parking>")
          *
          * @SkipWhenEmpty
          *
@@ -122,7 +122,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "sonstige")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Other>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Other>")
          *
          * @SkipWhenEmpty
          *
@@ -132,7 +132,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "freizeitimmobilie_gewerblich")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\CommercialLeisureProperty>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\CommercialLeisureProperty>")
          *
          * @SkipWhenEmpty
          *
@@ -142,7 +142,7 @@ class PropertyType
         /**
          * @XmlList(inline = true, entry = "zinshaus_renditeobjekt")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>")
          *
          * @SkipWhenEmpty
          *

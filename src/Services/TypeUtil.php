@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
 use DateTime;
 use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexType;
 use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexTypeSimpleContent;
 use GoetasWebservices\XML\XSDReader\Schema\Type\Type;
-use Katalam\OpenImmo\Facades\CodeGenUtil;
+use Innobrain\OpenImmo\Facades\CodeGenUtil;
 use Nette\PhpGenerator\Property;
 
 class TypeUtil

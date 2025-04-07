@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Katalam\OpenImmo\Console\Commands\Generate;
+use Innobrain\OpenImmo\Console\Commands\Generate;
 
 use function Pest\Laravel\artisan;
 

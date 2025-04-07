@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Enterprise;
+namespace Innobrain\OpenImmo\Converters\Enterprise;
 
-use Katalam\OpenImmo\Dtos\AttachedGastronomy;
-use Katalam\OpenImmo\Dtos\Elevator;
-use Katalam\OpenImmo\Dtos\HeatingSystem;
-use Katalam\OpenImmo\Dtos\SecurityTechnology;
+use Innobrain\OpenImmo\Dtos\AttachedGastronomy;
+use Innobrain\OpenImmo\Dtos\Elevator;
+use Innobrain\OpenImmo\Dtos\HeatingSystem;
+use Innobrain\OpenImmo\Dtos\SecurityTechnology;
 
 trait Equipment
 {

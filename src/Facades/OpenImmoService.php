@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Facades;
+namespace Innobrain\OpenImmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
 use JMS\Serializer\Serializer;
-use Katalam\OpenImmo\Dtos\OpenImmo;
 use Symfony\Component\Serializer\Serializer as JsonSerializer;
 
 /**
- * @see \Katalam\OpenImmo\Services\OpenImmoService
+ * @see \Innobrain\OpenImmo\Services\OpenImmoService
  *
  * @method static Serializer getXmlSerializer()
  * @method static JsonSerializer getJsonSerializer()
@@ -23,6 +23,6 @@ class OpenImmoService extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Katalam\OpenImmo\Services\OpenImmoService::class;
+        return \Innobrain\OpenImmo\Services\OpenImmoService::class;
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -25,7 +25,7 @@ class Infrastructure
          */
         protected ?bool $supply = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\View")
+         * @Type("Innobrain\OpenImmo\Dtos\View")
          *
          * @SerializedName("ausblick")
          */
@@ -33,7 +33,7 @@ class Infrastructure
         /**
          * @XmlList(inline = true, entry = "distanzen")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Distances>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Distances>")
          *
          * @SkipWhenEmpty
          *
@@ -43,7 +43,7 @@ class Infrastructure
         /**
          * @XmlList(inline = true, entry = "distanzen_sport")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\SportDistances>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\SportDistances>")
          *
          * @SkipWhenEmpty
          *
@@ -53,7 +53,7 @@ class Infrastructure
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -63,7 +63,7 @@ class Infrastructure
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -73,7 +73,7 @@ class Infrastructure
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

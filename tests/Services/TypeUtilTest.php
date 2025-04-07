@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Facades\TypeUtil;
+use Innobrain\OpenImmo\Facades\TypeUtil;
 use Nette\PhpGenerator\Property;
 
 test('camelize', function (string $input, string $expected) {
@@ -52,8 +52,8 @@ test('type for serializer', function (string $xsdType, string $serializerType) {
     ['boolean[]', 'array<bool>'],
     ['decimal[]', 'array<float>'],
 
-    ['FooBarClassName', 'Katalam\\OpenImmo\\Dtos\\FooBarClassName'],
-    ['FooBarClassName[]', 'array<Katalam\\OpenImmo\\Dtos\\FooBarClassName>'],
+    ['FooBarClassName', 'Innobrain\\OpenImmo\\Dtos\\FooBarClassName'],
+    ['FooBarClassName[]', 'array<Innobrain\\OpenImmo\\Dtos\\FooBarClassName>'],
 ]);
 
 test('valid php type', function (string $xsdType, string $phpType) {
@@ -80,7 +80,7 @@ test('valid php type', function (string $xsdType, string $phpType) {
 
     ['array', 'array'],
 
-    ['FooBarClassName', '\\Katalam\\OpenImmo\\Dtos\\FooBarClassName'],
+    ['FooBarClassName', '\\Innobrain\\OpenImmo\\Dtos\\FooBarClassName'],
 ]);
 
 test('default value', function (string $propertyType, bool $nullable, mixed $defaultValue) {

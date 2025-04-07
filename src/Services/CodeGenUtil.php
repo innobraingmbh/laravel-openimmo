@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Property;

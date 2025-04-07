@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Facades;
+namespace Innobrain\OpenImmo\Facades;
 
 use GoetasWebservices\XML\XSDReader\Schema\Type\Type;
 use Illuminate\Support\Facades\Facade;
 use Nette\PhpGenerator\Property;
 
 /**
- * @see \Katalam\OpenImmo\Services\TypeUtil
+ * @see \Innobrain\OpenImmo\Services\TypeUtil
  *
  * @method static string getTypeForSerializer(string $type)
  * @method static string getValidPhpType(string $propertyType)
@@ -23,6 +23,6 @@ class TypeUtil extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Katalam\OpenImmo\Services\TypeUtil::class;
+        return \Innobrain\OpenImmo\Services\TypeUtil::class;
     }
 }

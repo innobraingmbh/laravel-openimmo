@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
 use JMS\Serializer\Annotation\SerializedName;
@@ -34,7 +34,7 @@ class TechnicalManagement
          */
         protected string $externalPropertyNumber = '',
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Action")
+         * @Type("Innobrain\OpenImmo\Dtos\Action")
          *
          * @SerializedName("aktion")
          */
@@ -96,7 +96,7 @@ class TechnicalManagement
          */
         protected ?string $groupIdentifier = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Master")
+         * @Type("Innobrain\OpenImmo\Dtos\Master")
          *
          * @SerializedName("master")
          */
@@ -110,7 +110,7 @@ class TechnicalManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -120,7 +120,7 @@ class TechnicalManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -130,7 +130,7 @@ class TechnicalManagement
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

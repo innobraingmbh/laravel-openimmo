@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -20,19 +20,19 @@ class RealEstate
 {
     public function __construct(
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PropertyCategory")
+         * @Type("Innobrain\OpenImmo\Dtos\PropertyCategory")
          *
          * @SerializedName("objektkategorie")
          */
         protected ?PropertyCategory $propertyCategory = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Geo")
+         * @Type("Innobrain\OpenImmo\Dtos\Geo")
          *
          * @SerializedName("geo")
          */
         protected ?Geo $geo = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ContactPerson")
+         * @Type("Innobrain\OpenImmo\Dtos\ContactPerson")
          *
          * @SerializedName("kontaktperson")
          */
@@ -40,7 +40,7 @@ class RealEstate
         /**
          * @XmlList(inline = true, entry = "weitere_adresse")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\AdditionalAddress>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\AdditionalAddress>")
          *
          * @SkipWhenEmpty
          *
@@ -48,73 +48,73 @@ class RealEstate
          */
         protected array $additionalAddress = [],
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Prices")
+         * @Type("Innobrain\OpenImmo\Dtos\Prices")
          *
          * @SerializedName("preise")
          */
         protected ?Prices $prices = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\BiddingProcess")
+         * @Type("Innobrain\OpenImmo\Dtos\BiddingProcess")
          *
          * @SerializedName("bieterverfahren")
          */
         protected ?BiddingProcess $biddingProcess = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Auction")
+         * @Type("Innobrain\OpenImmo\Dtos\Auction")
          *
          * @SerializedName("versteigerung")
          */
         protected ?Auction $auction = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Areas")
+         * @Type("Innobrain\OpenImmo\Dtos\Areas")
          *
          * @SerializedName("flaechen")
          */
         protected ?Areas $areas = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Equipment")
+         * @Type("Innobrain\OpenImmo\Dtos\Equipment")
          *
          * @SerializedName("ausstattung")
          */
         protected ?Equipment $equipment = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ConditionInformation")
+         * @Type("Innobrain\OpenImmo\Dtos\ConditionInformation")
          *
          * @SerializedName("zustand_angaben")
          */
         protected ?ConditionInformation $conditionInformation = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Evaluation")
+         * @Type("Innobrain\OpenImmo\Dtos\Evaluation")
          *
          * @SerializedName("bewertung")
          */
         protected ?Evaluation $evaluation = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Infrastructure")
+         * @Type("Innobrain\OpenImmo\Dtos\Infrastructure")
          *
          * @SerializedName("infrastruktur")
          */
         protected ?Infrastructure $infrastructure = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\FreeTexts")
+         * @Type("Innobrain\OpenImmo\Dtos\FreeTexts")
          *
          * @SerializedName("freitexte")
          */
         protected ?FreeTexts $freeTexts = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Attachments")
+         * @Type("Innobrain\OpenImmo\Dtos\Attachments")
          *
          * @SerializedName("anhaenge")
          */
         protected ?Attachments $attachments = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\PropertyManagement")
+         * @Type("Innobrain\OpenImmo\Dtos\PropertyManagement")
          *
          * @SerializedName("verwaltung_objekt")
          */
         protected ?PropertyManagement $propertyManagement = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\TechnicalManagement")
+         * @Type("Innobrain\OpenImmo\Dtos\TechnicalManagement")
          *
          * @SerializedName("verwaltung_techn")
          */
@@ -122,7 +122,7 @@ class RealEstate
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -132,7 +132,7 @@ class RealEstate
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -142,7 +142,7 @@ class RealEstate
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

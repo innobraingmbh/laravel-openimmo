@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Enterprise;
+namespace Innobrain\OpenImmo\Converters\Enterprise;
 
-use Katalam\OpenImmo\Dtos\AgricultureAndForestry;
-use Katalam\OpenImmo\Dtos\Apartment;
-use Katalam\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty;
-use Katalam\OpenImmo\Dtos\CommercialLeisureProperty;
-use Katalam\OpenImmo\Dtos\HallsStorageProduction;
-use Katalam\OpenImmo\Dtos\Hospitality;
-use Katalam\OpenImmo\Dtos\House;
-use Katalam\OpenImmo\Dtos\OfficePractices;
-use Katalam\OpenImmo\Dtos\Parking;
-use Katalam\OpenImmo\Dtos\Plot;
-use Katalam\OpenImmo\Dtos\Retail;
+use Innobrain\OpenImmo\Dtos\AgricultureAndForestry;
+use Innobrain\OpenImmo\Dtos\Apartment;
+use Innobrain\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty;
+use Innobrain\OpenImmo\Dtos\CommercialLeisureProperty;
+use Innobrain\OpenImmo\Dtos\HallsStorageProduction;
+use Innobrain\OpenImmo\Dtos\Hospitality;
+use Innobrain\OpenImmo\Dtos\House;
+use Innobrain\OpenImmo\Dtos\OfficePractices;
+use Innobrain\OpenImmo\Dtos\Parking;
+use Innobrain\OpenImmo\Dtos\Plot;
+use Innobrain\OpenImmo\Dtos\Retail;
 
 trait PropertyType
 {

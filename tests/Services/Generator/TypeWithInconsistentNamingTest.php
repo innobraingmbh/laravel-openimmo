@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use Innobrain\OpenImmo\Facades\TranslationService;
+use Innobrain\OpenImmo\Tests\TestCase;
 use JMS\Serializer\Annotation\SerializedName;
-use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Tests\TestCase;
 
 test('generate type with inconsistent naming', function () {
     TranslationService::addFakeClass('TypeWithInconsistentNaming');

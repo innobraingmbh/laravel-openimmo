@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Tests;
+namespace Innobrain\OpenImmo\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Katalam\OpenImmo\OpenImmoServiceProvider;
+use Innobrain\OpenImmo\OpenImmoServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 use function Orchestra\Testbench\package_path;
@@ -17,7 +17,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            static fn (string $modelName) => 'Katalam\\OpenImmo\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            static fn (string $modelName) => 'Innobrain\\OpenImmo\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

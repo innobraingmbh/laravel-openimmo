@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -21,7 +21,7 @@ class OpenImmo
 {
     public function __construct(
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Transfer")
+         * @Type("Innobrain\OpenImmo\Dtos\Transfer")
          *
          * @SerializedName("uebertragung")
          */
@@ -29,7 +29,7 @@ class OpenImmo
         /**
          * @XmlList(inline = true, entry = "anbieter")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Provider>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Provider>")
          *
          * @SkipWhenEmpty
          *
@@ -39,7 +39,7 @@ class OpenImmo
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -49,7 +49,7 @@ class OpenImmo
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *

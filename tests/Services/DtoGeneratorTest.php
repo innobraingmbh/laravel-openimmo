@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Katalam\OpenImmo\Services\DtoGenerator;
+use Innobrain\OpenImmo\Services\DtoGenerator;
 
 test('target folder', function () {
     $generator = new DtoGenerator;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -45,19 +45,19 @@ class Equipment
          */
         protected ?bool $roomsModifiable = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Bathroom")
+         * @Type("Innobrain\OpenImmo\Dtos\Bathroom")
          *
          * @SerializedName("bad")
          */
         protected ?Bathroom $bathroom = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Kitchen")
+         * @Type("Innobrain\OpenImmo\Dtos\Kitchen")
          *
          * @SerializedName("kueche")
          */
         protected ?Kitchen $kitchen = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Floor")
+         * @Type("Innobrain\OpenImmo\Dtos\Floor")
          *
          * @SerializedName("boden")
          */
@@ -69,13 +69,13 @@ class Equipment
          */
         protected ?bool $fireplace = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\HeatingType")
+         * @Type("Innobrain\OpenImmo\Dtos\HeatingType")
          *
          * @SerializedName("heizungsart")
          */
         protected ?HeatingType $heatingType = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\HeatingSystem")
+         * @Type("Innobrain\OpenImmo\Dtos\HeatingSystem")
          *
          * @SerializedName("befeuerung")
          */
@@ -87,7 +87,7 @@ class Equipment
          */
         protected ?bool $airConditioned = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Elevator")
+         * @Type("Innobrain\OpenImmo\Dtos\Elevator")
          *
          * @SerializedName("fahrstuhl")
          */
@@ -95,7 +95,7 @@ class Equipment
         /**
          * @XmlList(inline = true, entry = "stellplatzart")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\ParkingSpaceType>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\ParkingSpaceType>")
          *
          * @SkipWhenEmpty
          *
@@ -109,13 +109,13 @@ class Equipment
          */
         protected ?bool $gardenUse = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\BalconyTerraceOrientation")
+         * @Type("Innobrain\OpenImmo\Dtos\BalconyTerraceOrientation")
          *
          * @SerializedName("ausricht_balkon_terrasse")
          */
         protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Furnished")
+         * @Type("Innobrain\OpenImmo\Dtos\Furnished")
          *
          * @SerializedName("moebliert")
          */
@@ -223,7 +223,7 @@ class Equipment
          */
         protected ?float $hallHeight = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\AttachedGastronomy")
+         * @Type("Innobrain\OpenImmo\Dtos\AttachedGastronomy")
          *
          * @SerializedName("angeschl_gastronomie")
          */
@@ -249,7 +249,7 @@ class Equipment
         /**
          * @XmlList(inline = true, entry = "serviceleistungen")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\Services>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\Services>")
          *
          * @SkipWhenEmpty
          *
@@ -263,7 +263,7 @@ class Equipment
          */
         protected ?bool $holidayPropertyPhone = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\BroadbandAccess")
+         * @Type("Innobrain\OpenImmo\Dtos\BroadbandAccess")
          *
          * @SerializedName("breitband_zugang")
          */
@@ -275,13 +275,13 @@ class Equipment
          */
         protected ?bool $umtsReception = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\SecurityTechnology")
+         * @Type("Innobrain\OpenImmo\Dtos\SecurityTechnology")
          *
          * @SerializedName("sicherheitstechnik")
          */
         protected ?SecurityTechnology $securityTechnology = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Basement")
+         * @Type("Innobrain\OpenImmo\Dtos\Basement")
          *
          * @SerializedName("unterkellert")
          */
@@ -305,25 +305,25 @@ class Equipment
          */
         protected ?bool $shutters = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\RoofShape")
+         * @Type("Innobrain\OpenImmo\Dtos\RoofShape")
          *
          * @SerializedName("dachform")
          */
         protected ?RoofShape $roofShape = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\ConstructionMethod")
+         * @Type("Innobrain\OpenImmo\Dtos\ConstructionMethod")
          *
          * @SerializedName("bauweise")
          */
         protected ?ConstructionMethod $constructionMethod = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\DevelopmentStage")
+         * @Type("Innobrain\OpenImmo\Dtos\DevelopmentStage")
          *
          * @SerializedName("ausbaustufe")
          */
         protected ?DevelopmentStage $developmentStage = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\EnergyType")
+         * @Type("Innobrain\OpenImmo\Dtos\EnergyType")
          *
          * @SerializedName("energietyp")
          */
@@ -361,7 +361,7 @@ class Equipment
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -371,7 +371,7 @@ class Equipment
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -381,7 +381,7 @@ class Equipment
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

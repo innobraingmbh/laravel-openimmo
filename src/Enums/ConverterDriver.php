@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Enums;
+namespace Innobrain\OpenImmo\Enums;
 
 enum ConverterDriver: string
 {

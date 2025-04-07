@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo;
+namespace Innobrain\OpenImmo;
 
-use Katalam\OpenImmo\Console\Commands\Generate;
+use Innobrain\OpenImmo\Console\Commands\Generate;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Services;
+namespace Innobrain\OpenImmo\Services;
 
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Handler\DateTimeHandler;
 use JMS\Serializer\Handler\HandlerRegistryInterface;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
-use Katalam\OpenImmo\Dtos\OpenImmo;
-use Katalam\OpenImmo\Handler\DateTimeHandler;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;

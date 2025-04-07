@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Storage;
-use Katalam\OpenImmo\Services\TranslationService;
+use Innobrain\OpenImmo\Services\TranslationService;
 
 function prepareStorage(): void
 {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Katalam\OpenImmo\Services\DtoGenerator;
+use Innobrain\OpenImmo\Services\DtoGenerator;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Property;
 use Random\RandomException;

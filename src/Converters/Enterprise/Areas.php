@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Enterprise;
+namespace Innobrain\OpenImmo\Converters\Enterprise;
 
 trait Areas
 {

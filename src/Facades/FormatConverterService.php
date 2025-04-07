@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Facades;
+namespace Innobrain\OpenImmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Katalam\OpenImmo\Dtos\OpenImmo;
-use Katalam\OpenImmo\Enums\ConverterDriver;
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Enums\ConverterDriver;
 
 /**
- * @see \Katalam\OpenImmo\Services\FormatConverterService
+ * @see \Innobrain\OpenImmo\Services\FormatConverterService
  *
  * @method static convert(OpenImmo $openImmo)
  * @method static driver(ConverterDriver $driver)
@@ -18,6 +18,6 @@ class FormatConverterService extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Katalam\OpenImmo\Services\FormatConverterService::class;
+        return \Innobrain\OpenImmo\Services\FormatConverterService::class;
     }
 }

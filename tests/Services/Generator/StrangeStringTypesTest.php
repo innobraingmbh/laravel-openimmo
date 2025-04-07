@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Facades\TranslationService;
-use Katalam\OpenImmo\Tests\TestCase;
+use Innobrain\OpenImmo\Facades\TranslationService;
+use Innobrain\OpenImmo\Tests\TestCase;
 
 test('strange string types', function () {
     TranslationService::addFakeClass('StrangeStringTypes');

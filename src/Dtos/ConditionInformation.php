@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -31,31 +31,31 @@ class ConditionInformation
          */
         protected ?string $lastModernization = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Condition")
+         * @Type("Innobrain\OpenImmo\Dtos\Condition")
          *
          * @SerializedName("zustand")
          */
         protected ?Condition $condition = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Age")
+         * @Type("Innobrain\OpenImmo\Dtos\Age")
          *
          * @SerializedName("alter")
          */
         protected ?Age $age = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\DevelopableAccordingTo")
+         * @Type("Innobrain\OpenImmo\Dtos\DevelopableAccordingTo")
          *
          * @SerializedName("bebaubar_nach")
          */
         protected ?DevelopableAccordingTo $developableAccordingTo = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Development")
+         * @Type("Innobrain\OpenImmo\Dtos\Development")
          *
          * @SerializedName("erschliessung")
          */
         protected ?Development $development = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\DevelopmentScope")
+         * @Type("Innobrain\OpenImmo\Dtos\DevelopmentScope")
          *
          * @SerializedName("erschliessung_umfang")
          */
@@ -75,7 +75,7 @@ class ConditionInformation
         /**
          * @XmlList(inline = true, entry = "energiepass")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\EnergyPerformanceCertificate>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>")
          *
          * @SkipWhenEmpty
          *
@@ -83,7 +83,7 @@ class ConditionInformation
          */
         protected array $energyCertificate = [],
         /**
-         * @Type("Katalam\OpenImmo\Dtos\SalesStatus")
+         * @Type("Innobrain\OpenImmo\Dtos\SalesStatus")
          *
          * @SerializedName("verkaufstatus")
          */
@@ -91,7 +91,7 @@ class ConditionInformation
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -101,7 +101,7 @@ class ConditionInformation
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -111,7 +111,7 @@ class ConditionInformation
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

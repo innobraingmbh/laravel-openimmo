@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Katalam\OpenImmo\Facades\CodeGenUtil;
+use Innobrain\OpenImmo\Facades\CodeGenUtil;
 use Nette\PhpGenerator\Property;
 
 it('can add description', function () {

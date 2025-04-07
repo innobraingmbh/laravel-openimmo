@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Dtos;
+namespace Innobrain\OpenImmo\Dtos;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
@@ -31,7 +31,7 @@ class Geo
          */
         protected ?string $city = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\GeoCoordinates")
+         * @Type("Innobrain\OpenImmo\Dtos\GeoCoordinates")
          *
          * @SerializedName("geokoordinaten")
          */
@@ -55,7 +55,7 @@ class Geo
          */
         protected ?string $state = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\Country")
+         * @Type("Innobrain\OpenImmo\Dtos\Country")
          *
          * @SerializedName("land")
          */
@@ -101,7 +101,7 @@ class Geo
          */
         protected ?int $numberOfFloors = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\LocationInBuilding")
+         * @Type("Innobrain\OpenImmo\Dtos\LocationInBuilding")
          *
          * @SerializedName("lage_im_bau")
          */
@@ -113,7 +113,7 @@ class Geo
          */
         protected ?string $apartmentNumber = null,
         /**
-         * @Type("Katalam\OpenImmo\Dtos\LocationArea")
+         * @Type("Innobrain\OpenImmo\Dtos\LocationArea")
          *
          * @SerializedName("lage_gebiet")
          */
@@ -151,7 +151,7 @@ class Geo
         /**
          * @XmlList(inline = true, entry = "user_defined_simplefield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedSimplefield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
          *
          * @SkipWhenEmpty
          *
@@ -161,7 +161,7 @@ class Geo
         /**
          * @XmlList(inline = true, entry = "user_defined_anyfield")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedAnyfield>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
          *
          * @SkipWhenEmpty
          *
@@ -171,7 +171,7 @@ class Geo
         /**
          * @XmlList(inline = true, entry = "user_defined_extend")
          *
-         * @Type("array<Katalam\OpenImmo\Dtos\UserDefinedExtend>")
+         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
          *
          * @SkipWhenEmpty
          *

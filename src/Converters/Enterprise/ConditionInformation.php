@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Katalam\OpenImmo\Converters\Enterprise;
+namespace Innobrain\OpenImmo\Converters\Enterprise;
 
-use Katalam\OpenImmo\Dtos\Condition;
-use Katalam\OpenImmo\Dtos\EnergyPerformanceCertificate;
+use Innobrain\OpenImmo\Dtos\Condition;
+use Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate;
 
 trait ConditionInformation
 {
