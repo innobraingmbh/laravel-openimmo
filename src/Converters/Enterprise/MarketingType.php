@@ -20,6 +20,6 @@ trait MarketingType
             return 'erbpacht';
         }
 
-        return 'leasing';
+        return 'pacht';
     }
 }
