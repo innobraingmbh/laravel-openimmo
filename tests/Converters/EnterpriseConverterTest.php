@@ -27,11 +27,10 @@ test('can convert a open immo xml', function () {
     expect($result)->toBeArray()
         ->toBe([
             'nutzungsart' => 'gewerbe',
-            'vermarktungsart' => 'leasing',
+            'vermarktungsart' => 'pacht',
             'plz' => '97084',
             'ort' => 'Heidingsfeld, Heidingsfeld',
             'kaltmiete' => '940.00',
-            'hauptmiete_ust_prozent' => '10',
             'ust_satz_bk' => '10',
             'ust_satz_heizkosten' => '20',
             'objekttitel' => 'Reinkommen, wohlfühlen, losleben!',
