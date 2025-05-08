@@ -41,10 +41,6 @@ trait Prices
             'gesamtmiete_ohk_brutto' => $this->parseFloat($prices->getTotalRentGross()),
         ];
 
-        if ($this->convertTypeOfUse() === 'wohnen') {
-            $result['kp_ust_prozent'] = '20';
-        }
-
         return $result;
     }
 }
