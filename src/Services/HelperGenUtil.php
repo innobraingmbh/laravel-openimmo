@@ -96,12 +96,20 @@ class HelperGenUtil
         if (! class_exists($propertyClassName)) {
             return;
         }
+        // @phpstan-ignore-next-line
         $propertyTypeName = $property->getType()?->getName();
+        // @phpstan-ignore-next-line
         if ($propertyTypeName !== 'array' && $property->getType()?->isBuiltin()) {
             return;
         }
 
         $isArrayDto = $propertyTypeName === 'array';
+
+        // The field property is a special case, since it is based on a user defined extend
+        // but there is no user defined extend getter function.
+        if ($propertyName === 'Field') {
+            return;
+        }
 
         $function = $this->phpFile->addFunction('get'.$propertyName);
         $function->addParameter('openImmo')

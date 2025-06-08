@@ -114,6 +114,7 @@ class DtoGenerator
             ->addComment('@XmlRoot("'.$element->getName().'")');
 
         /** @var Attribute[] $attributes */
+        // @phpstan-ignore-next-line
         $attributes = $element->getType()->getAttributes();
 
         collect($attributes)
@@ -130,12 +131,14 @@ class DtoGenerator
                 // @see https://github.com/ujamii/openimmo/issues/3
                 $this->parseSimpleValue(null, $class, $namespace);
             } else {
+                // @phpstan-ignore-next-line
                 collect($element->getType()->getElements())
                     ->each(function (Choice|ElementRef|Element $property) use ($class, $namespace) {
                         if ($property instanceof Choice) {
-                            /** @var ElementRef $choiceProperty */
                             collect($property->getElements())
+                                // @phpstan-ignore-next-line
                                 ->each(function (ElementRef|Sequence $choiceProperty) use ($class, $namespace) {
+                                    /** @var ElementRef $choiceProperty */
                                     $this->parseProperty($choiceProperty, $class, $namespace);
                                 });
                         } else {
@@ -145,6 +148,7 @@ class DtoGenerator
             }
         }
 
+        // @phpstan-ignore-next-line
         if (count($element->getType()->getAttributes()) > 0) {
             $namespace->addUse(XmlAttribute::class);
         }
@@ -207,6 +211,7 @@ class DtoGenerator
         $xsdType = $this->getPhpPropertyTypeFromXsdElement($property);
 
         // take min/max into account, as this may be an array instead
+        // @phpstan-ignore-next-line
         if ($property->getMax() === -1) {
             $classProperty->addComment('@XmlList(inline = true, entry = "'.$property->getName().'")');
             $namespace->addUse(XmlList::class);
@@ -219,6 +224,7 @@ class DtoGenerator
         $namespace->addUse(Type::class);
 
         $isArray = $phpType === 'array';
+        // @phpstan-ignore-next-line
         $nullable = ! $isArray && $property->getMin() === 0;
 
         // if the property type is an object, it should be nullable
@@ -238,6 +244,7 @@ class DtoGenerator
             $namespace->addUse(SkipWhenEmpty::class);
         }
 
+        // @phpstan-ignore-next-line
         if ($property->getType()->getRestriction() !== null) {
             $this->parseRestriction(
                 $property,
@@ -271,6 +278,7 @@ class DtoGenerator
             $propertyType = TypeUtil::extractTypeForPhp($property->getType());
         }
 
+        // @phpstan-ignore-next-line
         if (! ($property instanceof Attribute) && $property->getMax() === -1) {
             $propertyType .= '[]';
         }
@@ -332,7 +340,7 @@ class DtoGenerator
         CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable);
     }
 
-    protected function parseRestriction(Attribute|Element|ElementRef $attribute, Property $property, ClassType $class): void
+    protected function parseRestriction(Attribute|Element|ElementRef|ElementItem $attribute, Property $property, ClassType $class): void
     {
         $restrictions = $attribute->getType()->getRestriction();
         if (! $restrictions instanceof Restriction) {

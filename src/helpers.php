@@ -44,7 +44,6 @@ use Innobrain\OpenImmo\Dtos\EnergyType;
 use Innobrain\OpenImmo\Dtos\Equipment;
 use Innobrain\OpenImmo\Dtos\Evaluation;
 use Innobrain\OpenImmo\Dtos\ExternalCommission;
-use Innobrain\OpenImmo\Dtos\Field;
 use Innobrain\OpenImmo\Dtos\Floor;
 use Innobrain\OpenImmo\Dtos\FreeTexts;
 use Innobrain\OpenImmo\Dtos\Furnished;
@@ -465,26 +464,6 @@ function getPropertyType(OpenImmo $openImmo): PropertyType
     if (! $child instanceof PropertyType) {
         $child = new PropertyType;
         $parent->setPropertyType($child);
-    }
-
-    return $child;
-}
-
-/**
- * Will return the Field object from an OpenImmo Dto.
- * If it does not exist, it will be created.
- * Make sure to call this function only on referenced objects.
- */
-function getField(OpenImmo $openImmo): Field
-{
-    $parent = getUserDefinedExtend($openImmo);
-    $children = $parent->getField();
-    $child = data_get($children, '0');
-
-    if (! $child instanceof Field) {
-        $child = new Field;
-        $children[] = $child;
-        $parent->setField($children);
     }
 
     return $child;
