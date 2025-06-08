@@ -16,6 +16,7 @@ use Innobrain\OpenImmo\Converters\Enterprise\MarketingType;
 use Innobrain\OpenImmo\Converters\Enterprise\Prices;
 use Innobrain\OpenImmo\Converters\Enterprise\PropertyType;
 use Innobrain\OpenImmo\Converters\Enterprise\Provision;
+use Innobrain\OpenImmo\Converters\Enterprise\TechnicalManagement;
 use Innobrain\OpenImmo\Converters\Enterprise\TypeOfUse;
 use Innobrain\OpenImmo\Converters\Enterprise\UserDefinedSimpleFields;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
@@ -32,6 +33,7 @@ class EnterpriseConverter extends BaseConverter implements ConverterInterface
     use Prices;
     use PropertyType;
     use Provision;
+    use TechnicalManagement;
     use TypeOfUse;
     use UserDefinedSimpleFields;
 
@@ -55,6 +57,7 @@ class EnterpriseConverter extends BaseConverter implements ConverterInterface
             ...$this->convertEquipment(),
             ...$this->convertProvision(),
             ...$this->convertUserDefinedSimpleFields(),
+            ...$this->convertTechnicalManagement(),
         ])
             ->filter()
             ->toArray();

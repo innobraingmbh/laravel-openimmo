@@ -47,5 +47,7 @@ test('can convert a open immo xml', function () {
             ],
             'wasch_trockenraum' => 1,
             'unterkellert' => 'TEIL',
+            'erstellt_am' => '2025-04-01 00:00:00',
+            'importId' => '8333',
         ]);
 });
