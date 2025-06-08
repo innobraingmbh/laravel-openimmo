@@ -483,7 +483,7 @@ class AdditionalAddress
      */
     public function getOtherEmail(): array
     {
-        return $this->otherEmail ?? [];
+        return $this->otherEmail;
     }
 
     public function setOtherEmail(array $otherEmail): AdditionalAddress
@@ -558,7 +558,7 @@ class AdditionalAddress
      */
     public function getOtherPhoneNumber(): array
     {
-        return $this->otherPhoneNumber ?? [];
+        return $this->otherPhoneNumber;
     }
 
     public function setOtherPhoneNumber(array $otherPhoneNumber): AdditionalAddress
@@ -621,7 +621,7 @@ class AdditionalAddress
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): AdditionalAddress
@@ -636,7 +636,7 @@ class AdditionalAddress
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): AdditionalAddress
@@ -651,7 +651,7 @@ class AdditionalAddress
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): AdditionalAddress

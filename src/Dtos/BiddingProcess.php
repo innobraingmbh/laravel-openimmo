@@ -183,7 +183,7 @@ class BiddingProcess
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): BiddingProcess
@@ -198,7 +198,7 @@ class BiddingProcess
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): BiddingProcess
@@ -213,7 +213,7 @@ class BiddingProcess
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): BiddingProcess

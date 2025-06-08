@@ -36,7 +36,7 @@ class Evaluation
      */
     public function getField(): array
     {
-        return $this->field ?? [];
+        return $this->field;
     }
 
     public function setField(array $field): Evaluation

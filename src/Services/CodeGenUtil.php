@@ -40,14 +40,13 @@ class CodeGenUtil
         $propertyType = $property->getType();
         $returnsArray = $propertyType === 'array';
         $getter = $class->addMethod('get'.ucfirst($property->getName()));
+        $getterCode = 'return $this->'.$property->getName().';';
         if ($returnsArray) {
-            $getterCode = 'return $this->'.$property->getName().' ?? [];';
             $getter->setBody($getterCode)
                 ->setReturnType('array')
                 ->addComment('Returns array of '.str_replace('[]', '', $propertyType))
                 ->setReturnNullable(false);
         } else {
-            $getterCode = 'return $this->'.$property->getName().';';
             $getter->setBody($getterCode)
                 ->setReturnType($propertyType)
                 ->setReturnNullable($nullable);

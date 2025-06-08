@@ -527,7 +527,7 @@ class Equipment
      */
     public function getParkingSpaceType(): array
     {
-        return $this->parkingSpaceType ?? [];
+        return $this->parkingSpaceType;
     }
 
     public function setParkingSpaceType(array $parkingSpaceType): Equipment
@@ -830,7 +830,7 @@ class Equipment
      */
     public function getServices(): array
     {
-        return $this->services ?? [];
+        return $this->services;
     }
 
     public function setServices(array $services): Equipment
@@ -1049,7 +1049,7 @@ class Equipment
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): Equipment
@@ -1064,7 +1064,7 @@ class Equipment
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): Equipment
@@ -1079,7 +1079,7 @@ class Equipment
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): Equipment

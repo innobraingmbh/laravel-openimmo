@@ -85,7 +85,7 @@ class Field
      */
     public function getType(): array
     {
-        return $this->type ?? [];
+        return $this->type;
     }
 
     public function setType(array $type): Field
@@ -100,7 +100,7 @@ class Field
      */
     public function getMode(): array
     {
-        return $this->mode ?? [];
+        return $this->mode;
     }
 
     public function setMode(array $mode): Field

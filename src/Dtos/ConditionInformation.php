@@ -233,7 +233,7 @@ class ConditionInformation
      */
     public function getEnergyCertificate(): array
     {
-        return $this->energyCertificate ?? [];
+        return $this->energyCertificate;
     }
 
     public function setEnergyCertificate(array $energyCertificate): ConditionInformation
@@ -260,7 +260,7 @@ class ConditionInformation
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): ConditionInformation
@@ -275,7 +275,7 @@ class ConditionInformation
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): ConditionInformation
@@ -290,7 +290,7 @@ class ConditionInformation
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): ConditionInformation

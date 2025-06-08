@@ -1234,7 +1234,7 @@ class Prices
      */
     public function getParkingOther(): array
     {
-        return $this->parkingOther ?? [];
+        return $this->parkingOther;
     }
 
     public function setParkingOther(array $parkingOther): Prices
@@ -1273,7 +1273,7 @@ class Prices
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): Prices
@@ -1288,7 +1288,7 @@ class Prices
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): Prices
@@ -1303,7 +1303,7 @@ class Prices
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): Prices

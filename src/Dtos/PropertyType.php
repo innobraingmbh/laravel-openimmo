@@ -166,7 +166,7 @@ class PropertyType
      */
     public function getRooms(): array
     {
-        return $this->rooms ?? [];
+        return $this->rooms;
     }
 
     public function setRooms(array $rooms): PropertyType
@@ -181,7 +181,7 @@ class PropertyType
      */
     public function getApartment(): array
     {
-        return $this->apartment ?? [];
+        return $this->apartment;
     }
 
     public function setApartment(array $apartment): PropertyType
@@ -196,7 +196,7 @@ class PropertyType
      */
     public function getHouse(): array
     {
-        return $this->house ?? [];
+        return $this->house;
     }
 
     public function setHouse(array $house): PropertyType
@@ -211,7 +211,7 @@ class PropertyType
      */
     public function getPlot(): array
     {
-        return $this->plot ?? [];
+        return $this->plot;
     }
 
     public function setPlot(array $plot): PropertyType
@@ -226,7 +226,7 @@ class PropertyType
      */
     public function getOfficesPractices(): array
     {
-        return $this->officesPractices ?? [];
+        return $this->officesPractices;
     }
 
     public function setOfficesPractices(array $officesPractices): PropertyType
@@ -241,7 +241,7 @@ class PropertyType
      */
     public function getRetail(): array
     {
-        return $this->retail ?? [];
+        return $this->retail;
     }
 
     public function setRetail(array $retail): PropertyType
@@ -256,7 +256,7 @@ class PropertyType
      */
     public function getHospitality(): array
     {
-        return $this->hospitality ?? [];
+        return $this->hospitality;
     }
 
     public function setHospitality(array $hospitality): PropertyType
@@ -271,7 +271,7 @@ class PropertyType
      */
     public function getHallsStorageProduction(): array
     {
-        return $this->hallsStorageProduction ?? [];
+        return $this->hallsStorageProduction;
     }
 
     public function setHallsStorageProduction(array $hallsStorageProduction): PropertyType
@@ -286,7 +286,7 @@ class PropertyType
      */
     public function getAgricultureAndForestry(): array
     {
-        return $this->agricultureAndForestry ?? [];
+        return $this->agricultureAndForestry;
     }
 
     public function setAgricultureAndForestry(array $agricultureAndForestry): PropertyType
@@ -301,7 +301,7 @@ class PropertyType
      */
     public function getParking(): array
     {
-        return $this->parking ?? [];
+        return $this->parking;
     }
 
     public function setParking(array $parking): PropertyType
@@ -316,7 +316,7 @@ class PropertyType
      */
     public function getOther(): array
     {
-        return $this->other ?? [];
+        return $this->other;
     }
 
     public function setOther(array $other): PropertyType
@@ -331,7 +331,7 @@ class PropertyType
      */
     public function getCommercialLeisureProperty(): array
     {
-        return $this->commercialLeisureProperty ?? [];
+        return $this->commercialLeisureProperty;
     }
 
     public function setCommercialLeisureProperty(array $commercialLeisureProperty): PropertyType
@@ -346,7 +346,7 @@ class PropertyType
      */
     public function getApartmentBuildingInvestmentProperty(): array
     {
-        return $this->apartmentBuildingInvestmentProperty ?? [];
+        return $this->apartmentBuildingInvestmentProperty;
     }
 
     public function setApartmentBuildingInvestmentProperty(array $apartmentBuildingInvestmentProperty): PropertyType
@@ -361,7 +361,7 @@ class PropertyType
      */
     public function getPropertyTypeAdditional(): array
     {
-        return $this->propertyTypeAdditional ?? [];
+        return $this->propertyTypeAdditional;
     }
 
     public function setPropertyTypeAdditional(array $propertyTypeAdditional): PropertyType

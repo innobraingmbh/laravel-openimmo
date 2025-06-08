@@ -554,7 +554,7 @@ class ContactPerson
      */
     public function getOtherEmail(): array
     {
-        return $this->otherEmail ?? [];
+        return $this->otherEmail;
     }
 
     public function setOtherEmail(array $otherEmail): ContactPerson
@@ -593,7 +593,7 @@ class ContactPerson
      */
     public function getOtherPhoneNumber(): array
     {
-        return $this->otherPhoneNumber ?? [];
+        return $this->otherPhoneNumber;
     }
 
     public function setOtherPhoneNumber(array $otherPhoneNumber): ContactPerson
@@ -692,7 +692,7 @@ class ContactPerson
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): ContactPerson
@@ -707,7 +707,7 @@ class ContactPerson
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): ContactPerson
@@ -722,7 +722,7 @@ class ContactPerson
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): ContactPerson

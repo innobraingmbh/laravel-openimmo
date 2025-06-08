@@ -172,7 +172,7 @@ class Provider
      */
     public function getRealEstate(): array
     {
-        return $this->realEstate ?? [];
+        return $this->realEstate;
     }
 
     public function setRealEstate(array $realEstate): Provider
@@ -211,7 +211,7 @@ class Provider
      */
     public function getUserDefinedSimplefield(): array
     {
-        return $this->userDefinedSimplefield ?? [];
+        return $this->userDefinedSimplefield;
     }
 
     public function setUserDefinedSimplefield(array $userDefinedSimplefield): Provider
@@ -226,7 +226,7 @@ class Provider
      */
     public function getUserDefinedAnyfield(): array
     {
-        return $this->userDefinedAnyfield ?? [];
+        return $this->userDefinedAnyfield;
     }
 
     public function setUserDefinedAnyfield(array $userDefinedAnyfield): Provider
@@ -241,7 +241,7 @@ class Provider
      */
     public function getUserDefinedExtend(): array
     {
-        return $this->userDefinedExtend ?? [];
+        return $this->userDefinedExtend;
     }
 
     public function setUserDefinedExtend(array $userDefinedExtend): Provider

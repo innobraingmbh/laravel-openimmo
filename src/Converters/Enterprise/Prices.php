@@ -10,7 +10,7 @@ trait Prices
     {
         $prices = getPrices($this->openImmo);
 
-        $result = [
+        return [
             'kaufpreis' => $this->parseFloat($prices->getPurchasePrice()?->getValue()),
             'kaltmiete' => $this->parseFloat($prices->getColdRent()),
             'heizkosten' => $this->parseFloat($prices->getHeatingCosts()),
@@ -40,7 +40,5 @@ trait Prices
             'gesamtmiete_ohk_netto' => $this->parseFloat($prices->getTotalRentNet()?->getValue()),
             'gesamtmiete_ohk_brutto' => $this->parseFloat($prices->getTotalRentGross()),
         ];
-
-        return $result;
     }
 }
