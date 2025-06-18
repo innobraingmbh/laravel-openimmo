@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use JMS\Serializer\Serializer;
-use Symfony\Component\Serializer\Serializer as JsonSerializer;
 
 /**
  * @see \Innobrain\OpenImmo\Services\SchemaGenerator
