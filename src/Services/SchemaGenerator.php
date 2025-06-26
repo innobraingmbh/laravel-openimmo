@@ -92,7 +92,9 @@ class SchemaGenerator
             }
         }
 
+        // @phpstan-ignore-next-line
         if (! $property->getType()?->isBuiltin()) {
+            // @phpstan-ignore-next-line
             return $this->handleClass(new ReflectionClass($property->getType()?->getName()), $path);
         }
 
