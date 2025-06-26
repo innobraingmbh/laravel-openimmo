@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Services;
 
+use Illuminate\Support\Str;
+use Prism\Prism\Contracts\Schema;
+use Prism\Prism\Schema\ArraySchema;
+use Prism\Prism\Schema\BooleanSchema;
+use Prism\Prism\Schema\NumberSchema;
+use Prism\Prism\Schema\ObjectSchema;
+use Prism\Prism\Schema\StringSchema;
 use ReflectionClass;
 use ReflectionProperty;
 
 class SchemaGenerator
 {
-    private array $schema = [];
-
     private bool $skipUserDefinedFields = false;
 
     public function skipUserDefinedFields(bool $skip = true): self
@@ -20,27 +25,48 @@ class SchemaGenerator
         return $this;
     }
 
-    public function generateFor(string $className): array
+    public function generateFor(string $className): ObjectSchema|ArraySchema
     {
-        $this->schema = [];
-
-        $class = new ReflectionClass($className);
-        $this->handleClass($class);
-
-        return $this->schema;
+        return $this->handleClass(new ReflectionClass($className));
     }
 
-    private function handleClass(ReflectionClass $class, ?string $path = null): void
+    private function handleClass(ReflectionClass $class, ?string $path = null, bool $isArray = false): ArraySchema|ObjectSchema
     {
         $properties = $class->getProperties();
         $path = $path ? $path.'.'.$class->getShortName() : $class->getShortName();
 
+        $schemas = [];
+
         foreach ($properties as $property) {
-            $this->handleProperty($property, $path);
+            if (($schema = $this->handleProperty($property, $path)) instanceof Schema) {
+                $schemas[] = $schema;
+            }
         }
+
+        $objectSchema = new ObjectSchema(
+            name: $class->getShortName(),
+            description: $this->getClassDescription($class),
+            properties: $schemas,
+        );
+
+        return $isArray
+            ? new ArraySchema(
+                name: $class->getShortName(),
+                description: $this->getClassDescription($class),
+                items: $objectSchema,
+            )
+            : $objectSchema;
     }
 
-    private function handleProperty(ReflectionProperty $property, ?string $path = null): void
+    private function getClassDescription(ReflectionClass $class): string
+    {
+        $docComment = $class->getDocComment();
+        $matches = Str::matchAll('/^ * .+$/m', $docComment);
+
+        return collect($matches)->map(fn (string $match) => Str::substr($match, 3))->get(1) ?? '';
+    }
+
+    private function handleProperty(ReflectionProperty $property, ?string $path = null): ?Schema
     {
         $property->setAccessible(true);
         $name = $property->getName();
@@ -50,37 +76,30 @@ class SchemaGenerator
             'userDefinedSimplefield',
             'userDefinedExtend',
         ], true)) {
-            return;
+            return null;
         }
 
         $type = (string) $property->getType();
         $isNullable = $property->getType()?->allowsNull() ?? false;
-
-        $fullPath = $path ? $path.'.'.$name : $name;
 
         if ($type === 'array') {
             $docComment = $property->getDocComment();
             if ($docComment) {
                 preg_match('/@Type\("array<(.+?)>"\)/', $docComment, $matches);
                 if (isset($matches[1]) && class_exists($matches[1])) {
-                    $this->handleClass(new ReflectionClass($matches[1]), $path);
-
-                    return;
+                    return $this->handleClass(new ReflectionClass($matches[1]), $path, true);
                 }
             }
         }
 
         if (! $property->getType()?->isBuiltin()) {
-            $this->handleClass(new ReflectionClass($property->getType()?->getName()), $path);
-
-            return;
+            return $this->handleClass(new ReflectionClass($property->getType()?->getName()), $path);
         }
 
-        data_set($this->schema, $fullPath, [
-            'name' => $name,
-            'type' => $type,
-            'nullable' => $isNullable,
-            'description' => $name,
-        ]);
+        return match ($type) {
+            'int', 'float' => new NumberSchema($name, $name, $isNullable),
+            'bool' => new BooleanSchema($name, $name, $isNullable),
+            default => new StringSchema($name, $name, $isNullable),
+        };
     }
 }
