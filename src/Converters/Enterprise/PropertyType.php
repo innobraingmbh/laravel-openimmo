@@ -43,7 +43,7 @@ trait PropertyType
             /** @var Plot|null $plot */
             $plot = data_get($plots, 0);
             $category = $plot?->getPlotType();
-        } elseif ($officePractices = $propertyType->getOfficesPractices()) {
+        } elseif ($officePractices = $propertyType->getOfficePractices()) {
             $type = 'buero_praxen';
             /** @var OfficePractices|null $officePractice */
             $officePractice = data_get($officePractices, 0);
