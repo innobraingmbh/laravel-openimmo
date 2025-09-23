@@ -85,6 +85,6 @@ trait PropertyType
             $category = $apartmentBuildingInvestmentProperty?->getInterestType();
         }
 
-        return [$type, $category];
+        return [$type, strtolower((string) $category)];
     }
 }
