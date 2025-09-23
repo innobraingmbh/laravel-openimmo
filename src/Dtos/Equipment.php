@@ -17,11 +17,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Equipment
 {
-    public const EQUIPMENT_CATEGORY_STANDARD = 'STANDARD';
+    public const string EQUIPMENT_CATEGORY_STANDARD = 'STANDARD';
 
-    public const EQUIPMENT_CATEGORY_UPSCALE = 'GEHOBEN';
+    public const string EQUIPMENT_CATEGORY_UPSCALE = 'GEHOBEN';
 
-    public const EQUIPMENT_CATEGORY_LUXURY = 'LUXUS';
+    public const string EQUIPMENT_CATEGORY_LUXURY = 'LUXUS';
 
     public function __construct(
         /**

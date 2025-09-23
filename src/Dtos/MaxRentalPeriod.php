@@ -18,13 +18,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class MaxRentalPeriod
 {
-    public const MAX_DURATION_DAY = 'TAG';
+    public const string MAX_DURATION_DAY = 'TAG';
 
-    public const MAX_DURATION_WEEK = 'WOCHE';
+    public const string MAX_DURATION_WEEK = 'WOCHE';
 
-    public const MAX_DURATION_MONTH = 'MONAT';
+    public const string MAX_DURATION_MONTH = 'MONAT';
 
-    public const MAX_DURATION_YEAR = 'JAHR';
+    public const string MAX_DURATION_YEAR = 'JAHR';
 
     public function __construct(
         /**

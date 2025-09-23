@@ -17,23 +17,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class EnergyPerformanceCertificate
 {
-    public const PARTITION_DEMAND = 'BEDARF';
+    public const string PARTITION_DEMAND = 'BEDARF';
 
-    public const PARTITION_CONSUMPTION = 'VERBRAUCH';
+    public const string PARTITION_CONSUMPTION = 'VERBRAUCH';
 
-    public const VINTAGE_2008 = '2008';
+    public const string VINTAGE_2008 = '2008';
 
-    public const VINTAGE_2014 = '2014';
+    public const string VINTAGE_2014 = '2014';
 
-    public const VINTAGE_WITHOUT = 'ohne';
+    public const string VINTAGE_WITHOUT = 'ohne';
 
-    public const VINTAGE_NOT_NECESSARY = 'nicht_noetig';
+    public const string VINTAGE_NOT_NECESSARY = 'nicht_noetig';
 
-    public const VINTAGE_ON_INSPECTION = 'bei_besichtigung';
+    public const string VINTAGE_ON_INSPECTION = 'bei_besichtigung';
 
-    public const BUILDING_TYPE_RESIDENTIAL = 'wohn';
+    public const string BUILDING_TYPE_RESIDENTIAL = 'wohn';
 
-    public const BUILDING_TYPE_NON_RESIDENTIAL = 'nichtwohn';
+    public const string BUILDING_TYPE_NON_RESIDENTIAL = 'nichtwohn';
 
     public function __construct(
         /**

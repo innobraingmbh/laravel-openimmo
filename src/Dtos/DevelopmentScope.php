@@ -17,13 +17,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class DevelopmentScope
 {
-    public const DEVELOPMENT_ATTRIBUTE_GAS = 'GAS';
+    public const string DEVELOPMENT_ATTRIBUTE_GAS = 'GAS';
 
-    public const DEVELOPMENT_ATTRIBUTE_WATER = 'WASSER';
+    public const string DEVELOPMENT_ATTRIBUTE_WATER = 'WASSER';
 
-    public const DEVELOPMENT_ATTRIBUTE_ELECTRICITY = 'STROM';
+    public const string DEVELOPMENT_ATTRIBUTE_ELECTRICITY = 'STROM';
 
-    public const DEVELOPMENT_ATTRIBUTE_TELECOMMUNICATION = 'TK';
+    public const string DEVELOPMENT_ATTRIBUTE_TELECOMMUNICATION = 'TK';
 
     public function __construct(
         /**

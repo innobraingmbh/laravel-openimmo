@@ -19,19 +19,19 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class SportDistances
 {
-    public const DISTANCE_TO_SPORT_BEACH = 'STRAND';
+    public const string DISTANCE_TO_SPORT_BEACH = 'STRAND';
 
-    public const DISTANCE_TO_SPORT_LAKE = 'SEE';
+    public const string DISTANCE_TO_SPORT_LAKE = 'SEE';
 
-    public const DISTANCE_TO_SPORT_SEA = 'MEER';
+    public const string DISTANCE_TO_SPORT_SEA = 'MEER';
 
-    public const DISTANCE_TO_SPORT_SKI_AREA = 'SKIGEBIET';
+    public const string DISTANCE_TO_SPORT_SKI_AREA = 'SKIGEBIET';
 
-    public const DISTANCE_TO_SPORT_SPORTS_FACILITIES = 'SPORTANLAGEN';
+    public const string DISTANCE_TO_SPORT_SPORTS_FACILITIES = 'SPORTANLAGEN';
 
-    public const DISTANCE_TO_SPORT_HIKING_AREAS = 'WANDERGEBIETE';
+    public const string DISTANCE_TO_SPORT_HIKING_AREAS = 'WANDERGEBIETE';
 
-    public const DISTANCE_TO_SPORT_LOCAL_RECREATION = 'NAHERHOLUNG';
+    public const string DISTANCE_TO_SPORT_LOCAL_RECREATION = 'NAHERHOLUNG';
 
     public function __construct(
         /**

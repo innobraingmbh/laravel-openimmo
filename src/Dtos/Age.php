@@ -17,9 +17,9 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Age
 {
-    public const AGE_ATTRIBUTE_OLD_BUILDING = 'ALTBAU';
+    public const string AGE_ATTRIBUTE_OLD_BUILDING = 'ALTBAU';
 
-    public const AGE_ATTRIBUTE_NEW_CONSTRUCTION = 'NEUBAU';
+    public const string AGE_ATTRIBUTE_NEW_CONSTRUCTION = 'NEUBAU';
 
     public function __construct(
         /**

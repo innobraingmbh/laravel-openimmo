@@ -17,13 +17,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class View
 {
-    public const VIEW_DISTANCE = 'FERNE';
+    public const string VIEW_DISTANCE = 'FERNE';
 
-    public const VIEW_LAKE = 'SEE';
+    public const string VIEW_LAKE = 'SEE';
 
-    public const VIEW_MOUNTAINS = 'BERGE';
+    public const string VIEW_MOUNTAINS = 'BERGE';
 
-    public const VIEW_SEA = 'MEER';
+    public const string VIEW_SEA = 'MEER';
 
     public function __construct(
         /**

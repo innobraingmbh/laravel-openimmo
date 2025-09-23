@@ -17,9 +17,9 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Furnished
 {
-    public const FURNISHED_FULL = 'VOLL';
+    public const string FURNISHED_FULL = 'VOLL';
 
-    public const FURNISHED_PARTIAL = 'TEIL';
+    public const string FURNISHED_PARTIAL = 'TEIL';
 
     public function __construct(
         /**

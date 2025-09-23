@@ -17,17 +17,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class OtherPhone
 {
-    public const PHONE_TYPE_HQ_TELEPHONE = 'TEL_ZENTRALE';
+    public const string PHONE_TYPE_HQ_TELEPHONE = 'TEL_ZENTRALE';
 
-    public const PHONE_TYPE_DIRECT_LINE = 'TEL_DURCHW';
+    public const string PHONE_TYPE_DIRECT_LINE = 'TEL_DURCHW';
 
-    public const PHONE_TYPE_PRIVATE_PHONE = 'TEL_PRIVAT';
+    public const string PHONE_TYPE_PRIVATE_PHONE = 'TEL_PRIVAT';
 
-    public const PHONE_TYPE_MOBILE_PHONE = 'TEL_HANDY';
+    public const string PHONE_TYPE_MOBILE_PHONE = 'TEL_HANDY';
 
-    public const PHONE_TYPE_FAX = 'TEL_FAX';
+    public const string PHONE_TYPE_FAX = 'TEL_FAX';
 
-    public const PHONE_TYPE_OTHER_PHONE = 'TEL_SONSTIGE';
+    public const string PHONE_TYPE_OTHER_PHONE = 'TEL_SONSTIGE';
 
     public function __construct(
         /**

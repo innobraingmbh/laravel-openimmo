@@ -17,31 +17,31 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class LocationArea
 {
-    public const AREAS_RESIDENTIAL = 'WOHN';
+    public const string AREAS_RESIDENTIAL = 'WOHN';
 
-    public const AREAS_COMMERCIAL = 'GEWERBE';
+    public const string AREAS_COMMERCIAL = 'GEWERBE';
 
-    public const AREAS_INDUSTRIAL = 'INDUSTRIE';
+    public const string AREAS_INDUSTRIAL = 'INDUSTRIE';
 
-    public const AREAS_MISCH = 'MISCH';
+    public const string AREAS_MISCH = 'MISCH';
 
-    public const AREAS_NEW_CONSTRUCTION = 'NEUBAU';
+    public const string AREAS_NEW_CONSTRUCTION = 'NEUBAU';
 
-    public const AREAS_LOCATION = 'ORTSLAGE';
+    public const string AREAS_LOCATION = 'ORTSLAGE';
 
-    public const AREAS_SETTLEMENT = 'SIEDLUNG';
+    public const string AREAS_SETTLEMENT = 'SIEDLUNG';
 
-    public const AREAS_OUTSKIRTS = 'STADTRAND';
+    public const string AREAS_OUTSKIRTS = 'STADTRAND';
 
-    public const AREAS_DISTRICT = 'STADTTEIL';
+    public const string AREAS_DISTRICT = 'STADTTEIL';
 
-    public const AREAS_CITY_CENTER = 'STADTZENTRUM';
+    public const string AREAS_CITY_CENTER = 'STADTZENTRUM';
 
-    public const AREAS_SECONDARY_CENTER = 'NEBENZENTRUM';
+    public const string AREAS_SECONDARY_CENTER = 'NEBENZENTRUM';
 
-    public const AREAS_PRIME = '1A';
+    public const string AREAS_PRIME = '1A';
 
-    public const AREAS_SECONDARY = '1B';
+    public const string AREAS_SECONDARY = '1B';
 
     public function __construct(
         /**

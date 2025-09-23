@@ -18,13 +18,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class MinRentalPeriod
 {
-    public const MIN_DURATION_DAY = 'TAG';
+    public const string MIN_DURATION_DAY = 'TAG';
 
-    public const MIN_DURATION_WEEK = 'WOCHE';
+    public const string MIN_DURATION_WEEK = 'WOCHE';
 
-    public const MIN_DURATION_MONTH = 'MONAT';
+    public const string MIN_DURATION_MONTH = 'MONAT';
 
-    public const MIN_DURATION_YEAR = 'JAHR';
+    public const string MIN_DURATION_YEAR = 'JAHR';
 
     public function __construct(
         /**

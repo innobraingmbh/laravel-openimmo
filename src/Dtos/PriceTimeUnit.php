@@ -17,13 +17,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class PriceTimeUnit
 {
-    public const TIME_UNIT_DAY = 'TAG';
+    public const string TIME_UNIT_DAY = 'TAG';
 
-    public const TIME_UNIT_WEEK = 'WOCHE';
+    public const string TIME_UNIT_WEEK = 'WOCHE';
 
-    public const TIME_UNIT_MONTH = 'MONAT';
+    public const string TIME_UNIT_MONTH = 'MONAT';
 
-    public const TIME_UNIT_YEAR = 'JAHR';
+    public const string TIME_UNIT_YEAR = 'JAHR';
 
     public function __construct(
         /**

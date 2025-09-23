@@ -19,11 +19,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Action
 {
-    public const ACTION_TYPE_CHANGE = 'CHANGE';
+    public const string ACTION_TYPE_CHANGE = 'CHANGE';
 
-    public const ACTION_TYPE_DELETE = 'DELETE';
+    public const string ACTION_TYPE_DELETE = 'DELETE';
 
-    public const ACTION_TYPE_REFERENCE = 'REFERENZ';
+    public const string ACTION_TYPE_REFERENCE = 'REFERENZ';
 
     public function __construct(
         /**

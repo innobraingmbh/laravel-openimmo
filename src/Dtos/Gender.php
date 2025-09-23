@@ -18,11 +18,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Gender
 {
-    public const GENDER_ATTRIBUTE_ANY = 'EGAL';
+    public const string GENDER_ATTRIBUTE_ANY = 'EGAL';
 
-    public const GENDER_ATTRIBUTE_MALE_ONLY = 'NUR_MANN';
+    public const string GENDER_ATTRIBUTE_MALE_ONLY = 'NUR_MANN';
 
-    public const GENDER_ATTRIBUTE_FEMALE_ONLY = 'NUR_FRAU';
+    public const string GENDER_ATTRIBUTE_FEMALE_ONLY = 'NUR_FRAU';
 
     public function __construct(
         /**

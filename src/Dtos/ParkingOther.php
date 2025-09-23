@@ -16,19 +16,19 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ParkingOther
 {
-    public const PLACE_TYPE_OPEN_SPACE = 'FREIPLATZ';
+    public const string PLACE_TYPE_OPEN_SPACE = 'FREIPLATZ';
 
-    public const PLACE_TYPE_GARAGE = 'GARAGE';
+    public const string PLACE_TYPE_GARAGE = 'GARAGE';
 
-    public const PLACE_TYPE_UNDERGROUND_GARAGE = 'TIEFGARAGE';
+    public const string PLACE_TYPE_UNDERGROUND_GARAGE = 'TIEFGARAGE';
 
-    public const PLACE_TYPE_CARPORT = 'CARPORT';
+    public const string PLACE_TYPE_CARPORT = 'CARPORT';
 
-    public const PLACE_TYPE_DUPLEX = 'DUPLEX';
+    public const string PLACE_TYPE_DUPLEX = 'DUPLEX';
 
-    public const PLACE_TYPE_PARKING_GARAGE = 'PARKHAUS';
+    public const string PLACE_TYPE_PARKING_GARAGE = 'PARKHAUS';
 
-    public const PLACE_TYPE_OTHER = 'SONSTIGES';
+    public const string PLACE_TYPE_OTHER = 'SONSTIGES';
 
     public function __construct(
         /**

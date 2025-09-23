@@ -17,33 +17,33 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Apartment
 {
-    public const APARTMENT_TYPE_ATTIC = 'DACHGESCHOSS';
+    public const string APARTMENT_TYPE_ATTIC = 'DACHGESCHOSS';
 
-    public const APARTMENT_TYPE_MAISONETTE = 'MAISONETTE';
+    public const string APARTMENT_TYPE_MAISONETTE = 'MAISONETTE';
 
-    public const APARTMENT_TYPE_LOFT_STUDIO_ATELIER = 'LOFT-STUDIO-ATELIER';
+    public const string APARTMENT_TYPE_LOFT_STUDIO_ATELIER = 'LOFT-STUDIO-ATELIER';
 
-    public const APARTMENT_TYPE_PENTHOUSE = 'PENTHOUSE';
+    public const string APARTMENT_TYPE_PENTHOUSE = 'PENTHOUSE';
 
-    public const APARTMENT_TYPE_TERRACES = 'TERRASSEN';
+    public const string APARTMENT_TYPE_TERRACES = 'TERRASSEN';
 
-    public const APARTMENT_TYPE_FLOOR = 'ETAGE';
+    public const string APARTMENT_TYPE_FLOOR = 'ETAGE';
 
-    public const APARTMENT_TYPE_GROUND_FLOOR = 'ERDGESCHOSS';
+    public const string APARTMENT_TYPE_GROUND_FLOOR = 'ERDGESCHOSS';
 
-    public const APARTMENT_TYPE_BASEMENT = 'SOUTERRAIN';
+    public const string APARTMENT_TYPE_BASEMENT = 'SOUTERRAIN';
 
-    public const APARTMENT_TYPE_APARTMENT = 'APARTMENT';
+    public const string APARTMENT_TYPE_APARTMENT = 'APARTMENT';
 
-    public const APARTMENT_TYPE_HOLIDAY_APARTMENT = 'FERIENWOHNUNG';
+    public const string APARTMENT_TYPE_HOLIDAY_APARTMENT = 'FERIENWOHNUNG';
 
-    public const APARTMENT_TYPE_GALLERY = 'GALERIE';
+    public const string APARTMENT_TYPE_GALLERY = 'GALERIE';
 
-    public const APARTMENT_TYPE_RAW_ATTIC = 'ROHDACHBODEN';
+    public const string APARTMENT_TYPE_RAW_ATTIC = 'ROHDACHBODEN';
 
-    public const APARTMENT_TYPE_PENTHOUSE_APARTMENT = 'ATTIKAWOHNUNG';
+    public const string APARTMENT_TYPE_PENTHOUSE_APARTMENT = 'ATTIKAWOHNUNG';
 
-    public const APARTMENT_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
+    public const string APARTMENT_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
     public function __construct(
         /**

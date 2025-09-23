@@ -19,9 +19,9 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Photo
 {
-    public const LOCATION_EXTERNAL = 'EXTERN';
+    public const string LOCATION_EXTERNAL = 'EXTERN';
 
-    public const LOCATION_REMOTE = 'REMOTE';
+    public const string LOCATION_REMOTE = 'REMOTE';
 
     public function __construct(
         /**

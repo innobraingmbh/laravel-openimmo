@@ -17,11 +17,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class CommercialLeisureProperty
 {
-    public const LEISURE_TYPE_SPORTS_FACILITIES = 'SPORTANLAGEN';
+    public const string LEISURE_TYPE_SPORTS_FACILITIES = 'SPORTANLAGEN';
 
-    public const LEISURE_TYPE_AMUSEMENT_PARKS_AND_CENTERS = 'VERGNUEGUNGSPARKS_UND_CENTER';
+    public const string LEISURE_TYPE_AMUSEMENT_PARKS_AND_CENTERS = 'VERGNUEGUNGSPARKS_UND_CENTER';
 
-    public const LEISURE_TYPE_LEISURE_FACILITY = 'FREIZEITANLAGE';
+    public const string LEISURE_TYPE_LEISURE_FACILITY = 'FREIZEITANLAGE';
 
     public function __construct(
         /**

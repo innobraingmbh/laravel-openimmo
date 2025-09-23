@@ -17,25 +17,25 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class OfficePractices
 {
-    public const OFFICE_TYPE_OFFICE_SPACE = 'BUEROFLAECHE';
+    public const string OFFICE_TYPE_OFFICE_SPACE = 'BUEROFLAECHE';
 
-    public const OFFICE_TYPE_OFFICE_BUILDING = 'BUEROHAUS';
+    public const string OFFICE_TYPE_OFFICE_BUILDING = 'BUEROHAUS';
 
-    public const OFFICE_TYPE_OFFICE_CENTER = 'BUEROZENTRUM';
+    public const string OFFICE_TYPE_OFFICE_CENTER = 'BUEROZENTRUM';
 
-    public const OFFICE_TYPE_LOFT_ATELIER = 'LOFT_ATELIER';
+    public const string OFFICE_TYPE_LOFT_ATELIER = 'LOFT_ATELIER';
 
-    public const OFFICE_TYPE_PRACTICE = 'PRAXIS';
+    public const string OFFICE_TYPE_PRACTICE = 'PRAXIS';
 
-    public const OFFICE_TYPE_PRACTICE_AREA = 'PRAXISFLAECHE';
+    public const string OFFICE_TYPE_PRACTICE_AREA = 'PRAXISFLAECHE';
 
-    public const OFFICE_TYPE_PRACTICE_HOUSE = 'PRAXISHAUS';
+    public const string OFFICE_TYPE_PRACTICE_HOUSE = 'PRAXISHAUS';
 
-    public const OFFICE_TYPE_EXHIBITION_SPACE = 'AUSSTELLUNGSFLAECHE';
+    public const string OFFICE_TYPE_EXHIBITION_SPACE = 'AUSSTELLUNGSFLAECHE';
 
-    public const OFFICE_TYPE_COWORKING = 'COWORKING';
+    public const string OFFICE_TYPE_COWORKING = 'COWORKING';
 
-    public const OFFICE_TYPE_SHARED_OFFICE = 'SHARED_OFFICE';
+    public const string OFFICE_TYPE_SHARED_OFFICE = 'SHARED_OFFICE';
 
     public function __construct(
         /**

@@ -17,11 +17,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class SalesStatus
 {
-    public const CONDITION_OPEN = 'OFFEN';
+    public const string CONDITION_OPEN = 'OFFEN';
 
-    public const CONDITION_RESERVED = 'RESERVIERT';
+    public const string CONDITION_RESERVED = 'RESERVIERT';
 
-    public const CONDITION_SOLD = 'VERKAUFT';
+    public const string CONDITION_SOLD = 'VERKAUFT';
 
     public function __construct(
         /**

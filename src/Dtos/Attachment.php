@@ -18,41 +18,41 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Attachment
 {
-    public const LOCATION_INTERNAL = 'INTERN';
+    public const string LOCATION_INTERNAL = 'INTERN';
 
-    public const LOCATION_EXTERNAL = 'EXTERN';
+    public const string LOCATION_EXTERNAL = 'EXTERN';
 
-    public const LOCATION_REMOTE = 'REMOTE';
+    public const string LOCATION_REMOTE = 'REMOTE';
 
-    public const GROUP_COVER_IMAGE = 'TITELBILD';
+    public const string GROUP_COVER_IMAGE = 'TITELBILD';
 
-    public const GROUP_INTERIOR_VIEWS = 'INNENANSICHTEN';
+    public const string GROUP_INTERIOR_VIEWS = 'INNENANSICHTEN';
 
-    public const GROUP_EXTERIOR_VIEWS = 'AUSSENANSICHTEN';
+    public const string GROUP_EXTERIOR_VIEWS = 'AUSSENANSICHTEN';
 
-    public const GROUP_FLOOR_PLAN = 'GRUNDRISS';
+    public const string GROUP_FLOOR_PLAN = 'GRUNDRISS';
 
-    public const GROUP_MAPS_SITE_PLAN = 'KARTEN_LAGEPLAN';
+    public const string GROUP_MAPS_SITE_PLAN = 'KARTEN_LAGEPLAN';
 
-    public const GROUP_PROVIDER_LOGO = 'ANBIETERLOGO';
+    public const string GROUP_PROVIDER_LOGO = 'ANBIETERLOGO';
 
-    public const GROUP_IMAGE = 'BILD';
+    public const string GROUP_IMAGE = 'BILD';
 
-    public const GROUP_DOCUMENTS = 'DOKUMENTE';
+    public const string GROUP_DOCUMENTS = 'DOKUMENTE';
 
-    public const GROUP_LINKS = 'LINKS';
+    public const string GROUP_LINKS = 'LINKS';
 
-    public const GROUP_PANORAMA = 'PANORAMA';
+    public const string GROUP_PANORAMA = 'PANORAMA';
 
-    public const GROUP_QRCODE = 'QRCODE';
+    public const string GROUP_QRCODE = 'QRCODE';
 
-    public const GROUP_MOVIE = 'FILM';
+    public const string GROUP_MOVIE = 'FILM';
 
-    public const GROUP_MOVIE_LINK = 'FILMLINK';
+    public const string GROUP_MOVIE_LINK = 'FILMLINK';
 
-    public const GROUP_ENERGY_PASS_SCALE = 'EPASS-SKALA';
+    public const string GROUP_ENERGY_PASS_SCALE = 'EPASS-SKALA';
 
-    public const GROUP_PROPERTY_URL = 'ANBOBJURL';
+    public const string GROUP_PROPERTY_URL = 'ANBOBJURL';
 
     public function __construct(
         /**

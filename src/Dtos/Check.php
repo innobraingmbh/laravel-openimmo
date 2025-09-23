@@ -19,11 +19,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Check
 {
-    public const CONTACT_TYPE_MD5 = 'MD5';
+    public const string CONTACT_TYPE_MD5 = 'MD5';
 
-    public const CONTACT_TYPE_DATETIME = 'DATETIME';
+    public const string CONTACT_TYPE_DATETIME = 'DATETIME';
 
-    public const CONTACT_TYPE_ETAG = 'ETAG';
+    public const string CONTACT_TYPE_ETAG = 'ETAG';
 
     public function __construct(
         /**

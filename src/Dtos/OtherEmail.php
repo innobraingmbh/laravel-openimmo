@@ -17,13 +17,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class OtherEmail
 {
-    public const EMAIL_TYPE_HQ_MARKETING = 'EM_ZENTRALE';
+    public const string EMAIL_TYPE_HQ_MARKETING = 'EM_ZENTRALE';
 
-    public const EMAIL_TYPE_DIRECT_MARKETING = 'EM_DIREKT';
+    public const string EMAIL_TYPE_DIRECT_MARKETING = 'EM_DIREKT';
 
-    public const EMAIL_TYPE_PRIVATE_MARKETING = 'EM_PRIVAT';
+    public const string EMAIL_TYPE_PRIVATE_MARKETING = 'EM_PRIVAT';
 
-    public const EMAIL_TYPE_OTHER_MARKETING = 'EM_SONSTIGE';
+    public const string EMAIL_TYPE_OTHER_MARKETING = 'EM_SONSTIGE';
 
     public function __construct(
         /**

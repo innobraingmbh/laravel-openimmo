@@ -18,13 +18,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class ActualRentalIncome
 {
-    public const PERIOD_DAY = 'TAG';
+    public const string PERIOD_DAY = 'TAG';
 
-    public const PERIOD_WEEK = 'WOCHE';
+    public const string PERIOD_WEEK = 'WOCHE';
 
-    public const PERIOD_MONTH = 'MONAT';
+    public const string PERIOD_MONTH = 'MONAT';
 
-    public const PERIOD_YEAR = 'JAHR';
+    public const string PERIOD_YEAR = 'JAHR';
 
     public function __construct(
         /**

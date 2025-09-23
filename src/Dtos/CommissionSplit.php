@@ -18,11 +18,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class CommissionSplit
 {
-    public const VALUE_ABSOLUTE = 'absolut';
+    public const string VALUE_ABSOLUTE = 'absolut';
 
-    public const VALUE_PERCENT = 'prozent';
+    public const string VALUE_PERCENT = 'prozent';
 
-    public const VALUE_TEXT = 'text';
+    public const string VALUE_TEXT = 'text';
 
     public function __construct(
         /**

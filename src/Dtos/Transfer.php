@@ -18,19 +18,19 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Transfer
 {
-    public const TYPE_ONLINE = 'ONLINE';
+    public const string TYPE_ONLINE = 'ONLINE';
 
-    public const TYPE_OFFLINE = 'OFFLINE';
+    public const string TYPE_OFFLINE = 'OFFLINE';
 
-    public const SCOPE_PARTIAL = 'TEIL';
+    public const string SCOPE_PARTIAL = 'TEIL';
 
-    public const SCOPE_FULL = 'VOLL';
+    public const string SCOPE_FULL = 'VOLL';
 
-    public const MODE_NEW = 'NEW';
+    public const string MODE_NEW = 'NEW';
 
-    public const MODE_CHANGE = 'CHANGE';
+    public const string MODE_CHANGE = 'CHANGE';
 
-    public const MODE_DELETE = 'DELETE';
+    public const string MODE_DELETE = 'DELETE';
 
     public function __construct(
         /**

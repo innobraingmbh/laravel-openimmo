@@ -21,13 +21,13 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Other
 {
-    public const OTHER_TYPE_PARKING_GARAGE = 'PARKHAUS';
+    public const string OTHER_TYPE_PARKING_GARAGE = 'PARKHAUS';
 
-    public const OTHER_TYPE_GAS_STATION = 'TANKSTELLE';
+    public const string OTHER_TYPE_GAS_STATION = 'TANKSTELLE';
 
-    public const OTHER_TYPE_HOSPITAL = 'KRANKENHAUS';
+    public const string OTHER_TYPE_HOSPITAL = 'KRANKENHAUS';
 
-    public const OTHER_TYPE_OTHER = 'SONSTIGE';
+    public const string OTHER_TYPE_OTHER = 'SONSTIGE';
 
     public function __construct(
         /**

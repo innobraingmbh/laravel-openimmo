@@ -17,25 +17,25 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Parking
 {
-    public const PARKING_TYPE_PARKING_SPACE = 'STELLPLATZ';
+    public const string PARKING_TYPE_PARKING_SPACE = 'STELLPLATZ';
 
-    public const PARKING_TYPE_CARPORT = 'CARPORT';
+    public const string PARKING_TYPE_CARPORT = 'CARPORT';
 
-    public const PARKING_TYPE_DOUBLE_GARAGE = 'DOPPELGARAGE';
+    public const string PARKING_TYPE_DOUBLE_GARAGE = 'DOPPELGARAGE';
 
-    public const PARKING_TYPE_DUPLEX = 'DUPLEX';
+    public const string PARKING_TYPE_DUPLEX = 'DUPLEX';
 
-    public const PARKING_TYPE_UNDERGROUND_GARAGE = 'TIEFGARAGE';
+    public const string PARKING_TYPE_UNDERGROUND_GARAGE = 'TIEFGARAGE';
 
-    public const PARKING_TYPE_BOAT_MOORING = 'BOOTSLIEGEPLATZ';
+    public const string PARKING_TYPE_BOAT_MOORING = 'BOOTSLIEGEPLATZ';
 
-    public const PARKING_TYPE_SINGLE_GARAGE = 'EINZELGARAGE';
+    public const string PARKING_TYPE_SINGLE_GARAGE = 'EINZELGARAGE';
 
-    public const PARKING_TYPE_PARKING_GARAGE = 'PARKHAUS';
+    public const string PARKING_TYPE_PARKING_GARAGE = 'PARKHAUS';
 
-    public const PARKING_TYPE_UNDERGROUND_PARKING_SPACE = 'TIEFGARAGENSTELLPLATZ';
+    public const string PARKING_TYPE_UNDERGROUND_PARKING_SPACE = 'TIEFGARAGENSTELLPLATZ';
 
-    public const PARKING_TYPE_PARKING_SPACE_WITH_ELECTRICITY = 'PARKPLATZ_STROM';
+    public const string PARKING_TYPE_PARKING_SPACE_WITH_ELECTRICITY = 'PARKPLATZ_STROM';
 
     public function __construct(
         /**

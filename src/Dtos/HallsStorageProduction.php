@@ -17,29 +17,29 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class HallsStorageProduction
 {
-    public const HALL_TYPE_HALL = 'HALLE';
+    public const string HALL_TYPE_HALL = 'HALLE';
 
-    public const HALL_TYPE_INDUSTRIAL_HALL = 'INDUSTRIEHALLE';
+    public const string HALL_TYPE_INDUSTRIAL_HALL = 'INDUSTRIEHALLE';
 
-    public const HALL_TYPE_WAREHOUSE = 'LAGER';
+    public const string HALL_TYPE_WAREHOUSE = 'LAGER';
 
-    public const HALL_TYPE_STORAGE_AREAS = 'LAGERFLAECHEN';
+    public const string HALL_TYPE_STORAGE_AREAS = 'LAGERFLAECHEN';
 
-    public const HALL_TYPE_WAREHOUSE_WITH_OPEN_SPACE = 'LAGER_MIT_FREIFLAECHE';
+    public const string HALL_TYPE_WAREHOUSE_WITH_OPEN_SPACE = 'LAGER_MIT_FREIFLAECHE';
 
-    public const HALL_TYPE_HIGH_BAY_WAREHOUSE = 'HOCHREGALLAGER';
+    public const string HALL_TYPE_HIGH_BAY_WAREHOUSE = 'HOCHREGALLAGER';
 
-    public const HALL_TYPE_FORWARDING_WAREHOUSE = 'SPEDITIONSLAGER';
+    public const string HALL_TYPE_FORWARDING_WAREHOUSE = 'SPEDITIONSLAGER';
 
-    public const HALL_TYPE_PRODUCTION = 'PRODUKTION';
+    public const string HALL_TYPE_PRODUCTION = 'PRODUKTION';
 
-    public const HALL_TYPE_WORKSHOP = 'WERKSTATT';
+    public const string HALL_TYPE_WORKSHOP = 'WERKSTATT';
 
-    public const HALL_TYPE_SERVICE = 'SERVICE';
+    public const string HALL_TYPE_SERVICE = 'SERVICE';
 
-    public const HALL_TYPE_OPEN_SPACES = 'FREIFLAECHEN';
+    public const string HALL_TYPE_OPEN_SPACES = 'FREIFLAECHEN';
 
-    public const HALL_TYPE_COLD_STORAGE = 'KUEHLHAUS';
+    public const string HALL_TYPE_COLD_STORAGE = 'KUEHLHAUS';
 
     public function __construct(
         /**

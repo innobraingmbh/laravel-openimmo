@@ -17,11 +17,11 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Basement
 {
-    public const CELLAR_JA = 'JA';
+    public const string CELLAR_JA = 'JA';
 
-    public const CELLAR_NEIN = 'NEIN';
+    public const string CELLAR_NEIN = 'NEIN';
 
-    public const CELLAR_PARTIAL = 'TEIL';
+    public const string CELLAR_PARTIAL = 'TEIL';
 
     public function __construct(
         /**

@@ -19,33 +19,33 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Distances
 {
-    public const DISTANCE_TO_AIRPORT = 'FLUGHAFEN';
+    public const string DISTANCE_TO_AIRPORT = 'FLUGHAFEN';
 
-    public const DISTANCE_TO_LONG_DISTANCE_TRAIN_STATION = 'FERNBAHNHOF';
+    public const string DISTANCE_TO_LONG_DISTANCE_TRAIN_STATION = 'FERNBAHNHOF';
 
-    public const DISTANCE_TO_HIGHWAY = 'AUTOBAHN';
+    public const string DISTANCE_TO_HIGHWAY = 'AUTOBAHN';
 
-    public const DISTANCE_TO_SUBWAY = 'US_BAHN';
+    public const string DISTANCE_TO_SUBWAY = 'US_BAHN';
 
-    public const DISTANCE_TO_BUS = 'BUS';
+    public const string DISTANCE_TO_BUS = 'BUS';
 
-    public const DISTANCE_TO_KINDERGARTENS = 'KINDERGAERTEN';
+    public const string DISTANCE_TO_KINDERGARTENS = 'KINDERGAERTEN';
 
-    public const DISTANCE_TO_ELEMENTARY_SCHOOL = 'GRUNDSCHULE';
+    public const string DISTANCE_TO_ELEMENTARY_SCHOOL = 'GRUNDSCHULE';
 
-    public const DISTANCE_TO_MAIN_SCHOOL = 'HAUPTSCHULE';
+    public const string DISTANCE_TO_MAIN_SCHOOL = 'HAUPTSCHULE';
 
-    public const DISTANCE_TO_INTERMEDIATE_SCHOOL = 'REALSCHULE';
+    public const string DISTANCE_TO_INTERMEDIATE_SCHOOL = 'REALSCHULE';
 
-    public const DISTANCE_TO_COMPREHENSIVE_SCHOOL = 'GESAMTSCHULE';
+    public const string DISTANCE_TO_COMPREHENSIVE_SCHOOL = 'GESAMTSCHULE';
 
-    public const DISTANCE_TO_HIGH_SCHOOL = 'GYMNASIUM';
+    public const string DISTANCE_TO_HIGH_SCHOOL = 'GYMNASIUM';
 
-    public const DISTANCE_TO_CENTER = 'ZENTRUM';
+    public const string DISTANCE_TO_CENTER = 'ZENTRUM';
 
-    public const DISTANCE_TO_SHOPPING_FACILITIES = 'EINKAUFSMOEGLICHKEITEN';
+    public const string DISTANCE_TO_SHOPPING_FACILITIES = 'EINKAUFSMOEGLICHKEITEN';
 
-    public const DISTANCE_TO_RESTAURANTS = 'GASTSTAETTEN';
+    public const string DISTANCE_TO_RESTAURANTS = 'GASTSTAETTEN';
 
     public function __construct(
         /**

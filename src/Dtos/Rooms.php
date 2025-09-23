@@ -17,7 +17,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Rooms
 {
-    public const ROOM_TYPE_ROOM = 'ZIMMER';
+    public const string ROOM_TYPE_ROOM = 'ZIMMER';
 
     public function __construct(
         /**
