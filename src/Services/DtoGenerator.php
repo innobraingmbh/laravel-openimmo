@@ -355,7 +355,7 @@ class DtoGenerator
                         $prefix = str($name)->upper();
                         $prefix = str(TranslationService::translateConstant($prefix->toString()));
                         collect($options)
-                            ->each(function (array $option) use ($class, $prefix) {
+                            ->each(function (array $option) use ($property, $class, $prefix) {
                                 $name = str(data_get($option, 'value'))
                                     ->replace(['-', ' '], '_')
                                     ->upper()
@@ -372,7 +372,8 @@ class DtoGenerator
                                     return;
                                 }
 
-                                $class->addConstant($constantName, data_get($option, 'value'));
+                                $class->addConstant($constantName, data_get($option, 'value'))
+                                    ->setType($property->getType());
                             });
 
                         $property->addComment("@see {$prefix}_* constants")
