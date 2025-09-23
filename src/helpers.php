@@ -67,6 +67,7 @@ use Innobrain\OpenImmo\Dtos\NetHeatingCosts;
 use Innobrain\OpenImmo\Dtos\NetMainRent;
 use Innobrain\OpenImmo\Dtos\NetOperatingCosts;
 use Innobrain\OpenImmo\Dtos\NetRentPerSqmFrom;
+use Innobrain\OpenImmo\Dtos\OfficePractices;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Dtos\Other;
 use Innobrain\OpenImmo\Dtos\OtherEmail;
@@ -286,6 +287,26 @@ function getPlot(OpenImmo $openImmo): Plot
         $child = new Plot;
         $children[] = $child;
         $parent->setPlot($children);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the OfficePractices object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getOfficePractices(OpenImmo $openImmo): OfficePractices
+{
+    $parent = getPropertyType($openImmo);
+    $children = $parent->getOfficePractices();
+    $child = data_get($children, '0');
+
+    if (! $child instanceof OfficePractices) {
+        $child = new OfficePractices;
+        $children[] = $child;
+        $parent->setOfficePractices($children);
     }
 
     return $child;

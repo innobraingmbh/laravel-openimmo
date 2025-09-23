@@ -68,7 +68,7 @@ class PropertyType
          *
          * @SerializedName("buero_praxen")
          */
-        protected array $officesPractices = [],
+        protected array $officePractices = [],
         /**
          * @XmlList(inline = true, entry = "einzelhandel")
          *
@@ -224,14 +224,14 @@ class PropertyType
     /**
      * Returns array of array
      */
-    public function getOfficesPractices(): array
+    public function getOfficePractices(): array
     {
-        return $this->officesPractices;
+        return $this->officePractices;
     }
 
-    public function setOfficesPractices(array $officesPractices): PropertyType
+    public function setOfficePractices(array $officePractices): PropertyType
     {
-        $this->officesPractices = $officesPractices;
+        $this->officePractices = $officePractices;
 
         return $this;
     }
