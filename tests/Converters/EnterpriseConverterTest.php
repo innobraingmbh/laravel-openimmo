@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
+use Innobrain\OpenImmo\Converters\EnterpriseConverter;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Enums\ConverterDriver;
 use Innobrain\OpenImmo\Facades\FormatConverterService;
@@ -50,4 +51,18 @@ test('can convert a open immo xml', function () {
             'erstellt_am' => '2025-04-01 00:00:00',
             'importId' => '8333',
         ]);
+});
+
+test('can overwrite open immo property', function () {
+    $openImmo = new OpenImmo;
+    $areas = getAreas($openImmo);
+    $areas->setLivingArea(120.5);
+
+    /** @var EnterpriseConverter $enterpriseConverter */
+    $enterpriseConverter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $enterpriseConverter->convertAreas();
+
+    expect($result['wohnflaeche'])->toBe('120.50');
 });

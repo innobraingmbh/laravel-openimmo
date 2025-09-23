@@ -38,4 +38,9 @@ class FormatConverterService extends Manager implements ConverterInterface
     {
         return ConverterDriver::Enterprise->value;
     }
+
+    public function setOpenImmo(OpenImmo $openImmo): ConverterInterface
+    {
+        return $this->driver()->setOpenImmo($openImmo);
+    }
 }

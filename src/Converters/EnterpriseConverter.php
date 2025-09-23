@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Converters;
 
 use Innobrain\OpenImmo\Converters\Concerns\BaseConverter;
-use Innobrain\OpenImmo\Converters\Concerns\ConverterInterface;
 use Innobrain\OpenImmo\Converters\Enterprise\Areas;
 use Innobrain\OpenImmo\Converters\Enterprise\ConditionInformation;
 use Innobrain\OpenImmo\Converters\Enterprise\Equipment;
@@ -21,7 +20,7 @@ use Innobrain\OpenImmo\Converters\Enterprise\TypeOfUse;
 use Innobrain\OpenImmo\Converters\Enterprise\UserDefinedSimpleFields;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 
-class EnterpriseConverter extends BaseConverter implements ConverterInterface
+class EnterpriseConverter extends BaseConverter
 {
     use Areas;
     use ConditionInformation;

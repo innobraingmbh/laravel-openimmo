@@ -6,12 +6,21 @@ namespace Innobrain\OpenImmo\Converters\Concerns;
 
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 
-class BaseConverter
+abstract class BaseConverter implements ConverterInterface
 {
     protected OpenImmo $openImmo;
+
+    public function setOpenImmo(OpenImmo $openImmo): static
+    {
+        $this->saveOpenImmo($openImmo);
+
+        return $this;
+    }
 
     protected function saveOpenImmo(OpenImmo $openImmo): void
     {
         $this->openImmo = $openImmo;
     }
+
+    abstract public function convert(OpenImmo $openImmo): array;
 }
