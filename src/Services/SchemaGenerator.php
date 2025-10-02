@@ -99,8 +99,8 @@ class SchemaGenerator
         }
 
         return match ($type) {
-            'int', 'float' => new NumberSchema($name, $name, $isNullable),
-            'bool' => new BooleanSchema($name, $name, $isNullable),
+            'int', '?int', 'float', '?float' => new NumberSchema($name, $name, $isNullable),
+            'bool', '?bool' => new BooleanSchema($name, $name, $isNullable),
             default => new StringSchema($name, $name, $isNullable),
         };
     }
