@@ -85,7 +85,7 @@ class TranslationService
         /** @var string|null $value */
         $value = $this->classes->get($key);
 
-        throw_if($value === null, new InvalidArgumentException('Unknown class key: '.$key));
+        throw_if($value === null, InvalidArgumentException::class, 'Unknown class key: '.$key);
 
         return $value;
     }
@@ -99,7 +99,7 @@ class TranslationService
         /** @var string|null $value */
         $value = $this->attributes->get($key);
 
-        throw_if($value === null, new InvalidArgumentException('Unknown attribute key: '.$key));
+        throw_if($value === null, InvalidArgumentException::class, 'Unknown attribute key: '.$key);
 
         return $value;
     }
@@ -117,7 +117,7 @@ class TranslationService
         /** @var string|null $value */
         $value = $this->properties->get($key);
 
-        throw_if($value === null, new InvalidArgumentException('Unknown property key: '.$key));
+        throw_if($value === null, InvalidArgumentException::class, 'Unknown property key: '.$key);
 
         return $value;
     }

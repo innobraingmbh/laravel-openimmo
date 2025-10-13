@@ -22,7 +22,6 @@ return RectorConfig::configure()
     )
     ->withRules([
         RemoveDumpDataDeadCodeRector::class,
-        AppEnvironmentComparisonToParameterRector::class,
     ])
     ->withSets([
         LevelSetList::UP_TO_PHP_84,
