@@ -9,6 +9,7 @@ use Innobrain\OpenImmo\Converters\Concerns\ConverterInterface;
 use Innobrain\OpenImmo\Converters\EnterpriseConverter;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Enums\ConverterDriver;
+use Override;
 
 class FormatConverterService extends Manager implements ConverterInterface
 {
@@ -25,6 +26,7 @@ class FormatConverterService extends Manager implements ConverterInterface
     /**
      * @param  string|null|ConverterDriver  $driver
      */
+    #[Override]
     public function driver($driver = null): mixed
     {
         if ($driver instanceof ConverterDriver) {

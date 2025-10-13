@@ -7,11 +7,13 @@ namespace Innobrain\OpenImmo\Tests;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Innobrain\OpenImmo\OpenImmoServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Override;
 
 use function Orchestra\Testbench\package_path;
 
 class TestCase extends Orchestra
 {
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

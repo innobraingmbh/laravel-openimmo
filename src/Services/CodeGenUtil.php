@@ -23,7 +23,7 @@ class CodeGenUtil
         if (trim($comment) === '') {
             $currentDescriptionParts = [];
         } else {
-            $currentDescriptionParts = explode($separator ?: self::DESCRIPTION_PART_DELIMITER, $comment);
+            $currentDescriptionParts = explode($separator !== '' && $separator !== '0' ? $separator : self::DESCRIPTION_PART_DELIMITER, $comment);
         }
         $currentDescriptionParts[] = $descriptionPart;
         $classProperty->setComment(implode($separator, $currentDescriptionParts));

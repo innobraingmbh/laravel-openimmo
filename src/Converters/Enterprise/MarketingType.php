@@ -16,7 +16,7 @@ trait MarketingType
         if ($marketingType->getRentLease()) {
             return 'miete';
         }
-        if ($marketingType->getLeasehold()) {
+        if ($marketingType->getLeasehold() === true) {
             return 'erbpacht';
         }
 
