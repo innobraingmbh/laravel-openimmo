@@ -68,7 +68,6 @@ class SchemaGenerator
 
     private function handleProperty(ReflectionProperty $property, ?string $path = null): ?Schema
     {
-        $property->setAccessible(true);
         $name = $property->getName();
 
         if ($this->skipUserDefinedFields && in_array($name, [
