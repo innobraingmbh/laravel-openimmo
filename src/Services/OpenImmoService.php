@@ -15,11 +15,11 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer as JsonSerializer;
 
-class OpenImmoService
+readonly class OpenImmoService
 {
-    private readonly Serializer $serializer;
+    private Serializer $serializer;
 
-    private readonly JsonSerializer $jsonSerializer;
+    private JsonSerializer $jsonSerializer;
 
     public function __construct()
     {

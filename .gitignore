@@ -11,3 +11,6 @@
 !/skeleton/storage/app/Dtos/.gitkeep
 /.phpunit.cache/
 /build/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+/node_modules
