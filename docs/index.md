@@ -16,7 +16,7 @@ features:
   - title: Robust Validation
     details: Ensure data integrity with built-in validation for OpenImmo XML structures.
   - title: Laravel Integration
-    details: Leverage Laravel's powerful features to enhance your OpenImmo data workflows.k
+    details: Leverage Laravel's powerful features to enhance your OpenImmo data workflows.
   - title: Open Source
     details: Join a community-driven project with transparent development and contributions welcome.
   - title: Comprehensive Documentation
