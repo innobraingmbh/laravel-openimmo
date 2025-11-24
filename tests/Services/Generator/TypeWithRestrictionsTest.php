@@ -31,7 +31,7 @@ test('generate type with restrictions', function () {
     expect($property->getComment())
         ->toContain('Minimum length: 1');
 
-    require_once storage_path("app/Dtos/{$generatedClass->getName()}.php");
+    require_once storage_path(sprintf('app/Dtos/%s.php', $generatedClass->getName()));
 
     $className = DtoGenerator::NAMESPACE.'\\'.$generatedClass->getName();
 

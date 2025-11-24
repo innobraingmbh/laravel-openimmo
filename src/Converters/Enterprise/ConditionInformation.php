@@ -18,6 +18,7 @@ trait ConditionInformation
         if (! in_array($conditionInformation->getYearOfConstruction(), [null, '', '0'], true)) {
             $result['baujahr'] = $conditionInformation->getYearOfConstruction();
         }
+
         $condition = $conditionInformation->getCondition();
         if ($condition instanceof Condition) {
             $type = $condition->getConditionType();

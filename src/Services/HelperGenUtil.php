@@ -58,6 +58,7 @@ class HelperGenUtil
         if (in_array($name, $this->recursionBlocker, true)) {
             return;
         }
+
         $this->recursionBlocker[] = $property->getName();
 
         $className = DtoGenerator::NAMESPACE.'\\'.ucfirst($name);
@@ -73,6 +74,7 @@ class HelperGenUtil
             $this->loopProperties($p, [...$classes, $className]);
             $this->generateFunction($p, [...$classes, $className]);
         }
+
         $this->generateFunction($property, $classes);
     }
 
@@ -96,6 +98,7 @@ class HelperGenUtil
         if (! class_exists($propertyClassName)) {
             return;
         }
+
         // @phpstan-ignore-next-line
         $propertyTypeName = $property->getType()?->getName();
         // @phpstan-ignore-next-line
@@ -125,52 +128,52 @@ class HelperGenUtil
         $isStartingClass = $childClassBaseName === 'OpenImmo';
         if ($isStartingClass && $isArrayDto) {
             $function->setBody(<<<PHP
-            \$children = \$openImmo->get$propertyName();
+            \$children = \$openImmo->get{$propertyName}();
             \$child = data_get(\$children, '0');
-            
-            if (! \$child instanceof $propertyName) {
-                \$child = new $propertyName;
+
+            if (! \$child instanceof {$propertyName}) {
+                \$child = new {$propertyName};
                 \$children[] = \$child;
-                \$openImmo->set$propertyName(\$children);
+                \$openImmo->set{$propertyName}(\$children);
             }
-            
+
             return \$child;
             PHP);
         } elseif ($isStartingClass) {
             $function->setBody(<<<PHP
-            \$child = \$openImmo->get$propertyName();
-            
-            if (! \$child instanceof $propertyName) {
-                \$child = new $propertyName;
-                \$openImmo->set$propertyName(\$child);
+            \$child = \$openImmo->get{$propertyName}();
+
+            if (! \$child instanceof {$propertyName}) {
+                \$child = new {$propertyName};
+                \$openImmo->set{$propertyName}(\$child);
             }
-            
+
             return \$child;
             PHP);
         } elseif ($isArrayDto) {
             $function->setBody(<<<PHP
-            \$parent = get$childClassBaseName(\$openImmo);
-            \$children = \$parent->get$propertyName();
+            \$parent = get{$childClassBaseName}(\$openImmo);
+            \$children = \$parent->get{$propertyName}();
             \$child = data_get(\$children, '0');
-            
-            if (! \$child instanceof $propertyName) {
-                \$child = new $propertyName;
+
+            if (! \$child instanceof {$propertyName}) {
+                \$child = new {$propertyName};
                 \$children[] = \$child;
-                \$parent->set$propertyName(\$children);
+                \$parent->set{$propertyName}(\$children);
             }
-            
+
             return \$child;
             PHP);
         } else {
             $function->setBody(<<<PHP
-            \$parent = get$childClassBaseName(\$openImmo);
-            \$child = \$parent->get$propertyName();
-            
-            if (! \$child instanceof $propertyName) {
-                \$child = new $propertyName;
-                \$parent->set$propertyName(\$child);
+            \$parent = get{$childClassBaseName}(\$openImmo);
+            \$child = \$parent->get{$propertyName}();
+
+            if (! \$child instanceof {$propertyName}) {
+                \$child = new {$propertyName};
+                \$parent->set{$propertyName}(\$child);
             }
-            
+
             return \$child;
             PHP);
         }

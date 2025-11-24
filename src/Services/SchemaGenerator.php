@@ -33,7 +33,7 @@ class SchemaGenerator
     private function handleClass(ReflectionClass $class, ?string $path = null, bool $isArray = false): ArraySchema|ObjectSchema
     {
         $properties = $class->getProperties();
-        $path = $path !== null && $path !== '' && $path !== '0' ? $path.'.'.$class->getShortName() : $class->getShortName();
+        $path = in_array($path, [null, '', '0'], true) ? $class->getShortName() : $path.'.'.$class->getShortName();
 
         $schemas = [];
 

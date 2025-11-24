@@ -55,15 +55,19 @@ trait Equipment
         if ($bathroom->getBidet() === true) {
             $result[] = 'bidet';
         }
+
         if ($bathroom->getShower() === true) {
             $result[] = 'dusche';
         }
+
         if ($bathroom->getWindow() === true) {
             $result[] = 'fenster';
         }
+
         if ($bathroom->getUrinal() === true) {
             $result[] = 'pissoir';
         }
+
         if ($bathroom->getBathtub() === true) {
             $result[] = 'wanne';
         }
@@ -80,9 +84,11 @@ trait Equipment
         if ($kitchen->getBuiltInKitchen() === true) {
             $result[] = 'ebk';
         }
+
         if ($kitchen->getOpen() === true) {
             $result[] = 'offen';
         }
+
         if ($kitchen->getPantry() === true) {
             $result[] = 'pantry';
         }
@@ -99,39 +105,51 @@ trait Equipment
         if ($floor->getMarble() === true) {
             $result[] = 'marmor';
         }
+
         if ($floor->getTiles() === true) {
             $result[] = 'fliesen';
         }
+
         if ($floor->getStone() === true) {
             $result[] = 'stein';
         }
+
         if ($floor->getCarpet() === true) {
             $result[] = 'teppichboden';
         }
+
         if ($floor->getParquet() === true) {
             $result[] = 'parkett';
         }
+
         if ($floor->getFinishedParquet() === true) {
             $result[] = 'fertigparkett';
         }
+
         if ($floor->getLaminate() === true) {
             $result[] = 'laminat';
         }
+
         if ($floor->getPlastic() === true) {
             $result[] = 'pvc';
         }
+
         if ($floor->getScreed() === true) {
             $result[] = 'estrich';
         }
+
         if ($floor->getRaisedFloor() === true) {
             $result[] = 'doppelboden';
         }
+
         if ($floor->getLinoleum() === true) {
             $result[] = 'linoleum';
         }
+
         if ($floor->getTerracotta() === true) {
             $result[] = 'terrakotta';
         }
+
         if ($floor->getGranite() === true) {
             $result[] = 'granit';
         }
@@ -148,15 +166,19 @@ trait Equipment
         if ($heatingType->getStove() === true) {
             $result[] = 'ofen';
         }
+
         if ($heatingType->getFloor() === true) {
             $result[] = 'etage';
         }
+
         if ($heatingType->getCentral() === true) {
             $result[] = 'zentral';
         }
+
         if ($heatingType->getRemote() === true) {
             $result[] = 'fern';
         }
+
         if ($heatingType->getFlooring() === true) {
             $result[] = 'fussboden';
         }
@@ -177,39 +199,51 @@ trait Equipment
         if ($heating->getOil() === true) {
             $result[] = 'oel';
         }
+
         if ($heating->getGas() === true) {
             $result[] = 'gas';
         }
+
         if ($heating->getElectric() === true) {
             $result[] = 'strom';
         }
+
         if ($heating->getAlternative() === true) {
             $result[] = 'alternativ';
         }
+
         if ($heating->getSolar() === true) {
             $result[] = 'solar';
         }
+
         if ($heating->getGeothermal() === true) {
             $result[] = 'erdwaerme';
         }
+
         if ($heating->getAirHeatPump() === true) {
             $result[] = 'luftwp';
         }
+
         if ($heating->getBlock() === true) {
             $result[] = 'block';
         }
+
         if ($heating->getWaterElectric() === true) {
             $result[] = 'wasser-elektro';
         }
+
         if ($heating->getPellet() === true) {
             $result[] = 'pellet';
         }
+
         if ($heating->getCoal() === true) {
             $result[] = 'kohle';
         }
+
         if ($heating->getWood() === true) {
             $result[] = 'holz';
         }
+
         if ($heating->getLiquidGas() === true) {
             $result[] = 'fluessiggas';
         }
@@ -225,24 +259,31 @@ trait Equipment
         if ($balconyTerraceOrientation->getNorth() === true) {
             $result[] = 'nord';
         }
+
         if ($balconyTerraceOrientation->getNorthEast() === true) {
             $result[] = 'nordost';
         }
+
         if ($balconyTerraceOrientation->getEast() === true) {
             $result[] = 'ost';
         }
+
         if ($balconyTerraceOrientation->getSouthEast() === true) {
             $result[] = 'suedost';
         }
+
         if ($balconyTerraceOrientation->getSouth() === true) {
             $result[] = 'sued';
         }
+
         if ($balconyTerraceOrientation->getSouthWest() === true) {
             $result[] = 'suedwest';
         }
+
         if ($balconyTerraceOrientation->getWest() === true) {
             $result[] = 'west';
         }
+
         if ($balconyTerraceOrientation->getNorthWest() === true) {
             $result[] = 'nordwest';
         }

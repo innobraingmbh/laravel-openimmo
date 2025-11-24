@@ -17,7 +17,7 @@ function prepareStorage(): void
         'constants',
         'properties',
     ])->each(function ($file) use ($folder) {
-        Storage::put("$folder/$file.csv", '');
+        Storage::put(sprintf('%s/%s.csv', $folder, $file), '');
     });
 }
 

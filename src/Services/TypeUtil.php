@@ -40,7 +40,7 @@ class TypeUtil
                 break;
 
             case 'date':
-                $type = 'DateTime<\'Y-m-d\'>';
+                $type = "DateTime<'Y-m-d'>";
                 break;
 
             case 'decimal':

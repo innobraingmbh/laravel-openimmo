@@ -167,6 +167,7 @@ class DtoGenerator
         $file = new PhpFile;
         $file->addNamespace($namespace);
         $file->setStrictTypes();
+
         $code = (new Printer)->printFile($file);
 
         File::put($this->targetFolder.$class->getName().'.php', $code);
@@ -199,6 +200,7 @@ class DtoGenerator
         if (array_key_exists($propertyName, $class->getProperties())) {
             return;
         }
+
         if ($property instanceof Sequence) {
             foreach ($property->getElements() as $sequenceProperty) {
                 $this->parseProperty($sequenceProperty, $class, $namespace);
@@ -206,6 +208,7 @@ class DtoGenerator
 
             return;
         }
+
         $classProperty = $class->addProperty($propertyName)
             ->setVisibility(Visibility::Protected);
         $xsdType = $this->getPhpPropertyTypeFromXsdElement($property);
@@ -254,7 +257,7 @@ class DtoGenerator
         }
 
         $propertyName = $property->getName();
-        $classProperty->addComment("@SerializedName(\"$propertyName\")");
+        $classProperty->addComment(sprintf('@SerializedName("%s")', $propertyName));
         $namespace->addUse(SerializedName::class);
 
         CodeGenUtil::generateGetterAndSetter($classProperty, $class, true, $nullable);
@@ -346,6 +349,7 @@ class DtoGenerator
         if (! $restrictions instanceof Restriction) {
             return;
         }
+
         $name = $attribute->getName();
 
         collect($restrictions->getChecks())
@@ -376,7 +380,7 @@ class DtoGenerator
                                     ->setType($property->getType());
                             });
 
-                        $property->addComment("@see {$prefix}_* constants")
+                        $property->addComment(sprintf('@see %s_* constants', $prefix))
                             ->setValue(TypeUtil::getDefaultValueForType($property->getType(), false))
                             ->setNullable(false);
                         break;
@@ -411,7 +415,7 @@ class DtoGenerator
     private function addSerializedName(Attribute $attribute, Property $property, PhpNamespace $namespace): void
     {
         $propertyName = $attribute->getName();
-        $property->addComment("@SerializedName(\"$propertyName\")");
+        $property->addComment(sprintf('@SerializedName("%s")', $propertyName));
         $namespace->addUse(SerializedName::class);
     }
 

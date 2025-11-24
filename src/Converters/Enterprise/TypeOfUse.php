@@ -13,9 +13,11 @@ trait TypeOfUse
         if ($typeOfUse->getLiving()) {
             return 'wohnen';
         }
+
         if ($typeOfUse->getFacility() === true) {
             return 'anlage';
         }
+
         if ($typeOfUse->getWaz() === true) {
             return 'waz';
         }

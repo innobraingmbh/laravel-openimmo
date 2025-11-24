@@ -36,13 +36,13 @@ trait GeneratorHelper
     {
         $className = TypeUtil::studly($nameInXsd);
 
-        $fixtureFile = "./tests/fixtures/$className.xsd";
+        $fixtureFile = sprintf('./tests/fixtures/%s.xsd', $className);
 
         $this->getGenerator()
             ->setTargetFolder(storage_path('app/Dtos/'))
             ->generate($fixtureFile);
 
-        $classFileName = storage_path("app/Dtos/$className.php");
+        $classFileName = storage_path(sprintf('app/Dtos/%s.php', $className));
 
         assertFileExists($classFileName);
 
@@ -53,7 +53,7 @@ trait GeneratorHelper
             expect($generatedClass->getComment())->toContain($docBlockComment);
         }
 
-        expect($generatedClass->getComment())->toContain("@XmlRoot(\"$nameInXsd\")");
+        expect($generatedClass->getComment())->toContain(sprintf('@XmlRoot("%s")', $nameInXsd));
 
         return $generatedClass;
     }
@@ -69,7 +69,7 @@ trait GeneratorHelper
 
     public function assertClassHasProperty(ClassType $class, string $propertyName, string $type, bool $hasGetterAndSetter, array $docTags, ?string $xsdType = null): void
     {
-        expect($class->hasProperty($propertyName))->toBeTrue("Class {$class->getName()} does not have property ".$propertyName);
+        expect($class->hasProperty($propertyName))->toBeTrue(sprintf('Class %s does not have property ', $class->getName()).$propertyName);
 
         $property = $class->getProperty($propertyName);
 
@@ -79,14 +79,14 @@ trait GeneratorHelper
 
         $serializerType = TypeUtil::getTypeForSerializer($xsdType ?? $type);
 
-        expect($property->getComment())->toContain("@Type(\"$serializerType\")");
+        expect($property->getComment())->toContain(sprintf('@Type("%s")', $serializerType));
 
         collect($docTags)
             ->each(function (mixed $tagValue, string $tagName) use ($property) {
                 if (empty($tagValue)) {
-                    expect($property->getComment())->toContain("@$tagName");
+                    expect($property->getComment())->toContain('@'.$tagName);
                 } else {
-                    expect($property->getComment())->toContain("@$tagName$tagValue");
+                    expect($property->getComment())->toContain(sprintf('@%s%s', $tagName, $tagValue));
                 }
             });
 
@@ -120,7 +120,7 @@ trait GeneratorHelper
 
     public function getReflectionClassFromGeneratedClass(ClassType $class): ReflectionClass
     {
-        $classFileName = storage_path("app/Dtos/{$class->getName()}.php");
+        $classFileName = storage_path(sprintf('app/Dtos/%s.php', $class->getName()));
 
         assertFileExists($classFileName);
 

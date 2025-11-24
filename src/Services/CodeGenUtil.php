@@ -19,12 +19,14 @@ class CodeGenUtil
         if (trim($descriptionPart) === '') {
             return;
         }
+
         $comment = $classProperty->getComment() ?? '';
         if (trim($comment) === '') {
             $currentDescriptionParts = [];
         } else {
             $currentDescriptionParts = explode($separator !== '' && $separator !== '0' ? $separator : self::DESCRIPTION_PART_DELIMITER, $comment);
         }
+
         $currentDescriptionParts[] = $descriptionPart;
         $classProperty->setComment(implode($separator, $currentDescriptionParts));
     }
@@ -68,6 +70,7 @@ class CodeGenUtil
             $setter->setReturnType('\\'.DtoGenerator::NAMESPACE.'\\'.$class->getName());
             $setterCode .= PHP_EOL.'return $this;';
         }
+
         $setter->setBody($setterCode);
     }
 
@@ -75,8 +78,8 @@ class CodeGenUtil
     {
         $commentLines = explode(self::DESCRIPTION_PART_DELIMITER, $property->getComment() ?? '');
         foreach ($commentLines as $commentLine) {
-            if (str_starts_with($commentLine, "@$annotation")) {
-                return str_replace("@$annotation ", '', $commentLine);
+            if (str_starts_with($commentLine, '@'.$annotation)) {
+                return str_replace(sprintf('@%s ', $annotation), '', $commentLine);
             }
         }
 

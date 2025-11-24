@@ -13,9 +13,11 @@ trait MarketingType
         if ($marketingType->getPurchase()) {
             return 'kauf';
         }
+
         if ($marketingType->getRentLease()) {
             return 'miete';
         }
+
         if ($marketingType->getLeasehold() === true) {
             return 'erbpacht';
         }
