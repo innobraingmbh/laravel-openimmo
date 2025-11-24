@@ -30,8 +30,6 @@ trait Prices
             'mietzuschlaege' => $this->parseFloat($prices->getRentSurcharges()),
             'evbnetto' => $this->parseFloat($prices->getNetUnitValue()?->getValue()),
             'sonstige_kosten' => $this->parseFloat($prices->getOtherCostsNet()?->getValue()),
-            'ust_satz_bk' => '10',
-            'ust_satz_heizkosten' => '20',
             'hauptmiete_exkl_ust' => $this->parseFloat($prices->getNetMainRent()?->getValue()),
             'nebenkosten' => $this->parseFloat($prices->getNetOperatingCosts()?->getValue()),
             'heizkosten_exkl_ust' => $this->parseFloat($prices->getNetHeatingCosts()?->getValue()),
