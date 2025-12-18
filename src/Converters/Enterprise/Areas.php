@@ -49,6 +49,9 @@ trait Areas
             'vermietbare_flaeche' => $this->parseFloat($areas->getRentableArea()),
             'anzahl_wohneinheiten' => $this->parseFloat($areas->getNumberOfResidentialUnits()),
             'anzahl_gewerbeeinheiten' => $this->parseFloat($areas->getNumberOfCommercialUnits()),
+            'anzahl_balkone' => $this->parseFloat($areas->getNumberOfBalconies()),
+            'balkon' => $areas->getNumberOfBalconies() > 0 ? 1 : 0,
+            'terrasse' => $areas->getNumberOfTerraces() > 0 ? 1 : 0,
         ];
     }
 }
