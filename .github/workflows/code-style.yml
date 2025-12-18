@@ -8,6 +8,9 @@ jobs:
   code-style:
     name: Code Style
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.4']
 
     steps:
     - uses: actions/checkout@v4
