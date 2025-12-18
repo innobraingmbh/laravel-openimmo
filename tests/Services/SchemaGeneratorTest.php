@@ -23,7 +23,7 @@ describe('generation', function () {
     });
 
     test('get class description', function () {
-        $schemaGenerator = app(Innobrain\OpenImmo\Services\SchemaGenerator::class);
+        $schemaGenerator = resolve(Innobrain\OpenImmo\Services\SchemaGenerator::class);
         $method = new ReflectionMethod($schemaGenerator, 'getClassDescription');
         $class = new ReflectionClass(HeatingType::class);
         $description = $method->invoke($schemaGenerator, $class);
