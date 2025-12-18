@@ -30,12 +30,18 @@ trait ConditionInformation
         /** @var EnergyPerformanceCertificate|null $energyPass */
         $energyPass = data_get($energyPasses, 0);
         if ($energyPass) {
+            $result['energieausweistyp'] = $energyPass->getEnergyCertificateType();
+            $result['energyClass'] = $energyPass->getValueClass();
+            $result['energieverbrauchskennwert'] = $energyPass->getEnergyConsumptionValue();
+            $result['warmwasserEnthalten'] = $energyPass->getWithHotWater();
+            $result['endenergiebedarf'] = $energyPass->getFinalEnergyDemand();
+            $result['energietraeger'] = $energyPass->getPrimaryEnergySource();
             $result['energieausweis_gueltig_bis'] = $energyPass->getValidUntil();
             $result['energieausweisBaujahr'] = $energyPass->getYearOfConstruction();
             $result['ea_hwb_klasse_at'] = $energyPass->getHeatingDemandClass();
-            $result['ea_hwb_at'] = $energyPass->getHEatingDemandClass();
+            $result['ea_hwb_at'] = $energyPass->getHeatingDemandValue();
             $result['ea_fgee_klasse_at'] = $energyPass->getEnergyEfficiencyClass();
-            $result['ea_fgee_at'] = $energyPass->getEnergyEfficiencyClass();
+            $result['ea_fgee_at'] = $energyPass->getEnergyEfficiencyValue();
             $result['energiepassJahrgang'] = $energyPass->getYear();
         }
 
