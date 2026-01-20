@@ -15,7 +15,7 @@ trait Prices
             'kaltmiete' => $this->parseFloat($prices->getColdRent()),
             'warmmiete' => $this->parseFloat($prices->getWarmRent()),
             'nebenkosten' => $this->parseFloat($prices->getAdditionalCosts()),
-            'heizkosten_in_nebenkosten' => $prices->getHeatingCostsIncluded() ? 'Ja' : 'Nein',
+            'heizkosten_in_nebenkosten' => $prices->getHeatingCostsIncluded() ? 'J' : 'N',
             'heizkosten' => $this->parseFloat($prices->getHeatingCosts()),
             'waehrung' => $prices->getCurrency()?->getIsoCurrency(),
             'kaufpreis_pro_qm' => $this->parseFloat($prices->getPurchasePricePerSqm()),
