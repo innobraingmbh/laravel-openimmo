@@ -13,6 +13,9 @@ trait Prices
         return [
             'kaufpreis' => $this->parseFloat($prices->getPurchasePrice()?->getValue()),
             'kaltmiete' => $this->parseFloat($prices->getColdRent()),
+            'warmmiete' => $this->parseFloat($prices->getWarmRent()),
+            'nebenkosten' => $this->parseFloat($prices->getAdditionalCosts()),
+            'heizkosten_in_nebenkosten' => $prices->getHeatingCostsIncluded(),
             'heizkosten' => $this->parseFloat($prices->getHeatingCosts()),
             'waehrung' => $prices->getCurrency()?->getIsoCurrency(),
             'kaufpreis_pro_qm' => $this->parseFloat($prices->getPurchasePricePerSqm()),
@@ -31,10 +34,8 @@ trait Prices
             'evbnetto' => $this->parseFloat($prices->getNetUnitValue()?->getValue()),
             'sonstige_kosten' => $this->parseFloat($prices->getOtherCostsNet()?->getValue()),
             'hauptmiete_exkl_ust' => $this->parseFloat($prices->getNetMainRent()?->getValue()),
-            'nebenkosten' => $this->parseFloat($prices->getNetOperatingCosts()?->getValue()),
             'heizkosten_exkl_ust' => $this->parseFloat($prices->getNetHeatingCosts()?->getValue()),
             'gesamtbelastung_exkl_ust' => $this->parseFloat($prices->getTotalCostNet()?->getValue()),
-            'warmmiete' => $this->parseFloat($prices->getTotalCostGross()),
             'gesamtmiete_ohk_netto' => $this->parseFloat($prices->getTotalRentNet()?->getValue()),
             'gesamtmiete_ohk_brutto' => $this->parseFloat($prices->getTotalRentGross()),
         ];
