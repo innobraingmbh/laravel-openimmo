@@ -42,9 +42,15 @@ class DtoGenerator
 {
     public const string NAMESPACE = 'Innobrain\\OpenImmo\\Dtos';
 
+    protected string $namespace = self::NAMESPACE;
+
     protected string $targetFolder = './src/Dtos/';
 
     protected bool $wipeTargetFolder = true;
+
+    protected bool $skipTranslation = false;
+
+    protected bool $skipHelperGeneration = false;
 
     protected array $referencedInlineElements = [];
 
@@ -74,6 +80,32 @@ class DtoGenerator
         return $this;
     }
 
+    public function getNamespace(): string
+    {
+        return $this->namespace;
+    }
+
+    public function setNamespace(string $namespace): self
+    {
+        $this->namespace = $namespace;
+
+        return $this;
+    }
+
+    public function setSkipTranslation(bool $skipTranslation = true): self
+    {
+        $this->skipTranslation = $skipTranslation;
+
+        return $this;
+    }
+
+    public function setSkipHelperGeneration(bool $skipHelperGeneration = true): self
+    {
+        $this->skipHelperGeneration = $skipHelperGeneration;
+
+        return $this;
+    }
+
     /**
      * @throws IOException
      */
@@ -95,15 +127,19 @@ class DtoGenerator
                 $this->parseElement($element);
             });
 
-        HelperGenUtil::generate();
+        if (! $this->skipHelperGeneration) {
+            HelperGenUtil::generate();
+        }
     }
 
     protected function parseElement(ElementDef|Element $element): void
     {
         $className = TypeUtil::studly($element->getName());
-        $className = TranslationService::translateClass($className);
+        if (! $this->skipTranslation) {
+            $className = TranslationService::translateClass($className);
+        }
 
-        $namespace = new PhpNamespace(self::NAMESPACE)
+        $namespace = new PhpNamespace($this->namespace)
             ->addUse(XmlRoot::class, 'XmlRoot')
             ->addUse(Type::class, 'Type');
 
@@ -195,7 +231,9 @@ class DtoGenerator
     protected function parseProperty(Element|ElementRef|ElementDef|Sequence|ElementItem $property, ClassType $class, PhpNamespace $namespace): void
     {
         $propertyName = TypeUtil::camelize($property->getName());
-        $propertyName = TranslationService::translateProperty($propertyName);
+        if (! $this->skipTranslation) {
+            $propertyName = TranslationService::translateProperty($propertyName);
+        }
 
         if (array_key_exists($propertyName, $class->getProperties())) {
             return;
@@ -220,8 +258,8 @@ class DtoGenerator
             $namespace->addUse(XmlList::class);
         }
 
-        $phpType = TypeUtil::getValidPhpType($xsdType);
-        $serializerType = TypeUtil::getTypeForSerializer($xsdType);
+        $phpType = TypeUtil::getValidPhpType($xsdType, $this->namespace);
+        $serializerType = TypeUtil::getTypeForSerializer($xsdType, $this->namespace);
 
         $classProperty->addAttribute(Type::class, [$serializerType]);
         $namespace->addUse(Type::class);
@@ -231,7 +269,7 @@ class DtoGenerator
         $nullable = ! $isArray && $property->getMin() === 0;
 
         // if the property type is an object, it should be nullable
-        if ($phpType === '\DateTime' || str_starts_with($serializerType, self::NAMESPACE)) {
+        if ($phpType === '\DateTime' || str_starts_with($serializerType, $this->namespace)) {
             $nullable = true;
         }
 
@@ -260,7 +298,7 @@ class DtoGenerator
         $classProperty->addAttribute(SerializedName::class, [$propertyName]);
         $namespace->addUse(SerializedName::class);
 
-        CodeGenUtil::generateGetterAndSetter($classProperty, $class, true, $nullable);
+        CodeGenUtil::generateGetterAndSetter($classProperty, $class, true, $nullable, $this->namespace);
     }
 
     private function getPhpPropertyTypeFromXsdElement(Item|Element|ElementRef|ElementDef|ElementItem $property): string
@@ -270,12 +308,16 @@ class DtoGenerator
                 $propertyType = TypeUtil::extractTypeForPhp($property->getReferencedElement()->getType());
             } else {
                 $propertyType = TypeUtil::studly($property->getReferencedElement()->getName());
-                $propertyType = TranslationService::translateClass($propertyType);
+                if (! $this->skipTranslation) {
+                    $propertyType = TranslationService::translateClass($propertyType);
+                }
             }
         } elseif ($property->getType() instanceof ComplexType) {
             $this->referencedInlineElements[] = $property;
             $propertyName = TypeUtil::studly($property->getName());
-            $propertyName = TranslationService::translateClass($propertyName);
+            if (! $this->skipTranslation) {
+                $propertyName = TranslationService::translateClass($propertyName);
+            }
             $propertyType = TypeUtil::extractTypeForPhp($property->getType(), $propertyName);
         } else {
             $propertyType = TypeUtil::extractTypeForPhp($property->getType());
@@ -293,7 +335,7 @@ class DtoGenerator
     {
         $xsdType = is_null($extension) ? 'string' : TypeUtil::extractTypeForPhp($extension->getBase());
 
-        $propertyType = TypeUtil::getValidPhpType($xsdType);
+        $propertyType = TypeUtil::getValidPhpType($xsdType, $this->namespace);
 
         $property = $class->addProperty('value')
             ->setVisibility(Visibility::Protected)
@@ -301,22 +343,24 @@ class DtoGenerator
             ->setNullable()
             ->setValue(null)
             ->addAttribute(Inline::class)
-            ->addAttribute(Type::class, [TypeUtil::getTypeForSerializer($xsdType)]);
+            ->addAttribute(Type::class, [TypeUtil::getTypeForSerializer($xsdType, $this->namespace)]);
 
         $namespace
             ->addUse(Type::class)
             ->addUse(Inline::class);
 
-        CodeGenUtil::generateGetterAndSetter($property, $class, true, ! TypeUtil::isConstantsBasedProperty($property));
+        CodeGenUtil::generateGetterAndSetter($property, $class, true, ! TypeUtil::isConstantsBasedProperty($property), $this->namespace);
     }
 
     protected function parseAttribute(Attribute $attribute, ClassType $class, PhpNamespace $namespace): void
     {
         $propertyName = TypeUtil::camelize($attribute->getName());
-        $propertyName = TranslationService::translateAttribute($propertyName);
+        if (! $this->skipTranslation) {
+            $propertyName = TranslationService::translateAttribute($propertyName);
+        }
 
         $xsdType = TypeUtil::extractTypeForPhp($attribute->getType());
-        $phpType = TypeUtil::getValidPhpType($xsdType);
+        $phpType = TypeUtil::getValidPhpType($xsdType, $this->namespace);
 
         $nullable = true;
 
@@ -324,7 +368,7 @@ class DtoGenerator
             ->setVisibility(Visibility::Protected)
             ->setType($phpType);
         $property
-            ->addAttribute(Type::class, [TypeUtil::getTypeForSerializer($xsdType)])
+            ->addAttribute(Type::class, [TypeUtil::getTypeForSerializer($xsdType, $this->namespace)])
             ->addAttribute(XmlAttribute::class);
 
         $namespace->addUse(Type::class);
@@ -340,7 +384,7 @@ class DtoGenerator
 
         $this->parseRestriction($attribute, $property, $class);
 
-        CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable);
+        CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable, $this->namespace);
     }
 
     protected function parseRestriction(Attribute|Element|ElementRef|ElementItem $attribute, Property $property, ClassType $class): void
@@ -357,14 +401,18 @@ class DtoGenerator
                 switch ($type) {
                     case 'enumeration':
                         $prefix = str($name)->upper();
-                        $prefix = str(TranslationService::translateConstant($prefix->toString()));
+                        if (! $this->skipTranslation) {
+                            $prefix = str(TranslationService::translateConstant($prefix->toString()));
+                        }
                         collect($options)
                             ->each(function (array $option) use ($property, $class, $prefix) {
                                 $name = str(data_get($option, 'value'))
                                     ->replace(['-', ' '], '_')
                                     ->upper()
                                     ->toString();
-                                $name = TranslationService::translateConstant($name);
+                                if (! $this->skipTranslation) {
+                                    $name = TranslationService::translateConstant($name);
+                                }
 
                                 $constantName = $prefix->append('_')->append($name)->toString();
 

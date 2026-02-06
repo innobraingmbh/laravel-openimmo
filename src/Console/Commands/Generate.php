@@ -39,5 +39,13 @@ class Generate extends Command
 
         $apiGenerator = new DtoGenerator;
         $apiGenerator->generate(storage_path('app/OpenImmo/openimmo_127c.xsd'));
+
+        $originalGenerator = new DtoGenerator;
+        $originalGenerator
+            ->setNamespace('Innobrain\\OpenImmo\\Dtos\\Original')
+            ->setTargetFolder('./src/Dtos/Original/')
+            ->setSkipTranslation()
+            ->setSkipHelperGeneration();
+        $originalGenerator->generate(storage_path('app/OpenImmo/openimmo_127c.xsd'));
     }
 }
