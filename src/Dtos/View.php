@@ -25,6 +25,11 @@ class View
     public const string VIEW_SEA = 'MEER';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see VIEW_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('blick')]

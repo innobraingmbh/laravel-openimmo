@@ -30,10 +30,16 @@ class ParkingOther
     public const string PLACE_TYPE_OTHER = 'SONSTIGES';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see PLACE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('platzart')]
         protected string $spaceType = '',
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

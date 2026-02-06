@@ -21,6 +21,11 @@ class Age
     public const string AGE_ATTRIBUTE_NEW_CONSTRUCTION = 'NEUBAU';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see AGE_ATTRIBUTE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('alter_attr')]

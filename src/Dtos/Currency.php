@@ -381,6 +381,11 @@ class Currency
     public const string ISO_CURRENCY_ZWD = 'ZWD';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see ISO_CURRENCY_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('iso_waehrung')]

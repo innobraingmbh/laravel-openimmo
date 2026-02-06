@@ -17,22 +17,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 class HeatingType
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFEN')]
         protected ?bool $stove = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ETAGE')]
         protected ?bool $floor = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ZENTRAL')]
         protected ?bool $central = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
         protected ?bool $remote = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FUSSBODEN')]

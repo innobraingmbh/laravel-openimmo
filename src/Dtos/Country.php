@@ -481,6 +481,11 @@ class Country
     public const string ISO_COUNTRY_ZWE = 'ZWE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see ISO_COUNTRY_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('iso_land')]

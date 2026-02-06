@@ -32,39 +32,60 @@ class Transfer
     public const string MODE_DELETE = 'DELETE';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
         protected string $type = '',
+        /**
+         * required
+         *
+         * @see SCOPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('umfang')]
         protected string $scope = '',
+        /**
+         * optional
+         *
+         * @see MODE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('modus')]
         protected string $mode = '',
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('version')]
         protected string $version = '',
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sendersoftware')]
         protected string $senderSoftware = '',
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('senderversion')]
         protected string $senderVersion = '',
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('techn_email')]
         protected ?string $technicalEmail = null,
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('regi_id')]
         protected ?string $regionId = null,
-        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        /** optional */
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[XmlAttribute]
         #[SerializedName('timestamp')]
         protected ?DateTime $timestamp = null

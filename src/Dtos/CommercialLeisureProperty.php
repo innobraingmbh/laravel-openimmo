@@ -23,6 +23,11 @@ class CommercialLeisureProperty
     public const string LEISURE_TYPE_LEISURE_FACILITY = 'FREIZEITANLAGE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see LEISURE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('freizeit_typ')]

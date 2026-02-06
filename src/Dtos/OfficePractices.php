@@ -37,6 +37,11 @@ class OfficePractices
     public const string OFFICE_TYPE_SHARED_OFFICE = 'SHARED_OFFICE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see OFFICE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('buero_typ')]

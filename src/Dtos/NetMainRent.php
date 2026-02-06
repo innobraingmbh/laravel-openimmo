@@ -17,6 +17,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetMainRent
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('hauptmietzinsust')]

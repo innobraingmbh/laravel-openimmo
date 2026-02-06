@@ -49,6 +49,11 @@ class Condition
     public const string CONDITION_TYPE_PLANNED = 'PROJEKTIERT';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see CONDITION_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zustand_art')]

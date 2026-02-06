@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetTotalRent
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('summemieteust')]

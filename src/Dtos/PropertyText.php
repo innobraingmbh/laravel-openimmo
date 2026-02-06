@@ -19,6 +19,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class PropertyText
 {
     public function __construct(
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('lang')]

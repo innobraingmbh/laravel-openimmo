@@ -35,6 +35,11 @@ class Plot
     public const string PROPERTY_TYPE_LAKESIDE_PROPERTY = 'SEELIEGENSCHAFT';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see PROPERTY_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('grundst_typ')]

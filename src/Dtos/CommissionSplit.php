@@ -24,6 +24,11 @@ class CommissionSplit
     public const string VALUE_TEXT = 'text';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see VALUE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('wert')]

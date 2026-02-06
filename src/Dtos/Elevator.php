@@ -17,10 +17,12 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Elevator
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PERSONEN')]
         protected ?bool $persons = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LASTEN')]

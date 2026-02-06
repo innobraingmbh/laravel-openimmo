@@ -17,34 +17,42 @@ use JMS\Serializer\Annotation\XmlRoot;
 class BalconyTerraceOrientation
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORD')]
         protected ?bool $north = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OST')]
         protected ?bool $east = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUED')]
         protected ?bool $south = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WEST')]
         protected ?bool $west = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDOST')]
         protected ?bool $northeast = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDWEST')]
         protected ?bool $northwest = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDOST')]
         protected ?bool $southeast = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDWEST')]

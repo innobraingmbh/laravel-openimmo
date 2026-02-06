@@ -17,22 +17,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Bathroom
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DUSCHE')]
         protected ?bool $shower = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WANNE')]
         protected ?bool $bathtub = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FENSTER')]
         protected ?bool $window = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BIDET')]
         protected ?bool $bidet = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PISSOIR')]

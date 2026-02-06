@@ -35,6 +35,11 @@ class Retail
     public const string TRADE_TYPE_EXHIBITION_SPACE = 'AUSSTELLUNGSFLAECHE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see TRADE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('handel_typ')]

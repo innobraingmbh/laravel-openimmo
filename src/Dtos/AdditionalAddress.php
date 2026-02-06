@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class AdditionalAddress
 {
     public function __construct(
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('adressart')]
@@ -67,37 +68,45 @@ class AdditionalAddress
         #[Type(Country::class)]
         #[SerializedName('land')]
         protected ?Country $country = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('email_zentrale')]
         protected ?string $centralEmail = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('email_direkt')]
         protected ?string $directEmail = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('email_privat')]
         protected ?string $privateEmail = null,
         #[XmlList(entry: 'email_sonstige', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\OtherEmail>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\OtherEmail>')]
         #[SkipWhenEmpty]
         #[SerializedName('email_sonstige')]
         protected array $otherEmail = [],
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('tel_durchw')]
         protected ?string $phoneExtension = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('tel_zentrale')]
         protected ?string $centralPhoneNumber = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('tel_handy')]
         protected ?string $mobileNumber = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('tel_fax')]
         protected ?string $faxNumber = null,
+        /** Minimum length: 1 */
         #[Type('string')]
         #[SerializedName('tel_privat')]
         protected ?string $privatePhoneNumber = null,
         #[XmlList(entry: 'tel_sonstige', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\OtherPhone>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\OtherPhone>')]
         #[SkipWhenEmpty]
         #[SerializedName('tel_sonstige')]
         protected array $otherPhoneNumber = [],
@@ -114,17 +123,17 @@ class AdditionalAddress
         #[SerializedName('freitextfeld')]
         protected ?string $freeTextField = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []

@@ -25,6 +25,11 @@ class Development
     public const string DEVELOPMENT_ATTRIBUTE_USUALLY_DEVELOPED = 'ORTSUEBLICHERSCHLOSSEN';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see DEVELOPMENT_ATTRIBUTE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('erschl_attr')]

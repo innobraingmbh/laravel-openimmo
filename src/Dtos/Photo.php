@@ -23,6 +23,11 @@ class Photo
     public const string LOCATION_REMOTE = 'REMOTE';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see LOCATION_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]

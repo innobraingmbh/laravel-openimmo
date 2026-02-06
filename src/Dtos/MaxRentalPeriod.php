@@ -26,6 +26,11 @@ class MaxRentalPeriod
     public const string MAX_DURATION_YEAR = 'JAHR';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see MAX_DURATION_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('max_dauer')]

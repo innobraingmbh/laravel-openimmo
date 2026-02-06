@@ -25,6 +25,11 @@ class Action
     public const string ACTION_TYPE_REFERENCE = 'REFERENZ';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see ACTION_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('aktionart')]

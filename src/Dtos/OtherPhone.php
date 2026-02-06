@@ -29,10 +29,16 @@ class OtherPhone
     public const string PHONE_TYPE_OTHER_PHONE = 'TEL_SONSTIGE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see PHONE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('telefonart')]
         protected string $phoneType = '',
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

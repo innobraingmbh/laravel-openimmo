@@ -39,6 +39,11 @@ class Hospitality
     public const string HOSPITALITY_TYPE_ONE_ROOM_ESTABLISHMENT = 'EINRAUMLOKAL';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see HOSPITALITY_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gastgew_typ')]

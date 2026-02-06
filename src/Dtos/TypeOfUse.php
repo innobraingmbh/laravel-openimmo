@@ -17,18 +17,22 @@ use JMS\Serializer\Annotation\XmlRoot;
 class TypeOfUse
 {
     public function __construct(
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WOHNEN')]
         protected bool $living = false,
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GEWERBE')]
         protected bool $commercial = false,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ANLAGE')]
         protected ?bool $facility = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAZ')]

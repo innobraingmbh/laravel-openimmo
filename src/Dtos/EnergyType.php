@@ -16,38 +16,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 class EnergyType
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PASSIVHAUS')]
         protected ?bool $passiveHouse = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NIEDRIGENERGIE')]
         protected ?bool $lowEnergy = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NEUBAUSTANDARD')]
         protected ?bool $newBuildingStandard = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW40')]
         protected ?bool $kfw40 = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW60')]
         protected ?bool $kfw60 = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW55')]
         protected ?bool $kfw55 = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW70')]
         protected ?bool $kfw70 = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIEBAUWEISE')]
         protected ?bool $minEnergieConstruction = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIE_ZERTIFIZIERT')]

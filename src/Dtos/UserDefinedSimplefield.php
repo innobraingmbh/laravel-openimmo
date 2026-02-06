@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class UserDefinedSimplefield
 {
     public function __construct(
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('feldname')]

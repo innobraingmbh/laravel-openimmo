@@ -17,18 +17,22 @@ use JMS\Serializer\Annotation\XmlRoot;
 class LocationInBuilding
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINKS')]
         protected ?bool $left = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('RECHTS')]
         protected ?bool $right = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('VORNE')]
         protected ?bool $front = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HINTEN')]

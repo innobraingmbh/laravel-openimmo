@@ -67,6 +67,11 @@ class House
     public const string HOUSE_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see HOUSE_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('haustyp')]

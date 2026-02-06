@@ -17,110 +17,137 @@ use JMS\Serializer\Annotation\XmlRoot;
 class HeatingSystem
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OEL')]
         protected ?bool $oil = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GAS')]
         protected ?bool $gas = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ELEKTRO')]
         protected ?bool $electric = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ALTERNATIV')]
         protected ?bool $alternative = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SOLAR')]
         protected ?bool $solar = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDWAERME')]
         protected ?bool $geothermal = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LUFTWP')]
         protected ?bool $airHeatPump = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
         protected ?bool $remote = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BLOCK')]
         protected ?bool $block = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WASSER-ELEKTRO')]
         protected ?bool $waterElectric = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PELLET')]
         protected ?bool $pellet = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KOHLE')]
         protected ?bool $coal = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]
         protected ?bool $wood = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLUESSIGGAS')]
         protected ?bool $liquidGas = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDGAS_LEICHT')]
         protected ?bool $lightNaturalGas = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDGAS_SCHWER')]
         protected ?bool $heavyNaturalGas = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERNWAERME_DAMPF')]
         protected ?bool $districtHeatingVapor = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NAHWAERME')]
         protected ?bool $localHeating = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAERMELIEFERUNG')]
         protected ?bool $heatSupply = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BIOENERGIE')]
         protected ?bool $bioEnergy = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WINDENERGIE')]
         protected ?bool $windEnergy = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WASSERENERGIE')]
         protected ?bool $waterEnergy = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('UMWELTWAERME')]
         protected ?bool $environmentalHeat = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_FOSSIL')]
         protected ?bool $chpFossil = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_ERNEUERBAR')]
         protected ?bool $chpRenewable = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_REGENERATIV')]
         protected ?bool $chpRegenerative = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_BIO')]

@@ -41,6 +41,11 @@ class HallsStorageProduction
     public const string HALL_TYPE_COLD_STORAGE = 'KUEHLHAUS';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see HALL_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('hallen_typ')]

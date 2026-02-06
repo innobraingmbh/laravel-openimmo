@@ -23,6 +23,11 @@ class SalesStatus
     public const string CONDITION_SOLD = 'VERKAUFT';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see CONDITION_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('stand')]

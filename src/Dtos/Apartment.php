@@ -45,6 +45,11 @@ class Apartment
     public const string APARTMENT_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see APARTMENT_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('wohnungtyp')]

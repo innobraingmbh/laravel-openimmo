@@ -17,58 +17,72 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Floor
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLIESEN')]
         protected ?bool $tiles = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('STEIN')]
         protected ?bool $stone = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TEPPICH')]
         protected ?bool $carpet = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKETT')]
         protected ?bool $parquet = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGPARKETT')]
         protected ?bool $finishedParquet = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LAMINAT')]
         protected ?bool $laminate = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DIELEN')]
         protected ?bool $floorboards = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KUNSTSTOFF')]
         protected ?bool $plastic = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ESTRICH')]
         protected ?bool $screed = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DOPPELBODEN')]
         protected ?bool $raisedFloor = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINOLEUM')]
         protected ?bool $linoleum = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MARMOR')]
         protected ?bool $marble = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TERRAKOTTA')]
         protected ?bool $terracotta = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GRANIT')]

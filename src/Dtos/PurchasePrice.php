@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class PurchasePrice
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('auf_anfrage')]

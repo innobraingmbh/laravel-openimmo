@@ -26,6 +26,11 @@ class ActualRentalIncome
     public const string PERIOD_YEAR = 'JAHR';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see PERIOD_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('periode')]

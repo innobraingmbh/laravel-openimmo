@@ -54,10 +54,20 @@ class Attachment
     public const string GROUP_PROPERTY_URL = 'ANBOBJURL';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see LOCATION_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
         protected string $location = '',
+        /**
+         * optional
+         *
+         * @see GROUP_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]

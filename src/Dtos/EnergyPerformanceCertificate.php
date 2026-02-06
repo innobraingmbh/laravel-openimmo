@@ -35,6 +35,7 @@ class EnergyPerformanceCertificate
     public const string BUILDING_TYPE_NON_RESIDENTIAL = 'nichtwohn';
 
     public function __construct(
+        /** @see PARTITION_* constants */
         #[Type('string')]
         #[SerializedName('epart')]
         protected string $energyCertificateType = '',
@@ -68,9 +69,11 @@ class EnergyPerformanceCertificate
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('ausstelldatum')]
         protected ?DateTime $issueDate = null,
+        /** @see VINTAGE_* constants */
         #[Type('string')]
         #[SerializedName('jahrgang')]
         protected string $year = '',
+        /** @see BUILDING_TYPE_* constants */
         #[Type('string')]
         #[SerializedName('gebaeudeart')]
         protected string $buildingType = '',

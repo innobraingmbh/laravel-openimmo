@@ -33,6 +33,11 @@ class SportDistances
     public const string DISTANCE_TO_SPORT_LOCAL_RECREATION = 'NAHERHOLUNG';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see DISTANCE_TO_SPORT_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('distanz_zu_sport')]

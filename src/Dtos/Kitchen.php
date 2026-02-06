@@ -17,14 +17,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Kitchen
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('EBK')]
         protected ?bool $builtInKitchen = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFFEN')]
         protected ?bool $open = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PANTRY')]

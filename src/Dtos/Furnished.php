@@ -21,6 +21,11 @@ class Furnished
     public const string FURNISHED_PARTIAL = 'TEIL';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see FURNISHED_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('moeb')]

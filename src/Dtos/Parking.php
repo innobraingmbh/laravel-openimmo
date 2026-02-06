@@ -37,6 +37,11 @@ class Parking
     public const string PARKING_TYPE_PARKING_SPACE_WITH_ELECTRICITY = 'PARKPLATZ_STROM';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see PARKING_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('parken_typ')]

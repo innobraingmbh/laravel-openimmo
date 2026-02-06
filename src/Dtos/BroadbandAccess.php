@@ -17,10 +17,12 @@ use JMS\Serializer\Annotation\XmlRoot;
 class BroadbandAccess
 {
     public function __construct(
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
         protected ?string $type = null,
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('speed')]

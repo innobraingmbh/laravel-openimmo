@@ -16,14 +16,21 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ParkingMultiStorey
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzmiete')]
         protected ?float $parkingSpaceRent = null,
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzkaufpreis')]
         protected ?float $parkingSpacePurchasePrice = null,
+        /**
+         * optional
+         * Minimum value (inclusive): -2147483648
+         * Maximum value (inclusive): 2147483647
+         */
         #[Type('int')]
         #[XmlAttribute]
         #[SerializedName('anzahl')]

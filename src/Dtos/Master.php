@@ -21,6 +21,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Master
 {
     public function __construct(
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('visible')]

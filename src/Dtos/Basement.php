@@ -23,6 +23,11 @@ class Basement
     public const string CELLAR_PARTIAL = 'TEIL';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see CELLAR_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('keller')]

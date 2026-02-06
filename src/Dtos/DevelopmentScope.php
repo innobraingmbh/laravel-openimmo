@@ -25,6 +25,11 @@ class DevelopmentScope
     public const string DEVELOPMENT_ATTRIBUTE_TELECOMMUNICATION = 'TK';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see DEVELOPMENT_ATTRIBUTE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('erschl_attr')]

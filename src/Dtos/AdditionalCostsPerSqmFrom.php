@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class AdditionalCostsPerSqmFrom
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nebenkostenprom2bis')]

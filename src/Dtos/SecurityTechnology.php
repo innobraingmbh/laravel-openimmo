@@ -17,14 +17,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 class SecurityTechnology
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ALARMANLAGE')]
         protected ?bool $alarmSystem = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAMERA')]
         protected ?bool $camera = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('POLIZEIRUF')]

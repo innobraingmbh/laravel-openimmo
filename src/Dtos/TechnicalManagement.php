@@ -63,17 +63,17 @@ class TechnicalManagement
         #[SerializedName('sprache')]
         protected ?string $language = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []

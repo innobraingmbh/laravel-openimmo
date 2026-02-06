@@ -43,6 +43,11 @@ class ApartmentBuildingInvestmentProperty
     public const string INTEREST_TYPE_ASSISTED_LIVING = 'BETREUTES-WOHNEN';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see INTEREST_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zins_typ')]

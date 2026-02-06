@@ -28,7 +28,7 @@ class BiddingProcess
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('besichtigungstermin_2')]
         protected ?DateTime $viewingAppointment2 = null,
-        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('beginn_bietzeit')]
         protected ?DateTime $startOfBiddingTime = null,
         #[Type("DateTime<'Y-m-d'>")]
@@ -41,17 +41,17 @@ class BiddingProcess
         #[SerializedName('mindestpreis')]
         protected ?float $minimumPrice = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []

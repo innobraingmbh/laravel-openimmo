@@ -17,18 +17,22 @@ use JMS\Serializer\Annotation\XmlRoot;
 class MarketingType
 {
     public function __construct(
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAUF')]
         protected bool $purchase = false,
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MIETE_PACHT')]
         protected bool $rentLease = false,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERBPACHT')]
         protected ?bool $leasehold = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LEASING')]

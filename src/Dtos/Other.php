@@ -29,6 +29,11 @@ class Other
     public const string OTHER_TYPE_OTHER = 'SONSTIGE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see OTHER_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sonstige_typ')]

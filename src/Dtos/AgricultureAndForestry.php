@@ -45,6 +45,11 @@ class AgricultureAndForestry
     public const string LAND_TYPE_HUNTING_GROUND = 'JAGDREVIER';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see LAND_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('land_typ')]

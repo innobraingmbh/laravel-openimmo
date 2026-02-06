@@ -25,10 +25,16 @@ class OtherEmail
     public const string EMAIL_TYPE_OTHER_MARKETING = 'EM_SONSTIGE';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see EMAIL_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('emailart')]
         protected string $emailType = '',
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

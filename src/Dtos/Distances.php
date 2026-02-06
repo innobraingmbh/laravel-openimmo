@@ -47,6 +47,11 @@ class Distances
     public const string DISTANCE_TO_RESTAURANTS = 'GASTSTAETTEN';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see DISTANCE_TO_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('distanz_zu')]

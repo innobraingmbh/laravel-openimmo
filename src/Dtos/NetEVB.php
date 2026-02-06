@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetEVB
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('evbust')]

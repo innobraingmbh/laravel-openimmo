@@ -25,12 +25,17 @@ class Check
     public const string CONTACT_TYPE_ETAG = 'ETAG';
 
     public function __construct(
+        /**
+         * required
+         *
+         * @see CONTACT_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('ctype')]
         protected string $contentType = '',
         #[Inline]
-        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         protected ?DateTime $value = null
     ) {}
 

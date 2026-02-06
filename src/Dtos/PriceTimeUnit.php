@@ -25,6 +25,11 @@ class PriceTimeUnit
     public const string TIME_UNIT_YEAR = 'JAHR';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see TIME_UNIT_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zeiteinheit')]

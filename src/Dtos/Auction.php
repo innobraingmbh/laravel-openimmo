@@ -23,10 +23,10 @@ class Auction
         #[Type('string')]
         #[SerializedName('aktenzeichen')]
         protected ?string $fileNumber = null,
-        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $forcedSaleDate = null,
-        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $additionalDate = null,
         #[Type('string')]

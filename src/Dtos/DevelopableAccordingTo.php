@@ -31,6 +31,11 @@ class DevelopableAccordingTo
     public const string BUILDABLE_ATTRIBUTE_BUILDABLE_LAND_WITHOUT_DEVELOPMENT_PLAN = 'BAULAND_OHNE_B_PLAN';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see BUILDABLE_ATTRIBUTE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bebaubar_attr')]

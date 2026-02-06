@@ -26,6 +26,11 @@ class MinRentalPeriod
     public const string MIN_DURATION_YEAR = 'JAHR';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see MIN_DURATION_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('min_dauer')]

@@ -43,6 +43,11 @@ class LocationArea
     public const string AREAS_SECONDARY = '1B';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see AREAS_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gebiete')]

@@ -18,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetCommission
 {
     public function __construct(
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('provisionust')]

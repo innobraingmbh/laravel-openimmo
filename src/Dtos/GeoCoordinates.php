@@ -17,10 +17,12 @@ use JMS\Serializer\Annotation\XmlRoot;
 class GeoCoordinates
 {
     public function __construct(
+        /** required */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('breitengrad')]
         protected float $latitude = 0.0,
+        /** required */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('laengengrad')]

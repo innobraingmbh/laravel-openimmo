@@ -19,6 +19,11 @@ class Rooms
     public const string ROOM_TYPE_ROOM = 'ZIMMER';
 
     public function __construct(
+        /**
+         * optional
+         *
+         * @see ROOM_TYPE_* constants
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zimmertyp')]

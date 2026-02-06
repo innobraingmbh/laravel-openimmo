@@ -16,14 +16,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ConstructionMethod
 {
     public function __construct(
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MASSIV')]
         protected ?bool $solid = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGTEILE')]
         protected ?bool $prefabricatedParts = null,
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]

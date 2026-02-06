@@ -18,7 +18,7 @@ class UserDefinedExtend
 {
     public function __construct(
         #[XmlList(entry: 'feld', inline: true)]
-        #[Type("array<Innobrain\OpenImmo\Dtos\Field>")]
+        #[Type('array<Innobrain\OpenImmo\Dtos\Field>')]
         #[SkipWhenEmpty]
         #[SerializedName('feld')]
         protected array $field = []
