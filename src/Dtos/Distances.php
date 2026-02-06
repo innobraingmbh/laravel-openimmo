@@ -15,8 +15,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Welche Distanz zu dem ausgewählten Ziel besteht (Angabe in km),
  *  Optionen nicht kombinierbar, Distanzelement ist mehrfach erfassbar
  *
- * @XmlRoot("distanzen")
  */
+#[XmlRoot(name: "distanzen")]
 class Distances
 {
     public const string DISTANCE_TO_AIRPORT = 'FLUGHAFEN';
@@ -48,22 +48,12 @@ class Distances
     public const string DISTANCE_TO_RESTAURANTS = 'GASTSTAETTEN';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("distanz_zu")
-         * required
-         *
-         * @see DISTANCE_TO_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("distanz_zu")]
         protected string $distanceTo = '',
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 

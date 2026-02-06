@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Development
  * Stand der Erschließung, Optionen nicht kombinierbar
  *
- * @XmlRoot("erschliessung")
  */
+#[XmlRoot(name: "erschliessung")]
 class Development
 {
     public const string DEVELOPMENT_ATTRIBUTE_UNDEVELOPED = 'UNERSCHLOSSEN';
@@ -26,16 +26,9 @@ class Development
     public const string DEVELOPMENT_ATTRIBUTE_USUALLY_DEVELOPED = 'ORTSUEBLICHERSCHLOSSEN';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("erschl_attr")
-         * optional
-         *
-         * @see DEVELOPMENT_ATTRIBUTE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("erschl_attr")]
         protected string $developmentAttribute = ''
     ) {}
 

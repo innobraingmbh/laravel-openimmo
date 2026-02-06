@@ -13,46 +13,28 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Auction
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
  *
- * @XmlRoot("versteigerung")
  */
+#[XmlRoot(name: "versteigerung")]
 class Auction
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("zwangsversteigerung")
-         */
+        #[Type("bool")]
+        #[SerializedName("zwangsversteigerung")]
         protected ?bool $forcedSale = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("aktenzeichen")
-         */
+        #[Type("string")]
+        #[SerializedName("aktenzeichen")]
         protected ?string $fileNumber = null,
-        /**
-         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-         *
-         * @SerializedName("zvtermin")
-         */
+        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[SerializedName("zvtermin")]
         protected ?DateTime $forcedSaleDate = null,
-        /**
-         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-         *
-         * @SerializedName("zusatztermin")
-         */
+        #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
+        #[SerializedName("zusatztermin")]
         protected ?DateTime $additionalDate = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("amtsgericht")
-         */
+        #[Type("string")]
+        #[SerializedName("amtsgericht")]
         protected ?string $districtCourt = null,
-        /**
-         * @Type("float")
-         *
-         * @SerializedName("verkehrswert")
-         */
+        #[Type("float")]
+        #[SerializedName("verkehrswert")]
         protected ?float $marketValue = null
     ) {}
 

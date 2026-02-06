@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ExternalCommission
  * Courtage, die der Kunde zu zahlen hat, als Betrag in ? / % / MM, daher Textfeld
  *
- * @XmlRoot("aussen_courtage")
  */
+#[XmlRoot(name: "aussen_courtage")]
 class ExternalCommission
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("mit_mwst")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("mit_mwst")]
         protected ?bool $withVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type("string")]
         protected ?string $value = null
     ) {}
 

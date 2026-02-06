@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Furnished
  * Wie ist die Möblierung: Voll, Teil oder keine Aussage
  *
- * @XmlRoot("moebliert")
  */
+#[XmlRoot(name: "moebliert")]
 class Furnished
 {
     public const string FURNISHED_FULL = 'VOLL';
@@ -22,16 +22,9 @@ class Furnished
     public const string FURNISHED_PARTIAL = 'TEIL';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("moeb")
-         * optional
-         *
-         * @see FURNISHED_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("moeb")]
         protected string $furnished = ''
     ) {}
 

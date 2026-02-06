@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetOtherRent
  * Ergänzenden Mietkosten, UmSt. im Attribut.
  *
- * @XmlRoot("sonstigemietenetto")
  */
+#[XmlRoot(name: "sonstigemietenetto")]
 class NetOtherRent
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("sonstigemieteust")
-         * optional
-         */
+        #[Type("float")]
+        #[XmlAttribute]
+        #[SerializedName("sonstigemieteust")]
         protected ?float $otherRentVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 

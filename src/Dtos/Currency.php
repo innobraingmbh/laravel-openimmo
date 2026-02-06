@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Currency
  * Währung
  *
- * @XmlRoot("waehrung")
  */
+#[XmlRoot(name: "waehrung")]
 class Currency
 {
     public const string ISO_CURRENCY_AED = 'AED';
@@ -382,16 +382,9 @@ class Currency
     public const string ISO_CURRENCY_ZWD = 'ZWD';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("iso_waehrung")
-         * optional
-         *
-         * @see ISO_CURRENCY_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("iso_waehrung")]
         protected string $isoCurrency = ''
     ) {}
 

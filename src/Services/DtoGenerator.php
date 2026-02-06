@@ -111,7 +111,7 @@ class DtoGenerator
 
         $class
             ->addComment('Class '.$className.PHP_EOL.$element->getDoc())
-            ->addComment('@XmlRoot("'.$element->getName().'")');
+            ->addAttribute('XmlRoot', ['name' => $element->getName()]);
 
         /** @var Attribute[] $attributes */
         // @phpstan-ignore-next-line
@@ -216,14 +216,14 @@ class DtoGenerator
         // take min/max into account, as this may be an array instead
         // @phpstan-ignore-next-line
         if ($property->getMax() === -1) {
-            $classProperty->addComment('@XmlList(inline = true, entry = "'.$property->getName().'")');
+            $classProperty->addAttribute('XmlList', ['inline' => true, 'entry' => $property->getName()]);
             $namespace->addUse(XmlList::class);
         }
 
         $phpType = TypeUtil::getValidPhpType($xsdType);
         $serializerType = TypeUtil::getTypeForSerializer($xsdType);
 
-        $classProperty->addComment('@Type("'.$serializerType.'")');
+        $classProperty->addAttribute('Type', [$serializerType]);
         $namespace->addUse(Type::class);
 
         $isArray = $phpType === 'array';
@@ -243,7 +243,7 @@ class DtoGenerator
         } else {
             $classProperty
                 ->setValue(TypeUtil::getDefaultValueForType($phpType, false))
-                ->addComment('@SkipWhenEmpty');
+                ->addAttribute('SkipWhenEmpty');
             $namespace->addUse(SkipWhenEmpty::class);
         }
 
@@ -257,7 +257,7 @@ class DtoGenerator
         }
 
         $propertyName = $property->getName();
-        $classProperty->addComment(sprintf('@SerializedName("%s")', $propertyName));
+        $classProperty->addAttribute('SerializedName', [$propertyName]);
         $namespace->addUse(SerializedName::class);
 
         CodeGenUtil::generateGetterAndSetter($classProperty, $class, true, $nullable);
@@ -300,8 +300,8 @@ class DtoGenerator
             ->setType($propertyType)
             ->setNullable()
             ->setValue(null)
-            ->addComment('@Inline')
-            ->addComment('@Type("'.TypeUtil::getTypeForSerializer($xsdType).'")');
+            ->addAttribute('Inline')
+            ->addAttribute('Type', [TypeUtil::getTypeForSerializer($xsdType)]);
 
         $namespace
             ->addUse(Type::class)
@@ -324,8 +324,8 @@ class DtoGenerator
             ->setVisibility(Visibility::Protected)
             ->setType($phpType);
         $property
-            ->addComment('@Type("'.TypeUtil::getTypeForSerializer($xsdType).'")')
-            ->addComment('@XmlAttribute');
+            ->addAttribute('Type', [TypeUtil::getTypeForSerializer($xsdType)])
+            ->addAttribute('XmlAttribute');
 
         $namespace->addUse(Type::class);
 
@@ -415,7 +415,7 @@ class DtoGenerator
     private function addSerializedName(Attribute $attribute, Property $property, PhpNamespace $namespace): void
     {
         $propertyName = $attribute->getName();
-        $property->addComment(sprintf('@SerializedName("%s")', $propertyName));
+        $property->addAttribute('SerializedName', [$propertyName]);
         $namespace->addUse(SerializedName::class);
     }
 

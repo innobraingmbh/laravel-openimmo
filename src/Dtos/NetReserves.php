@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetReserves
  * Vorhanden Rücklagen bei einem Kauf Objekt, UmSt. im Attribut.
  *
- * @XmlRoot("ruecklagenetto")
  */
+#[XmlRoot(name: "ruecklagenetto")]
 class NetReserves
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("ruecklageust")
-         * optional
-         */
+        #[Type("float")]
+        #[XmlAttribute]
+        #[SerializedName("ruecklageust")]
         protected ?float $reserveVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 

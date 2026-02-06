@@ -13,46 +13,28 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Field
  *
- * @XmlRoot("feld")
  */
+#[XmlRoot(name: "feld")]
 class Field
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("name")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("name")]
         protected string $name = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("wert")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("wert")]
         protected string $value = '',
-        /**
-         * @XmlList(inline = true, entry = "typ")
-         *
-         * @Type("array<string>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("typ")
-         */
+        #[XmlList(inline: true, entry: "typ")]
+        #[Type("array<string>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("typ")]
         protected array $type = [],
-        /**
-         * @XmlList(inline = true, entry = "modus")
-         *
-         * @Type("array<string>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("modus")
-         */
+        #[XmlList(inline: true, entry: "modus")]
+        #[Type("array<string>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("modus")]
         protected array $mode = []
     ) {}
 

@@ -13,20 +13,15 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class UserDefinedExtend
  *
- * @XmlRoot("user_defined_extend")
  */
+#[XmlRoot(name: "user_defined_extend")]
 class UserDefinedExtend
 {
     public function __construct(
-        /**
-         * @XmlList(inline = true, entry = "feld")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\Field>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("feld")
-         */
+        #[XmlList(inline: true, entry: "feld")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\Field>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("feld")]
         protected array $field = []
     ) {}
 

@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Retail
  * Objektart / Typ f. Handel
  *
- * @XmlRoot("einzelhandel")
  */
+#[XmlRoot(name: "einzelhandel")]
 class Retail
 {
     public const string TRADE_TYPE_SHOP = 'LADENLOKAL';
@@ -36,16 +36,9 @@ class Retail
     public const string TRADE_TYPE_EXHIBITION_SPACE = 'AUSSTELLUNGSFLAECHE';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("handel_typ")
-         * optional
-         *
-         * @see TRADE_TYPE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("handel_typ")]
         protected string $tradeType = ''
     ) {}
 

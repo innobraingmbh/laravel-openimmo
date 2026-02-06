@@ -14,167 +14,88 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PropertyManagement
  *
- * @XmlRoot("verwaltung_objekt")
  */
+#[XmlRoot(name: "verwaltung_objekt")]
 class PropertyManagement
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("objektadresse_freigeben")
-         */
+        #[Type("bool")]
+        #[SerializedName("objektadresse_freigeben")]
         protected ?bool $releasePropertyAddress = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("verfuegbar_ab")
-         */
+        #[Type("string")]
+        #[SerializedName("verfuegbar_ab")]
         protected ?string $availableFrom = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("abdatum")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName("abdatum")]
         protected ?DateTime $fromDate = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("bisdatum")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName("bisdatum")]
         protected ?DateTime $toDate = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\MinRentalPeriod")
-         *
-         * @SerializedName("min_mietdauer")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\MinRentalPeriod")]
+        #[SerializedName("min_mietdauer")]
         protected ?MinRentalPeriod $minRentalPeriod = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\MaxRentalPeriod")
-         *
-         * @SerializedName("max_mietdauer")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\MaxRentalPeriod")]
+        #[SerializedName("max_mietdauer")]
         protected ?MaxRentalPeriod $maxRentalPeriod = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("versteigerungstermin")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName("versteigerungstermin")]
         protected ?DateTime $auctionDate = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("wbs_sozialwohnung")
-         */
+        #[Type("bool")]
+        #[SerializedName("wbs_sozialwohnung")]
         protected ?bool $socialHousing = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("vermietet")
-         */
+        #[Type("bool")]
+        #[SerializedName("vermietet")]
         protected ?bool $rented = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("gruppennummer")
-         */
+        #[Type("string")]
+        #[SerializedName("gruppennummer")]
         protected ?string $groupNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("zugang")
-         */
+        #[Type("string")]
+        #[SerializedName("zugang")]
         protected ?string $access = null,
-        /**
-         * @Type("float")
-         *
-         * @SerializedName("laufzeit")
-         */
+        #[Type("float")]
+        #[SerializedName("laufzeit")]
         protected ?float $duration = null,
-        /**
-         * @Type("int")
-         * Minimum value (inclusive): 1
-         *
-         * @SerializedName("max_personen")
-         */
+        #[Type("int")]
+        #[SerializedName("max_personen")]
         protected ?int $maxPersons = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("nichtraucher")
-         */
+        #[Type("bool")]
+        #[SerializedName("nichtraucher")]
         protected ?bool $nonSmoker = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("haustiere")
-         */
+        #[Type("bool")]
+        #[SerializedName("haustiere")]
         protected ?bool $pets = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Gender")
-         *
-         * @SerializedName("geschlecht")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Gender")]
+        #[SerializedName("geschlecht")]
         protected ?Gender $gender = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("denkmalgeschuetzt")
-         */
+        #[Type("bool")]
+        #[SerializedName("denkmalgeschuetzt")]
         protected ?bool $listedBuilding = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("als_ferien")
-         */
+        #[Type("bool")]
+        #[SerializedName("als_ferien")]
         protected ?bool $asHoliday = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("gewerbliche_nutzung")
-         */
+        #[Type("bool")]
+        #[SerializedName("gewerbliche_nutzung")]
         protected ?bool $commercialUse = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("branchen")
-         */
+        #[Type("string")]
+        #[SerializedName("branchen")]
         protected ?string $industries = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("hochhaus")
-         */
+        #[Type("bool")]
+        #[SerializedName("hochhaus")]
         protected ?bool $highRise = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_simplefield")]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_anyfield")]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_extend")]
         protected array $userDefinedExtend = []
     ) {}
 

@@ -13,55 +13,30 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Bathroom
  * Welche Eigenschaft besitzt das Bad, Optionen kombinierbar
  *
- * @XmlRoot("bad")
  */
+#[XmlRoot(name: "bad")]
 class Bathroom
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("DUSCHE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("DUSCHE")]
         protected ?bool $shower = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("WANNE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("WANNE")]
         protected ?bool $bathtub = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("FENSTER")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("FENSTER")]
         protected ?bool $window = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("BIDET")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("BIDET")]
         protected ?bool $bidet = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PISSOIR")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("PISSOIR")]
         protected ?bool $urinal = null
     ) {}
 

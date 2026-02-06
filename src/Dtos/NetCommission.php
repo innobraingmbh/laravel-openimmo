@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetCommission
  * Wenn unterschiedliche Provisionen anfallen, dann hier Netto und UmSt. einzeln
  *
- * @XmlRoot("provisionnetto")
  */
+#[XmlRoot(name: "provisionnetto")]
 class NetCommission
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("provisionust")
-         * optional
-         */
+        #[Type("float")]
+        #[XmlAttribute]
+        #[SerializedName("provisionust")]
         protected ?float $commissionVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 

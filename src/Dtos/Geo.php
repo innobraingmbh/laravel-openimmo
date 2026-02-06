@@ -13,170 +13,88 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Geo
  *
- * @XmlRoot("geo")
  */
+#[XmlRoot(name: "geo")]
 class Geo
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("plz")
-         */
+        #[Type("string")]
+        #[SerializedName("plz")]
         protected ?string $postalCode = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("ort")
-         */
+        #[Type("string")]
+        #[SerializedName("ort")]
         protected ?string $city = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\GeoCoordinates")
-         *
-         * @SerializedName("geokoordinaten")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\GeoCoordinates")]
+        #[SerializedName("geokoordinaten")]
         protected ?GeoCoordinates $geoCoordinates = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("strasse")
-         */
+        #[Type("string")]
+        #[SerializedName("strasse")]
         protected ?string $street = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("hausnummer")
-         */
+        #[Type("string")]
+        #[SerializedName("hausnummer")]
         protected ?string $houseNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("bundesland")
-         */
+        #[Type("string")]
+        #[SerializedName("bundesland")]
         protected ?string $state = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Country")
-         *
-         * @SerializedName("land")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Country")]
+        #[SerializedName("land")]
         protected ?Country $country = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("gemeindecode")
-         */
+        #[Type("string")]
+        #[SerializedName("gemeindecode")]
         protected ?string $municipalityCode = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("flur")
-         */
+        #[Type("string")]
+        #[SerializedName("flur")]
         protected ?string $corridor = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("flurstueck")
-         */
+        #[Type("string")]
+        #[SerializedName("flurstueck")]
         protected ?string $parcel = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("gemarkung")
-         */
+        #[Type("string")]
+        #[SerializedName("gemarkung")]
         protected ?string $cadastralDistrict = null,
-        /**
-         * @Type("int")
-         * Minimum value (inclusive): -2147483648
-         * Maximum value (inclusive): 2147483647
-         *
-         * @SerializedName("etage")
-         */
+        #[Type("int")]
+        #[SerializedName("etage")]
         protected ?int $floor = null,
-        /**
-         * @Type("int")
-         * Minimum value (inclusive): -2147483648
-         * Maximum value (inclusive): 2147483647
-         *
-         * @SerializedName("anzahl_etagen")
-         */
+        #[Type("int")]
+        #[SerializedName("anzahl_etagen")]
         protected ?int $numberOfFloors = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\LocationInBuilding")
-         *
-         * @SerializedName("lage_im_bau")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\LocationInBuilding")]
+        #[SerializedName("lage_im_bau")]
         protected ?LocationInBuilding $locationInBuilding = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("wohnungsnr")
-         */
+        #[Type("string")]
+        #[SerializedName("wohnungsnr")]
         protected ?string $apartmentNumber = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\LocationArea")
-         *
-         * @SerializedName("lage_gebiet")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\LocationArea")]
+        #[SerializedName("lage_gebiet")]
         protected ?LocationArea $areaLocation = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("regionaler_zusatz")
-         */
+        #[Type("string")]
+        #[SerializedName("regionaler_zusatz")]
         protected ?string $regionalAddition = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("karten_makro")
-         */
+        #[Type("bool")]
+        #[SerializedName("karten_makro")]
         protected ?bool $macroMap = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("karten_mikro")
-         */
+        #[Type("bool")]
+        #[SerializedName("karten_mikro")]
         protected ?bool $microMap = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("virtuelletour")
-         */
+        #[Type("bool")]
+        #[SerializedName("virtuelletour")]
         protected ?bool $virtualTour = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("luftbildern")
-         */
+        #[Type("bool")]
+        #[SerializedName("luftbildern")]
         protected ?bool $aerialPhotos = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_simplefield")]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_anyfield")]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_extend")]
         protected array $userDefinedExtend = []
     ) {}
 

@@ -15,8 +15,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  *  Change= Update der Objektdaten, Delete = Löschen des Objektes
  *  Referenz= Die Möglichkeit Objekte in Portalen als Verkauft oder Archiv zu definieren.
  *
- * @XmlRoot("aktion")
  */
+#[XmlRoot(name: "aktion")]
 class Action
 {
     public const string ACTION_TYPE_CHANGE = 'CHANGE';
@@ -26,16 +26,9 @@ class Action
     public const string ACTION_TYPE_REFERENCE = 'REFERENZ';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("aktionart")
-         * optional
-         *
-         * @see ACTION_TYPE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("aktionart")]
         protected string $actionType = ''
     ) {}
 

@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Basement
  * Ist das Objekt unterkellert? Optionen nicht kombinierbar
  *
- * @XmlRoot("unterkellert")
  */
+#[XmlRoot(name: "unterkellert")]
 class Basement
 {
     public const string CELLAR_JA = 'JA';
@@ -24,16 +24,9 @@ class Basement
     public const string CELLAR_PARTIAL = 'TEIL';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("keller")
-         * optional
-         *
-         * @see CELLAR_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("keller")]
         protected string $basement = ''
     ) {}
 

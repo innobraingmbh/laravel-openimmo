@@ -13,28 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Elevator
  * Welche Art von Fahrstuhl, Aufzug, Lift - Mehrfachnennung möglich
  *
- * @XmlRoot("fahrstuhl")
  */
+#[XmlRoot(name: "fahrstuhl")]
 class Elevator
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PERSONEN")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("PERSONEN")]
         protected ?bool $persons = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("LASTEN")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("LASTEN")]
         protected ?bool $encumbrances = null
     ) {}
 

@@ -53,7 +53,10 @@ trait GeneratorHelper
             expect($generatedClass->getComment())->toContain($docBlockComment);
         }
 
-        expect($generatedClass->getComment())->toContain(sprintf('@XmlRoot("%s")', $nameInXsd));
+        $xmlRootArguments = $this->getAttributeArguments($generatedClass, 'XmlRoot');
+        expect($xmlRootArguments)
+            ->toHaveKey('name')
+            ->and($xmlRootArguments['name'])->toBe($nameInXsd);
 
         return $generatedClass;
     }
@@ -79,15 +82,22 @@ trait GeneratorHelper
 
         $serializerType = TypeUtil::getTypeForSerializer($xsdType ?? $type);
 
-        expect($property->getComment())->toContain(sprintf('@Type("%s")', $serializerType));
+        $typeArguments = $this->getAttributeArguments($property, 'Type');
+        expect($typeArguments)
+            ->toContain($serializerType);
 
         collect($docTags)
             ->each(function (mixed $tagValue, string $tagName) use ($property) {
-                if (empty($tagValue)) {
-                    expect($property->getComment())->toContain('@'.$tagName);
-                } else {
-                    expect($property->getComment())->toContain(sprintf('@%s%s', $tagName, $tagValue));
+                $arguments = $this->getAttributeArguments($property, $tagName);
+                expect($arguments)->not()->toBeNull();
+
+                if ($tagValue === '' || $tagValue === null) {
+                    expect($arguments)->toBeArray();
+
+                    return;
                 }
+
+                expect($arguments)->toBe($this->parseExpectedAttributeArguments($tagValue));
             });
 
         if ($hasGetterAndSetter) {
@@ -127,5 +137,41 @@ trait GeneratorHelper
         require_once $classFileName;
 
         return new ReflectionClass($class->getNamespace()->getName().'\\'.$class->getName());
+    }
+
+    private function getAttributeArguments(object $element, string $attributeName): ?array
+    {
+        if (! method_exists($element, 'getAttributes')) {
+            return null;
+        }
+
+        foreach ($element->getAttributes() as $attribute) {
+            $name = $attribute->getName();
+            $shortName = str_contains($name, '\\')
+                ? substr($name, (int) strrpos($name, '\\') + 1)
+                : $name;
+
+            if ($name === $attributeName || $shortName === $attributeName) {
+                return $attribute->getArguments();
+            }
+        }
+
+        return null;
+    }
+
+    private function parseExpectedAttributeArguments(string $tagValue): array
+    {
+        if (preg_match('/^\\(\"(.+?)\"\\)$/', $tagValue, $matches) === 1) {
+            return [$matches[1]];
+        }
+
+        if (preg_match('/^\\(inline\\s*=\\s*(true|false),\\s*entry\\s*=\\s*\"(.+?)\"\\)$/', $tagValue, $matches) === 1) {
+            return [
+                'inline' => $matches[1] === 'true',
+                'entry' => $matches[2],
+            ];
+        }
+
+        return [$tagValue];
     }
 }

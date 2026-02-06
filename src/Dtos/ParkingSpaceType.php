@@ -13,64 +13,34 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ParkingSpaceType
  * Welche Stellplatzarten sind vorhanden, Optionen kombinierbar, als einfache Alternative zu den stp...Elementen
  *
- * @XmlRoot("stellplatzart")
  */
+#[XmlRoot(name: "stellplatzart")]
 class ParkingSpaceType
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("GARAGE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("GARAGE")]
         protected ?bool $garage = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("TIEFGARAGE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("TIEFGARAGE")]
         protected ?bool $undergroundParking = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("CARPORT")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("CARPORT")]
         protected ?bool $carport = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("FREIPLATZ")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("FREIPLATZ")]
         protected ?bool $openSpace = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PARKHAUS")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("PARKHAUS")]
         protected ?bool $parkingGarage = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("DUPLEX")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("DUPLEX")]
         protected ?bool $duplex = null
     ) {}
 

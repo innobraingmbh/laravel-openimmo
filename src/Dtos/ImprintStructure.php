@@ -13,90 +13,50 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ImprintStructure
  * Ergänzung ($V120)
  *
- * @XmlRoot("impressum_strukt")
  */
+#[XmlRoot(name: "impressum_strukt")]
 class ImprintStructure
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("firmenname")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("firmenname")]
         protected string $companyName = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("firmenanschrift")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("firmenanschrift")]
         protected string $companyAddress = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("telefon")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("telefon")]
         protected string $phone = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("vertretungsberechtigter")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("vertretungsberechtigter")]
         protected string $authorizedRepresentative = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("berufsaufsichtsbehoerde")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("berufsaufsichtsbehoerde")]
         protected string $professionalSupervisoryAuthority = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("handelsregister")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("handelsregister")]
         protected string $commercialRegister = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("handelsregister_nr")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("handelsregister_nr")]
         protected string $commercialRegisterNumber = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("umsst-id")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("umsst-id")]
         protected string $vatId = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("steuernummer")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("steuernummer")]
         protected string $taxNumber = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("weiteres")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("weiteres")]
         protected string $additional = ''
     ) {}
 

@@ -13,46 +13,26 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class LocationInBuilding
  * Angabe über die Lage der Immobilie im Gesamtgebäude, Optionen kombinierbar
  *
- * @XmlRoot("lage_im_bau")
  */
+#[XmlRoot(name: "lage_im_bau")]
 class LocationInBuilding
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("LINKS")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("LINKS")]
         protected ?bool $left = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("RECHTS")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("RECHTS")]
         protected ?bool $right = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("VORNE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("VORNE")]
         protected ?bool $front = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("HINTEN")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("HINTEN")]
         protected ?bool $rear = null
     ) {}
 

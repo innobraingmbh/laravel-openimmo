@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class House
  * Objektart / Typ f. Haus
  *
- * @XmlRoot("haus")
  */
+#[XmlRoot(name: "haus")]
 class House
 {
     public const string HOUSE_TYPE_TOWNHOUSE = 'REIHENHAUS';
@@ -68,16 +68,9 @@ class House
     public const string HOUSE_TYPE_NO_INFORMATION = 'KEINE_ANGABE';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("haustyp")
-         * optional
-         *
-         * @see HOUSE_TYPE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("haustyp")]
         protected string $houseType = ''
     ) {}
 

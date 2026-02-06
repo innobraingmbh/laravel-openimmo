@@ -13,58 +13,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PropertyCategory
  *
- * @XmlRoot("objektkategorie")
  */
+#[XmlRoot(name: "objektkategorie")]
 class PropertyCategory
 {
     public function __construct(
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\TypeOfUse")
-         *
-         * @SerializedName("nutzungsart")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\TypeOfUse")]
+        #[SerializedName("nutzungsart")]
         protected ?TypeOfUse $typeOfUse = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\MarketingType")
-         *
-         * @SerializedName("vermarktungsart")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\MarketingType")]
+        #[SerializedName("vermarktungsart")]
         protected ?MarketingType $marketingType = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\PropertyType")
-         *
-         * @SerializedName("objektart")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\PropertyType")]
+        #[SerializedName("objektart")]
         protected ?PropertyType $propertyType = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_simplefield")]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_anyfield")]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_extend")]
         protected array $userDefinedExtend = []
     ) {}
 

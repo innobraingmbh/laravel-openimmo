@@ -12,91 +12,46 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class EnergyType
  *
- * @XmlRoot("energietyp")
  */
+#[XmlRoot(name: "energietyp")]
 class EnergyType
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PASSIVHAUS")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("PASSIVHAUS")]
         protected ?bool $passiveHouse = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("NIEDRIGENERGIE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("NIEDRIGENERGIE")]
         protected ?bool $lowEnergy = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("NEUBAUSTANDARD")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("NEUBAUSTANDARD")]
         protected ?bool $newBuildingStandard = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("KFW40")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("KFW40")]
         protected ?bool $kfw40 = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("KFW60")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("KFW60")]
         protected ?bool $kfw60 = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("KFW55")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("KFW55")]
         protected ?bool $kfw55 = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("KFW70")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("KFW70")]
         protected ?bool $kfw70 = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("MINERGIEBAUWEISE")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("MINERGIEBAUWEISE")]
         protected ?bool $minEnergieConstruction = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("MINERGIE_ZERTIFIZIERT")
-         * optional
-         */
+        #[Type("bool")]
+        #[XmlAttribute]
+        #[SerializedName("MINERGIE_ZERTIFIZIERT")]
         protected ?bool $minEnergieCertified = null
     ) {}
 

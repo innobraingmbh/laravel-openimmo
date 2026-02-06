@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Equipment
  *
- * @XmlRoot("ausstattung")
  */
+#[XmlRoot(name: "ausstattung")]
 class Equipment
 {
     public const string EQUIPMENT_CATEGORY_STANDARD = 'STANDARD';
@@ -24,369 +24,186 @@ class Equipment
     public const string EQUIPMENT_CATEGORY_LUXURY = 'LUXUS';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @see EQUIPMENT_CATEGORY_* constants
-         *
-         * @SerializedName("ausstatt_kategorie")
-         */
+        #[Type("string")]
+        #[SerializedName("ausstatt_kategorie")]
         protected string $equipmentCategory = '',
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("wg_geeignet")
-         */
+        #[Type("bool")]
+        #[SerializedName("wg_geeignet")]
         protected ?bool $suitableForSharedFlat = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("raeume_veraenderbar")
-         */
+        #[Type("bool")]
+        #[SerializedName("raeume_veraenderbar")]
         protected ?bool $roomsModifiable = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Bathroom")
-         *
-         * @SerializedName("bad")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Bathroom")]
+        #[SerializedName("bad")]
         protected ?Bathroom $bathroom = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Kitchen")
-         *
-         * @SerializedName("kueche")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Kitchen")]
+        #[SerializedName("kueche")]
         protected ?Kitchen $kitchen = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Floor")
-         *
-         * @SerializedName("boden")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Floor")]
+        #[SerializedName("boden")]
         protected ?Floor $floor = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("kamin")
-         */
+        #[Type("bool")]
+        #[SerializedName("kamin")]
         protected ?bool $fireplace = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\HeatingType")
-         *
-         * @SerializedName("heizungsart")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\HeatingType")]
+        #[SerializedName("heizungsart")]
         protected ?HeatingType $heatingType = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\HeatingSystem")
-         *
-         * @SerializedName("befeuerung")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\HeatingSystem")]
+        #[SerializedName("befeuerung")]
         protected ?HeatingSystem $heating = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("klimatisiert")
-         */
+        #[Type("bool")]
+        #[SerializedName("klimatisiert")]
         protected ?bool $airConditioned = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Elevator")
-         *
-         * @SerializedName("fahrstuhl")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Elevator")]
+        #[SerializedName("fahrstuhl")]
         protected ?Elevator $elevator = null,
-        /**
-         * @XmlList(inline = true, entry = "stellplatzart")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\ParkingSpaceType>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("stellplatzart")
-         */
+        #[XmlList(inline: true, entry: "stellplatzart")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\ParkingSpaceType>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("stellplatzart")]
         protected array $parkingSpaceType = [],
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("gartennutzung")
-         */
+        #[Type("bool")]
+        #[SerializedName("gartennutzung")]
         protected ?bool $gardenUse = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\BalconyTerraceOrientation")
-         *
-         * @SerializedName("ausricht_balkon_terrasse")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\BalconyTerraceOrientation")]
+        #[SerializedName("ausricht_balkon_terrasse")]
         protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Furnished")
-         *
-         * @SerializedName("moebliert")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Furnished")]
+        #[SerializedName("moebliert")]
         protected ?Furnished $furnished = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("rollstuhlgerecht")
-         */
+        #[Type("bool")]
+        #[SerializedName("rollstuhlgerecht")]
         protected ?bool $wheelchairAccessible = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("kabel_sat_tv")
-         */
+        #[Type("bool")]
+        #[SerializedName("kabel_sat_tv")]
         protected ?bool $cableSatelliteTV = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("dvbt")
-         */
+        #[Type("bool")]
+        #[SerializedName("dvbt")]
         protected ?bool $digitalTerrestrialTV = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("barrierefrei")
-         */
+        #[Type("bool")]
+        #[SerializedName("barrierefrei")]
         protected ?bool $barrierFree = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("sauna")
-         */
+        #[Type("bool")]
+        #[SerializedName("sauna")]
         protected ?bool $sauna = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("swimmingpool")
-         */
+        #[Type("bool")]
+        #[SerializedName("swimmingpool")]
         protected ?bool $swimmingPool = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("wasch_trockenraum")
-         */
+        #[Type("bool")]
+        #[SerializedName("wasch_trockenraum")]
         protected ?bool $laundryDryingRoom = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("wintergarten")
-         */
+        #[Type("bool")]
+        #[SerializedName("wintergarten")]
         protected ?bool $winterGarden = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("dv_verkabelung")
-         */
+        #[Type("bool")]
+        #[SerializedName("dv_verkabelung")]
         protected ?bool $dataProcessingCabling = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("rampe")
-         */
+        #[Type("bool")]
+        #[SerializedName("rampe")]
         protected ?bool $ramp = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("hebebuehne")
-         */
+        #[Type("bool")]
+        #[SerializedName("hebebuehne")]
         protected ?bool $liftPlatform = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("kran")
-         */
+        #[Type("bool")]
+        #[SerializedName("kran")]
         protected ?bool $crane = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("gastterrasse")
-         */
+        #[Type("bool")]
+        #[SerializedName("gastterrasse")]
         protected ?bool $guestTerrace = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("stromanschlusswert")
-         */
+        #[Type("string")]
+        #[SerializedName("stromanschlusswert")]
         protected ?string $electricityConnectionValue = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("kantine_cafeteria")
-         */
+        #[Type("bool")]
+        #[SerializedName("kantine_cafeteria")]
         protected ?bool $canteenCafeteria = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("teekueche")
-         */
+        #[Type("bool")]
+        #[SerializedName("teekueche")]
         protected ?bool $kitchenette = null,
-        /**
-         * @Type("float")
-         *
-         * @SerializedName("hallenhoehe")
-         */
+        #[Type("float")]
+        #[SerializedName("hallenhoehe")]
         protected ?float $hallHeight = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\AttachedGastronomy")
-         *
-         * @SerializedName("angeschl_gastronomie")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\AttachedGastronomy")]
+        #[SerializedName("angeschl_gastronomie")]
         protected ?AttachedGastronomy $attachedGastronomy = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("brauereibindung")
-         */
+        #[Type("bool")]
+        #[SerializedName("brauereibindung")]
         protected ?bool $breweryTie = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("sporteinrichtungen")
-         */
+        #[Type("bool")]
+        #[SerializedName("sporteinrichtungen")]
         protected ?bool $sportsFacilities = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("wellnessbereich")
-         */
+        #[Type("bool")]
+        #[SerializedName("wellnessbereich")]
         protected ?bool $wellnessArea = null,
-        /**
-         * @XmlList(inline = true, entry = "serviceleistungen")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\Services>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("serviceleistungen")
-         */
+        #[XmlList(inline: true, entry: "serviceleistungen")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\Services>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("serviceleistungen")]
         protected array $services = [],
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("telefon_ferienimmobilie")
-         */
+        #[Type("bool")]
+        #[SerializedName("telefon_ferienimmobilie")]
         protected ?bool $holidayPropertyPhone = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\BroadbandAccess")
-         *
-         * @SerializedName("breitband_zugang")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\BroadbandAccess")]
+        #[SerializedName("breitband_zugang")]
         protected ?BroadbandAccess $broadbandAccess = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("umts_empfang")
-         */
+        #[Type("bool")]
+        #[SerializedName("umts_empfang")]
         protected ?bool $umtsReception = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\SecurityTechnology")
-         *
-         * @SerializedName("sicherheitstechnik")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\SecurityTechnology")]
+        #[SerializedName("sicherheitstechnik")]
         protected ?SecurityTechnology $securityTechnology = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Basement")
-         *
-         * @SerializedName("unterkellert")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Basement")]
+        #[SerializedName("unterkellert")]
         protected ?Basement $basement = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("abstellraum")
-         */
+        #[Type("bool")]
+        #[SerializedName("abstellraum")]
         protected ?bool $storageRoom = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("fahrradraum")
-         */
+        #[Type("bool")]
+        #[SerializedName("fahrradraum")]
         protected ?bool $bicycleRoom = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("rolladen")
-         */
+        #[Type("bool")]
+        #[SerializedName("rolladen")]
         protected ?bool $shutters = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\RoofShape")
-         *
-         * @SerializedName("dachform")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\RoofShape")]
+        #[SerializedName("dachform")]
         protected ?RoofShape $roofShape = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\ConstructionMethod")
-         *
-         * @SerializedName("bauweise")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\ConstructionMethod")]
+        #[SerializedName("bauweise")]
         protected ?ConstructionMethod $constructionMethod = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\DevelopmentStage")
-         *
-         * @SerializedName("ausbaustufe")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\DevelopmentStage")]
+        #[SerializedName("ausbaustufe")]
         protected ?DevelopmentStage $developmentStage = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\EnergyType")
-         *
-         * @SerializedName("energietyp")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\EnergyType")]
+        #[SerializedName("energietyp")]
         protected ?EnergyType $energyType = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("bibliothek")
-         */
+        #[Type("bool")]
+        #[SerializedName("bibliothek")]
         protected ?bool $library = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("dachboden")
-         */
+        #[Type("bool")]
+        #[SerializedName("dachboden")]
         protected ?bool $attic = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("gaestewc")
-         */
+        #[Type("bool")]
+        #[SerializedName("gaestewc")]
         protected ?bool $guestToilet = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("kabelkanaele")
-         */
+        #[Type("bool")]
+        #[SerializedName("kabelkanaele")]
         protected ?bool $cableChannels = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("seniorengerecht")
-         */
+        #[Type("bool")]
+        #[SerializedName("seniorengerecht")]
         protected ?bool $seniorFriendly = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_simplefield")]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_anyfield")]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_extend")]
         protected array $userDefinedExtend = []
     ) {}
 

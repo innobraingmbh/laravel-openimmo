@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Str;
+use JMS\Serializer\Annotation\Type as SerializerType;
 use Prism\Prism\Contracts\Schema;
 use Prism\Prism\Schema\ArraySchema;
 use Prism\Prism\Schema\BooleanSchema;
@@ -82,12 +83,9 @@ class SchemaGenerator
         $isNullable = $property->getType()?->allowsNull() ?? false;
 
         if ($type === 'array') {
-            $docComment = $property->getDocComment();
-            if ($docComment) {
-                preg_match('/@Type\("array<(.+?)>"\)/', $docComment, $matches);
-                if (isset($matches[1]) && class_exists($matches[1])) {
-                    return $this->handleClass(new ReflectionClass($matches[1]), $path, true);
-                }
+            $serializerType = $this->getSerializerType($property);
+            if ($serializerType && preg_match('/^array<(.+)>$/', $serializerType, $matches) === 1 && class_exists($matches[1])) {
+                return $this->handleClass(new ReflectionClass($matches[1]), $path, true);
             }
         }
 
@@ -102,5 +100,23 @@ class SchemaGenerator
             'bool', '?bool' => new BooleanSchema($name, $name, $isNullable),
             default => new StringSchema($name, $name, $isNullable),
         };
+    }
+
+    private function getSerializerType(ReflectionProperty $property): ?string
+    {
+        $attributes = $property->getAttributes(SerializerType::class);
+        if ($attributes !== []) {
+            /** @var SerializerType $serializerType */
+            $serializerType = $attributes[0]->newInstance();
+
+            return is_string($serializerType->name) ? $serializerType->name : null;
+        }
+
+        $docComment = $property->getDocComment();
+        if (is_string($docComment) && preg_match('/@Type\("(.+?)"\)/', $docComment, $matches) === 1) {
+            return $matches[1];
+        }
+
+        return null;
     }
 }

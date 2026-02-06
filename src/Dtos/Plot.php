@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Plot
  * Objektart / Typ f. Grundstücke
  *
- * @XmlRoot("grundstueck")
  */
+#[XmlRoot(name: "grundstueck")]
 class Plot
 {
     public const string PROPERTY_TYPE_LIVING = 'WOHNEN';
@@ -36,16 +36,9 @@ class Plot
     public const string PROPERTY_TYPE_LAKESIDE_PROPERTY = 'SEELIEGENSCHAFT';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("grundst_typ")
-         * optional
-         *
-         * @see PROPERTY_TYPE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("grundst_typ")]
         protected string $plotType = ''
     ) {}
 

@@ -13,72 +13,41 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Infrastructure
  *
- * @XmlRoot("infrastruktur")
  */
+#[XmlRoot(name: "infrastruktur")]
 class Infrastructure
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("zulieferung")
-         */
+        #[Type("bool")]
+        #[SerializedName("zulieferung")]
         protected ?bool $supply = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\View")
-         *
-         * @SerializedName("ausblick")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\View")]
+        #[SerializedName("ausblick")]
         protected ?View $view = null,
-        /**
-         * @XmlList(inline = true, entry = "distanzen")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\Distances>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("distanzen")
-         */
+        #[XmlList(inline: true, entry: "distanzen")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\Distances>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("distanzen")]
         protected array $distances = [],
-        /**
-         * @XmlList(inline = true, entry = "distanzen_sport")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\SportDistances>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("distanzen_sport")
-         */
+        #[XmlList(inline: true, entry: "distanzen_sport")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\SportDistances>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("distanzen_sport")]
         protected array $sportDistances = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_simplefield")]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_anyfield")]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
+        #[SkipWhenEmpty]
+        #[SerializedName("user_defined_extend")]
         protected array $userDefinedExtend = []
     ) {}
 

@@ -11,16 +11,13 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class UserDefinedAnyfield
  *
- * @XmlRoot("user_defined_anyfield")
  */
+#[XmlRoot(name: "user_defined_anyfield")]
 class UserDefinedAnyfield
 {
     public function __construct(
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type("string")]
         protected ?string $value = null
     ) {}
 

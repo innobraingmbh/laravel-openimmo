@@ -14,8 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Attachment
  * Element für Anhänge
  *
- * @XmlRoot("anhang")
  */
+#[XmlRoot(name: "anhang")]
 class Attachment
 {
     public const string LOCATION_INTERNAL = 'INTERN';
@@ -55,53 +55,26 @@ class Attachment
     public const string GROUP_PROPERTY_URL = 'ANBOBJURL';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("location")
-         * required
-         *
-         * @see LOCATION_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("location")]
         protected string $location = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("gruppe")
-         * optional
-         *
-         * @see GROUP_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("gruppe")]
         protected string $group = '',
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("anhangtitel")
-         */
+        #[Type("string")]
+        #[SerializedName("anhangtitel")]
         protected ?string $attachmentTitle = null,
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("format")
-         */
+        #[Type("string")]
+        #[SkipWhenEmpty]
+        #[SerializedName("format")]
         protected string $format = '',
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Check")
-         *
-         * @SerializedName("check")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Check")]
+        #[SerializedName("check")]
         protected ?Check $check = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Data")
-         *
-         * @SerializedName("daten")
-         */
+        #[Type("Innobrain\OpenImmo\Dtos\Data")]
+        #[SerializedName("daten")]
         protected ?Data $data = null
     ) {}
 

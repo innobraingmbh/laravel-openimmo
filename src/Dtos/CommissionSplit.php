@@ -14,8 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class CommissionSplit
  * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
  *
- * @XmlRoot("provision_teilen")
  */
+#[XmlRoot(name: "provision_teilen")]
 class CommissionSplit
 {
     public const string VALUE_ABSOLUTE = 'absolut';
@@ -25,22 +25,12 @@ class CommissionSplit
     public const string VALUE_TEXT = 'text';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("wert")
-         * optional
-         *
-         * @see VALUE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("wert")]
         protected string $worth = '',
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type("string")]
         protected ?string $value = null
     ) {}
 

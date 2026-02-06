@@ -13,8 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Hospitality
  * Objektart / Typ f. Gastgewerbe
  *
- * @XmlRoot("gastgewerbe")
  */
+#[XmlRoot(name: "gastgewerbe")]
 class Hospitality
 {
     public const string HOSPITALITY_TYPE_GASTRONOMY = 'GASTRONOMIE';
@@ -40,16 +40,9 @@ class Hospitality
     public const string HOSPITALITY_TYPE_ONE_ROOM_ESTABLISHMENT = 'EINRAUMLOKAL';
 
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("gastgew_typ")
-         * optional
-         *
-         * @see HOSPITALITY_TYPE_* constants
-         */
+        #[Type("string")]
+        #[XmlAttribute]
+        #[SerializedName("gastgew_typ")]
         protected string $hospitalityType = ''
     ) {}
 

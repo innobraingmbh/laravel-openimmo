@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetOperatingCosts
  * Betriebskosten eines Objektes bei Vermietun, UmSt. im Attribut
  *
- * @XmlRoot("betriebskostennetto")
  */
+#[XmlRoot(name: "betriebskostennetto")]
 class NetOperatingCosts
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("betriebskostenust")
-         * optional
-         */
+        #[Type("float")]
+        #[XmlAttribute]
+        #[SerializedName("betriebskostenust")]
         protected ?float $operatingCostsVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 

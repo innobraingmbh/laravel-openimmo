@@ -14,25 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class TotalCostsPerSqmFrom
  * Gesamtkosten bei Gewerbeobjekten Von - Bis.
  *
- * @XmlRoot("gesamtkostenprom2von")
  */
+#[XmlRoot(name: "gesamtkostenprom2von")]
 class TotalCostsPerSqmFrom
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("gesamtkostenprom2bis")
-         * optional
-         */
+        #[Type("float")]
+        #[XmlAttribute]
+        #[SerializedName("gesamtkostenprom2bis")]
         protected ?float $totalCostsPerSqmTo = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type("float")]
         protected ?float $value = null
     ) {}
 
