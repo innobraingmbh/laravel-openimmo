@@ -32,31 +32,31 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('raeume_veraenderbar')]
         protected ?bool $roomsModifiable = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Bathroom")]
+        #[Type(Bathroom::class)]
         #[SerializedName('bad')]
         protected ?Bathroom $bathroom = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Kitchen")]
+        #[Type(Kitchen::class)]
         #[SerializedName('kueche')]
         protected ?Kitchen $kitchen = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Floor")]
+        #[Type(Floor::class)]
         #[SerializedName('boden')]
         protected ?Floor $floor = null,
         #[Type('bool')]
         #[SerializedName('kamin')]
         protected ?bool $fireplace = null,
-        #[Type("Innobrain\OpenImmo\Dtos\HeatingType")]
+        #[Type(HeatingType::class)]
         #[SerializedName('heizungsart')]
         protected ?HeatingType $heatingType = null,
-        #[Type("Innobrain\OpenImmo\Dtos\HeatingSystem")]
+        #[Type(HeatingSystem::class)]
         #[SerializedName('befeuerung')]
         protected ?HeatingSystem $heating = null,
         #[Type('bool')]
         #[SerializedName('klimatisiert')]
         protected ?bool $airConditioned = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Elevator")]
+        #[Type(Elevator::class)]
         #[SerializedName('fahrstuhl')]
         protected ?Elevator $elevator = null,
-        #[XmlList(inline: true, entry: 'stellplatzart')]
+        #[XmlList(entry: 'stellplatzart', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\ParkingSpaceType>")]
         #[SkipWhenEmpty]
         #[SerializedName('stellplatzart')]
@@ -64,10 +64,10 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('gartennutzung')]
         protected ?bool $gardenUse = null,
-        #[Type("Innobrain\OpenImmo\Dtos\BalconyTerraceOrientation")]
+        #[Type(BalconyTerraceOrientation::class)]
         #[SerializedName('ausricht_balkon_terrasse')]
         protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Furnished")]
+        #[Type(Furnished::class)]
         #[SerializedName('moebliert')]
         protected ?Furnished $furnished = null,
         #[Type('bool')]
@@ -121,7 +121,7 @@ class Equipment
         #[Type('float')]
         #[SerializedName('hallenhoehe')]
         protected ?float $hallHeight = null,
-        #[Type("Innobrain\OpenImmo\Dtos\AttachedGastronomy")]
+        #[Type(AttachedGastronomy::class)]
         #[SerializedName('angeschl_gastronomie')]
         protected ?AttachedGastronomy $attachedGastronomy = null,
         #[Type('bool')]
@@ -133,7 +133,7 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('wellnessbereich')]
         protected ?bool $wellnessArea = null,
-        #[XmlList(inline: true, entry: 'serviceleistungen')]
+        #[XmlList(entry: 'serviceleistungen', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\Services>")]
         #[SkipWhenEmpty]
         #[SerializedName('serviceleistungen')]
@@ -141,16 +141,16 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('telefon_ferienimmobilie')]
         protected ?bool $holidayPropertyPhone = null,
-        #[Type("Innobrain\OpenImmo\Dtos\BroadbandAccess")]
+        #[Type(BroadbandAccess::class)]
         #[SerializedName('breitband_zugang')]
         protected ?BroadbandAccess $broadbandAccess = null,
         #[Type('bool')]
         #[SerializedName('umts_empfang')]
         protected ?bool $umtsReception = null,
-        #[Type("Innobrain\OpenImmo\Dtos\SecurityTechnology")]
+        #[Type(SecurityTechnology::class)]
         #[SerializedName('sicherheitstechnik')]
         protected ?SecurityTechnology $securityTechnology = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Basement")]
+        #[Type(Basement::class)]
         #[SerializedName('unterkellert')]
         protected ?Basement $basement = null,
         #[Type('bool')]
@@ -162,16 +162,16 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('rolladen')]
         protected ?bool $shutters = null,
-        #[Type("Innobrain\OpenImmo\Dtos\RoofShape")]
+        #[Type(RoofShape::class)]
         #[SerializedName('dachform')]
         protected ?RoofShape $roofShape = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ConstructionMethod")]
+        #[Type(ConstructionMethod::class)]
         #[SerializedName('bauweise')]
         protected ?ConstructionMethod $constructionMethod = null,
-        #[Type("Innobrain\OpenImmo\Dtos\DevelopmentStage")]
+        #[Type(DevelopmentStage::class)]
         #[SerializedName('ausbaustufe')]
         protected ?DevelopmentStage $developmentStage = null,
-        #[Type("Innobrain\OpenImmo\Dtos\EnergyType")]
+        #[Type(EnergyType::class)]
         #[SerializedName('energietyp')]
         protected ?EnergyType $energyType = null,
         #[Type('bool')]
@@ -189,17 +189,17 @@ class Equipment
         #[Type('bool')]
         #[SerializedName('seniorengerecht')]
         protected ?bool $seniorFriendly = null,
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

@@ -69,10 +69,10 @@ class Attachment
         #[SkipWhenEmpty]
         #[SerializedName('format')]
         protected string $format = '',
-        #[Type("Innobrain\OpenImmo\Dtos\Check")]
+        #[Type(Check::class)]
         #[SerializedName('check')]
         protected ?Check $check = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Data")]
+        #[Type(Data::class)]
         #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}

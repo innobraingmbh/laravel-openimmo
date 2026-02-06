@@ -25,7 +25,7 @@ class TechnicalManagement
         #[SkipWhenEmpty]
         #[SerializedName('objektnr_extern')]
         protected string $externalPropertyNumber = '',
-        #[Type("Innobrain\OpenImmo\Dtos\Action")]
+        #[Type(Action::class)]
         #[SerializedName('aktion')]
         protected ?Action $action = null,
         #[Type("DateTime<'Y-m-d'>")]
@@ -56,23 +56,23 @@ class TechnicalManagement
         #[Type('string')]
         #[SerializedName('gruppen_kennung')]
         protected ?string $groupIdentifier = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Master")]
+        #[Type(Master::class)]
         #[SerializedName('master')]
         protected ?Master $master = null,
         #[Type('string')]
         #[SerializedName('sprache')]
         protected ?string $language = null,
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

@@ -64,7 +64,7 @@ class AdditionalAddress
         #[Type('string')]
         #[SerializedName('postf_ort')]
         protected ?string $poBoxCity = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Country")]
+        #[Type(Country::class)]
         #[SerializedName('land')]
         protected ?Country $country = null,
         #[Type('string')]
@@ -76,7 +76,7 @@ class AdditionalAddress
         #[Type('string')]
         #[SerializedName('email_privat')]
         protected ?string $privateEmail = null,
-        #[XmlList(inline: true, entry: 'email_sonstige')]
+        #[XmlList(entry: 'email_sonstige', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\OtherEmail>")]
         #[SkipWhenEmpty]
         #[SerializedName('email_sonstige')]
@@ -96,7 +96,7 @@ class AdditionalAddress
         #[Type('string')]
         #[SerializedName('tel_privat')]
         protected ?string $privatePhoneNumber = null,
-        #[XmlList(inline: true, entry: 'tel_sonstige')]
+        #[XmlList(entry: 'tel_sonstige', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\OtherPhone>")]
         #[SkipWhenEmpty]
         #[SerializedName('tel_sonstige')]
@@ -113,17 +113,17 @@ class AdditionalAddress
         #[Type('string')]
         #[SerializedName('freitextfeld')]
         protected ?string $freeTextField = null,
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

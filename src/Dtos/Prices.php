@@ -18,10 +18,10 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Prices
 {
     public function __construct(
-        #[Type("Innobrain\OpenImmo\Dtos\PurchasePrice")]
+        #[Type(PurchasePrice::class)]
         #[SerializedName('kaufpreis')]
         protected ?PurchasePrice $purchasePrice = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetPurchasePrice")]
+        #[Type(NetPurchasePrice::class)]
         #[SerializedName('kaufpreisnetto')]
         protected ?NetPurchasePrice $purchasePriceNet = null,
         #[Type('float')]
@@ -51,55 +51,55 @@ class Prices
         #[Type('float')]
         #[SerializedName('mietzuschlaege')]
         protected ?float $rentSurcharges = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetMainRent")]
+        #[Type(NetMainRent::class)]
         #[SerializedName('hauptmietzinsnetto')]
         protected ?NetMainRent $netMainRent = null,
         #[Type('float')]
         #[SerializedName('pauschalmiete')]
         protected ?float $flatRent = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetOperatingCosts")]
+        #[Type(NetOperatingCosts::class)]
         #[SerializedName('betriebskostennetto')]
         protected ?NetOperatingCosts $netOperatingCosts = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetEVB")]
+        #[Type(NetEVB::class)]
         #[SerializedName('evbnetto')]
         protected ?NetEVB $netUnitValue = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetTotalRent")]
+        #[Type(NetTotalRent::class)]
         #[SerializedName('gesamtmietenetto')]
         protected ?NetTotalRent $totalRentNet = null,
         #[Type('float')]
         #[SerializedName('gesamtmietebrutto')]
         protected ?float $totalRentGross = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetTotalCost")]
+        #[Type(NetTotalCost::class)]
         #[SerializedName('gesamtbelastungnetto')]
         protected ?NetTotalCost $totalCostNet = null,
         #[Type('float')]
         #[SerializedName('gesamtbelastungbrutto')]
         protected ?float $totalCostGross = null,
-        #[Type("Innobrain\OpenImmo\Dtos\TotalCostsPerSqmFrom")]
+        #[Type(TotalCostsPerSqmFrom::class)]
         #[SerializedName('gesamtkostenprom2von')]
         protected ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetHeatingCosts")]
+        #[Type(NetHeatingCosts::class)]
         #[SerializedName('heizkostennetto')]
         protected ?NetHeatingCosts $netHeatingCosts = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetMonthlyCosts")]
+        #[Type(NetMonthlyCosts::class)]
         #[SerializedName('monatlichekostennetto')]
         protected ?NetMonthlyCosts $monthlyCostsNet = null,
         #[Type('float')]
         #[SerializedName('monatlichekostenbrutto')]
         protected ?float $monthlyCostsGross = null,
-        #[Type("Innobrain\OpenImmo\Dtos\AdditionalCostsPerSqmFrom")]
+        #[Type(AdditionalCostsPerSqmFrom::class)]
         #[SerializedName('nebenkostenprom2von')]
         protected ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetReserves")]
+        #[Type(NetReserves::class)]
         #[SerializedName('ruecklagenetto')]
         protected ?NetReserves $reservesNet = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetOtherCosts")]
+        #[Type(NetOtherCosts::class)]
         #[SerializedName('sonstigekostennetto')]
         protected ?NetOtherCosts $otherCostsNet = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetOtherRent")]
+        #[Type(NetOtherRent::class)]
         #[SerializedName('sonstigemietenetto')]
         protected ?NetOtherRent $otherRentNet = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetRentPerSqmFrom")]
+        #[Type(NetRentPerSqmFrom::class)]
         #[SerializedName('nettomieteprom2von')]
         protected ?NetRentPerSqmFrom $netRentPerSqmFrom = null,
         #[Type('float')]
@@ -120,7 +120,7 @@ class Prices
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('preis_zeitraum_bis')]
         protected ?DateTime $priceTimeRangeTo = null,
-        #[Type("Innobrain\OpenImmo\Dtos\PriceTimeUnit")]
+        #[Type(PriceTimeUnit::class)]
         #[SerializedName('preis_zeiteinheit')]
         protected ?PriceTimeUnit $priceTimeUnit = null,
         #[Type('float')]
@@ -132,25 +132,25 @@ class Prices
         #[Type('bool')]
         #[SerializedName('provisionspflichtig')]
         protected ?bool $commissionRequired = null,
-        #[Type("Innobrain\OpenImmo\Dtos\CommissionSplit")]
+        #[Type(CommissionSplit::class)]
         #[SerializedName('provision_teilen')]
         protected ?CommissionSplit $commissionSplit = null,
-        #[Type("Innobrain\OpenImmo\Dtos\InternalCommission")]
+        #[Type(InternalCommission::class)]
         #[SerializedName('innen_courtage')]
         protected ?InternalCommission $internalCommission = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ExternalCommission")]
+        #[Type(ExternalCommission::class)]
         #[SerializedName('aussen_courtage')]
         protected ?ExternalCommission $externalCommission = null,
         #[Type('string')]
         #[SerializedName('courtage_hinweis')]
         protected ?string $commissionNote = null,
-        #[Type("Innobrain\OpenImmo\Dtos\NetCommission")]
+        #[Type(NetCommission::class)]
         #[SerializedName('provisionnetto')]
         protected ?NetCommission $commissionNet = null,
         #[Type('float')]
         #[SerializedName('provisionbrutto')]
         protected ?float $commissionGross = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Currency")]
+        #[Type(Currency::class)]
         #[SerializedName('waehrung')]
         protected ?Currency $currency = null,
         #[Type('float')]
@@ -174,10 +174,10 @@ class Prices
         #[Type('float')]
         #[SerializedName('nettorendite_ist')]
         protected ?float $actualNetYield = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ActualRentalIncome")]
+        #[Type(ActualRentalIncome::class)]
         #[SerializedName('mieteinnahmen_ist')]
         protected ?ActualRentalIncome $actualRentalIncome = null,
-        #[Type("Innobrain\OpenImmo\Dtos\TargetRentalIncome")]
+        #[Type(TargetRentalIncome::class)]
         #[SerializedName('mieteinnahmen_soll')]
         protected ?TargetRentalIncome $targetRentalIncome = null,
         #[Type('float')]
@@ -192,25 +192,25 @@ class Prices
         #[Type('float')]
         #[SerializedName('geschaeftsguthaben')]
         protected ?float $businessAssets = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingCarport")]
+        #[Type(ParkingCarport::class)]
         #[SerializedName('stp_carport')]
         protected ?ParkingCarport $parkingCarport = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingDuplex")]
+        #[Type(ParkingDuplex::class)]
         #[SerializedName('stp_duplex')]
         protected ?ParkingDuplex $parkingDuplex = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingOutdoor")]
+        #[Type(ParkingOutdoor::class)]
         #[SerializedName('stp_freiplatz')]
         protected ?ParkingOutdoor $parkingOutdoor = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingGarage")]
+        #[Type(ParkingGarage::class)]
         #[SerializedName('stp_garage')]
         protected ?ParkingGarage $parkingGarage = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingMultiStorey")]
+        #[Type(ParkingMultiStorey::class)]
         #[SerializedName('stp_parkhaus')]
         protected ?ParkingMultiStorey $parkingMultiStorey = null,
-        #[Type("Innobrain\OpenImmo\Dtos\ParkingUnderground")]
+        #[Type(ParkingUnderground::class)]
         #[SerializedName('stp_tiefgarage')]
         protected ?ParkingUnderground $parkingUnderground = null,
-        #[XmlList(inline: true, entry: 'stp_sonstige')]
+        #[XmlList(entry: 'stp_sonstige', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\ParkingOther>")]
         #[SkipWhenEmpty]
         #[SerializedName('stp_sonstige')]
@@ -221,17 +221,17 @@ class Prices
         #[Type('float')]
         #[SerializedName('richtpreisprom2')]
         protected ?float $guidePricePerSqm = null,
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

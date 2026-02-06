@@ -25,12 +25,12 @@ class Field
         #[SkipWhenEmpty]
         #[SerializedName('wert')]
         protected string $value = '',
-        #[XmlList(inline: true, entry: 'typ')]
+        #[XmlList(entry: 'typ', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
         #[SerializedName('typ')]
         protected array $type = [],
-        #[XmlList(inline: true, entry: 'modus')]
+        #[XmlList(entry: 'modus', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
         #[SerializedName('modus')]

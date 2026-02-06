@@ -20,30 +20,30 @@ class Infrastructure
         #[Type('bool')]
         #[SerializedName('zulieferung')]
         protected ?bool $supply = null,
-        #[Type("Innobrain\OpenImmo\Dtos\View")]
+        #[Type(View::class)]
         #[SerializedName('ausblick')]
         protected ?View $view = null,
-        #[XmlList(inline: true, entry: 'distanzen')]
+        #[XmlList(entry: 'distanzen', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\Distances>")]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen')]
         protected array $distances = [],
-        #[XmlList(inline: true, entry: 'distanzen_sport')]
+        #[XmlList(entry: 'distanzen_sport', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\SportDistances>")]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen_sport')]
         protected array $sportDistances = [],
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

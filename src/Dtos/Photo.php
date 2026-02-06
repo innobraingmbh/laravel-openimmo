@@ -31,7 +31,7 @@ class Photo
         #[SkipWhenEmpty]
         #[SerializedName('format')]
         protected string $format = '',
-        #[Type("Innobrain\OpenImmo\Dtos\Data")]
+        #[Type(Data::class)]
         #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}

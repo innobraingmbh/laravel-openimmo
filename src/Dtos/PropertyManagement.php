@@ -30,10 +30,10 @@ class PropertyManagement
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('bisdatum')]
         protected ?DateTime $toDate = null,
-        #[Type("Innobrain\OpenImmo\Dtos\MinRentalPeriod")]
+        #[Type(MinRentalPeriod::class)]
         #[SerializedName('min_mietdauer')]
         protected ?MinRentalPeriod $minRentalPeriod = null,
-        #[Type("Innobrain\OpenImmo\Dtos\MaxRentalPeriod")]
+        #[Type(MaxRentalPeriod::class)]
         #[SerializedName('max_mietdauer')]
         protected ?MaxRentalPeriod $maxRentalPeriod = null,
         #[Type("DateTime<'Y-m-d'>")]
@@ -63,7 +63,7 @@ class PropertyManagement
         #[Type('bool')]
         #[SerializedName('haustiere')]
         protected ?bool $pets = null,
-        #[Type("Innobrain\OpenImmo\Dtos\Gender")]
+        #[Type(Gender::class)]
         #[SerializedName('geschlecht')]
         protected ?Gender $gender = null,
         #[Type('bool')]
@@ -81,17 +81,17 @@ class PropertyManagement
         #[Type('bool')]
         #[SerializedName('hochhaus')]
         protected ?bool $highRise = null,
-        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: 'user_defined_extend')]
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_extend')]

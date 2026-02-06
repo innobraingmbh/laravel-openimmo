@@ -147,8 +147,8 @@ trait GeneratorHelper
 
         foreach ($element->getAttributes() as $attribute) {
             $name = $attribute->getName();
-            $shortName = str_contains($name, '\\')
-                ? substr($name, (int) strrpos($name, '\\') + 1)
+            $shortName = str_contains((string) $name, '\\')
+                ? substr((string) $name, (int) strrpos((string) $name, '\\') + 1)
                 : $name;
 
             if ($name === $attributeName || $shortName === $attributeName) {

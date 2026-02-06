@@ -17,7 +17,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class UserDefinedExtend
 {
     public function __construct(
-        #[XmlList(inline: true, entry: 'feld')]
+        #[XmlList(entry: 'feld', inline: true)]
         #[Type("array<Innobrain\OpenImmo\Dtos\Field>")]
         #[SkipWhenEmpty]
         #[SerializedName('feld')]

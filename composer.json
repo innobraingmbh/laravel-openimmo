@@ -76,8 +76,13 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint",
-        "prepare-release": "vendor/bin/pint && vendor/bin/rector"
+        "format": [
+            "vendor/bin/rector",
+            "vendor/bin/pint"
+        ],
+        "format:check": [
+            "vendor/bin/pint --test"
+        ]
     },
     "config": {
         "sort-packages": true,
