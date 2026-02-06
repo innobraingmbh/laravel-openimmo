@@ -12,67 +12,66 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Floor
  * Welche Eigenschaft besitzt der Bodenbelag, Optionen kombinierbar
- *
  */
-#[XmlRoot(name: "boden")]
+#[XmlRoot(name: 'boden')]
 class Floor
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FLIESEN")]
+        #[SerializedName('FLIESEN')]
         protected ?bool $tiles = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("STEIN")]
+        #[SerializedName('STEIN')]
         protected ?bool $stone = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("TEPPICH")]
+        #[SerializedName('TEPPICH')]
         protected ?bool $carpet = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PARKETT")]
+        #[SerializedName('PARKETT')]
         protected ?bool $parquet = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FERTIGPARKETT")]
+        #[SerializedName('FERTIGPARKETT')]
         protected ?bool $finishedParquet = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("LAMINAT")]
+        #[SerializedName('LAMINAT')]
         protected ?bool $laminate = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("DIELEN")]
+        #[SerializedName('DIELEN')]
         protected ?bool $floorboards = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KUNSTSTOFF")]
+        #[SerializedName('KUNSTSTOFF')]
         protected ?bool $plastic = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("ESTRICH")]
+        #[SerializedName('ESTRICH')]
         protected ?bool $screed = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("DOPPELBODEN")]
+        #[SerializedName('DOPPELBODEN')]
         protected ?bool $raisedFloor = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("LINOLEUM")]
+        #[SerializedName('LINOLEUM')]
         protected ?bool $linoleum = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("MARMOR")]
+        #[SerializedName('MARMOR')]
         protected ?bool $marble = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("TERRAKOTTA")]
+        #[SerializedName('TERRAKOTTA')]
         protected ?bool $terracotta = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("GRANIT")]
+        #[SerializedName('GRANIT')]
         protected ?bool $granite = null
     ) {}
 

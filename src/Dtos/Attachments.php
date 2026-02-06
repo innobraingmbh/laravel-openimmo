@@ -12,31 +12,30 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Attachments
- *
  */
-#[XmlRoot(name: "anhaenge")]
+#[XmlRoot(name: 'anhaenge')]
 class Attachments
 {
     public function __construct(
-        #[XmlList(inline: true, entry: "anhang")]
+        #[XmlList(inline: true, entry: 'anhang')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Attachment>")]
         #[SkipWhenEmpty]
-        #[SerializedName("anhang")]
+        #[SerializedName('anhang')]
         protected array $attachment = [],
-        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_simplefield")]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_anyfield")]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[XmlList(inline: true, entry: 'user_defined_extend')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_extend")]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

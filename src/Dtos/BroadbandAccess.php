@@ -12,19 +12,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BroadbandAccess
  * Informationen über die Breitbandmöglichkeiten.
- *
  */
-#[XmlRoot(name: "breitband_zugang")]
+#[XmlRoot(name: 'breitband_zugang')]
 class BroadbandAccess
 {
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("art")]
+        #[SerializedName('art')]
         protected ?string $type = null,
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("speed")]
+        #[SerializedName('speed')]
         protected ?float $speed = null
     ) {}
 

@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Age
  * Ist es ein Neu- oder Altbau, Optionen nicht kombinierbar
- *
  */
-#[XmlRoot(name: "alter")]
+#[XmlRoot(name: 'alter')]
 class Age
 {
     public const string AGE_ATTRIBUTE_OLD_BUILDING = 'ALTBAU';
@@ -22,9 +21,9 @@ class Age
     public const string AGE_ATTRIBUTE_NEW_CONSTRUCTION = 'NEUBAU';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("alter_attr")]
+        #[SerializedName('alter_attr')]
         protected string $ageAttribute = ''
     ) {}
 

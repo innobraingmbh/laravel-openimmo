@@ -13,81 +13,80 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PropertyType
  * Objektarten
- *
  */
-#[XmlRoot(name: "objektart")]
+#[XmlRoot(name: 'objektart')]
 class PropertyType
 {
     public function __construct(
-        #[XmlList(inline: true, entry: "zimmer")]
+        #[XmlList(inline: true, entry: 'zimmer')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Rooms>")]
         #[SkipWhenEmpty]
-        #[SerializedName("zimmer")]
+        #[SerializedName('zimmer')]
         protected array $rooms = [],
-        #[XmlList(inline: true, entry: "wohnung")]
+        #[XmlList(inline: true, entry: 'wohnung')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Apartment>")]
         #[SkipWhenEmpty]
-        #[SerializedName("wohnung")]
+        #[SerializedName('wohnung')]
         protected array $apartment = [],
-        #[XmlList(inline: true, entry: "haus")]
+        #[XmlList(inline: true, entry: 'haus')]
         #[Type("array<Innobrain\OpenImmo\Dtos\House>")]
         #[SkipWhenEmpty]
-        #[SerializedName("haus")]
+        #[SerializedName('haus')]
         protected array $house = [],
-        #[XmlList(inline: true, entry: "grundstueck")]
+        #[XmlList(inline: true, entry: 'grundstueck')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Plot>")]
         #[SkipWhenEmpty]
-        #[SerializedName("grundstueck")]
+        #[SerializedName('grundstueck')]
         protected array $plot = [],
-        #[XmlList(inline: true, entry: "buero_praxen")]
+        #[XmlList(inline: true, entry: 'buero_praxen')]
         #[Type("array<Innobrain\OpenImmo\Dtos\OfficePractices>")]
         #[SkipWhenEmpty]
-        #[SerializedName("buero_praxen")]
+        #[SerializedName('buero_praxen')]
         protected array $officePractices = [],
-        #[XmlList(inline: true, entry: "einzelhandel")]
+        #[XmlList(inline: true, entry: 'einzelhandel')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Retail>")]
         #[SkipWhenEmpty]
-        #[SerializedName("einzelhandel")]
+        #[SerializedName('einzelhandel')]
         protected array $retail = [],
-        #[XmlList(inline: true, entry: "gastgewerbe")]
+        #[XmlList(inline: true, entry: 'gastgewerbe')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Hospitality>")]
         #[SkipWhenEmpty]
-        #[SerializedName("gastgewerbe")]
+        #[SerializedName('gastgewerbe')]
         protected array $hospitality = [],
-        #[XmlList(inline: true, entry: "hallen_lager_prod")]
+        #[XmlList(inline: true, entry: 'hallen_lager_prod')]
         #[Type("array<Innobrain\OpenImmo\Dtos\HallsStorageProduction>")]
         #[SkipWhenEmpty]
-        #[SerializedName("hallen_lager_prod")]
+        #[SerializedName('hallen_lager_prod')]
         protected array $hallsStorageProduction = [],
-        #[XmlList(inline: true, entry: "land_und_forstwirtschaft")]
+        #[XmlList(inline: true, entry: 'land_und_forstwirtschaft')]
         #[Type("array<Innobrain\OpenImmo\Dtos\AgricultureAndForestry>")]
         #[SkipWhenEmpty]
-        #[SerializedName("land_und_forstwirtschaft")]
+        #[SerializedName('land_und_forstwirtschaft')]
         protected array $agricultureAndForestry = [],
-        #[XmlList(inline: true, entry: "parken")]
+        #[XmlList(inline: true, entry: 'parken')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Parking>")]
         #[SkipWhenEmpty]
-        #[SerializedName("parken")]
+        #[SerializedName('parken')]
         protected array $parking = [],
-        #[XmlList(inline: true, entry: "sonstige")]
+        #[XmlList(inline: true, entry: 'sonstige')]
         #[Type("array<Innobrain\OpenImmo\Dtos\Other>")]
         #[SkipWhenEmpty]
-        #[SerializedName("sonstige")]
+        #[SerializedName('sonstige')]
         protected array $other = [],
-        #[XmlList(inline: true, entry: "freizeitimmobilie_gewerblich")]
+        #[XmlList(inline: true, entry: 'freizeitimmobilie_gewerblich')]
         #[Type("array<Innobrain\OpenImmo\Dtos\CommercialLeisureProperty>")]
         #[SkipWhenEmpty]
-        #[SerializedName("freizeitimmobilie_gewerblich")]
+        #[SerializedName('freizeitimmobilie_gewerblich')]
         protected array $commercialLeisureProperty = [],
-        #[XmlList(inline: true, entry: "zinshaus_renditeobjekt")]
+        #[XmlList(inline: true, entry: 'zinshaus_renditeobjekt')]
         #[Type("array<Innobrain\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>")]
         #[SkipWhenEmpty]
-        #[SerializedName("zinshaus_renditeobjekt")]
+        #[SerializedName('zinshaus_renditeobjekt')]
         protected array $apartmentBuildingInvestmentProperty = [],
-        #[XmlList(inline: true, entry: "objektart_zusatz")]
-        #[Type("array<string>")]
+        #[XmlList(inline: true, entry: 'objektart_zusatz')]
+        #[Type('array<string>')]
         #[SkipWhenEmpty]
-        #[SerializedName("objektart_zusatz")]
+        #[SerializedName('objektart_zusatz')]
         protected array $propertyTypeAdditional = []
     ) {}
 

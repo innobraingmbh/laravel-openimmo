@@ -12,31 +12,30 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HeatingType
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
- *
  */
-#[XmlRoot(name: "heizungsart")]
+#[XmlRoot(name: 'heizungsart')]
 class HeatingType
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("OFEN")]
+        #[SerializedName('OFEN')]
         protected ?bool $stove = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("ETAGE")]
+        #[SerializedName('ETAGE')]
         protected ?bool $floor = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("ZENTRAL")]
+        #[SerializedName('ZENTRAL')]
         protected ?bool $central = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FERN")]
+        #[SerializedName('FERN')]
         protected ?bool $remote = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FUSSBODEN")]
+        #[SerializedName('FUSSBODEN')]
         protected ?bool $flooring = null
     ) {}
 

@@ -13,76 +13,75 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class RealEstate
  * Angaben einer einzelnen Immobile
- *
  */
-#[XmlRoot(name: "immobilie")]
+#[XmlRoot(name: 'immobilie')]
 class RealEstate
 {
     public function __construct(
         #[Type("Innobrain\OpenImmo\Dtos\PropertyCategory")]
-        #[SerializedName("objektkategorie")]
+        #[SerializedName('objektkategorie')]
         protected ?PropertyCategory $propertyCategory = null,
         #[Type("Innobrain\OpenImmo\Dtos\Geo")]
-        #[SerializedName("geo")]
+        #[SerializedName('geo')]
         protected ?Geo $geo = null,
         #[Type("Innobrain\OpenImmo\Dtos\ContactPerson")]
-        #[SerializedName("kontaktperson")]
+        #[SerializedName('kontaktperson')]
         protected ?ContactPerson $contactPerson = null,
-        #[XmlList(inline: true, entry: "weitere_adresse")]
+        #[XmlList(inline: true, entry: 'weitere_adresse')]
         #[Type("array<Innobrain\OpenImmo\Dtos\AdditionalAddress>")]
         #[SkipWhenEmpty]
-        #[SerializedName("weitere_adresse")]
+        #[SerializedName('weitere_adresse')]
         protected array $additionalAddress = [],
         #[Type("Innobrain\OpenImmo\Dtos\Prices")]
-        #[SerializedName("preise")]
+        #[SerializedName('preise')]
         protected ?Prices $prices = null,
         #[Type("Innobrain\OpenImmo\Dtos\BiddingProcess")]
-        #[SerializedName("bieterverfahren")]
+        #[SerializedName('bieterverfahren')]
         protected ?BiddingProcess $biddingProcess = null,
         #[Type("Innobrain\OpenImmo\Dtos\Auction")]
-        #[SerializedName("versteigerung")]
+        #[SerializedName('versteigerung')]
         protected ?Auction $auction = null,
         #[Type("Innobrain\OpenImmo\Dtos\Areas")]
-        #[SerializedName("flaechen")]
+        #[SerializedName('flaechen')]
         protected ?Areas $areas = null,
         #[Type("Innobrain\OpenImmo\Dtos\Equipment")]
-        #[SerializedName("ausstattung")]
+        #[SerializedName('ausstattung')]
         protected ?Equipment $equipment = null,
         #[Type("Innobrain\OpenImmo\Dtos\ConditionInformation")]
-        #[SerializedName("zustand_angaben")]
+        #[SerializedName('zustand_angaben')]
         protected ?ConditionInformation $conditionInformation = null,
         #[Type("Innobrain\OpenImmo\Dtos\Evaluation")]
-        #[SerializedName("bewertung")]
+        #[SerializedName('bewertung')]
         protected ?Evaluation $evaluation = null,
         #[Type("Innobrain\OpenImmo\Dtos\Infrastructure")]
-        #[SerializedName("infrastruktur")]
+        #[SerializedName('infrastruktur')]
         protected ?Infrastructure $infrastructure = null,
         #[Type("Innobrain\OpenImmo\Dtos\FreeTexts")]
-        #[SerializedName("freitexte")]
+        #[SerializedName('freitexte')]
         protected ?FreeTexts $freeTexts = null,
         #[Type("Innobrain\OpenImmo\Dtos\Attachments")]
-        #[SerializedName("anhaenge")]
+        #[SerializedName('anhaenge')]
         protected ?Attachments $attachments = null,
         #[Type("Innobrain\OpenImmo\Dtos\PropertyManagement")]
-        #[SerializedName("verwaltung_objekt")]
+        #[SerializedName('verwaltung_objekt')]
         protected ?PropertyManagement $propertyManagement = null,
         #[Type("Innobrain\OpenImmo\Dtos\TechnicalManagement")]
-        #[SerializedName("verwaltung_techn")]
+        #[SerializedName('verwaltung_techn')]
         protected ?TechnicalManagement $technicalManagement = null,
-        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_simplefield")]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_anyfield")]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[XmlList(inline: true, entry: 'user_defined_extend')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_extend")]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

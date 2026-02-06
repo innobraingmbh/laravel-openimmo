@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Country
  * Land
- *
  */
-#[XmlRoot(name: "land")]
+#[XmlRoot(name: 'land')]
 class Country
 {
     public const string ISO_COUNTRY_AFG = 'AFG';
@@ -482,9 +481,9 @@ class Country
     public const string ISO_COUNTRY_ZWE = 'ZWE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("iso_land")]
+        #[SerializedName('iso_land')]
         protected string $isoCountry = ''
     ) {}
 

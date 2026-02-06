@@ -12,23 +12,22 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Kitchen
  * Welche Eigenschaften besitzt die Küche, Optionen kombinierbar
- *
  */
-#[XmlRoot(name: "kueche")]
+#[XmlRoot(name: 'kueche')]
 class Kitchen
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("EBK")]
+        #[SerializedName('EBK')]
         protected ?bool $builtInKitchen = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("OFFEN")]
+        #[SerializedName('OFFEN')]
         protected ?bool $open = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PANTRY")]
+        #[SerializedName('PANTRY')]
         protected ?bool $pantry = null
     ) {}
 

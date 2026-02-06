@@ -13,18 +13,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetEVB
  * Erhaltungs- und Verbesserungsbeitrag. Ähnlich Instanthaltungsrücklage, UmSt. im Attribut.
- *
  */
-#[XmlRoot(name: "evbnetto")]
+#[XmlRoot(name: 'evbnetto')]
 class NetEVB
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("evbust")]
+        #[SerializedName('evbust')]
         protected ?float $unitValueTaxVAT = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

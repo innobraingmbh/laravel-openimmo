@@ -13,18 +13,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetMonthlyCosts
  * Summe der Monatlichen Kosten einer Wohnung als Information für einen Käufer (Netto), Umst im Attribut.
- *
  */
-#[XmlRoot(name: "monatlichekostennetto")]
+#[XmlRoot(name: 'monatlichekostennetto')]
 class NetMonthlyCosts
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("monatlichekostenust")]
+        #[SerializedName('monatlichekostenust')]
         protected ?float $monthlyCostsVAT = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

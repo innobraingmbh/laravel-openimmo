@@ -12,19 +12,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class GeoCoordinates
  * Geokoordinaten der Immobilie, Pflichtfeld, alternativ mit Ort, PLZ
- *
  */
-#[XmlRoot(name: "geokoordinaten")]
+#[XmlRoot(name: 'geokoordinaten')]
 class GeoCoordinates
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("breitengrad")]
+        #[SerializedName('breitengrad')]
         protected float $latitude = 0.0,
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("laengengrad")]
+        #[SerializedName('laengengrad')]
         protected float $longitude = 0.0
     ) {}
 

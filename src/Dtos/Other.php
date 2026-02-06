@@ -16,9 +16,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Objekte befinden sich jetzt unter Element parken.
  * Aus kompatibilitätegründen bleiben die Attribute NOCH! erhalten.
  * In nachfolgenden Versionen wird die Unterstützung an dieser Stelle eingestellt.
- *
  */
-#[XmlRoot(name: "sonstige")]
+#[XmlRoot(name: 'sonstige')]
 class Other
 {
     public const string OTHER_TYPE_PARKING_GARAGE = 'PARKHAUS';
@@ -30,9 +29,9 @@ class Other
     public const string OTHER_TYPE_OTHER = 'SONSTIGE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("sonstige_typ")]
+        #[SerializedName('sonstige_typ')]
         protected string $otherType = ''
     ) {}
 

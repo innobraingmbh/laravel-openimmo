@@ -13,18 +13,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetHeatingCosts
  * Die Heizkosten einer Einheit als Nettowert. Die Umsatzsteuer optional im Attribut
- *
  */
-#[XmlRoot(name: "heizkostennetto")]
+#[XmlRoot(name: 'heizkostennetto')]
 class NetHeatingCosts
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("heizkostenust")]
+        #[SerializedName('heizkostenust')]
         protected ?float $heatingCostsVAT = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

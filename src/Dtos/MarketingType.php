@@ -12,27 +12,26 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MarketingType
  * Vermarktungsart, Optionen kombinierbar, Kauf + Miete
- *
  */
-#[XmlRoot(name: "vermarktungsart")]
+#[XmlRoot(name: 'vermarktungsart')]
 class MarketingType
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KAUF")]
+        #[SerializedName('KAUF')]
         protected bool $purchase = false,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("MIETE_PACHT")]
+        #[SerializedName('MIETE_PACHT')]
         protected bool $rentLease = false,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("ERBPACHT")]
+        #[SerializedName('ERBPACHT')]
         protected ?bool $leasehold = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("LEASING")]
+        #[SerializedName('LEASING')]
         protected ?bool $leasing = null
     ) {}
 

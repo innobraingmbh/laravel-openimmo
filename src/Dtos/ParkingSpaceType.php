@@ -12,35 +12,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ParkingSpaceType
  * Welche Stellplatzarten sind vorhanden, Optionen kombinierbar, als einfache Alternative zu den stp...Elementen
- *
  */
-#[XmlRoot(name: "stellplatzart")]
+#[XmlRoot(name: 'stellplatzart')]
 class ParkingSpaceType
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("GARAGE")]
+        #[SerializedName('GARAGE')]
         protected ?bool $garage = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("TIEFGARAGE")]
+        #[SerializedName('TIEFGARAGE')]
         protected ?bool $undergroundParking = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("CARPORT")]
+        #[SerializedName('CARPORT')]
         protected ?bool $carport = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FREIPLATZ")]
+        #[SerializedName('FREIPLATZ')]
         protected ?bool $openSpace = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PARKHAUS")]
+        #[SerializedName('PARKHAUS')]
         protected ?bool $parkingGarage = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("DUPLEX")]
+        #[SerializedName('DUPLEX')]
         protected ?bool $duplex = null
     ) {}
 

@@ -11,31 +11,30 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class DevelopmentStage
- *
  */
-#[XmlRoot(name: "ausbaustufe")]
+#[XmlRoot(name: 'ausbaustufe')]
 class DevelopmentStage
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("BAUSATZHAUS")]
+        #[SerializedName('BAUSATZHAUS')]
         protected ?bool $prefabricatedHouse = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("AUSBAUHAUS")]
+        #[SerializedName('AUSBAUHAUS')]
         protected ?bool $expandableHouse = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SCHLUESSELFERTIGMITKELLER")]
+        #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
         protected ?bool $turnkeyWithBasement = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SCHLUESSELFERTIGOHNEBODENPLATTE")]
+        #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
         protected ?bool $turnkeyWithoutFoundation = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SCHLUESSELFERTIGMITBODENPLATTE")]
+        #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]
         protected ?bool $turnkeyWithFoundation = null
     ) {}
 

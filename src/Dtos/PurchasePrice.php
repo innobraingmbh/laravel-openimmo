@@ -13,18 +13,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PurchasePrice
  * Gesamt- (Angebots-)Kaufpreis der Immobilie. Wenn "Auf Anfrage" dann Wert = 0 und Attribut auf TRUE
- *
  */
-#[XmlRoot(name: "kaufpreis")]
+#[XmlRoot(name: 'kaufpreis')]
 class PurchasePrice
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("auf_anfrage")]
+        #[SerializedName('auf_anfrage')]
         protected ?bool $onRequest = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

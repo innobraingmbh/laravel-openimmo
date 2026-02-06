@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MinRentalPeriod
  * Mindestzeitraum für den die Immobilie gemietet werden muss, Optionen nicht kombinierbar, vorrangig bei WaZ
- *
  */
-#[XmlRoot(name: "min_mietdauer")]
+#[XmlRoot(name: 'min_mietdauer')]
 class MinRentalPeriod
 {
     public const string MIN_DURATION_DAY = 'TAG';
@@ -27,12 +26,12 @@ class MinRentalPeriod
     public const string MIN_DURATION_YEAR = 'JAHR';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("min_dauer")]
+        #[SerializedName('min_dauer')]
         protected string $minDuration = '',
         #[Inline]
-        #[Type("string")]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

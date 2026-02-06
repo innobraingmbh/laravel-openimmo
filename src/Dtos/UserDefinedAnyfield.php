@@ -10,14 +10,13 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedAnyfield
- *
  */
-#[XmlRoot(name: "user_defined_anyfield")]
+#[XmlRoot(name: 'user_defined_anyfield')]
 class UserDefinedAnyfield
 {
     public function __construct(
         #[Inline]
-        #[Type("string")]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

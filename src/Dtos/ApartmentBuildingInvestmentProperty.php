@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ApartmentBuildingInvestmentProperty
  * Objektyp / Typ f. Zins und Renditehäuser
- *
  */
-#[XmlRoot(name: "zinshaus_renditeobjekt")]
+#[XmlRoot(name: 'zinshaus_renditeobjekt')]
 class ApartmentBuildingInvestmentProperty
 {
     public const string INTEREST_TYPE_MULTI_FAMILY_HOUSE = 'MEHRFAMILIENHAUS';
@@ -44,9 +43,9 @@ class ApartmentBuildingInvestmentProperty
     public const string INTEREST_TYPE_ASSISTED_LIVING = 'BETREUTES-WOHNEN';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("zins_typ")]
+        #[SerializedName('zins_typ')]
         protected string $interestType = ''
     ) {}
 

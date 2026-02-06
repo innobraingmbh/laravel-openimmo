@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class OfficePractices
  * Objektart / Typ f. Büro/Praxen
- *
  */
-#[XmlRoot(name: "buero_praxen")]
+#[XmlRoot(name: 'buero_praxen')]
 class OfficePractices
 {
     public const string OFFICE_TYPE_OFFICE_SPACE = 'BUEROFLAECHE';
@@ -38,9 +37,9 @@ class OfficePractices
     public const string OFFICE_TYPE_SHARED_OFFICE = 'SHARED_OFFICE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("buero_typ")]
+        #[SerializedName('buero_typ')]
         protected string $officeType = ''
     ) {}
 

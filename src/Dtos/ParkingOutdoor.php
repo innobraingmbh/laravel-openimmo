@@ -11,23 +11,22 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ParkingOutdoor
- *
  */
-#[XmlRoot(name: "stp_freiplatz")]
+#[XmlRoot(name: 'stp_freiplatz')]
 class ParkingOutdoor
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("stellplatzmiete")]
+        #[SerializedName('stellplatzmiete')]
         protected ?float $parkingSpaceRent = null,
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("stellplatzkaufpreis")]
+        #[SerializedName('stellplatzkaufpreis')]
         protected ?float $parkingSpacePurchasePrice = null,
-        #[Type("int")]
+        #[Type('int')]
         #[XmlAttribute]
-        #[SerializedName("anzahl")]
+        #[SerializedName('anzahl')]
         protected ?int $quantity = null
     ) {}
 

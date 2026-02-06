@@ -12,51 +12,50 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ImprintStructure
  * Ergänzung ($V120)
- *
  */
-#[XmlRoot(name: "impressum_strukt")]
+#[XmlRoot(name: 'impressum_strukt')]
 class ImprintStructure
 {
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("firmenname")]
+        #[SerializedName('firmenname')]
         protected string $companyName = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("firmenanschrift")]
+        #[SerializedName('firmenanschrift')]
         protected string $companyAddress = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("telefon")]
+        #[SerializedName('telefon')]
         protected string $phone = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("vertretungsberechtigter")]
+        #[SerializedName('vertretungsberechtigter')]
         protected string $authorizedRepresentative = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("berufsaufsichtsbehoerde")]
+        #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $professionalSupervisoryAuthority = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("handelsregister")]
+        #[SerializedName('handelsregister')]
         protected string $commercialRegister = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("handelsregister_nr")]
+        #[SerializedName('handelsregister_nr')]
         protected string $commercialRegisterNumber = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("umsst-id")]
+        #[SerializedName('umsst-id')]
         protected string $vatId = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("steuernummer")]
+        #[SerializedName('steuernummer')]
         protected string $taxNumber = '',
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("weiteres")]
+        #[SerializedName('weiteres')]
         protected string $additional = ''
     ) {}
 

@@ -12,61 +12,60 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConditionInformation
- *
  */
-#[XmlRoot(name: "zustand_angaben")]
+#[XmlRoot(name: 'zustand_angaben')]
 class ConditionInformation
 {
     public function __construct(
-        #[Type("string")]
-        #[SerializedName("baujahr")]
+        #[Type('string')]
+        #[SerializedName('baujahr')]
         protected ?string $yearOfConstruction = null,
-        #[Type("string")]
-        #[SerializedName("letztemodernisierung")]
+        #[Type('string')]
+        #[SerializedName('letztemodernisierung')]
         protected ?string $lastModernization = null,
         #[Type("Innobrain\OpenImmo\Dtos\Condition")]
-        #[SerializedName("zustand")]
+        #[SerializedName('zustand')]
         protected ?Condition $condition = null,
         #[Type("Innobrain\OpenImmo\Dtos\Age")]
-        #[SerializedName("alter")]
+        #[SerializedName('alter')]
         protected ?Age $age = null,
         #[Type("Innobrain\OpenImmo\Dtos\DevelopableAccordingTo")]
-        #[SerializedName("bebaubar_nach")]
+        #[SerializedName('bebaubar_nach')]
         protected ?DevelopableAccordingTo $developableAccordingTo = null,
         #[Type("Innobrain\OpenImmo\Dtos\Development")]
-        #[SerializedName("erschliessung")]
+        #[SerializedName('erschliessung')]
         protected ?Development $development = null,
         #[Type("Innobrain\OpenImmo\Dtos\DevelopmentScope")]
-        #[SerializedName("erschliessung_umfang")]
+        #[SerializedName('erschliessung_umfang')]
         protected ?DevelopmentScope $developmentScope = null,
-        #[Type("string")]
-        #[SerializedName("bauzone")]
+        #[Type('string')]
+        #[SerializedName('bauzone')]
         protected ?string $constructionZone = null,
-        #[Type("string")]
-        #[SerializedName("altlasten")]
+        #[Type('string')]
+        #[SerializedName('altlasten')]
         protected ?string $contamination = null,
-        #[XmlList(inline: true, entry: "energiepass")]
+        #[XmlList(inline: true, entry: 'energiepass')]
         #[Type("array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>")]
         #[SkipWhenEmpty]
-        #[SerializedName("energiepass")]
+        #[SerializedName('energiepass')]
         protected array $energyCertificate = [],
         #[Type("Innobrain\OpenImmo\Dtos\SalesStatus")]
-        #[SerializedName("verkaufstatus")]
+        #[SerializedName('verkaufstatus')]
         protected ?SalesStatus $salesStatus = null,
-        #[XmlList(inline: true, entry: "user_defined_simplefield")]
+        #[XmlList(inline: true, entry: 'user_defined_simplefield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_simplefield")]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        #[XmlList(inline: true, entry: "user_defined_anyfield")]
+        #[XmlList(inline: true, entry: 'user_defined_anyfield')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_anyfield")]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        #[XmlList(inline: true, entry: "user_defined_extend")]
+        #[XmlList(inline: true, entry: 'user_defined_extend')]
         #[Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")]
         #[SkipWhenEmpty]
-        #[SerializedName("user_defined_extend")]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

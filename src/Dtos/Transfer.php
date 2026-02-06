@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Transfer
  * Übertragungsangaben
- *
  */
-#[XmlRoot(name: "uebertragung")]
+#[XmlRoot(name: 'uebertragung')]
 class Transfer
 {
     public const string TYPE_ONLINE = 'ONLINE';
@@ -33,41 +32,41 @@ class Transfer
     public const string MODE_DELETE = 'DELETE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("art")]
+        #[SerializedName('art')]
         protected string $type = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("umfang")]
+        #[SerializedName('umfang')]
         protected string $scope = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("modus")]
+        #[SerializedName('modus')]
         protected string $mode = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("version")]
+        #[SerializedName('version')]
         protected string $version = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("sendersoftware")]
+        #[SerializedName('sendersoftware')]
         protected string $senderSoftware = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("senderversion")]
+        #[SerializedName('senderversion')]
         protected string $senderVersion = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("techn_email")]
+        #[SerializedName('techn_email')]
         protected ?string $technicalEmail = null,
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("regi_id")]
+        #[SerializedName('regi_id')]
         protected ?string $regionId = null,
         #[Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")]
         #[XmlAttribute]
-        #[SerializedName("timestamp")]
+        #[SerializedName('timestamp')]
         protected ?DateTime $timestamp = null
     ) {}
 

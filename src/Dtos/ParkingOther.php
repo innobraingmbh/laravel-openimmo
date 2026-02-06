@@ -11,9 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ParkingOther
- *
  */
-#[XmlRoot(name: "stp_sonstige")]
+#[XmlRoot(name: 'stp_sonstige')]
 class ParkingOther
 {
     public const string PLACE_TYPE_OPEN_SPACE = 'FREIPLATZ';
@@ -31,13 +30,13 @@ class ParkingOther
     public const string PLACE_TYPE_OTHER = 'SONSTIGES';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("platzart")]
+        #[SerializedName('platzart')]
         protected string $spaceType = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("bemerkung")]
+        #[SerializedName('bemerkung')]
         protected ?string $remark = null
     ) {}
 

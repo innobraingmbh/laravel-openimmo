@@ -11,47 +11,46 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class EnergyType
- *
  */
-#[XmlRoot(name: "energietyp")]
+#[XmlRoot(name: 'energietyp')]
 class EnergyType
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PASSIVHAUS")]
+        #[SerializedName('PASSIVHAUS')]
         protected ?bool $passiveHouse = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("NIEDRIGENERGIE")]
+        #[SerializedName('NIEDRIGENERGIE')]
         protected ?bool $lowEnergy = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("NEUBAUSTANDARD")]
+        #[SerializedName('NEUBAUSTANDARD')]
         protected ?bool $newBuildingStandard = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KFW40")]
+        #[SerializedName('KFW40')]
         protected ?bool $kfw40 = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KFW60")]
+        #[SerializedName('KFW60')]
         protected ?bool $kfw60 = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KFW55")]
+        #[SerializedName('KFW55')]
         protected ?bool $kfw55 = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KFW70")]
+        #[SerializedName('KFW70')]
         protected ?bool $kfw70 = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("MINERGIEBAUWEISE")]
+        #[SerializedName('MINERGIEBAUWEISE')]
         protected ?bool $minEnergieConstruction = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("MINERGIE_ZERTIFIZIERT")]
+        #[SerializedName('MINERGIE_ZERTIFIZIERT')]
         protected ?bool $minEnergieCertified = null
     ) {}
 

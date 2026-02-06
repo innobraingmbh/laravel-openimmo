@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PriceTimeUnit
  * Zeiteinheit für die der Preis gilt, vorrangig bei Ferienobjekten
- *
  */
-#[XmlRoot(name: "preis_zeiteinheit")]
+#[XmlRoot(name: 'preis_zeiteinheit')]
 class PriceTimeUnit
 {
     public const string TIME_UNIT_DAY = 'TAG';
@@ -26,9 +25,9 @@ class PriceTimeUnit
     public const string TIME_UNIT_YEAR = 'JAHR';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("zeiteinheit")]
+        #[SerializedName('zeiteinheit')]
         protected string $timeUnit = ''
     ) {}
 

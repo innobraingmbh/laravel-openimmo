@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Attachment
  * Element für Anhänge
- *
  */
-#[XmlRoot(name: "anhang")]
+#[XmlRoot(name: 'anhang')]
 class Attachment
 {
     public const string LOCATION_INTERNAL = 'INTERN';
@@ -55,26 +54,26 @@ class Attachment
     public const string GROUP_PROPERTY_URL = 'ANBOBJURL';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("location")]
+        #[SerializedName('location')]
         protected string $location = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("gruppe")]
+        #[SerializedName('gruppe')]
         protected string $group = '',
-        #[Type("string")]
-        #[SerializedName("anhangtitel")]
+        #[Type('string')]
+        #[SerializedName('anhangtitel')]
         protected ?string $attachmentTitle = null,
-        #[Type("string")]
+        #[Type('string')]
         #[SkipWhenEmpty]
-        #[SerializedName("format")]
+        #[SerializedName('format')]
         protected string $format = '',
         #[Type("Innobrain\OpenImmo\Dtos\Check")]
-        #[SerializedName("check")]
+        #[SerializedName('check')]
         protected ?Check $check = null,
         #[Type("Innobrain\OpenImmo\Dtos\Data")]
-        #[SerializedName("daten")]
+        #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}
 

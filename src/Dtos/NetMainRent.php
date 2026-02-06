@@ -12,18 +12,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class NetMainRent
- *
  */
-#[XmlRoot(name: "hauptmietzinsnetto")]
+#[XmlRoot(name: 'hauptmietzinsnetto')]
 class NetMainRent
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("hauptmietzinsust")]
+        #[SerializedName('hauptmietzinsust')]
         protected ?float $mainRentVAT = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

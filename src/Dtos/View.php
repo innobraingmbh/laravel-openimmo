@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class View
  * Welcher Ausblick ist vorhanden, Optionen nicht kombinierbar
- *
  */
-#[XmlRoot(name: "ausblick")]
+#[XmlRoot(name: 'ausblick')]
 class View
 {
     public const string VIEW_DISTANCE = 'FERNE';
@@ -26,9 +25,9 @@ class View
     public const string VIEW_SEA = 'MEER';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("blick")]
+        #[SerializedName('blick')]
         protected string $view = ''
     ) {}
 

@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class OtherPhone
- *
  */
-#[XmlRoot(name: "tel_sonstige")]
+#[XmlRoot(name: 'tel_sonstige')]
 class OtherPhone
 {
     public const string PHONE_TYPE_HQ_TELEPHONE = 'TEL_ZENTRALE';
@@ -30,16 +29,16 @@ class OtherPhone
     public const string PHONE_TYPE_OTHER_PHONE = 'TEL_SONSTIGE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("telefonart")]
+        #[SerializedName('telefonart')]
         protected string $phoneType = '',
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("bemerkung")]
+        #[SerializedName('bemerkung')]
         protected ?string $remark = null,
         #[Inline]
-        #[Type("string")]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

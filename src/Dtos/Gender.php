@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Gender
  * Soll das Objekt nur an Frauen bzw. nur an Männer vermietet werden,
  *  fehlende Angabe wird als 'Ja' interpretiert
- *
  */
-#[XmlRoot(name: "geschlecht")]
+#[XmlRoot(name: 'geschlecht')]
 class Gender
 {
     public const string GENDER_ATTRIBUTE_ANY = 'EGAL';
@@ -25,9 +24,9 @@ class Gender
     public const string GENDER_ATTRIBUTE_FEMALE_ONLY = 'NUR_FRAU';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("geschl_attr")]
+        #[SerializedName('geschl_attr')]
         protected string $genderAttribute = ''
     ) {}
 

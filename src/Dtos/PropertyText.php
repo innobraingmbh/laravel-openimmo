@@ -14,18 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class PropertyText
  * Beschreibung in anderer Sprache. "lang" Attribut muss dann vorhanden sein. W3- Language Code
  * Description in other Languages
- *
  */
-#[XmlRoot(name: "objekt_text")]
+#[XmlRoot(name: 'objekt_text')]
 class PropertyText
 {
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("lang")]
+        #[SerializedName('lang')]
         protected string $language = '',
         #[Inline]
-        #[Type("string")]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

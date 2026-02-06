@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class CommercialLeisureProperty
  * Objektart / Typ f. gew. Freizeitimmobilen
- *
  */
-#[XmlRoot(name: "freizeitimmobilie_gewerblich")]
+#[XmlRoot(name: 'freizeitimmobilie_gewerblich')]
 class CommercialLeisureProperty
 {
     public const string LEISURE_TYPE_SPORTS_FACILITIES = 'SPORTANLAGEN';
@@ -24,9 +23,9 @@ class CommercialLeisureProperty
     public const string LEISURE_TYPE_LEISURE_FACILITY = 'FREIZEITANLAGE';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("freizeit_typ")]
+        #[SerializedName('freizeit_typ')]
         protected string $leisureType = ''
     ) {}
 

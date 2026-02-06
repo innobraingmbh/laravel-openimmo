@@ -11,39 +11,38 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class RoofShape
- *
  */
-#[XmlRoot(name: "dachform")]
+#[XmlRoot(name: 'dachform')]
 class RoofShape
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("KRUEPPELWALMDACH")]
+        #[SerializedName('KRUEPPELWALMDACH')]
         protected ?bool $truncatedHipRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("MANSARDDACH")]
+        #[SerializedName('MANSARDDACH')]
         protected ?bool $mansardRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PULTDACH")]
+        #[SerializedName('PULTDACH')]
         protected ?bool $shedRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SATTELDACH")]
+        #[SerializedName('SATTELDACH')]
         protected ?bool $saddleRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("WALMDACH")]
+        #[SerializedName('WALMDACH')]
         protected ?bool $hipRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("FLACHDACH")]
+        #[SerializedName('FLACHDACH')]
         protected ?bool $flatRoof = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("PYRAMIDENDACH")]
+        #[SerializedName('PYRAMIDENDACH')]
         protected ?bool $pyramidRoof = null
     ) {}
 

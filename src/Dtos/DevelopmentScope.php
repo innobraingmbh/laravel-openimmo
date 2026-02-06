@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class DevelopmentScope
  * Detailbeschreibung der Massnahmen
- *
  */
-#[XmlRoot(name: "erschliessung_umfang")]
+#[XmlRoot(name: 'erschliessung_umfang')]
 class DevelopmentScope
 {
     public const string DEVELOPMENT_ATTRIBUTE_GAS = 'GAS';
@@ -26,9 +25,9 @@ class DevelopmentScope
     public const string DEVELOPMENT_ATTRIBUTE_TELECOMMUNICATION = 'TK';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("erschl_attr")]
+        #[SerializedName('erschl_attr')]
         protected string $developmentAttribute = ''
     ) {}
 

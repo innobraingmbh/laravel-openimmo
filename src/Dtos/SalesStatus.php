@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class SalesStatus
  * Anzeige ob z.B schon verkauft, Optionen nicht kombinierbar
- *
  */
-#[XmlRoot(name: "verkaufstatus")]
+#[XmlRoot(name: 'verkaufstatus')]
 class SalesStatus
 {
     public const string CONDITION_OPEN = 'OFFEN';
@@ -24,9 +23,9 @@ class SalesStatus
     public const string CONDITION_SOLD = 'VERKAUFT';
 
     public function __construct(
-        #[Type("string")]
+        #[Type('string')]
         #[XmlAttribute]
-        #[SerializedName("stand")]
+        #[SerializedName('stand')]
         protected string $status = ''
     ) {}
 

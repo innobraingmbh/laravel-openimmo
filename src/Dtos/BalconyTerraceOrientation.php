@@ -12,43 +12,42 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BalconyTerraceOrientation
  * Ausrichtung der Balkone bzw. der Terrassen, Optionen kombinierbar
- *
  */
-#[XmlRoot(name: "ausricht_balkon_terrasse")]
+#[XmlRoot(name: 'ausricht_balkon_terrasse')]
 class BalconyTerraceOrientation
 {
     public function __construct(
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("NORD")]
+        #[SerializedName('NORD')]
         protected ?bool $north = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("OST")]
+        #[SerializedName('OST')]
         protected ?bool $east = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SUED")]
+        #[SerializedName('SUED')]
         protected ?bool $south = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("WEST")]
+        #[SerializedName('WEST')]
         protected ?bool $west = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("NORDOST")]
+        #[SerializedName('NORDOST')]
         protected ?bool $northeast = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("NORDWEST")]
+        #[SerializedName('NORDWEST')]
         protected ?bool $northwest = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SUEDOST")]
+        #[SerializedName('SUEDOST')]
         protected ?bool $southeast = null,
-        #[Type("bool")]
+        #[Type('bool')]
         #[XmlAttribute]
-        #[SerializedName("SUEDWEST")]
+        #[SerializedName('SUEDWEST')]
         protected ?bool $southwest = null
     ) {}
 

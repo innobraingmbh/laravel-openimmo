@@ -13,18 +13,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetTotalRent
  * Gesamtsumme der Mietkosten, UmSt. im Attribut.
- *
  */
-#[XmlRoot(name: "summemietenetto")]
+#[XmlRoot(name: 'summemietenetto')]
 class NetTotalRent
 {
     public function __construct(
-        #[Type("float")]
+        #[Type('float')]
         #[XmlAttribute]
-        #[SerializedName("summemieteust")]
+        #[SerializedName('summemieteust')]
         protected ?float $totalRentVAT = null,
         #[Inline]
-        #[Type("float")]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 
