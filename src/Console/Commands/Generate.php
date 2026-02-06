@@ -44,8 +44,7 @@ class Generate extends Command
         $originalGenerator
             ->setNamespace('Innobrain\\OpenImmo\\Dtos\\Original')
             ->setTargetFolder('./src/Dtos/Original/')
-            ->setSkipTranslation()
-            ->setSkipHelperGeneration();
+            ->setSkipTranslation();
         $originalGenerator->generate(storage_path('app/OpenImmo/openimmo_127c.xsd'));
     }
 }

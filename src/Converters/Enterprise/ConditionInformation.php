@@ -7,6 +7,8 @@ namespace Innobrain\OpenImmo\Converters\Enterprise;
 use Innobrain\OpenImmo\Dtos\Condition;
 use Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate;
 
+use function Innobrain\OpenImmo\Helpers\getConditionInformation;
+
 trait ConditionInformation
 {
     public function convertConditionInformation(): array

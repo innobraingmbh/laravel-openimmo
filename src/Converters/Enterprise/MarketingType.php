@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Converters\Enterprise;
 
+use function Innobrain\OpenImmo\Helpers\getMarketingType;
+
 trait MarketingType
 {
     public function convertMarketingType(): string

@@ -21,7 +21,6 @@ use GoetasWebservices\XML\XSDReader\Schema\Type\SimpleType;
 use GoetasWebservices\XML\XSDReader\SchemaReader;
 use Illuminate\Support\Facades\File;
 use Innobrain\OpenImmo\Facades\CodeGenUtil;
-use Innobrain\OpenImmo\Facades\HelperGenUtil;
 use Innobrain\OpenImmo\Facades\TranslationService;
 use Innobrain\OpenImmo\Facades\TypeUtil;
 use InvalidArgumentException;
@@ -128,7 +127,27 @@ class DtoGenerator
             });
 
         if (! $this->skipHelperGeneration) {
-            HelperGenUtil::generate();
+            $helperGen = new HelperGenUtil;
+
+            $helpersNamespace = str_replace('\\Dtos', '\\Helpers', $this->namespace);
+            $helperGen->setHelpersNamespace($helpersNamespace);
+            $helperGen->setDtoNamespace($this->namespace);
+
+            $rootClassName = 'Openimmo';
+            if (! $this->skipTranslation) {
+                $rootClassName = TranslationService::translateClass($rootClassName);
+            }
+
+            $helperGen->setStartingClass($this->namespace.'\\'.$rootClassName);
+
+            if ($this->namespace === self::NAMESPACE) {
+                $helperGen->setTargetFile('./src/helpers.php');
+            } else {
+                $suffix = str($this->namespace)->afterLast('\\')->snake()->toString();
+                $helperGen->setTargetFile('./src/helpers_'.$suffix.'.php');
+            }
+
+            $helperGen->generate();
         }
     }
 

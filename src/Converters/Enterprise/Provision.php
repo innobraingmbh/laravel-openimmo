@@ -6,6 +6,8 @@ namespace Innobrain\OpenImmo\Converters\Enterprise;
 
 use Innobrain\OpenImmo\Dtos\UserDefinedSimplefield;
 
+use function Innobrain\OpenImmo\Helpers\getPrices;
+
 trait Provision
 {
     public function convertProvision(): array
