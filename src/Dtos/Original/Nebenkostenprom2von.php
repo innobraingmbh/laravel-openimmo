@@ -1,0 +1,54 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Innobrain\OpenImmo\Dtos\Original;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class Nebenkostenprom2von
+ * Angaben bei Gewerbe Miete,UmSt. im Attribut.
+ */
+#[XmlRoot(name: 'nebenkostenprom2von')]
+class Nebenkostenprom2von
+{
+    public function __construct(
+        /** optional */
+        #[Type('float')]
+        #[XmlAttribute]
+        #[SerializedName('nebenkostenprom2bis')]
+        protected ?float $nebenkostenprom2bis = null,
+        #[Inline]
+        #[Type('float')]
+        protected ?float $value = null
+    ) {}
+
+    public function getNebenkostenprom2bis(): ?float
+    {
+        return $this->nebenkostenprom2bis;
+    }
+
+    public function setNebenkostenprom2bis(?float $nebenkostenprom2bis): Nebenkostenprom2von
+    {
+        $this->nebenkostenprom2bis = $nebenkostenprom2bis;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): Nebenkostenprom2von
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

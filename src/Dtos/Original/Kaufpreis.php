@@ -1,0 +1,54 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Innobrain\OpenImmo\Dtos\Original;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class Kaufpreis
+ * Gesamt- (Angebots-)Kaufpreis der Immobilie. Wenn "Auf Anfrage" dann Wert = 0 und Attribut auf TRUE
+ */
+#[XmlRoot(name: 'kaufpreis')]
+class Kaufpreis
+{
+    public function __construct(
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('auf_anfrage')]
+        protected ?bool $aufAnfrage = null,
+        #[Inline]
+        #[Type('float')]
+        protected ?float $value = null
+    ) {}
+
+    public function getAufAnfrage(): ?bool
+    {
+        return $this->aufAnfrage;
+    }
+
+    public function setAufAnfrage(?bool $aufAnfrage): Kaufpreis
+    {
+        $this->aufAnfrage = $aufAnfrage;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): Kaufpreis
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

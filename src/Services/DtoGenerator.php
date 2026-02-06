@@ -318,6 +318,7 @@ class DtoGenerator
             if (! $this->skipTranslation) {
                 $propertyName = TranslationService::translateClass($propertyName);
             }
+
             $propertyType = TypeUtil::extractTypeForPhp($property->getType(), $propertyName);
         } else {
             $propertyType = TypeUtil::extractTypeForPhp($property->getType());
@@ -404,6 +405,7 @@ class DtoGenerator
                         if (! $this->skipTranslation) {
                             $prefix = str(TranslationService::translateConstant($prefix->toString()));
                         }
+
                         collect($options)
                             ->each(function (array $option) use ($property, $class, $prefix) {
                                 $name = str(data_get($option, 'value'))
