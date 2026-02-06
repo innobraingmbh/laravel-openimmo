@@ -105,18 +105,13 @@ class SchemaGenerator
     private function getSerializerType(ReflectionProperty $property): ?string
     {
         $attributes = $property->getAttributes(SerializerType::class);
-        if ($attributes !== []) {
-            /** @var SerializerType $serializerType */
-            $serializerType = $attributes[0]->newInstance();
-
-            return is_string($serializerType->name) ? $serializerType->name : null;
+        if ($attributes === []) {
+            return null;
         }
 
-        $docComment = $property->getDocComment();
-        if (is_string($docComment) && preg_match('/@Type\("(.+?)"\)/', $docComment, $matches) === 1) {
-            return $matches[1];
-        }
+        /** @var SerializerType $serializerType */
+        $serializerType = $attributes[0]->newInstance();
 
-        return null;
+        return is_string($serializerType->name) ? $serializerType->name : null;
     }
 }
