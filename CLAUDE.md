@@ -49,6 +49,14 @@ The DTOs in `src/Dtos/` (~115 files) and `src/helpers.php` are **auto-generated*
 
 All service classes (`OpenImmoService`, `TranslationService`, `TypeUtil`, `CodeGenUtil`, `HelperGenUtil`, `FormatConverterService`, `SchemaGenerator`) have corresponding facades in `src/Facades/`.
 
+### Custom Rector Rule
+
+`MigrateToNamespacedHelpersRector` in `src/Rector/` converts bare helper function calls (e.g. `getProvider($openImmo)`) to namespaced imports (`use function Innobrain\OpenImmo\Helpers\getProvider`). It is autoloaded via the existing `Innobrain\OpenImmo\` PSR-4 entry.
+
+The `TESTBENCH_WORKING_PATH` env var in `phpunit.xml.dist` is required to prevent a conflict: loading `AbstractRector` triggers Rector's bundled Composer autoloader, which pollutes `InstalledVersions::getRootPackage()` causing testbench's `package_path()` to resolve to `vendor/rector/rector/` instead of the project root. The env var pins the path before the fallback is reached.
+
+Tests live in `tests-rector/` (separate PHPUnit suite via `composer test:rector`), following Rector's testing conventions: `AbstractRectorTestCase`, `.php.inc` fixture files with `-----` separator, and `skip_` prefix for no-change cases.
+
 ## Testing
 
 - Uses Pest with Orchestra Testbench (`skeleton/` as the app base path)

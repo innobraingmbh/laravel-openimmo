@@ -26,6 +26,9 @@
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
+    <php>
+        <env name="TESTBENCH_WORKING_PATH" value="."/>
+    </php>
     <source>
         <include>
             <directory suffix=".php">./src</directory>
