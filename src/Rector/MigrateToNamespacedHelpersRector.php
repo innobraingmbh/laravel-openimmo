@@ -8,6 +8,7 @@ use PhpParser\Node;
 use PhpParser\Node\Expr\FuncCall;
 use PhpParser\Node\Name\FullyQualified;
 use Rector\Rector\AbstractRector;
+use RuntimeException;
 use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
@@ -79,7 +80,9 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
         $helpersFile = array_find($candidates, fn ($candidate) => file_exists($candidate));
 
         if ($helpersFile === null) {
-            return [];
+            throw new RuntimeException(
+                'MigrateToNamespacedHelpersRector: Could not find helpers.php. Searched: '.implode(', ', $candidates)
+            );
         }
 
         $tokens = token_get_all(file_get_contents($helpersFile));
@@ -90,13 +93,20 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
                 continue;
             }
 
-            if (
-                $tokens[$i][0] === T_FUNCTION
-                && isset($tokens[$i + 2])
-                && is_array($tokens[$i + 2])
-                && $tokens[$i + 2][0] === T_STRING
-            ) {
-                $functions[$tokens[$i + 2][1]] = true;
+            if ($tokens[$i][0] !== T_FUNCTION) {
+                continue;
+            }
+
+            for ($j = $i + 1; $j < $count; $j++) {
+                if (! is_array($tokens[$j])) {
+                    break;
+                }
+
+                if ($tokens[$j][0] === T_STRING) {
+                    $functions[$tokens[$j][1]] = true;
+
+                    break;
+                }
             }
         }
 
