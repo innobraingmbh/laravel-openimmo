@@ -8,12 +8,13 @@ use Illuminate\Support\Manager;
 use Innobrain\OpenImmo\Converters\Concerns\ConverterInterface;
 use Innobrain\OpenImmo\Converters\EnterpriseConverter;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\Original\Openimmo as OriginalOpenimmo;
 use Innobrain\OpenImmo\Enums\ConverterDriver;
 use Override;
 
 class FormatConverterService extends Manager implements ConverterInterface
 {
-    public function convert(OpenImmo $openImmo)
+    public function convert(OpenImmo|OriginalOpenimmo $openImmo)
     {
         return $this->driver()->convert($openImmo);
     }
@@ -41,7 +42,7 @@ class FormatConverterService extends Manager implements ConverterInterface
         return ConverterDriver::Enterprise->value;
     }
 
-    public function setOpenImmo(OpenImmo $openImmo): ConverterInterface
+    public function setOpenImmo(OpenImmo|OriginalOpenimmo $openImmo): ConverterInterface
     {
         return $this->driver()->setOpenImmo($openImmo);
     }

@@ -19,6 +19,7 @@ use Innobrain\OpenImmo\Converters\Enterprise\TechnicalManagement;
 use Innobrain\OpenImmo\Converters\Enterprise\TypeOfUse;
 use Innobrain\OpenImmo\Converters\Enterprise\UserDefinedSimpleFields;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Dtos\Original\Openimmo as OriginalOpenimmo;
 
 class EnterpriseConverter extends BaseConverter
 {
@@ -36,7 +37,7 @@ class EnterpriseConverter extends BaseConverter
     use TypeOfUse;
     use UserDefinedSimpleFields;
 
-    public function convert(OpenImmo $openImmo): array
+    public function convert(OpenImmo|OriginalOpenimmo $openImmo): array
     {
         $this->saveOpenImmo($openImmo);
 
