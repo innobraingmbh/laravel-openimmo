@@ -273,7 +273,7 @@ class DtoGenerator
         // take min/max into account, as this may be an array instead
         // @phpstan-ignore-next-line
         if ($property->getMax() === -1) {
-            $classProperty->addAttribute(XmlList::class, ['inline' => true, 'entry' => $property->getName()]);
+            $classProperty->addAttribute(XmlList::class, ['entry' => $property->getName(), 'inline' => true]);
             $namespace->addUse(XmlList::class);
         }
 

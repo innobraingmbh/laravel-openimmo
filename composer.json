@@ -58,6 +58,7 @@
     "autoload-dev": {
         "psr-4": {
             "Innobrain\\OpenImmo\\Tests\\": "tests/",
+            "Innobrain\\OpenImmo\\TestsRector\\": "tests-rector/",
             "Workbench\\App\\": "skeleton/app/"
         }
     },
@@ -75,7 +76,9 @@
             "@php vendor/bin/testbench serve"
         ],
         "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
+        "test": "vendor/bin/pest --testsuite=Package",
+        "test:rector": "vendor/bin/pest --testsuite=Rector",
+        "test:all": "vendor/bin/pest --testsuite=Package; vendor/bin/pest --testsuite=Rector",
         "test-coverage": "vendor/bin/pest --coverage",
         "format": [
             "vendor/bin/rector",

@@ -16,8 +16,11 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Innobrain Test Suite">
+        <testsuite name="Package">
             <directory>tests</directory>
+        </testsuite>
+        <testsuite name="Rector">
+            <directory>tests-rector</directory>
         </testsuite>
     </testsuites>
     <logging>

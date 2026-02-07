@@ -35,16 +35,17 @@ vendor/bin/rector process app/ --config vendor/innobrain/laravel-openimmo/rector
 
 This will rewrite all global helper calls to use the namespaced versions with proper `use function` imports.
 
-You can also include the mapping in your own `rector.php`:
+You can also include the rule in your own `rector.php`:
 
 ```php
-use Rector\Renaming\Rector\FuncCall\RenameFunctionRector;
+use Innobrain\OpenImmo\Rector\MigrateToNamespacedHelpersRector;
+
+require_once __DIR__.'/vendor/innobrain/laravel-openimmo/rector/MigrateToNamespacedHelpersRector.php';
 
 return RectorConfig::configure()
-    ->withConfiguredRule(
-        RenameFunctionRector::class,
-        require __DIR__.'/vendor/innobrain/laravel-openimmo/rector-helper-mapping.php',
-    );
+    ->withRules([
+        MigrateToNamespacedHelpersRector::class,
+    ]);
 ```
 
 #### Manual Migration

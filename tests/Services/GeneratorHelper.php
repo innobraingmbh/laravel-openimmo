@@ -167,8 +167,8 @@ trait GeneratorHelper
 
         if (preg_match('/^\\(inline\\s*=\\s*(true|false),\\s*entry\\s*=\\s*\"(.+?)\"\\)$/', $tagValue, $matches) === 1) {
             return [
-                'inline' => $matches[1] === 'true',
                 'entry' => $matches[2],
+                'inline' => $matches[1] === 'true',
             ];
         }
 

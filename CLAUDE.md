@@ -9,7 +9,9 @@ Laravel package (`innobrain/laravel-openimmo`) that provides PHP DTOs and serial
 ## Commands
 
 ```bash
-composer test                    # Run tests (Pest)
+composer test                    # Run package tests (Pest)
+composer test:rector             # Run Rector rule tests (isolated)
+composer test:all                # Run both suites
 vendor/bin/pest --filter="test name"  # Run a single test
 vendor/bin/pest tests/Services/DtoGeneratorTest.php  # Run a specific test file
 composer analyse                 # PHPStan (level 5)
