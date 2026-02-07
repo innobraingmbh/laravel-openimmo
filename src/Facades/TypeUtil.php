@@ -11,8 +11,8 @@ use Nette\PhpGenerator\Property;
 /**
  * @see \Innobrain\OpenImmo\Services\TypeUtil
  *
- * @method static string getTypeForSerializer(string $type)
- * @method static string getValidPhpType(string $propertyType)
+ * @method static string getTypeForSerializer(string $type, null|string $namespace = null)
+ * @method static string getValidPhpType(string $propertyType, null|string $namespace = null)
  * @method static float|false|int|array|string|null getDefaultValueForType(string $propertyType, bool $nullable)
  * @method static null|string extractTypeForPhp(Type $typeFromXsd, null|string $propertyName = null)
  * @method static bool isConstantsBasedProperty(Property $property)

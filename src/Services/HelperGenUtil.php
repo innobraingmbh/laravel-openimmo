@@ -5,16 +5,26 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Facades\File;
-use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Nette\PhpGenerator\PhpFile;
+use Nette\PhpGenerator\PhpNamespace;
 use ReflectionClass;
 use ReflectionProperty;
 
 class HelperGenUtil
 {
+    public const string NAMESPACE = 'Innobrain\\OpenImmo\\Helpers';
+
+    protected string $helpersNamespace = self::NAMESPACE;
+
+    protected string $dtoNamespace = DtoGenerator::NAMESPACE;
+
+    protected ?string $startingClass = null;
+
     protected string $targetFile = './src/helpers.php';
 
     private readonly PhpFile $phpFile;
+
+    private PhpNamespace $namespace;
 
     private array $recursionBlocker = [];
 
@@ -31,12 +41,42 @@ class HelperGenUtil
         $this->phpFile->addComment('This file is auto-generated.');
     }
 
+    public function setHelpersNamespace(string $helpersNamespace): self
+    {
+        $this->helpersNamespace = $helpersNamespace;
+
+        return $this;
+    }
+
+    public function setDtoNamespace(string $dtoNamespace): self
+    {
+        $this->dtoNamespace = $dtoNamespace;
+
+        return $this;
+    }
+
+    public function setStartingClass(string $startingClass): self
+    {
+        $this->startingClass = $startingClass;
+
+        return $this;
+    }
+
+    public function setTargetFile(string $targetFile): self
+    {
+        $this->targetFile = $targetFile;
+
+        return $this;
+    }
+
     public function generate(): void
     {
-        $startingClass = OpenImmo::class;
+        $this->namespace = $this->phpFile->addNamespace($this->helpersNamespace);
+
+        $startingClass = $this->startingClass ?? (DtoGenerator::NAMESPACE.'\\OpenImmo');
         $reflection = new ReflectionClass($startingClass);
         $properties = $reflection->getProperties();
-        $this->phpFile->addUse($startingClass);
+        $this->namespace->addUse($startingClass);
 
         foreach ($properties as $property) {
             $this->loopProperties($property, [$startingClass]);
@@ -61,7 +101,7 @@ class HelperGenUtil
 
         $this->recursionBlocker[] = $property->getName();
 
-        $className = DtoGenerator::NAMESPACE.'\\'.ucfirst($name);
+        $className = $this->dtoNamespace.'\\'.ucfirst($name);
 
         if (! class_exists($className)) {
             return;
@@ -86,14 +126,14 @@ class HelperGenUtil
             return;
         }
 
-        $functions = $this->phpFile->getFunctions();
+        $functions = $this->namespace->getFunctions();
         if (array_key_exists('get'.$propertyName, $functions)) {
             return;
         }
 
         $childClass = $classes[count($classes) - 1];
         $childClassBaseName = class_basename($childClass);
-        $propertyClassName = DtoGenerator::NAMESPACE.'\\'.$propertyName;
+        $propertyClassName = $this->dtoNamespace.'\\'.$propertyName;
 
         if (! class_exists($propertyClassName)) {
             return;
@@ -108,24 +148,26 @@ class HelperGenUtil
 
         $isArrayDto = $propertyTypeName === 'array';
 
-        // The field property is a special case, since it is based on a user defined extend
+        // The field/feld property is a special case, since it is based on a user defined extend
         // but there is no user defined extend getter function.
-        if ($propertyName === 'Field') {
+        if ($propertyName === 'Field' || $propertyName === 'Feld') {
             return;
         }
 
-        $function = $this->phpFile->addFunction('get'.$propertyName);
+        $startingClass = $this->startingClass ?? (DtoGenerator::NAMESPACE.'\\OpenImmo');
+        $function = $this->namespace->addFunction('get'.$propertyName);
         $function->addParameter('openImmo')
-            ->setType(OpenImmo::class)
+            ->setType($startingClass)
             ->setNullable(false);
 
-        $this->phpFile->addUse($propertyClassName);
+        $this->namespace->addUse($propertyClassName);
         $function->setReturnType($propertyClassName);
         $function->addComment('Will return the '.$propertyName.' object from an OpenImmo Dto.');
         $function->addComment('If it does not exist, it will be created.');
         $function->addComment('Make sure to call this function only on referenced objects.');
 
-        $isStartingClass = $childClassBaseName === 'OpenImmo';
+        $startingClassBaseName = class_basename($startingClass);
+        $isStartingClass = $childClassBaseName === $startingClassBaseName;
         if ($isStartingClass && $isArrayDto) {
             $function->setBody(<<<PHP
             \$children = \$openImmo->get{$propertyName}();

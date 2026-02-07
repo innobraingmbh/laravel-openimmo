@@ -9,6 +9,15 @@ use Innobrain\OpenImmo\Dtos\Elevator;
 use Innobrain\OpenImmo\Dtos\HeatingSystem;
 use Innobrain\OpenImmo\Dtos\SecurityTechnology;
 
+use function Innobrain\OpenImmo\Helpers\getBalconyTerraceOrientation;
+use function Innobrain\OpenImmo\Helpers\getBasement;
+use function Innobrain\OpenImmo\Helpers\getBathroom;
+use function Innobrain\OpenImmo\Helpers\getEquipment;
+use function Innobrain\OpenImmo\Helpers\getFloor;
+use function Innobrain\OpenImmo\Helpers\getFurnished;
+use function Innobrain\OpenImmo\Helpers\getHeatingType;
+use function Innobrain\OpenImmo\Helpers\getKitchen;
+
 trait Equipment
 {
     public function convertEquipment(): array

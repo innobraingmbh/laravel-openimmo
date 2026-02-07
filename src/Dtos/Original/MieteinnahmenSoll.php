@@ -1,0 +1,66 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Innobrain\OpenImmo\Dtos\Original;
+
+use JMS\Serializer\Annotation\Inline;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlRoot;
+
+/**
+ * Class MieteinnahmenSoll
+ * Mieteinnahmen pro Periode, Normal-/Solleinnahmen (Ohne Periode = JAHR)
+ */
+#[XmlRoot(name: 'mieteinnahmen_soll')]
+class MieteinnahmenSoll
+{
+    public const string PERIODE_TAG = 'TAG';
+
+    public const string PERIODE_WOCHE = 'WOCHE';
+
+    public const string PERIODE_MONAT = 'MONAT';
+
+    public const string PERIODE_JAHR = 'JAHR';
+
+    public function __construct(
+        /**
+         * optional
+         *
+         * @see PERIODE_* constants
+         */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('periode')]
+        protected string $periode = '',
+        #[Inline]
+        #[Type('float')]
+        protected ?float $value = null
+    ) {}
+
+    public function getPeriode(): ?string
+    {
+        return $this->periode;
+    }
+
+    public function setPeriode(?string $periode): MieteinnahmenSoll
+    {
+        $this->periode = $periode;
+
+        return $this;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): MieteinnahmenSoll
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+}

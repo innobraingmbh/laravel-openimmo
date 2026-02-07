@@ -9,6 +9,8 @@ use Innobrain\OpenImmo\Enums\ConverterDriver;
 use Innobrain\OpenImmo\Facades\FormatConverterService;
 use Innobrain\OpenImmo\Facades\OpenImmoService;
 
+use function Innobrain\OpenImmo\Helpers\getAreas;
+
 test('can start convert', function () {
     $openImmo = new OpenImmo;
 

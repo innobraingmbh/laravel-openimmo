@@ -51,7 +51,8 @@
             "Innobrain\\OpenImmo\\": "src/"
         },
         "files": [
-            "src/helpers.php"
+            "src/helpers.php",
+            "src/helpers_original.php"
         ]
     },
     "autoload-dev": {
