@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to the **onOffice Adapter for Laravel**, a package that offers an Eloquent-like API for querying onOffice.
+Welcome to **OpenImmo for Laravel**, a package for working with the OpenImmo XML standard.
 
 ## Installation
 ```bash

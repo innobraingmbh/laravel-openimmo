@@ -38,6 +38,9 @@ $json = OpenImmoService::serializeObjectIntoJson($openImmo);
 ```php
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 
+use function Innobrain\OpenImmo\Helpers\getProvider;
+use function Innobrain\OpenImmo\Helpers\getContactPerson;
+
 $openImmo = new OpenImmo;
 getProvider($openImmo)->setProviderNumber('myProvider');
 getContactPerson($openImmo)->setName('John Doe');

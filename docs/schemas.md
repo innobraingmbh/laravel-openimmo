@@ -4,14 +4,14 @@ This package is capable of generating JSON Schemas for [Prism](https://prismphp.
 You can generate the schemas as following:
 ```php
 use Innobrain\OpenImmo\Dtos\OpenImmo;
-use InnoBrain\OpenImmo\Facades\SchemaGenerator;
+use Innobrain\OpenImmo\Facades\SchemaGenerator;
 
 $schema = SchemaGenerator::generateFor(OpenImmo::class);
 ```
 We can do that for any dto:
 ```php
 use Innobrain\OpenImmo\Dtos\Areas;
-use InnoBrain\OpenImmo\Facades\SchemaGenerator;
+use Innobrain\OpenImmo\Facades\SchemaGenerator;
 
 $schema = SchemaGenerator::generateFor(Areas::class);
 ```

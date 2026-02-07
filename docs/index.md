@@ -13,8 +13,8 @@ hero:
 features:
   - title: Seamless XML Handling
     details: Effortlessly convert OpenImmo XML to PHP Dtos and back, simplifying data manipulation.
-  - title: Robust Validation
-    details: Ensure data integrity with built-in validation for OpenImmo XML structures.
+  - title: Format Converters
+    details: Convert OpenImmo DTOs to other formats like onOffice Enterprise field arrays.
   - title: Laravel Integration
     details: Leverage Laravel's powerful features to enhance your OpenImmo data workflows.
   - title: Open Source
