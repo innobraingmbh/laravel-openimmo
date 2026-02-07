@@ -1,18 +1,37 @@
 # Schema Generation
 
-This package is capable of generating JSON Schemas for [Prism](https://prismphp.com/) models. We provide the generation for all dtos.
-You can generate the schemas as following:
+This package can generate [Prism](https://prismphp.com/) PHP schemas from the DTOs. This is useful for LLM structured output — you can pass a schema to a language model and receive data that maps directly to the OpenImmo DTO structure.
+
+## Generating a Schema
+
+Use the `SchemaGenerator` facade to generate a schema for any DTO class:
+
 ```php
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Facades\SchemaGenerator;
 
 $schema = SchemaGenerator::generateFor(OpenImmo::class);
 ```
-We can do that for any dto:
+
+You can generate schemas for any DTO in the tree, not just the root:
+
 ```php
 use Innobrain\OpenImmo\Dtos\Areas;
 use Innobrain\OpenImmo\Facades\SchemaGenerator;
 
 $schema = SchemaGenerator::generateFor(Areas::class);
 ```
-This is useful if you want to get a schema for a LLM to generate data for you.
+
+Nested objects and arrays are handled recursively, and nullable types are marked as nullable in the schema.
+
+## Skipping User-Defined Fields
+
+OpenImmo DTOs include user-defined fields (`userDefinedAnyfield`, `userDefinedSimplefield`, `userDefinedExtend`) that can add noise to schemas. You can skip them:
+
+```php
+use Innobrain\OpenImmo\Dtos\OpenImmo;
+use Innobrain\OpenImmo\Facades\SchemaGenerator;
+
+$schema = SchemaGenerator::skipUserDefinedFields()
+    ->generateFor(OpenImmo::class);
+```

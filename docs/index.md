@@ -12,16 +12,16 @@ hero:
 
 features:
   - title: Seamless XML Handling
-    details: Effortlessly convert OpenImmo XML to PHP Dtos and back, simplifying data manipulation.
+    details: Deserialize OpenImmo XML into 115+ typed PHP DTOs and serialize them back with full round-trip fidelity.
   - title: Format Converters
-    details: Convert OpenImmo DTOs to other formats like onOffice Enterprise field arrays.
+    details: Convert OpenImmo DTOs to other formats like onOffice Enterprise field arrays using a driver-based architecture.
+  - title: Schema Generation
+    details: Generate Prism PHP schemas from DTOs for LLM structured output and data validation.
+  - title: Helper Functions
+    details: Fluent getter helpers to navigate and build the DTO tree without manual wiring.
   - title: Laravel Integration
-    details: Leverage Laravel's powerful features to enhance your OpenImmo data workflows.
+    details: Facades, config publishing, and a Manager-based converter that follows Laravel conventions.
   - title: Open Source
-    details: Join a community-driven project with transparent development and contributions welcome.
-  - title: Comprehensive Documentation
-    details: Access detailed guides and examples to get the most out of OpenImmo for Laravel.
-  - title: Active Community
-    details: Engage with other developers and share insights on using OpenImmo for Laravel.
+    details: GPLv3-licensed, community-driven project with transparent development and contributions welcome.
 
 ---
