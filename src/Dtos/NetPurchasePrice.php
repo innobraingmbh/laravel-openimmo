@@ -13,26 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetPurchasePrice
  * Ausgewiesene Kaufpreis Netto, Optional mit Umst im Attribut. Speziell für Gewerbe
- *
- * @XmlRoot("kaufpreisnetto")
  */
+#[XmlRoot(name: 'kaufpreisnetto')]
 class NetPurchasePrice
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("kaufpreisust")
-         * optional
-         */
+        /** optional */
+        #[Type('float')]
+        #[XmlAttribute]
+        #[SerializedName('kaufpreisust')]
         protected ?float $purchasePriceVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

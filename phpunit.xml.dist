@@ -16,13 +16,19 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Innobrain Test Suite">
+        <testsuite name="Package">
             <directory>tests</directory>
+        </testsuite>
+        <testsuite name="Rector">
+            <directory>tests-rector</directory>
         </testsuite>
     </testsuites>
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
+    <php>
+        <env name="TESTBENCH_WORKING_PATH" value="."/>
+    </php>
     <source>
         <include>
             <directory suffix=".php">./src</directory>

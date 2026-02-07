@@ -13,26 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetRentPerSqmFrom
  * Angaben bei Gewerbe Miete, UmSt. im Attribut.
- *
- * @XmlRoot("nettomieteprom2von")
  */
+#[XmlRoot(name: 'nettomieteprom2von')]
 class NetRentPerSqmFrom
 {
     public function __construct(
-        /**
-         * @Type("float")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("nettomieteprom2bis")
-         * optional
-         */
+        /** optional */
+        #[Type('float')]
+        #[XmlAttribute]
+        #[SerializedName('nettomieteprom2bis')]
         protected ?float $netRentPerSqmTo = null,
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

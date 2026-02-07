@@ -31,10 +31,10 @@ class CodeGenUtil
         $classProperty->setComment(implode($separator, $currentDescriptionParts));
     }
 
-    public function generateGetterAndSetter(Property $property, ClassType $class, bool $fluentApi = true, bool $nullable = false): void
+    public function generateGetterAndSetter(Property $property, ClassType $class, bool $fluentApi = true, bool $nullable = false, ?string $namespace = null): void
     {
         $this->generateGetter($property, $class, $nullable);
-        $this->generateSetter($property, $class, $fluentApi, $nullable);
+        $this->generateSetter($property, $class, $fluentApi, $nullable, $namespace);
     }
 
     public function generateGetter(Property $property, ClassType $class, bool $nullable): void
@@ -55,7 +55,7 @@ class CodeGenUtil
         }
     }
 
-    public function generateSetter(Property $property, ClassType $class, bool $fluentApi, bool $nullable): void
+    public function generateSetter(Property $property, ClassType $class, bool $fluentApi, bool $nullable, ?string $namespace = null): void
     {
         $setter = $class->addMethod('set'.ucfirst($property->getName()));
         $propertyType = $property->getType();
@@ -67,7 +67,8 @@ class CodeGenUtil
 
         $setterCode = '$this->'.$property->getName().' = $'.$property->getName().';';
         if ($fluentApi) {
-            $setter->setReturnType('\\'.DtoGenerator::NAMESPACE.'\\'.$class->getName());
+            $ns = $namespace ?? DtoGenerator::NAMESPACE;
+            $setter->setReturnType('\\'.$ns.'\\'.$class->getName());
             $setterCode .= PHP_EOL.'return $this;';
         }
 

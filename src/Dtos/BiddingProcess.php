@@ -14,83 +14,46 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BiddingProcess
  * Angaben zum Bieterverfahren
- *
- * @XmlRoot("bieterverfahren")
  */
+#[XmlRoot(name: 'bieterverfahren')]
 class BiddingProcess
 {
     public function __construct(
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("beginn_angebotsphase")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('beginn_angebotsphase')]
         protected ?DateTime $startOfOfferPhase = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("besichtigungstermin")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('besichtigungstermin')]
         protected ?DateTime $viewingAppointment = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("besichtigungstermin_2")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('besichtigungstermin_2')]
         protected ?DateTime $viewingAppointment2 = null,
-        /**
-         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-         *
-         * @SerializedName("beginn_bietzeit")
-         */
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[SerializedName('beginn_bietzeit')]
         protected ?DateTime $startOfBiddingTime = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("ende_bietzeit")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('ende_bietzeit')]
         protected ?DateTime $endOfBiddingTime = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("hoechstgebot_zeigen")
-         */
+        #[Type('bool')]
+        #[SerializedName('hoechstgebot_zeigen')]
         protected ?bool $showHighestBid = null,
-        /**
-         * @Type("float")
-         *
-         * @SerializedName("mindestpreis")
-         */
+        #[Type('float')]
+        #[SerializedName('mindestpreis')]
         protected ?float $minimumPrice = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

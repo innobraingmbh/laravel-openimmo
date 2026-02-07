@@ -13,26 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class UserDefinedSimplefield
  * Benutzerdefinierte Angaben
- *
- * @XmlRoot("user_defined_simplefield")
  */
+#[XmlRoot(name: 'user_defined_simplefield')]
 class UserDefinedSimplefield
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("feldname")
-         * required
-         */
+        /** required */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('feldname')]
         protected string $fieldName = '',
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

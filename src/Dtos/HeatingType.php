@@ -12,56 +12,35 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HeatingType
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
- *
- * @XmlRoot("heizungsart")
  */
+#[XmlRoot(name: 'heizungsart')]
 class HeatingType
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("OFEN")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('OFEN')]
         protected ?bool $stove = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("ETAGE")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('ETAGE')]
         protected ?bool $floor = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("ZENTRAL")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('ZENTRAL')]
         protected ?bool $central = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("FERN")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('FERN')]
         protected ?bool $remote = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("FUSSBODEN")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('FUSSBODEN')]
         protected ?bool $flooring = null
     ) {}
 

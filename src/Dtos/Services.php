@@ -12,56 +12,35 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Services
  * Welche Serviceleistungen werden angeboten? Optionen kombinierbar
- *
- * @XmlRoot("serviceleistungen")
  */
+#[XmlRoot(name: 'serviceleistungen')]
 class Services
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("BETREUTES_WOHNEN")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('BETREUTES_WOHNEN')]
         protected ?bool $assistedLiving = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("CATERING")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('CATERING')]
         protected ?bool $catering = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("REINIGUNG")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('REINIGUNG')]
         protected ?bool $cleaning = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("EINKAUF")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('EINKAUF')]
         protected ?bool $shopping = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("WACHDIENST")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('WACHDIENST')]
         protected ?bool $securityService = null
     ) {}
 

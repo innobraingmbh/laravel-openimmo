@@ -12,24 +12,21 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Rooms
  * Objekart / Typ f. Zimmer
- *
- * @XmlRoot("zimmer")
  */
+#[XmlRoot(name: 'zimmer')]
 class Rooms
 {
     public const string ROOM_TYPE_ROOM = 'ZIMMER';
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("zimmertyp")
          * optional
          *
          * @see ROOM_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('zimmertyp')]
         protected string $roomType = ''
     ) {}
 

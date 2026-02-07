@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class OfficePractices
  * Objektart / Typ f. Büro/Praxen
- *
- * @XmlRoot("buero_praxen")
  */
+#[XmlRoot(name: 'buero_praxen')]
 class OfficePractices
 {
     public const string OFFICE_TYPE_OFFICE_SPACE = 'BUEROFLAECHE';
@@ -39,15 +38,13 @@ class OfficePractices
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("buero_typ")
          * optional
          *
          * @see OFFICE_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('buero_typ')]
         protected string $officeType = ''
     ) {}
 

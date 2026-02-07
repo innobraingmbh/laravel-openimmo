@@ -12,111 +12,60 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConditionInformation
- *
- * @XmlRoot("zustand_angaben")
  */
+#[XmlRoot(name: 'zustand_angaben')]
 class ConditionInformation
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("baujahr")
-         */
+        #[Type('string')]
+        #[SerializedName('baujahr')]
         protected ?string $yearOfConstruction = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("letztemodernisierung")
-         */
+        #[Type('string')]
+        #[SerializedName('letztemodernisierung')]
         protected ?string $lastModernization = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Condition")
-         *
-         * @SerializedName("zustand")
-         */
+        #[Type(Condition::class)]
+        #[SerializedName('zustand')]
         protected ?Condition $condition = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Age")
-         *
-         * @SerializedName("alter")
-         */
+        #[Type(Age::class)]
+        #[SerializedName('alter')]
         protected ?Age $age = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\DevelopableAccordingTo")
-         *
-         * @SerializedName("bebaubar_nach")
-         */
+        #[Type(DevelopableAccordingTo::class)]
+        #[SerializedName('bebaubar_nach')]
         protected ?DevelopableAccordingTo $developableAccordingTo = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Development")
-         *
-         * @SerializedName("erschliessung")
-         */
+        #[Type(Development::class)]
+        #[SerializedName('erschliessung')]
         protected ?Development $development = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\DevelopmentScope")
-         *
-         * @SerializedName("erschliessung_umfang")
-         */
+        #[Type(DevelopmentScope::class)]
+        #[SerializedName('erschliessung_umfang')]
         protected ?DevelopmentScope $developmentScope = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("bauzone")
-         */
+        #[Type('string')]
+        #[SerializedName('bauzone')]
         protected ?string $constructionZone = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("altlasten")
-         */
+        #[Type('string')]
+        #[SerializedName('altlasten')]
         protected ?string $contamination = null,
-        /**
-         * @XmlList(inline = true, entry = "energiepass")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("energiepass")
-         */
+        #[XmlList(entry: 'energiepass', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('energiepass')]
         protected array $energyCertificate = [],
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\SalesStatus")
-         *
-         * @SerializedName("verkaufstatus")
-         */
+        #[Type(SalesStatus::class)]
+        #[SerializedName('verkaufstatus')]
         protected ?SalesStatus $salesStatus = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

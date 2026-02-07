@@ -12,264 +12,141 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ContactPerson
- *
- * @XmlRoot("kontaktperson")
  */
+#[XmlRoot(name: 'kontaktperson')]
 class ContactPerson
 {
     public function __construct(
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("email_zentrale")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('email_zentrale')]
         protected ?string $centralEmail = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("email_direkt")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('email_direkt')]
         protected ?string $directEmail = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("tel_zentrale")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('tel_zentrale')]
         protected ?string $centralPhoneNumber = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("tel_durchw")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('tel_durchw')]
         protected ?string $phoneExtension = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("tel_fax")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('tel_fax')]
         protected ?string $faxNumber = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("tel_handy")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('tel_handy')]
         protected ?string $mobileNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("name")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('name')]
         protected string $name = '',
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("vorname")
-         */
+        #[Type('string')]
+        #[SerializedName('vorname')]
         protected ?string $firstName = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("titel")
-         */
+        #[Type('string')]
+        #[SerializedName('titel')]
         protected ?string $title = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("anrede")
-         */
+        #[Type('string')]
+        #[SerializedName('anrede')]
         protected ?string $salutation = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("position")
-         */
+        #[Type('string')]
+        #[SerializedName('position')]
         protected ?string $position = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("anrede_brief")
-         */
+        #[Type('string')]
+        #[SerializedName('anrede_brief')]
         protected ?string $letterSalutation = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("firma")
-         */
+        #[Type('string')]
+        #[SerializedName('firma')]
         protected ?string $company = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("zusatzfeld")
-         */
+        #[Type('string')]
+        #[SerializedName('zusatzfeld')]
         protected ?string $additionalField = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("strasse")
-         */
+        #[Type('string')]
+        #[SerializedName('strasse')]
         protected ?string $street = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("hausnummer")
-         */
+        #[Type('string')]
+        #[SerializedName('hausnummer')]
         protected ?string $houseNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("plz")
-         */
+        #[Type('string')]
+        #[SerializedName('plz')]
         protected ?string $postalCode = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("ort")
-         */
+        #[Type('string')]
+        #[SerializedName('ort')]
         protected ?string $city = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("postfach")
-         */
+        #[Type('string')]
+        #[SerializedName('postfach')]
         protected ?string $poBox = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("postf_plz")
-         */
+        #[Type('string')]
+        #[SerializedName('postf_plz')]
         protected ?string $poBoxPostalCode = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("postf_ort")
-         */
+        #[Type('string')]
+        #[SerializedName('postf_ort')]
         protected ?string $poBoxCity = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Country")
-         *
-         * @SerializedName("land")
-         */
+        #[Type(Country::class)]
+        #[SerializedName('land')]
         protected ?Country $country = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("email_privat")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('email_privat')]
         protected ?string $privateEmail = null,
-        /**
-         * @XmlList(inline = true, entry = "email_sonstige")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\OtherEmail>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("email_sonstige")
-         */
+        #[XmlList(entry: 'email_sonstige', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\OtherEmail>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('email_sonstige')]
         protected array $otherEmail = [],
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("email_feedback")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('email_feedback')]
         protected ?string $feedbackEmail = null,
-        /**
-         * @Type("string")
-         * Minimum length: 1
-         *
-         * @SerializedName("tel_privat")
-         */
+        /** Minimum length: 1 */
+        #[Type('string')]
+        #[SerializedName('tel_privat')]
         protected ?string $privatePhoneNumber = null,
-        /**
-         * @XmlList(inline = true, entry = "tel_sonstige")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\OtherPhone>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("tel_sonstige")
-         */
+        #[XmlList(entry: 'tel_sonstige', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\OtherPhone>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('tel_sonstige')]
         protected array $otherPhoneNumber = [],
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("url")
-         */
+        #[Type('string')]
+        #[SerializedName('url')]
         protected ?string $url = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("adressfreigabe")
-         */
+        #[Type('bool')]
+        #[SerializedName('adressfreigabe')]
         protected ?bool $addressRelease = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("personennummer")
-         */
+        #[Type('string')]
+        #[SerializedName('personennummer')]
         protected ?string $personNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("immobilientreuhaenderid")
-         */
+        #[Type('string')]
+        #[SerializedName('immobilientreuhaenderid')]
         protected ?string $propertyTrusteeId = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Photo")
-         *
-         * @SerializedName("foto")
-         */
+        #[Type(Photo::class)]
+        #[SerializedName('foto')]
         protected ?Photo $photo = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("referenz_id")
-         */
+        #[Type('string')]
+        #[SerializedName('referenz_id')]
         protected ?string $referenceId = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("freitextfeld")
-         */
+        #[Type('string')]
+        #[SerializedName('freitextfeld')]
         protected ?string $freeTextField = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

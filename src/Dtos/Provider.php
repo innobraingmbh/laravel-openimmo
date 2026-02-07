@@ -13,97 +13,53 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Provider
  * Anbieterangaben
- *
- * @XmlRoot("anbieter")
  */
+#[XmlRoot(name: 'anbieter')]
 class Provider
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("anbieternr")
-         */
+        #[Type('string')]
+        #[SerializedName('anbieternr')]
         protected ?string $providerNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("firma")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('firma')]
         protected string $company = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("openimmo_anid")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('openimmo_anid')]
         protected string $openImmoAnid = '',
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("lizenzkennung")
-         */
+        #[Type('string')]
+        #[SerializedName('lizenzkennung')]
         protected ?string $licenseIdentifier = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Attachment")
-         *
-         * @SerializedName("anhang")
-         */
+        #[Type(Attachment::class)]
+        #[SerializedName('anhang')]
         protected ?Attachment $attachment = null,
-        /**
-         * @XmlList(inline = true, entry = "immobilie")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\RealEstate>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("immobilie")
-         */
+        #[XmlList(entry: 'immobilie', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\RealEstate>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('immobilie')]
         protected array $realEstate = [],
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("impressum")
-         */
+        #[Type('string')]
+        #[SerializedName('impressum')]
         protected ?string $imprint = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\ImprintStructure")
-         *
-         * @SerializedName("impressum_strukt")
-         */
+        #[Type(ImprintStructure::class)]
+        #[SerializedName('impressum_strukt')]
         protected ?ImprintStructure $imprintStructure = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

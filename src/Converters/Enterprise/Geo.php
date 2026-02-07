@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Converters\Enterprise;
 
+use function Innobrain\OpenImmo\Helpers\getGeo;
+
 trait Geo
 {
     public function convertGeo(): array

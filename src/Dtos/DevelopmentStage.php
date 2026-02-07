@@ -11,56 +11,35 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class DevelopmentStage
- *
- * @XmlRoot("ausbaustufe")
  */
+#[XmlRoot(name: 'ausbaustufe')]
 class DevelopmentStage
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("BAUSATZHAUS")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('BAUSATZHAUS')]
         protected ?bool $prefabricatedHouse = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("AUSBAUHAUS")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('AUSBAUHAUS')]
         protected ?bool $expandableHouse = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("SCHLUESSELFERTIGMITKELLER")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
         protected ?bool $turnkeyWithBasement = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("SCHLUESSELFERTIGOHNEBODENPLATTE")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
         protected ?bool $turnkeyWithoutFoundation = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("SCHLUESSELFERTIGMITBODENPLATTE")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]
         protected ?bool $turnkeyWithFoundation = null
     ) {}
 

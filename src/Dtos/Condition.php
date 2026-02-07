@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Condition
  * Zustand des Objektes, Optionen nicht kombinierbar
- *
- * @XmlRoot("zustand")
  */
+#[XmlRoot(name: 'zustand')]
 class Condition
 {
     public const string CONDITION_TYPE_FIRST_OCCUPANCY = 'ERSTBEZUG';
@@ -51,15 +50,13 @@ class Condition
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("zustand_art")
          * optional
          *
          * @see CONDITION_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('zustand_art')]
         protected string $conditionType = ''
     ) {}
 

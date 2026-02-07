@@ -14,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Photo
  * Foto bei der Kontaktperson. Datentyp ähnlich "Anhang"
  * foto from the kontakt person of the sender
- *
- * @XmlRoot("foto")
  */
+#[XmlRoot(name: 'foto')]
 class Photo
 {
     public const string LOCATION_EXTERNAL = 'EXTERN';
@@ -25,29 +24,20 @@ class Photo
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("location")
          * required
          *
          * @see LOCATION_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('location')]
         protected string $location = '',
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("format")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('format')]
         protected string $format = '',
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Data")
-         *
-         * @SerializedName("daten")
-         */
+        #[Type(Data::class)]
+        #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}
 

@@ -13,26 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class InternalCommission
  * Maklercourtage, bei Vermittlungs- bzw. Nachweisgeschäften als Betrag in ? / % / MM, daher Textfeld
- *
- * @XmlRoot("innen_courtage")
  */
+#[XmlRoot(name: 'innen_courtage')]
 class InternalCommission
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("mit_mwst")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('mit_mwst')]
         protected ?bool $withVAT = null,
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

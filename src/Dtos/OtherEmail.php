@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class OtherEmail
- *
- * @XmlRoot("email_sonstige")
  */
+#[XmlRoot(name: 'email_sonstige')]
 class OtherEmail
 {
     public const string EMAIL_TYPE_HQ_MARKETING = 'EM_ZENTRALE';
@@ -27,30 +26,21 @@ class OtherEmail
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("emailart")
          * optional
          *
          * @see EMAIL_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('emailart')]
         protected string $emailType = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("bemerkung")
-         * optional
-         */
+        /** optional */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('bemerkung')]
         protected ?string $remark = null,
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

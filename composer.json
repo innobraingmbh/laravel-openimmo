@@ -7,7 +7,7 @@
         "laravel-openimmo"
     ],
     "homepage": "https://github.com/innobrain/laravel-openimmo",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Bruno Görß",
@@ -19,11 +19,10 @@
         "php": "^8.4",
         "ext-dom": "*",
         "ext-simplexml": "*",
-        "doctrine/annotations": "^2.0",
         "goetas-webservices/xsd-reader": "*",
         "goetas-webservices/xsd2php": "*",
         "illuminate/contracts": "^10.0||^11.0||^12.0",
-        "jms/serializer": "^2.1 || ^3.5",
+        "jms/serializer": "^3.14",
         "spatie/laravel-package-tools": "^1.16",
         "symfony/serializer": "^5.3 || ^6.0"
     },
@@ -52,12 +51,14 @@
             "Innobrain\\OpenImmo\\": "src/"
         },
         "files": [
-            "src/helpers.php"
+            "src/helpers.php",
+            "src/helpers_original.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
             "Innobrain\\OpenImmo\\Tests\\": "tests/",
+            "Innobrain\\OpenImmo\\TestsRector\\": "tests-rector/",
             "Workbench\\App\\": "skeleton/app/"
         }
     },
@@ -75,10 +76,17 @@
             "@php vendor/bin/testbench serve"
         ],
         "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
+        "test": "vendor/bin/pest --testsuite=Package",
+        "test:rector": "vendor/bin/pest --testsuite=Rector",
+        "test:all": "vendor/bin/pest --testsuite=Package; vendor/bin/pest --testsuite=Rector",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint",
-        "prepare-release": "vendor/bin/pint && vendor/bin/rector"
+        "format": [
+            "vendor/bin/rector",
+            "vendor/bin/pint"
+        ],
+        "format:check": [
+            "vendor/bin/pint --test"
+        ]
     },
     "config": {
         "sort-packages": true,

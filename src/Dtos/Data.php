@@ -11,23 +11,16 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Data
  * Anhangdaten
- *
- * @XmlRoot("daten")
  */
+#[XmlRoot(name: 'daten')]
 class Data
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("pfad")
-         */
+        #[Type('string')]
+        #[SerializedName('pfad')]
         protected ?string $path = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("anhanginhalt")
-         */
+        #[Type('string')]
+        #[SerializedName('anhanginhalt')]
         protected ?string $attachmentContent = null
     ) {}
 

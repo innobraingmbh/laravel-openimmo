@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TargetRentalIncome
  * Mieteinnahmen pro Periode, Normal-/Solleinnahmen (Ohne Periode = JAHR)
- *
- * @XmlRoot("mieteinnahmen_soll")
  */
+#[XmlRoot(name: 'mieteinnahmen_soll')]
 class TargetRentalIncome
 {
     public const string PERIOD_DAY = 'TAG';
@@ -28,21 +27,16 @@ class TargetRentalIncome
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("periode")
          * optional
          *
          * @see PERIOD_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('periode')]
         protected string $period = '',
-        /**
-         * @Inline
-         *
-         * @Type("float")
-         */
+        #[Inline]
+        #[Type('float')]
         protected ?float $value = null
     ) {}
 

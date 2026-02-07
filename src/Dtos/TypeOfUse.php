@@ -12,47 +12,30 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TypeOfUse
  * nutzungsart
- *
- * @XmlRoot("nutzungsart")
  */
+#[XmlRoot(name: 'nutzungsart')]
 class TypeOfUse
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("WOHNEN")
-         * required
-         */
+        /** required */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('WOHNEN')]
         protected bool $living = false,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("GEWERBE")
-         * required
-         */
+        /** required */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('GEWERBE')]
         protected bool $commercial = false,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("ANLAGE")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('ANLAGE')]
         protected ?bool $facility = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("WAZ")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('WAZ')]
         protected ?bool $waz = null
     ) {}
 

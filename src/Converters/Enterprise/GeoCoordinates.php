@@ -6,6 +6,9 @@ namespace Innobrain\OpenImmo\Converters\Enterprise;
 
 use Innobrain\OpenImmo\Dtos\UserDefinedSimplefield;
 
+use function Innobrain\OpenImmo\Helpers\getGeo;
+use function Innobrain\OpenImmo\Helpers\getGeoCoordinates;
+
 trait GeoCoordinates
 {
     public function convertGeoCoordinates(): array

@@ -14,47 +14,28 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class OpenImmo
  * Dokument Element
  * Root Element
- *
- * @XmlRoot("openimmo")
  */
+#[XmlRoot(name: 'openimmo')]
 class OpenImmo
 {
     public function __construct(
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Transfer")
-         *
-         * @SerializedName("uebertragung")
-         */
+        #[Type(Transfer::class)]
+        #[SerializedName('uebertragung')]
         protected ?Transfer $transfer = null,
-        /**
-         * @XmlList(inline = true, entry = "anbieter")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\Provider>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("anbieter")
-         */
+        #[XmlList(entry: 'anbieter', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\Provider>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('anbieter')]
         protected array $provider = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = []
     ) {}
 

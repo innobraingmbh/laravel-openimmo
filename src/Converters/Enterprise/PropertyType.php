@@ -16,6 +16,8 @@ use Innobrain\OpenImmo\Dtos\Parking;
 use Innobrain\OpenImmo\Dtos\Plot;
 use Innobrain\OpenImmo\Dtos\Retail;
 
+use function Innobrain\OpenImmo\Helpers\getPropertyType;
+
 trait PropertyType
 {
     public function convertPropertyType(): array

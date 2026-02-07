@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Parking
  * Objektart für diverse Parkplatz Angaben
- *
- * @XmlRoot("parken")
  */
+#[XmlRoot(name: 'parken')]
 class Parking
 {
     public const string PARKING_TYPE_PARKING_SPACE = 'STELLPLATZ';
@@ -39,15 +38,13 @@ class Parking
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("parken_typ")
          * optional
          *
          * @see PARKING_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('parken_typ')]
         protected string $parkingType = ''
     ) {}
 

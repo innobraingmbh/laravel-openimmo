@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LocationArea
  * Lage Gebiet, Optionen nicht kombinierbar
- *
- * @XmlRoot("lage_gebiet")
  */
+#[XmlRoot(name: 'lage_gebiet')]
 class LocationArea
 {
     public const string AREAS_RESIDENTIAL = 'WOHN';
@@ -45,15 +44,13 @@ class LocationArea
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("gebiete")
          * optional
          *
          * @see AREAS_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('gebiete')]
         protected string $areas = ''
     ) {}
 

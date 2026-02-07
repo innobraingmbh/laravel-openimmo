@@ -16,26 +16,18 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Das Eltern Objekte hat in "gruppen_kennung" die gleiche ID wie "master". Anwendung z.b. in Neubau Projekten.
  * Damit die Anzeige des Master Objektes gesteuert werden kann, wird im Master ein Flag
  *  visible eingesetzt. Das Attribut ist dann zwingend anzugeben
- *
- * @XmlRoot("master")
  */
+#[XmlRoot(name: 'master')]
 class Master
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("visible")
-         * required
-         */
+        /** required */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('visible')]
         protected bool $visible = false,
-        /**
-         * @Inline
-         *
-         * @Type("string")
-         */
+        #[Inline]
+        #[Type('string')]
         protected ?string $value = null
     ) {}
 

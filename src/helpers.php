@@ -6,6 +6,8 @@
 
 declare(strict_types=1);
 
+namespace Innobrain\OpenImmo\Helpers;
+
 use Innobrain\OpenImmo\Dtos\Action;
 use Innobrain\OpenImmo\Dtos\ActualRentalIncome;
 use Innobrain\OpenImmo\Dtos\AdditionalAddress;

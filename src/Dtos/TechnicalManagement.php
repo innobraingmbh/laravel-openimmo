@@ -13,129 +13,69 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class TechnicalManagement
- *
- * @XmlRoot("verwaltung_techn")
  */
+#[XmlRoot(name: 'verwaltung_techn')]
 class TechnicalManagement
 {
     public function __construct(
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("objektnr_intern")
-         */
+        #[Type('string')]
+        #[SerializedName('objektnr_intern')]
         protected ?string $internalPropertyNumber = null,
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("objektnr_extern")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('objektnr_extern')]
         protected string $externalPropertyNumber = '',
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Action")
-         *
-         * @SerializedName("aktion")
-         */
+        #[Type(Action::class)]
+        #[SerializedName('aktion')]
         protected ?Action $action = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("aktiv_von")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('aktiv_von')]
         protected ?DateTime $activeFrom = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("aktiv_bis")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('aktiv_bis')]
         protected ?DateTime $activeTo = null,
-        /**
-         * @Type("string")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("openimmo_obid")
-         */
+        #[Type('string')]
+        #[SkipWhenEmpty]
+        #[SerializedName('openimmo_obid')]
         protected string $openImmoObjectId = '',
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("kennung_ursprung")
-         */
+        #[Type('string')]
+        #[SerializedName('kennung_ursprung')]
         protected ?string $originIdentifier = null,
-        /**
-         * @Type("DateTime<'Y-m-d'>")
-         *
-         * @SerializedName("stand_vom")
-         */
+        #[Type("DateTime<'Y-m-d'>")]
+        #[SerializedName('stand_vom')]
         protected ?DateTime $statusFrom = null,
-        /**
-         * @Type("bool")
-         *
-         * @SerializedName("weitergabe_generell")
-         */
+        #[Type('bool')]
+        #[SerializedName('weitergabe_generell')]
         protected ?bool $generalForwarding = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("weitergabe_positiv")
-         */
+        #[Type('string')]
+        #[SerializedName('weitergabe_positiv')]
         protected ?string $positiveForwarding = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("weitergabe_negativ")
-         */
+        #[Type('string')]
+        #[SerializedName('weitergabe_negativ')]
         protected ?string $negativeForwarding = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("gruppen_kennung")
-         */
+        #[Type('string')]
+        #[SerializedName('gruppen_kennung')]
         protected ?string $groupIdentifier = null,
-        /**
-         * @Type("Innobrain\OpenImmo\Dtos\Master")
-         *
-         * @SerializedName("master")
-         */
+        #[Type(Master::class)]
+        #[SerializedName('master')]
         protected ?Master $master = null,
-        /**
-         * @Type("string")
-         *
-         * @SerializedName("sprache")
-         */
+        #[Type('string')]
+        #[SerializedName('sprache')]
         protected ?string $language = null,
-        /**
-         * @XmlList(inline = true, entry = "user_defined_simplefield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_simplefield")
-         */
+        #[XmlList(entry: 'user_defined_simplefield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_anyfield")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_anyfield")
-         */
+        #[XmlList(entry: 'user_defined_anyfield', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /**
-         * @XmlList(inline = true, entry = "user_defined_extend")
-         *
-         * @Type("array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>")
-         *
-         * @SkipWhenEmpty
-         *
-         * @SerializedName("user_defined_extend")
-         */
+        #[XmlList(entry: 'user_defined_extend', inline: true)]
+        #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
+        #[SkipWhenEmpty]
+        #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
 

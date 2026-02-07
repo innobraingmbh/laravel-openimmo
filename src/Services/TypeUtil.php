@@ -13,7 +13,7 @@ use Nette\PhpGenerator\Property;
 
 class TypeUtil
 {
-    public function getTypeForSerializer(string $type): string
+    public function getTypeForSerializer(string $type, ?string $namespace = null): string
     {
         $isPlural = str_ends_with($type, '[]');
         $singular = str_replace('[]', '', $type);
@@ -53,7 +53,7 @@ class TypeUtil
                 break;
 
             default:
-                $ns = DtoGenerator::NAMESPACE;
+                $ns = $namespace ?? DtoGenerator::NAMESPACE;
                 $type = $ns.'\\'.$singular;
                 break;
         }
@@ -65,7 +65,7 @@ class TypeUtil
         return $type;
     }
 
-    public function getValidPhpType(string $propertyType): string
+    public function getValidPhpType(string $propertyType, ?string $namespace = null): string
     {
         $isPlural = str_ends_with($propertyType, '[]');
         if ($isPlural) {
@@ -106,7 +106,7 @@ class TypeUtil
                 break;
 
             default:
-                $ns = DtoGenerator::NAMESPACE;
+                $ns = $namespace ?? DtoGenerator::NAMESPACE;
                 $propertyType = '\\'.$ns.'\\'.$propertyType;
         }
 

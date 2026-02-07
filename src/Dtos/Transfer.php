@@ -13,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Transfer
  * Übertragungsangaben
- *
- * @XmlRoot("uebertragung")
  */
+#[XmlRoot(name: 'uebertragung')]
 class Transfer
 {
     public const string TYPE_ONLINE = 'ONLINE';
@@ -34,91 +33,61 @@ class Transfer
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("art")
          * required
          *
          * @see TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('art')]
         protected string $type = '',
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("umfang")
          * required
          *
          * @see SCOPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('umfang')]
         protected string $scope = '',
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("modus")
          * optional
          *
          * @see MODE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('modus')]
         protected string $mode = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("version")
-         * required
-         */
+        /** required */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('version')]
         protected string $version = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("sendersoftware")
-         * required
-         */
+        /** required */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('sendersoftware')]
         protected string $senderSoftware = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("senderversion")
-         * required
-         */
+        /** required */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('senderversion')]
         protected string $senderVersion = '',
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("techn_email")
-         * optional
-         */
+        /** optional */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('techn_email')]
         protected ?string $technicalEmail = null,
-        /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("regi_id")
-         * optional
-         */
+        /** optional */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('regi_id')]
         protected ?string $regionId = null,
-        /**
-         * @Type("DateTime<'Y-m-d\TH:i:s', null, ['Y-m-d\TH:i:sP', 'Y-m-d\TH:i:s']>")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("timestamp")
-         * optional
-         */
+        /** optional */
+        #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[XmlAttribute]
+        #[SerializedName('timestamp')]
         protected ?DateTime $timestamp = null
     ) {}
 

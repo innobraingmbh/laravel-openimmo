@@ -11,74 +11,45 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class RoofShape
- *
- * @XmlRoot("dachform")
  */
+#[XmlRoot(name: 'dachform')]
 class RoofShape
 {
     public function __construct(
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("KRUEPPELWALMDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('KRUEPPELWALMDACH')]
         protected ?bool $truncatedHipRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("MANSARDDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('MANSARDDACH')]
         protected ?bool $mansardRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PULTDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('PULTDACH')]
         protected ?bool $shedRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("SATTELDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('SATTELDACH')]
         protected ?bool $saddleRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("WALMDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('WALMDACH')]
         protected ?bool $hipRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("FLACHDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('FLACHDACH')]
         protected ?bool $flatRoof = null,
-        /**
-         * @Type("bool")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("PYRAMIDENDACH")
-         * optional
-         */
+        /** optional */
+        #[Type('bool')]
+        #[XmlAttribute]
+        #[SerializedName('PYRAMIDENDACH')]
         protected ?bool $pyramidRoof = null
     ) {}
 

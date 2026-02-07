@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Apartment
  * Objektart / Typ f. Wohnungen
- *
- * @XmlRoot("wohnung")
  */
+#[XmlRoot(name: 'wohnung')]
 class Apartment
 {
     public const string APARTMENT_TYPE_ATTIC = 'DACHGESCHOSS';
@@ -47,15 +46,13 @@ class Apartment
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("wohnungtyp")
          * optional
          *
          * @see APARTMENT_TYPE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('wohnungtyp')]
         protected string $apartmentType = ''
     ) {}
 

@@ -12,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class DevelopableAccordingTo
  * Bebaubar nach Bebauungsrichtlinien, Optionen nicht kombinierbar
- *
- * @XmlRoot("bebaubar_nach")
  */
+#[XmlRoot(name: 'bebaubar_nach')]
 class DevelopableAccordingTo
 {
     public const string BUILDABLE_ATTRIBUTE_NEIGHBORHOOD = '34_NACHBARSCHAFT';
@@ -33,15 +32,13 @@ class DevelopableAccordingTo
 
     public function __construct(
         /**
-         * @Type("string")
-         *
-         * @XmlAttribute
-         *
-         * @SerializedName("bebaubar_attr")
          * optional
          *
          * @see BUILDABLE_ATTRIBUTE_* constants
          */
+        #[Type('string')]
+        #[XmlAttribute]
+        #[SerializedName('bebaubar_attr')]
         protected string $developableAttribute = ''
     ) {}
 
