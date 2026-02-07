@@ -6,8 +6,8 @@ The converter supports the following formats:
 
 You can use the converter as follows:
 ```php
-use InnoBrain\OpenImmo\Enums\ConverterDriver;
-use InnoBrain\OpenImmo\Facades\FormatConverterService;
+use Innobrain\OpenImmo\Enums\ConverterDriver;
+use Innobrain\OpenImmo\Facades\FormatConverterService;
 
 $openImmoXml = file_get_contents('path/to/openimmo.xml');
 
