@@ -76,14 +76,7 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
             __DIR__.'/../helpers.php',           // when used from package root (src/Rector/)
             __DIR__.'/../../src/helpers.php',     // when used from vendor/innobrain/laravel-openimmo/src/Rector/
         ];
-
-        $helpersFile = null;
-        foreach ($candidates as $candidate) {
-            if (file_exists($candidate)) {
-                $helpersFile = $candidate;
-                break;
-            }
-        }
+        $helpersFile = array_find($candidates, fn ($candidate) => file_exists($candidate));
 
         if ($helpersFile === null) {
             return [];
