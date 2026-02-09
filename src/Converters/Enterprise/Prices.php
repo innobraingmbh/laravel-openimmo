@@ -21,6 +21,7 @@ trait Prices
             'heizkosten' => $this->parseFloat($prices->getHeatingCosts()),
             'waehrung' => $prices->getCurrency()?->getIsoCurrency(),
             'kaufpreis_pro_qm' => $this->parseFloat($prices->getPurchasePricePerSqm()),
+            'mietpreis_pro_qm' => $this->parseFloat($prices->getRentPricePerSqm()),
             'kaution' => $this->parseFloat($prices->getDeposit()),
             'freitext_preis' => $prices->getFreeTextPrice(),
             'innen_courtage' => $prices->getInternalCommission()?->getValue(),
