@@ -72,18 +72,10 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
      */
     private function discoverHelperFunctions(): array
     {
-        // Look for helpers.php relative to the package root
-        $candidates = [
-            __DIR__.'/../helpers.php',           // when used from package root (src/Rector/)
-            __DIR__.'/../../src/helpers.php',     // when used from vendor/innobrain/laravel-openimmo/src/Rector/
-        ];
-        $helpersFile = array_find($candidates, fn ($candidate) => file_exists($candidate));
+        // helpers.php lives at src/helpers.php, this file lives at src/Rector/
+        $helpersFile = __DIR__.'/../helpers.php';
 
-        if ($helpersFile === null) {
-            throw new RuntimeException(
-                'MigrateToNamespacedHelpersRector: Could not find helpers.php. Searched: '.implode(', ', $candidates)
-            );
-        }
+        throw_unless(file_exists($helpersFile), RuntimeException::class, 'MigrateToNamespacedHelpersRector: Could not find helpers.php at '.$helpersFile);
 
         $tokens = token_get_all(file_get_contents($helpersFile));
         $functions = [];
