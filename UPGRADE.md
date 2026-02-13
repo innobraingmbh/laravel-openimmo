@@ -40,7 +40,7 @@ You can also include the rule in your own `rector.php`:
 ```php
 use Innobrain\OpenImmo\Rector\MigrateToNamespacedHelpersRector;
 
-require_once __DIR__.'/vendor/innobrain/laravel-openimmo/rector/MigrateToNamespacedHelpersRector.php';
+require_once __DIR__.'/vendor/innobrain/laravel-openimmo/src/Rector/MigrateToNamespacedHelpersRector.php';
 
 return RectorConfig::configure()
     ->withRules([
