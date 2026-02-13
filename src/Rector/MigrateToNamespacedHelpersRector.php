@@ -75,11 +75,7 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
         // helpers.php lives at src/helpers.php, this file lives at src/Rector/
         $helpersFile = __DIR__.'/../helpers.php';
 
-        if (! file_exists($helpersFile)) {
-            throw new RuntimeException(
-                'MigrateToNamespacedHelpersRector: Could not find helpers.php at '.$helpersFile
-            );
-        }
+        throw_unless(file_exists($helpersFile), RuntimeException::class, 'MigrateToNamespacedHelpersRector: Could not find helpers.php at '.$helpersFile);
 
         $tokens = token_get_all(file_get_contents($helpersFile));
         $functions = [];
