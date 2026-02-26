@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Storage;
 use InvalidArgumentException;
 
 class TranslationService
@@ -42,30 +41,41 @@ class TranslationService
 
     protected function loadClasses(): void
     {
-        $file = Storage::get('TranslationMapping/classes.csv') ?? '';
+        $file = $this->readTranslationFile('classes.csv');
 
         $this->classes = $this->loadFile($file);
     }
 
     protected function loadAttributes(): void
     {
-        $file = Storage::get('TranslationMapping/attributes.csv') ?? '';
+        $file = $this->readTranslationFile('attributes.csv');
 
         $this->attributes = $this->loadFile($file);
     }
 
     protected function loadProperties(): void
     {
-        $file = Storage::get('TranslationMapping/properties.csv') ?? '';
+        $file = $this->readTranslationFile('properties.csv');
 
         $this->properties = $this->loadFile($file);
     }
 
     protected function loadConstants(): void
     {
-        $file = Storage::get('TranslationMapping/constants.csv') ?? '';
+        $file = $this->readTranslationFile('constants.csv');
 
         $this->constants = $this->loadFile($file);
+    }
+
+    protected function readTranslationFile(string $filename): string
+    {
+        $path = storage_path('app/TranslationMapping/'.$filename);
+
+        if (! file_exists($path)) {
+            return '';
+        }
+
+        return (string) file_get_contents($path);
     }
 
     protected function loadFile(string $fileContent): Collection

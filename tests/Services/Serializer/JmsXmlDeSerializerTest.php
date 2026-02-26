@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 use Innobrain\OpenImmo\Dtos\Apartment;
 use Innobrain\OpenImmo\Dtos\Attachment;
 use Innobrain\OpenImmo\Dtos\Evaluation;
@@ -19,11 +18,13 @@ use Innobrain\OpenImmo\Dtos\Transfer;
 use Innobrain\OpenImmo\Facades\OpenImmoService;
 
 test('read xml', function () {
-    $file = Storage::get('OpenImmo/openimmo-data_127.xml');
+    $path = storage_path('app/OpenImmo/openimmo-data_127.xml');
 
-    if (empty($file)) {
+    if (! file_exists($path)) {
         $this->fail('File not found, you need to download the file from the OpenImmo website http://www.openimmo.de/go.php/p/24/download.htm');
     }
+
+    $file = file_get_contents($path);
 
     $transfer = (new Transfer)
         ->setType(Transfer::TYPE_ONLINE)
