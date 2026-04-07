@@ -9,6 +9,7 @@ use JMS\Serializer\Annotation\Type as SerializerType;
 use Prism\Prism\Contracts\Schema;
 use Prism\Prism\Schema\ArraySchema;
 use Prism\Prism\Schema\BooleanSchema;
+use Prism\Prism\Schema\EnumSchema;
 use Prism\Prism\Schema\NumberSchema;
 use Prism\Prism\Schema\ObjectSchema;
 use Prism\Prism\Schema\StringSchema;
@@ -95,11 +96,41 @@ class SchemaGenerator
             return $this->handleClass(new ReflectionClass($property->getType()?->getName()), $path);
         }
 
+        $enumOptions = $this->getEnumOptions($property);
+
         return match ($type) {
             'int', '?int', 'float', '?float' => new NumberSchema($name, $name, $isNullable),
             'bool', '?bool' => new BooleanSchema($name, $name, $isNullable),
-            default => new StringSchema($name, $name, $isNullable),
+            default => $enumOptions !== null
+                ? new EnumSchema($name, $name, $enumOptions, $isNullable)
+                : new StringSchema($name, $name, $isNullable),
         };
+    }
+
+    /**
+     * @return array<int, string>|null
+     */
+    private function getEnumOptions(ReflectionProperty $property): ?array
+    {
+        $doc = $property->getDocComment();
+        if ($doc === false) {
+            return null;
+        }
+
+        if (preg_match('/@see ([A-Z][A-Z0-9_]+)\* constants/', $doc, $matches) !== 1) {
+            return null;
+        }
+
+        $prefix = $matches[1];
+        $constants = $property->getDeclaringClass()->getConstants();
+
+        $options = array_values(array_filter(
+            $constants,
+            fn (string $name) => str_starts_with($name, $prefix),
+            ARRAY_FILTER_USE_KEY,
+        ));
+
+        return $options !== [] ? $options : null;
     }
 
     private function getSerializerType(ReflectionProperty $property): ?string
