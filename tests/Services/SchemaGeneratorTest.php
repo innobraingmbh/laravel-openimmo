@@ -2,12 +2,14 @@
 
 declare(strict_types=1);
 
+use Innobrain\OpenImmo\Dtos\Apartment;
 use Innobrain\OpenImmo\Dtos\Floor;
 use Innobrain\OpenImmo\Dtos\HeatingType;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Facades\SchemaGenerator;
 use Prism\Prism\Contracts\Schema;
 use Prism\Prism\Schema\BooleanSchema;
+use Prism\Prism\Schema\EnumSchema;
 
 describe('generation', function () {
     test('can generate', function () {
@@ -36,5 +38,12 @@ describe('generation', function () {
 
         expect($schema)->toBeInstanceOf(Schema::class)
             ->and($schema->properties[0])->toBeInstanceOf(BooleanSchema::class);
+    });
+
+    test('enum constants become EnumSchema', function () {
+        $schema = SchemaGenerator::generateFor(Apartment::class);
+
+        expect($schema->properties[0])->toBeInstanceOf(EnumSchema::class)
+            ->and($schema->properties[0]->options)->toContain('DACHGESCHOSS', 'MAISONETTE');
     });
 });
