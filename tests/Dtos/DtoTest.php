@@ -52,7 +52,6 @@ test('dto values working', function () {
             return;
         }
 
-        /** @var ClassType $class */
         $class = ClassType::fromCode(File::get($file->getRealPath()));
 
         collect($class->getProperties())->each(function (Property $property) use ($class) {

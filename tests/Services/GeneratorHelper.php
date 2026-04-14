@@ -46,7 +46,6 @@ trait GeneratorHelper
 
         assertFileExists($classFileName);
 
-        /** @var ClassType $generatedClass */
         $generatedClass = ClassType::fromCode(file_get_contents($classFileName));
 
         if ($docBlockComment !== '') {

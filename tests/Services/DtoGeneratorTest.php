@@ -71,7 +71,6 @@ it('generates original DTOs with German names and correct namespace when transla
 
     $fileContents = file_get_contents($classFileName);
 
-    /** @var ClassType $generatedClass */
     $generatedClass = ClassType::fromCode($fileContents);
 
     // Class should use original German name
