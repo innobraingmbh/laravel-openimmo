@@ -1,6 +1,7 @@
 # OpenImmo for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
+[![Laravel Compatibility](https://badge.laravel.cloud/badge/innobrain/laravel-openimmo?style=flat)](https://packagist.org/packages/innobrain/laravel-openimmo)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/innobraingmbh/laravel-openimmo/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/tests.yml?query=branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/innobraingmbh/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
