@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
 use Innobrain\OpenImmo\Converters\EnterpriseConverter;
+use Innobrain\OpenImmo\Dtos\AttachedGastronomy;
+use Innobrain\OpenImmo\Dtos\Elevator;
+use Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Dtos\Original\Openimmo as OriginalOpenimmo;
 use Innobrain\OpenImmo\Enums\ConverterDriver;
@@ -11,6 +14,8 @@ use Innobrain\OpenImmo\Facades\FormatConverterService;
 use Innobrain\OpenImmo\Facades\OpenImmoService;
 
 use function Innobrain\OpenImmo\Helpers\getAreas;
+use function Innobrain\OpenImmo\Helpers\getConditionInformation;
+use function Innobrain\OpenImmo\Helpers\getEquipment;
 use function Innobrain\OpenImmo\Helpers\Original\getFlaechen;
 
 test('can start convert', function () {
@@ -43,7 +48,9 @@ test('can convert a open immo xml', function () {
             'sonstige_angaben' => "Sonstiges\nDa der Versand des Exposés automatisch erfolgt, werden Nachrichten im Bemerkungsfeld nicht gelesen.<br><br>Bitte fordern Sie zunächst über das Feld \"Anbieter kontaktieren\" das Exposé bei uns an. Falls Sie danach weitere Fragen zur Immobilie haben, rufen Sie uns gerne unter 0931-304998888 an oder schreiben Sie uns eine E-Mail an info@vr-ism.de\n\nStichworte\nBundesland: Bayern",
             'wohnflaeche' => '72.30',
             'anzahl_zimmer' => '2.00',
-            'fahrstuhl' => 1,
+            'fahrstuhl' => [
+                'personen',
+            ],
             'heizungsart' => [
                 'fussboden',
             ],
@@ -101,7 +108,9 @@ test('can convert original dto from xml', function () {
             'sonstige_angaben' => "Sonstiges\nDa der Versand des Exposés automatisch erfolgt, werden Nachrichten im Bemerkungsfeld nicht gelesen.<br><br>Bitte fordern Sie zunächst über das Feld \"Anbieter kontaktieren\" das Exposé bei uns an. Falls Sie danach weitere Fragen zur Immobilie haben, rufen Sie uns gerne unter 0931-304998888 an oder schreiben Sie uns eine E-Mail an info@vr-ism.de\n\nStichworte\nBundesland: Bayern",
             'wohnflaeche' => '72.30',
             'anzahl_zimmer' => '2.00',
-            'fahrstuhl' => 1,
+            'fahrstuhl' => [
+                'personen',
+            ],
             'heizungsart' => [
                 'fussboden',
             ],
@@ -169,4 +178,173 @@ test('original and translated dto produce identical converter output', function 
         ->convert(OpenImmoService::deserializeObjectFromXml($xml, OriginalOpenimmo::class));
 
     expect($originalResult)->toBe($translatedResult);
+});
+
+test('can convert elevator multiselect', function () {
+    $openImmo = new OpenImmo;
+    $equipment = getEquipment($openImmo);
+    $elevator = new Elevator;
+    $elevator->setPersons(true);
+    $elevator->setEncumbrances(true);
+
+    $equipment->setElevator($elevator);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertEquipment();
+
+    expect($result)->toHaveKey('fahrstuhl', ['personen', 'lasten']);
+});
+
+test('can convert attached gastronomy multiselect', function () {
+    $openImmo = new OpenImmo;
+    $equipment = getEquipment($openImmo);
+    $gastronomy = new AttachedGastronomy;
+    $gastronomy->setHotelRestaurant(true);
+
+    $equipment->setAttachedGastronomy($gastronomy);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertEquipment();
+
+    expect($result)->toHaveKey('angeschl_gastronomie', ['hotelrestaurant']);
+});
+
+test('can convert energy certificate type for residential demand', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setEnergyCertificateType('BEDARF');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energieausweistyp', 'Endenergiebedarf');
+});
+
+test('can convert energy certificate type for residential consumption', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setEnergyCertificateType('VERBRAUCH');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energieausweistyp', 'Energieverbrauchskennwert');
+});
+
+test('can convert energy certificate type for commercial demand', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setEnergyCertificateType('BEDARF');
+    $energyPass->setBuildingType('nichtwohn');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energieausweistyp', 'Bedarfsausweis Gewerbe');
+});
+
+test('can convert energy certificate type for commercial consumption', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setEnergyCertificateType('VERBRAUCH');
+    $energyPass->setBuildingType('nichtwohn');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energieausweistyp', 'Verbrauchsausweis Gewerbe');
+});
+
+test('can convert energy certificate jahrgang overrides', function ($jahrgang, $expected) {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setEnergyCertificateType('VERBRAUCH');
+    $energyPass->setYear($jahrgang);
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energieausweistyp', $expected)
+        ->and($result)->toHaveKey('energiepassJahrgang', $jahrgang);
+})->with([
+    ['ohne', 'ohne Energieausweis'],
+    ['nicht_noetig', 'es besteht keine Pflicht!'],
+    ['bei_besichtigung', 'liegtZurBesichtigungVor'],
+]);
+
+test('can convert energy source to lowercase', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setPrimaryEnergySource('ERDWAERME');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energietraeger', 'erdwaerme');
+});
+
+test('can convert energy source fern to fernwaerme', function () {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setPrimaryEnergySource('FERN');
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energietraeger', 'fernwaerme');
 });

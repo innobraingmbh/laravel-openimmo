@@ -14,6 +14,7 @@ use Prism\Prism\Schema\NumberSchema;
 use Prism\Prism\Schema\ObjectSchema;
 use Prism\Prism\Schema\StringSchema;
 use ReflectionClass;
+use ReflectionNamedType;
 use ReflectionProperty;
 
 class SchemaGenerator
@@ -90,10 +91,15 @@ class SchemaGenerator
             }
         }
 
-        // @phpstan-ignore-next-line
-        if (! $property->getType()?->isBuiltin()) {
-            // @phpstan-ignore-next-line
-            return $this->handleClass(new ReflectionClass($property->getType()?->getName()), $path);
+        $propertyType = $property->getType();
+        if ($propertyType instanceof ReflectionNamedType && ! $propertyType->isBuiltin()) {
+            $typeName = $propertyType->getName();
+
+            if ($typeName === 'DateTime' || $typeName === 'DateTimeImmutable') {
+                return new StringSchema($name, $name, $isNullable);
+            }
+
+            return $this->handleClass(new ReflectionClass($typeName), $path);
         }
 
         $enumOptions = $this->getEnumOptions($property);
