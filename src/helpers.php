@@ -42,6 +42,7 @@ use Innobrain\OpenImmo\Dtos\DevelopmentScope;
 use Innobrain\OpenImmo\Dtos\DevelopmentStage;
 use Innobrain\OpenImmo\Dtos\Distances;
 use Innobrain\OpenImmo\Dtos\Elevator;
+use Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate;
 use Innobrain\OpenImmo\Dtos\EnergyType;
 use Innobrain\OpenImmo\Dtos\Equipment;
 use Innobrain\OpenImmo\Dtos\Evaluation;
@@ -53,6 +54,7 @@ use Innobrain\OpenImmo\Dtos\Gender;
 use Innobrain\OpenImmo\Dtos\Geo;
 use Innobrain\OpenImmo\Dtos\GeoCoordinates;
 use Innobrain\OpenImmo\Dtos\HallsStorageProduction;
+use Innobrain\OpenImmo\Dtos\HeatingSystem;
 use Innobrain\OpenImmo\Dtos\HeatingType;
 use Innobrain\OpenImmo\Dtos\Hospitality;
 use Innobrain\OpenImmo\Dtos\House;
@@ -60,19 +62,30 @@ use Innobrain\OpenImmo\Dtos\ImprintStructure;
 use Innobrain\OpenImmo\Dtos\Infrastructure;
 use Innobrain\OpenImmo\Dtos\InternalCommission;
 use Innobrain\OpenImmo\Dtos\Kitchen;
+use Innobrain\OpenImmo\Dtos\LocationArea;
 use Innobrain\OpenImmo\Dtos\LocationInBuilding;
 use Innobrain\OpenImmo\Dtos\MarketingType;
 use Innobrain\OpenImmo\Dtos\Master;
 use Innobrain\OpenImmo\Dtos\MaxRentalPeriod;
 use Innobrain\OpenImmo\Dtos\MinRentalPeriod;
+use Innobrain\OpenImmo\Dtos\NetCommission;
+use Innobrain\OpenImmo\Dtos\NetEVB;
 use Innobrain\OpenImmo\Dtos\NetHeatingCosts;
 use Innobrain\OpenImmo\Dtos\NetMainRent;
+use Innobrain\OpenImmo\Dtos\NetMonthlyCosts;
 use Innobrain\OpenImmo\Dtos\NetOperatingCosts;
+use Innobrain\OpenImmo\Dtos\NetOtherCosts;
+use Innobrain\OpenImmo\Dtos\NetOtherRent;
+use Innobrain\OpenImmo\Dtos\NetPurchasePrice;
 use Innobrain\OpenImmo\Dtos\NetRentPerSqmFrom;
+use Innobrain\OpenImmo\Dtos\NetReserves;
+use Innobrain\OpenImmo\Dtos\NetTotalCost;
+use Innobrain\OpenImmo\Dtos\NetTotalRent;
 use Innobrain\OpenImmo\Dtos\OfficePractices;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Dtos\Other;
 use Innobrain\OpenImmo\Dtos\OtherEmail;
+use Innobrain\OpenImmo\Dtos\OtherPhone;
 use Innobrain\OpenImmo\Dtos\Parking;
 use Innobrain\OpenImmo\Dtos\ParkingCarport;
 use Innobrain\OpenImmo\Dtos\ParkingDuplex;
@@ -565,6 +578,24 @@ function getLocationInBuilding(OpenImmo $openImmo): LocationInBuilding
 }
 
 /**
+ * Will return the LocationArea object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getAreaLocation(OpenImmo $openImmo): LocationArea
+{
+    $parent = getGeo($openImmo);
+    $child = $parent->getAreaLocation();
+
+    if (! $child instanceof LocationArea) {
+        $child = new LocationArea;
+        $parent->setAreaLocation($child);
+    }
+
+    return $child;
+}
+
+/**
  * Will return the Geo object from an OpenImmo Dto.
  * If it does not exist, it will be created.
  * Make sure to call this function only on referenced objects.
@@ -597,6 +628,26 @@ function getOtherEmail(OpenImmo $openImmo): OtherEmail
         $child = new OtherEmail;
         $children[] = $child;
         $parent->setOtherEmail($children);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the OtherPhone object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getOtherPhoneNumber(OpenImmo $openImmo): OtherPhone
+{
+    $parent = getContactPerson($openImmo);
+    $children = $parent->getOtherPhoneNumber();
+    $child = data_get($children, '0');
+
+    if (! $child instanceof OtherPhone) {
+        $child = new OtherPhone;
+        $children[] = $child;
+        $parent->setOtherPhoneNumber($children);
     }
 
     return $child;
@@ -677,6 +728,24 @@ function getPurchasePrice(OpenImmo $openImmo): PurchasePrice
 }
 
 /**
+ * Will return the NetPurchasePrice object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getPurchasePriceNet(OpenImmo $openImmo): NetPurchasePrice
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getPurchasePriceNet();
+
+    if (! $child instanceof NetPurchasePrice) {
+        $child = new NetPurchasePrice;
+        $parent->setPurchasePriceNet($child);
+    }
+
+    return $child;
+}
+
+/**
  * Will return the NetMainRent object from an OpenImmo Dto.
  * If it does not exist, it will be created.
  * Make sure to call this function only on referenced objects.
@@ -707,6 +776,60 @@ function getNetOperatingCosts(OpenImmo $openImmo): NetOperatingCosts
     if (! $child instanceof NetOperatingCosts) {
         $child = new NetOperatingCosts;
         $parent->setNetOperatingCosts($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetEVB object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getNetUnitValue(OpenImmo $openImmo): NetEVB
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getNetUnitValue();
+
+    if (! $child instanceof NetEVB) {
+        $child = new NetEVB;
+        $parent->setNetUnitValue($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetTotalRent object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getTotalRentNet(OpenImmo $openImmo): NetTotalRent
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getTotalRentNet();
+
+    if (! $child instanceof NetTotalRent) {
+        $child = new NetTotalRent;
+        $parent->setTotalRentNet($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetTotalCost object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getTotalCostNet(OpenImmo $openImmo): NetTotalCost
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getTotalCostNet();
+
+    if (! $child instanceof NetTotalCost) {
+        $child = new NetTotalCost;
+        $parent->setTotalCostNet($child);
     }
 
     return $child;
@@ -749,6 +872,24 @@ function getNetHeatingCosts(OpenImmo $openImmo): NetHeatingCosts
 }
 
 /**
+ * Will return the NetMonthlyCosts object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getMonthlyCostsNet(OpenImmo $openImmo): NetMonthlyCosts
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getMonthlyCostsNet();
+
+    if (! $child instanceof NetMonthlyCosts) {
+        $child = new NetMonthlyCosts;
+        $parent->setMonthlyCostsNet($child);
+    }
+
+    return $child;
+}
+
+/**
  * Will return the AdditionalCostsPerSqmFrom object from an OpenImmo Dto.
  * If it does not exist, it will be created.
  * Make sure to call this function only on referenced objects.
@@ -761,6 +902,60 @@ function getAdditionalCostsPerSqmFrom(OpenImmo $openImmo): AdditionalCostsPerSqm
     if (! $child instanceof AdditionalCostsPerSqmFrom) {
         $child = new AdditionalCostsPerSqmFrom;
         $parent->setAdditionalCostsPerSqmFrom($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetReserves object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getReservesNet(OpenImmo $openImmo): NetReserves
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getReservesNet();
+
+    if (! $child instanceof NetReserves) {
+        $child = new NetReserves;
+        $parent->setReservesNet($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetOtherCosts object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getOtherCostsNet(OpenImmo $openImmo): NetOtherCosts
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getOtherCostsNet();
+
+    if (! $child instanceof NetOtherCosts) {
+        $child = new NetOtherCosts;
+        $parent->setOtherCostsNet($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetOtherRent object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getOtherRentNet(OpenImmo $openImmo): NetOtherRent
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getOtherRentNet();
+
+    if (! $child instanceof NetOtherRent) {
+        $child = new NetOtherRent;
+        $parent->setOtherRentNet($child);
     }
 
     return $child;
@@ -851,6 +1046,24 @@ function getExternalCommission(OpenImmo $openImmo): ExternalCommission
     if (! $child instanceof ExternalCommission) {
         $child = new ExternalCommission;
         $parent->setExternalCommission($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the NetCommission object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getCommissionNet(OpenImmo $openImmo): NetCommission
+{
+    $parent = getPrices($openImmo);
+    $child = $parent->getCommissionNet();
+
+    if (! $child instanceof NetCommission) {
+        $child = new NetCommission;
+        $parent->setCommissionNet($child);
     }
 
     return $child;
@@ -1177,6 +1390,24 @@ function getHeatingType(OpenImmo $openImmo): HeatingType
     if (! $child instanceof HeatingType) {
         $child = new HeatingType;
         $parent->setHeatingType($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the HeatingSystem object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getHeating(OpenImmo $openImmo): HeatingSystem
+{
+    $parent = getEquipment($openImmo);
+    $child = $parent->getHeating();
+
+    if (! $child instanceof HeatingSystem) {
+        $child = new HeatingSystem;
+        $parent->setHeating($child);
     }
 
     return $child;
@@ -1523,6 +1754,26 @@ function getDevelopmentScope(OpenImmo $openImmo): DevelopmentScope
     if (! $child instanceof DevelopmentScope) {
         $child = new DevelopmentScope;
         $parent->setDevelopmentScope($child);
+    }
+
+    return $child;
+}
+
+/**
+ * Will return the EnergyPerformanceCertificate object from an OpenImmo Dto.
+ * If it does not exist, it will be created.
+ * Make sure to call this function only on referenced objects.
+ */
+function getEnergyCertificate(OpenImmo $openImmo): EnergyPerformanceCertificate
+{
+    $parent = getConditionInformation($openImmo);
+    $children = $parent->getEnergyCertificate();
+    $child = data_get($children, '0');
+
+    if (! $child instanceof EnergyPerformanceCertificate) {
+        $child = new EnergyPerformanceCertificate;
+        $children[] = $child;
+        $parent->setEnergyCertificate($children);
     }
 
     return $child;
