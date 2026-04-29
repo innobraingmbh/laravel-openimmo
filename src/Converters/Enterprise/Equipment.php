@@ -29,7 +29,7 @@ trait Equipment
             'raeume_veraenderbar' => $equipment->getRoomsModifiable() === true ? 1 : 0,
             'kamin' => $equipment->getFireplace() === true ? 1 : 0,
             'klimatisiert' => $equipment->getAirConditioned() === true ? 1 : 0,
-            'fahrstuhl' => $equipment->getElevator() instanceof Elevator ? 1 : 0,
+            'fahrstuhl' => $this->convertElevator(),
             'gartennutzung' => $equipment->getGardenUse() === true ? 1 : 0,
             'bad' => $this->convertBathroom(),
             'kueche' => $this->convertKitchen(),
@@ -43,7 +43,7 @@ trait Equipment
             'sauna' => $equipment->getSauna() === true ? 1 : 0,
             'swimmingpool' => $equipment->getSwimmingpool() === true ? 1 : 0,
             'wasch_trockenraum' => $equipment->getLaundryDryingRoom() === true ? 1 : 0,
-            'angeschl_gastronomie' => $equipment->getAttachedGastronomy() instanceof AttachedGastronomy ? 1 : 0,
+            'angeschl_gastronomie' => $this->convertAttachedGastronomy(),
             'serviceleistungen' => $equipment->getServices() !== [] ? 1 : 0,
             'sicherheitstechnik' => $equipment->getSecurityTechnology() instanceof SecurityTechnology ? 1 : 0,
             'unterkellert' => $this->convertBasement(),
@@ -295,6 +295,46 @@ trait Equipment
 
         if ($balconyTerraceOrientation->getNorthWest() === true) {
             $result[] = 'nordwest';
+        }
+
+        return $result;
+    }
+
+    private function convertElevator(): array
+    {
+        $elevator = getEquipment($this->openImmo)->getElevator();
+
+        $result = [];
+        if (! $elevator instanceof Elevator) {
+            return $result;
+        }
+
+        if ($elevator->getPersons() === true) {
+            $result[] = 'personen';
+        }
+
+        if ($elevator->getEncumbrances() === true) {
+            $result[] = 'lasten';
+        }
+
+        return $result;
+    }
+
+    private function convertAttachedGastronomy(): array
+    {
+        $gastronomy = getEquipment($this->openImmo)->getAttachedGastronomy();
+
+        $result = [];
+        if (! $gastronomy instanceof AttachedGastronomy) {
+            return $result;
+        }
+
+        if ($gastronomy->getHotelRestaurant() === true) {
+            $result[] = 'hotelrestaurant';
+        }
+
+        if ($gastronomy->getCash() === true) {
+            $result[] = 'bar';
         }
 
         return $result;

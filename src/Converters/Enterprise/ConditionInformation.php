@@ -32,12 +32,21 @@ trait ConditionInformation
         /** @var EnergyPerformanceCertificate|null $energyPass */
         $energyPass = data_get($energyPasses, 0);
         if ($energyPass) {
-            $result['energieausweistyp'] = $energyPass->getEnergyCertificateType();
+            $energyCertificateType = $this->mapEnergyCertificateType($energyPass);
+            if ($energyCertificateType !== null) {
+                $result['energieausweistyp'] = $energyCertificateType;
+            }
+
             $result['energyClass'] = $energyPass->getValueClass();
             $result['energieverbrauchskennwert'] = $energyPass->getEnergyConsumptionValue();
             $result['warmwasserEnthalten'] = $energyPass->getWithHotWater();
             $result['endenergiebedarf'] = $energyPass->getFinalEnergyDemand();
-            $result['energietraeger'] = $energyPass->getPrimaryEnergySource();
+
+            $primaryEnergySource = $energyPass->getPrimaryEnergySource();
+            if ($primaryEnergySource) {
+                $result['energietraeger'] = $this->mapEnergySource($primaryEnergySource);
+            }
+
             $result['energieausweis_gueltig_bis'] = $energyPass->getValidUntil();
             $result['energieausweisBaujahr'] = $energyPass->getYearOfConstruction();
             $result['ea_hwb_klasse_at'] = $energyPass->getHeatingDemandClass();
@@ -48,5 +57,33 @@ trait ConditionInformation
         }
 
         return $result;
+    }
+
+    private function mapEnergyCertificateType(EnergyPerformanceCertificate $energyPass): ?string
+    {
+        $epart = $energyPass->getEnergyCertificateType();
+        $jahrgang = $energyPass->getYear();
+        $buildingType = $energyPass->getBuildingType();
+
+        return match ($jahrgang) {
+            'ohne' => 'ohne Energieausweis',
+            'nicht_noetig' => 'es besteht keine Pflicht!',
+            'bei_besichtigung' => 'liegtZurBesichtigungVor',
+            default => match (true) {
+                $epart === 'BEDARF' && $buildingType === 'nichtwohn' => 'Bedarfsausweis Gewerbe',
+                $epart === 'VERBRAUCH' && $buildingType === 'nichtwohn' => 'Verbrauchsausweis Gewerbe',
+                $epart === 'BEDARF' => 'Endenergiebedarf',
+                $epart === 'VERBRAUCH' => 'Energieverbrauchskennwert',
+                default => null,
+            },
+        };
+    }
+
+    private function mapEnergySource(string $source): string
+    {
+        return match ($source) {
+            'FERN' => 'fernwaerme',
+            default => strtolower($source),
+        };
     }
 }
