@@ -91,6 +91,36 @@ class HelperGenUtil
         File::put($this->targetFile, $code);
     }
 
+    private function getPropertyDtoClassName(ReflectionProperty $property): ?string
+    {
+        $attributes = $property->getAttributes(\JMS\Serializer\Annotation\Type::class);
+        if ($attributes === []) {
+            return null;
+        }
+
+        $type = $attributes[0]->getArguments()[0] ?? null;
+
+        if (! is_string($type)) {
+            return null;
+        }
+
+        // Handle array<...> syntax
+        if (str_starts_with($type, 'array<')) {
+            $type = substr($type, 6, -1);
+        }
+
+        // Only return DTO classes from our namespace
+        if (! str_starts_with($type, $this->dtoNamespace)) {
+            return null;
+        }
+
+        if (! class_exists($type)) {
+            return null;
+        }
+
+        return $type;
+    }
+
     private function loopProperties(ReflectionProperty $property, array $classes): void
     {
         $name = $property->getName();
@@ -101,9 +131,9 @@ class HelperGenUtil
 
         $this->recursionBlocker[] = $property->getName();
 
-        $className = $this->dtoNamespace.'\\'.ucfirst($name);
+        $className = $this->getPropertyDtoClassName($property);
 
-        if (! class_exists($className)) {
+        if ($className === null) {
             return;
         }
 
@@ -133,11 +163,13 @@ class HelperGenUtil
 
         $childClass = $classes[count($classes) - 1];
         $childClassBaseName = class_basename($childClass);
-        $propertyClassName = $this->dtoNamespace.'\\'.$propertyName;
+        $propertyClassName = $this->getPropertyDtoClassName($property);
 
-        if (! class_exists($propertyClassName)) {
+        if ($propertyClassName === null) {
             return;
         }
+
+        $propertyClassBaseName = class_basename($propertyClassName);
 
         // @phpstan-ignore-next-line
         $propertyTypeName = $property->getType()?->getName();
@@ -162,7 +194,7 @@ class HelperGenUtil
 
         $this->namespace->addUse($propertyClassName);
         $function->setReturnType($propertyClassName);
-        $function->addComment('Will return the '.$propertyName.' object from an OpenImmo Dto.');
+        $function->addComment('Will return the '.$propertyClassBaseName.' object from an OpenImmo Dto.');
         $function->addComment('If it does not exist, it will be created.');
         $function->addComment('Make sure to call this function only on referenced objects.');
 
@@ -173,8 +205,8 @@ class HelperGenUtil
             \$children = \$openImmo->get{$propertyName}();
             \$child = data_get(\$children, '0');
 
-            if (! \$child instanceof {$propertyName}) {
-                \$child = new {$propertyName};
+            if (! \$child instanceof {$propertyClassBaseName}) {
+                \$child = new {$propertyClassBaseName};
                 \$children[] = \$child;
                 \$openImmo->set{$propertyName}(\$children);
             }
@@ -185,8 +217,8 @@ class HelperGenUtil
             $function->setBody(<<<PHP
             \$child = \$openImmo->get{$propertyName}();
 
-            if (! \$child instanceof {$propertyName}) {
-                \$child = new {$propertyName};
+            if (! \$child instanceof {$propertyClassBaseName}) {
+                \$child = new {$propertyClassBaseName};
                 \$openImmo->set{$propertyName}(\$child);
             }
 
@@ -198,8 +230,8 @@ class HelperGenUtil
             \$children = \$parent->get{$propertyName}();
             \$child = data_get(\$children, '0');
 
-            if (! \$child instanceof {$propertyName}) {
-                \$child = new {$propertyName};
+            if (! \$child instanceof {$propertyClassBaseName}) {
+                \$child = new {$propertyClassBaseName};
                 \$children[] = \$child;
                 \$parent->set{$propertyName}(\$children);
             }
@@ -211,8 +243,8 @@ class HelperGenUtil
             \$parent = get{$childClassBaseName}(\$openImmo);
             \$child = \$parent->get{$propertyName}();
 
-            if (! \$child instanceof {$propertyName}) {
-                \$child = new {$propertyName};
+            if (! \$child instanceof {$propertyClassBaseName}) {
+                \$child = new {$propertyClassBaseName};
                 \$parent->set{$propertyName}(\$child);
             }
 
