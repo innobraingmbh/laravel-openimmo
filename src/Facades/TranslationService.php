@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Facade;
  * @method static string translateAttribute(string $key)
  * @method static string translateProperty(string $key)
  * @method static string translateConstant(string $key)
+ * @method static string getClassDescription(string $className, string $locale = 'en')
+ * @method static string getPropertyDescription(string $key, string $locale = 'en')
  * @method static \Innobrain\OpenImmo\Services\TranslationService addFakeClass(string $key, string|null $value = null)
  * @method static \Innobrain\OpenImmo\Services\TranslationService addFakeAttribute(string $key, string|null $value = null)
  * @method static \Innobrain\OpenImmo\Services\TranslationService addFakeProperty(string $key, string|null $value = null)
  * @method static \Innobrain\OpenImmo\Services\TranslationService addFakeConstant(string $key, string|null $value = null)
+ * @method static \Innobrain\OpenImmo\Services\TranslationService addFakeClassDescription(string $className, string $de = '', string $en = '')
+ * @method static \Innobrain\OpenImmo\Services\TranslationService addFakePropertyDescription(string $key, string $de = '', string $en = '')
  */
 class TranslationService extends Facade
 {

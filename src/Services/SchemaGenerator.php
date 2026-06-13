@@ -64,9 +64,27 @@ class SchemaGenerator
     private function getClassDescription(ReflectionClass $class): string
     {
         $docComment = $class->getDocComment();
+        if ($docComment === false) {
+            return '';
+        }
+
+        if (preg_match('/@description (.+)/', $docComment, $matches) === 1) {
+            return trim($matches[1]);
+        }
+
         $matches = Str::matchAll('/^ * .+$/m', $docComment);
 
         return collect($matches)->map(fn (string $match) => Str::substr($match, 3))->get(1) ?? '';
+    }
+
+    private function getPropertyDescription(ReflectionProperty $property): string
+    {
+        $doc = $property->getDocComment();
+        if ($doc !== false && preg_match('/@description (.+)/', $doc, $matches) === 1) {
+            return trim($matches[1]);
+        }
+
+        return $property->getName();
     }
 
     private function handleProperty(ReflectionProperty $property, ?string $path = null): ?Schema
@@ -96,20 +114,21 @@ class SchemaGenerator
             $typeName = $propertyType->getName();
 
             if ($typeName === 'DateTime' || $typeName === 'DateTimeImmutable') {
-                return new StringSchema($name, $name, $isNullable);
+                return new StringSchema($name, $this->getPropertyDescription($property), $isNullable);
             }
 
             return $this->handleClass(new ReflectionClass($typeName), $path);
         }
 
         $enumOptions = $this->getEnumOptions($property);
+        $description = $this->getPropertyDescription($property);
 
         return match ($type) {
-            'int', '?int', 'float', '?float' => new NumberSchema($name, $name, $isNullable),
-            'bool', '?bool' => new BooleanSchema($name, $name, $isNullable),
+            'int', '?int', 'float', '?float' => new NumberSchema($name, $description, $isNullable),
+            'bool', '?bool' => new BooleanSchema($name, $description, $isNullable),
             default => $enumOptions !== null
-                ? new EnumSchema($name, $name, $enumOptions, $isNullable)
-                : new StringSchema($name, $name, $isNullable),
+                ? new EnumSchema($name, $description, $enumOptions, $isNullable)
+                : new StringSchema($name, $description, $isNullable),
         };
     }
 

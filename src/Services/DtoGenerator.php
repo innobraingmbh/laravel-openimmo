@@ -164,8 +164,27 @@ class DtoGenerator
 
         $class = $namespace->addClass($className);
 
+        $xsdDoc = $element->getDoc();
+        $classComment = 'Class '.$className;
+
+        if ($xsdDoc !== '') {
+            $classComment .= PHP_EOL.$xsdDoc;
+        }
+
+        if (! $this->skipTranslation) {
+            $enDesc = TranslationService::getClassDescription($className, 'en');
+            if ($enDesc !== '') {
+                $classComment .= PHP_EOL.'@description '.$enDesc;
+            }
+        } else {
+            $deDesc = TranslationService::getClassDescription($className, 'de');
+            if ($deDesc !== '') {
+                $classComment .= PHP_EOL.'@description '.$deDesc;
+            }
+        }
+
         $class
-            ->addComment('Class '.$className.PHP_EOL.$element->getDoc())
+            ->addComment($classComment)
             ->addAttribute(XmlRoot::class, ['name' => $element->getName()]);
 
         /** @var Attribute[] $attributes */
@@ -313,6 +332,14 @@ class DtoGenerator
             );
         }
 
+        if (! $this->skipTranslation) {
+            $descKey = $class->getName().'.'.$propertyName;
+            $propDesc = TranslationService::getPropertyDescription($descKey, 'en');
+            if ($propDesc !== '') {
+                CodeGenUtil::addDescriptionPart($classProperty, '@description '.$propDesc);
+            }
+        }
+
         $propertyName = $property->getName();
         $classProperty->addAttribute(SerializedName::class, [$propertyName]);
         $namespace->addUse(SerializedName::class);
@@ -403,6 +430,14 @@ class DtoGenerator
             ->setValue(TypeUtil::getDefaultValueForType($phpType, $nullable));
 
         $this->parseRestriction($attribute, $property, $class);
+
+        if (! $this->skipTranslation) {
+            $descKey = $class->getName().'.'.$propertyName;
+            $attrDesc = TranslationService::getPropertyDescription($descKey, 'en');
+            if ($attrDesc !== '') {
+                CodeGenUtil::addDescriptionPart($property, '@description '.$attrDesc);
+            }
+        }
 
         CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable, $this->namespace);
     }
