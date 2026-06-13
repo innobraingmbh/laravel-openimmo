@@ -154,8 +154,9 @@ class DtoGenerator
     protected function parseElement(ElementDef|Element $element): void
     {
         $className = TypeUtil::studly($element->getName());
+        $translatedClassName = TranslationService::translateClass($className);
         if (! $this->skipTranslation) {
-            $className = TranslationService::translateClass($className);
+            $className = $translatedClassName;
         }
 
         $namespace = new PhpNamespace($this->namespace)
@@ -171,9 +172,8 @@ class DtoGenerator
             $classComment .= PHP_EOL.$xsdDoc;
         }
 
-        $desc = $this->skipTranslation
-            ? TranslationService::getClassDescription($className, 'de')
-            : TranslationService::getClassDescription($className, 'en');
+        $locale = $this->skipTranslation ? 'de' : 'en';
+        $desc = TranslationService::getClassDescription($translatedClassName, $locale);
         if ($desc !== '') {
             $classComment .= PHP_EOL.'@description '.$desc;
         }
@@ -187,8 +187,8 @@ class DtoGenerator
         $attributes = $element->getType()->getAttributes();
 
         collect($attributes)
-            ->each(function (Attribute $attribute) use ($class, $namespace) {
-                $this->parseAttribute($attribute, $class, $namespace);
+            ->each(function (Attribute $attribute) use ($class, $namespace, $translatedClassName) {
+                $this->parseAttribute($attribute, $class, $namespace, $translatedClassName);
             });
 
         if ($element->getType() instanceof ComplexTypeSimpleContent) {
@@ -202,16 +202,16 @@ class DtoGenerator
             } else {
                 // @phpstan-ignore-next-line
                 collect($element->getType()->getElements())
-                    ->each(function (Choice|ElementRef|Element $property) use ($class, $namespace) {
+                    ->each(function (Choice|ElementRef|Element $property) use ($class, $namespace, $translatedClassName) {
                         if ($property instanceof Choice) {
                             collect($property->getElements())
                                 // @phpstan-ignore-next-line
-                                ->each(function (ElementRef|Sequence $choiceProperty) use ($class, $namespace) {
+                                ->each(function (ElementRef|Sequence $choiceProperty) use ($class, $namespace, $translatedClassName) {
                                     /** @var ElementRef $choiceProperty */
-                                    $this->parseProperty($choiceProperty, $class, $namespace);
+                                    $this->parseProperty($choiceProperty, $class, $namespace, $translatedClassName);
                                 });
                         } else {
-                            $this->parseProperty($property, $class, $namespace);
+                            $this->parseProperty($property, $class, $namespace, $translatedClassName);
                         }
                     });
             }
@@ -261,12 +261,11 @@ class DtoGenerator
         $constructor->setBody(implode(PHP_EOL, $constructorCode));
     }
 
-    protected function parseProperty(Element|ElementRef|ElementDef|Sequence|ElementItem $property, ClassType $class, PhpNamespace $namespace): void
+    protected function parseProperty(Element|ElementRef|ElementDef|Sequence|ElementItem $property, ClassType $class, PhpNamespace $namespace, string $translatedClassName = ''): void
     {
-        $propertyName = TypeUtil::camelize($property->getName());
-        if (! $this->skipTranslation) {
-            $propertyName = TranslationService::translateProperty($propertyName);
-        }
+        $germanPropertyName = TypeUtil::camelize($property->getName());
+        $translatedPropertyName = TranslationService::translateProperty($germanPropertyName);
+        $propertyName = $this->skipTranslation ? $germanPropertyName : $translatedPropertyName;
 
         if (array_key_exists($propertyName, $class->getProperties())) {
             return;
@@ -274,7 +273,7 @@ class DtoGenerator
 
         if ($property instanceof Sequence) {
             foreach ($property->getElements() as $sequenceProperty) {
-                $this->parseProperty($sequenceProperty, $class, $namespace);
+                $this->parseProperty($sequenceProperty, $class, $namespace, $translatedClassName);
             }
 
             return;
@@ -327,10 +326,9 @@ class DtoGenerator
             );
         }
 
-        $descKey = $class->getName().'.'.$propertyName;
-        $propDesc = $this->skipTranslation
-            ? TranslationService::getClassDescription($descKey, 'de')
-            : TranslationService::getClassDescription($descKey, 'en');
+        $descKey = $translatedClassName.'.'.$translatedPropertyName;
+        $locale = $this->skipTranslation ? 'de' : 'en';
+        $propDesc = TranslationService::getClassDescription($descKey, $locale);
         if ($propDesc !== '') {
             CodeGenUtil::addDescriptionPart($classProperty, '@description '.$propDesc);
         }
@@ -394,12 +392,11 @@ class DtoGenerator
         CodeGenUtil::generateGetterAndSetter($property, $class, true, ! TypeUtil::isConstantsBasedProperty($property), $this->namespace);
     }
 
-    protected function parseAttribute(Attribute $attribute, ClassType $class, PhpNamespace $namespace): void
+    protected function parseAttribute(Attribute $attribute, ClassType $class, PhpNamespace $namespace, string $translatedClassName = ''): void
     {
-        $propertyName = TypeUtil::camelize($attribute->getName());
-        if (! $this->skipTranslation) {
-            $propertyName = TranslationService::translateAttribute($propertyName);
-        }
+        $germanPropertyName = TypeUtil::camelize($attribute->getName());
+        $translatedPropertyName = TranslationService::translateAttribute($germanPropertyName);
+        $propertyName = $this->skipTranslation ? $germanPropertyName : $translatedPropertyName;
 
         $xsdType = TypeUtil::extractTypeForPhp($attribute->getType());
         $phpType = TypeUtil::getValidPhpType($xsdType, $this->namespace);
@@ -426,12 +423,11 @@ class DtoGenerator
 
         $this->parseRestriction($attribute, $property, $class);
 
-        if (! $this->skipTranslation) {
-            $descKey = $class->getName().'.'.$propertyName;
-            $attrDesc = TranslationService::getPropertyDescription($descKey, 'en');
-            if ($attrDesc !== '') {
-                CodeGenUtil::addDescriptionPart($property, '@description '.$attrDesc);
-            }
+        $descKey = $translatedClassName.'.'.$translatedPropertyName;
+        $locale = $this->skipTranslation ? 'de' : 'en';
+        $attrDesc = TranslationService::getPropertyDescription($descKey, $locale);
+        if ($attrDesc !== '') {
+            CodeGenUtil::addDescriptionPart($property, '@description '.$attrDesc);
         }
 
         CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable, $this->namespace);
