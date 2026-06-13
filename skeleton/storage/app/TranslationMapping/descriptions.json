@@ -1,0 +1,2650 @@
+{
+    "classes": {
+        "Action": {
+            "de": "",
+            "en": ""
+        },
+        "ActualRentalIncome": {
+            "de": "",
+            "en": ""
+        },
+        "AdditionalAddress": {
+            "de": "",
+            "en": ""
+        },
+        "AdditionalCostsPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "Age": {
+            "de": "",
+            "en": ""
+        },
+        "AgricultureAndForestry": {
+            "de": "",
+            "en": ""
+        },
+        "Apartment": {
+            "de": "",
+            "en": ""
+        },
+        "ApartmentBuildingInvestmentProperty": {
+            "de": "",
+            "en": ""
+        },
+        "Areas": {
+            "de": "",
+            "en": ""
+        },
+        "AttachedGastronomy": {
+            "de": "",
+            "en": ""
+        },
+        "Attachment": {
+            "de": "",
+            "en": ""
+        },
+        "Attachments": {
+            "de": "",
+            "en": ""
+        },
+        "Auction": {
+            "de": "",
+            "en": ""
+        },
+        "BalconyTerraceOrientation": {
+            "de": "",
+            "en": ""
+        },
+        "Basement": {
+            "de": "",
+            "en": ""
+        },
+        "Bathroom": {
+            "de": "",
+            "en": ""
+        },
+        "BiddingProcess": {
+            "de": "",
+            "en": ""
+        },
+        "BroadbandAccess": {
+            "de": "",
+            "en": ""
+        },
+        "Check": {
+            "de": "",
+            "en": ""
+        },
+        "CommercialLeisureProperty": {
+            "de": "",
+            "en": ""
+        },
+        "CommissionSplit": {
+            "de": "",
+            "en": ""
+        },
+        "Condition": {
+            "de": "",
+            "en": ""
+        },
+        "ConditionInformation": {
+            "de": "",
+            "en": ""
+        },
+        "ConstructionMethod": {
+            "de": "",
+            "en": ""
+        },
+        "ContactPerson": {
+            "de": "",
+            "en": ""
+        },
+        "Country": {
+            "de": "",
+            "en": ""
+        },
+        "Currency": {
+            "de": "",
+            "en": ""
+        },
+        "Data": {
+            "de": "",
+            "en": ""
+        },
+        "DevelopableAccordingTo": {
+            "de": "",
+            "en": ""
+        },
+        "Development": {
+            "de": "",
+            "en": ""
+        },
+        "DevelopmentScope": {
+            "de": "",
+            "en": ""
+        },
+        "DevelopmentStage": {
+            "de": "",
+            "en": ""
+        },
+        "Distances": {
+            "de": "",
+            "en": ""
+        },
+        "Elevator": {
+            "de": "",
+            "en": ""
+        },
+        "EnergyPerformanceCertificate": {
+            "de": "",
+            "en": ""
+        },
+        "EnergyType": {
+            "de": "",
+            "en": ""
+        },
+        "Equipment": {
+            "de": "",
+            "en": ""
+        },
+        "Evaluation": {
+            "de": "",
+            "en": ""
+        },
+        "ExternalCommission": {
+            "de": "",
+            "en": ""
+        },
+        "Field": {
+            "de": "",
+            "en": ""
+        },
+        "Floor": {
+            "de": "",
+            "en": ""
+        },
+        "FreeTexts": {
+            "de": "",
+            "en": ""
+        },
+        "Furnished": {
+            "de": "",
+            "en": ""
+        },
+        "Gender": {
+            "de": "",
+            "en": ""
+        },
+        "Geo": {
+            "de": "",
+            "en": ""
+        },
+        "GeoCoordinates": {
+            "de": "",
+            "en": ""
+        },
+        "HallsStorageProduction": {
+            "de": "",
+            "en": ""
+        },
+        "HeatingSystem": {
+            "de": "",
+            "en": ""
+        },
+        "HeatingType": {
+            "de": "",
+            "en": ""
+        },
+        "Hospitality": {
+            "de": "",
+            "en": ""
+        },
+        "House": {
+            "de": "",
+            "en": ""
+        },
+        "ImprintStructure": {
+            "de": "",
+            "en": ""
+        },
+        "Infrastructure": {
+            "de": "",
+            "en": ""
+        },
+        "InternalCommission": {
+            "de": "",
+            "en": ""
+        },
+        "Kitchen": {
+            "de": "",
+            "en": ""
+        },
+        "LocationArea": {
+            "de": "",
+            "en": ""
+        },
+        "LocationInBuilding": {
+            "de": "",
+            "en": ""
+        },
+        "MarketingType": {
+            "de": "",
+            "en": ""
+        },
+        "Master": {
+            "de": "",
+            "en": ""
+        },
+        "MaxRentalPeriod": {
+            "de": "",
+            "en": ""
+        },
+        "MinRentalPeriod": {
+            "de": "",
+            "en": ""
+        },
+        "NetCommission": {
+            "de": "",
+            "en": ""
+        },
+        "NetEVB": {
+            "de": "",
+            "en": ""
+        },
+        "NetHeatingCosts": {
+            "de": "",
+            "en": ""
+        },
+        "NetMainRent": {
+            "de": "",
+            "en": ""
+        },
+        "NetMonthlyCosts": {
+            "de": "",
+            "en": ""
+        },
+        "NetOperatingCosts": {
+            "de": "",
+            "en": ""
+        },
+        "NetOtherCosts": {
+            "de": "",
+            "en": ""
+        },
+        "NetOtherRent": {
+            "de": "",
+            "en": ""
+        },
+        "NetPurchasePrice": {
+            "de": "",
+            "en": ""
+        },
+        "NetRentPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "NetReserves": {
+            "de": "",
+            "en": ""
+        },
+        "NetTotalCost": {
+            "de": "",
+            "en": ""
+        },
+        "NetTotalRent": {
+            "de": "",
+            "en": ""
+        },
+        "OfficePractices": {
+            "de": "",
+            "en": ""
+        },
+        "OpenImmo": {
+            "de": "",
+            "en": ""
+        },
+        "Other": {
+            "de": "",
+            "en": ""
+        },
+        "OtherEmail": {
+            "de": "",
+            "en": ""
+        },
+        "OtherPhone": {
+            "de": "",
+            "en": ""
+        },
+        "Parking": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingCarport": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingDuplex": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingGarage": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingMultiStorey": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingOther": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingOutdoor": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingSpaceType": {
+            "de": "",
+            "en": ""
+        },
+        "ParkingUnderground": {
+            "de": "",
+            "en": ""
+        },
+        "Photo": {
+            "de": "",
+            "en": ""
+        },
+        "Plot": {
+            "de": "",
+            "en": ""
+        },
+        "Prices": {
+            "de": "",
+            "en": ""
+        },
+        "PriceTimeUnit": {
+            "de": "",
+            "en": ""
+        },
+        "PropertyCategory": {
+            "de": "",
+            "en": ""
+        },
+        "PropertyManagement": {
+            "de": "",
+            "en": ""
+        },
+        "PropertyText": {
+            "de": "",
+            "en": ""
+        },
+        "PropertyType": {
+            "de": "",
+            "en": ""
+        },
+        "Provider": {
+            "de": "",
+            "en": ""
+        },
+        "PurchasePrice": {
+            "de": "",
+            "en": ""
+        },
+        "RealEstate": {
+            "de": "",
+            "en": ""
+        },
+        "Retail": {
+            "de": "",
+            "en": ""
+        },
+        "RoofShape": {
+            "de": "",
+            "en": ""
+        },
+        "Rooms": {
+            "de": "",
+            "en": ""
+        },
+        "SalesStatus": {
+            "de": "",
+            "en": ""
+        },
+        "SecurityTechnology": {
+            "de": "",
+            "en": ""
+        },
+        "Services": {
+            "de": "",
+            "en": ""
+        },
+        "SportDistances": {
+            "de": "",
+            "en": ""
+        },
+        "TargetRentalIncome": {
+            "de": "",
+            "en": ""
+        },
+        "TechnicalManagement": {
+            "de": "",
+            "en": ""
+        },
+        "TotalCostsPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "Transfer": {
+            "de": "",
+            "en": ""
+        },
+        "TypeOfUse": {
+            "de": "",
+            "en": ""
+        },
+        "UserDefinedAnyfield": {
+            "de": "",
+            "en": ""
+        },
+        "UserDefinedExtend": {
+            "de": "",
+            "en": ""
+        },
+        "UserDefinedSimplefield": {
+            "de": "",
+            "en": ""
+        },
+        "View": {
+            "de": "",
+            "en": ""
+        }
+    },
+    "properties": {
+        "access": {
+            "de": "",
+            "en": ""
+        },
+        "action": {
+            "de": "",
+            "en": ""
+        },
+        "actionType": {
+            "de": "",
+            "en": ""
+        },
+        "activeFrom": {
+            "de": "",
+            "en": ""
+        },
+        "activeTo": {
+            "de": "",
+            "en": ""
+        },
+        "actualNetYield": {
+            "de": "",
+            "en": ""
+        },
+        "actualRentalIncome": {
+            "de": "",
+            "en": ""
+        },
+        "additional": {
+            "de": "",
+            "en": ""
+        },
+        "additionalAddress": {
+            "de": "",
+            "en": ""
+        },
+        "additionalCosts": {
+            "de": "",
+            "en": ""
+        },
+        "additionalCostsPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "additionalCostsPerSqmTo": {
+            "de": "",
+            "en": ""
+        },
+        "additionalDate": {
+            "de": "",
+            "en": ""
+        },
+        "additionalField": {
+            "de": "",
+            "en": ""
+        },
+        "addressRelease": {
+            "de": "",
+            "en": ""
+        },
+        "addressType": {
+            "de": "",
+            "en": ""
+        },
+        "administrativeArea": {
+            "de": "",
+            "en": ""
+        },
+        "aerialPhotos": {
+            "de": "",
+            "en": ""
+        },
+        "age": {
+            "de": "",
+            "en": ""
+        },
+        "ageAttribute": {
+            "de": "",
+            "en": ""
+        },
+        "agricultureAndForestry": {
+            "de": "",
+            "en": ""
+        },
+        "airConditioned": {
+            "de": "",
+            "en": ""
+        },
+        "airHeatPump": {
+            "de": "",
+            "en": ""
+        },
+        "alarmSystem": {
+            "de": "",
+            "en": ""
+        },
+        "alternative": {
+            "de": "",
+            "en": ""
+        },
+        "apartment": {
+            "de": "",
+            "en": ""
+        },
+        "apartmentBuildingInvestmentProperty": {
+            "de": "",
+            "en": ""
+        },
+        "apartmentNumber": {
+            "de": "",
+            "en": ""
+        },
+        "apartmentType": {
+            "de": "",
+            "en": ""
+        },
+        "areaFrom": {
+            "de": "",
+            "en": ""
+        },
+        "areaLocation": {
+            "de": "",
+            "en": ""
+        },
+        "areas": {
+            "de": "",
+            "en": ""
+        },
+        "areaTo": {
+            "de": "",
+            "en": ""
+        },
+        "asHoliday": {
+            "de": "",
+            "en": ""
+        },
+        "assistedLiving": {
+            "de": "",
+            "en": ""
+        },
+        "attachedGastronomy": {
+            "de": "",
+            "en": ""
+        },
+        "attachment": {
+            "de": "",
+            "en": ""
+        },
+        "attachmentContent": {
+            "de": "",
+            "en": ""
+        },
+        "attachments": {
+            "de": "",
+            "en": ""
+        },
+        "attachmentTitle": {
+            "de": "",
+            "en": ""
+        },
+        "attic": {
+            "de": "",
+            "en": ""
+        },
+        "atticArea": {
+            "de": "",
+            "en": ""
+        },
+        "auction": {
+            "de": "",
+            "en": ""
+        },
+        "auctionDate": {
+            "de": "",
+            "en": ""
+        },
+        "authorizedRepresentative": {
+            "de": "",
+            "en": ""
+        },
+        "availableFrom": {
+            "de": "",
+            "en": ""
+        },
+        "balconyTerraceArea": {
+            "de": "",
+            "en": ""
+        },
+        "balconyTerraceOrientation": {
+            "de": "",
+            "en": ""
+        },
+        "barrierFree": {
+            "de": "",
+            "en": ""
+        },
+        "basement": {
+            "de": "",
+            "en": ""
+        },
+        "basementArea": {
+            "de": "",
+            "en": ""
+        },
+        "bathroom": {
+            "de": "",
+            "en": ""
+        },
+        "bathtub": {
+            "de": "",
+            "en": ""
+        },
+        "bicycleRoom": {
+            "de": "",
+            "en": ""
+        },
+        "biddingProcess": {
+            "de": "",
+            "en": ""
+        },
+        "bidet": {
+            "de": "",
+            "en": ""
+        },
+        "bioEnergy": {
+            "de": "",
+            "en": ""
+        },
+        "block": {
+            "de": "",
+            "en": ""
+        },
+        "breweryTie": {
+            "de": "",
+            "en": ""
+        },
+        "broadbandAccess": {
+            "de": "",
+            "en": ""
+        },
+        "buildingEnergyAct2018": {
+            "de": "",
+            "en": ""
+        },
+        "buildingType": {
+            "de": "",
+            "en": ""
+        },
+        "builtInKitchen": {
+            "de": "",
+            "en": ""
+        },
+        "businessAssets": {
+            "de": "",
+            "en": ""
+        },
+        "cableChannels": {
+            "de": "",
+            "en": ""
+        },
+        "cableSatelliteTV": {
+            "de": "",
+            "en": ""
+        },
+        "cadastralDistrict": {
+            "de": "",
+            "en": ""
+        },
+        "camera": {
+            "de": "",
+            "en": ""
+        },
+        "canteenCafeteria": {
+            "de": "",
+            "en": ""
+        },
+        "carpet": {
+            "de": "",
+            "en": ""
+        },
+        "carport": {
+            "de": "",
+            "en": ""
+        },
+        "cash": {
+            "de": "",
+            "en": ""
+        },
+        "catering": {
+            "de": "",
+            "en": ""
+        },
+        "central": {
+            "de": "",
+            "en": ""
+        },
+        "centralEmail": {
+            "de": "",
+            "en": ""
+        },
+        "centralPhoneNumber": {
+            "de": "",
+            "en": ""
+        },
+        "check": {
+            "de": "",
+            "en": ""
+        },
+        "chpBio": {
+            "de": "",
+            "en": ""
+        },
+        "chpFossil": {
+            "de": "",
+            "en": ""
+        },
+        "chpRegenerative": {
+            "de": "",
+            "en": ""
+        },
+        "chpRenewable": {
+            "de": "",
+            "en": ""
+        },
+        "city": {
+            "de": "",
+            "en": ""
+        },
+        "cleaning": {
+            "de": "",
+            "en": ""
+        },
+        "coal": {
+            "de": "",
+            "en": ""
+        },
+        "coldRent": {
+            "de": "",
+            "en": ""
+        },
+        "commercial": {
+            "de": "",
+            "en": ""
+        },
+        "commercialLeisureProperty": {
+            "de": "",
+            "en": ""
+        },
+        "commercialRegister": {
+            "de": "",
+            "en": ""
+        },
+        "commercialRegisterNumber": {
+            "de": "",
+            "en": ""
+        },
+        "commercialUse": {
+            "de": "",
+            "en": ""
+        },
+        "commissionGross": {
+            "de": "",
+            "en": ""
+        },
+        "commissionNet": {
+            "de": "",
+            "en": ""
+        },
+        "commissionNote": {
+            "de": "",
+            "en": ""
+        },
+        "commissionRequired": {
+            "de": "",
+            "en": ""
+        },
+        "commissionSplit": {
+            "de": "",
+            "en": ""
+        },
+        "commissionVAT": {
+            "de": "",
+            "en": ""
+        },
+        "company": {
+            "de": "",
+            "en": ""
+        },
+        "companyAddress": {
+            "de": "",
+            "en": ""
+        },
+        "companyName": {
+            "de": "",
+            "en": ""
+        },
+        "condition": {
+            "de": "",
+            "en": ""
+        },
+        "conditionInformation": {
+            "de": "",
+            "en": ""
+        },
+        "conditionType": {
+            "de": "",
+            "en": ""
+        },
+        "constructionMethod": {
+            "de": "",
+            "en": ""
+        },
+        "constructionZone": {
+            "de": "",
+            "en": ""
+        },
+        "contactPerson": {
+            "de": "",
+            "en": ""
+        },
+        "contamination": {
+            "de": "",
+            "en": ""
+        },
+        "contentType": {
+            "de": "",
+            "en": ""
+        },
+        "corridor": {
+            "de": "",
+            "en": ""
+        },
+        "country": {
+            "de": "",
+            "en": ""
+        },
+        "countryType": {
+            "de": "",
+            "en": ""
+        },
+        "crane": {
+            "de": "",
+            "en": ""
+        },
+        "cubature": {
+            "de": "",
+            "en": ""
+        },
+        "currency": {
+            "de": "",
+            "en": ""
+        },
+        "data": {
+            "de": "",
+            "en": ""
+        },
+        "dataProcessingCabling": {
+            "de": "",
+            "en": ""
+        },
+        "deposit": {
+            "de": "",
+            "en": ""
+        },
+        "depositText": {
+            "de": "",
+            "en": ""
+        },
+        "developableAccordingTo": {
+            "de": "",
+            "en": ""
+        },
+        "developableAttribute": {
+            "de": "",
+            "en": ""
+        },
+        "development": {
+            "de": "",
+            "en": ""
+        },
+        "developmentAttribute": {
+            "de": "",
+            "en": ""
+        },
+        "developmentCosts": {
+            "de": "",
+            "en": ""
+        },
+        "developmentScope": {
+            "de": "",
+            "en": ""
+        },
+        "developmentStage": {
+            "de": "",
+            "en": ""
+        },
+        "digitalTerrestrialTV": {
+            "de": "",
+            "en": ""
+        },
+        "diningRoomSeats": {
+            "de": "",
+            "en": ""
+        },
+        "directEmail": {
+            "de": "",
+            "en": ""
+        },
+        "distance": {
+            "de": "",
+            "en": ""
+        },
+        "distances": {
+            "de": "",
+            "en": ""
+        },
+        "distanceTo": {
+            "de": "",
+            "en": ""
+        },
+        "distanceToSport": {
+            "de": "",
+            "en": ""
+        },
+        "districtCourt": {
+            "de": "",
+            "en": ""
+        },
+        "districtHeatingVapor": {
+            "de": "",
+            "en": ""
+        },
+        "divisibleFrom": {
+            "de": "",
+            "en": ""
+        },
+        "duplex": {
+            "de": "",
+            "en": ""
+        },
+        "duration": {
+            "de": "",
+            "en": ""
+        },
+        "east": {
+            "de": "",
+            "en": ""
+        },
+        "electric": {
+            "de": "",
+            "en": ""
+        },
+        "electricityConnectionValue": {
+            "de": "",
+            "en": ""
+        },
+        "electricityValue": {
+            "de": "",
+            "en": ""
+        },
+        "elevator": {
+            "de": "",
+            "en": ""
+        },
+        "emailType": {
+            "de": "",
+            "en": ""
+        },
+        "encumbrances": {
+            "de": "",
+            "en": ""
+        },
+        "endOfBiddingTime": {
+            "de": "",
+            "en": ""
+        },
+        "energyCertificate": {
+            "de": "",
+            "en": ""
+        },
+        "energyCertificateText": {
+            "de": "",
+            "en": ""
+        },
+        "energyCertificateType": {
+            "de": "",
+            "en": ""
+        },
+        "energyConsumptionValue": {
+            "de": "",
+            "en": ""
+        },
+        "energyEfficiencyClass": {
+            "de": "",
+            "en": ""
+        },
+        "energyEfficiencyValue": {
+            "de": "",
+            "en": ""
+        },
+        "energyType": {
+            "de": "",
+            "en": ""
+        },
+        "environmentalHeat": {
+            "de": "",
+            "en": ""
+        },
+        "equipment": {
+            "de": "",
+            "en": ""
+        },
+        "equipmentCategory": {
+            "de": "",
+            "en": ""
+        },
+        "equipmentDescription": {
+            "de": "",
+            "en": ""
+        },
+        "evaluation": {
+            "de": "",
+            "en": ""
+        },
+        "expandableHouse": {
+            "de": "",
+            "en": ""
+        },
+        "externalCommission": {
+            "de": "",
+            "en": ""
+        },
+        "externalPropertyNumber": {
+            "de": "",
+            "en": ""
+        },
+        "facility": {
+            "de": "",
+            "en": ""
+        },
+        "faxNumber": {
+            "de": "",
+            "en": ""
+        },
+        "feedbackEmail": {
+            "de": "",
+            "en": ""
+        },
+        "field": {
+            "de": "",
+            "en": ""
+        },
+        "fieldName": {
+            "de": "",
+            "en": ""
+        },
+        "fileNumber": {
+            "de": "",
+            "en": ""
+        },
+        "finalEnergyDemand": {
+            "de": "",
+            "en": ""
+        },
+        "finishedParquet": {
+            "de": "",
+            "en": ""
+        },
+        "fireplace": {
+            "de": "",
+            "en": ""
+        },
+        "firstName": {
+            "de": "",
+            "en": ""
+        },
+        "flatRent": {
+            "de": "",
+            "en": ""
+        },
+        "flatRoof": {
+            "de": "",
+            "en": ""
+        },
+        "floor": {
+            "de": "",
+            "en": ""
+        },
+        "floorAreaRatio": {
+            "de": "",
+            "en": ""
+        },
+        "floorboards": {
+            "de": "",
+            "en": ""
+        },
+        "flooring": {
+            "de": "",
+            "en": ""
+        },
+        "floorSpaceIndex": {
+            "de": "",
+            "en": ""
+        },
+        "forcedSale": {
+            "de": "",
+            "en": ""
+        },
+        "forcedSaleDate": {
+            "de": "",
+            "en": ""
+        },
+        "format": {
+            "de": "",
+            "en": ""
+        },
+        "freeTextField": {
+            "de": "",
+            "en": ""
+        },
+        "freeTextPrice": {
+            "de": "",
+            "en": ""
+        },
+        "freeTexts": {
+            "de": "",
+            "en": ""
+        },
+        "fromDate": {
+            "de": "",
+            "en": ""
+        },
+        "front": {
+            "de": "",
+            "en": ""
+        },
+        "furnished": {
+            "de": "",
+            "en": ""
+        },
+        "garage": {
+            "de": "",
+            "en": ""
+        },
+        "gardenArea": {
+            "de": "",
+            "en": ""
+        },
+        "gardenUse": {
+            "de": "",
+            "en": ""
+        },
+        "gas": {
+            "de": "",
+            "en": ""
+        },
+        "gastronomyArea": {
+            "de": "",
+            "en": ""
+        },
+        "gender": {
+            "de": "",
+            "en": ""
+        },
+        "genderAttribute": {
+            "de": "",
+            "en": ""
+        },
+        "generalForwarding": {
+            "de": "",
+            "en": ""
+        },
+        "geo": {
+            "de": "",
+            "en": ""
+        },
+        "geoCoordinates": {
+            "de": "",
+            "en": ""
+        },
+        "geothermal": {
+            "de": "",
+            "en": ""
+        },
+        "granite": {
+            "de": "",
+            "en": ""
+        },
+        "grannyFlat": {
+            "de": "",
+            "en": ""
+        },
+        "grossFloorArea": {
+            "de": "",
+            "en": ""
+        },
+        "group": {
+            "de": "",
+            "en": ""
+        },
+        "groupIdentifier": {
+            "de": "",
+            "en": ""
+        },
+        "groupNumber": {
+            "de": "",
+            "en": ""
+        },
+        "guestTerrace": {
+            "de": "",
+            "en": ""
+        },
+        "guestToilet": {
+            "de": "",
+            "en": ""
+        },
+        "guidePrice": {
+            "de": "",
+            "en": ""
+        },
+        "guidePricePerSqm": {
+            "de": "",
+            "en": ""
+        },
+        "hallHeight": {
+            "de": "",
+            "en": ""
+        },
+        "hallsStorageProduction": {
+            "de": "",
+            "en": ""
+        },
+        "hallType": {
+            "de": "",
+            "en": ""
+        },
+        "heatedArea": {
+            "de": "",
+            "en": ""
+        },
+        "heating": {
+            "de": "",
+            "en": ""
+        },
+        "heatingCosts": {
+            "de": "",
+            "en": ""
+        },
+        "heatingCostsIncluded": {
+            "de": "",
+            "en": ""
+        },
+        "heatingCostsVAT": {
+            "de": "",
+            "en": ""
+        },
+        "heatingDemandClass": {
+            "de": "",
+            "en": ""
+        },
+        "heatingDemandValue": {
+            "de": "",
+            "en": ""
+        },
+        "heatingType": {
+            "de": "",
+            "en": ""
+        },
+        "heatSupply": {
+            "de": "",
+            "en": ""
+        },
+        "heatValue": {
+            "de": "",
+            "en": ""
+        },
+        "heavyNaturalGas": {
+            "de": "",
+            "en": ""
+        },
+        "highRise": {
+            "de": "",
+            "en": ""
+        },
+        "hipRoof": {
+            "de": "",
+            "en": ""
+        },
+        "holidayPropertyPhone": {
+            "de": "",
+            "en": ""
+        },
+        "hospitality": {
+            "de": "",
+            "en": ""
+        },
+        "hospitalityType": {
+            "de": "",
+            "en": ""
+        },
+        "hotelRestaurant": {
+            "de": "",
+            "en": ""
+        },
+        "house": {
+            "de": "",
+            "en": ""
+        },
+        "houseNumber": {
+            "de": "",
+            "en": ""
+        },
+        "houseType": {
+            "de": "",
+            "en": ""
+        },
+        "imprint": {
+            "de": "",
+            "en": ""
+        },
+        "imprintStructure": {
+            "de": "",
+            "en": ""
+        },
+        "industries": {
+            "de": "",
+            "en": ""
+        },
+        "infrastructure": {
+            "de": "",
+            "en": ""
+        },
+        "interestType": {
+            "de": "",
+            "en": ""
+        },
+        "internalCommission": {
+            "de": "",
+            "en": ""
+        },
+        "internalPropertyNumber": {
+            "de": "",
+            "en": ""
+        },
+        "isoCountry": {
+            "de": "",
+            "en": ""
+        },
+        "isoCurrency": {
+            "de": "",
+            "en": ""
+        },
+        "issueDate": {
+            "de": "",
+            "en": ""
+        },
+        "kfw40": {
+            "de": "",
+            "en": ""
+        },
+        "kfw55": {
+            "de": "",
+            "en": ""
+        },
+        "kfw60": {
+            "de": "",
+            "en": ""
+        },
+        "kfw70": {
+            "de": "",
+            "en": ""
+        },
+        "kitchen": {
+            "de": "",
+            "en": ""
+        },
+        "kitchenette": {
+            "de": "",
+            "en": ""
+        },
+        "laminate": {
+            "de": "",
+            "en": ""
+        },
+        "language": {
+            "de": "",
+            "en": ""
+        },
+        "lastModernization": {
+            "de": "",
+            "en": ""
+        },
+        "latitude": {
+            "de": "",
+            "en": ""
+        },
+        "laundryDryingRoom": {
+            "de": "",
+            "en": ""
+        },
+        "lease": {
+            "de": "",
+            "en": ""
+        },
+        "leasehold": {
+            "de": "",
+            "en": ""
+        },
+        "leasing": {
+            "de": "",
+            "en": ""
+        },
+        "left": {
+            "de": "",
+            "en": ""
+        },
+        "leisureType": {
+            "de": "",
+            "en": ""
+        },
+        "letterSalutation": {
+            "de": "",
+            "en": ""
+        },
+        "library": {
+            "de": "",
+            "en": ""
+        },
+        "licenseIdentifier": {
+            "de": "",
+            "en": ""
+        },
+        "liftPlatform": {
+            "de": "",
+            "en": ""
+        },
+        "lightNaturalGas": {
+            "de": "",
+            "en": ""
+        },
+        "linoleum": {
+            "de": "",
+            "en": ""
+        },
+        "liquidGas": {
+            "de": "",
+            "en": ""
+        },
+        "listedBuilding": {
+            "de": "",
+            "en": ""
+        },
+        "living": {
+            "de": "",
+            "en": ""
+        },
+        "livingArea": {
+            "de": "",
+            "en": ""
+        },
+        "localHeating": {
+            "de": "",
+            "en": ""
+        },
+        "location": {
+            "de": "",
+            "en": ""
+        },
+        "locationInBuilding": {
+            "de": "",
+            "en": ""
+        },
+        "longitude": {
+            "de": "",
+            "en": ""
+        },
+        "lowEnergy": {
+            "de": "",
+            "en": ""
+        },
+        "macroMap": {
+            "de": "",
+            "en": ""
+        },
+        "mainRentVAT": {
+            "de": "",
+            "en": ""
+        },
+        "maintenanceFee": {
+            "de": "",
+            "en": ""
+        },
+        "mansardRoof": {
+            "de": "",
+            "en": ""
+        },
+        "marble": {
+            "de": "",
+            "en": ""
+        },
+        "marketingType": {
+            "de": "",
+            "en": ""
+        },
+        "marketValue": {
+            "de": "",
+            "en": ""
+        },
+        "master": {
+            "de": "",
+            "en": ""
+        },
+        "maxDuration": {
+            "de": "",
+            "en": ""
+        },
+        "maxPersons": {
+            "de": "",
+            "en": ""
+        },
+        "maxRentalPeriod": {
+            "de": "",
+            "en": ""
+        },
+        "microMap": {
+            "de": "",
+            "en": ""
+        },
+        "minDuration": {
+            "de": "",
+            "en": ""
+        },
+        "minEnergieCertified": {
+            "de": "",
+            "en": ""
+        },
+        "minEnergieConstruction": {
+            "de": "",
+            "en": ""
+        },
+        "minimumPrice": {
+            "de": "",
+            "en": ""
+        },
+        "minRentalPeriod": {
+            "de": "",
+            "en": ""
+        },
+        "mobileNumber": {
+            "de": "",
+            "en": ""
+        },
+        "mode": {
+            "de": "",
+            "en": ""
+        },
+        "monthlyCostsGross": {
+            "de": "",
+            "en": ""
+        },
+        "monthlyCostsNet": {
+            "de": "",
+            "en": ""
+        },
+        "monthlyCostsVAT": {
+            "de": "",
+            "en": ""
+        },
+        "municipalityCode": {
+            "de": "",
+            "en": ""
+        },
+        "name": {
+            "de": "",
+            "en": ""
+        },
+        "negativeForwarding": {
+            "de": "",
+            "en": ""
+        },
+        "netColdRent": {
+            "de": "",
+            "en": ""
+        },
+        "netHeatingCosts": {
+            "de": "",
+            "en": ""
+        },
+        "netMainRent": {
+            "de": "",
+            "en": ""
+        },
+        "netOperatingCosts": {
+            "de": "",
+            "en": ""
+        },
+        "netRentPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "netRentPerSqmTo": {
+            "de": "",
+            "en": ""
+        },
+        "netUnitValue": {
+            "de": "",
+            "en": ""
+        },
+        "netYield": {
+            "de": "",
+            "en": ""
+        },
+        "newBuildingStandard": {
+            "de": "",
+            "en": ""
+        },
+        "nonSmoker": {
+            "de": "",
+            "en": ""
+        },
+        "north": {
+            "de": "",
+            "en": ""
+        },
+        "northeast": {
+            "de": "",
+            "en": ""
+        },
+        "northwest": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfBalconies": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfBathrooms": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfBedrooms": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfBeds": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfCommercialUnits": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfFloors": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfLivingBedrooms": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfLoggias": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfMeetingRooms": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfParkingSpaces": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfResidentialUnits": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfRooms": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfSeparateToilets": {
+            "de": "",
+            "en": ""
+        },
+        "numberOfTerraces": {
+            "de": "",
+            "en": ""
+        },
+        "officeArea": {
+            "de": "",
+            "en": ""
+        },
+        "officePractices": {
+            "de": "",
+            "en": ""
+        },
+        "officeType": {
+            "de": "",
+            "en": ""
+        },
+        "oil": {
+            "de": "",
+            "en": ""
+        },
+        "onRequest": {
+            "de": "",
+            "en": ""
+        },
+        "open": {
+            "de": "",
+            "en": ""
+        },
+        "openImmoAnid": {
+            "de": "",
+            "en": ""
+        },
+        "openImmoObjectId": {
+            "de": "",
+            "en": ""
+        },
+        "openSpace": {
+            "de": "",
+            "en": ""
+        },
+        "operatingCostsVAT": {
+            "de": "",
+            "en": ""
+        },
+        "originIdentifier": {
+            "de": "",
+            "en": ""
+        },
+        "other": {
+            "de": "",
+            "en": ""
+        },
+        "otherArea": {
+            "de": "",
+            "en": ""
+        },
+        "otherCostsNet": {
+            "de": "",
+            "en": ""
+        },
+        "otherCostsVAT": {
+            "de": "",
+            "en": ""
+        },
+        "otherEmail": {
+            "de": "",
+            "en": ""
+        },
+        "otherInformation": {
+            "de": "",
+            "en": ""
+        },
+        "otherPhoneNumber": {
+            "de": "",
+            "en": ""
+        },
+        "otherRentNet": {
+            "de": "",
+            "en": ""
+        },
+        "otherRentVAT": {
+            "de": "",
+            "en": ""
+        },
+        "otherType": {
+            "de": "",
+            "en": ""
+        },
+        "pantry": {
+            "de": "",
+            "en": ""
+        },
+        "parcel": {
+            "de": "",
+            "en": ""
+        },
+        "parking": {
+            "de": "",
+            "en": ""
+        },
+        "parkingCarport": {
+            "de": "",
+            "en": ""
+        },
+        "parkingDuplex": {
+            "de": "",
+            "en": ""
+        },
+        "parkingGarage": {
+            "de": "",
+            "en": ""
+        },
+        "parkingMultiStorey": {
+            "de": "",
+            "en": ""
+        },
+        "parkingOther": {
+            "de": "",
+            "en": ""
+        },
+        "parkingOutdoor": {
+            "de": "",
+            "en": ""
+        },
+        "parkingSpacePurchasePrice": {
+            "de": "",
+            "en": ""
+        },
+        "parkingSpaceRent": {
+            "de": "",
+            "en": ""
+        },
+        "parkingSpaceType": {
+            "de": "",
+            "en": ""
+        },
+        "parkingType": {
+            "de": "",
+            "en": ""
+        },
+        "parkingUnderground": {
+            "de": "",
+            "en": ""
+        },
+        "parquet": {
+            "de": "",
+            "en": ""
+        },
+        "partialOfficeArea": {
+            "de": "",
+            "en": ""
+        },
+        "passiveHouse": {
+            "de": "",
+            "en": ""
+        },
+        "path": {
+            "de": "",
+            "en": ""
+        },
+        "pellet": {
+            "de": "",
+            "en": ""
+        },
+        "period": {
+            "de": "",
+            "en": ""
+        },
+        "personNumber": {
+            "de": "",
+            "en": ""
+        },
+        "persons": {
+            "de": "",
+            "en": ""
+        },
+        "pets": {
+            "de": "",
+            "en": ""
+        },
+        "phone": {
+            "de": "",
+            "en": ""
+        },
+        "phoneExtension": {
+            "de": "",
+            "en": ""
+        },
+        "phoneType": {
+            "de": "",
+            "en": ""
+        },
+        "photo": {
+            "de": "",
+            "en": ""
+        },
+        "plastic": {
+            "de": "",
+            "en": ""
+        },
+        "plot": {
+            "de": "",
+            "en": ""
+        },
+        "plotArea": {
+            "de": "",
+            "en": ""
+        },
+        "plotFront": {
+            "de": "",
+            "en": ""
+        },
+        "plotType": {
+            "de": "",
+            "en": ""
+        },
+        "plusVAT": {
+            "de": "",
+            "en": ""
+        },
+        "poBox": {
+            "de": "",
+            "en": ""
+        },
+        "poBoxCity": {
+            "de": "",
+            "en": ""
+        },
+        "poBoxPostalCode": {
+            "de": "",
+            "en": ""
+        },
+        "policeCall": {
+            "de": "",
+            "en": ""
+        },
+        "position": {
+            "de": "",
+            "en": ""
+        },
+        "positiveForwarding": {
+            "de": "",
+            "en": ""
+        },
+        "postalCode": {
+            "de": "",
+            "en": ""
+        },
+        "prefabricatedHouse": {
+            "de": "",
+            "en": ""
+        },
+        "prefabricatedParts": {
+            "de": "",
+            "en": ""
+        },
+        "prices": {
+            "de": "",
+            "en": ""
+        },
+        "priceTimeRangeFrom": {
+            "de": "",
+            "en": ""
+        },
+        "priceTimeRangeTo": {
+            "de": "",
+            "en": ""
+        },
+        "priceTimeUnit": {
+            "de": "",
+            "en": ""
+        },
+        "primaryEnergySource": {
+            "de": "",
+            "en": ""
+        },
+        "privateEmail": {
+            "de": "",
+            "en": ""
+        },
+        "privatePhoneNumber": {
+            "de": "",
+            "en": ""
+        },
+        "professionalSupervisoryAuthority": {
+            "de": "",
+            "en": ""
+        },
+        "propertyCategory": {
+            "de": "",
+            "en": ""
+        },
+        "propertyDescription": {
+            "de": "",
+            "en": ""
+        },
+        "propertyManagement": {
+            "de": "",
+            "en": ""
+        },
+        "propertyText": {
+            "de": "",
+            "en": ""
+        },
+        "propertyTitle": {
+            "de": "",
+            "en": ""
+        },
+        "propertyTrusteeId": {
+            "de": "",
+            "en": ""
+        },
+        "propertyType": {
+            "de": "",
+            "en": ""
+        },
+        "propertyTypeAdditional": {
+            "de": "",
+            "en": ""
+        },
+        "provider": {
+            "de": "",
+            "en": ""
+        },
+        "providerNumber": {
+            "de": "",
+            "en": ""
+        },
+        "purchase": {
+            "de": "",
+            "en": ""
+        },
+        "purchasePrice": {
+            "de": "",
+            "en": ""
+        },
+        "purchasePriceGross": {
+            "de": "",
+            "en": ""
+        },
+        "purchasePriceNet": {
+            "de": "",
+            "en": ""
+        },
+        "purchasePricePerSqm": {
+            "de": "",
+            "en": ""
+        },
+        "purchasePriceVAT": {
+            "de": "",
+            "en": ""
+        },
+        "pyramidRoof": {
+            "de": "",
+            "en": ""
+        },
+        "quantity": {
+            "de": "",
+            "en": ""
+        },
+        "raisedFloor": {
+            "de": "",
+            "en": ""
+        },
+        "ramp": {
+            "de": "",
+            "en": ""
+        },
+        "realEstate": {
+            "de": "",
+            "en": ""
+        },
+        "rear": {
+            "de": "",
+            "en": ""
+        },
+        "referenceId": {
+            "de": "",
+            "en": ""
+        },
+        "regionalAddition": {
+            "de": "",
+            "en": ""
+        },
+        "regionId": {
+            "de": "",
+            "en": ""
+        },
+        "releasePropertyAddress": {
+            "de": "",
+            "en": ""
+        },
+        "remark": {
+            "de": "",
+            "en": ""
+        },
+        "remote": {
+            "de": "",
+            "en": ""
+        },
+        "rentableArea": {
+            "de": "",
+            "en": ""
+        },
+        "rented": {
+            "de": "",
+            "en": ""
+        },
+        "rentLease": {
+            "de": "",
+            "en": ""
+        },
+        "rentPricePerSqm": {
+            "de": "",
+            "en": ""
+        },
+        "rentSurcharges": {
+            "de": "",
+            "en": ""
+        },
+        "reservesNet": {
+            "de": "",
+            "en": ""
+        },
+        "reserveVAT": {
+            "de": "",
+            "en": ""
+        },
+        "retail": {
+            "de": "",
+            "en": ""
+        },
+        "right": {
+            "de": "",
+            "en": ""
+        },
+        "roofShape": {
+            "de": "",
+            "en": ""
+        },
+        "rooms": {
+            "de": "",
+            "en": ""
+        },
+        "roomsModifiable": {
+            "de": "",
+            "en": ""
+        },
+        "roomType": {
+            "de": "",
+            "en": ""
+        },
+        "saddleRoof": {
+            "de": "",
+            "en": ""
+        },
+        "salesArea": {
+            "de": "",
+            "en": ""
+        },
+        "salesStatus": {
+            "de": "",
+            "en": ""
+        },
+        "salutation": {
+            "de": "",
+            "en": ""
+        },
+        "sauna": {
+            "de": "",
+            "en": ""
+        },
+        "scope": {
+            "de": "",
+            "en": ""
+        },
+        "screed": {
+            "de": "",
+            "en": ""
+        },
+        "securityService": {
+            "de": "",
+            "en": ""
+        },
+        "securityTechnology": {
+            "de": "",
+            "en": ""
+        },
+        "senderSoftware": {
+            "de": "",
+            "en": ""
+        },
+        "senderVersion": {
+            "de": "",
+            "en": ""
+        },
+        "seniorFriendly": {
+            "de": "",
+            "en": ""
+        },
+        "services": {
+            "de": "",
+            "en": ""
+        },
+        "shedRoof": {
+            "de": "",
+            "en": ""
+        },
+        "shopArea": {
+            "de": "",
+            "en": ""
+        },
+        "shopping": {
+            "de": "",
+            "en": ""
+        },
+        "shower": {
+            "de": "",
+            "en": ""
+        },
+        "showHighestBid": {
+            "de": "",
+            "en": ""
+        },
+        "shutters": {
+            "de": "",
+            "en": ""
+        },
+        "siteOccupancyIndex": {
+            "de": "",
+            "en": ""
+        },
+        "socialHousing": {
+            "de": "",
+            "en": ""
+        },
+        "solar": {
+            "de": "",
+            "en": ""
+        },
+        "solid": {
+            "de": "",
+            "en": ""
+        },
+        "south": {
+            "de": "",
+            "en": ""
+        },
+        "southeast": {
+            "de": "",
+            "en": ""
+        },
+        "southwest": {
+            "de": "",
+            "en": ""
+        },
+        "spaceType": {
+            "de": "",
+            "en": ""
+        },
+        "speed": {
+            "de": "",
+            "en": ""
+        },
+        "sportDistances": {
+            "de": "",
+            "en": ""
+        },
+        "sportsFacilities": {
+            "de": "",
+            "en": ""
+        },
+        "startOfBiddingTime": {
+            "de": "",
+            "en": ""
+        },
+        "startOfOfferPhase": {
+            "de": "",
+            "en": ""
+        },
+        "state": {
+            "de": "",
+            "en": ""
+        },
+        "status": {
+            "de": "",
+            "en": ""
+        },
+        "statusFrom": {
+            "de": "",
+            "en": ""
+        },
+        "stone": {
+            "de": "",
+            "en": ""
+        },
+        "storageArea": {
+            "de": "",
+            "en": ""
+        },
+        "storageRoom": {
+            "de": "",
+            "en": ""
+        },
+        "stove": {
+            "de": "",
+            "en": ""
+        },
+        "street": {
+            "de": "",
+            "en": ""
+        },
+        "suitableForSharedFlat": {
+            "de": "",
+            "en": ""
+        },
+        "supply": {
+            "de": "",
+            "en": ""
+        },
+        "swimmingPool": {
+            "de": "",
+            "en": ""
+        },
+        "targetNetYield": {
+            "de": "",
+            "en": ""
+        },
+        "targetRentalIncome": {
+            "de": "",
+            "en": ""
+        },
+        "taxNumber": {
+            "de": "",
+            "en": ""
+        },
+        "technicalEmail": {
+            "de": "",
+            "en": ""
+        },
+        "technicalManagement": {
+            "de": "",
+            "en": ""
+        },
+        "terracotta": {
+            "de": "",
+            "en": ""
+        },
+        "threeLines": {
+            "de": "",
+            "en": ""
+        },
+        "tiles": {
+            "de": "",
+            "en": ""
+        },
+        "timestamp": {
+            "de": "",
+            "en": ""
+        },
+        "timeUnit": {
+            "de": "",
+            "en": ""
+        },
+        "title": {
+            "de": "",
+            "en": ""
+        },
+        "toDate": {
+            "de": "",
+            "en": ""
+        },
+        "totalArea": {
+            "de": "",
+            "en": ""
+        },
+        "totalCostGross": {
+            "de": "",
+            "en": ""
+        },
+        "totalCostNet": {
+            "de": "",
+            "en": ""
+        },
+        "totalCostsPerSqmFrom": {
+            "de": "",
+            "en": ""
+        },
+        "totalCostsPerSqmTo": {
+            "de": "",
+            "en": ""
+        },
+        "totalCostVAT": {
+            "de": "",
+            "en": ""
+        },
+        "totalRentGross": {
+            "de": "",
+            "en": ""
+        },
+        "totalRentNet": {
+            "de": "",
+            "en": ""
+        },
+        "totalRentVAT": {
+            "de": "",
+            "en": ""
+        },
+        "totalVAT": {
+            "de": "",
+            "en": ""
+        },
+        "tradeType": {
+            "de": "",
+            "en": ""
+        },
+        "transfer": {
+            "de": "",
+            "en": ""
+        },
+        "truncatedHipRoof": {
+            "de": "",
+            "en": ""
+        },
+        "turnkeyWithBasement": {
+            "de": "",
+            "en": ""
+        },
+        "turnkeyWithFoundation": {
+            "de": "",
+            "en": ""
+        },
+        "turnkeyWithoutFoundation": {
+            "de": "",
+            "en": ""
+        },
+        "type": {
+            "de": "",
+            "en": ""
+        },
+        "typeOfUse": {
+            "de": "",
+            "en": ""
+        },
+        "umtsReception": {
+            "de": "",
+            "en": ""
+        },
+        "undergroundParking": {
+            "de": "",
+            "en": ""
+        },
+        "unitValueTaxVAT": {
+            "de": "",
+            "en": ""
+        },
+        "urinal": {
+            "de": "",
+            "en": ""
+        },
+        "url": {
+            "de": "",
+            "en": ""
+        },
+        "usableArea": {
+            "de": "",
+            "en": ""
+        },
+        "userDefinedAnyfield": {
+            "de": "",
+            "en": ""
+        },
+        "userDefinedExtend": {
+            "de": "",
+            "en": ""
+        },
+        "userDefinedSimplefield": {
+            "de": "",
+            "en": ""
+        },
+        "validUntil": {
+            "de": "",
+            "en": ""
+        },
+        "value": {
+            "de": "",
+            "en": ""
+        },
+        "valueClass": {
+            "de": "",
+            "en": ""
+        },
+        "vatId": {
+            "de": "",
+            "en": ""
+        },
+        "vatRate": {
+            "de": "",
+            "en": ""
+        },
+        "version": {
+            "de": "",
+            "en": ""
+        },
+        "view": {
+            "de": "",
+            "en": ""
+        },
+        "viewingAppointment": {
+            "de": "",
+            "en": ""
+        },
+        "viewingAppointment2": {
+            "de": "",
+            "en": ""
+        },
+        "virtualTour": {
+            "de": "",
+            "en": ""
+        },
+        "visible": {
+            "de": "",
+            "en": ""
+        },
+        "warmRent": {
+            "de": "",
+            "en": ""
+        },
+        "waterElectric": {
+            "de": "",
+            "en": ""
+        },
+        "waterEnergy": {
+            "de": "",
+            "en": ""
+        },
+        "waz": {
+            "de": "",
+            "en": ""
+        },
+        "wellnessArea": {
+            "de": "",
+            "en": ""
+        },
+        "west": {
+            "de": "",
+            "en": ""
+        },
+        "wheelchairAccessible": {
+            "de": "",
+            "en": ""
+        },
+        "windEnergy": {
+            "de": "",
+            "en": ""
+        },
+        "window": {
+            "de": "",
+            "en": ""
+        },
+        "windowFront": {
+            "de": "",
+            "en": ""
+        },
+        "windowFrontSqm": {
+            "de": "",
+            "en": ""
+        },
+        "winterGarden": {
+            "de": "",
+            "en": ""
+        },
+        "withHotWater": {
+            "de": "",
+            "en": ""
+        },
+        "withVAT": {
+            "de": "",
+            "en": ""
+        },
+        "wood": {
+            "de": "",
+            "en": ""
+        },
+        "worth": {
+            "de": "",
+            "en": ""
+        },
+        "xTimes": {
+            "de": "",
+            "en": ""
+        },
+        "year": {
+            "de": "",
+            "en": ""
+        },
+        "yearOfConstruction": {
+            "de": "",
+            "en": ""
+        }
+    }
+}
