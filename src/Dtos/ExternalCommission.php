@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ExternalCommission
  * Courtage, die der Kunde zu zahlen hat, als Betrag in ? / % / MM, daher Textfeld
+ *
+ * @description External commission (buyer's commission) for the property
  */
 #[XmlRoot(name: 'aussen_courtage')]
 class ExternalCommission

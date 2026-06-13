@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Services
  * Welche Serviceleistungen werden angeboten? Optionen kombinierbar
+ *
+ * @description Services offered for the property or by the provider
  */
 #[XmlRoot(name: 'serviceleistungen')]
 class Services

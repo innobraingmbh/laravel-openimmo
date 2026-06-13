@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TypeOfUse
  * nutzungsart
+ *
+ * @description Type of use of the property (e.g. residential, commercial)
  */
 #[XmlRoot(name: 'nutzungsart')]
 class TypeOfUse

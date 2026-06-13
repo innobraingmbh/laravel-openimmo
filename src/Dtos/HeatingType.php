@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HeatingType
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
+ *
+ * @description Type of heating system (e.g. central heating, underfloor heating)
  */
 #[XmlRoot(name: 'heizungsart')]
 class HeatingType

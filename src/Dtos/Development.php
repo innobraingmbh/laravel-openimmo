@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Development
  * Stand der Erschließung, Optionen nicht kombinierbar
+ *
+ * @description Development/utility connection status of the plot
  */
 #[XmlRoot(name: 'erschliessung')]
 class Development

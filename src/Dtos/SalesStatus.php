@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class SalesStatus
  * Anzeige ob z.B schon verkauft, Optionen nicht kombinierbar
+ *
+ * @description Sales status of the property (e.g. available, reserved, sold)
  */
 #[XmlRoot(name: 'verkaufstatus')]
 class SalesStatus

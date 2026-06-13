@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class DevelopmentScope
  * Detailbeschreibung der Massnahmen
+ *
+ * @description Scope of development/utility connections of the plot
  */
 #[XmlRoot(name: 'erschliessung_umfang')]
 class DevelopmentScope

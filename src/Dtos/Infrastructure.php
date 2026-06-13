@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Infrastructure
+ *
+ * @description Infrastructure information of the property (distances, connections)
  */
 #[XmlRoot(name: 'infrastruktur')]
 class Infrastructure

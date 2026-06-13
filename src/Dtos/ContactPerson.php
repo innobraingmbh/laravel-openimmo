@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ContactPerson
+ *
+ * @description Contact person of the provider for the property
  */
 #[XmlRoot(name: 'kontaktperson')]
 class ContactPerson

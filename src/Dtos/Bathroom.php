@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Bathroom
  * Welche Eigenschaft besitzt das Bad, Optionen kombinierbar
+ *
+ * @description Equipment features of the bathroom
  */
 #[XmlRoot(name: 'bad')]
 class Bathroom

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Country
  * Land
+ *
+ * @description Country information (ISO country code)
  */
 #[XmlRoot(name: 'land')]
 class Country

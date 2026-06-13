@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetRentPerSqmFrom
  * Angaben bei Gewerbe Miete, UmSt. im Attribut.
+ *
+ * @description Net rent per square meter starting from a minimum value
  */
 #[XmlRoot(name: 'nettomieteprom2von')]
 class NetRentPerSqmFrom

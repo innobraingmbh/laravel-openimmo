@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MaxRentalPeriod
  * Maximalzeitraum für den die Immobilie gemietet werdenkann, Optionen nicht kombinierbar, vorrangig bei WaZ
+ *
+ * @description Maximum rental period of the property
  */
 #[XmlRoot(name: 'max_mietdauer')]
 class MaxRentalPeriod

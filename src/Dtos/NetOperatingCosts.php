@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetOperatingCosts
  * Betriebskosten eines Objektes bei Vermietun, UmSt. im Attribut
+ *
+ * @description Net operating costs (excluding VAT)
  */
 #[XmlRoot(name: 'betriebskostennetto')]
 class NetOperatingCosts

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Attachment
  * Element für Anhänge
+ *
+ * @description Single attachment (file) of the property
  */
 #[XmlRoot(name: 'anhang')]
 class Attachment

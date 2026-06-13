@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Transfer
  * Übertragungsangaben
+ *
+ * @description Data transfer metadata in the OpenImmo format
  */
 #[XmlRoot(name: 'uebertragung')]
 class Transfer

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class House
  * Objektart / Typ f. Haus
+ *
+ * @description House property with type specification
  */
 #[XmlRoot(name: 'haus')]
 class House

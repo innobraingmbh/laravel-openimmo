@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Floor
  * Welche Eigenschaft besitzt der Bodenbelag, Optionen kombinierbar
+ *
+ * @description Flooring information of the property
  */
 #[XmlRoot(name: 'boden')]
 class Floor

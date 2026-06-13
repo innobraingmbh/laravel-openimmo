@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BalconyTerraceOrientation
  * Ausrichtung der Balkone bzw. der Terrassen, Optionen kombinierbar
+ *
+ * @description Orientation of balcony or terrace
  */
 #[XmlRoot(name: 'ausricht_balkon_terrasse')]
 class BalconyTerraceOrientation

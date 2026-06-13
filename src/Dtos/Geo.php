@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Geo
+ *
+ * @description Geographic and address-based information of the property
  */
 #[XmlRoot(name: 'geo')]
 class Geo

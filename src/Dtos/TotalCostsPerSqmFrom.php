@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TotalCostsPerSqmFrom
  * Gesamtkosten bei Gewerbeobjekten Von - Bis.
+ *
+ * @description Total costs per square meter starting from a minimum value
  */
 #[XmlRoot(name: 'gesamtkostenprom2von')]
 class TotalCostsPerSqmFrom

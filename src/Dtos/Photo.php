@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Photo
  * Foto bei der Kontaktperson. Datentyp ähnlich "Anhang"
  * foto from the kontakt person of the sender
+ *
+ * @description Photo of a contact person or the property
  */
 #[XmlRoot(name: 'foto')]
 class Photo

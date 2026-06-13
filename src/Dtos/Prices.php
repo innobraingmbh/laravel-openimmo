@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Prices
+ *
+ * @description Price information of the property (purchase, rent, additional costs, commission)
  */
 #[XmlRoot(name: 'preise')]
 class Prices

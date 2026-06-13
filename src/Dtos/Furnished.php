@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Furnished
  * Wie ist die Möblierung: Voll, Teil oder keine Aussage
+ *
+ * @description Furnishing information of the property
  */
 #[XmlRoot(name: 'moebliert')]
 class Furnished

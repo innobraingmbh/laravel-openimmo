@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ApartmentBuildingInvestmentProperty
  * Objektyp / Typ f. Zins und Renditehäuser
+ *
+ * @description Apartment building as an investment property
  */
 #[XmlRoot(name: 'zinshaus_renditeobjekt')]
 class ApartmentBuildingInvestmentProperty

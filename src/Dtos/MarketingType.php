@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MarketingType
  * Vermarktungsart, Optionen kombinierbar, Kauf + Miete
+ *
+ * @description Marketing type of the property (purchase or rent)
  */
 #[XmlRoot(name: 'vermarktungsart')]
 class MarketingType

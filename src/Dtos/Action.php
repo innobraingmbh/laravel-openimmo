@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Aktion für Objekt. Wenn nicht vorhanden, dann "ADD", als neu.
  *  Change= Update der Objektdaten, Delete = Löschen des Objektes
  *  Referenz= Die Möglichkeit Objekte in Portalen als Verkauft oder Archiv zu definieren.
+ *
+ * @description Action for the data transfer (e.g. create, update, delete)
  */
 #[XmlRoot(name: 'aktion')]
 class Action

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Provider
  * Anbieterangaben
+ *
+ * @description Provider (agent or owner) of the property
  */
 #[XmlRoot(name: 'anbieter')]
 class Provider

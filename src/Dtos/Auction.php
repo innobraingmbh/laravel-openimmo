@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Auction
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
+ *
+ * @description Foreclosure auction information of the property
  */
 #[XmlRoot(name: 'versteigerung')]
 class Auction

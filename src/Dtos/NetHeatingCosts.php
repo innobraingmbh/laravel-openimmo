@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetHeatingCosts
  * Die Heizkosten einer Einheit als Nettowert. Die Umsatzsteuer optional im Attribut
+ *
+ * @description Net heating costs (excluding VAT)
  */
 #[XmlRoot(name: 'heizkostennetto')]
 class NetHeatingCosts

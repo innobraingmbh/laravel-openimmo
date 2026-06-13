@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LocationArea
  * Lage Gebiet, Optionen nicht kombinierbar
+ *
+ * @description Location area of the property (e.g. city center, peripheral area)
  */
 #[XmlRoot(name: 'lage_gebiet')]
 class LocationArea

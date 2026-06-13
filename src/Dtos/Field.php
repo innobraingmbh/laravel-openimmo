@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Field
+ *
+ * @description Single data field in the OpenImmo format
  */
 #[XmlRoot(name: 'feld')]
 class Field

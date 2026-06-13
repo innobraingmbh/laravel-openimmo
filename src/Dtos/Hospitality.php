@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Hospitality
  * Objektart / Typ f. Gastgewerbe
+ *
+ * @description Commercial property of type hospitality or accommodation
  */
 #[XmlRoot(name: 'gastgewerbe')]
 class Hospitality

@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Distances
  * Welche Distanz zu dem ausgewählten Ziel besteht (Angabe in km),
  *  Optionen nicht kombinierbar, Distanzelement ist mehrfach erfassbar
+ *
+ * @description Distance information to important facilities
  */
 #[XmlRoot(name: 'distanzen')]
 class Distances

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Attachments
+ *
+ * @description List of all attachments of the property
  */
 #[XmlRoot(name: 'anhaenge')]
 class Attachments

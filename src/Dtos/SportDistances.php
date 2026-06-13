@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class SportDistances
  * Welche Distanz zu dem ausgewählen Sport-/Freizeitziel besteht(Angabe in km),
  *  Optionen nicht kombinierbar, Distanzelement ist mehrfach erfassbar
+ *
+ * @description Distances to sports facilities
  */
 #[XmlRoot(name: 'distanzen_sport')]
 class SportDistances

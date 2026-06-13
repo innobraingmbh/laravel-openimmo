@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class OpenImmo
  * Dokument Element
  * Root Element
+ *
+ * @description Root element of the OpenImmo data format
  */
 #[XmlRoot(name: 'openimmo')]
 class OpenImmo

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class PropertyManagement
+ *
+ * @description Property management information of the real estate
  */
 #[XmlRoot(name: 'verwaltung_objekt')]
 class PropertyManagement

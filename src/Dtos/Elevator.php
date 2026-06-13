@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Elevator
  * Welche Art von Fahrstuhl, Aufzug, Lift - Mehrfachnennung möglich
+ *
+ * @description Elevator or lift information of the property
  */
 #[XmlRoot(name: 'fahrstuhl')]
 class Elevator

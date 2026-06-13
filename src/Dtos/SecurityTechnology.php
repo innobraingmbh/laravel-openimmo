@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class SecurityTechnology
  * Welche Sicherheitstechnik ist geboten, Optionen kombinierbar
+ *
+ * @description Security technology equipment of the property
  */
 #[XmlRoot(name: 'sicherheitstechnik')]
 class SecurityTechnology

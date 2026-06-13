@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HeatingSystem
  * Welche Befeuerungsarten sind vorhanden, Optionen kombinierbar
+ *
+ * @description Heating fuel type of the heating system (energy source)
  */
 #[XmlRoot(name: 'befeuerung')]
 class HeatingSystem

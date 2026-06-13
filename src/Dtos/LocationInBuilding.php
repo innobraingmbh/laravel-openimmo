@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LocationInBuilding
  * Angabe über die Lage der Immobilie im Gesamtgebäude, Optionen kombinierbar
+ *
+ * @description Position of the unit within the building (e.g. left, right, center)
  */
 #[XmlRoot(name: 'lage_im_bau')]
 class LocationInBuilding

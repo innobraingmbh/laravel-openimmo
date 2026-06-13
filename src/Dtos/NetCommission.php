@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetCommission
  * Wenn unterschiedliche Provisionen anfallen, dann hier Netto und UmSt. einzeln
+ *
+ * @description Net commission (excluding VAT)
  */
 #[XmlRoot(name: 'provisionnetto')]
 class NetCommission

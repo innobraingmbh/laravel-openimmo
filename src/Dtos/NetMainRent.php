@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class NetMainRent
+ *
+ * @description Net main rent (excluding VAT)
  */
 #[XmlRoot(name: 'hauptmietzinsnetto')]
 class NetMainRent

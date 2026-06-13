@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Condition
  * Zustand des Objektes, Optionen nicht kombinierbar
+ *
+ * @description Condition description of the property
  */
 #[XmlRoot(name: 'zustand')]
 class Condition

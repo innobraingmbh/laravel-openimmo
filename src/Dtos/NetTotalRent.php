@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetTotalRent
  * Gesamtsumme der Mietkosten, UmSt. im Attribut.
+ *
+ * @description Net total rent (excluding VAT)
  */
 #[XmlRoot(name: 'summemietenetto')]
 class NetTotalRent

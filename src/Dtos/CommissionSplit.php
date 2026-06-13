@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class CommissionSplit
  * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
+ *
+ * @description Split of the broker commission between buyer and seller
  */
 #[XmlRoot(name: 'provision_teilen')]
 class CommissionSplit

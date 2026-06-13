@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class EnergyPerformanceCertificate
  * Energiepass/Ausweis ab 7/2008 vorgeschrieben
+ *
+ * @description Energy performance certificate of the property
  */
 #[XmlRoot(name: 'energiepass')]
 class EnergyPerformanceCertificate

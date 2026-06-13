@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HallsStorageProduction
  * Objektart / Typ f. Hallen/Lager/Produktion
+ *
+ * @description Commercial property of type hall, storage or production
  */
 #[XmlRoot(name: 'hallen_lager_prod')]
 class HallsStorageProduction

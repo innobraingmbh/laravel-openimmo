@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetReserves
  * Vorhanden Rücklagen bei einem Kauf Objekt, UmSt. im Attribut.
+ *
+ * @description Net reserves (excluding VAT)
  */
 #[XmlRoot(name: 'ruecklagenetto')]
 class NetReserves

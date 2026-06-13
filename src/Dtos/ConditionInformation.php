@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConditionInformation
+ *
+ * @description Condition information of the property (year of construction, modernization, energy certificate)
  */
 #[XmlRoot(name: 'zustand_angaben')]
 class ConditionInformation

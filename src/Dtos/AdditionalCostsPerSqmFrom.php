@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AdditionalCostsPerSqmFrom
  * Angaben bei Gewerbe Miete,UmSt. im Attribut.
+ *
+ * @description Additional costs per square meter starting from a given value
  */
 #[XmlRoot(name: 'nebenkostenprom2von')]
 class AdditionalCostsPerSqmFrom

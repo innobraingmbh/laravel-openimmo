@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class RoofShape
+ *
+ * @description Roof shape of the building
  */
 #[XmlRoot(name: 'dachform')]
 class RoofShape

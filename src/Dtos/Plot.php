@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Plot
  * Objektart / Typ f. Grundstücke
+ *
+ * @description Plot property with type specification
  */
 #[XmlRoot(name: 'grundstueck')]
 class Plot

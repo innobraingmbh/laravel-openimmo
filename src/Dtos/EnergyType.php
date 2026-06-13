@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class EnergyType
+ *
+ * @description Energy efficiency type of the property (e.g. low-energy, passive house)
  */
 #[XmlRoot(name: 'energietyp')]
 class EnergyType

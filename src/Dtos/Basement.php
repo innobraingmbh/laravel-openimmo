@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Basement
  * Ist das Objekt unterkellert? Optionen nicht kombinierbar
+ *
+ * @description Basement or cellar information of the property
  */
 #[XmlRoot(name: 'unterkellert')]
 class Basement

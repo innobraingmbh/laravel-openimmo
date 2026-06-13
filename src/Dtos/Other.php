@@ -16,6 +16,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Objekte befinden sich jetzt unter Element parken.
  * Aus kompatibilitätegründen bleiben die Attribute NOCH! erhalten.
  * In nachfolgenden Versionen wird die Unterstützung an dieser Stelle eingestellt.
+ *
+ * @description Other property type
  */
 #[XmlRoot(name: 'sonstige')]
 class Other

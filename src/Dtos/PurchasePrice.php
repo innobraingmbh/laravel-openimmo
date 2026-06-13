@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PurchasePrice
  * Gesamt- (Angebots-)Kaufpreis der Immobilie. Wenn "Auf Anfrage" dann Wert = 0 und Attribut auf TRUE
+ *
+ * @description Purchase price of the property
  */
 #[XmlRoot(name: 'kaufpreis')]
 class PurchasePrice

@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BiddingProcess
  * Angaben zum Bieterverfahren
+ *
+ * @description Bidding process information for the property
  */
 #[XmlRoot(name: 'bieterverfahren')]
 class BiddingProcess

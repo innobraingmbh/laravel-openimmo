@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Retail
  * Objektart / Typ f. Handel
+ *
+ * @description Commercial property of type retail
  */
 #[XmlRoot(name: 'einzelhandel')]
 class Retail

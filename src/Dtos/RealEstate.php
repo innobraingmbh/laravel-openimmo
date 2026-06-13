@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class RealEstate
  * Angaben einer einzelnen Immobile
+ *
+ * @description Single real estate property with all its data
  */
 #[XmlRoot(name: 'immobilie')]
 class RealEstate

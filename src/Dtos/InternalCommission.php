@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class InternalCommission
  * Maklercourtage, bei Vermittlungs- bzw. Nachweisgeschäften als Betrag in ? / % / MM, daher Textfeld
+ *
+ * @description Internal commission (seller's commission) for the property
  */
 #[XmlRoot(name: 'innen_courtage')]
 class InternalCommission

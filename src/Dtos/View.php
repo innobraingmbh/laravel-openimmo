@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class View
  * Welcher Ausblick ist vorhanden, Optionen nicht kombinierbar
+ *
+ * @description View information of the property (e.g. mountain view, lake view)
  */
 #[XmlRoot(name: 'ausblick')]
 class View

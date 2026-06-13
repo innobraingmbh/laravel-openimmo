@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConstructionMethod
+ *
+ * @description Construction method of the property
  */
 #[XmlRoot(name: 'bauweise')]
 class ConstructionMethod

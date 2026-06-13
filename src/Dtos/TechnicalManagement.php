@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class TechnicalManagement
+ *
+ * @description Technical management information of the data transfer
  */
 #[XmlRoot(name: 'verwaltung_techn')]
 class TechnicalManagement

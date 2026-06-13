@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetOtherRent
  * Ergänzenden Mietkosten, UmSt. im Attribut.
+ *
+ * @description Other net rent (excluding VAT)
  */
 #[XmlRoot(name: 'sonstigemietenetto')]
 class NetOtherRent

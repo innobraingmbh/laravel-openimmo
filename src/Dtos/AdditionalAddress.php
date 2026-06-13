@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class AdditionalAddress
+ *
+ * @description Additional address of a contact person or provider
  */
 #[XmlRoot(name: 'weitere_adresse')]
 class AdditionalAddress

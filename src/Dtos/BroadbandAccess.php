@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BroadbandAccess
  * Informationen über die Breitbandmöglichkeiten.
+ *
+ * @description Broadband internet access details of the property
  */
 #[XmlRoot(name: 'breitband_zugang')]
 class BroadbandAccess

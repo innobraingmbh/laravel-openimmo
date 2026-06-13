@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Kitchen
  * Welche Eigenschaften besitzt die Küche, Optionen kombinierbar
+ *
+ * @description Kitchen equipment features of the property
  */
 #[XmlRoot(name: 'kueche')]
 class Kitchen

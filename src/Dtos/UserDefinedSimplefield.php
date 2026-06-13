@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class UserDefinedSimplefield
  * Benutzerdefinierte Angaben
+ *
+ * @description User-defined simple free field
  */
 #[XmlRoot(name: 'user_defined_simplefield')]
 class UserDefinedSimplefield

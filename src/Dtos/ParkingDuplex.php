@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ParkingDuplex
+ *
+ * @description Parking space of type duplex parking system
  */
 #[XmlRoot(name: 'stp_duplex')]
 class ParkingDuplex

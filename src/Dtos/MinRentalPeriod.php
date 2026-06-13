@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MinRentalPeriod
  * Mindestzeitraum für den die Immobilie gemietet werden muss, Optionen nicht kombinierbar, vorrangig bei WaZ
+ *
+ * @description Minimum rental period of the property
  */
 #[XmlRoot(name: 'min_mietdauer')]
 class MinRentalPeriod

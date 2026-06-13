@@ -16,6 +16,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Das Eltern Objekte hat in "gruppen_kennung" die gleiche ID wie "master". Anwendung z.b. in Neubau Projekten.
  * Damit die Anzeige des Master Objektes gesteuert werden kann, wird im Master ein Flag
  *  visible eingesetzt. Das Attribut ist dann zwingend anzugeben
+ *
+ * @description Master data of the OpenImmo data transfer
  */
 #[XmlRoot(name: 'master')]
 class Master

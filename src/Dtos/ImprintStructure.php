@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ImprintStructure
  * Ergänzung ($V120)
+ *
+ * @description Imprint information of the provider
  */
 #[XmlRoot(name: 'impressum_strukt')]
 class ImprintStructure

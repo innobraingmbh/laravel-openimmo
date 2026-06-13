@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class FreeTexts
+ *
+ * @description Free-text descriptions of the property
  */
 #[XmlRoot(name: 'freitexte')]
 class FreeTexts

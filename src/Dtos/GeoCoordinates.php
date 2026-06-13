@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class GeoCoordinates
  * Geokoordinaten der Immobilie, Pflichtfeld, alternativ mit Ort, PLZ
+ *
+ * @description GPS coordinates of the property
  */
 #[XmlRoot(name: 'geokoordinaten')]
 class GeoCoordinates

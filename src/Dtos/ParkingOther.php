@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ParkingOther
+ *
+ * @description Other parking space type
  */
 #[XmlRoot(name: 'stp_sonstige')]
 class ParkingOther

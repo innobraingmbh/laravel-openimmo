@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Equipment
+ *
+ * @description Equipment and features of the property
  */
 #[XmlRoot(name: 'ausstattung')]
 class Equipment

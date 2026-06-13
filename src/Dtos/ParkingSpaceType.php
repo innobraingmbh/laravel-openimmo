@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ParkingSpaceType
  * Welche Stellplatzarten sind vorhanden, Optionen kombinierbar, als einfache Alternative zu den stp...Elementen
+ *
+ * @description Type of parking space
  */
 #[XmlRoot(name: 'stellplatzart')]
 class ParkingSpaceType

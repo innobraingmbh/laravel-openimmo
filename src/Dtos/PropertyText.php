@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class PropertyText
  * Beschreibung in anderer Sprache. "lang" Attribut muss dann vorhanden sein. W3- Language Code
  * Description in other Languages
+ *
+ * @description Single free text for the property with language and type specification
  */
 #[XmlRoot(name: 'objekt_text')]
 class PropertyText

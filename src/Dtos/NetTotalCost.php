@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetTotalCost
  * Die Summe alle Nebenkosten und Mietzinse bei Miete, UmSt. im Attribut.
+ *
+ * @description Net total cost burden (excluding VAT)
  */
 #[XmlRoot(name: 'gesamtbelastungnetto')]
 class NetTotalCost

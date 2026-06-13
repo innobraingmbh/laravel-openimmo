@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Currency
  * Währung
+ *
+ * @description Currency for price values
  */
 #[XmlRoot(name: 'waehrung')]
 class Currency

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PropertyType
  * Objektarten
+ *
+ * @description Property type with sub-type specification
  */
 #[XmlRoot(name: 'objektart')]
 class PropertyType

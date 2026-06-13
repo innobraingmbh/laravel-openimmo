@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AgricultureAndForestry
  * Objektart / Typ f. Land-/Forstwirtschaft
+ *
+ * @description Property type for agricultural and forestry real estate
  */
 #[XmlRoot(name: 'land_und_forstwirtschaft')]
 class AgricultureAndForestry

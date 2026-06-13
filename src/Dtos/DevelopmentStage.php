@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class DevelopmentStage
+ *
+ * @description Development stage or fit-out level of the building
  */
 #[XmlRoot(name: 'ausbaustufe')]
 class DevelopmentStage

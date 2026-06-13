@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Areas
+ *
+ * @description Area measurements of the property
  */
 #[XmlRoot(name: 'flaechen')]
 class Areas

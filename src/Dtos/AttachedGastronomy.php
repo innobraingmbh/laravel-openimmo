@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AttachedGastronomy
  * Welcher Art ist die angeschlossene Gastronomie, Optionen kombinierbar
+ *
+ * @description Attached gastronomy (e.g. restaurant, bar)
  */
 #[XmlRoot(name: 'angeschl_gastronomie')]
 class AttachedGastronomy

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetOtherCosts
  * Anganen bei Miet-Objekten, UmSt. im Attribut.
+ *
+ * @description Other net costs (excluding VAT)
  */
 #[XmlRoot(name: 'sonstigekostennetto')]
 class NetOtherCosts

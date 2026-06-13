@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Check
  * Angabe von Daten für die Prüfung auf ein Update
+ *
+ * @description Check information in the data transfer process
  */
 #[XmlRoot(name: 'check')]
 class Check

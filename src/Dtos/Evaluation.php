@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Evaluation
  * Container für detailierte Bewertungs Parmater
+ *
+ * @description Evaluation and valuation information of the property
  */
 #[XmlRoot(name: 'bewertung')]
 class Evaluation

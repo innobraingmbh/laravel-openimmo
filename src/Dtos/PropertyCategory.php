@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class PropertyCategory
+ *
+ * @description Property category with marketing type and property type
  */
 #[XmlRoot(name: 'objektkategorie')]
 class PropertyCategory

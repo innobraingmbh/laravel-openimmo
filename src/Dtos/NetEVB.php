@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetEVB
  * Erhaltungs- und Verbesserungsbeitrag. Ähnlich Instanthaltungsrücklage, UmSt. im Attribut.
+ *
+ * @description Net unit value assessment (EVB)
  */
 #[XmlRoot(name: 'evbnetto')]
 class NetEVB

@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TargetRentalIncome
  * Mieteinnahmen pro Periode, Normal-/Solleinnahmen (Ohne Periode = JAHR)
+ *
+ * @description Target rental income (expected rental income) of the property
  */
 #[XmlRoot(name: 'mieteinnahmen_soll')]
 class TargetRentalIncome

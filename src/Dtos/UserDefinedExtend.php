@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedExtend
+ *
+ * @description User-defined extension of the OpenImmo data
  */
 #[XmlRoot(name: 'user_defined_extend')]
 class UserDefinedExtend

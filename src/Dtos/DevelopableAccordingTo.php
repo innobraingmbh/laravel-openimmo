@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class DevelopableAccordingTo
  * Bebaubar nach Bebauungsrichtlinien, Optionen nicht kombinierbar
+ *
+ * @description Developability according to building law (e.g. BauGB, BauNVO)
  */
 #[XmlRoot(name: 'bebaubar_nach')]
 class DevelopableAccordingTo

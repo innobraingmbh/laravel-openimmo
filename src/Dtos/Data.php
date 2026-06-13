@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Data
  * Anhangdaten
+ *
+ * @description General data container in the OpenImmo format
  */
 #[XmlRoot(name: 'daten')]
 class Data

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Rooms
  * Objekart / Typ f. Zimmer
+ *
+ * @description Room count and room information of the property
  */
 #[XmlRoot(name: 'zimmer')]
 class Rooms

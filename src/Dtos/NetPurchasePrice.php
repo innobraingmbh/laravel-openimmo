@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetPurchasePrice
  * Ausgewiesene Kaufpreis Netto, Optional mit Umst im Attribut. Speziell für Gewerbe
+ *
+ * @description Net purchase price (excluding VAT)
  */
 #[XmlRoot(name: 'kaufpreisnetto')]
 class NetPurchasePrice

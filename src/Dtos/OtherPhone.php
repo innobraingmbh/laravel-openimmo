@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class OtherPhone
+ *
+ * @description Additional phone number of a contact person
  */
 #[XmlRoot(name: 'tel_sonstige')]
 class OtherPhone
