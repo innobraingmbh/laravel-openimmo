@@ -32,6 +32,8 @@ class MinRentalPeriod
          * optional
          *
          * @see MIN_DURATION_* constants
+         *
+         * @description Minimum rental duration
          */
         #[Type('string')]
         #[XmlAttribute]

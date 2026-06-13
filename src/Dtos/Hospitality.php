@@ -45,6 +45,8 @@ class Hospitality
          * optional
          *
          * @see HOSPITALITY_TYPE_* constants
+         *
+         * @description Type of hospitality or accommodation property
          */
         #[Type('string')]
         #[XmlAttribute]

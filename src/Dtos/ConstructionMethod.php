@@ -18,17 +18,29 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ConstructionMethod
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Solid (masonry) construction method
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MASSIV')]
         protected ?bool $solid = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Prefabricated parts construction method
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGTEILE')]
         protected ?bool $prefabricatedParts = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Wood as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]

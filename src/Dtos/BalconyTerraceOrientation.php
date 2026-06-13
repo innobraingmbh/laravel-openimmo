@@ -19,42 +19,74 @@ use JMS\Serializer\Annotation\XmlRoot;
 class BalconyTerraceOrientation
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description North orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORD')]
         protected ?bool $north = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description East orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OST')]
         protected ?bool $east = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description South orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUED')]
         protected ?bool $south = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description West orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WEST')]
         protected ?bool $west = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Northeast orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDOST')]
         protected ?bool $northeast = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Northwest orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDWEST')]
         protected ?bool $northwest = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Southeast orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDOST')]
         protected ?bool $southeast = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Southwest orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDWEST')]

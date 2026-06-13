@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetTotalCost
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the total cost burden
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtbelastungust')]

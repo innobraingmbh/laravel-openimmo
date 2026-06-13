@@ -21,19 +21,23 @@ use JMS\Serializer\Annotation\XmlRoot;
 class OpenImmo
 {
     public function __construct(
+        /** @description Data transfer metadata */
         #[Type(Transfer::class)]
         #[SerializedName('uebertragung')]
         protected ?Transfer $transfer = null,
+        /** @description Provider (agent or owner) of the property */
         #[XmlList(entry: 'anbieter', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Provider>')]
         #[SkipWhenEmpty]
         #[SerializedName('anbieter')]
         protected array $provider = [],
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]

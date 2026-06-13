@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetHeatingCosts
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the heating costs
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('heizkostenust')]

@@ -19,25 +19,31 @@ use JMS\Serializer\Annotation\XmlRoot;
 class PropertyCategory
 {
     public function __construct(
+        /** @description Type of use of the property */
         #[Type(TypeOfUse::class)]
         #[SerializedName('nutzungsart')]
         protected ?TypeOfUse $typeOfUse = null,
+        /** @description Marketing type of the property (purchase or rent) */
         #[Type(MarketingType::class)]
         #[SerializedName('vermarktungsart')]
         protected ?MarketingType $marketingType = null,
+        /** @description Property type (e.g. apartment, house, plot, commercial) */
         #[Type(PropertyType::class)]
         #[SerializedName('objektart')]
         protected ?PropertyType $propertyType = null,
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

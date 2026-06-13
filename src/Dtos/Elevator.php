@@ -19,12 +19,20 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Elevator
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Number of persons
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PERSONEN')]
         protected ?bool $persons = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Encumbrances on the property (e.g. mortgages)
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LASTEN')]

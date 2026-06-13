@@ -19,22 +19,38 @@ use JMS\Serializer\Annotation\XmlRoot;
 class MarketingType
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Purchase property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAUF')]
         protected bool $purchase = false,
-        /** required */
+        /**
+         * required
+         *
+         * @description Rent or lease value
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MIETE_PACHT')]
         protected bool $rentLease = false,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Leasehold amount of the property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERBPACHT')]
         protected ?bool $leasehold = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Leasing of the property possible
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LEASING')]

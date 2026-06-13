@@ -38,6 +38,8 @@ class Transfer
          * required
          *
          * @see TYPE_* constants
+         *
+         * @description Type or kind
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -47,6 +49,8 @@ class Transfer
          * required
          *
          * @see SCOPE_* constants
+         *
+         * @description Scope or range
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -56,37 +60,63 @@ class Transfer
          * optional
          *
          * @see MODE_* constants
+         *
+         * @description Mode of the data transfer
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('modus')]
         protected string $mode = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Version of the OpenImmo format or software
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('version')]
         protected string $version = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Software of the sending system
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sendersoftware')]
         protected string $senderSoftware = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Version of the sending system
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('senderversion')]
         protected string $senderVersion = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Technical email address of the system
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('techn_email')]
         protected ?string $technicalEmail = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Region ID of the property
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('regi_id')]
         protected ?string $regionId = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Timestamp of the data transfer
+         */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[XmlAttribute]
         #[SerializedName('timestamp')]

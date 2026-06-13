@@ -19,19 +19,23 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Field
 {
     public function __construct(
+        /** @description Last name of the contact person */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('name')]
         protected string $name = '',
+        /** @description Value of the field */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('wert')]
         protected string $value = '',
+        /** @description Type or kind */
         #[XmlList(entry: 'typ', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
         #[SerializedName('typ')]
         protected array $type = [],
+        /** @description Mode of the data transfer */
         #[XmlList(entry: 'modus', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]

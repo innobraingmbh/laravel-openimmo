@@ -32,6 +32,8 @@ class MaxRentalPeriod
          * optional
          *
          * @see MAX_DURATION_* constants
+         *
+         * @description Maximum rental duration
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -18,12 +18,20 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ParkingGarage
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Rental price of the parking space
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzmiete')]
         protected ?float $parkingSpaceRent = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Purchase price of the parking space
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzkaufpreis')]
@@ -32,6 +40,8 @@ class ParkingGarage
          * optional
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
+         *
+         * @description Quantity or count
          */
         #[Type('int')]
         #[XmlAttribute]

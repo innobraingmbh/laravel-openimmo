@@ -36,12 +36,18 @@ class ParkingOther
          * optional
          *
          * @see PLACE_TYPE_* constants
+         *
+         * @description Space type (e.g. office, storage, retail)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('platzart')]
         protected string $spaceType = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Remark or note
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

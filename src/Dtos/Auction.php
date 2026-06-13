@@ -19,21 +19,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Auction
 {
     public function __construct(
+        /** @description Forced sale or distressed sale */
         #[Type('bool')]
         #[SerializedName('zwangsversteigerung')]
         protected ?bool $forcedSale = null,
+        /** @description File number of the foreclosure auction */
         #[Type('string')]
         #[SerializedName('aktenzeichen')]
         protected ?string $fileNumber = null,
+        /** @description Date of the forced sale */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $forcedSaleDate = null,
+        /** @description Additional date */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $additionalDate = null,
+        /** @description Responsible district court */
         #[Type('string')]
         #[SerializedName('amtsgericht')]
         protected ?string $districtCourt = null,
+        /** @description Market value of the property */
         #[Type('float')]
         #[SerializedName('verkehrswert')]
         protected ?float $marketValue = null

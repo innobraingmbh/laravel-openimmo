@@ -41,6 +41,8 @@ class Retail
          * optional
          *
          * @see TRADE_TYPE_* constants
+         *
+         * @description Trade type (e.g. retail, wholesale)
          */
         #[Type('string')]
         #[XmlAttribute]

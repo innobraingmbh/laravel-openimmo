@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetCommission
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the broker commission
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('provisionust')]

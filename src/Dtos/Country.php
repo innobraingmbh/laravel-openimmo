@@ -487,6 +487,8 @@ class Country
          * optional
          *
          * @see ISO_COUNTRY_* constants
+         *
+         * @description ISO country code (e.g. DEU, AUT, CHE)
          */
         #[Type('string')]
         #[XmlAttribute]

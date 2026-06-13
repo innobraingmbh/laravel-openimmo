@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetMonthlyCosts
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the monthly total costs
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('monatlichekostenust')]

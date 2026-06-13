@@ -35,6 +35,8 @@ class Other
          * optional
          *
          * @see OTHER_TYPE_* constants
+         *
+         * @description Type of the other property
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -20,6 +20,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Evaluation
 {
     public function __construct(
+        /** @description Data field */
         #[XmlList(entry: 'feld', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Field>')]
         #[SkipWhenEmpty]

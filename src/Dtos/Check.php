@@ -31,6 +31,8 @@ class Check
          * required
          *
          * @see CONTACT_TYPE_* constants
+         *
+         * @description MIME content type of the attachment
          */
         #[Type('string')]
         #[XmlAttribute]

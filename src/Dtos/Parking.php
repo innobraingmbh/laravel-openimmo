@@ -43,6 +43,8 @@ class Parking
          * optional
          *
          * @see PARKING_TYPE_* constants
+         *
+         * @description Type of the parking area
          */
         #[Type('string')]
         #[XmlAttribute]

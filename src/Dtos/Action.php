@@ -31,6 +31,8 @@ class Action
          * optional
          *
          * @see ACTION_TYPE_* constants
+         *
+         * @description Type of the data transfer action
          */
         #[Type('string')]
         #[XmlAttribute]

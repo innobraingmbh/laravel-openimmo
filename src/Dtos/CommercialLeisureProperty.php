@@ -29,6 +29,8 @@ class CommercialLeisureProperty
          * optional
          *
          * @see LEISURE_TYPE_* constants
+         *
+         * @description Leisure property type
          */
         #[Type('string')]
         #[XmlAttribute]

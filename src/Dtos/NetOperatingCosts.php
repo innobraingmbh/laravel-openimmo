@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetOperatingCosts
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the operating costs
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('betriebskostenust')]

@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetPurchasePrice
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the purchase price
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('kaufpreisust')]

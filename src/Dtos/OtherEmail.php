@@ -31,12 +31,18 @@ class OtherEmail
          * optional
          *
          * @see EMAIL_TYPE_* constants
+         *
+         * @description Type of email address
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('emailart')]
         protected string $emailType = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Remark or note
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

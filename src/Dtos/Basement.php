@@ -29,6 +29,8 @@ class Basement
          * optional
          *
          * @see CELLAR_* constants
+         *
+         * @description Basement or cellar information
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -31,6 +31,8 @@ class PriceTimeUnit
          * optional
          *
          * @see TIME_UNIT_* constants
+         *
+         * @description Time unit (e.g. day, week, month)
          */
         #[Type('string')]
         #[XmlAttribute]

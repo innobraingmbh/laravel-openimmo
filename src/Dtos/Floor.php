@@ -19,72 +19,128 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Floor
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Tiles as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLIESEN')]
         protected ?bool $tiles = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Stone flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('STEIN')]
         protected ?bool $stone = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Carpet as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TEPPICH')]
         protected ?bool $carpet = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Parquet as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKETT')]
         protected ?bool $parquet = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Finished parquet as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGPARKETT')]
         protected ?bool $finishedParquet = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Laminate as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LAMINAT')]
         protected ?bool $laminate = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Floorboards as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DIELEN')]
         protected ?bool $floorboards = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Plastic flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KUNSTSTOFF')]
         protected ?bool $plastic = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Screed as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ESTRICH')]
         protected ?bool $screed = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Raised floor available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DOPPELBODEN')]
         protected ?bool $raisedFloor = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Linoleum as flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINOLEUM')]
         protected ?bool $linoleum = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Marble flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MARMOR')]
         protected ?bool $marble = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Terracotta flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TERRAKOTTA')]
         protected ?bool $terracotta = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Granite flooring
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GRANIT')]

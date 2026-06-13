@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetEVB
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT on the unit value tax
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('evbust')]

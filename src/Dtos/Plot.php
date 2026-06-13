@@ -41,6 +41,8 @@ class Plot
          * optional
          *
          * @see PROPERTY_TYPE_* constants
+         *
+         * @description Type of the plot property
          */
         #[Type('string')]
         #[XmlAttribute]

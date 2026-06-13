@@ -49,6 +49,8 @@ class ApartmentBuildingInvestmentProperty
          * optional
          *
          * @see INTEREST_TYPE_* constants
+         *
+         * @description Type of interested party (e.g. buyer, tenant)
          */
         #[Type('string')]
         #[XmlAttribute]

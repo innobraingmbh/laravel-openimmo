@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetOtherCosts
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of other costs
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('sonstigekostenust')]

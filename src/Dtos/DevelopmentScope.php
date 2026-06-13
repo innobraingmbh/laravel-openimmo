@@ -31,6 +31,8 @@ class DevelopmentScope
          * optional
          *
          * @see DEVELOPMENT_ATTRIBUTE_* constants
+         *
+         * @description XML attribute for the development status value
          */
         #[Type('string')]
         #[XmlAttribute]

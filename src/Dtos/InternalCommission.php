@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class InternalCommission
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Price including VAT
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]

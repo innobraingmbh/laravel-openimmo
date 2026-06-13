@@ -18,27 +18,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 class DevelopmentStage
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Prefabricated house
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAUSATZHAUS')]
         protected ?bool $prefabricatedHouse = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description House is expandable
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('AUSBAUHAUS')]
         protected ?bool $expandableHouse = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Turnkey with basement
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
         protected ?bool $turnkeyWithBasement = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Turnkey without foundation slab
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
         protected ?bool $turnkeyWithoutFoundation = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Turnkey with foundation slab
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]

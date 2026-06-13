@@ -60,6 +60,8 @@ class Attachment
          * required
          *
          * @see LOCATION_* constants
+         *
+         * @description Location description of the property
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -69,21 +71,27 @@ class Attachment
          * optional
          *
          * @see GROUP_* constants
+         *
+         * @description Group or category
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]
         protected string $group = '',
+        /** @description Title of the attachment */
         #[Type('string')]
         #[SerializedName('anhangtitel')]
         protected ?string $attachmentTitle = null,
+        /** @description File format of the attachment */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('format')]
         protected string $format = '',
+        /** @description Check information */
         #[Type(Check::class)]
         #[SerializedName('check')]
         protected ?Check $check = null,
+        /** @description Data container */
         #[Type(Data::class)]
         #[SerializedName('daten')]
         protected ?Data $data = null

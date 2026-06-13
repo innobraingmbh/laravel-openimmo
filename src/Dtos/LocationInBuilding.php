@@ -19,22 +19,38 @@ use JMS\Serializer\Annotation\XmlRoot;
 class LocationInBuilding
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Left position in the building
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINKS')]
         protected ?bool $left = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Right position in the building
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('RECHTS')]
         protected ?bool $right = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Front orientation or facade
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('VORNE')]
         protected ?bool $front = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Rear orientation
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HINTEN')]

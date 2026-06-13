@@ -55,6 +55,8 @@ class Condition
          * optional
          *
          * @see CONDITION_TYPE_* constants
+         *
+         * @description Condition type of the property
          */
         #[Type('string')]
         #[XmlAttribute]

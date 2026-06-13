@@ -19,21 +19,25 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Attachments
 {
     public function __construct(
+        /** @description Attachment (file) of the property */
         #[XmlList(entry: 'anhang', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Attachment>')]
         #[SkipWhenEmpty]
         #[SerializedName('anhang')]
         protected array $attachment = [],
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

@@ -23,7 +23,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Master
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Visibility of the listing or element
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('visible')]

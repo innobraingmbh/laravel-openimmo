@@ -25,6 +25,8 @@ class Rooms
          * optional
          *
          * @see ROOM_TYPE_* constants
+         *
+         * @description Room type
          */
         #[Type('string')]
         #[XmlAttribute]

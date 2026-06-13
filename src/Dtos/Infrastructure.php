@@ -19,32 +19,39 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Infrastructure
 {
     public function __construct(
+        /** @description Utility supply connections available */
         #[Type('bool')]
         #[SerializedName('zulieferung')]
         protected ?bool $supply = null,
+        /** @description View or outlook of the property */
         #[Type(View::class)]
         #[SerializedName('ausblick')]
         protected ?View $view = null,
+        /** @description Distance information to relevant facilities */
         #[XmlList(entry: 'distanzen', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Distances>')]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen')]
         protected array $distances = [],
+        /** @description Distances to sports facilities */
         #[XmlList(entry: 'distanzen_sport', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\SportDistances>')]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen_sport')]
         protected array $sportDistances = [],
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

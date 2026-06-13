@@ -35,12 +35,18 @@ class OtherPhone
          * optional
          *
          * @see PHONE_TYPE_* constants
+         *
+         * @description Type of phone number
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('telefonart')]
         protected string $phoneType = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Remark or note
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

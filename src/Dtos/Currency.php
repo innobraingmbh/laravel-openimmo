@@ -387,6 +387,8 @@ class Currency
          * optional
          *
          * @see ISO_CURRENCY_* constants
+         *
+         * @description ISO currency code (e.g. EUR, CHF)
          */
         #[Type('string')]
         #[XmlAttribute]

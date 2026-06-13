@@ -30,6 +30,8 @@ class CommissionSplit
          * optional
          *
          * @see VALUE_* constants
+         *
+         * @description Worth or valuation of the property
          */
         #[Type('string')]
         #[XmlAttribute]

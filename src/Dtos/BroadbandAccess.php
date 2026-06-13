@@ -19,12 +19,20 @@ use JMS\Serializer\Annotation\XmlRoot;
 class BroadbandAccess
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Type or kind
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
         protected ?string $type = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Speed (e.g. broadband speed in Mbit/s)
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('speed')]

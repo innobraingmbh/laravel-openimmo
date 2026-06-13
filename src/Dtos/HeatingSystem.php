@@ -19,137 +19,245 @@ use JMS\Serializer\Annotation\XmlRoot;
 class HeatingSystem
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Oil as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OEL')]
         protected ?bool $oil = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Gas as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GAS')]
         protected ?bool $gas = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Electric heating available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ELEKTRO')]
         protected ?bool $electric = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Alternative value
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ALTERNATIV')]
         protected ?bool $alternative = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Solar energy as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SOLAR')]
         protected ?bool $solar = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Geothermal energy as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDWAERME')]
         protected ?bool $geothermal = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Air heat pump as heating system available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LUFTWP')]
         protected ?bool $airHeatPump = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Remote location of the property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
         protected ?bool $remote = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Block heating available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BLOCK')]
         protected ?bool $block = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Electric water heating
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WASSER-ELEKTRO')]
         protected ?bool $waterElectric = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Wood pellets as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PELLET')]
         protected ?bool $pellet = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Coal as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KOHLE')]
         protected ?bool $coal = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Wood as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]
         protected ?bool $wood = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Liquid gas as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLUESSIGGAS')]
         protected ?bool $liquidGas = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Light natural gas as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDGAS_LEICHT')]
         protected ?bool $lightNaturalGas = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Heavy natural gas as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERDGAS_SCHWER')]
         protected ?bool $heavyNaturalGas = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description District heating (steam) as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERNWAERME_DAMPF')]
         protected ?bool $districtHeatingVapor = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Local (floor-by-floor) heating available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NAHWAERME')]
         protected ?bool $localHeating = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Heat supply type of the property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAERMELIEFERUNG')]
         protected ?bool $heatSupply = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Bio energy as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BIOENERGIE')]
         protected ?bool $bioEnergy = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Wind energy as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WINDENERGIE')]
         protected ?bool $windEnergy = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Water energy as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WASSERENERGIE')]
         protected ?bool $waterEnergy = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Environmental heat as heating energy source
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('UMWELTWAERME')]
         protected ?bool $environmentalHeat = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Combined heat and power with fossil fuel
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_FOSSIL')]
         protected ?bool $chpFossil = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Combined heat and power with renewable fuel
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_ERNEUERBAR')]
         protected ?bool $chpRenewable = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Combined heat and power with regenerative fuel
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_REGENERATIV')]
         protected ?bool $chpRegenerative = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Combined heat and power with bio fuel
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KWK_BIO')]

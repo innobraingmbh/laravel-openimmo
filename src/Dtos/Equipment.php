@@ -25,183 +25,243 @@ class Equipment
     public const string EQUIPMENT_CATEGORY_LUXURY = 'LUXUS';
 
     public function __construct(
-        /** @see EQUIPMENT_CATEGORY_* constants */
+        /**
+         * @see EQUIPMENT_CATEGORY_* constants
+         *
+         * @description Equipment category (standard, upscale, luxury)
+         */
         #[Type('string')]
         #[SerializedName('ausstatt_kategorie')]
         protected string $equipmentCategory = '',
+        /** @description Suitable for shared flat */
         #[Type('bool')]
         #[SerializedName('wg_geeignet')]
         protected ?bool $suitableForSharedFlat = null,
+        /** @description Room layout is modifiable */
         #[Type('bool')]
         #[SerializedName('raeume_veraenderbar')]
         protected ?bool $roomsModifiable = null,
+        /** @description Bathroom equipment */
         #[Type(Bathroom::class)]
         #[SerializedName('bad')]
         protected ?Bathroom $bathroom = null,
+        /** @description Kitchen equipment of the property */
         #[Type(Kitchen::class)]
         #[SerializedName('kueche')]
         protected ?Kitchen $kitchen = null,
+        /** @description Floor level of the unit within the building */
         #[Type(Floor::class)]
         #[SerializedName('boden')]
         protected ?Floor $floor = null,
+        /** @description Fireplace available */
         #[Type('bool')]
         #[SerializedName('kamin')]
         protected ?bool $fireplace = null,
+        /** @description Type of heating system */
         #[Type(HeatingType::class)]
         #[SerializedName('heizungsart')]
         protected ?HeatingType $heatingType = null,
+        /** @description Heating fuel type of the heating system */
         #[Type(HeatingSystem::class)]
         #[SerializedName('befeuerung')]
         protected ?HeatingSystem $heating = null,
+        /** @description Air conditioning available */
         #[Type('bool')]
         #[SerializedName('klimatisiert')]
         protected ?bool $airConditioned = null,
+        /** @description Elevator available */
         #[Type(Elevator::class)]
         #[SerializedName('fahrstuhl')]
         protected ?Elevator $elevator = null,
+        /** @description Type of parking space */
         #[XmlList(entry: 'stellplatzart', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\ParkingSpaceType>')]
         #[SkipWhenEmpty]
         #[SerializedName('stellplatzart')]
         protected array $parkingSpaceType = [],
+        /** @description Garden use possible */
         #[Type('bool')]
         #[SerializedName('gartennutzung')]
         protected ?bool $gardenUse = null,
+        /** @description Orientation of balcony or terrace */
         #[Type(BalconyTerraceOrientation::class)]
         #[SerializedName('ausricht_balkon_terrasse')]
         protected ?BalconyTerraceOrientation $balconyTerraceOrientation = null,
+        /** @description Furnishing information of the property */
         #[Type(Furnished::class)]
         #[SerializedName('moebliert')]
         protected ?Furnished $furnished = null,
+        /** @description Wheelchair accessible */
         #[Type('bool')]
         #[SerializedName('rollstuhlgerecht')]
         protected ?bool $wheelchairAccessible = null,
+        /** @description Cable or satellite TV connection available */
         #[Type('bool')]
         #[SerializedName('kabel_sat_tv')]
         protected ?bool $cableSatelliteTV = null,
+        /** @description DVB-T digital terrestrial TV reception available */
         #[Type('bool')]
         #[SerializedName('dvbt')]
         protected ?bool $digitalTerrestrialTV = null,
+        /** @description Barrier-free accessible */
         #[Type('bool')]
         #[SerializedName('barrierefrei')]
         protected ?bool $barrierFree = null,
+        /** @description Sauna available */
         #[Type('bool')]
         #[SerializedName('sauna')]
         protected ?bool $sauna = null,
+        /** @description Swimming pool available */
         #[Type('bool')]
         #[SerializedName('swimmingpool')]
         protected ?bool $swimmingPool = null,
+        /** @description Laundry and drying room available */
         #[Type('bool')]
         #[SerializedName('wasch_trockenraum')]
         protected ?bool $laundryDryingRoom = null,
+        /** @description Winter garden available */
         #[Type('bool')]
         #[SerializedName('wintergarten')]
         protected ?bool $winterGarden = null,
+        /** @description Data processing cabling available */
         #[Type('bool')]
         #[SerializedName('dv_verkabelung')]
         protected ?bool $dataProcessingCabling = null,
+        /** @description Loading ramp available */
         #[Type('bool')]
         #[SerializedName('rampe')]
         protected ?bool $ramp = null,
+        /** @description Lift platform available */
         #[Type('bool')]
         #[SerializedName('hebebuehne')]
         protected ?bool $liftPlatform = null,
+        /** @description Crane available */
         #[Type('bool')]
         #[SerializedName('kran')]
         protected ?bool $crane = null,
+        /** @description Guest terrace available */
         #[Type('bool')]
         #[SerializedName('gastterrasse')]
         protected ?bool $guestTerrace = null,
+        /** @description Electricity connection value in kVA */
         #[Type('string')]
         #[SerializedName('stromanschlusswert')]
         protected ?string $electricityConnectionValue = null,
+        /** @description Canteen or cafeteria available */
         #[Type('bool')]
         #[SerializedName('kantine_cafeteria')]
         protected ?bool $canteenCafeteria = null,
+        /** @description Kitchenette available */
         #[Type('bool')]
         #[SerializedName('teekueche')]
         protected ?bool $kitchenette = null,
+        /** @description Hall height in meters */
         #[Type('float')]
         #[SerializedName('hallenhoehe')]
         protected ?float $hallHeight = null,
+        /** @description Attached gastronomy available */
         #[Type(AttachedGastronomy::class)]
         #[SerializedName('angeschl_gastronomie')]
         protected ?AttachedGastronomy $attachedGastronomy = null,
+        /** @description Brewery tie for the gastronomy property */
         #[Type('bool')]
         #[SerializedName('brauereibindung')]
         protected ?bool $breweryTie = null,
+        /** @description Sports facilities available */
         #[Type('bool')]
         #[SerializedName('sporteinrichtungen')]
         protected ?bool $sportsFacilities = null,
+        /** @description Wellness area available */
         #[Type('bool')]
         #[SerializedName('wellnessbereich')]
         protected ?bool $wellnessArea = null,
+        /** @description Services of the property */
         #[XmlList(entry: 'serviceleistungen', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Services>')]
         #[SkipWhenEmpty]
         #[SerializedName('serviceleistungen')]
         protected array $services = [],
+        /** @description Phone connection of the holiday property available */
         #[Type('bool')]
         #[SerializedName('telefon_ferienimmobilie')]
         protected ?bool $holidayPropertyPhone = null,
+        /** @description Broadband internet access available */
         #[Type(BroadbandAccess::class)]
         #[SerializedName('breitband_zugang')]
         protected ?BroadbandAccess $broadbandAccess = null,
+        /** @description UMTS mobile reception available */
         #[Type('bool')]
         #[SerializedName('umts_empfang')]
         protected ?bool $umtsReception = null,
+        /** @description Security technology of the property */
         #[Type(SecurityTechnology::class)]
         #[SerializedName('sicherheitstechnik')]
         protected ?SecurityTechnology $securityTechnology = null,
+        /** @description Basement or cellar information */
         #[Type(Basement::class)]
         #[SerializedName('unterkellert')]
         protected ?Basement $basement = null,
+        /** @description Storage room available */
         #[Type('bool')]
         #[SerializedName('abstellraum')]
         protected ?bool $storageRoom = null,
+        /** @description Bicycle storage room available */
         #[Type('bool')]
         #[SerializedName('fahrradraum')]
         protected ?bool $bicycleRoom = null,
+        /** @description Shutters/blinds available */
         #[Type('bool')]
         #[SerializedName('rolladen')]
         protected ?bool $shutters = null,
+        /** @description Roof shape of the building */
         #[Type(RoofShape::class)]
         #[SerializedName('dachform')]
         protected ?RoofShape $roofShape = null,
+        /** @description Construction method of the building */
         #[Type(ConstructionMethod::class)]
         #[SerializedName('bauweise')]
         protected ?ConstructionMethod $constructionMethod = null,
+        /** @description Development stage of the building */
         #[Type(DevelopmentStage::class)]
         #[SerializedName('ausbaustufe')]
         protected ?DevelopmentStage $developmentStage = null,
+        /** @description Energy efficiency type of the property */
         #[Type(EnergyType::class)]
         #[SerializedName('energietyp')]
         protected ?EnergyType $energyType = null,
+        /** @description Library available */
         #[Type('bool')]
         #[SerializedName('bibliothek')]
         protected ?bool $library = null,
+        /** @description Attic available */
         #[Type('bool')]
         #[SerializedName('dachboden')]
         protected ?bool $attic = null,
+        /** @description Guest toilet available */
         #[Type('bool')]
         #[SerializedName('gaestewc')]
         protected ?bool $guestToilet = null,
+        /** @description Cable channels available */
         #[Type('bool')]
         #[SerializedName('kabelkanaele')]
         protected ?bool $cableChannels = null,
+        /** @description Senior-friendly equipped */
         #[Type('bool')]
         #[SerializedName('seniorengerecht')]
         protected ?bool $seniorFriendly = null,
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

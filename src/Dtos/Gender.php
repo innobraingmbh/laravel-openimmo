@@ -30,6 +30,8 @@ class Gender
          * optional
          *
          * @see GENDER_ATTRIBUTE_* constants
+         *
+         * @description XML attribute for the gender value
          */
         #[Type('string')]
         #[XmlAttribute]

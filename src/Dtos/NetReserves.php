@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetReserves
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description VAT portion of the reserves
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('ruecklageust')]

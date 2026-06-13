@@ -32,6 +32,8 @@ class ActualRentalIncome
          * optional
          *
          * @see PERIOD_* constants
+         *
+         * @description Time period
          */
         #[Type('string')]
         #[XmlAttribute]

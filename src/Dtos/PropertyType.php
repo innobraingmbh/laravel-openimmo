@@ -20,71 +20,85 @@ use JMS\Serializer\Annotation\XmlRoot;
 class PropertyType
 {
     public function __construct(
+        /** @description Number of rooms of the property */
         #[XmlList(entry: 'zimmer', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Rooms>')]
         #[SkipWhenEmpty]
         #[SerializedName('zimmer')]
         protected array $rooms = [],
+        /** @description Apartment property */
         #[XmlList(entry: 'wohnung', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Apartment>')]
         #[SkipWhenEmpty]
         #[SerializedName('wohnung')]
         protected array $apartment = [],
+        /** @description House property */
         #[XmlList(entry: 'haus', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\House>')]
         #[SkipWhenEmpty]
         #[SerializedName('haus')]
         protected array $house = [],
+        /** @description Plot property */
         #[XmlList(entry: 'grundstueck', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Plot>')]
         #[SkipWhenEmpty]
         #[SerializedName('grundstueck')]
         protected array $plot = [],
+        /** @description Office or medical practice property */
         #[XmlList(entry: 'buero_praxen', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\OfficePractices>')]
         #[SkipWhenEmpty]
         #[SerializedName('buero_praxen')]
         protected array $officePractices = [],
+        /** @description Retail property */
         #[XmlList(entry: 'einzelhandel', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Retail>')]
         #[SkipWhenEmpty]
         #[SerializedName('einzelhandel')]
         protected array $retail = [],
+        /** @description Hospitality or accommodation property */
         #[XmlList(entry: 'gastgewerbe', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Hospitality>')]
         #[SkipWhenEmpty]
         #[SerializedName('gastgewerbe')]
         protected array $hospitality = [],
+        /** @description Hall, storage or production property */
         #[XmlList(entry: 'hallen_lager_prod', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\HallsStorageProduction>')]
         #[SkipWhenEmpty]
         #[SerializedName('hallen_lager_prod')]
         protected array $hallsStorageProduction = [],
+        /** @description Agricultural and forestry property */
         #[XmlList(entry: 'land_und_forstwirtschaft', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\AgricultureAndForestry>')]
         #[SkipWhenEmpty]
         #[SerializedName('land_und_forstwirtschaft')]
         protected array $agricultureAndForestry = [],
+        /** @description Parking space or parking area */
         #[XmlList(entry: 'parken', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Parking>')]
         #[SkipWhenEmpty]
         #[SerializedName('parken')]
         protected array $parking = [],
+        /** @description Other value */
         #[XmlList(entry: 'sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Other>')]
         #[SkipWhenEmpty]
         #[SerializedName('sonstige')]
         protected array $other = [],
+        /** @description Commercial leisure property */
         #[XmlList(entry: 'freizeitimmobilie_gewerblich', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\CommercialLeisureProperty>')]
         #[SkipWhenEmpty]
         #[SerializedName('freizeitimmobilie_gewerblich')]
         protected array $commercialLeisureProperty = [],
+        /** @description Apartment building as investment property */
         #[XmlList(entry: 'zinshaus_renditeobjekt', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\ApartmentBuildingInvestmentProperty>')]
         #[SkipWhenEmpty]
         #[SerializedName('zinshaus_renditeobjekt')]
         protected array $apartmentBuildingInvestmentProperty = [],
+        /** @description Additional type specification for the property */
         #[XmlList(entry: 'objektart_zusatz', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]

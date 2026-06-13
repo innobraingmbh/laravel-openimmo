@@ -73,6 +73,8 @@ class House
          * optional
          *
          * @see HOUSE_TYPE_* constants
+         *
+         * @description House type (e.g. detached, terraced, semi-detached)
          */
         #[Type('string')]
         #[XmlAttribute]

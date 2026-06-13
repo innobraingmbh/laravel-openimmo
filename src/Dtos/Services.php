@@ -19,27 +19,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Services
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Assisted living available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BETREUTES_WOHNEN')]
         protected ?bool $assistedLiving = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Catering service available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('CATERING')]
         protected ?bool $catering = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Cleaning service available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('REINIGUNG')]
         protected ?bool $cleaning = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Shopping facilities nearby
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('EINKAUF')]
         protected ?bool $shopping = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Security service available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WACHDIENST')]

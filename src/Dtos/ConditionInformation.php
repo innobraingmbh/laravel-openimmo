@@ -19,51 +19,65 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ConditionInformation
 {
     public function __construct(
+        /** @description Year of construction of the property */
         #[Type('string')]
         #[SerializedName('baujahr')]
         protected ?string $yearOfConstruction = null,
+        /** @description Year of the last modernization */
         #[Type('string')]
         #[SerializedName('letztemodernisierung')]
         protected ?string $lastModernization = null,
+        /** @description Condition of the property */
         #[Type(Condition::class)]
         #[SerializedName('zustand')]
         protected ?Condition $condition = null,
+        /** @description Age of the property */
         #[Type(Age::class)]
         #[SerializedName('alter')]
         protected ?Age $age = null,
+        /** @description Developability according to building regulations */
         #[Type(DevelopableAccordingTo::class)]
         #[SerializedName('bebaubar_nach')]
         protected ?DevelopableAccordingTo $developableAccordingTo = null,
+        /** @description Development/utility connection status of the plot */
         #[Type(Development::class)]
         #[SerializedName('erschliessung')]
         protected ?Development $development = null,
+        /** @description Scope of utilities and infrastructure connections of the plot */
         #[Type(DevelopmentScope::class)]
         #[SerializedName('erschliessung_umfang')]
         protected ?DevelopmentScope $developmentScope = null,
+        /** @description Construction zone of the plot */
         #[Type('string')]
         #[SerializedName('bauzone')]
         protected ?string $constructionZone = null,
+        /** @description Contamination or legacy pollution of the plot */
         #[Type('string')]
         #[SerializedName('altlasten')]
         protected ?string $contamination = null,
+        /** @description Energy performance certificate of the property */
         #[XmlList(entry: 'energiepass', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>')]
         #[SkipWhenEmpty]
         #[SerializedName('energiepass')]
         protected array $energyCertificate = [],
+        /** @description Sales status of the property */
         #[Type(SalesStatus::class)]
         #[SerializedName('verkaufstatus')]
         protected ?SalesStatus $salesStatus = null,
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

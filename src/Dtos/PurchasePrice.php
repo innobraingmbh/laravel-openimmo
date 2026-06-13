@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class PurchasePrice
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Price on request
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('auf_anfrage')]

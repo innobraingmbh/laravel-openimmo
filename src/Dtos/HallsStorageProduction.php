@@ -47,6 +47,8 @@ class HallsStorageProduction
          * optional
          *
          * @see HALL_TYPE_* constants
+         *
+         * @description Hall type (e.g. production, storage hall)
          */
         #[Type('string')]
         #[XmlAttribute]

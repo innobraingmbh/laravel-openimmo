@@ -20,144 +20,191 @@ use JMS\Serializer\Annotation\XmlRoot;
 class Prices
 {
     public function __construct(
+        /** @description Purchase price of the property */
         #[Type(PurchasePrice::class)]
         #[SerializedName('kaufpreis')]
         protected ?PurchasePrice $purchasePrice = null,
+        /** @description Net purchase price (excluding VAT) */
         #[Type(NetPurchasePrice::class)]
         #[SerializedName('kaufpreisnetto')]
         protected ?NetPurchasePrice $purchasePriceNet = null,
+        /** @description Gross purchase price (including VAT) */
         #[Type('float')]
         #[SerializedName('kaufpreisbrutto')]
         protected ?float $purchasePriceGross = null,
+        /** @description Net cold rent (excluding VAT) */
         #[Type('float')]
         #[SerializedName('nettokaltmiete')]
         protected ?float $netColdRent = null,
+        /** @description Cold rent (base rent without utilities) of the property */
         #[Type('float')]
         #[SerializedName('kaltmiete')]
         protected ?float $coldRent = null,
+        /** @description Warm rent (cold rent including utilities) */
         #[Type('float')]
         #[SerializedName('warmmiete')]
         protected ?float $warmRent = null,
+        /** @description Additional costs (service charges) of the property */
         #[Type('float')]
         #[SerializedName('nebenkosten')]
         protected ?float $additionalCosts = null,
+        /** @description Heating costs are included in the additional costs */
         #[Type('bool')]
         #[SerializedName('heizkosten_enthalten')]
         protected ?bool $heatingCostsIncluded = null,
+        /** @description Heating costs of the property */
         #[Type('float')]
         #[SerializedName('heizkosten')]
         protected ?float $heatingCosts = null,
+        /** @description Price plus VAT */
         #[Type('bool')]
         #[SerializedName('zzg_mehrwertsteuer')]
         protected ?bool $plusVAT = null,
+        /** @description Rent surcharges */
         #[Type('float')]
         #[SerializedName('mietzuschlaege')]
         protected ?float $rentSurcharges = null,
+        /** @description Net main rent (excluding VAT) */
         #[Type(NetMainRent::class)]
         #[SerializedName('hauptmietzinsnetto')]
         protected ?NetMainRent $netMainRent = null,
+        /** @description Flat rent (all-inclusive rent) */
         #[Type('float')]
         #[SerializedName('pauschalmiete')]
         protected ?float $flatRent = null,
+        /** @description Net operating costs (excluding VAT) */
         #[Type(NetOperatingCosts::class)]
         #[SerializedName('betriebskostennetto')]
         protected ?NetOperatingCosts $netOperatingCosts = null,
+        /** @description Net unit value (EVB value) */
         #[Type(NetEVB::class)]
         #[SerializedName('evbnetto')]
         protected ?NetEVB $netUnitValue = null,
+        /** @description Net total rent (excluding VAT) */
         #[Type(NetTotalRent::class)]
         #[SerializedName('gesamtmietenetto')]
         protected ?NetTotalRent $totalRentNet = null,
+        /** @description Gross total rent (including VAT) */
         #[Type('float')]
         #[SerializedName('gesamtmietebrutto')]
         protected ?float $totalRentGross = null,
+        /** @description Net total cost burden (excluding VAT) */
         #[Type(NetTotalCost::class)]
         #[SerializedName('gesamtbelastungnetto')]
         protected ?NetTotalCost $totalCostNet = null,
+        /** @description Gross total cost burden (including VAT) */
         #[Type('float')]
         #[SerializedName('gesamtbelastungbrutto')]
         protected ?float $totalCostGross = null,
+        /** @description Total costs per square meter starting from a minimum value */
         #[Type(TotalCostsPerSqmFrom::class)]
         #[SerializedName('gesamtkostenprom2von')]
         protected ?TotalCostsPerSqmFrom $totalCostsPerSqmFrom = null,
+        /** @description Net heating costs (excluding VAT) */
         #[Type(NetHeatingCosts::class)]
         #[SerializedName('heizkostennetto')]
         protected ?NetHeatingCosts $netHeatingCosts = null,
+        /** @description Monthly net total costs (excluding VAT) */
         #[Type(NetMonthlyCosts::class)]
         #[SerializedName('monatlichekostennetto')]
         protected ?NetMonthlyCosts $monthlyCostsNet = null,
+        /** @description Monthly gross total costs (including VAT) */
         #[Type('float')]
         #[SerializedName('monatlichekostenbrutto')]
         protected ?float $monthlyCostsGross = null,
+        /** @description Additional costs per square meter starting from a minimum value */
         #[Type(AdditionalCostsPerSqmFrom::class)]
         #[SerializedName('nebenkostenprom2von')]
         protected ?AdditionalCostsPerSqmFrom $additionalCostsPerSqmFrom = null,
+        /** @description Net maintenance reserves (excluding VAT) */
         #[Type(NetReserves::class)]
         #[SerializedName('ruecklagenetto')]
         protected ?NetReserves $reservesNet = null,
+        /** @description Other net costs (excluding VAT) */
         #[Type(NetOtherCosts::class)]
         #[SerializedName('sonstigekostennetto')]
         protected ?NetOtherCosts $otherCostsNet = null,
+        /** @description Other net rent (excluding VAT) */
         #[Type(NetOtherRent::class)]
         #[SerializedName('sonstigemietenetto')]
         protected ?NetOtherRent $otherRentNet = null,
+        /** @description Net rent per square meter starting from a minimum value */
         #[Type(NetRentPerSqmFrom::class)]
         #[SerializedName('nettomieteprom2von')]
         protected ?NetRentPerSqmFrom $netRentPerSqmFrom = null,
+        /** @description Lease amount of the property */
         #[Type('float')]
         #[SerializedName('pacht')]
         protected ?float $lease = null,
+        /** @description Leasehold amount of the property */
         #[Type('float')]
         #[SerializedName('erbpacht')]
         protected ?float $leasehold = null,
+        /** @description Maintenance fee (monthly homeowner association fee) */
         #[Type('float')]
         #[SerializedName('hausgeld')]
         protected ?float $maintenanceFee = null,
+        /** @description Distance value */
         #[Type('float')]
         #[SerializedName('abstand')]
         protected ?float $distance = null,
+        /** @description Start date of the price time range */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('preis_zeitraum_von')]
         protected ?DateTime $priceTimeRangeFrom = null,
+        /** @description End date of the price time range */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('preis_zeitraum_bis')]
         protected ?DateTime $priceTimeRangeTo = null,
+        /** @description Time unit for the price value */
         #[Type(PriceTimeUnit::class)]
         #[SerializedName('preis_zeiteinheit')]
         protected ?PriceTimeUnit $priceTimeUnit = null,
+        /** @description Rent price per square meter */
         #[Type('float')]
         #[SerializedName('mietpreis_pro_qm')]
         protected ?float $rentPricePerSqm = null,
+        /** @description Purchase price per square meter */
         #[Type('float')]
         #[SerializedName('kaufpreis_pro_qm')]
         protected ?float $purchasePricePerSqm = null,
+        /** @description Broker commission is charged */
         #[Type('bool')]
         #[SerializedName('provisionspflichtig')]
         protected ?bool $commissionRequired = null,
+        /** @description Split of the broker commission */
         #[Type(CommissionSplit::class)]
         #[SerializedName('provision_teilen')]
         protected ?CommissionSplit $commissionSplit = null,
+        /** @description Internal commission (seller's commission) */
         #[Type(InternalCommission::class)]
         #[SerializedName('innen_courtage')]
         protected ?InternalCommission $internalCommission = null,
+        /** @description External commission (buyer's commission) */
         #[Type(ExternalCommission::class)]
         #[SerializedName('aussen_courtage')]
         protected ?ExternalCommission $externalCommission = null,
+        /** @description Note on the broker commission */
         #[Type('string')]
         #[SerializedName('courtage_hinweis')]
         protected ?string $commissionNote = null,
+        /** @description Net broker commission (excluding VAT) */
         #[Type(NetCommission::class)]
         #[SerializedName('provisionnetto')]
         protected ?NetCommission $commissionNet = null,
+        /** @description Gross broker commission (including VAT) */
         #[Type('float')]
         #[SerializedName('provisionbrutto')]
         protected ?float $commissionGross = null,
+        /** @description Currency of the price values */
         #[Type(Currency::class)]
         #[SerializedName('waehrung')]
         protected ?Currency $currency = null,
         /**
          * Maximum precision: 2
          * Minimum value (inclusive): 0
+         *
+         * @description VAT rate
          */
         #[Type('float')]
         #[SerializedName('mwst_satz')]
@@ -165,82 +212,107 @@ class Prices
         /**
          * Maximum precision: 2
          * Minimum value (inclusive): 0
+         *
+         * @description Total VAT amount
          */
         #[Type('float')]
         #[SerializedName('mwst_gesamt')]
         protected ?float $totalVAT = null,
+        /** @description Price as free text */
         #[Type('string')]
         #[SerializedName('freitext_preis')]
         protected ?string $freeTextPrice = null,
+        /** @description Multiplier (x times annual rent) as price specification */
         #[Type('string')]
         #[SerializedName('x_fache')]
         protected ?string $xTimes = null,
+        /** @description Net yield of the property */
         #[Type('float')]
         #[SerializedName('nettorendite')]
         protected ?float $netYield = null,
+        /** @description Target net yield of the property */
         #[Type('float')]
         #[SerializedName('nettorendite_soll')]
         protected ?float $targetNetYield = null,
+        /** @description Actual net yield of the property */
         #[Type('float')]
         #[SerializedName('nettorendite_ist')]
         protected ?float $actualNetYield = null,
+        /** @description Actual rental income */
         #[Type(ActualRentalIncome::class)]
         #[SerializedName('mieteinnahmen_ist')]
         protected ?ActualRentalIncome $actualRentalIncome = null,
+        /** @description Target rental income of the property */
         #[Type(TargetRentalIncome::class)]
         #[SerializedName('mieteinnahmen_soll')]
         protected ?TargetRentalIncome $targetRentalIncome = null,
+        /** @description Development costs of the plot */
         #[Type('float')]
         #[SerializedName('erschliessungskosten')]
         protected ?float $developmentCosts = null,
+        /** @description Security deposit */
         #[Type('float')]
         #[SerializedName('kaution')]
         protected ?float $deposit = null,
+        /** @description Free text describing the security deposit */
         #[Type('string')]
         #[SerializedName('kaution_text')]
         protected ?string $depositText = null,
+        /** @description Business assets (cooperative share) */
         #[Type('float')]
         #[SerializedName('geschaeftsguthaben')]
         protected ?float $businessAssets = null,
+        /** @description Carport parking space */
         #[Type(ParkingCarport::class)]
         #[SerializedName('stp_carport')]
         protected ?ParkingCarport $parkingCarport = null,
+        /** @description Duplex parking space */
         #[Type(ParkingDuplex::class)]
         #[SerializedName('stp_duplex')]
         protected ?ParkingDuplex $parkingDuplex = null,
+        /** @description Outdoor parking space */
         #[Type(ParkingOutdoor::class)]
         #[SerializedName('stp_freiplatz')]
         protected ?ParkingOutdoor $parkingOutdoor = null,
+        /** @description Garage parking space */
         #[Type(ParkingGarage::class)]
         #[SerializedName('stp_garage')]
         protected ?ParkingGarage $parkingGarage = null,
+        /** @description Multi-storey car park space */
         #[Type(ParkingMultiStorey::class)]
         #[SerializedName('stp_parkhaus')]
         protected ?ParkingMultiStorey $parkingMultiStorey = null,
+        /** @description Underground garage parking space */
         #[Type(ParkingUnderground::class)]
         #[SerializedName('stp_tiefgarage')]
         protected ?ParkingUnderground $parkingUnderground = null,
+        /** @description Other parking space */
         #[XmlList(entry: 'stp_sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\ParkingOther>')]
         #[SkipWhenEmpty]
         #[SerializedName('stp_sonstige')]
         protected array $parkingOther = [],
+        /** @description Guide price of the property */
         #[Type('float')]
         #[SerializedName('richtpreis')]
         protected ?float $guidePrice = null,
+        /** @description Guide price per square meter */
         #[Type('float')]
         #[SerializedName('richtpreisprom2')]
         protected ?float $guidePricePerSqm = null,
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

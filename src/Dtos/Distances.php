@@ -53,6 +53,8 @@ class Distances
          * required
          *
          * @see DISTANCE_TO_* constants
+         *
+         * @description Distance to a specific facility
          */
         #[Type('string')]
         #[XmlAttribute]

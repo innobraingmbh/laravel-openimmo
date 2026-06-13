@@ -27,6 +27,8 @@ class Age
          * optional
          *
          * @see AGE_ATTRIBUTE_* constants
+         *
+         * @description XML attribute for the age value
          */
         #[Type('string')]
         #[XmlAttribute]

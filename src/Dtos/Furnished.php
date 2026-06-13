@@ -27,6 +27,8 @@ class Furnished
          * optional
          *
          * @see FURNISHED_* constants
+         *
+         * @description Furnishing information of the property
          */
         #[Type('string')]
         #[XmlAttribute]

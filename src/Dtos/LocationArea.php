@@ -49,6 +49,8 @@ class LocationArea
          * optional
          *
          * @see AREAS_* constants
+         *
+         * @description Area measurements of the property
          */
         #[Type('string')]
         #[XmlAttribute]

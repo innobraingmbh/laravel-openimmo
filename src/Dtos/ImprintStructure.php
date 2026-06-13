@@ -19,42 +19,52 @@ use JMS\Serializer\Annotation\XmlRoot;
 class ImprintStructure
 {
     public function __construct(
+        /** @description Name of the company */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('firmenname')]
         protected string $companyName = '',
+        /** @description Company address of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('firmenanschrift')]
         protected string $companyAddress = '',
+        /** @description Phone number */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('telefon')]
         protected string $phone = '',
+        /** @description Authorized representative of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('vertretungsberechtigter')]
         protected string $authorizedRepresentative = '',
+        /** @description Professional supervisory authority of the broker */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $professionalSupervisoryAuthority = '',
+        /** @description Commercial register information of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('handelsregister')]
         protected string $commercialRegister = '',
+        /** @description Commercial register number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('handelsregister_nr')]
         protected string $commercialRegisterNumber = '',
+        /** @description VAT identification number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('umsst-id')]
         protected string $vatId = '',
+        /** @description Tax number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('steuernummer')]
         protected string $taxNumber = '',
+        /** @description Additional information */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('weiteres')]

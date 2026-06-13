@@ -29,15 +29,19 @@ class Photo
          * required
          *
          * @see LOCATION_* constants
+         *
+         * @description Location description of the property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
         protected string $location = '',
+        /** @description File format of the attachment */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('format')]
         protected string $format = '',
+        /** @description Data container */
         #[Type(Data::class)]
         #[SerializedName('daten')]
         protected ?Data $data = null

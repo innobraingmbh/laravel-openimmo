@@ -19,12 +19,20 @@ use JMS\Serializer\Annotation\XmlRoot;
 class AttachedGastronomy
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Hotel or restaurant available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOTELRESTAURANT')]
         protected ?bool $hotelRestaurant = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Cash payment possible
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAR')]

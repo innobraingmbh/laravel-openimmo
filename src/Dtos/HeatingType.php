@@ -19,27 +19,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 class HeatingType
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Stove or wood-burning stove available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFEN')]
         protected ?bool $stove = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Floor level of the unit within the building
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ETAGE')]
         protected ?bool $floor = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Central heating system available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ZENTRAL')]
         protected ?bool $central = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Remote location of the property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
         protected ?bool $remote = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Flooring of the property
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FUSSBODEN')]

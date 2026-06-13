@@ -31,6 +31,8 @@ class View
          * optional
          *
          * @see VIEW_* constants
+         *
+         * @description View or outlook of the property
          */
         #[Type('string')]
         #[XmlAttribute]

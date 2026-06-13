@@ -18,37 +18,65 @@ use JMS\Serializer\Annotation\XmlRoot;
 class RoofShape
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Truncated hip roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KRUEPPELWALMDACH')]
         protected ?bool $truncatedHipRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mansard roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MANSARDDACH')]
         protected ?bool $mansardRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Shed (mono-pitched) roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PULTDACH')]
         protected ?bool $shedRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Saddle (gabled) roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SATTELDACH')]
         protected ?bool $saddleRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Hip roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WALMDACH')]
         protected ?bool $hipRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Flat roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLACHDACH')]
         protected ?bool $flatRoof = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Pyramid roof
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PYRAMIDENDACH')]

@@ -51,6 +51,8 @@ class Apartment
          * optional
          *
          * @see APARTMENT_TYPE_* constants
+         *
+         * @description Apartment type (e.g. attic, maisonette, ground floor)
          */
         #[Type('string')]
         #[XmlAttribute]

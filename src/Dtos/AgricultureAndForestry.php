@@ -51,6 +51,8 @@ class AgricultureAndForestry
          * optional
          *
          * @see LAND_TYPE_* constants
+         *
+         * @description ISO country code
          */
         #[Type('string')]
         #[XmlAttribute]

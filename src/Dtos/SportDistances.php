@@ -39,6 +39,8 @@ class SportDistances
          * required
          *
          * @see DISTANCE_TO_SPORT_* constants
+         *
+         * @description Distance to sports facilities
          */
         #[Type('string')]
         #[XmlAttribute]

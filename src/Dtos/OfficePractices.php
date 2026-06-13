@@ -43,6 +43,8 @@ class OfficePractices
          * optional
          *
          * @see OFFICE_TYPE_* constants
+         *
+         * @description Type of office or medical practice property
          */
         #[Type('string')]
         #[XmlAttribute]

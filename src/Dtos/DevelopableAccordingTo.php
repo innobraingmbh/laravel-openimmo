@@ -37,6 +37,8 @@ class DevelopableAccordingTo
          * optional
          *
          * @see BUILDABLE_ATTRIBUTE_* constants
+         *
+         * @description XML attribute for the developability value
          */
         #[Type('string')]
         #[XmlAttribute]

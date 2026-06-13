@@ -21,37 +21,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 class BiddingProcess
 {
     public function __construct(
+        /** @description Start of the offer phase */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('beginn_angebotsphase')]
         protected ?DateTime $startOfOfferPhase = null,
+        /** @description First viewing appointment */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('besichtigungstermin')]
         protected ?DateTime $viewingAppointment = null,
+        /** @description Second viewing appointment */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('besichtigungstermin_2')]
         protected ?DateTime $viewingAppointment2 = null,
+        /** @description Start time of the bidding process */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('beginn_bietzeit')]
         protected ?DateTime $startOfBiddingTime = null,
+        /** @description End time of the bidding process */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('ende_bietzeit')]
         protected ?DateTime $endOfBiddingTime = null,
+        /** @description Show highest bid */
         #[Type('bool')]
         #[SerializedName('hoechstgebot_zeigen')]
         protected ?bool $showHighestBid = null,
+        /** @description Minimum price of the property */
         #[Type('float')]
         #[SerializedName('mindestpreis')]
         protected ?float $minimumPrice = null,
+        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]

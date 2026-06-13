@@ -19,22 +19,38 @@ use JMS\Serializer\Annotation\XmlRoot;
 class TypeOfUse
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Living area available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WOHNEN')]
         protected bool $living = false,
-        /** required */
+        /**
+         * required
+         *
+         * @description Commercial use available
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GEWERBE')]
         protected bool $commercial = false,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Facility or amenity
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ANLAGE')]
         protected ?bool $facility = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Living-working room (combination of living and working space)
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAZ')]

@@ -20,7 +20,11 @@ use JMS\Serializer\Annotation\XmlRoot;
 class NetRentPerSqmFrom
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Net rent per square meter up to a maximum value
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nettomieteprom2bis')]

@@ -29,6 +29,8 @@ class SalesStatus
          * optional
          *
          * @see CONDITION_* constants
+         *
+         * @description Status of the property or the data transfer
          */
         #[Type('string')]
         #[XmlAttribute]
