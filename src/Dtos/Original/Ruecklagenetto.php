@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Ruecklagenetto
  * Vorhanden Rücklagen bei einem Kauf Objekt, UmSt. im Attribut.
+ *
+ * @description Netto-Rücklagen (ohne MwSt.)
  */
 #[XmlRoot(name: 'ruecklagenetto')]
 class Ruecklagenetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der Rücklagen
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('ruecklageust')]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Zimmer
  * Objekart / Typ f. Zimmer
+ *
+ * @description Zimmeranzahl und Raumangaben der Immobilie
  */
 #[XmlRoot(name: 'zimmer')]
 class Zimmer
@@ -23,6 +25,8 @@ class Zimmer
          * optional
          *
          * @see ZIMMERTYP_* constants
+         *
+         * @description Raumtyp
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -13,11 +13,14 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Bewertung
  * Container für detailierte Bewertungs Parmater
+ *
+ * @description Bewertungsinformationen der Immobilie
  */
 #[XmlRoot(name: 'bewertung')]
 class Bewertung
 {
     public function __construct(
+        /** @description Datenfeld */
         #[XmlList(entry: 'feld', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Feld>')]
         #[SkipWhenEmpty]

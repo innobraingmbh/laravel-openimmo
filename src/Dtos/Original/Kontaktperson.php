@@ -12,137 +12,203 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Kontaktperson
+ *
+ * @description Kontaktperson des Anbieters für die Immobilie
  */
 #[XmlRoot(name: 'kontaktperson')]
 class Kontaktperson
 {
     public function __construct(
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Zentrale E-Mail-Adresse des Anbieters
+         */
         #[Type('string')]
         #[SerializedName('email_zentrale')]
         protected ?string $emailZentrale = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Direkte E-Mail-Adresse der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('email_direkt')]
         protected ?string $emailDirekt = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Zentrale Telefonnummer des Anbieters
+         */
         #[Type('string')]
         #[SerializedName('tel_zentrale')]
         protected ?string $telZentrale = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Telefondurchwahl der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('tel_durchw')]
         protected ?string $telDurchw = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Faxnummer der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('tel_fax')]
         protected ?string $telFax = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Mobiltelefonnummer der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('tel_handy')]
         protected ?string $telHandy = null,
+        /** @description Nachname der Kontaktperson */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('name')]
         protected string $name = '',
+        /** @description Vorname der Kontaktperson */
         #[Type('string')]
         #[SerializedName('vorname')]
         protected ?string $vorname = null,
+        /** @description Titel oder akademischer Grad der Kontaktperson */
         #[Type('string')]
         #[SerializedName('titel')]
         protected ?string $titel = null,
+        /** @description Anrede der Kontaktperson */
         #[Type('string')]
         #[SerializedName('anrede')]
         protected ?string $anrede = null,
+        /** @description Position oder Berufsbezeichnung der Kontaktperson */
         #[Type('string')]
         #[SerializedName('position')]
         protected ?string $position = null,
+        /** @description Briefanrede der Kontaktperson */
         #[Type('string')]
         #[SerializedName('anrede_brief')]
         protected ?string $anredeBrief = null,
+        /** @description Firmenname des Anbieters */
         #[Type('string')]
         #[SerializedName('firma')]
         protected ?string $firma = null,
+        /** @description Zusätzliches Freifeld */
         #[Type('string')]
         #[SerializedName('zusatzfeld')]
         protected ?string $zusatzfeld = null,
+        /** @description Straße der Immobilie */
         #[Type('string')]
         #[SerializedName('strasse')]
         protected ?string $strasse = null,
+        /** @description Hausnummer der Immobilie */
         #[Type('string')]
         #[SerializedName('hausnummer')]
         protected ?string $hausnummer = null,
+        /** @description Postleitzahl der Immobilie */
         #[Type('string')]
         #[SerializedName('plz')]
         protected ?string $plz = null,
+        /** @description Stadt oder Ort der Immobilie */
         #[Type('string')]
         #[SerializedName('ort')]
         protected ?string $ort = null,
+        /** @description Postfachnummer */
         #[Type('string')]
         #[SerializedName('postfach')]
         protected ?string $postfach = null,
+        /** @description Postleitzahl des Postfachs */
         #[Type('string')]
         #[SerializedName('postf_plz')]
         protected ?string $postfPlz = null,
+        /** @description Ort des Postfachs */
         #[Type('string')]
         #[SerializedName('postf_ort')]
         protected ?string $postfOrt = null,
+        /** @description Land der Immobilie */
         #[Type(Land::class)]
         #[SerializedName('land')]
         protected ?Land $land = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Private E-Mail-Adresse der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('email_privat')]
         protected ?string $emailPrivat = null,
+        /** @description Sonstige E-Mail-Adresse */
         #[XmlList(entry: 'email_sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\EmailSonstige>')]
         #[SkipWhenEmpty]
         #[SerializedName('email_sonstige')]
         protected array $emailSonstige = [],
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description E-Mail-Adresse für Rückmeldungen
+         */
         #[Type('string')]
         #[SerializedName('email_feedback')]
         protected ?string $emailFeedback = null,
-        /** Minimum length: 1 */
+        /**
+         * Minimum length: 1
+         *
+         * @description Private Telefonnummer der Kontaktperson
+         */
         #[Type('string')]
         #[SerializedName('tel_privat')]
         protected ?string $telPrivat = null,
+        /** @description Sonstige Telefonnummer */
         #[XmlList(entry: 'tel_sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\TelSonstige>')]
         #[SkipWhenEmpty]
         #[SerializedName('tel_sonstige')]
         protected array $telSonstige = [],
+        /** @description Webseite oder URL der Kontaktperson oder des Anbieters */
         #[Type('string')]
         #[SerializedName('url')]
         protected ?string $url = null,
+        /** @description Adresse zur Veröffentlichung freigegeben */
         #[Type('bool')]
         #[SerializedName('adressfreigabe')]
         protected ?bool $adressfreigabe = null,
+        /** @description Personennummer der Kontaktperson */
         #[Type('string')]
         #[SerializedName('personennummer')]
         protected ?string $personennummer = null,
+        /** @description Immobilientreuhänder-ID der Kontaktperson */
         #[Type('string')]
         #[SerializedName('immobilientreuhaenderid')]
         protected ?string $immobilientreuhaenderid = null,
+        /** @description Foto der Kontaktperson oder der Immobilie */
         #[Type(Foto::class)]
         #[SerializedName('foto')]
         protected ?Foto $foto = null,
+        /** @description Referenz-ID der Kontaktperson */
         #[Type('string')]
         #[SerializedName('referenz_id')]
         protected ?string $referenzId = null,
+        /** @description Freitextfeld */
         #[Type('string')]
         #[SerializedName('freitextfeld')]
         protected ?string $freitextfeld = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

@@ -12,32 +12,54 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Heizungsart
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
+ *
+ * @description Art des Heizsystems (z.B. Zentralheizung, Fußbodenheizung)
  */
 #[XmlRoot(name: 'heizungsart')]
 class Heizungsart
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Ofen oder Kaminofen vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFEN')]
         protected ?bool $ofen = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Stockwerk der Wohnung im Gebäude
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ETAGE')]
         protected ?bool $etage = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Zentrale Heizungsanlage vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ZENTRAL')]
         protected ?bool $zentral = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Abgelegene Lage der Immobilie
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
         protected ?bool $fern = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Bodenbelag der Immobilie
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FUSSBODEN')]

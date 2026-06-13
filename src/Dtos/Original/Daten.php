@@ -11,14 +11,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Daten
  * Anhangdaten
+ *
+ * @description Allgemeiner Datenbehälter im OpenImmo-Format
  */
 #[XmlRoot(name: 'daten')]
 class Daten
 {
     public function __construct(
+        /** @description Dateipfad des Anhangs */
         #[Type('string')]
         #[SerializedName('pfad')]
         protected ?string $pfad = null,
+        /** @description Binärer Inhalt des Anhangs */
         #[Type('string')]
         #[SerializedName('anhanginhalt')]
         protected ?string $anhanginhalt = null

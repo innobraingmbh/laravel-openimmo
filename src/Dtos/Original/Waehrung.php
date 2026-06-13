@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Waehrung
  * Währung
+ *
+ * @description Währungsangabe für Preise
  */
 #[XmlRoot(name: 'waehrung')]
 class Waehrung
@@ -385,6 +387,8 @@ class Waehrung
          * optional
          *
          * @see ISO_WAEHRUNG_* constants
+         *
+         * @description ISO-Währungskürzel (z.B. EUR, CHF)
          */
         #[Type('string')]
         #[XmlAttribute]

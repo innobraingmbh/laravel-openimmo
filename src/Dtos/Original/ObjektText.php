@@ -14,12 +14,18 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ObjektText
  * Beschreibung in anderer Sprache. "lang" Attribut muss dann vorhanden sein. W3- Language Code
  * Description in other Languages
+ *
+ * @description Einzelner Freitext zur Immobilie mit Sprach- und Typangabe
  */
 #[XmlRoot(name: 'objekt_text')]
 class ObjektText
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Sprache des Textes (ISO-Sprachcode)
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('lang')]

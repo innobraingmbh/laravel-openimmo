@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Zustand
  * Zustand des Objektes, Optionen nicht kombinierbar
+ *
+ * @description Zustandsbeschreibung der Immobilie
  */
 #[XmlRoot(name: 'zustand')]
 class Zustand
@@ -53,6 +55,8 @@ class Zustand
          * optional
          *
          * @see ZUSTAND_ART_* constants
+         *
+         * @description Zustandstyp der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Moebliert
  * Wie ist die Möblierung: Voll, Teil oder keine Aussage
+ *
+ * @description Möblierungsangaben der Immobilie
  */
 #[XmlRoot(name: 'moebliert')]
 class Moebliert
@@ -25,6 +27,8 @@ class Moebliert
          * optional
          *
          * @see MOEB_* constants
+         *
+         * @description Möblierungsangabe der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]

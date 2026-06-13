@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Kaufpreisnetto
  * Ausgewiesene Kaufpreis Netto, Optional mit Umst im Attribut. Speziell für Gewerbe
+ *
+ * @description Netto-Kaufpreis (ohne MwSt.)
  */
 #[XmlRoot(name: 'kaufpreisnetto')]
 class Kaufpreisnetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil des Kaufpreises
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('kaufpreisust')]

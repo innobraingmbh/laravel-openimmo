@@ -12,30 +12,38 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Objektkategorie
+ *
+ * @description Objektkategorie mit Vermarktungsart und Immobilientyp
  */
 #[XmlRoot(name: 'objektkategorie')]
 class Objektkategorie
 {
     public function __construct(
+        /** @description Nutzungsart der Immobilie */
         #[Type(Nutzungsart::class)]
         #[SerializedName('nutzungsart')]
         protected ?Nutzungsart $nutzungsart = null,
+        /** @description Vermarktungsart der Immobilie (Kauf oder Miete) */
         #[Type(Vermarktungsart::class)]
         #[SerializedName('vermarktungsart')]
         protected ?Vermarktungsart $vermarktungsart = null,
+        /** @description Immobilientyp (z.B. Wohnung, Haus, Grundstück, Gewerbe) */
         #[Type(Objektart::class)]
         #[SerializedName('objektart')]
         protected ?Objektart $objektart = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

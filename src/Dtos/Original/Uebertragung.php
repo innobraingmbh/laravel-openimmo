@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Uebertragung
  * Übertragungsangaben
+ *
+ * @description Datentransfer-Metadaten im OpenImmo-Format
  */
 #[XmlRoot(name: 'uebertragung')]
 class Uebertragung
@@ -36,6 +38,8 @@ class Uebertragung
          * required
          *
          * @see ART_* constants
+         *
+         * @description Typ oder Art
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -45,6 +49,8 @@ class Uebertragung
          * required
          *
          * @see UMFANG_* constants
+         *
+         * @description Umfang oder Geltungsbereich
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -54,37 +60,63 @@ class Uebertragung
          * optional
          *
          * @see MODUS_* constants
+         *
+         * @description Modus des Datentransfers
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('modus')]
         protected string $modus = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Version des OpenImmo-Formats oder der Software
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('version')]
         protected string $version = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Software des sendenden Systems
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sendersoftware')]
         protected string $sendersoftware = '',
-        /** required */
+        /**
+         * required
+         *
+         * @description Version des sendenden Systems
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('senderversion')]
         protected string $senderversion = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Technische E-Mail-Adresse des Systems
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('techn_email')]
         protected ?string $technEmail = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Regions-ID der Immobilie
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('regi_id')]
         protected ?string $regiId = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Zeitstempel des Datentransfers
+         */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[XmlAttribute]
         #[SerializedName('timestamp')]

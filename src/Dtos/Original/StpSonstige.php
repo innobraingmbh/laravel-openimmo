@@ -11,6 +11,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class StpSonstige
+ *
+ * @description Sonstiger Stellplatztyp
  */
 #[XmlRoot(name: 'stp_sonstige')]
 class StpSonstige
@@ -34,12 +36,18 @@ class StpSonstige
          * optional
          *
          * @see PLATZART_* constants
+         *
+         * @description Raumtyp (z.B. Büro, Lager, Verkauf)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('platzart')]
         protected string $platzart = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Bemerkung oder Hinweis
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

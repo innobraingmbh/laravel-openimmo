@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HallenLagerProd
  * Objektart / Typ f. Hallen/Lager/Produktion
+ *
+ * @description Gewerbeobjekt vom Typ Halle, Lager oder Produktion
  */
 #[XmlRoot(name: 'hallen_lager_prod')]
 class HallenLagerProd
@@ -45,6 +47,8 @@ class HallenLagerProd
          * optional
          *
          * @see HALLEN_TYP_* constants
+         *
+         * @description Hallentyp (z.B. Produktions-, Lagerhalle)
          */
         #[Type('string')]
         #[XmlAttribute]

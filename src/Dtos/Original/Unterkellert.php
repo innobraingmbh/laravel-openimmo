@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Unterkellert
  * Ist das Objekt unterkellert? Optionen nicht kombinierbar
+ *
+ * @description Keller- oder Unterkellerungsangaben der Immobilie
  */
 #[XmlRoot(name: 'unterkellert')]
 class Unterkellert
@@ -27,6 +29,8 @@ class Unterkellert
          * optional
          *
          * @see KELLER_* constants
+         *
+         * @description Keller- oder Unterkellerungsangabe
          */
         #[Type('string')]
         #[XmlAttribute]

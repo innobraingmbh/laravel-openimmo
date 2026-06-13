@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Haus
  * Objektart / Typ f. Haus
+ *
+ * @description Hausobjekt mit Typangabe
  */
 #[XmlRoot(name: 'haus')]
 class Haus
@@ -75,6 +77,8 @@ class Haus
          * optional
          *
          * @see HAUSTYP_* constants
+         *
+         * @description Haustyp (z.B. Einfamilienhaus, Reihenhaus, Doppelhaus)
          */
         #[Type('string')]
         #[XmlAttribute]

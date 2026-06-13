@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Erschliessung
  * Stand der Erschließung, Optionen nicht kombinierbar
+ *
+ * @description Erschließungszustand des Grundstücks
  */
 #[XmlRoot(name: 'erschliessung')]
 class Erschliessung
@@ -29,6 +31,8 @@ class Erschliessung
          * optional
          *
          * @see ERSCHL_ATTR_* constants
+         *
+         * @description XML-Attribut zum Erschließungszustand
          */
         #[Type('string')]
         #[XmlAttribute]

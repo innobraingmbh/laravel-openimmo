@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class PreisZeiteinheit
  * Zeiteinheit für die der Preis gilt, vorrangig bei Ferienobjekten
+ *
+ * @description Zeiteinheit für die Preisangabe (z.B. pro Tag, Woche, Monat)
  */
 #[XmlRoot(name: 'preis_zeiteinheit')]
 class PreisZeiteinheit
@@ -29,6 +31,8 @@ class PreisZeiteinheit
          * optional
          *
          * @see ZEITEINHEIT_* constants
+         *
+         * @description Zeiteinheit (z.B. Tag, Woche, Monat)
          */
         #[Type('string')]
         #[XmlAttribute]

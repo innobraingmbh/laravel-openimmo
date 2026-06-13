@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BebaubarNach
  * Bebaubar nach Bebauungsrichtlinien, Optionen nicht kombinierbar
+ *
+ * @description Bebaubarkeit gemäß Baurecht (z.B. BauGB, BauNVO)
  */
 #[XmlRoot(name: 'bebaubar_nach')]
 class BebaubarNach
@@ -35,6 +37,8 @@ class BebaubarNach
          * optional
          *
          * @see BEBAUBAR_ATTR_* constants
+         *
+         * @description XML-Attribut zur Bebaubarkeit
          */
         #[Type('string')]
         #[XmlAttribute]

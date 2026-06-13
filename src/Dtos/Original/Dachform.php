@@ -11,42 +11,72 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Dachform
+ *
+ * @description Dachform des Gebäudes
  */
 #[XmlRoot(name: 'dachform')]
 class Dachform
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Krüppelwalmdach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KRUEPPELWALMDACH')]
         protected ?bool $krueppelwalmdach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mansarddach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MANSARDDACH')]
         protected ?bool $mansarddach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Pultdach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PULTDACH')]
         protected ?bool $pultdach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Satteldach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SATTELDACH')]
         protected ?bool $satteldach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Walmdach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WALMDACH')]
         protected ?bool $walmdach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Flachdach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLACHDACH')]
         protected ?bool $flachdach = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Pyramidendach vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PYRAMIDENDACH')]

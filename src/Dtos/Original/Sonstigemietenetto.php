@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Sonstigemietenetto
  * Ergänzenden Mietkosten, UmSt. im Attribut.
+ *
+ * @description Sonstige Netto-Miete (ohne MwSt.)
  */
 #[XmlRoot(name: 'sonstigemietenetto')]
 class Sonstigemietenetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil sonstiger Miete
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('sonstigemieteust')]

@@ -13,65 +13,84 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class VerwaltungTechn
+ *
+ * @description Technische Verwaltungsangaben des Datentransfers
  */
 #[XmlRoot(name: 'verwaltung_techn')]
 class VerwaltungTechn
 {
     public function __construct(
+        /** @description Interne Objektnummer des Anbieters */
         #[Type('string')]
         #[SerializedName('objektnr_intern')]
         protected ?string $objektnrIntern = null,
+        /** @description Externe Objektnummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('objektnr_extern')]
         protected string $objektnrExtern = '',
+        /** @description Datentransferaktion (z.B. Anlegen, Ändern, Löschen) */
         #[Type(Aktion::class)]
         #[SerializedName('aktion')]
         protected ?Aktion $aktion = null,
+        /** @description Datum, ab dem das Inserat aktiv ist */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('aktiv_von')]
         protected ?DateTime $aktivVon = null,
+        /** @description Datum, bis zu dem das Inserat aktiv ist */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('aktiv_bis')]
         protected ?DateTime $aktivBis = null,
+        /** @description OpenImmo-Objekt-ID */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('openimmo_obid')]
         protected string $openimmoObid = '',
+        /** @description Herkunftskennung des Datensatzes */
         #[Type('string')]
         #[SerializedName('kennung_ursprung')]
         protected ?string $kennungUrsprung = null,
+        /** @description Datum ab dem der Status gilt */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('stand_vom')]
         protected ?DateTime $standVom = null,
+        /** @description Allgemeine Weiterleitungseinstellung */
         #[Type('bool')]
         #[SerializedName('weitergabe_generell')]
         protected ?bool $weitergabeGenerell = null,
+        /** @description Weiterleitungseinstellung bei positivem Ergebnis */
         #[Type('string')]
         #[SerializedName('weitergabe_positiv')]
         protected ?string $weitergabePositiv = null,
+        /** @description Weiterleitungseinstellung bei negativem Ergebnis */
         #[Type('string')]
         #[SerializedName('weitergabe_negativ')]
         protected ?string $weitergabeNegativ = null,
+        /** @description Bezeichner der Gruppe */
         #[Type('string')]
         #[SerializedName('gruppen_kennung')]
         protected ?string $gruppenKennung = null,
+        /** @description Stammdaten des Datentransfers */
         #[Type(Master::class)]
         #[SerializedName('master')]
         protected ?Master $master = null,
+        /** @description Sprache des Textes (ISO-Sprachcode) */
         #[Type('string')]
         #[SerializedName('sprache')]
         protected ?string $sprache = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

@@ -12,12 +12,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Hauptmietzinsnetto
+ *
+ * @description Netto-Hauptmietzins (ohne MwSt.)
  */
 #[XmlRoot(name: 'hauptmietzinsnetto')]
 class Hauptmietzinsnetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil des Hauptmietzinses
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('hauptmietzinsust')]

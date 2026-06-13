@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class FreizeitimmobilieGewerblich
  * Objektart / Typ f. gew. Freizeitimmobilen
+ *
+ * @description Gewerbliches Freizeitobjekt
  */
 #[XmlRoot(name: 'freizeitimmobilie_gewerblich')]
 class FreizeitimmobilieGewerblich
@@ -27,6 +29,8 @@ class FreizeitimmobilieGewerblich
          * optional
          *
          * @see FREIZEIT_TYP_* constants
+         *
+         * @description Freizeitobjekttyp
          */
         #[Type('string')]
         #[XmlAttribute]

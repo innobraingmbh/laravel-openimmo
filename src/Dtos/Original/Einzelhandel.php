@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Einzelhandel
  * Objektart / Typ f. Handel
+ *
+ * @description Gewerbeobjekt vom Typ Einzelhandel
  */
 #[XmlRoot(name: 'einzelhandel')]
 class Einzelhandel
@@ -39,6 +41,8 @@ class Einzelhandel
          * optional
          *
          * @see HANDEL_TYP_* constants
+         *
+         * @description Typ des Handelsgewerbes (z.B. Einzelhandel, Großhandel)
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -12,32 +12,54 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Serviceleistungen
  * Welche Serviceleistungen werden angeboten? Optionen kombinierbar
+ *
+ * @description Serviceleistungen der Immobilie oder des Anbieters
  */
 #[XmlRoot(name: 'serviceleistungen')]
 class Serviceleistungen
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Betreutes Wohnen möglich
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BETREUTES_WOHNEN')]
         protected ?bool $betreutesWohnen = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Catering-Service vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('CATERING')]
         protected ?bool $catering = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Reinigungsservice vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('REINIGUNG')]
         protected ?bool $reinigung = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Einkaufsmöglichkeiten in der Nähe
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('EINKAUF')]
         protected ?bool $einkauf = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Sicherheitsdienst vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WACHDIENST')]

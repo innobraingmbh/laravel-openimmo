@@ -11,32 +11,54 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Ausbaustufe
+ *
+ * @description Ausbaustufe des Gebäudes
  */
 #[XmlRoot(name: 'ausbaustufe')]
 class Ausbaustufe
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Fertighaus
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAUSATZHAUS')]
         protected ?bool $bausatzhaus = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Haus ist ausbaufähig
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('AUSBAUHAUS')]
         protected ?bool $ausbauhaus = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Schlüsselfertig mit Keller
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
         protected ?bool $schluesselfertigmitkeller = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Schlüsselfertig ohne Bodenplatte
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
         protected ?bool $schluesselfertigohnebodenplatte = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Schlüsselfertig mit Bodenplatte
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]

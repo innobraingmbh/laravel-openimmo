@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Geschlecht
  * Soll das Objekt nur an Frauen bzw. nur an Männer vermietet werden,
  *  fehlende Angabe wird als 'Ja' interpretiert
+ *
+ * @description Geschlechtsangabe einer Person
  */
 #[XmlRoot(name: 'geschlecht')]
 class Geschlecht
@@ -28,6 +30,8 @@ class Geschlecht
          * optional
          *
          * @see GESCHL_ATTR_* constants
+         *
+         * @description XML-Attribut zur Geschlechtsangabe
          */
         #[Type('string')]
         #[XmlAttribute]

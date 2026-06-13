@@ -12,27 +12,45 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Nutzungsart
  * nutzungsart
+ *
+ * @description Nutzungsart der Immobilie (z.B. Wohnen, Gewerbe)
  */
 #[XmlRoot(name: 'nutzungsart')]
 class Nutzungsart
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Wohnbereich vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WOHNEN')]
         protected bool $wohnen = false,
-        /** required */
+        /**
+         * required
+         *
+         * @description Gewerbliche Nutzung vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GEWERBE')]
         protected bool $gewerbe = false,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Einrichtung oder Anlage
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ANLAGE')]
         protected ?bool $anlage = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Wohn-Arbeits-Zimmer (Kombination aus Wohnen und Arbeiten)
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAZ')]

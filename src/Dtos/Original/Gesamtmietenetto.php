@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Gesamtmietenetto
  * Summe alle Mietzins Zahlungen, UmSt. im Attribut.
+ *
+ * @description Netto-Gesamtmiete (ohne MwSt.)
  */
 #[XmlRoot(name: 'gesamtmietenetto')]
 class Gesamtmietenetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der Gesamtmiete
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtmieteust')]

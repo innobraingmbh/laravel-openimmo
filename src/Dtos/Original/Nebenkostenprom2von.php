@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Nebenkostenprom2von
  * Angaben bei Gewerbe Miete,UmSt. im Attribut.
+ *
+ * @description Nebenkosten pro Quadratmeter ab einem bestimmten Wert
  */
 #[XmlRoot(name: 'nebenkostenprom2von')]
 class Nebenkostenprom2von
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Nebenkosten pro Quadratmeter bis zu einem Höchstwert
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nebenkostenprom2bis')]

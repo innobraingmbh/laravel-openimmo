@@ -12,11 +12,14 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedExtend
+ *
+ * @description Benutzerdefinierte Erweiterung der OpenImmo-Daten
  */
 #[XmlRoot(name: 'user_defined_extend')]
 class UserDefinedExtend
 {
     public function __construct(
+        /** @description Datenfeld */
         #[XmlList(entry: 'feld', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Feld>')]
         #[SkipWhenEmpty]

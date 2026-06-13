@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Nettomieteprom2von
  * Angaben bei Gewerbe Miete, UmSt. im Attribut.
+ *
+ * @description Netto-Miete pro Quadratmeter ab einem Mindestwert
  */
 #[XmlRoot(name: 'nettomieteprom2von')]
 class Nettomieteprom2von
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Nettomiete pro Quadratmeter bis zu einem Höchstwert
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nettomieteprom2bis')]

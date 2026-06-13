@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AussenCourtage
  * Courtage, die der Kunde zu zahlen hat, als Betrag in ? / % / MM, daher Textfeld
+ *
+ * @description Außenprovision (Käuferprovision) für die Immobilie
  */
 #[XmlRoot(name: 'aussen_courtage')]
 class AussenCourtage
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Preis inkl. Mehrwertsteuer
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]

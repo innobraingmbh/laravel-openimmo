@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Anhang
  * Element für Anhänge
+ *
+ * @description Einzelner Anhang (Datei) der Immobilie
  */
 #[XmlRoot(name: 'anhang')]
 class Anhang
@@ -58,6 +60,8 @@ class Anhang
          * required
          *
          * @see LOCATION_* constants
+         *
+         * @description Lagebeschreibung der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]
@@ -67,21 +71,27 @@ class Anhang
          * optional
          *
          * @see GRUPPE_* constants
+         *
+         * @description Gruppe oder Kategorie
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]
         protected string $gruppe = '',
+        /** @description Titel des Anhangs */
         #[Type('string')]
         #[SerializedName('anhangtitel')]
         protected ?string $anhangtitel = null,
+        /** @description Dateiformat des Anhangs */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('format')]
         protected string $format = '',
+        /** @description Prüfinformation */
         #[Type(Check::class)]
         #[SerializedName('check')]
         protected ?Check $check = null,
+        /** @description Datenbehälter */
         #[Type(Daten::class)]
         #[SerializedName('daten')]
         protected ?Daten $daten = null

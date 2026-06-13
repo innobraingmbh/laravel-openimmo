@@ -12,47 +12,62 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Geo
+ *
+ * @description Geografische und adressbasierte Angaben der Immobilie
  */
 #[XmlRoot(name: 'geo')]
 class Geo
 {
     public function __construct(
+        /** @description Postleitzahl der Immobilie */
         #[Type('string')]
         #[SerializedName('plz')]
         protected ?string $plz = null,
+        /** @description Stadt oder Ort der Immobilie */
         #[Type('string')]
         #[SerializedName('ort')]
         protected ?string $ort = null,
+        /** @description GPS-Koordinaten der Immobilie */
         #[Type(Geokoordinaten::class)]
         #[SerializedName('geokoordinaten')]
         protected ?Geokoordinaten $geokoordinaten = null,
+        /** @description Straße der Immobilie */
         #[Type('string')]
         #[SerializedName('strasse')]
         protected ?string $strasse = null,
+        /** @description Hausnummer der Immobilie */
         #[Type('string')]
         #[SerializedName('hausnummer')]
         protected ?string $hausnummer = null,
+        /** @description Bundesland der Immobilie */
         #[Type('string')]
         #[SerializedName('bundesland')]
         protected ?string $bundesland = null,
+        /** @description Land der Immobilie */
         #[Type(Land::class)]
         #[SerializedName('land')]
         protected ?Land $land = null,
+        /** @description Amtlicher Gemeindeschlüssel (AGS) */
         #[Type('string')]
         #[SerializedName('gemeindecode')]
         protected ?string $gemeindecode = null,
+        /** @description Flurstück-Flur des Grundstücks */
         #[Type('string')]
         #[SerializedName('flur')]
         protected ?string $flur = null,
+        /** @description Flurstücknummer des Grundstücks */
         #[Type('string')]
         #[SerializedName('flurstueck')]
         protected ?string $flurstueck = null,
+        /** @description Gemarkung des Grundstücks */
         #[Type('string')]
         #[SerializedName('gemarkung')]
         protected ?string $gemarkung = null,
         /**
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
+         *
+         * @description Stockwerk der Wohnung im Gebäude
          */
         #[Type('int')]
         #[SerializedName('etage')]
@@ -60,44 +75,57 @@ class Geo
         /**
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
+         *
+         * @description Gesamte Stockwerkanzahl des Gebäudes
          */
         #[Type('int')]
         #[SerializedName('anzahl_etagen')]
         protected ?int $anzahlEtagen = null,
+        /** @description Lage der Wohnung im Gebäude */
         #[Type(LageImBau::class)]
         #[SerializedName('lage_im_bau')]
         protected ?LageImBau $lageImBau = null,
+        /** @description Wohnungsnummer innerhalb des Gebäudes */
         #[Type('string')]
         #[SerializedName('wohnungsnr')]
         protected ?string $wohnungsnr = null,
+        /** @description Lagegebiet der Immobilie */
         #[Type(LageGebiet::class)]
         #[SerializedName('lage_gebiet')]
         protected ?LageGebiet $lageGebiet = null,
+        /** @description Regionaler Zusatz zur Ortsangabe (z.B. Stadtteil) */
         #[Type('string')]
         #[SerializedName('regionaler_zusatz')]
         protected ?string $regionalerZusatz = null,
+        /** @description Makrokarte (Übersichtskarte) vorhanden */
         #[Type('bool')]
         #[SerializedName('karten_makro')]
         protected ?bool $kartenMakro = null,
+        /** @description Mikrokarte (Detailkarte) vorhanden */
         #[Type('bool')]
         #[SerializedName('karten_mikro')]
         protected ?bool $kartenMikro = null,
+        /** @description Virtuelle Tour der Immobilie vorhanden */
         #[Type('bool')]
         #[SerializedName('virtuelletour')]
         protected ?bool $virtuelletour = null,
+        /** @description Luftbilder der Immobilie vorhanden */
         #[Type('bool')]
         #[SerializedName('luftbildern')]
         protected ?bool $luftbildern = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

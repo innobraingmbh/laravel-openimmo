@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LageGebiet
  * Lage Gebiet, Optionen nicht kombinierbar
+ *
+ * @description Lagegebiet der Immobilie (z.B. Stadtlage, Randlage)
  */
 #[XmlRoot(name: 'lage_gebiet')]
 class LageGebiet
@@ -47,6 +49,8 @@ class LageGebiet
          * optional
          *
          * @see GEBIETE_* constants
+         *
+         * @description Flächenangaben der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]

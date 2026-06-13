@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Evbnetto
  * Erhaltungs- und Verbesserungsbeitrag. Ähnlich Instanthaltungsrücklage, UmSt. im Attribut.
+ *
+ * @description Netto-Einheitswertbescheid (EVB)
  */
 #[XmlRoot(name: 'evbnetto')]
 class Evbnetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteuer auf den Einheitswert
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('evbust')]

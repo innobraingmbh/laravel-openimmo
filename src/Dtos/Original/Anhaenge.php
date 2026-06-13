@@ -12,26 +12,32 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Anhaenge
+ *
+ * @description Liste aller Anhänge der Immobilie
  */
 #[XmlRoot(name: 'anhaenge')]
 class Anhaenge
 {
     public function __construct(
+        /** @description Anhang (Datei) der Immobilie */
         #[XmlList(entry: 'anhang', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Anhang>')]
         #[SkipWhenEmpty]
         #[SerializedName('anhang')]
         protected array $anhang = [],
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

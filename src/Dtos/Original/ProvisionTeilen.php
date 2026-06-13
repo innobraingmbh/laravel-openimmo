@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ProvisionTeilen
  * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
+ *
+ * @description Aufteilung der Maklerprovision zwischen Käufer und Verkäufer
  */
 #[XmlRoot(name: 'provision_teilen')]
 class ProvisionTeilen
@@ -28,6 +30,8 @@ class ProvisionTeilen
          * optional
          *
          * @see WERT_* constants
+         *
+         * @description Wert oder Bewertung der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Parken
  * Objektart für diverse Parkplatz Angaben
+ *
+ * @description Stellplatz- oder Parkflächen-Immobilie
  */
 #[XmlRoot(name: 'parken')]
 class Parken
@@ -41,6 +43,8 @@ class Parken
          * optional
          *
          * @see PARKEN_TYP_* constants
+         *
+         * @description Art des Stellplatzes
          */
         #[Type('string')]
         #[XmlAttribute]

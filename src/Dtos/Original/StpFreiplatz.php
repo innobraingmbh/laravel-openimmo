@@ -11,17 +11,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class StpFreiplatz
+ *
+ * @description Stellplatz vom Typ Außenstellplatz (Freiplatz)
  */
 #[XmlRoot(name: 'stp_freiplatz')]
 class StpFreiplatz
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mietpreis des Stellplatzes
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzmiete')]
         protected ?float $stellplatzmiete = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Kaufpreis des Stellplatzes
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzkaufpreis')]
@@ -30,6 +40,8 @@ class StpFreiplatz
          * optional
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
+         *
+         * @description Anzahl oder Menge
          */
         #[Type('int')]
         #[XmlAttribute]

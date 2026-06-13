@@ -16,6 +16,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Objekte befinden sich jetzt unter Element parken.
  * Aus kompatibilitätegründen bleiben die Attribute NOCH! erhalten.
  * In nachfolgenden Versionen wird die Unterstützung an dieser Stelle eingestellt.
+ *
+ * @description Sonstiger Immobilientyp
  */
 #[XmlRoot(name: 'sonstige')]
 class Sonstige
@@ -33,6 +35,8 @@ class Sonstige
          * optional
          *
          * @see SONSTIGE_TYP_* constants
+         *
+         * @description Typ des sonstigen Objekts
          */
         #[Type('string')]
         #[XmlAttribute]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BueroPraxen
  * Objektart / Typ f. Büro/Praxen
+ *
+ * @description Gewerbeobjekt vom Typ Büro oder Praxis
  */
 #[XmlRoot(name: 'buero_praxen')]
 class BueroPraxen
@@ -41,6 +43,8 @@ class BueroPraxen
          * optional
          *
          * @see BUERO_TYP_* constants
+         *
+         * @description Typ des Büro- oder Praxisobjekts
          */
         #[Type('string')]
         #[XmlAttribute]

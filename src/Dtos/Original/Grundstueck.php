@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Grundstueck
  * Objektart / Typ f. Grundstücke
+ *
+ * @description Grundstücksobjekt mit Typangabe
  */
 #[XmlRoot(name: 'grundstueck')]
 class Grundstueck
@@ -39,6 +41,8 @@ class Grundstueck
          * optional
          *
          * @see GRUNDST_TYP_* constants
+         *
+         * @description Typ des Grundstücksobjekts
          */
         #[Type('string')]
         #[XmlAttribute]

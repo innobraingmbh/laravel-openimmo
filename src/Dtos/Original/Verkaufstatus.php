@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Verkaufstatus
  * Anzeige ob z.B schon verkauft, Optionen nicht kombinierbar
+ *
+ * @description Verkaufsstatus der Immobilie (z.B. verfügbar, reserviert, verkauft)
  */
 #[XmlRoot(name: 'verkaufstatus')]
 class Verkaufstatus
@@ -27,6 +29,8 @@ class Verkaufstatus
          * optional
          *
          * @see STAND_* constants
+         *
+         * @description Status der Immobilie oder des Datentransfers
          */
         #[Type('string')]
         #[XmlAttribute]

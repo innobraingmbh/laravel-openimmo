@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Provisionnetto
  * Wenn unterschiedliche Provisionen anfallen, dann hier Netto und UmSt. einzeln
+ *
+ * @description Nettoprovision (ohne MwSt.)
  */
 #[XmlRoot(name: 'provisionnetto')]
 class Provisionnetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der Maklerprovision
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('provisionust')]

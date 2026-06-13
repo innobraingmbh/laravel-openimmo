@@ -12,17 +12,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Fahrstuhl
  * Welche Art von Fahrstuhl, Aufzug, Lift - Mehrfachnennung möglich
+ *
+ * @description Fahrstuhl- oder Aufzugsangaben der Immobilie
  */
 #[XmlRoot(name: 'fahrstuhl')]
 class Fahrstuhl
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Anzahl der Personen
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PERSONEN')]
         protected ?bool $personen = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Grundstücksbelastungen (z.B. Grundpfandrechte)
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LASTEN')]

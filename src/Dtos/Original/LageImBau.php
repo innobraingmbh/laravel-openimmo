@@ -12,27 +12,45 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LageImBau
  * Angabe über die Lage der Immobilie im Gesamtgebäude, Optionen kombinierbar
+ *
+ * @description Position der Wohnung im Gebäude (z.B. links, rechts, Mitte)
  */
 #[XmlRoot(name: 'lage_im_bau')]
 class LageImBau
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Lage links im Gebäude
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINKS')]
         protected ?bool $links = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Lage rechts im Gebäude
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('RECHTS')]
         protected ?bool $rechts = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Frontseitige Ausrichtung oder Fassade
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('VORNE')]
         protected ?bool $vorne = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Rückseitige Ausrichtung
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HINTEN')]

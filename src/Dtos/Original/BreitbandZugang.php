@@ -12,17 +12,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BreitbandZugang
  * Informationen über die Breitbandmöglichkeiten.
+ *
+ * @description Angaben zum Breitbandanschluss der Immobilie
  */
 #[XmlRoot(name: 'breitband_zugang')]
 class BreitbandZugang
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Typ oder Art
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
         protected ?string $art = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Geschwindigkeit (z.B. Breitbandgeschwindigkeit in Mbit/s)
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('speed')]

@@ -12,26 +12,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Versteigerung
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
+ *
+ * @description Zwangsversteigerungsinformationen der Immobilie
  */
 #[XmlRoot(name: 'versteigerung')]
 class Versteigerung
 {
     public function __construct(
+        /** @description Zwangsverkauf oder Notverkauf */
         #[Type('bool')]
         #[SerializedName('zwangsversteigerung')]
         protected ?bool $zwangsversteigerung = null,
+        /** @description Aktenzeichen der Zwangsversteigerung */
         #[Type('string')]
         #[SerializedName('aktenzeichen')]
         protected ?string $aktenzeichen = null,
+        /** @description Datum des Zwangsverkaufs */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $zvtermin = null,
+        /** @description Zusätzliches Datum */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $zusatztermin = null,
+        /** @description Zuständiges Amtsgericht */
         #[Type('string')]
         #[SerializedName('amtsgericht')]
         protected ?string $amtsgericht = null,
+        /** @description Marktwert der Immobilie */
         #[Type('float')]
         #[SerializedName('verkehrswert')]
         protected ?float $verkehrswert = null

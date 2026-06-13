@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class LandUndForstwirtschaft
  * Objektart / Typ f. Land-/Forstwirtschaft
+ *
+ * @description Immobilie des Typs Land- und Forstwirtschaft
  */
 #[XmlRoot(name: 'land_und_forstwirtschaft')]
 class LandUndForstwirtschaft
@@ -49,6 +51,8 @@ class LandUndForstwirtschaft
          * optional
          *
          * @see LAND_TYP_* constants
+         *
+         * @description ISO-Länderkürzel
          */
         #[Type('string')]
         #[XmlAttribute]

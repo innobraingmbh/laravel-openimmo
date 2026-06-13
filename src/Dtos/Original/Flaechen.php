@@ -12,160 +12,214 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Flaechen
+ *
+ * @description Flächenangaben der Immobilie
  */
 #[XmlRoot(name: 'flaechen')]
 class Flaechen
 {
     public function __construct(
+        /** @description Wohnfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('wohnflaeche')]
         protected ?float $wohnflaeche = null,
+        /** @description Nutzfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('nutzflaeche')]
         protected ?float $nutzflaeche = null,
+        /** @description Gesamtfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('gesamtflaeche')]
         protected ?float $gesamtflaeche = null,
+        /** @description Ladenfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('ladenflaeche')]
         protected ?float $ladenflaeche = null,
+        /** @description Lagerfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('lagerflaeche')]
         protected ?float $lagerflaeche = null,
+        /** @description Verkaufsfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('verkaufsflaeche')]
         protected ?float $verkaufsflaeche = null,
+        /** @description Freifläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('freiflaeche')]
         protected ?float $freiflaeche = null,
+        /** @description Bürofläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('bueroflaeche')]
         protected ?float $bueroflaeche = null,
+        /** @description Teilbürofläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('bueroteilflaeche')]
         protected ?float $bueroteilflaeche = null,
+        /** @description Anteil der Fensterfront an der Fassade */
         #[Type('float')]
         #[SerializedName('fensterfront')]
         protected ?float $fensterfront = null,
+        /** @description Verwaltungsfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('verwaltungsflaeche')]
         protected ?float $verwaltungsflaeche = null,
+        /** @description Gastronomiefläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('gastroflaeche')]
         protected ?float $gastroflaeche = null,
+        /** @description Grundflächenzahl (GRZ) des Grundstücks */
         #[Type('string')]
         #[SerializedName('grz')]
         protected ?string $grz = null,
+        /** @description Geschossflächenzahl (GFZ) des Grundstücks */
         #[Type('string')]
         #[SerializedName('gfz')]
         protected ?string $gfz = null,
+        /** @description Baumassenzahl (BMZ) des Grundstücks */
         #[Type('string')]
         #[SerializedName('bmz')]
         protected ?string $bmz = null,
+        /** @description Brutto-Grundfläche (BGF) des Gebäudes */
         #[Type('string')]
         #[SerializedName('bgf')]
         protected ?string $bgf = null,
+        /** @description Grundstücksfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('grundstuecksflaeche')]
         protected ?float $grundstuecksflaeche = null,
+        /** @description Sonstige Fläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('sonstflaeche')]
         protected ?float $sonstflaeche = null,
+        /** @description Anzahl der Zimmer */
         #[Type('float')]
         #[SerializedName('anzahl_zimmer')]
         protected ?float $anzahlZimmer = null,
+        /** @description Anzahl der Schlafzimmer */
         #[Type('float')]
         #[SerializedName('anzahl_schlafzimmer')]
         protected ?float $anzahlSchlafzimmer = null,
+        /** @description Anzahl der Badezimmer */
         #[Type('float')]
         #[SerializedName('anzahl_badezimmer')]
         protected ?float $anzahlBadezimmer = null,
+        /** @description Anzahl der separaten WCs */
         #[Type('float')]
         #[SerializedName('anzahl_sep_wc')]
         protected ?float $anzahlSepWc = null,
+        /** @description Anzahl der Balkone */
         #[Type('float')]
         #[SerializedName('anzahl_balkone')]
         protected ?float $anzahlBalkone = null,
+        /** @description Anzahl der Terrassen */
         #[Type('float')]
         #[SerializedName('anzahl_terrassen')]
         protected ?float $anzahlTerrassen = null,
+        /** @description Anzahl der Loggien */
         #[Type('float')]
         #[SerializedName('anzahl_logia')]
         protected ?float $anzahlLogia = null,
+        /** @description Balkon- oder Terrassenfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('balkon_terrasse_flaeche')]
         protected ?float $balkonTerrasseFlaeche = null,
+        /** @description Anzahl der Wohn- und Schlafzimmer */
         #[Type('float')]
         #[SerializedName('anzahl_wohn_schlafzimmer')]
         protected ?float $anzahlWohnSchlafzimmer = null,
+        /** @description Gartenfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('gartenflaeche')]
         protected ?float $gartenflaeche = null,
+        /** @description Kellerfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('kellerflaeche')]
         protected ?float $kellerflaeche = null,
+        /** @description Fensterfront in Quadratmetern */
         #[Type('float')]
         #[SerializedName('fensterfront_qm')]
         protected ?float $fensterfrontQm = null,
+        /** @description Grundstücksfront (Straßenfront) in Metern */
         #[Type('float')]
         #[SerializedName('grundstuecksfront')]
         protected ?float $grundstuecksfront = null,
+        /** @description Dachbodenfläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('dachbodenflaeche')]
         protected ?float $dachbodenflaeche = null,
+        /** @description Fläche ab der die Immobilie teilbar ist in Quadratmetern */
         #[Type('float')]
         #[SerializedName('teilbar_ab')]
         protected ?float $teilbarAb = null,
+        /** @description Beheizte Fläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('beheizbare_flaeche')]
         protected ?float $beheizbareFlaeche = null,
-        /** Minimum value (inclusive): 1 */
+        /**
+         * Minimum value (inclusive): 1
+         *
+         * @description Anzahl der Stellplätze
+         */
         #[Type('int')]
         #[SerializedName('anzahl_stellplaetze')]
         protected ?int $anzahlStellplaetze = null,
+        /** @description Anzahl der Sitzplätze im Gastraum */
         #[Type('float')]
         #[SerializedName('plaetze_gastraum')]
         protected ?float $plaetzeGastraum = null,
+        /** @description Anzahl der Betten */
         #[Type('float')]
         #[SerializedName('anzahl_betten')]
         protected ?float $anzahlBetten = null,
+        /** @description Anzahl der Tagungsräume */
         #[Type('float')]
         #[SerializedName('anzahl_tagungsraeume')]
         protected ?float $anzahlTagungsraeume = null,
+        /** @description Vermietbare Fläche in Quadratmetern */
         #[Type('float')]
         #[SerializedName('vermietbare_flaeche')]
         protected ?float $vermietbareFlaeche = null,
+        /** @description Anzahl der Wohneinheiten */
         #[Type('float')]
         #[SerializedName('anzahl_wohneinheiten')]
         protected ?float $anzahlWohneinheiten = null,
+        /** @description Anzahl der Gewerbeeinheiten */
         #[Type('float')]
         #[SerializedName('anzahl_gewerbeeinheiten')]
         protected ?float $anzahlGewerbeeinheiten = null,
+        /** @description Einliegerwohnung vorhanden */
         #[Type('bool')]
         #[SerializedName('einliegerwohnung')]
         protected ?bool $einliegerwohnung = null,
+        /** @description Kubatur (Rauminhalt) des Gebäudes in Kubikmetern */
         #[Type('float')]
         #[SerializedName('kubatur')]
         protected ?float $kubatur = null,
+        /** @description Geschossflächenzahl (GFZ) des Grundstücks */
         #[Type('float')]
         #[SerializedName('ausnuetzungsziffer')]
         protected ?float $ausnuetzungsziffer = null,
+        /** @description Fläche ab einem Mindestwert in Quadratmetern */
         #[Type('float')]
         #[SerializedName('flaechevon')]
         protected ?float $flaechevon = null,
+        /** @description Fläche bis zu einem Höchstwert in Quadratmetern */
         #[Type('float')]
         #[SerializedName('flaechebis')]
         protected ?float $flaechebis = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

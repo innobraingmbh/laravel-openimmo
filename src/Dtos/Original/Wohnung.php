@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Wohnung
  * Objektart / Typ f. Wohnungen
+ *
+ * @description Wohnungsobjekt mit Typangabe
  */
 #[XmlRoot(name: 'wohnung')]
 class Wohnung
@@ -49,6 +51,8 @@ class Wohnung
          * optional
          *
          * @see WOHNUNGTYP_* constants
+         *
+         * @description Wohnungstyp (z.B. Dachgeschoss, Maisonette, Erdgeschoss)
          */
         #[Type('string')]
         #[XmlAttribute]

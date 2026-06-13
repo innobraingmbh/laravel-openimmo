@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Alter
  * Ist es ein Neu- oder Altbau, Optionen nicht kombinierbar
+ *
+ * @description Altersangabe der Immobilie oder des Gebäudes
  */
 #[XmlRoot(name: 'alter')]
 class Alter
@@ -25,6 +27,8 @@ class Alter
          * optional
          *
          * @see ALTER_ATTR_* constants
+         *
+         * @description XML-Attribut zur Altersangabe
          */
         #[Type('string')]
         #[XmlAttribute]

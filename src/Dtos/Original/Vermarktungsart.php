@@ -12,27 +12,45 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Vermarktungsart
  * Vermarktungsart, Optionen kombinierbar, Kauf + Miete
+ *
+ * @description Vermarktungsart der Immobilie (Kauf oder Miete)
  */
 #[XmlRoot(name: 'vermarktungsart')]
 class Vermarktungsart
 {
     public function __construct(
-        /** required */
+        /**
+         * required
+         *
+         * @description Kaufobjekt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAUF')]
         protected bool $kauf = false,
-        /** required */
+        /**
+         * required
+         *
+         * @description Miet- oder Pachtangabe
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MIETE_PACHT')]
         protected bool $mietePacht = false,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Erbpacht der Immobilie
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERBPACHT')]
         protected ?bool $erbpacht = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Leasing der Immobilie möglich
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LEASING')]

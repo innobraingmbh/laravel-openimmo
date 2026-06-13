@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Heizkostennetto
  * Die Heizkosten einer Einheit als Nettowert. Die Umsatzsteuer optional im Attribut
+ *
+ * @description Netto-Heizkosten (ohne MwSt.)
  */
 #[XmlRoot(name: 'heizkostennetto')]
 class Heizkostennetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der Heizkosten
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('heizkostenust')]

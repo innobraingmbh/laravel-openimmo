@@ -14,6 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Check
  * Angabe von Daten für die Prüfung auf ein Update
+ *
+ * @description Prüfinformation im Datentransferprozess
  */
 #[XmlRoot(name: 'check')]
 class Check
@@ -29,6 +31,8 @@ class Check
          * required
          *
          * @see CTYPE_* constants
+         *
+         * @description MIME-Typ des Anhangs
          */
         #[Type('string')]
         #[XmlAttribute]

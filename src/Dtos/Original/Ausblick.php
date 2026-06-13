@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Ausblick
  * Welcher Ausblick ist vorhanden, Optionen nicht kombinierbar
+ *
+ * @description Aussichtsangaben der Immobilie (z.B. Bergblick, Seeblick)
  */
 #[XmlRoot(name: 'ausblick')]
 class Ausblick
@@ -29,6 +31,8 @@ class Ausblick
          * optional
          *
          * @see BLICK_* constants
+         *
+         * @description Aussicht oder Blickrichtung der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]

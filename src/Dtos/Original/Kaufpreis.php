@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Kaufpreis
  * Gesamt- (Angebots-)Kaufpreis der Immobilie. Wenn "Auf Anfrage" dann Wert = 0 und Attribut auf TRUE
+ *
+ * @description Kaufpreis der Immobilie
  */
 #[XmlRoot(name: 'kaufpreis')]
 class Kaufpreis
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Preis auf Anfrage
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('auf_anfrage')]

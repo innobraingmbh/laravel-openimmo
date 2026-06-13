@@ -10,6 +10,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedAnyfield
+ *
+ * @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt
  */
 #[XmlRoot(name: 'user_defined_anyfield')]
 class UserDefinedAnyfield

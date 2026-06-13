@@ -11,52 +11,90 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Energietyp
+ *
+ * @description Energieeffizienztyp der Immobilie (z.B. Niedrigenergie, Passivhaus)
  */
 #[XmlRoot(name: 'energietyp')]
 class Energietyp
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Passivhaus-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PASSIVHAUS')]
         protected ?bool $passivhaus = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Niedrigenergiehaus-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NIEDRIGENERGIE')]
         protected ?bool $niedrigenergie = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Neubaustandard der Immobilie
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NEUBAUSTANDARD')]
         protected ?bool $neubaustandard = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description KfW-40-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW40')]
         protected ?bool $kfw40 = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description KfW-60-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW60')]
         protected ?bool $kfw60 = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description KfW-55-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW55')]
         protected ?bool $kfw55 = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description KfW-70-Standard erfüllt
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW70')]
         protected ?bool $kfw70 = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description MinEnergie-Bauweise vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIEBAUWEISE')]
         protected ?bool $minergiebauweise = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description MinEnergieHaus-Zertifizierung vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIE_ZERTIFIZIERT')]

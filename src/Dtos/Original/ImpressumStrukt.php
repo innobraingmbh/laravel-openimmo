@@ -12,47 +12,59 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ImpressumStrukt
  * Ergänzung ($V120)
+ *
+ * @description Impressumsangaben des Anbieters
  */
 #[XmlRoot(name: 'impressum_strukt')]
 class ImpressumStrukt
 {
     public function __construct(
+        /** @description Name des Unternehmens */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('firmenname')]
         protected string $firmenname = '',
+        /** @description Unternehmensadresse des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('firmenanschrift')]
         protected string $firmenanschrift = '',
+        /** @description Telefonnummer */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('telefon')]
         protected string $telefon = '',
+        /** @description Bevollmächtigter Vertreter des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('vertretungsberechtigter')]
         protected string $vertretungsberechtigter = '',
+        /** @description Zuständige Aufsichtsbehörde des Maklers */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $berufsaufsichtsbehoerde = '',
+        /** @description Handelsregisterangaben des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('handelsregister')]
         protected string $handelsregister = '',
+        /** @description Handelsregisternummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('handelsregister_nr')]
         protected string $handelsregisterNr = '',
+        /** @description Umsatzsteuer-Identifikationsnummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('umsst-id')]
         protected string $umsstId = '',
+        /** @description Steuernummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('steuernummer')]
         protected string $steuernummer = '',
+        /** @description Zusatzinformation */
         #[Type('string')]
         #[SkipWhenEmpty]
         #[SerializedName('weiteres')]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ErschliessungUmfang
  * Detailbeschreibung der Massnahmen
+ *
+ * @description Umfang der Erschließung des Grundstücks
  */
 #[XmlRoot(name: 'erschliessung_umfang')]
 class ErschliessungUmfang
@@ -29,6 +31,8 @@ class ErschliessungUmfang
          * optional
          *
          * @see ERSCHL_ATTR_* constants
+         *
+         * @description XML-Attribut zum Erschließungszustand
          */
         #[Type('string')]
         #[XmlAttribute]

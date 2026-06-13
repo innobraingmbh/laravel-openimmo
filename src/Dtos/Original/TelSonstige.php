@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class TelSonstige
+ *
+ * @description Weitere Telefonnummer einer Kontaktperson
  */
 #[XmlRoot(name: 'tel_sonstige')]
 class TelSonstige
@@ -33,12 +35,18 @@ class TelSonstige
          * optional
          *
          * @see TELEFONART_* constants
+         *
+         * @description Typ der Telefonnummer
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('telefonart')]
         protected string $telefonart = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Bemerkung oder Hinweis
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

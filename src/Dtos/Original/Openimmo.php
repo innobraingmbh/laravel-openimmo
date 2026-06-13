@@ -14,24 +14,30 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Openimmo
  * Dokument Element
  * Root Element
+ *
+ * @description Wurzelelement des OpenImmo-Datenformats
  */
 #[XmlRoot(name: 'openimmo')]
 class Openimmo
 {
     public function __construct(
+        /** @description Datentransfer-Metadaten */
         #[Type(Uebertragung::class)]
         #[SerializedName('uebertragung')]
         protected ?Uebertragung $uebertragung = null,
+        /** @description Anbieter (Makler oder Eigentümer) der Immobilie */
         #[XmlList(entry: 'anbieter', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Anbieter>')]
         #[SkipWhenEmpty]
         #[SerializedName('anbieter')]
         protected array $anbieter = [],
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]

@@ -12,56 +12,72 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ZustandAngaben
+ *
+ * @description Zustandsangaben der Immobilie (Baujahr, Modernisierung, Energieausweis)
  */
 #[XmlRoot(name: 'zustand_angaben')]
 class ZustandAngaben
 {
     public function __construct(
+        /** @description Baujahr der Immobilie */
         #[Type('string')]
         #[SerializedName('baujahr')]
         protected ?string $baujahr = null,
+        /** @description Jahr der letzten Modernisierung */
         #[Type('string')]
         #[SerializedName('letztemodernisierung')]
         protected ?string $letztemodernisierung = null,
+        /** @description Zustand der Immobilie */
         #[Type(Zustand::class)]
         #[SerializedName('zustand')]
         protected ?Zustand $zustand = null,
+        /** @description Altersangabe der Immobilie */
         #[Type(Alter::class)]
         #[SerializedName('alter')]
         protected ?Alter $alter = null,
+        /** @description Bebaubarkeit gemäß Baurecht */
         #[Type(BebaubarNach::class)]
         #[SerializedName('bebaubar_nach')]
         protected ?BebaubarNach $bebaubarNach = null,
+        /** @description Erschließungszustand des Grundstücks */
         #[Type(Erschliessung::class)]
         #[SerializedName('erschliessung')]
         protected ?Erschliessung $erschliessung = null,
+        /** @description Umfang der Erschließung des Grundstücks */
         #[Type(ErschliessungUmfang::class)]
         #[SerializedName('erschliessung_umfang')]
         protected ?ErschliessungUmfang $erschliessungUmfang = null,
+        /** @description Bauzone des Grundstücks */
         #[Type('string')]
         #[SerializedName('bauzone')]
         protected ?string $bauzone = null,
+        /** @description Altlasten des Grundstücks */
         #[Type('string')]
         #[SerializedName('altlasten')]
         protected ?string $altlasten = null,
+        /** @description Energieausweis der Immobilie */
         #[XmlList(entry: 'energiepass', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Energiepass>')]
         #[SkipWhenEmpty]
         #[SerializedName('energiepass')]
         protected array $energiepass = [],
+        /** @description Verkaufsstatus der Immobilie */
         #[Type(Verkaufstatus::class)]
         #[SerializedName('verkaufstatus')]
         protected ?Verkaufstatus $verkaufstatus = null,
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

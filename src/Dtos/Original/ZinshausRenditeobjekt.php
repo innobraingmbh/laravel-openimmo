@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ZinshausRenditeobjekt
  * Objektyp / Typ f. Zins und Renditehäuser
+ *
+ * @description Mehrfamilienhaus als Anlageobjekt
  */
 #[XmlRoot(name: 'zinshaus_renditeobjekt')]
 class ZinshausRenditeobjekt
@@ -47,6 +49,8 @@ class ZinshausRenditeobjekt
          * optional
          *
          * @see ZINS_TYP_* constants
+         *
+         * @description Art des Interessenten (z.B. Käufer, Mieter)
          */
         #[Type('string')]
         #[XmlAttribute]

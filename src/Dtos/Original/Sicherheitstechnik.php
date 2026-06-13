@@ -12,22 +12,36 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Sicherheitstechnik
  * Welche Sicherheitstechnik ist geboten, Optionen kombinierbar
+ *
+ * @description Sicherheitstechnikausstattung der Immobilie
  */
 #[XmlRoot(name: 'sicherheitstechnik')]
 class Sicherheitstechnik
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Alarmanlage vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ALARMANLAGE')]
         protected ?bool $alarmanlage = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Überwachungskamera vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAMERA')]
         protected ?bool $kamera = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Polizeirufanlage als Sicherheitstechnik vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('POLIZEIRUF')]

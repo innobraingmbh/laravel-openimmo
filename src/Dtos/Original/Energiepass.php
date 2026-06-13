@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Energiepass
  * Energiepass/Ausweis ab 7/2008 vorgeschrieben
+ *
+ * @description Energieausweis der Immobilie
  */
 #[XmlRoot(name: 'energiepass')]
 class Energiepass
@@ -35,63 +37,91 @@ class Energiepass
     public const string GEBAEUDEART_NICHTWOHN = 'nichtwohn';
 
     public function __construct(
-        /** @see EPART_* constants */
+        /**
+         * @see EPART_* constants
+         *
+         * @description Typ des Energieausweises (Bedarfs- oder Verbrauchsausweis)
+         */
         #[Type('string')]
         #[SerializedName('epart')]
         protected string $epart = '',
+        /** @description Gültigkeitsdatum des Energieausweises */
         #[Type('string')]
         #[SerializedName('gueltig_bis')]
         protected ?string $gueltigBis = null,
+        /** @description Energieverbrauchskennwert in kWh/(m²·a) */
         #[Type('string')]
         #[SerializedName('energieverbrauchkennwert')]
         protected ?string $energieverbrauchkennwert = null,
+        /** @description Warmwasser im Energieverbrauchskennwert enthalten */
         #[Type('bool')]
         #[SerializedName('mitwarmwasser')]
         protected ?bool $mitwarmwasser = null,
+        /** @description Endenergiebedarf in kWh/(m²·a) */
         #[Type('string')]
         #[SerializedName('endenergiebedarf')]
         protected ?string $endenergiebedarf = null,
+        /** @description Primärer Energieträger aus dem Energieausweis */
         #[Type('string')]
         #[SerializedName('primaerenergietraeger')]
         protected ?string $primaerenergietraeger = null,
+        /** @description Stromverbrauchswert aus dem Energieausweis */
         #[Type('string')]
         #[SerializedName('stromwert')]
         protected ?string $stromwert = null,
+        /** @description Wärmeverbrauchswert aus dem Energieausweis */
         #[Type('string')]
         #[SerializedName('waermewert')]
         protected ?string $waermewert = null,
+        /** @description Wertklasse des Energieausweises */
         #[Type('string')]
         #[SerializedName('wertklasse')]
         protected ?string $wertklasse = null,
+        /** @description Baujahr der Immobilie */
         #[Type('string')]
         #[SerializedName('baujahr')]
         protected ?string $baujahr = null,
+        /** @description Ausstellungsdatum des Energieausweises */
         #[Type("DateTime<'Y-m-d'>")]
         #[SerializedName('ausstelldatum')]
         protected ?DateTime $ausstelldatum = null,
-        /** @see JAHRGANG_* constants */
+        /**
+         * @see JAHRGANG_* constants
+         *
+         * @description Jahrgang des Energieausweises
+         */
         #[Type('string')]
         #[SerializedName('jahrgang')]
         protected string $jahrgang = '',
-        /** @see GEBAEUDEART_* constants */
+        /**
+         * @see GEBAEUDEART_* constants
+         *
+         * @description Gebäudetyp (Wohn- oder Nichtwohngebäude)
+         */
         #[Type('string')]
         #[SerializedName('gebaeudeart')]
         protected string $gebaeudeart = '',
+        /** @description Freitext zum Energieausweis */
         #[Type('string')]
         #[SerializedName('epasstext')]
         protected ?string $epasstext = null,
+        /** @description Angabe zum Gebäudeenergiegesetz 2018 */
         #[Type('string')]
         #[SerializedName('geg2018')]
         protected ?string $geg2018 = null,
+        /** @description Heizwärmebedarfswert (HWB-Wert) in kWh/(m²·a) */
         #[Type('string')]
         #[SerializedName('hwbwert')]
         protected ?string $hwbwert = null,
+        /** @description Heizwärmebedarfsklasse (HWB-Klasse) */
         #[Type('string')]
         #[SerializedName('hwbklasse')]
         protected ?string $hwbklasse = null,
+        /** @description Energieeffizienzwert (fGEE-Wert) */
         #[Type('string')]
         #[SerializedName('fgeewert')]
         protected ?string $fgeewert = null,
+        /** @description Energieeffizienzklasse (A+ bis H) */
         #[Type('string')]
         #[SerializedName('fgeeklasse')]
         protected ?string $fgeeklasse = null

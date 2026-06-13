@@ -12,37 +12,46 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Infrastruktur
+ *
+ * @description Infrastrukturangaben der Immobilie (Entfernungen, Anbindungen)
  */
 #[XmlRoot(name: 'infrastruktur')]
 class Infrastruktur
 {
     public function __construct(
+        /** @description Versorgungsanschlüsse vorhanden */
         #[Type('bool')]
         #[SerializedName('zulieferung')]
         protected ?bool $zulieferung = null,
+        /** @description Aussicht oder Blickrichtung der Immobilie */
         #[Type(Ausblick::class)]
         #[SerializedName('ausblick')]
         protected ?Ausblick $ausblick = null,
+        /** @description Entfernungsangaben zu relevanten Einrichtungen */
         #[XmlList(entry: 'distanzen', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Distanzen>')]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen')]
         protected array $distanzen = [],
+        /** @description Entfernungen zu Sportanlagen */
         #[XmlList(entry: 'distanzen_sport', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\DistanzenSport>')]
         #[SkipWhenEmpty]
         #[SerializedName('distanzen_sport')]
         protected array $distanzenSport = [],
+        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
+        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
+        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]

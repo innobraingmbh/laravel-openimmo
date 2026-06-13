@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Land
  * Land
+ *
+ * @description Landesangabe (ISO-Länderkürzel)
  */
 #[XmlRoot(name: 'land')]
 class Land
@@ -485,6 +487,8 @@ class Land
          * optional
          *
          * @see ISO_LAND_* constants
+         *
+         * @description ISO-Länderkürzel (z.B. DEU, AUT, CHE)
          */
         #[Type('string')]
         #[XmlAttribute]

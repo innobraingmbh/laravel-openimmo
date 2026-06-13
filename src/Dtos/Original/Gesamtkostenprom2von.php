@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Gesamtkostenprom2von
  * Gesamtkosten bei Gewerbeobjekten Von - Bis.
+ *
+ * @description Gesamtkosten pro Quadratmeter ab einem Mindestwert
  */
 #[XmlRoot(name: 'gesamtkostenprom2von')]
 class Gesamtkostenprom2von
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Gesamtkosten pro Quadratmeter bis zu einem Höchstwert
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtkostenprom2bis')]

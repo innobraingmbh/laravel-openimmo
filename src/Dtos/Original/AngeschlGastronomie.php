@@ -12,17 +12,27 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AngeschlGastronomie
  * Welcher Art ist die angeschlossene Gastronomie, Optionen kombinierbar
+ *
+ * @description Angeschlossene Gastronomie (z.B. Restaurant, Bar)
  */
 #[XmlRoot(name: 'angeschl_gastronomie')]
 class AngeschlGastronomie
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Hotel oder Restaurant vorhanden
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOTELRESTAURANT')]
         protected ?bool $hotelrestaurant = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Barzahlung möglich
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAR')]

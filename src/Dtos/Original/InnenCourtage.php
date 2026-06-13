@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class InnenCourtage
  * Maklercourtage, bei Vermittlungs- bzw. Nachweisgeschäften als Betrag in ? / % / MM, daher Textfeld
+ *
+ * @description Innenprovision (Verkäuferprovision) für die Immobilie
  */
 #[XmlRoot(name: 'innen_courtage')]
 class InnenCourtage
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Preis inkl. Mehrwertsteuer
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]

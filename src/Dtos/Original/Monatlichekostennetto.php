@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Monatlichekostennetto
  * Summe der Monatlichen Kosten einer Wohnung als Information für einen Käufer (Netto), Umst im Attribut.
+ *
+ * @description Monatliche Netto-Gesamtkosten (ohne MwSt.)
  */
 #[XmlRoot(name: 'monatlichekostennetto')]
 class Monatlichekostennetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der monatlichen Gesamtkosten
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('monatlichekostenust')]

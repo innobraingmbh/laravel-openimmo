@@ -11,22 +11,36 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Bauweise
+ *
+ * @description Bauweise der Immobilie
  */
 #[XmlRoot(name: 'bauweise')]
 class Bauweise
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Massivbauweise
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MASSIV')]
         protected ?bool $massiv = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Fertigteil-Bauweise
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGTEILE')]
         protected ?bool $fertigteile = null,
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Holz als Heizenergiequelle
+         */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]

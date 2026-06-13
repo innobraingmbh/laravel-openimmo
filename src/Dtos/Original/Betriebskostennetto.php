@@ -13,12 +13,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Betriebskostennetto
  * Betriebskosten eines Objektes bei Vermietun, UmSt. im Attribut
+ *
+ * @description Netto-Betriebskosten (ohne MwSt.)
  */
 #[XmlRoot(name: 'betriebskostennetto')]
 class Betriebskostennetto
 {
     public function __construct(
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Mehrwertsteueranteil der Betriebskosten
+         */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('betriebskostenust')]

@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class EmailSonstige
+ *
+ * @description Weitere E-Mail-Adresse einer Kontaktperson
  */
 #[XmlRoot(name: 'email_sonstige')]
 class EmailSonstige
@@ -29,12 +31,18 @@ class EmailSonstige
          * optional
          *
          * @see EMAILART_* constants
+         *
+         * @description Typ der E-Mail-Adresse
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('emailart')]
         protected string $emailart = '',
-        /** optional */
+        /**
+         * optional
+         *
+         * @description Bemerkung oder Hinweis
+         */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]

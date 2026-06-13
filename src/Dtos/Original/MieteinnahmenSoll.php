@@ -13,6 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MieteinnahmenSoll
  * Mieteinnahmen pro Periode, Normal-/Solleinnahmen (Ohne Periode = JAHR)
+ *
+ * @description Soll-Mieteinnahmen (angestrebte Mieteinnahmen) der Immobilie
  */
 #[XmlRoot(name: 'mieteinnahmen_soll')]
 class MieteinnahmenSoll
@@ -30,6 +32,8 @@ class MieteinnahmenSoll
          * optional
          *
          * @see PERIODE_* constants
+         *
+         * @description Zeitraum oder Periode
          */
         #[Type('string')]
         #[XmlAttribute]

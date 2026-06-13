@@ -12,6 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Gastgewerbe
  * Objektart / Typ f. Gastgewerbe
+ *
+ * @description Gewerbeobjekt vom Typ Gastronomie oder Beherbergung
  */
 #[XmlRoot(name: 'gastgewerbe')]
 class Gastgewerbe
@@ -43,6 +45,8 @@ class Gastgewerbe
          * optional
          *
          * @see GASTGEW_TYP_* constants
+         *
+         * @description Typ des Gastronomie- oder Beherbergungsobjekts
          */
         #[Type('string')]
         #[XmlAttribute]
