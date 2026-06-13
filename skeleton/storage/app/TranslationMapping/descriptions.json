@@ -459,2192 +459,2820 @@
         "View": {
             "de": "Aussichtsangaben der Immobilie (z.B. Bergblick, Seeblick)",
             "en": "View information of the property (e.g. mountain view, lake view)"
-        }
-    },
-    "properties": {
-        "access": {
-            "de": "Zugangsart oder Zugangsrechte der Immobilie",
-            "en": "Access type or access rights of the property"
         },
-        "action": {
-            "de": "Datentransferaktion (z.B. Anlegen, Ändern, Löschen)",
-            "en": "Data transfer action (e.g. create, update, delete)"
-        },
-        "actionType": {
-            "de": "Typ der Datentransferaktion",
-            "en": "Type of the data transfer action"
-        },
-        "activeFrom": {
-            "de": "Datum, ab dem das Inserat aktiv ist",
-            "en": "Date from which the listing is active"
-        },
-        "activeTo": {
-            "de": "Datum, bis zu dem das Inserat aktiv ist",
-            "en": "Date until which the listing is active"
-        },
-        "actualNetYield": {
-            "de": "Tatsächliche Netto-Rendite der Immobilie",
-            "en": "Actual net yield of the property"
-        },
-        "actualRentalIncome": {
-            "de": "Tatsächliche Mieteinnahmen",
-            "en": "Actual rental income"
-        },
-        "additional": {
-            "de": "Zusatzinformation",
-            "en": "Additional information"
-        },
-        "additionalAddress": {
-            "de": "Weitere Adresse",
-            "en": "Additional address"
-        },
-        "additionalCosts": {
-            "de": "Nebenkosten der Immobilie",
-            "en": "Additional costs (service charges) of the property"
-        },
-        "additionalCostsPerSqmFrom": {
-            "de": "Nebenkosten pro Quadratmeter ab einem Mindestwert",
-            "en": "Additional costs per square meter starting from a minimum value"
-        },
-        "additionalCostsPerSqmTo": {
-            "de": "Nebenkosten pro Quadratmeter bis zu einem Höchstwert",
-            "en": "Additional costs per square meter up to a maximum value"
-        },
-        "additionalDate": {
-            "de": "Zusätzliches Datum",
-            "en": "Additional date"
-        },
-        "additionalField": {
-            "de": "Zusätzliches Freifeld",
-            "en": "Additional free-text field"
-        },
-        "addressRelease": {
-            "de": "Adresse zur Veröffentlichung freigegeben",
-            "en": "Address released for publication"
-        },
-        "addressType": {
-            "de": "Typ der Adresse",
-            "en": "Type of address"
-        },
-        "administrativeArea": {
-            "de": "Verwaltungsfläche in Quadratmetern",
-            "en": "Administrative area in square meters"
-        },
-        "aerialPhotos": {
-            "de": "Luftbilder der Immobilie vorhanden",
-            "en": "Aerial photos of the property available"
-        },
-        "age": {
-            "de": "Altersangabe der Immobilie",
-            "en": "Age of the property"
-        },
-        "ageAttribute": {
-            "de": "XML-Attribut zur Altersangabe",
-            "en": "XML attribute for the age value"
-        },
-        "agricultureAndForestry": {
-            "de": "Land- und forstwirtschaftliches Objekt",
-            "en": "Agricultural and forestry property"
-        },
-        "airConditioned": {
-            "de": "Klimaanlage vorhanden",
-            "en": "Air conditioning available"
-        },
-        "airHeatPump": {
-            "de": "Luftwärmepumpe als Heizsystem vorhanden",
-            "en": "Air heat pump as heating system available"
-        },
-        "alarmSystem": {
-            "de": "Alarmanlage vorhanden",
-            "en": "Alarm system available"
-        },
-        "alternative": {
-            "de": "Alternative Angabe",
-            "en": "Alternative value"
-        },
-        "apartment": {
-            "de": "Wohnungsobjekt",
-            "en": "Apartment property"
-        },
-        "apartmentBuildingInvestmentProperty": {
-            "de": "Mehrfamilienhaus als Anlageobjekt",
-            "en": "Apartment building as investment property"
-        },
-        "apartmentNumber": {
-            "de": "Wohnungsnummer innerhalb des Gebäudes",
-            "en": "Apartment number within the building"
-        },
-        "apartmentType": {
-            "de": "Wohnungstyp (z.B. Dachgeschoss, Maisonette, Erdgeschoss)",
-            "en": "Apartment type (e.g. attic, maisonette, ground floor)"
-        },
-        "areaFrom": {
-            "de": "Fläche ab einem Mindestwert in Quadratmetern",
-            "en": "Area starting from a minimum value in square meters"
-        },
-        "areaLocation": {
-            "de": "Lagegebiet der Immobilie",
-            "en": "Location area of the property"
-        },
-        "areas": {
-            "de": "Flächenangaben der Immobilie",
-            "en": "Area measurements of the property"
-        },
-        "areaTo": {
-            "de": "Fläche bis zu einem Höchstwert in Quadratmetern",
-            "en": "Area up to a maximum value in square meters"
-        },
-        "asHoliday": {
-            "de": "Als Ferienimmobilie nutzbar",
-            "en": "Suitable for use as a holiday property"
-        },
-        "assistedLiving": {
-            "de": "Betreutes Wohnen möglich",
-            "en": "Assisted living available"
-        },
-        "attachedGastronomy": {
-            "de": "Angeschlossene Gastronomie vorhanden",
-            "en": "Attached gastronomy available"
-        },
-        "attachment": {
-            "de": "Anhang (Datei) der Immobilie",
-            "en": "Attachment (file) of the property"
-        },
-        "attachmentContent": {
-            "de": "Binärer Inhalt des Anhangs",
-            "en": "Binary content of the attachment"
-        },
-        "attachments": {
-            "de": "Liste der Anhänge der Immobilie",
-            "en": "List of attachments of the property"
-        },
-        "attachmentTitle": {
-            "de": "Titel des Anhangs",
-            "en": "Title of the attachment"
-        },
-        "attic": {
-            "de": "Dachboden vorhanden",
-            "en": "Attic available"
-        },
-        "atticArea": {
-            "de": "Dachbodenfläche in Quadratmetern",
-            "en": "Attic area in square meters"
-        },
-        "auction": {
-            "de": "Zwangsversteigerungsinformationen",
-            "en": "Foreclosure auction information"
-        },
-        "auctionDate": {
-            "de": "Datum der Zwangsversteigerung",
-            "en": "Date of the foreclosure auction"
-        },
-        "authorizedRepresentative": {
-            "de": "Bevollmächtigter Vertreter des Anbieters",
-            "en": "Authorized representative of the provider"
-        },
-        "availableFrom": {
-            "de": "Verfügbarkeitsdatum der Immobilie",
-            "en": "Availability date of the property"
-        },
-        "balconyTerraceArea": {
-            "de": "Balkon- oder Terrassenfläche in Quadratmetern",
-            "en": "Balcony or terrace area in square meters"
-        },
-        "balconyTerraceOrientation": {
-            "de": "Ausrichtung von Balkon oder Terrasse",
-            "en": "Orientation of balcony or terrace"
-        },
-        "barrierFree": {
-            "de": "Barrierefrei zugänglich",
-            "en": "Barrier-free accessible"
-        },
-        "basement": {
-            "de": "Keller- oder Unterkellerungsangabe",
-            "en": "Basement or cellar information"
-        },
-        "basementArea": {
-            "de": "Kellerfläche in Quadratmetern",
-            "en": "Basement area in square meters"
-        },
-        "bathroom": {
-            "de": "Badezimmerausstattung",
-            "en": "Bathroom equipment"
-        },
-        "bathtub": {
-            "de": "Badewanne vorhanden",
-            "en": "Bathtub available"
-        },
-        "bicycleRoom": {
-            "de": "Fahrradkeller oder -raum vorhanden",
-            "en": "Bicycle storage room available"
-        },
-        "biddingProcess": {
-            "de": "Bieterverfahren für die Immobilie",
-            "en": "Bidding process for the property"
-        },
-        "bidet": {
-            "de": "Bidet im Badezimmer vorhanden",
-            "en": "Bidet in bathroom available"
-        },
-        "bioEnergy": {
-            "de": "Bioenergie als Heizenergiequelle",
-            "en": "Bio energy as heating energy source"
-        },
-        "block": {
-            "de": "Blockheizung vorhanden",
-            "en": "Block heating available"
-        },
-        "breweryTie": {
-            "de": "Brauereibindung der Gastronomieimmobilie",
-            "en": "Brewery tie for the gastronomy property"
-        },
-        "broadbandAccess": {
-            "de": "Breitbandanschluss vorhanden",
-            "en": "Broadband internet access available"
-        },
-        "buildingEnergyAct2018": {
-            "de": "Angabe zum Gebäudeenergiegesetz 2018",
-            "en": "Information on the Building Energy Act 2018 (GEG)"
-        },
-        "buildingType": {
-            "de": "Gebäudetyp (Wohn- oder Nichtwohngebäude)",
-            "en": "Building type (residential or non-residential)"
-        },
-        "builtInKitchen": {
-            "de": "Einbauküche vorhanden",
-            "en": "Built-in kitchen available"
-        },
-        "businessAssets": {
-            "de": "Geschäftsguthaben (Genossenschaftsanteil)",
-            "en": "Business assets (cooperative share)"
-        },
-        "cableChannels": {
-            "de": "Kabelkanäle vorhanden",
-            "en": "Cable channels available"
-        },
-        "cableSatelliteTV": {
-            "de": "Kabel- oder Satellitenanschluss vorhanden",
-            "en": "Cable or satellite TV connection available"
-        },
-        "cadastralDistrict": {
-            "de": "Gemarkung des Grundstücks",
-            "en": "Cadastral district of the plot"
-        },
-        "camera": {
-            "de": "Überwachungskamera vorhanden",
-            "en": "Surveillance camera available"
-        },
-        "canteenCafeteria": {
-            "de": "Kantine oder Cafeteria vorhanden",
-            "en": "Canteen or cafeteria available"
-        },
-        "carpet": {
-            "de": "Teppichboden als Bodenbelag",
-            "en": "Carpet as flooring"
-        },
-        "carport": {
-            "de": "Carport vorhanden",
-            "en": "Carport available"
-        },
-        "cash": {
-            "de": "Barzahlung möglich",
-            "en": "Cash payment possible"
-        },
-        "catering": {
-            "de": "Catering-Service vorhanden",
-            "en": "Catering service available"
-        },
-        "central": {
-            "de": "Zentrale Heizungsanlage vorhanden",
-            "en": "Central heating system available"
-        },
-        "centralEmail": {
-            "de": "Zentrale E-Mail-Adresse des Anbieters",
-            "en": "Central email address of the provider"
-        },
-        "centralPhoneNumber": {
-            "de": "Zentrale Telefonnummer des Anbieters",
-            "en": "Central phone number of the provider"
-        },
-        "check": {
-            "de": "Prüfinformation",
-            "en": "Check information"
-        },
-        "chpBio": {
-            "de": "Blockheizkraftwerk mit Bio-Brennstoff",
-            "en": "Combined heat and power with bio fuel"
-        },
-        "chpFossil": {
-            "de": "Blockheizkraftwerk mit fossilem Brennstoff",
-            "en": "Combined heat and power with fossil fuel"
-        },
-        "chpRegenerative": {
-            "de": "Blockheizkraftwerk mit regenerativem Brennstoff",
-            "en": "Combined heat and power with regenerative fuel"
-        },
-        "chpRenewable": {
-            "de": "Blockheizkraftwerk mit erneuerbarem Brennstoff",
-            "en": "Combined heat and power with renewable fuel"
-        },
-        "city": {
-            "de": "Stadt oder Ort der Immobilie",
-            "en": "City or town of the property"
-        },
-        "cleaning": {
-            "de": "Reinigungsservice vorhanden",
-            "en": "Cleaning service available"
-        },
-        "coal": {
-            "de": "Kohle als Heizenergiequelle",
-            "en": "Coal as heating energy source"
-        },
-        "coldRent": {
-            "de": "Kaltmiete der Immobilie",
-            "en": "Cold rent (base rent without utilities) of the property"
-        },
-        "commercial": {
-            "de": "Gewerbliche Nutzung vorhanden",
-            "en": "Commercial use available"
-        },
-        "commercialLeisureProperty": {
-            "de": "Gewerbliches Freizeitobjekt",
-            "en": "Commercial leisure property"
-        },
-        "commercialRegister": {
-            "de": "Handelsregisterangaben des Anbieters",
-            "en": "Commercial register information of the provider"
-        },
-        "commercialRegisterNumber": {
-            "de": "Handelsregisternummer des Anbieters",
-            "en": "Commercial register number of the provider"
-        },
-        "commercialUse": {
-            "de": "Gewerbliche Nutzung der Immobilie",
-            "en": "Commercial use of the property"
-        },
-        "commissionGross": {
-            "de": "Brutto-Maklerprovision (inkl. MwSt.)",
-            "en": "Gross broker commission (including VAT)"
-        },
-        "commissionNet": {
-            "de": "Netto-Maklerprovision (ohne MwSt.)",
-            "en": "Net broker commission (excluding VAT)"
-        },
-        "commissionNote": {
-            "de": "Hinweis zur Maklerprovision",
-            "en": "Note on the broker commission"
-        },
-        "commissionRequired": {
-            "de": "Maklerprovision wird erhoben",
-            "en": "Broker commission is charged"
-        },
-        "commissionSplit": {
-            "de": "Aufteilung der Maklerprovision",
-            "en": "Split of the broker commission"
-        },
-        "commissionVAT": {
-            "de": "Mehrwertsteueranteil der Maklerprovision",
-            "en": "VAT portion of the broker commission"
-        },
-        "company": {
-            "de": "Firmenname des Anbieters",
-            "en": "Company name of the provider"
-        },
-        "companyAddress": {
-            "de": "Unternehmensadresse des Anbieters",
-            "en": "Company address of the provider"
-        },
-        "companyName": {
-            "de": "Name des Unternehmens",
-            "en": "Name of the company"
-        },
-        "condition": {
-            "de": "Zustand der Immobilie",
-            "en": "Condition of the property"
-        },
-        "conditionInformation": {
-            "de": "Zustandsangaben der Immobilie",
-            "en": "Condition information of the property"
-        },
-        "conditionType": {
-            "de": "Zustandstyp der Immobilie",
-            "en": "Condition type of the property"
-        },
-        "constructionMethod": {
-            "de": "Bauweise des Gebäudes",
-            "en": "Construction method of the building"
-        },
-        "constructionZone": {
-            "de": "Bauzone des Grundstücks",
-            "en": "Construction zone of the plot"
-        },
-        "contactPerson": {
-            "de": "Kontaktperson für die Immobilie",
-            "en": "Contact person for the property"
-        },
-        "contamination": {
-            "de": "Altlasten des Grundstücks",
-            "en": "Contamination or legacy pollution of the plot"
-        },
-        "contentType": {
-            "de": "MIME-Typ des Anhangs",
-            "en": "MIME content type of the attachment"
-        },
-        "corridor": {
-            "de": "Flurstück-Flur des Grundstücks",
-            "en": "Land parcel corridor of the plot"
-        },
-        "country": {
-            "de": "Land der Immobilie",
-            "en": "Country of the property"
-        },
-        "countryType": {
-            "de": "ISO-Länderkürzel",
-            "en": "ISO country code"
-        },
-        "crane": {
-            "de": "Kran vorhanden",
-            "en": "Crane available"
-        },
-        "cubature": {
-            "de": "Kubatur (Rauminhalt) des Gebäudes in Kubikmetern",
-            "en": "Cubature (volume) of the building in cubic meters"
-        },
-        "currency": {
-            "de": "Währung der Preisangaben",
-            "en": "Currency of the price values"
-        },
-        "data": {
-            "de": "Datenbehälter",
-            "en": "Data container"
-        },
-        "dataProcessingCabling": {
-            "de": "EDV-Verkabelung vorhanden",
-            "en": "Data processing cabling available"
-        },
-        "deposit": {
-            "de": "Mietkaution",
-            "en": "Security deposit"
-        },
-        "depositText": {
-            "de": "Freitext zur Mietkaution",
-            "en": "Free text describing the security deposit"
-        },
-        "developableAccordingTo": {
-            "de": "Bebaubarkeit gemäß Baurecht",
-            "en": "Developability according to building regulations"
-        },
-        "developableAttribute": {
-            "de": "XML-Attribut zur Bebaubarkeit",
-            "en": "XML attribute for the developability value"
-        },
-        "development": {
-            "de": "Erschließungszustand des Grundstücks",
-            "en": "Development/utility connection status of the plot"
-        },
-        "developmentAttribute": {
-            "de": "XML-Attribut zum Erschließungszustand",
-            "en": "XML attribute for the development status value"
-        },
-        "developmentCosts": {
-            "de": "Erschließungskosten des Grundstücks",
-            "en": "Development costs of the plot"
-        },
-        "developmentScope": {
-            "de": "Umfang der Erschließung des Grundstücks",
-            "en": "Scope of utilities and infrastructure connections of the plot"
-        },
-        "developmentStage": {
-            "de": "Ausbaustufe des Gebäudes",
-            "en": "Development stage of the building"
-        },
-        "digitalTerrestrialTV": {
-            "de": "DVB-T Empfang (digitales Antennenfernsehen) vorhanden",
-            "en": "DVB-T digital terrestrial TV reception available"
-        },
-        "diningRoomSeats": {
-            "de": "Anzahl der Sitzplätze im Gastraum",
-            "en": "Number of seats in the dining room"
-        },
-        "directEmail": {
-            "de": "Direkte E-Mail-Adresse der Kontaktperson",
-            "en": "Direct email address of the contact person"
-        },
-        "distance": {
-            "de": "Abstand oder Entfernung",
-            "en": "Distance value"
-        },
-        "distances": {
-            "de": "Entfernungsangaben zu relevanten Einrichtungen",
-            "en": "Distance information to relevant facilities"
-        },
-        "distanceTo": {
-            "de": "Entfernung zu einer bestimmten Einrichtung",
-            "en": "Distance to a specific facility"
-        },
-        "distanceToSport": {
-            "de": "Entfernung zu Sportanlagen",
-            "en": "Distance to sports facilities"
-        },
-        "districtCourt": {
-            "de": "Zuständiges Amtsgericht",
-            "en": "Responsible district court"
-        },
-        "districtHeatingVapor": {
-            "de": "Fernwärme (Dampf) als Heizenergiequelle",
-            "en": "District heating (steam) as heating energy source"
-        },
-        "divisibleFrom": {
-            "de": "Fläche ab der die Immobilie teilbar ist in Quadratmetern",
-            "en": "Minimum area from which the property can be subdivided in square meters"
-        },
-        "duplex": {
-            "de": "Duplex-Stellplatz vorhanden",
-            "en": "Duplex parking space available"
-        },
-        "duration": {
-            "de": "Dauer oder Laufzeit",
-            "en": "Duration or term"
-        },
-        "east": {
-            "de": "Ausrichtung Ost",
-            "en": "East orientation"
-        },
-        "electric": {
-            "de": "Elektrische Heizung vorhanden",
-            "en": "Electric heating available"
-        },
-        "electricityConnectionValue": {
-            "de": "Stromanschlusswert in kVA",
-            "en": "Electricity connection value in kVA"
-        },
-        "electricityValue": {
-            "de": "Stromverbrauchswert aus dem Energieausweis",
-            "en": "Electricity consumption value from the energy certificate"
-        },
-        "elevator": {
-            "de": "Aufzug vorhanden",
-            "en": "Elevator available"
-        },
-        "emailType": {
-            "de": "Typ der E-Mail-Adresse",
-            "en": "Type of email address"
-        },
-        "encumbrances": {
-            "de": "Grundstücksbelastungen (z.B. Grundpfandrechte)",
-            "en": "Encumbrances on the property (e.g. mortgages)"
-        },
-        "endOfBiddingTime": {
-            "de": "Endzeitpunkt des Bieterverfahrens",
-            "en": "End time of the bidding process"
-        },
-        "energyCertificate": {
-            "de": "Energieausweis der Immobilie",
-            "en": "Energy performance certificate of the property"
-        },
-        "energyCertificateText": {
-            "de": "Freitext zum Energieausweis",
-            "en": "Free text about the energy performance certificate"
-        },
-        "energyCertificateType": {
-            "de": "Typ des Energieausweises (Bedarfs- oder Verbrauchsausweis)",
-            "en": "Type of energy certificate (demand or consumption certificate)"
-        },
-        "energyConsumptionValue": {
-            "de": "Energieverbrauchskennwert in kWh/(m²·a)",
-            "en": "Energy consumption characteristic value in kWh/(m²·a)"
-        },
-        "energyEfficiencyClass": {
-            "de": "Energieeffizienzklasse (A+ bis H)",
-            "en": "Energy efficiency class (A+ to H)"
-        },
-        "energyEfficiencyValue": {
-            "de": "Energieeffizienzwert (fGEE-Wert)",
-            "en": "Energy efficiency value (fGEE value)"
-        },
-        "energyType": {
-            "de": "Energieeffizienztyp der Immobilie",
-            "en": "Energy efficiency type of the property"
-        },
-        "environmentalHeat": {
-            "de": "Umweltwärme als Heizenergiequelle",
-            "en": "Environmental heat as heating energy source"
-        },
-        "equipment": {
-            "de": "Ausstattungsmerkmale der Immobilie",
-            "en": "Equipment and features of the property"
-        },
-        "equipmentCategory": {
-            "de": "Ausstattungskategorie (Standard, Gehoben, Luxus)",
-            "en": "Equipment category (standard, upscale, luxury)"
-        },
-        "equipmentDescription": {
-            "de": "Beschreibung der Ausstattung",
-            "en": "Description of the equipment"
-        },
-        "evaluation": {
-            "de": "Bewertungsinformationen der Immobilie",
-            "en": "Evaluation information of the property"
-        },
-        "expandableHouse": {
-            "de": "Haus ist ausbaufähig",
-            "en": "House is expandable"
-        },
-        "externalCommission": {
-            "de": "Außenprovision (Käuferprovision)",
-            "en": "External commission (buyer's commission)"
-        },
-        "externalPropertyNumber": {
-            "de": "Externe Objektnummer des Anbieters",
-            "en": "External property number of the provider"
-        },
-        "facility": {
-            "de": "Einrichtung oder Anlage",
-            "en": "Facility or amenity"
-        },
-        "faxNumber": {
-            "de": "Faxnummer der Kontaktperson",
-            "en": "Fax number of the contact person"
-        },
-        "feedbackEmail": {
-            "de": "E-Mail-Adresse für Rückmeldungen",
-            "en": "Email address for feedback"
-        },
-        "field": {
-            "de": "Datenfeld",
-            "en": "Data field"
-        },
-        "fieldName": {
-            "de": "Name des Datenfeldes",
-            "en": "Name of the data field"
-        },
-        "fileNumber": {
-            "de": "Aktenzeichen der Zwangsversteigerung",
-            "en": "File number of the foreclosure auction"
-        },
-        "finalEnergyDemand": {
-            "de": "Endenergiebedarf in kWh/(m²·a)",
-            "en": "Final energy demand in kWh/(m²·a)"
-        },
-        "finishedParquet": {
-            "de": "Fertigparkett als Bodenbelag",
-            "en": "Finished parquet as flooring"
-        },
-        "fireplace": {
-            "de": "Kamin vorhanden",
-            "en": "Fireplace available"
-        },
-        "firstName": {
-            "de": "Vorname der Kontaktperson",
-            "en": "First name of the contact person"
-        },
-        "flatRent": {
-            "de": "Pauschalmiete (Inklusivmiete)",
-            "en": "Flat rent (all-inclusive rent)"
-        },
-        "flatRoof": {
-            "de": "Flachdach vorhanden",
-            "en": "Flat roof"
-        },
-        "floor": {
-            "de": "Stockwerk der Wohnung im Gebäude",
-            "en": "Floor level of the unit within the building"
-        },
-        "floorAreaRatio": {
-            "de": "Geschossflächenzahl (GFZ) des Grundstücks",
-            "en": "Floor area ratio (GFZ) of the plot"
-        },
-        "floorboards": {
-            "de": "Dielenböden als Bodenbelag",
-            "en": "Floorboards as flooring"
-        },
-        "flooring": {
-            "de": "Bodenbelag der Immobilie",
-            "en": "Flooring of the property"
-        },
-        "floorSpaceIndex": {
-            "de": "Baumassenzahl (BMZ) des Grundstücks",
-            "en": "Floor space index (BMZ) of the plot"
-        },
-        "forcedSale": {
-            "de": "Zwangsverkauf oder Notverkauf",
-            "en": "Forced sale or distressed sale"
-        },
-        "forcedSaleDate": {
-            "de": "Datum des Zwangsverkaufs",
-            "en": "Date of the forced sale"
-        },
-        "format": {
-            "de": "Dateiformat des Anhangs",
-            "en": "File format of the attachment"
-        },
-        "freeTextField": {
-            "de": "Freitextfeld",
-            "en": "Free text field"
-        },
-        "freeTextPrice": {
-            "de": "Preisangabe als Freitext",
-            "en": "Price as free text"
-        },
-        "freeTexts": {
-            "de": "Freie Textbeschreibungen der Immobilie",
-            "en": "Free-text descriptions of the property"
-        },
-        "fromDate": {
-            "de": "Startdatum",
-            "en": "Start date"
-        },
-        "front": {
-            "de": "Frontseitige Ausrichtung oder Fassade",
-            "en": "Front orientation or facade"
-        },
-        "furnished": {
-            "de": "Möblierungsangabe der Immobilie",
-            "en": "Furnishing information of the property"
-        },
-        "garage": {
-            "de": "Garage vorhanden",
-            "en": "Garage available"
-        },
-        "gardenArea": {
-            "de": "Gartenfläche in Quadratmetern",
-            "en": "Garden area in square meters"
-        },
-        "gardenUse": {
-            "de": "Gartennutzung möglich",
-            "en": "Garden use possible"
-        },
-        "gas": {
-            "de": "Gas als Heizenergiequelle",
-            "en": "Gas as heating energy source"
-        },
-        "gastronomyArea": {
-            "de": "Gastronomiefläche in Quadratmetern",
-            "en": "Gastronomy area in square meters"
-        },
-        "gender": {
-            "de": "Geschlecht der Person",
-            "en": "Gender of the person"
-        },
-        "genderAttribute": {
-            "de": "XML-Attribut zur Geschlechtsangabe",
-            "en": "XML attribute for the gender value"
-        },
-        "generalForwarding": {
-            "de": "Allgemeine Weiterleitungseinstellung",
-            "en": "General forwarding setting"
-        },
-        "geo": {
-            "de": "Geografische Angaben der Immobilie",
-            "en": "Geographic information of the property"
-        },
-        "geoCoordinates": {
-            "de": "GPS-Koordinaten der Immobilie",
-            "en": "GPS coordinates of the property"
-        },
-        "geothermal": {
-            "de": "Geothermie als Heizenergiequelle",
-            "en": "Geothermal energy as heating energy source"
-        },
-        "granite": {
-            "de": "Granitboden als Bodenbelag",
-            "en": "Granite flooring"
-        },
-        "grannyFlat": {
-            "de": "Einliegerwohnung vorhanden",
-            "en": "Granny flat (annexe apartment) available"
-        },
-        "grossFloorArea": {
-            "de": "Brutto-Grundfläche (BGF) des Gebäudes",
-            "en": "Gross floor area (BGF) of the building"
-        },
-        "group": {
-            "de": "Gruppe oder Kategorie",
-            "en": "Group or category"
-        },
-        "groupIdentifier": {
-            "de": "Bezeichner der Gruppe",
-            "en": "Identifier of the group"
-        },
-        "groupNumber": {
-            "de": "Nummer der Gruppe",
-            "en": "Number of the group"
-        },
-        "guestTerrace": {
-            "de": "Gästeterrasse vorhanden",
-            "en": "Guest terrace available"
-        },
-        "guestToilet": {
-            "de": "Gäste-WC vorhanden",
-            "en": "Guest toilet available"
-        },
-        "guidePrice": {
-            "de": "Richtpreis der Immobilie",
-            "en": "Guide price of the property"
-        },
-        "guidePricePerSqm": {
-            "de": "Richtpreis pro Quadratmeter",
-            "en": "Guide price per square meter"
-        },
-        "hallHeight": {
-            "de": "Hallenhöhe in Metern",
-            "en": "Hall height in meters"
-        },
-        "hallsStorageProduction": {
-            "de": "Hallen-, Lager- oder Produktionsobjekt",
-            "en": "Hall, storage or production property"
-        },
-        "hallType": {
-            "de": "Hallentyp (z.B. Produktions-, Lagerhalle)",
-            "en": "Hall type (e.g. production, storage hall)"
-        },
-        "heatedArea": {
-            "de": "Beheizte Fläche in Quadratmetern",
-            "en": "Heated area in square meters"
-        },
-        "heating": {
-            "de": "Befeuerungsart des Heizsystems",
-            "en": "Heating fuel type of the heating system"
-        },
-        "heatingCosts": {
-            "de": "Heizkosten der Immobilie",
-            "en": "Heating costs of the property"
-        },
-        "heatingCostsIncluded": {
-            "de": "Heizkosten sind in den Nebenkosten enthalten",
-            "en": "Heating costs are included in the additional costs"
-        },
-        "heatingCostsVAT": {
-            "de": "Mehrwertsteueranteil der Heizkosten",
-            "en": "VAT portion of the heating costs"
-        },
-        "heatingDemandClass": {
-            "de": "Heizwärmebedarfsklasse (HWB-Klasse)",
-            "en": "Heating demand class (HWB class)"
-        },
-        "heatingDemandValue": {
-            "de": "Heizwärmebedarfswert (HWB-Wert) in kWh/(m²·a)",
-            "en": "Heating demand value (HWB) in kWh/(m²·a)"
-        },
-        "heatingType": {
-            "de": "Art des Heizsystems",
-            "en": "Type of heating system"
-        },
-        "heatSupply": {
-            "de": "Wärmeversorgungsart der Immobilie",
-            "en": "Heat supply type of the property"
-        },
-        "heatValue": {
-            "de": "Wärmeverbrauchswert aus dem Energieausweis",
-            "en": "Heat consumption value from the energy certificate"
-        },
-        "heavyNaturalGas": {
-            "de": "Schweres Erdgas als Heizenergiequelle",
-            "en": "Heavy natural gas as heating energy source"
-        },
-        "highRise": {
-            "de": "Hochhaus-Immobilie",
-            "en": "High-rise building property"
-        },
-        "hipRoof": {
-            "de": "Walmdach vorhanden",
-            "en": "Hip roof"
-        },
-        "holidayPropertyPhone": {
-            "de": "Telefonanschluss der Ferienimmobilie vorhanden",
-            "en": "Phone connection of the holiday property available"
-        },
-        "hospitality": {
-            "de": "Gastronomie- oder Beherbergungsobjekt",
-            "en": "Hospitality or accommodation property"
-        },
-        "hospitalityType": {
-            "de": "Typ des Gastronomie- oder Beherbergungsobjekts",
-            "en": "Type of hospitality or accommodation property"
-        },
-        "hotelRestaurant": {
-            "de": "Hotel oder Restaurant vorhanden",
-            "en": "Hotel or restaurant available"
-        },
-        "house": {
-            "de": "Hausobjekt",
-            "en": "House property"
-        },
-        "houseNumber": {
-            "de": "Hausnummer der Immobilie",
-            "en": "House number of the property"
-        },
-        "houseType": {
-            "de": "Haustyp (z.B. Einfamilienhaus, Reihenhaus, Doppelhaus)",
-            "en": "House type (e.g. detached, terraced, semi-detached)"
-        },
-        "imprint": {
-            "de": "Impressum des Anbieters",
-            "en": "Imprint of the provider"
-        },
-        "imprintStructure": {
-            "de": "Strukturiertes Impressum des Anbieters",
-            "en": "Structured imprint of the provider"
-        },
-        "industries": {
-            "de": "Branchen oder Nutzungsarten der Gewerbeimmobilie",
-            "en": "Industries or use types of the commercial property"
-        },
-        "infrastructure": {
-            "de": "Infrastrukturanbindung der Immobilie",
-            "en": "Infrastructure connections of the property"
-        },
-        "interestType": {
-            "de": "Art des Interessenten (z.B. Käufer, Mieter)",
-            "en": "Type of interested party (e.g. buyer, tenant)"
-        },
-        "internalCommission": {
-            "de": "Innenprovision (Verkäuferprovision)",
-            "en": "Internal commission (seller's commission)"
-        },
-        "internalPropertyNumber": {
-            "de": "Interne Objektnummer des Anbieters",
-            "en": "Internal property number of the provider"
-        },
-        "isoCountry": {
-            "de": "ISO-Länderkürzel (z.B. DEU, AUT, CHE)",
-            "en": "ISO country code (e.g. DEU, AUT, CHE)"
-        },
-        "isoCurrency": {
-            "de": "ISO-Währungskürzel (z.B. EUR, CHF)",
-            "en": "ISO currency code (e.g. EUR, CHF)"
-        },
-        "issueDate": {
-            "de": "Ausstellungsdatum des Energieausweises",
-            "en": "Issue date of the energy performance certificate"
-        },
-        "kfw40": {
-            "de": "KfW-40-Standard erfüllt",
-            "en": "KfW-40 standard fulfilled"
-        },
-        "kfw55": {
-            "de": "KfW-55-Standard erfüllt",
-            "en": "KfW-55 standard fulfilled"
-        },
-        "kfw60": {
-            "de": "KfW-60-Standard erfüllt",
-            "en": "KfW-60 standard fulfilled"
-        },
-        "kfw70": {
-            "de": "KfW-70-Standard erfüllt",
-            "en": "KfW-70 standard fulfilled"
-        },
-        "kitchen": {
-            "de": "Küchenausstattung der Immobilie",
-            "en": "Kitchen equipment of the property"
-        },
-        "kitchenette": {
-            "de": "Teeküche vorhanden",
-            "en": "Kitchenette available"
-        },
-        "laminate": {
-            "de": "Laminat als Bodenbelag",
-            "en": "Laminate as flooring"
-        },
-        "language": {
-            "de": "Sprache des Textes (ISO-Sprachcode)",
-            "en": "Language of the text (ISO language code)"
-        },
-        "lastModernization": {
-            "de": "Jahr der letzten Modernisierung",
-            "en": "Year of the last modernization"
-        },
-        "latitude": {
-            "de": "Geografischer Breitengrad der Immobilie",
-            "en": "Geographic latitude of the property"
-        },
-        "laundryDryingRoom": {
-            "de": "Wasch- und Trockenraum vorhanden",
-            "en": "Laundry and drying room available"
-        },
-        "lease": {
-            "de": "Pacht der Immobilie",
-            "en": "Lease amount of the property"
-        },
-        "leasehold": {
-            "de": "Erbpacht der Immobilie",
-            "en": "Leasehold amount of the property"
-        },
-        "leasing": {
-            "de": "Leasing der Immobilie möglich",
-            "en": "Leasing of the property possible"
-        },
-        "left": {
-            "de": "Lage links im Gebäude",
-            "en": "Left position in the building"
-        },
-        "leisureType": {
-            "de": "Freizeitobjekttyp",
-            "en": "Leisure property type"
-        },
-        "letterSalutation": {
-            "de": "Briefanrede der Kontaktperson",
-            "en": "Letter salutation of the contact person"
-        },
-        "library": {
-            "de": "Bibliothek vorhanden",
-            "en": "Library available"
-        },
-        "licenseIdentifier": {
-            "de": "Lizenznummer des Anbieters",
-            "en": "License identifier of the provider"
-        },
-        "liftPlatform": {
-            "de": "Hebebühne vorhanden",
-            "en": "Lift platform available"
-        },
-        "lightNaturalGas": {
-            "de": "Leichtes Erdgas als Heizenergiequelle",
-            "en": "Light natural gas as heating energy source"
-        },
-        "linoleum": {
-            "de": "Linoleum als Bodenbelag",
-            "en": "Linoleum as flooring"
-        },
-        "liquidGas": {
-            "de": "Flüssiggas als Heizenergiequelle",
-            "en": "Liquid gas as heating energy source"
-        },
-        "listedBuilding": {
-            "de": "Denkmalgeschütztes Gebäude",
-            "en": "Listed (heritage-protected) building"
-        },
-        "living": {
-            "de": "Wohnbereich vorhanden",
-            "en": "Living area available"
-        },
-        "livingArea": {
-            "de": "Wohnfläche in Quadratmetern",
-            "en": "Living area in square meters"
-        },
-        "localHeating": {
-            "de": "Einzelraumheizung (Etagenheizung) vorhanden",
-            "en": "Local (floor-by-floor) heating available"
-        },
-        "location": {
-            "de": "Lagebeschreibung der Immobilie",
-            "en": "Location description of the property"
-        },
-        "locationInBuilding": {
-            "de": "Lage der Wohnung im Gebäude",
-            "en": "Location of the unit within the building"
-        },
-        "longitude": {
-            "de": "Geografischer Längengrad der Immobilie",
-            "en": "Geographic longitude of the property"
-        },
-        "lowEnergy": {
-            "de": "Niedrigenergiehaus-Standard erfüllt",
-            "en": "Low-energy house standard fulfilled"
-        },
-        "macroMap": {
-            "de": "Makrokarte (Übersichtskarte) vorhanden",
-            "en": "Macro map (overview map) available"
-        },
-        "mainRentVAT": {
-            "de": "Mehrwertsteueranteil des Hauptmietzinses",
-            "en": "VAT portion of the main rent"
-        },
-        "maintenanceFee": {
-            "de": "Hausgeld (monatliche Wohnungseigentümergebühr)",
-            "en": "Maintenance fee (monthly homeowner association fee)"
-        },
-        "mansardRoof": {
-            "de": "Mansarddach vorhanden",
-            "en": "Mansard roof"
-        },
-        "marble": {
-            "de": "Marmorboden als Bodenbelag",
-            "en": "Marble flooring"
-        },
-        "marketingType": {
-            "de": "Vermarktungsart der Immobilie (Kauf oder Miete)",
-            "en": "Marketing type of the property (purchase or rent)"
-        },
-        "marketValue": {
-            "de": "Marktwert der Immobilie",
-            "en": "Market value of the property"
-        },
-        "master": {
-            "de": "Stammdaten des Datentransfers",
-            "en": "Master data of the data transfer"
-        },
-        "maxDuration": {
-            "de": "Maximale Mietdauer",
-            "en": "Maximum rental duration"
-        },
-        "maxPersons": {
-            "de": "Maximale Personenanzahl",
-            "en": "Maximum number of persons"
-        },
-        "maxRentalPeriod": {
-            "de": "Maximale Mietperiode",
-            "en": "Maximum rental period"
-        },
-        "microMap": {
-            "de": "Mikrokarte (Detailkarte) vorhanden",
-            "en": "Micro map (detail map) available"
-        },
-        "minDuration": {
-            "de": "Minimale Mietdauer",
-            "en": "Minimum rental duration"
-        },
-        "minEnergieCertified": {
-            "de": "MinEnergieHaus-Zertifizierung vorhanden",
-            "en": "MinEnergie certification available"
-        },
-        "minEnergieConstruction": {
-            "de": "MinEnergie-Bauweise vorhanden",
-            "en": "MinEnergie construction standard fulfilled"
-        },
-        "minimumPrice": {
-            "de": "Mindestpreis der Immobilie",
-            "en": "Minimum price of the property"
-        },
-        "minRentalPeriod": {
-            "de": "Minimale Mietperiode",
-            "en": "Minimum rental period"
-        },
-        "mobileNumber": {
-            "de": "Mobiltelefonnummer der Kontaktperson",
-            "en": "Mobile phone number of the contact person"
-        },
-        "mode": {
-            "de": "Modus des Datentransfers",
-            "en": "Mode of the data transfer"
-        },
-        "monthlyCostsGross": {
-            "de": "Monatliche Bruttogesamtkosten (inkl. MwSt.)",
-            "en": "Monthly gross total costs (including VAT)"
-        },
-        "monthlyCostsNet": {
-            "de": "Monatliche Nettogesamtkosten (ohne MwSt.)",
-            "en": "Monthly net total costs (excluding VAT)"
-        },
-        "monthlyCostsVAT": {
-            "de": "Mehrwertsteueranteil der monatlichen Gesamtkosten",
-            "en": "VAT portion of the monthly total costs"
-        },
-        "municipalityCode": {
-            "de": "Amtlicher Gemeindeschlüssel (AGS)",
-            "en": "Official municipality code (AGS)"
-        },
-        "name": {
-            "de": "Nachname der Kontaktperson",
-            "en": "Last name of the contact person"
-        },
-        "negativeForwarding": {
-            "de": "Weiterleitungseinstellung bei negativem Ergebnis",
-            "en": "Forwarding setting for a negative result"
-        },
-        "netColdRent": {
-            "de": "Netto-Kaltmiete (ohne MwSt.)",
-            "en": "Net cold rent (excluding VAT)"
-        },
-        "netHeatingCosts": {
-            "de": "Netto-Heizkosten (ohne MwSt.)",
-            "en": "Net heating costs (excluding VAT)"
-        },
-        "netMainRent": {
-            "de": "Netto-Hauptmietzins (ohne MwSt.)",
-            "en": "Net main rent (excluding VAT)"
-        },
-        "netOperatingCosts": {
-            "de": "Netto-Betriebskosten (ohne MwSt.)",
-            "en": "Net operating costs (excluding VAT)"
-        },
-        "netRentPerSqmFrom": {
-            "de": "Nettomiete pro Quadratmeter ab einem Mindestwert",
-            "en": "Net rent per square meter starting from a minimum value"
-        },
-        "netRentPerSqmTo": {
-            "de": "Nettomiete pro Quadratmeter bis zu einem Höchstwert",
-            "en": "Net rent per square meter up to a maximum value"
-        },
-        "netUnitValue": {
-            "de": "Netto-Einheitswert (EVB-Wert)",
-            "en": "Net unit value (EVB value)"
-        },
-        "netYield": {
-            "de": "Netto-Rendite der Immobilie",
-            "en": "Net yield of the property"
-        },
-        "newBuildingStandard": {
-            "de": "Neubaustandard der Immobilie",
-            "en": "New building standard of the property"
-        },
-        "nonSmoker": {
-            "de": "Nur Nichtraucher erwünscht",
-            "en": "Non-smokers only"
-        },
-        "north": {
-            "de": "Ausrichtung Nord",
-            "en": "North orientation"
-        },
-        "northeast": {
-            "de": "Ausrichtung Nordost",
-            "en": "Northeast orientation"
-        },
-        "northwest": {
-            "de": "Ausrichtung Nordwest",
-            "en": "Northwest orientation"
-        },
-        "numberOfBalconies": {
-            "de": "Anzahl der Balkone",
-            "en": "Number of balconies"
-        },
-        "numberOfBathrooms": {
-            "de": "Anzahl der Badezimmer",
-            "en": "Number of bathrooms"
-        },
-        "numberOfBedrooms": {
-            "de": "Anzahl der Schlafzimmer",
-            "en": "Number of bedrooms"
-        },
-        "numberOfBeds": {
-            "de": "Anzahl der Betten",
-            "en": "Number of beds"
-        },
-        "numberOfCommercialUnits": {
-            "de": "Anzahl der Gewerbeeinheiten",
-            "en": "Number of commercial units"
-        },
-        "numberOfFloors": {
-            "de": "Gesamte Stockwerkanzahl des Gebäudes",
-            "en": "Total number of floors of the building"
-        },
-        "numberOfLivingBedrooms": {
-            "de": "Anzahl der Wohn- und Schlafzimmer",
-            "en": "Number of living and bedrooms"
-        },
-        "numberOfLoggias": {
-            "de": "Anzahl der Loggien",
-            "en": "Number of loggias"
-        },
-        "numberOfMeetingRooms": {
-            "de": "Anzahl der Tagungsräume",
-            "en": "Number of meeting rooms"
-        },
-        "numberOfParkingSpaces": {
-            "de": "Anzahl der Stellplätze",
-            "en": "Number of parking spaces"
-        },
-        "numberOfResidentialUnits": {
-            "de": "Anzahl der Wohneinheiten",
-            "en": "Number of residential units"
-        },
-        "numberOfRooms": {
-            "de": "Anzahl der Zimmer",
-            "en": "Number of rooms"
-        },
-        "numberOfSeparateToilets": {
-            "de": "Anzahl der separaten WCs",
-            "en": "Number of separate toilets"
-        },
-        "numberOfTerraces": {
-            "de": "Anzahl der Terrassen",
-            "en": "Number of terraces"
-        },
-        "officeArea": {
-            "de": "Bürofläche in Quadratmetern",
-            "en": "Office area in square meters"
-        },
-        "officePractices": {
-            "de": "Büro- oder Praxisobjekt",
-            "en": "Office or medical practice property"
-        },
-        "officeType": {
-            "de": "Typ des Büro- oder Praxisobjekts",
-            "en": "Type of office or medical practice property"
-        },
-        "oil": {
-            "de": "Öl als Heizenergiequelle",
-            "en": "Oil as heating energy source"
-        },
-        "onRequest": {
-            "de": "Preis auf Anfrage",
-            "en": "Price on request"
-        },
-        "open": {
-            "de": "Offene Küche vorhanden",
-            "en": "Open kitchen available"
-        },
-        "openImmoAnid": {
-            "de": "OpenImmo-Anbieternummer (ANID)",
-            "en": "OpenImmo provider identifier (ANID)"
-        },
-        "openImmoObjectId": {
-            "de": "OpenImmo-Objekt-ID",
-            "en": "OpenImmo object identifier"
-        },
-        "openSpace": {
-            "de": "Freifläche in Quadratmetern",
-            "en": "Open space area in square meters"
-        },
-        "operatingCostsVAT": {
-            "de": "Mehrwertsteueranteil der Betriebskosten",
-            "en": "VAT portion of the operating costs"
-        },
-        "originIdentifier": {
-            "de": "Herkunftskennung des Datensatzes",
-            "en": "Origin identifier of the data record"
-        },
-        "other": {
-            "de": "Sonstige Angabe",
-            "en": "Other value"
-        },
-        "otherArea": {
-            "de": "Sonstige Fläche in Quadratmetern",
-            "en": "Other area in square meters"
-        },
-        "otherCostsNet": {
-            "de": "Sonstige Nettokosten (ohne MwSt.)",
-            "en": "Other net costs (excluding VAT)"
-        },
-        "otherCostsVAT": {
-            "de": "Mehrwertsteueranteil sonstiger Kosten",
-            "en": "VAT portion of other costs"
-        },
-        "otherEmail": {
-            "de": "Sonstige E-Mail-Adresse",
-            "en": "Other email address"
-        },
-        "otherInformation": {
-            "de": "Sonstige Informationen",
-            "en": "Other information"
-        },
-        "otherPhoneNumber": {
-            "de": "Sonstige Telefonnummer",
-            "en": "Other phone number"
-        },
-        "otherRentNet": {
-            "de": "Sonstige Nettomiete (ohne MwSt.)",
-            "en": "Other net rent (excluding VAT)"
-        },
-        "otherRentVAT": {
-            "de": "Mehrwertsteueranteil sonstiger Miete",
-            "en": "VAT portion of other rent"
-        },
-        "otherType": {
-            "de": "Typ des sonstigen Objekts",
-            "en": "Type of the other property"
-        },
-        "pantry": {
-            "de": "Speisekammer vorhanden",
-            "en": "Pantry available"
-        },
-        "parcel": {
-            "de": "Flurstücknummer des Grundstücks",
-            "en": "Parcel number of the plot"
-        },
-        "parking": {
-            "de": "Stellplatz oder Parkfläche",
-            "en": "Parking space or parking area"
-        },
-        "parkingCarport": {
-            "de": "Carport-Stellplatz",
-            "en": "Carport parking space"
-        },
-        "parkingDuplex": {
-            "de": "Duplex-Stellplatz",
-            "en": "Duplex parking space"
-        },
-        "parkingGarage": {
-            "de": "Garagenstellplatz",
-            "en": "Garage parking space"
-        },
-        "parkingMultiStorey": {
-            "de": "Parkhaus-Stellplatz",
-            "en": "Multi-storey car park space"
-        },
-        "parkingOther": {
-            "de": "Sonstiger Stellplatz",
-            "en": "Other parking space"
-        },
-        "parkingOutdoor": {
-            "de": "Außenstellplatz (Freiplatz)",
-            "en": "Outdoor parking space"
-        },
-        "parkingSpacePurchasePrice": {
-            "de": "Kaufpreis des Stellplatzes",
-            "en": "Purchase price of the parking space"
-        },
-        "parkingSpaceRent": {
-            "de": "Mietpreis des Stellplatzes",
-            "en": "Rental price of the parking space"
-        },
-        "parkingSpaceType": {
-            "de": "Typ des Stellplatzes",
-            "en": "Type of parking space"
-        },
-        "parkingType": {
-            "de": "Art des Stellplatzes",
-            "en": "Type of the parking area"
-        },
-        "parkingUnderground": {
-            "de": "Tiefgaragenstellplatz",
-            "en": "Underground garage parking space"
-        },
-        "parquet": {
-            "de": "Parkett als Bodenbelag",
-            "en": "Parquet as flooring"
-        },
-        "partialOfficeArea": {
-            "de": "Teilbürofläche in Quadratmetern",
-            "en": "Partial office area in square meters"
-        },
-        "passiveHouse": {
-            "de": "Passivhaus-Standard erfüllt",
-            "en": "Passive house standard fulfilled"
-        },
-        "path": {
-            "de": "Dateipfad des Anhangs",
-            "en": "File path of the attachment"
-        },
-        "pellet": {
-            "de": "Holzpellets als Heizenergiequelle",
-            "en": "Wood pellets as heating energy source"
-        },
-        "period": {
-            "de": "Zeitraum oder Periode",
-            "en": "Time period"
-        },
-        "personNumber": {
-            "de": "Personennummer der Kontaktperson",
-            "en": "Person number of the contact person"
-        },
-        "persons": {
-            "de": "Anzahl der Personen",
-            "en": "Number of persons"
-        },
-        "pets": {
-            "de": "Haustiere erlaubt",
-            "en": "Pets allowed"
-        },
-        "phone": {
-            "de": "Telefonnummer",
-            "en": "Phone number"
-        },
-        "phoneExtension": {
-            "de": "Telefondurchwahl der Kontaktperson",
-            "en": "Phone extension of the contact person"
-        },
-        "phoneType": {
-            "de": "Typ der Telefonnummer",
-            "en": "Type of phone number"
-        },
-        "photo": {
-            "de": "Foto der Kontaktperson oder der Immobilie",
-            "en": "Photo of the contact person or property"
-        },
-        "plastic": {
-            "de": "Kunststoffboden als Bodenbelag",
-            "en": "Plastic flooring"
-        },
-        "plot": {
-            "de": "Grundstücksobjekt",
-            "en": "Plot property"
-        },
-        "plotArea": {
-            "de": "Grundstücksfläche in Quadratmetern",
-            "en": "Plot area in square meters"
-        },
-        "plotFront": {
-            "de": "Grundstücksfront (Straßenfront) in Metern",
-            "en": "Plot front (street frontage) in meters"
-        },
-        "plotType": {
-            "de": "Typ des Grundstücksobjekts",
-            "en": "Type of the plot property"
-        },
-        "plusVAT": {
-            "de": "Preis zuzüglich Mehrwertsteuer",
-            "en": "Price plus VAT"
-        },
-        "poBox": {
-            "de": "Postfachnummer",
-            "en": "PO box number"
-        },
-        "poBoxCity": {
-            "de": "Ort des Postfachs",
-            "en": "City of the PO box"
-        },
-        "poBoxPostalCode": {
-            "de": "Postleitzahl des Postfachs",
-            "en": "Postal code of the PO box"
-        },
-        "policeCall": {
-            "de": "Polizeirufanlage als Sicherheitstechnik vorhanden",
-            "en": "Police call system as security technology available"
-        },
-        "position": {
-            "de": "Position oder Berufsbezeichnung der Kontaktperson",
-            "en": "Position or job title of the contact person"
-        },
-        "positiveForwarding": {
-            "de": "Weiterleitungseinstellung bei positivem Ergebnis",
-            "en": "Forwarding setting for a positive result"
-        },
-        "postalCode": {
-            "de": "Postleitzahl der Immobilie",
-            "en": "Postal code of the property"
-        },
-        "prefabricatedHouse": {
-            "de": "Fertighaus",
-            "en": "Prefabricated house"
-        },
-        "prefabricatedParts": {
-            "de": "Fertigteil-Bauweise",
-            "en": "Prefabricated parts construction method"
-        },
-        "prices": {
-            "de": "Preisangaben der Immobilie",
-            "en": "Price information of the property"
-        },
-        "priceTimeRangeFrom": {
-            "de": "Startdatum des Preiszeitraums",
-            "en": "Start date of the price time range"
-        },
-        "priceTimeRangeTo": {
-            "de": "Enddatum des Preiszeitraums",
-            "en": "End date of the price time range"
-        },
-        "priceTimeUnit": {
-            "de": "Zeiteinheit für die Preisangabe",
-            "en": "Time unit for the price value"
-        },
-        "primaryEnergySource": {
-            "de": "Primärer Energieträger aus dem Energieausweis",
-            "en": "Primary energy source from the energy certificate"
-        },
-        "privateEmail": {
-            "de": "Private E-Mail-Adresse der Kontaktperson",
-            "en": "Private email address of the contact person"
-        },
-        "privatePhoneNumber": {
-            "de": "Private Telefonnummer der Kontaktperson",
-            "en": "Private phone number of the contact person"
-        },
-        "professionalSupervisoryAuthority": {
-            "de": "Zuständige Aufsichtsbehörde des Maklers",
-            "en": "Professional supervisory authority of the broker"
-        },
-        "propertyCategory": {
-            "de": "Objektkategorie mit Vermarktungsart und Typ",
-            "en": "Property category with marketing type and property type"
-        },
-        "propertyDescription": {
-            "de": "Objektbeschreibung als Freitext",
-            "en": "Property description as free text"
-        },
-        "propertyManagement": {
-            "de": "Objektverwaltungsangaben",
-            "en": "Property management information"
-        },
-        "propertyText": {
-            "de": "Freitext zur Immobilie",
-            "en": "Free text for the property"
-        },
-        "propertyTitle": {
-            "de": "Titel oder Überschrift der Immobilie",
-            "en": "Title or headline of the property"
-        },
-        "propertyTrusteeId": {
-            "de": "Immobilientreuhänder-ID der Kontaktperson",
-            "en": "Property trustee ID of the contact person"
-        },
-        "propertyType": {
-            "de": "Immobilientyp (z.B. Wohnung, Haus, Grundstück, Gewerbe)",
-            "en": "Property type (e.g. apartment, house, plot, commercial)"
-        },
-        "propertyTypeAdditional": {
-            "de": "Ergänzende Typangabe zur Immobilie",
-            "en": "Additional type specification for the property"
-        },
-        "provider": {
-            "de": "Anbieter (Makler oder Eigentümer) der Immobilie",
-            "en": "Provider (agent or owner) of the property"
-        },
-        "providerNumber": {
-            "de": "Anbieternummer",
-            "en": "Provider number"
-        },
-        "purchase": {
-            "de": "Kaufobjekt",
-            "en": "Purchase property"
-        },
-        "purchasePrice": {
-            "de": "Kaufpreis der Immobilie",
-            "en": "Purchase price of the property"
-        },
-        "purchasePriceGross": {
-            "de": "Brutto-Kaufpreis (inkl. MwSt.)",
-            "en": "Gross purchase price (including VAT)"
-        },
-        "purchasePriceNet": {
-            "de": "Netto-Kaufpreis (ohne MwSt.)",
-            "en": "Net purchase price (excluding VAT)"
-        },
-        "purchasePricePerSqm": {
-            "de": "Kaufpreis pro Quadratmeter",
-            "en": "Purchase price per square meter"
-        },
-        "purchasePriceVAT": {
-            "de": "Mehrwertsteueranteil des Kaufpreises",
-            "en": "VAT portion of the purchase price"
-        },
-        "pyramidRoof": {
-            "de": "Pyramidendach vorhanden",
-            "en": "Pyramid roof"
-        },
-        "quantity": {
-            "de": "Anzahl oder Menge",
-            "en": "Quantity or count"
-        },
-        "raisedFloor": {
-            "de": "Doppelboden vorhanden",
-            "en": "Raised floor available"
-        },
-        "ramp": {
-            "de": "Rampe vorhanden",
-            "en": "Loading ramp available"
-        },
-        "realEstate": {
-            "de": "Einzelne Immobilie",
-            "en": "Single real estate property"
-        },
-        "rear": {
-            "de": "Rückseitige Ausrichtung",
-            "en": "Rear orientation"
-        },
-        "referenceId": {
-            "de": "Referenz-ID der Kontaktperson",
-            "en": "Reference ID of the contact person"
-        },
-        "regionalAddition": {
-            "de": "Regionaler Zusatz zur Ortsangabe (z.B. Stadtteil)",
-            "en": "Regional addition to the location (e.g. district)"
-        },
-        "regionId": {
-            "de": "Regions-ID der Immobilie",
-            "en": "Region ID of the property"
-        },
-        "releasePropertyAddress": {
-            "de": "Vollständige Adresse der Immobilie freigegeben",
-            "en": "Full address of the property released for publication"
-        },
-        "remark": {
-            "de": "Bemerkung oder Hinweis",
-            "en": "Remark or note"
-        },
-        "remote": {
-            "de": "Abgelegene Lage der Immobilie",
-            "en": "Remote location of the property"
-        },
-        "rentableArea": {
-            "de": "Vermietbare Fläche in Quadratmetern",
-            "en": "Rentable area in square meters"
-        },
-        "rented": {
-            "de": "Immobilie ist vermietet",
-            "en": "Property is currently rented"
-        },
-        "rentLease": {
-            "de": "Miet- oder Pachtangabe",
-            "en": "Rent or lease value"
-        },
-        "rentPricePerSqm": {
-            "de": "Mietpreis pro Quadratmeter",
-            "en": "Rent price per square meter"
-        },
-        "rentSurcharges": {
-            "de": "Mietzuschläge",
-            "en": "Rent surcharges"
-        },
-        "reservesNet": {
-            "de": "Netto-Instandhaltungsrücklagen (ohne MwSt.)",
-            "en": "Net maintenance reserves (excluding VAT)"
-        },
-        "reserveVAT": {
-            "de": "Mehrwertsteueranteil der Rücklagen",
-            "en": "VAT portion of the reserves"
-        },
-        "retail": {
-            "de": "Einzelhandelsobjekt",
-            "en": "Retail property"
-        },
-        "right": {
-            "de": "Lage rechts im Gebäude",
-            "en": "Right position in the building"
-        },
-        "roofShape": {
-            "de": "Dachform des Gebäudes",
-            "en": "Roof shape of the building"
-        },
-        "rooms": {
-            "de": "Zimmeranzahl der Immobilie",
-            "en": "Number of rooms of the property"
-        },
-        "roomsModifiable": {
-            "de": "Zimmeraufteilung ist veränderbar",
-            "en": "Room layout is modifiable"
-        },
-        "roomType": {
-            "de": "Raumtyp",
-            "en": "Room type"
-        },
-        "saddleRoof": {
-            "de": "Satteldach vorhanden",
-            "en": "Saddle (gabled) roof"
-        },
-        "salesArea": {
-            "de": "Verkaufsfläche in Quadratmetern",
-            "en": "Sales area in square meters"
-        },
-        "salesStatus": {
-            "de": "Verkaufsstatus der Immobilie",
-            "en": "Sales status of the property"
-        },
-        "salutation": {
-            "de": "Anrede der Kontaktperson",
-            "en": "Salutation of the contact person"
-        },
-        "sauna": {
-            "de": "Sauna vorhanden",
-            "en": "Sauna available"
-        },
-        "scope": {
-            "de": "Umfang oder Geltungsbereich",
-            "en": "Scope or range"
-        },
-        "screed": {
-            "de": "Estrich als Bodenbelag",
-            "en": "Screed as flooring"
-        },
-        "securityService": {
-            "de": "Sicherheitsdienst vorhanden",
-            "en": "Security service available"
-        },
-        "securityTechnology": {
-            "de": "Sicherheitstechnik der Immobilie",
-            "en": "Security technology of the property"
-        },
-        "senderSoftware": {
-            "de": "Software des sendenden Systems",
-            "en": "Software of the sending system"
-        },
-        "senderVersion": {
-            "de": "Version des sendenden Systems",
-            "en": "Version of the sending system"
-        },
-        "seniorFriendly": {
-            "de": "Seniorengerecht ausgestattet",
-            "en": "Senior-friendly equipped"
-        },
-        "services": {
-            "de": "Serviceleistungen der Immobilie",
-            "en": "Services of the property"
-        },
-        "shedRoof": {
-            "de": "Pultdach vorhanden",
-            "en": "Shed (mono-pitched) roof"
-        },
-        "shopArea": {
-            "de": "Ladenfläche in Quadratmetern",
-            "en": "Shop area in square meters"
-        },
-        "shopping": {
-            "de": "Einkaufsmöglichkeiten in der Nähe",
-            "en": "Shopping facilities nearby"
-        },
-        "shower": {
-            "de": "Dusche vorhanden",
-            "en": "Shower available"
-        },
-        "showHighestBid": {
-            "de": "Höchstgebot anzeigen",
-            "en": "Show highest bid"
-        },
-        "shutters": {
-            "de": "Rollläden vorhanden",
-            "en": "Shutters/blinds available"
-        },
-        "siteOccupancyIndex": {
-            "de": "Grundflächenzahl (GRZ) des Grundstücks",
-            "en": "Site occupancy index (GRZ) of the plot"
-        },
-        "socialHousing": {
-            "de": "Sozialer Wohnungsbau (öffentlich gefördert)",
-            "en": "Social housing (publicly subsidized)"
-        },
-        "solar": {
-            "de": "Solarenergie als Heizenergiequelle",
-            "en": "Solar energy as heating energy source"
-        },
-        "solid": {
-            "de": "Massivbauweise",
-            "en": "Solid (masonry) construction method"
-        },
-        "south": {
-            "de": "Ausrichtung Süd",
-            "en": "South orientation"
-        },
-        "southeast": {
-            "de": "Ausrichtung Südost",
-            "en": "Southeast orientation"
-        },
-        "southwest": {
-            "de": "Ausrichtung Südwest",
-            "en": "Southwest orientation"
-        },
-        "spaceType": {
-            "de": "Raumtyp (z.B. Büro, Lager, Verkauf)",
-            "en": "Space type (e.g. office, storage, retail)"
-        },
-        "speed": {
-            "de": "Geschwindigkeit (z.B. Breitbandgeschwindigkeit in Mbit/s)",
-            "en": "Speed (e.g. broadband speed in Mbit/s)"
-        },
-        "sportDistances": {
-            "de": "Entfernungen zu Sportanlagen",
-            "en": "Distances to sports facilities"
-        },
-        "sportsFacilities": {
-            "de": "Sporteinrichtungen vorhanden",
-            "en": "Sports facilities available"
-        },
-        "startOfBiddingTime": {
-            "de": "Startzeitpunkt des Bieterverfahrens",
-            "en": "Start time of the bidding process"
-        },
-        "startOfOfferPhase": {
-            "de": "Beginn der Angebotsphase",
-            "en": "Start of the offer phase"
-        },
-        "state": {
-            "de": "Bundesland der Immobilie",
-            "en": "Federal state of the property"
-        },
-        "status": {
-            "de": "Status der Immobilie oder des Datentransfers",
-            "en": "Status of the property or the data transfer"
-        },
-        "statusFrom": {
-            "de": "Datum ab dem der Status gilt",
-            "en": "Date from which the status applies"
-        },
-        "stone": {
-            "de": "Steinboden als Bodenbelag",
-            "en": "Stone flooring"
-        },
-        "storageArea": {
-            "de": "Lagerfläche in Quadratmetern",
-            "en": "Storage area in square meters"
-        },
-        "storageRoom": {
-            "de": "Abstellraum vorhanden",
-            "en": "Storage room available"
-        },
-        "stove": {
-            "de": "Ofen oder Kaminofen vorhanden",
-            "en": "Stove or wood-burning stove available"
-        },
-        "street": {
-            "de": "Straße der Immobilie",
-            "en": "Street of the property"
-        },
-        "suitableForSharedFlat": {
-            "de": "Für Wohngemeinschaft geeignet",
-            "en": "Suitable for shared flat"
-        },
-        "supply": {
-            "de": "Versorgungsanschlüsse vorhanden",
-            "en": "Utility supply connections available"
-        },
-        "swimmingPool": {
-            "de": "Schwimmbad oder Pool vorhanden",
-            "en": "Swimming pool available"
-        },
-        "targetNetYield": {
-            "de": "Soll-Netto-Rendite (angestrebte Rendite)",
-            "en": "Target net yield of the property"
-        },
-        "targetRentalIncome": {
-            "de": "Soll-Mieteinnahmen (angestrebte Mieteinnahmen)",
-            "en": "Target rental income of the property"
-        },
-        "taxNumber": {
-            "de": "Steuernummer des Anbieters",
-            "en": "Tax number of the provider"
-        },
-        "technicalEmail": {
-            "de": "Technische E-Mail-Adresse des Systems",
-            "en": "Technical email address of the system"
-        },
-        "technicalManagement": {
-            "de": "Technische Verwaltungsdaten des Datentransfers",
-            "en": "Technical management data of the data transfer"
-        },
-        "terracotta": {
-            "de": "Terrakottaboden als Bodenbelag",
-            "en": "Terracotta flooring"
-        },
-        "threeLines": {
-            "de": "Dreizeiliger Freitext (z.B. für Inserate)",
-            "en": "Three-line free text (e.g. for listings)"
-        },
-        "tiles": {
-            "de": "Fliesen als Bodenbelag",
-            "en": "Tiles as flooring"
-        },
-        "timestamp": {
-            "de": "Zeitstempel des Datentransfers",
-            "en": "Timestamp of the data transfer"
-        },
-        "timeUnit": {
-            "de": "Zeiteinheit (z.B. Tag, Woche, Monat)",
-            "en": "Time unit (e.g. day, week, month)"
-        },
-        "title": {
-            "de": "Titel oder akademischer Grad der Kontaktperson",
-            "en": "Title or academic degree of the contact person"
-        },
-        "toDate": {
-            "de": "Enddatum",
-            "en": "End date"
-        },
-        "totalArea": {
-            "de": "Gesamtfläche in Quadratmetern",
-            "en": "Total area in square meters"
-        },
-        "totalCostGross": {
-            "de": "Brutto-Gesamtbelastung (inkl. MwSt.)",
-            "en": "Gross total cost burden (including VAT)"
-        },
-        "totalCostNet": {
-            "de": "Netto-Gesamtbelastung (ohne MwSt.)",
-            "en": "Net total cost burden (excluding VAT)"
-        },
-        "totalCostsPerSqmFrom": {
-            "de": "Gesamtkosten pro Quadratmeter ab einem Mindestwert",
-            "en": "Total costs per square meter starting from a minimum value"
-        },
-        "totalCostsPerSqmTo": {
-            "de": "Gesamtkosten pro Quadratmeter bis zu einem Höchstwert",
-            "en": "Total costs per square meter up to a maximum value"
-        },
-        "totalCostVAT": {
-            "de": "Mehrwertsteueranteil der Gesamtbelastung",
-            "en": "VAT portion of the total cost burden"
-        },
-        "totalRentGross": {
-            "de": "Brutto-Gesamtmiete (inkl. MwSt.)",
-            "en": "Gross total rent (including VAT)"
-        },
-        "totalRentNet": {
-            "de": "Netto-Gesamtmiete (ohne MwSt.)",
-            "en": "Net total rent (excluding VAT)"
-        },
-        "totalRentVAT": {
-            "de": "Mehrwertsteueranteil der Gesamtmiete",
-            "en": "VAT portion of the total rent"
-        },
-        "totalVAT": {
-            "de": "Gesamter Mehrwertsteuerbetrag",
-            "en": "Total VAT amount"
-        },
-        "tradeType": {
-            "de": "Typ des Handelsgewerbes (z.B. Einzelhandel, Großhandel)",
-            "en": "Trade type (e.g. retail, wholesale)"
-        },
-        "transfer": {
-            "de": "Datentransfer-Metadaten",
-            "en": "Data transfer metadata"
-        },
-        "truncatedHipRoof": {
-            "de": "Krüppelwalmdach vorhanden",
-            "en": "Truncated hip roof"
-        },
-        "turnkeyWithBasement": {
-            "de": "Schlüsselfertig mit Keller",
-            "en": "Turnkey with basement"
-        },
-        "turnkeyWithFoundation": {
-            "de": "Schlüsselfertig mit Bodenplatte",
-            "en": "Turnkey with foundation slab"
-        },
-        "turnkeyWithoutFoundation": {
-            "de": "Schlüsselfertig ohne Bodenplatte",
-            "en": "Turnkey without foundation slab"
-        },
-        "type": {
-            "de": "Typ oder Art",
-            "en": "Type or kind"
-        },
-        "typeOfUse": {
-            "de": "Nutzungsart der Immobilie",
-            "en": "Type of use of the property"
-        },
-        "umtsReception": {
-            "de": "UMTS-Mobilfunkempfang vorhanden",
-            "en": "UMTS mobile reception available"
-        },
-        "undergroundParking": {
-            "de": "Tiefgaragenstellplatz vorhanden",
-            "en": "Underground parking space available"
-        },
-        "unitValueTaxVAT": {
-            "de": "Mehrwertsteuer auf den Einheitswert",
-            "en": "VAT on the unit value tax"
-        },
-        "urinal": {
-            "de": "Urinal im Badezimmer vorhanden",
-            "en": "Urinal in bathroom available"
-        },
-        "url": {
-            "de": "Webseite oder URL der Kontaktperson oder des Anbieters",
-            "en": "Website or URL of the contact person or provider"
-        },
-        "usableArea": {
-            "de": "Nutzfläche in Quadratmetern",
-            "en": "Usable area in square meters"
-        },
-        "userDefinedAnyfield": {
-            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
-            "en": "User-defined free field with arbitrary content"
-        },
-        "userDefinedExtend": {
-            "de": "Benutzerdefinierte Erweiterung",
-            "en": "User-defined extension"
-        },
-        "userDefinedSimplefield": {
-            "de": "Benutzerdefiniertes einfaches Freifeld",
-            "en": "User-defined simple free field"
-        },
-        "validUntil": {
-            "de": "Gültigkeitsdatum des Energieausweises",
-            "en": "Validity date of the energy performance certificate"
-        },
-        "value": {
+        "ActualRentalIncome.value": {
             "de": "Wert des Feldes",
             "en": "Value of the field"
         },
-        "valueClass": {
-            "de": "Wertklasse des Energieausweises",
-            "en": "Value class of the energy performance certificate"
+        "AdditionalAddress.firstName": {
+            "de": "Vorname der Kontaktperson",
+            "en": "First name of the contact person"
         },
-        "vatId": {
-            "de": "Umsatzsteuer-Identifikationsnummer des Anbieters",
-            "en": "VAT identification number of the provider"
+        "AdditionalAddress.name": {
+            "de": "Nachname der Kontaktperson",
+            "en": "Last name of the contact person"
         },
-        "vatRate": {
-            "de": "Mehrwertsteuersatz",
-            "en": "VAT rate"
+        "AdditionalAddress.title": {
+            "de": "Titel oder akademischer Grad der Kontaktperson",
+            "en": "Title or academic degree of the contact person"
         },
-        "version": {
-            "de": "Version des OpenImmo-Formats oder der Software",
-            "en": "Version of the OpenImmo format or software"
+        "AdditionalAddress.salutation": {
+            "de": "Anrede der Kontaktperson",
+            "en": "Salutation of the contact person"
         },
-        "view": {
-            "de": "Aussicht oder Blickrichtung der Immobilie",
-            "en": "View or outlook of the property"
+        "AdditionalAddress.letterSalutation": {
+            "de": "Briefanrede der Kontaktperson",
+            "en": "Letter salutation of the contact person"
         },
-        "viewingAppointment": {
-            "de": "Erstes Besichtigungstermin",
-            "en": "First viewing appointment"
+        "AdditionalAddress.company": {
+            "de": "Firmenname des Anbieters",
+            "en": "Company name of the provider"
         },
-        "viewingAppointment2": {
-            "de": "Zweiter Besichtigungstermin",
-            "en": "Second viewing appointment"
+        "AdditionalAddress.additionalField": {
+            "de": "Zusätzliches Freifeld",
+            "en": "Additional free-text field"
         },
-        "virtualTour": {
-            "de": "Virtuelle Tour der Immobilie vorhanden",
-            "en": "Virtual tour of the property available"
+        "AdditionalAddress.street": {
+            "de": "Straße der Immobilie",
+            "en": "Street of the property"
         },
-        "visible": {
-            "de": "Sichtbarkeit des Inserats oder Elements",
-            "en": "Visibility of the listing or element"
+        "AdditionalAddress.houseNumber": {
+            "de": "Hausnummer der Immobilie",
+            "en": "House number of the property"
         },
-        "warmRent": {
-            "de": "Warmmiete (Kaltmiete inkl. Nebenkosten)",
-            "en": "Warm rent (cold rent including utilities)"
+        "AdditionalAddress.postalCode": {
+            "de": "Postleitzahl der Immobilie",
+            "en": "Postal code of the property"
         },
-        "waterElectric": {
-            "de": "Wassererwärmung elektrisch",
-            "en": "Electric water heating"
+        "AdditionalAddress.city": {
+            "de": "Stadt oder Ort der Immobilie",
+            "en": "City or town of the property"
         },
-        "waterEnergy": {
-            "de": "Wasserenergie als Heizenergiequelle",
-            "en": "Water energy as heating energy source"
+        "AdditionalAddress.poBox": {
+            "de": "Postfachnummer",
+            "en": "PO box number"
         },
-        "waz": {
-            "de": "Wohn-Arbeits-Zimmer (Kombination aus Wohnen und Arbeiten)",
-            "en": "Living-working room (combination of living and working space)"
+        "AdditionalAddress.poBoxPostalCode": {
+            "de": "Postleitzahl des Postfachs",
+            "en": "Postal code of the PO box"
         },
-        "wellnessArea": {
-            "de": "Wellnessbereich vorhanden",
-            "en": "Wellness area available"
+        "AdditionalAddress.poBoxCity": {
+            "de": "Ort des Postfachs",
+            "en": "City of the PO box"
         },
-        "west": {
-            "de": "Ausrichtung West",
-            "en": "West orientation"
+        "AdditionalAddress.country": {
+            "de": "Land der Immobilie",
+            "en": "Country of the property"
         },
-        "wheelchairAccessible": {
-            "de": "Rollstuhlgerecht zugänglich",
-            "en": "Wheelchair accessible"
+        "AdditionalAddress.centralEmail": {
+            "de": "Zentrale E-Mail-Adresse des Anbieters",
+            "en": "Central email address of the provider"
         },
-        "windEnergy": {
-            "de": "Windenergie als Heizenergiequelle",
-            "en": "Wind energy as heating energy source"
+        "AdditionalAddress.directEmail": {
+            "de": "Direkte E-Mail-Adresse der Kontaktperson",
+            "en": "Direct email address of the contact person"
         },
-        "window": {
-            "de": "Fensterausstattung der Immobilie",
-            "en": "Window equipment of the property"
+        "AdditionalAddress.privateEmail": {
+            "de": "Private E-Mail-Adresse der Kontaktperson",
+            "en": "Private email address of the contact person"
         },
-        "windowFront": {
+        "AdditionalAddress.otherEmail": {
+            "de": "Sonstige E-Mail-Adresse",
+            "en": "Other email address"
+        },
+        "AdditionalAddress.phoneExtension": {
+            "de": "Telefondurchwahl der Kontaktperson",
+            "en": "Phone extension of the contact person"
+        },
+        "AdditionalAddress.centralPhoneNumber": {
+            "de": "Zentrale Telefonnummer des Anbieters",
+            "en": "Central phone number of the provider"
+        },
+        "AdditionalAddress.mobileNumber": {
+            "de": "Mobiltelefonnummer der Kontaktperson",
+            "en": "Mobile phone number of the contact person"
+        },
+        "AdditionalAddress.faxNumber": {
+            "de": "Faxnummer der Kontaktperson",
+            "en": "Fax number of the contact person"
+        },
+        "AdditionalAddress.privatePhoneNumber": {
+            "de": "Private Telefonnummer der Kontaktperson",
+            "en": "Private phone number of the contact person"
+        },
+        "AdditionalAddress.otherPhoneNumber": {
+            "de": "Sonstige Telefonnummer",
+            "en": "Other phone number"
+        },
+        "AdditionalAddress.url": {
+            "de": "Webseite oder URL der Kontaktperson oder des Anbieters",
+            "en": "Website or URL of the contact person or provider"
+        },
+        "AdditionalAddress.addressRelease": {
+            "de": "Adresse zur Veröffentlichung freigegeben",
+            "en": "Address released for publication"
+        },
+        "AdditionalAddress.personNumber": {
+            "de": "Personennummer der Kontaktperson",
+            "en": "Person number of the contact person"
+        },
+        "AdditionalAddress.freeTextField": {
+            "de": "Freitextfeld",
+            "en": "Free text field"
+        },
+        "AdditionalAddress.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "AdditionalAddress.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "AdditionalAddress.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "AdditionalCostsPerSqmFrom.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "Areas.livingArea": {
+            "de": "Wohnfläche in Quadratmetern",
+            "en": "Living area in square meters"
+        },
+        "Areas.usableArea": {
+            "de": "Nutzfläche in Quadratmetern",
+            "en": "Usable area in square meters"
+        },
+        "Areas.totalArea": {
+            "de": "Gesamtfläche in Quadratmetern",
+            "en": "Total area in square meters"
+        },
+        "Areas.shopArea": {
+            "de": "Ladenfläche in Quadratmetern",
+            "en": "Shop area in square meters"
+        },
+        "Areas.storageArea": {
+            "de": "Lagerfläche in Quadratmetern",
+            "en": "Storage area in square meters"
+        },
+        "Areas.salesArea": {
+            "de": "Verkaufsfläche in Quadratmetern",
+            "en": "Sales area in square meters"
+        },
+        "Areas.openSpace": {
+            "de": "Freifläche in Quadratmetern",
+            "en": "Open space area in square meters"
+        },
+        "Areas.officeArea": {
+            "de": "Bürofläche in Quadratmetern",
+            "en": "Office area in square meters"
+        },
+        "Areas.partialOfficeArea": {
+            "de": "Teilbürofläche in Quadratmetern",
+            "en": "Partial office area in square meters"
+        },
+        "Areas.windowFront": {
             "de": "Anteil der Fensterfront an der Fassade",
             "en": "Proportion of window front on the facade"
         },
-        "windowFrontSqm": {
+        "Areas.administrativeArea": {
+            "de": "Verwaltungsfläche in Quadratmetern",
+            "en": "Administrative area in square meters"
+        },
+        "Areas.gastronomyArea": {
+            "de": "Gastronomiefläche in Quadratmetern",
+            "en": "Gastronomy area in square meters"
+        },
+        "Areas.siteOccupancyIndex": {
+            "de": "Grundflächenzahl (GRZ) des Grundstücks",
+            "en": "Site occupancy index (GRZ) of the plot"
+        },
+        "Areas.floorAreaRatio": {
+            "de": "Geschossflächenzahl (GFZ) des Grundstücks",
+            "en": "Floor area ratio (GFZ) of the plot"
+        },
+        "Areas.floorSpaceIndex": {
+            "de": "Baumassenzahl (BMZ) des Grundstücks",
+            "en": "Floor space index (BMZ) of the plot"
+        },
+        "Areas.grossFloorArea": {
+            "de": "Brutto-Grundfläche (BGF) des Gebäudes",
+            "en": "Gross floor area (BGF) of the building"
+        },
+        "Areas.plotArea": {
+            "de": "Grundstücksfläche in Quadratmetern",
+            "en": "Plot area in square meters"
+        },
+        "Areas.otherArea": {
+            "de": "Sonstige Fläche in Quadratmetern",
+            "en": "Other area in square meters"
+        },
+        "Areas.numberOfRooms": {
+            "de": "Anzahl der Zimmer",
+            "en": "Number of rooms"
+        },
+        "Areas.numberOfBedrooms": {
+            "de": "Anzahl der Schlafzimmer",
+            "en": "Number of bedrooms"
+        },
+        "Areas.numberOfBathrooms": {
+            "de": "Anzahl der Badezimmer",
+            "en": "Number of bathrooms"
+        },
+        "Areas.numberOfSeparateToilets": {
+            "de": "Anzahl der separaten WCs",
+            "en": "Number of separate toilets"
+        },
+        "Areas.numberOfBalconies": {
+            "de": "Anzahl der Balkone",
+            "en": "Number of balconies"
+        },
+        "Areas.numberOfTerraces": {
+            "de": "Anzahl der Terrassen",
+            "en": "Number of terraces"
+        },
+        "Areas.numberOfLoggias": {
+            "de": "Anzahl der Loggien",
+            "en": "Number of loggias"
+        },
+        "Areas.balconyTerraceArea": {
+            "de": "Balkon- oder Terrassenfläche in Quadratmetern",
+            "en": "Balcony or terrace area in square meters"
+        },
+        "Areas.numberOfLivingBedrooms": {
+            "de": "Anzahl der Wohn- und Schlafzimmer",
+            "en": "Number of living and bedrooms"
+        },
+        "Areas.gardenArea": {
+            "de": "Gartenfläche in Quadratmetern",
+            "en": "Garden area in square meters"
+        },
+        "Areas.basementArea": {
+            "de": "Kellerfläche in Quadratmetern",
+            "en": "Basement area in square meters"
+        },
+        "Areas.windowFrontSqm": {
             "de": "Fensterfront in Quadratmetern",
             "en": "Window front area in square meters"
         },
-        "winterGarden": {
-            "de": "Wintergarten vorhanden",
-            "en": "Winter garden available"
+        "Areas.plotFront": {
+            "de": "Grundstücksfront (Straßenfront) in Metern",
+            "en": "Plot front (street frontage) in meters"
         },
-        "withHotWater": {
+        "Areas.atticArea": {
+            "de": "Dachbodenfläche in Quadratmetern",
+            "en": "Attic area in square meters"
+        },
+        "Areas.divisibleFrom": {
+            "de": "Fläche ab der die Immobilie teilbar ist in Quadratmetern",
+            "en": "Minimum area from which the property can be subdivided in square meters"
+        },
+        "Areas.heatedArea": {
+            "de": "Beheizte Fläche in Quadratmetern",
+            "en": "Heated area in square meters"
+        },
+        "Areas.numberOfParkingSpaces": {
+            "de": "Anzahl der Stellplätze",
+            "en": "Number of parking spaces"
+        },
+        "Areas.diningRoomSeats": {
+            "de": "Anzahl der Sitzplätze im Gastraum",
+            "en": "Number of seats in the dining room"
+        },
+        "Areas.numberOfBeds": {
+            "de": "Anzahl der Betten",
+            "en": "Number of beds"
+        },
+        "Areas.numberOfMeetingRooms": {
+            "de": "Anzahl der Tagungsräume",
+            "en": "Number of meeting rooms"
+        },
+        "Areas.rentableArea": {
+            "de": "Vermietbare Fläche in Quadratmetern",
+            "en": "Rentable area in square meters"
+        },
+        "Areas.numberOfResidentialUnits": {
+            "de": "Anzahl der Wohneinheiten",
+            "en": "Number of residential units"
+        },
+        "Areas.numberOfCommercialUnits": {
+            "de": "Anzahl der Gewerbeeinheiten",
+            "en": "Number of commercial units"
+        },
+        "Areas.grannyFlat": {
+            "de": "Einliegerwohnung vorhanden",
+            "en": "Granny flat (annexe apartment) available"
+        },
+        "Areas.cubature": {
+            "de": "Kubatur (Rauminhalt) des Gebäudes in Kubikmetern",
+            "en": "Cubature (volume) of the building in cubic meters"
+        },
+        "Areas.areaFrom": {
+            "de": "Fläche ab einem Mindestwert in Quadratmetern",
+            "en": "Area starting from a minimum value in square meters"
+        },
+        "Areas.areaTo": {
+            "de": "Fläche bis zu einem Höchstwert in Quadratmetern",
+            "en": "Area up to a maximum value in square meters"
+        },
+        "Areas.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Areas.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Areas.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Attachment.attachmentTitle": {
+            "de": "Titel des Anhangs",
+            "en": "Title of the attachment"
+        },
+        "Attachment.format": {
+            "de": "Dateiformat des Anhangs",
+            "en": "File format of the attachment"
+        },
+        "Attachment.check": {
+            "de": "Prüfinformation",
+            "en": "Check information"
+        },
+        "Attachment.data": {
+            "de": "Datenbehälter",
+            "en": "Data container"
+        },
+        "Attachments.attachment": {
+            "de": "Anhang (Datei) der Immobilie",
+            "en": "Attachment (file) of the property"
+        },
+        "Attachments.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Attachments.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Attachments.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Auction.forcedSale": {
+            "de": "Zwangsverkauf oder Notverkauf",
+            "en": "Forced sale or distressed sale"
+        },
+        "Auction.fileNumber": {
+            "de": "Aktenzeichen der Zwangsversteigerung",
+            "en": "File number of the foreclosure auction"
+        },
+        "Auction.forcedSaleDate": {
+            "de": "Datum des Zwangsverkaufs",
+            "en": "Date of the forced sale"
+        },
+        "Auction.additionalDate": {
+            "de": "Zusätzliches Datum",
+            "en": "Additional date"
+        },
+        "Auction.districtCourt": {
+            "de": "Zuständiges Amtsgericht",
+            "en": "Responsible district court"
+        },
+        "Auction.marketValue": {
+            "de": "Marktwert der Immobilie",
+            "en": "Market value of the property"
+        },
+        "BiddingProcess.startOfOfferPhase": {
+            "de": "Beginn der Angebotsphase",
+            "en": "Start of the offer phase"
+        },
+        "BiddingProcess.viewingAppointment": {
+            "de": "Erstes Besichtigungstermin",
+            "en": "First viewing appointment"
+        },
+        "BiddingProcess.viewingAppointment2": {
+            "de": "Zweiter Besichtigungstermin",
+            "en": "Second viewing appointment"
+        },
+        "BiddingProcess.startOfBiddingTime": {
+            "de": "Startzeitpunkt des Bieterverfahrens",
+            "en": "Start time of the bidding process"
+        },
+        "BiddingProcess.endOfBiddingTime": {
+            "de": "Endzeitpunkt des Bieterverfahrens",
+            "en": "End time of the bidding process"
+        },
+        "BiddingProcess.showHighestBid": {
+            "de": "Höchstgebot anzeigen",
+            "en": "Show highest bid"
+        },
+        "BiddingProcess.minimumPrice": {
+            "de": "Mindestpreis der Immobilie",
+            "en": "Minimum price of the property"
+        },
+        "BiddingProcess.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "BiddingProcess.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "BiddingProcess.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Check.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "CommissionSplit.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "ConditionInformation.yearOfConstruction": {
+            "de": "Baujahr der Immobilie",
+            "en": "Year of construction of the property"
+        },
+        "ConditionInformation.lastModernization": {
+            "de": "Jahr der letzten Modernisierung",
+            "en": "Year of the last modernization"
+        },
+        "ConditionInformation.condition": {
+            "de": "Zustand der Immobilie",
+            "en": "Condition of the property"
+        },
+        "ConditionInformation.age": {
+            "de": "Altersangabe der Immobilie",
+            "en": "Age of the property"
+        },
+        "ConditionInformation.developableAccordingTo": {
+            "de": "Bebaubarkeit gemäß Baurecht",
+            "en": "Developability according to building regulations"
+        },
+        "ConditionInformation.development": {
+            "de": "Erschließungszustand des Grundstücks",
+            "en": "Development/utility connection status of the plot"
+        },
+        "ConditionInformation.developmentScope": {
+            "de": "Umfang der Erschließung des Grundstücks",
+            "en": "Scope of utilities and infrastructure connections of the plot"
+        },
+        "ConditionInformation.constructionZone": {
+            "de": "Bauzone des Grundstücks",
+            "en": "Construction zone of the plot"
+        },
+        "ConditionInformation.contamination": {
+            "de": "Altlasten des Grundstücks",
+            "en": "Contamination or legacy pollution of the plot"
+        },
+        "ConditionInformation.energyCertificate": {
+            "de": "Energieausweis der Immobilie",
+            "en": "Energy performance certificate of the property"
+        },
+        "ConditionInformation.salesStatus": {
+            "de": "Verkaufsstatus der Immobilie",
+            "en": "Sales status of the property"
+        },
+        "ConditionInformation.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "ConditionInformation.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "ConditionInformation.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "ContactPerson.centralEmail": {
+            "de": "Zentrale E-Mail-Adresse des Anbieters",
+            "en": "Central email address of the provider"
+        },
+        "ContactPerson.directEmail": {
+            "de": "Direkte E-Mail-Adresse der Kontaktperson",
+            "en": "Direct email address of the contact person"
+        },
+        "ContactPerson.centralPhoneNumber": {
+            "de": "Zentrale Telefonnummer des Anbieters",
+            "en": "Central phone number of the provider"
+        },
+        "ContactPerson.phoneExtension": {
+            "de": "Telefondurchwahl der Kontaktperson",
+            "en": "Phone extension of the contact person"
+        },
+        "ContactPerson.faxNumber": {
+            "de": "Faxnummer der Kontaktperson",
+            "en": "Fax number of the contact person"
+        },
+        "ContactPerson.mobileNumber": {
+            "de": "Mobiltelefonnummer der Kontaktperson",
+            "en": "Mobile phone number of the contact person"
+        },
+        "ContactPerson.name": {
+            "de": "Nachname der Kontaktperson",
+            "en": "Last name of the contact person"
+        },
+        "ContactPerson.firstName": {
+            "de": "Vorname der Kontaktperson",
+            "en": "First name of the contact person"
+        },
+        "ContactPerson.title": {
+            "de": "Titel oder akademischer Grad der Kontaktperson",
+            "en": "Title or academic degree of the contact person"
+        },
+        "ContactPerson.salutation": {
+            "de": "Anrede der Kontaktperson",
+            "en": "Salutation of the contact person"
+        },
+        "ContactPerson.position": {
+            "de": "Position oder Berufsbezeichnung der Kontaktperson",
+            "en": "Position or job title of the contact person"
+        },
+        "ContactPerson.letterSalutation": {
+            "de": "Briefanrede der Kontaktperson",
+            "en": "Letter salutation of the contact person"
+        },
+        "ContactPerson.company": {
+            "de": "Firmenname des Anbieters",
+            "en": "Company name of the provider"
+        },
+        "ContactPerson.additionalField": {
+            "de": "Zusätzliches Freifeld",
+            "en": "Additional free-text field"
+        },
+        "ContactPerson.street": {
+            "de": "Straße der Immobilie",
+            "en": "Street of the property"
+        },
+        "ContactPerson.houseNumber": {
+            "de": "Hausnummer der Immobilie",
+            "en": "House number of the property"
+        },
+        "ContactPerson.postalCode": {
+            "de": "Postleitzahl der Immobilie",
+            "en": "Postal code of the property"
+        },
+        "ContactPerson.city": {
+            "de": "Stadt oder Ort der Immobilie",
+            "en": "City or town of the property"
+        },
+        "ContactPerson.poBox": {
+            "de": "Postfachnummer",
+            "en": "PO box number"
+        },
+        "ContactPerson.poBoxPostalCode": {
+            "de": "Postleitzahl des Postfachs",
+            "en": "Postal code of the PO box"
+        },
+        "ContactPerson.poBoxCity": {
+            "de": "Ort des Postfachs",
+            "en": "City of the PO box"
+        },
+        "ContactPerson.country": {
+            "de": "Land der Immobilie",
+            "en": "Country of the property"
+        },
+        "ContactPerson.privateEmail": {
+            "de": "Private E-Mail-Adresse der Kontaktperson",
+            "en": "Private email address of the contact person"
+        },
+        "ContactPerson.otherEmail": {
+            "de": "Sonstige E-Mail-Adresse",
+            "en": "Other email address"
+        },
+        "ContactPerson.feedbackEmail": {
+            "de": "E-Mail-Adresse für Rückmeldungen",
+            "en": "Email address for feedback"
+        },
+        "ContactPerson.privatePhoneNumber": {
+            "de": "Private Telefonnummer der Kontaktperson",
+            "en": "Private phone number of the contact person"
+        },
+        "ContactPerson.otherPhoneNumber": {
+            "de": "Sonstige Telefonnummer",
+            "en": "Other phone number"
+        },
+        "ContactPerson.url": {
+            "de": "Webseite oder URL der Kontaktperson oder des Anbieters",
+            "en": "Website or URL of the contact person or provider"
+        },
+        "ContactPerson.addressRelease": {
+            "de": "Adresse zur Veröffentlichung freigegeben",
+            "en": "Address released for publication"
+        },
+        "ContactPerson.personNumber": {
+            "de": "Personennummer der Kontaktperson",
+            "en": "Person number of the contact person"
+        },
+        "ContactPerson.propertyTrusteeId": {
+            "de": "Immobilientreuhänder-ID der Kontaktperson",
+            "en": "Property trustee ID of the contact person"
+        },
+        "ContactPerson.photo": {
+            "de": "Foto der Kontaktperson oder der Immobilie",
+            "en": "Photo of the contact person or property"
+        },
+        "ContactPerson.referenceId": {
+            "de": "Referenz-ID der Kontaktperson",
+            "en": "Reference ID of the contact person"
+        },
+        "ContactPerson.freeTextField": {
+            "de": "Freitextfeld",
+            "en": "Free text field"
+        },
+        "ContactPerson.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "ContactPerson.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "ContactPerson.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Data.path": {
+            "de": "Dateipfad des Anhangs",
+            "en": "File path of the attachment"
+        },
+        "Data.attachmentContent": {
+            "de": "Binärer Inhalt des Anhangs",
+            "en": "Binary content of the attachment"
+        },
+        "Distances.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "EnergyPerformanceCertificate.energyCertificateType": {
+            "de": "Typ des Energieausweises (Bedarfs- oder Verbrauchsausweis)",
+            "en": "Type of energy certificate (demand or consumption certificate)"
+        },
+        "EnergyPerformanceCertificate.validUntil": {
+            "de": "Gültigkeitsdatum des Energieausweises",
+            "en": "Validity date of the energy performance certificate"
+        },
+        "EnergyPerformanceCertificate.energyConsumptionValue": {
+            "de": "Energieverbrauchskennwert in kWh/(m²·a)",
+            "en": "Energy consumption characteristic value in kWh/(m²·a)"
+        },
+        "EnergyPerformanceCertificate.withHotWater": {
             "de": "Warmwasser im Energieverbrauchskennwert enthalten",
             "en": "Hot water included in the energy consumption value"
         },
-        "withVAT": {
-            "de": "Preis inkl. Mehrwertsteuer",
-            "en": "Price including VAT"
+        "EnergyPerformanceCertificate.finalEnergyDemand": {
+            "de": "Endenergiebedarf in kWh/(m²·a)",
+            "en": "Final energy demand in kWh/(m²·a)"
         },
-        "wood": {
-            "de": "Holz als Heizenergiequelle",
-            "en": "Wood as heating energy source"
+        "EnergyPerformanceCertificate.primaryEnergySource": {
+            "de": "Primärer Energieträger aus dem Energieausweis",
+            "en": "Primary energy source from the energy certificate"
         },
-        "worth": {
-            "de": "Wert oder Bewertung der Immobilie",
-            "en": "Worth or valuation of the property"
+        "EnergyPerformanceCertificate.electricityValue": {
+            "de": "Stromverbrauchswert aus dem Energieausweis",
+            "en": "Electricity consumption value from the energy certificate"
         },
-        "xTimes": {
-            "de": "Multiplikator (x-fache Jahresmiete) als Preisangabe",
-            "en": "Multiplier (x times annual rent) as price specification"
+        "EnergyPerformanceCertificate.heatValue": {
+            "de": "Wärmeverbrauchswert aus dem Energieausweis",
+            "en": "Heat consumption value from the energy certificate"
         },
-        "year": {
+        "EnergyPerformanceCertificate.valueClass": {
+            "de": "Wertklasse des Energieausweises",
+            "en": "Value class of the energy performance certificate"
+        },
+        "EnergyPerformanceCertificate.yearOfConstruction": {
+            "de": "Baujahr der Immobilie",
+            "en": "Year of construction of the property"
+        },
+        "EnergyPerformanceCertificate.issueDate": {
+            "de": "Ausstellungsdatum des Energieausweises",
+            "en": "Issue date of the energy performance certificate"
+        },
+        "EnergyPerformanceCertificate.year": {
             "de": "Jahrgang des Energieausweises",
             "en": "Vintage year of the energy performance certificate"
         },
-        "yearOfConstruction": {
-            "de": "Baujahr der Immobilie",
-            "en": "Year of construction of the property"
+        "EnergyPerformanceCertificate.buildingType": {
+            "de": "Gebäudetyp (Wohn- oder Nichtwohngebäude)",
+            "en": "Building type (residential or non-residential)"
+        },
+        "EnergyPerformanceCertificate.energyCertificateText": {
+            "de": "Freitext zum Energieausweis",
+            "en": "Free text about the energy performance certificate"
+        },
+        "EnergyPerformanceCertificate.buildingEnergyAct2018": {
+            "de": "Angabe zum Gebäudeenergiegesetz 2018",
+            "en": "Information on the Building Energy Act 2018 (GEG)"
+        },
+        "EnergyPerformanceCertificate.heatingDemandValue": {
+            "de": "Heizwärmebedarfswert (HWB-Wert) in kWh/(m²·a)",
+            "en": "Heating demand value (HWB) in kWh/(m²·a)"
+        },
+        "EnergyPerformanceCertificate.heatingDemandClass": {
+            "de": "Heizwärmebedarfsklasse (HWB-Klasse)",
+            "en": "Heating demand class (HWB class)"
+        },
+        "EnergyPerformanceCertificate.energyEfficiencyValue": {
+            "de": "Energieeffizienzwert (fGEE-Wert)",
+            "en": "Energy efficiency value (fGEE value)"
+        },
+        "EnergyPerformanceCertificate.energyEfficiencyClass": {
+            "de": "Energieeffizienzklasse (A+ bis H)",
+            "en": "Energy efficiency class (A+ to H)"
+        },
+        "Equipment.equipmentCategory": {
+            "de": "Ausstattungskategorie (Standard, Gehoben, Luxus)",
+            "en": "Equipment category (standard, upscale, luxury)"
+        },
+        "Equipment.suitableForSharedFlat": {
+            "de": "Für Wohngemeinschaft geeignet",
+            "en": "Suitable for shared flat"
+        },
+        "Equipment.roomsModifiable": {
+            "de": "Zimmeraufteilung ist veränderbar",
+            "en": "Room layout is modifiable"
+        },
+        "Equipment.bathroom": {
+            "de": "Badezimmerausstattung",
+            "en": "Bathroom equipment"
+        },
+        "Equipment.kitchen": {
+            "de": "Küchenausstattung der Immobilie",
+            "en": "Kitchen equipment of the property"
+        },
+        "Equipment.floor": {
+            "de": "Stockwerk der Wohnung im Gebäude",
+            "en": "Floor level of the unit within the building"
+        },
+        "Equipment.fireplace": {
+            "de": "Kamin vorhanden",
+            "en": "Fireplace available"
+        },
+        "Equipment.heatingType": {
+            "de": "Art des Heizsystems",
+            "en": "Type of heating system"
+        },
+        "Equipment.heating": {
+            "de": "Befeuerungsart des Heizsystems",
+            "en": "Heating fuel type of the heating system"
+        },
+        "Equipment.airConditioned": {
+            "de": "Klimaanlage vorhanden",
+            "en": "Air conditioning available"
+        },
+        "Equipment.elevator": {
+            "de": "Aufzug vorhanden",
+            "en": "Elevator available"
+        },
+        "Equipment.parkingSpaceType": {
+            "de": "Typ des Stellplatzes",
+            "en": "Type of parking space"
+        },
+        "Equipment.gardenUse": {
+            "de": "Gartennutzung möglich",
+            "en": "Garden use possible"
+        },
+        "Equipment.balconyTerraceOrientation": {
+            "de": "Ausrichtung von Balkon oder Terrasse",
+            "en": "Orientation of balcony or terrace"
+        },
+        "Equipment.furnished": {
+            "de": "Möblierungsangabe der Immobilie",
+            "en": "Furnishing information of the property"
+        },
+        "Equipment.wheelchairAccessible": {
+            "de": "Rollstuhlgerecht zugänglich",
+            "en": "Wheelchair accessible"
+        },
+        "Equipment.cableSatelliteTV": {
+            "de": "Kabel- oder Satellitenanschluss vorhanden",
+            "en": "Cable or satellite TV connection available"
+        },
+        "Equipment.digitalTerrestrialTV": {
+            "de": "DVB-T Empfang (digitales Antennenfernsehen) vorhanden",
+            "en": "DVB-T digital terrestrial TV reception available"
+        },
+        "Equipment.barrierFree": {
+            "de": "Barrierefrei zugänglich",
+            "en": "Barrier-free accessible"
+        },
+        "Equipment.sauna": {
+            "de": "Sauna vorhanden",
+            "en": "Sauna available"
+        },
+        "Equipment.swimmingPool": {
+            "de": "Schwimmbad oder Pool vorhanden",
+            "en": "Swimming pool available"
+        },
+        "Equipment.laundryDryingRoom": {
+            "de": "Wasch- und Trockenraum vorhanden",
+            "en": "Laundry and drying room available"
+        },
+        "Equipment.winterGarden": {
+            "de": "Wintergarten vorhanden",
+            "en": "Winter garden available"
+        },
+        "Equipment.dataProcessingCabling": {
+            "de": "EDV-Verkabelung vorhanden",
+            "en": "Data processing cabling available"
+        },
+        "Equipment.ramp": {
+            "de": "Rampe vorhanden",
+            "en": "Loading ramp available"
+        },
+        "Equipment.liftPlatform": {
+            "de": "Hebebühne vorhanden",
+            "en": "Lift platform available"
+        },
+        "Equipment.crane": {
+            "de": "Kran vorhanden",
+            "en": "Crane available"
+        },
+        "Equipment.guestTerrace": {
+            "de": "Gästeterrasse vorhanden",
+            "en": "Guest terrace available"
+        },
+        "Equipment.electricityConnectionValue": {
+            "de": "Stromanschlusswert in kVA",
+            "en": "Electricity connection value in kVA"
+        },
+        "Equipment.canteenCafeteria": {
+            "de": "Kantine oder Cafeteria vorhanden",
+            "en": "Canteen or cafeteria available"
+        },
+        "Equipment.kitchenette": {
+            "de": "Teeküche vorhanden",
+            "en": "Kitchenette available"
+        },
+        "Equipment.hallHeight": {
+            "de": "Hallenhöhe in Metern",
+            "en": "Hall height in meters"
+        },
+        "Equipment.attachedGastronomy": {
+            "de": "Angeschlossene Gastronomie vorhanden",
+            "en": "Attached gastronomy available"
+        },
+        "Equipment.breweryTie": {
+            "de": "Brauereibindung der Gastronomieimmobilie",
+            "en": "Brewery tie for the gastronomy property"
+        },
+        "Equipment.sportsFacilities": {
+            "de": "Sporteinrichtungen vorhanden",
+            "en": "Sports facilities available"
+        },
+        "Equipment.wellnessArea": {
+            "de": "Wellnessbereich vorhanden",
+            "en": "Wellness area available"
+        },
+        "Equipment.services": {
+            "de": "Serviceleistungen der Immobilie",
+            "en": "Services of the property"
+        },
+        "Equipment.holidayPropertyPhone": {
+            "de": "Telefonanschluss der Ferienimmobilie vorhanden",
+            "en": "Phone connection of the holiday property available"
+        },
+        "Equipment.broadbandAccess": {
+            "de": "Breitbandanschluss vorhanden",
+            "en": "Broadband internet access available"
+        },
+        "Equipment.umtsReception": {
+            "de": "UMTS-Mobilfunkempfang vorhanden",
+            "en": "UMTS mobile reception available"
+        },
+        "Equipment.securityTechnology": {
+            "de": "Sicherheitstechnik der Immobilie",
+            "en": "Security technology of the property"
+        },
+        "Equipment.basement": {
+            "de": "Keller- oder Unterkellerungsangabe",
+            "en": "Basement or cellar information"
+        },
+        "Equipment.storageRoom": {
+            "de": "Abstellraum vorhanden",
+            "en": "Storage room available"
+        },
+        "Equipment.bicycleRoom": {
+            "de": "Fahrradkeller oder -raum vorhanden",
+            "en": "Bicycle storage room available"
+        },
+        "Equipment.shutters": {
+            "de": "Rollläden vorhanden",
+            "en": "Shutters/blinds available"
+        },
+        "Equipment.roofShape": {
+            "de": "Dachform des Gebäudes",
+            "en": "Roof shape of the building"
+        },
+        "Equipment.constructionMethod": {
+            "de": "Bauweise des Gebäudes",
+            "en": "Construction method of the building"
+        },
+        "Equipment.developmentStage": {
+            "de": "Ausbaustufe des Gebäudes",
+            "en": "Development stage of the building"
+        },
+        "Equipment.energyType": {
+            "de": "Energieeffizienztyp der Immobilie",
+            "en": "Energy efficiency type of the property"
+        },
+        "Equipment.library": {
+            "de": "Bibliothek vorhanden",
+            "en": "Library available"
+        },
+        "Equipment.attic": {
+            "de": "Dachboden vorhanden",
+            "en": "Attic available"
+        },
+        "Equipment.guestToilet": {
+            "de": "Gäste-WC vorhanden",
+            "en": "Guest toilet available"
+        },
+        "Equipment.cableChannels": {
+            "de": "Kabelkanäle vorhanden",
+            "en": "Cable channels available"
+        },
+        "Equipment.seniorFriendly": {
+            "de": "Seniorengerecht ausgestattet",
+            "en": "Senior-friendly equipped"
+        },
+        "Equipment.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Equipment.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Equipment.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Evaluation.field": {
+            "de": "Datenfeld",
+            "en": "Data field"
+        },
+        "ExternalCommission.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "Field.name": {
+            "de": "Nachname der Kontaktperson",
+            "en": "Last name of the contact person"
+        },
+        "Field.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "Field.type": {
+            "de": "Typ oder Art",
+            "en": "Type or kind"
+        },
+        "Field.mode": {
+            "de": "Modus des Datentransfers",
+            "en": "Mode of the data transfer"
+        },
+        "FreeTexts.propertyTitle": {
+            "de": "Titel oder Überschrift der Immobilie",
+            "en": "Title or headline of the property"
+        },
+        "FreeTexts.threeLines": {
+            "de": "Dreizeiliger Freitext (z.B. für Inserate)",
+            "en": "Three-line free text (e.g. for listings)"
+        },
+        "FreeTexts.location": {
+            "de": "Lagebeschreibung der Immobilie",
+            "en": "Location description of the property"
+        },
+        "FreeTexts.equipmentDescription": {
+            "de": "Beschreibung der Ausstattung",
+            "en": "Description of the equipment"
+        },
+        "FreeTexts.propertyDescription": {
+            "de": "Objektbeschreibung als Freitext",
+            "en": "Property description as free text"
+        },
+        "FreeTexts.otherInformation": {
+            "de": "Sonstige Informationen",
+            "en": "Other information"
+        },
+        "FreeTexts.propertyText": {
+            "de": "Freitext zur Immobilie",
+            "en": "Free text for the property"
+        },
+        "FreeTexts.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "FreeTexts.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "FreeTexts.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "Geo.postalCode": {
+            "de": "Postleitzahl der Immobilie",
+            "en": "Postal code of the property"
+        },
+        "Geo.city": {
+            "de": "Stadt oder Ort der Immobilie",
+            "en": "City or town of the property"
+        },
+        "Geo.geoCoordinates": {
+            "de": "GPS-Koordinaten der Immobilie",
+            "en": "GPS coordinates of the property"
+        },
+        "Geo.street": {
+            "de": "Straße der Immobilie",
+            "en": "Street of the property"
+        },
+        "Geo.houseNumber": {
+            "de": "Hausnummer der Immobilie",
+            "en": "House number of the property"
+        },
+        "Geo.state": {
+            "de": "Bundesland der Immobilie",
+            "en": "Federal state of the property"
+        },
+        "Geo.country": {
+            "de": "Land der Immobilie",
+            "en": "Country of the property"
+        },
+        "Geo.municipalityCode": {
+            "de": "Amtlicher Gemeindeschlüssel (AGS)",
+            "en": "Official municipality code (AGS)"
+        },
+        "Geo.corridor": {
+            "de": "Flurstück-Flur des Grundstücks",
+            "en": "Land parcel corridor of the plot"
+        },
+        "Geo.parcel": {
+            "de": "Flurstücknummer des Grundstücks",
+            "en": "Parcel number of the plot"
+        },
+        "Geo.cadastralDistrict": {
+            "de": "Gemarkung des Grundstücks",
+            "en": "Cadastral district of the plot"
+        },
+        "Geo.floor": {
+            "de": "Stockwerk der Wohnung im Gebäude",
+            "en": "Floor level of the unit within the building"
+        },
+        "Geo.numberOfFloors": {
+            "de": "Gesamte Stockwerkanzahl des Gebäudes",
+            "en": "Total number of floors of the building"
+        },
+        "Geo.locationInBuilding": {
+            "de": "Lage der Wohnung im Gebäude",
+            "en": "Location of the unit within the building"
+        },
+        "Geo.apartmentNumber": {
+            "de": "Wohnungsnummer innerhalb des Gebäudes",
+            "en": "Apartment number within the building"
+        },
+        "Geo.areaLocation": {
+            "de": "Lagegebiet der Immobilie",
+            "en": "Location area of the property"
+        },
+        "Geo.regionalAddition": {
+            "de": "Regionaler Zusatz zur Ortsangabe (z.B. Stadtteil)",
+            "en": "Regional addition to the location (e.g. district)"
+        },
+        "Geo.macroMap": {
+            "de": "Makrokarte (Übersichtskarte) vorhanden",
+            "en": "Macro map (overview map) available"
+        },
+        "Geo.microMap": {
+            "de": "Mikrokarte (Detailkarte) vorhanden",
+            "en": "Micro map (detail map) available"
+        },
+        "Geo.virtualTour": {
+            "de": "Virtuelle Tour der Immobilie vorhanden",
+            "en": "Virtual tour of the property available"
+        },
+        "Geo.aerialPhotos": {
+            "de": "Luftbilder der Immobilie vorhanden",
+            "en": "Aerial photos of the property available"
+        },
+        "Geo.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Geo.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Geo.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "ImprintStructure.companyName": {
+            "de": "Name des Unternehmens",
+            "en": "Name of the company"
+        },
+        "ImprintStructure.companyAddress": {
+            "de": "Unternehmensadresse des Anbieters",
+            "en": "Company address of the provider"
+        },
+        "ImprintStructure.phone": {
+            "de": "Telefonnummer",
+            "en": "Phone number"
+        },
+        "ImprintStructure.authorizedRepresentative": {
+            "de": "Bevollmächtigter Vertreter des Anbieters",
+            "en": "Authorized representative of the provider"
+        },
+        "ImprintStructure.professionalSupervisoryAuthority": {
+            "de": "Zuständige Aufsichtsbehörde des Maklers",
+            "en": "Professional supervisory authority of the broker"
+        },
+        "ImprintStructure.commercialRegister": {
+            "de": "Handelsregisterangaben des Anbieters",
+            "en": "Commercial register information of the provider"
+        },
+        "ImprintStructure.commercialRegisterNumber": {
+            "de": "Handelsregisternummer des Anbieters",
+            "en": "Commercial register number of the provider"
+        },
+        "ImprintStructure.vatId": {
+            "de": "Umsatzsteuer-Identifikationsnummer des Anbieters",
+            "en": "VAT identification number of the provider"
+        },
+        "ImprintStructure.taxNumber": {
+            "de": "Steuernummer des Anbieters",
+            "en": "Tax number of the provider"
+        },
+        "ImprintStructure.additional": {
+            "de": "Zusatzinformation",
+            "en": "Additional information"
+        },
+        "Infrastructure.supply": {
+            "de": "Versorgungsanschlüsse vorhanden",
+            "en": "Utility supply connections available"
+        },
+        "Infrastructure.view": {
+            "de": "Aussicht oder Blickrichtung der Immobilie",
+            "en": "View or outlook of the property"
+        },
+        "Infrastructure.distances": {
+            "de": "Entfernungsangaben zu relevanten Einrichtungen",
+            "en": "Distance information to relevant facilities"
+        },
+        "Infrastructure.sportDistances": {
+            "de": "Entfernungen zu Sportanlagen",
+            "en": "Distances to sports facilities"
+        },
+        "Infrastructure.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Infrastructure.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Infrastructure.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "InternalCommission.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "Master.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "MaxRentalPeriod.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "MinRentalPeriod.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetCommission.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetEVB.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetHeatingCosts.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetMainRent.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetMonthlyCosts.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetOperatingCosts.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetOtherCosts.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetOtherRent.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetPurchasePrice.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetRentPerSqmFrom.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetReserves.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetTotalCost.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "NetTotalRent.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "OpenImmo.transfer": {
+            "de": "Datentransfer-Metadaten",
+            "en": "Data transfer metadata"
+        },
+        "OpenImmo.provider": {
+            "de": "Anbieter (Makler oder Eigentümer) der Immobilie",
+            "en": "Provider (agent or owner) of the property"
+        },
+        "OpenImmo.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "OpenImmo.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "OtherEmail.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "OtherPhone.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "Photo.format": {
+            "de": "Dateiformat des Anhangs",
+            "en": "File format of the attachment"
+        },
+        "Photo.data": {
+            "de": "Datenbehälter",
+            "en": "Data container"
+        },
+        "Prices.purchasePrice": {
+            "de": "Kaufpreis der Immobilie",
+            "en": "Purchase price of the property"
+        },
+        "Prices.purchasePriceNet": {
+            "de": "Netto-Kaufpreis (ohne MwSt.)",
+            "en": "Net purchase price (excluding VAT)"
+        },
+        "Prices.purchasePriceGross": {
+            "de": "Brutto-Kaufpreis (inkl. MwSt.)",
+            "en": "Gross purchase price (including VAT)"
+        },
+        "Prices.netColdRent": {
+            "de": "Netto-Kaltmiete (ohne MwSt.)",
+            "en": "Net cold rent (excluding VAT)"
+        },
+        "Prices.coldRent": {
+            "de": "Kaltmiete der Immobilie",
+            "en": "Cold rent (base rent without utilities) of the property"
+        },
+        "Prices.warmRent": {
+            "de": "Warmmiete (Kaltmiete inkl. Nebenkosten)",
+            "en": "Warm rent (cold rent including utilities)"
+        },
+        "Prices.additionalCosts": {
+            "de": "Nebenkosten der Immobilie",
+            "en": "Additional costs (service charges) of the property"
+        },
+        "Prices.heatingCostsIncluded": {
+            "de": "Heizkosten sind in den Nebenkosten enthalten",
+            "en": "Heating costs are included in the additional costs"
+        },
+        "Prices.heatingCosts": {
+            "de": "Heizkosten der Immobilie",
+            "en": "Heating costs of the property"
+        },
+        "Prices.plusVAT": {
+            "de": "Preis zuzüglich Mehrwertsteuer",
+            "en": "Price plus VAT"
+        },
+        "Prices.rentSurcharges": {
+            "de": "Mietzuschläge",
+            "en": "Rent surcharges"
+        },
+        "Prices.netMainRent": {
+            "de": "Netto-Hauptmietzins (ohne MwSt.)",
+            "en": "Net main rent (excluding VAT)"
+        },
+        "Prices.flatRent": {
+            "de": "Pauschalmiete (Inklusivmiete)",
+            "en": "Flat rent (all-inclusive rent)"
+        },
+        "Prices.netOperatingCosts": {
+            "de": "Netto-Betriebskosten (ohne MwSt.)",
+            "en": "Net operating costs (excluding VAT)"
+        },
+        "Prices.netUnitValue": {
+            "de": "Netto-Einheitswert (EVB-Wert)",
+            "en": "Net unit value (EVB value)"
+        },
+        "Prices.totalRentNet": {
+            "de": "Netto-Gesamtmiete (ohne MwSt.)",
+            "en": "Net total rent (excluding VAT)"
+        },
+        "Prices.totalRentGross": {
+            "de": "Brutto-Gesamtmiete (inkl. MwSt.)",
+            "en": "Gross total rent (including VAT)"
+        },
+        "Prices.totalCostNet": {
+            "de": "Netto-Gesamtbelastung (ohne MwSt.)",
+            "en": "Net total cost burden (excluding VAT)"
+        },
+        "Prices.totalCostGross": {
+            "de": "Brutto-Gesamtbelastung (inkl. MwSt.)",
+            "en": "Gross total cost burden (including VAT)"
+        },
+        "Prices.totalCostsPerSqmFrom": {
+            "de": "Gesamtkosten pro Quadratmeter ab einem Mindestwert",
+            "en": "Total costs per square meter starting from a minimum value"
+        },
+        "Prices.netHeatingCosts": {
+            "de": "Netto-Heizkosten (ohne MwSt.)",
+            "en": "Net heating costs (excluding VAT)"
+        },
+        "Prices.monthlyCostsNet": {
+            "de": "Monatliche Nettogesamtkosten (ohne MwSt.)",
+            "en": "Monthly net total costs (excluding VAT)"
+        },
+        "Prices.monthlyCostsGross": {
+            "de": "Monatliche Bruttogesamtkosten (inkl. MwSt.)",
+            "en": "Monthly gross total costs (including VAT)"
+        },
+        "Prices.additionalCostsPerSqmFrom": {
+            "de": "Nebenkosten pro Quadratmeter ab einem Mindestwert",
+            "en": "Additional costs per square meter starting from a minimum value"
+        },
+        "Prices.reservesNet": {
+            "de": "Netto-Instandhaltungsrücklagen (ohne MwSt.)",
+            "en": "Net maintenance reserves (excluding VAT)"
+        },
+        "Prices.otherCostsNet": {
+            "de": "Sonstige Nettokosten (ohne MwSt.)",
+            "en": "Other net costs (excluding VAT)"
+        },
+        "Prices.otherRentNet": {
+            "de": "Sonstige Nettomiete (ohne MwSt.)",
+            "en": "Other net rent (excluding VAT)"
+        },
+        "Prices.netRentPerSqmFrom": {
+            "de": "Nettomiete pro Quadratmeter ab einem Mindestwert",
+            "en": "Net rent per square meter starting from a minimum value"
+        },
+        "Prices.lease": {
+            "de": "Pacht der Immobilie",
+            "en": "Lease amount of the property"
+        },
+        "Prices.leasehold": {
+            "de": "Erbpacht der Immobilie",
+            "en": "Leasehold amount of the property"
+        },
+        "Prices.maintenanceFee": {
+            "de": "Hausgeld (monatliche Wohnungseigentümergebühr)",
+            "en": "Maintenance fee (monthly homeowner association fee)"
+        },
+        "Prices.distance": {
+            "de": "Abstand oder Entfernung",
+            "en": "Distance value"
+        },
+        "Prices.priceTimeRangeFrom": {
+            "de": "Startdatum des Preiszeitraums",
+            "en": "Start date of the price time range"
+        },
+        "Prices.priceTimeRangeTo": {
+            "de": "Enddatum des Preiszeitraums",
+            "en": "End date of the price time range"
+        },
+        "Prices.priceTimeUnit": {
+            "de": "Zeiteinheit für die Preisangabe",
+            "en": "Time unit for the price value"
+        },
+        "Prices.rentPricePerSqm": {
+            "de": "Mietpreis pro Quadratmeter",
+            "en": "Rent price per square meter"
+        },
+        "Prices.purchasePricePerSqm": {
+            "de": "Kaufpreis pro Quadratmeter",
+            "en": "Purchase price per square meter"
+        },
+        "Prices.commissionRequired": {
+            "de": "Maklerprovision wird erhoben",
+            "en": "Broker commission is charged"
+        },
+        "Prices.commissionSplit": {
+            "de": "Aufteilung der Maklerprovision",
+            "en": "Split of the broker commission"
+        },
+        "Prices.internalCommission": {
+            "de": "Innenprovision (Verkäuferprovision)",
+            "en": "Internal commission (seller's commission)"
+        },
+        "Prices.externalCommission": {
+            "de": "Außenprovision (Käuferprovision)",
+            "en": "External commission (buyer's commission)"
+        },
+        "Prices.commissionNote": {
+            "de": "Hinweis zur Maklerprovision",
+            "en": "Note on the broker commission"
+        },
+        "Prices.commissionNet": {
+            "de": "Netto-Maklerprovision (ohne MwSt.)",
+            "en": "Net broker commission (excluding VAT)"
+        },
+        "Prices.commissionGross": {
+            "de": "Brutto-Maklerprovision (inkl. MwSt.)",
+            "en": "Gross broker commission (including VAT)"
+        },
+        "Prices.currency": {
+            "de": "Währung der Preisangaben",
+            "en": "Currency of the price values"
+        },
+        "Prices.vatRate": {
+            "de": "Mehrwertsteuersatz",
+            "en": "VAT rate"
+        },
+        "Prices.totalVAT": {
+            "de": "Gesamter Mehrwertsteuerbetrag",
+            "en": "Total VAT amount"
+        },
+        "Prices.freeTextPrice": {
+            "de": "Preisangabe als Freitext",
+            "en": "Price as free text"
+        },
+        "Prices.xTimes": {
+            "de": "Multiplikator (x-fache Jahresmiete) als Preisangabe",
+            "en": "Multiplier (x times annual rent) as price specification"
+        },
+        "Prices.netYield": {
+            "de": "Netto-Rendite der Immobilie",
+            "en": "Net yield of the property"
+        },
+        "Prices.targetNetYield": {
+            "de": "Soll-Netto-Rendite (angestrebte Rendite)",
+            "en": "Target net yield of the property"
+        },
+        "Prices.actualNetYield": {
+            "de": "Tatsächliche Netto-Rendite der Immobilie",
+            "en": "Actual net yield of the property"
+        },
+        "Prices.actualRentalIncome": {
+            "de": "Tatsächliche Mieteinnahmen",
+            "en": "Actual rental income"
+        },
+        "Prices.targetRentalIncome": {
+            "de": "Soll-Mieteinnahmen (angestrebte Mieteinnahmen)",
+            "en": "Target rental income of the property"
+        },
+        "Prices.developmentCosts": {
+            "de": "Erschließungskosten des Grundstücks",
+            "en": "Development costs of the plot"
+        },
+        "Prices.deposit": {
+            "de": "Mietkaution",
+            "en": "Security deposit"
+        },
+        "Prices.depositText": {
+            "de": "Freitext zur Mietkaution",
+            "en": "Free text describing the security deposit"
+        },
+        "Prices.businessAssets": {
+            "de": "Geschäftsguthaben (Genossenschaftsanteil)",
+            "en": "Business assets (cooperative share)"
+        },
+        "Prices.parkingCarport": {
+            "de": "Carport-Stellplatz",
+            "en": "Carport parking space"
+        },
+        "Prices.parkingDuplex": {
+            "de": "Duplex-Stellplatz",
+            "en": "Duplex parking space"
+        },
+        "Prices.parkingOutdoor": {
+            "de": "Außenstellplatz (Freiplatz)",
+            "en": "Outdoor parking space"
+        },
+        "Prices.parkingGarage": {
+            "de": "Garagenstellplatz",
+            "en": "Garage parking space"
+        },
+        "Prices.parkingMultiStorey": {
+            "de": "Parkhaus-Stellplatz",
+            "en": "Multi-storey car park space"
+        },
+        "Prices.parkingUnderground": {
+            "de": "Tiefgaragenstellplatz",
+            "en": "Underground garage parking space"
+        },
+        "Prices.parkingOther": {
+            "de": "Sonstiger Stellplatz",
+            "en": "Other parking space"
+        },
+        "Prices.guidePrice": {
+            "de": "Richtpreis der Immobilie",
+            "en": "Guide price of the property"
+        },
+        "Prices.guidePricePerSqm": {
+            "de": "Richtpreis pro Quadratmeter",
+            "en": "Guide price per square meter"
+        },
+        "Prices.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Prices.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Prices.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "PropertyCategory.typeOfUse": {
+            "de": "Nutzungsart der Immobilie",
+            "en": "Type of use of the property"
+        },
+        "PropertyCategory.marketingType": {
+            "de": "Vermarktungsart der Immobilie (Kauf oder Miete)",
+            "en": "Marketing type of the property (purchase or rent)"
+        },
+        "PropertyCategory.propertyType": {
+            "de": "Immobilientyp (z.B. Wohnung, Haus, Grundstück, Gewerbe)",
+            "en": "Property type (e.g. apartment, house, plot, commercial)"
+        },
+        "PropertyCategory.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "PropertyCategory.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "PropertyCategory.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "PropertyManagement.releasePropertyAddress": {
+            "de": "Vollständige Adresse der Immobilie freigegeben",
+            "en": "Full address of the property released for publication"
+        },
+        "PropertyManagement.availableFrom": {
+            "de": "Verfügbarkeitsdatum der Immobilie",
+            "en": "Availability date of the property"
+        },
+        "PropertyManagement.fromDate": {
+            "de": "Startdatum",
+            "en": "Start date"
+        },
+        "PropertyManagement.toDate": {
+            "de": "Enddatum",
+            "en": "End date"
+        },
+        "PropertyManagement.minRentalPeriod": {
+            "de": "Minimale Mietperiode",
+            "en": "Minimum rental period"
+        },
+        "PropertyManagement.maxRentalPeriod": {
+            "de": "Maximale Mietperiode",
+            "en": "Maximum rental period"
+        },
+        "PropertyManagement.auctionDate": {
+            "de": "Datum der Zwangsversteigerung",
+            "en": "Date of the foreclosure auction"
+        },
+        "PropertyManagement.socialHousing": {
+            "de": "Sozialer Wohnungsbau (öffentlich gefördert)",
+            "en": "Social housing (publicly subsidized)"
+        },
+        "PropertyManagement.rented": {
+            "de": "Immobilie ist vermietet",
+            "en": "Property is currently rented"
+        },
+        "PropertyManagement.groupNumber": {
+            "de": "Nummer der Gruppe",
+            "en": "Number of the group"
+        },
+        "PropertyManagement.access": {
+            "de": "Zugangsart oder Zugangsrechte der Immobilie",
+            "en": "Access type or access rights of the property"
+        },
+        "PropertyManagement.duration": {
+            "de": "Dauer oder Laufzeit",
+            "en": "Duration or term"
+        },
+        "PropertyManagement.maxPersons": {
+            "de": "Maximale Personenanzahl",
+            "en": "Maximum number of persons"
+        },
+        "PropertyManagement.nonSmoker": {
+            "de": "Nur Nichtraucher erwünscht",
+            "en": "Non-smokers only"
+        },
+        "PropertyManagement.pets": {
+            "de": "Haustiere erlaubt",
+            "en": "Pets allowed"
+        },
+        "PropertyManagement.gender": {
+            "de": "Geschlecht der Person",
+            "en": "Gender of the person"
+        },
+        "PropertyManagement.listedBuilding": {
+            "de": "Denkmalgeschütztes Gebäude",
+            "en": "Listed (heritage-protected) building"
+        },
+        "PropertyManagement.asHoliday": {
+            "de": "Als Ferienimmobilie nutzbar",
+            "en": "Suitable for use as a holiday property"
+        },
+        "PropertyManagement.commercialUse": {
+            "de": "Gewerbliche Nutzung der Immobilie",
+            "en": "Commercial use of the property"
+        },
+        "PropertyManagement.industries": {
+            "de": "Branchen oder Nutzungsarten der Gewerbeimmobilie",
+            "en": "Industries or use types of the commercial property"
+        },
+        "PropertyManagement.highRise": {
+            "de": "Hochhaus-Immobilie",
+            "en": "High-rise building property"
+        },
+        "PropertyManagement.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "PropertyManagement.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "PropertyManagement.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "PropertyText.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "PropertyType.rooms": {
+            "de": "Zimmeranzahl der Immobilie",
+            "en": "Number of rooms of the property"
+        },
+        "PropertyType.apartment": {
+            "de": "Wohnungsobjekt",
+            "en": "Apartment property"
+        },
+        "PropertyType.house": {
+            "de": "Hausobjekt",
+            "en": "House property"
+        },
+        "PropertyType.plot": {
+            "de": "Grundstücksobjekt",
+            "en": "Plot property"
+        },
+        "PropertyType.officePractices": {
+            "de": "Büro- oder Praxisobjekt",
+            "en": "Office or medical practice property"
+        },
+        "PropertyType.retail": {
+            "de": "Einzelhandelsobjekt",
+            "en": "Retail property"
+        },
+        "PropertyType.hospitality": {
+            "de": "Gastronomie- oder Beherbergungsobjekt",
+            "en": "Hospitality or accommodation property"
+        },
+        "PropertyType.hallsStorageProduction": {
+            "de": "Hallen-, Lager- oder Produktionsobjekt",
+            "en": "Hall, storage or production property"
+        },
+        "PropertyType.agricultureAndForestry": {
+            "de": "Land- und forstwirtschaftliches Objekt",
+            "en": "Agricultural and forestry property"
+        },
+        "PropertyType.parking": {
+            "de": "Stellplatz oder Parkfläche",
+            "en": "Parking space or parking area"
+        },
+        "PropertyType.other": {
+            "de": "Sonstige Angabe",
+            "en": "Other value"
+        },
+        "PropertyType.commercialLeisureProperty": {
+            "de": "Gewerbliches Freizeitobjekt",
+            "en": "Commercial leisure property"
+        },
+        "PropertyType.apartmentBuildingInvestmentProperty": {
+            "de": "Mehrfamilienhaus als Anlageobjekt",
+            "en": "Apartment building as investment property"
+        },
+        "PropertyType.propertyTypeAdditional": {
+            "de": "Ergänzende Typangabe zur Immobilie",
+            "en": "Additional type specification for the property"
+        },
+        "Provider.providerNumber": {
+            "de": "Anbieternummer",
+            "en": "Provider number"
+        },
+        "Provider.company": {
+            "de": "Firmenname des Anbieters",
+            "en": "Company name of the provider"
+        },
+        "Provider.openImmoAnid": {
+            "de": "OpenImmo-Anbieternummer (ANID)",
+            "en": "OpenImmo provider identifier (ANID)"
+        },
+        "Provider.licenseIdentifier": {
+            "de": "Lizenznummer des Anbieters",
+            "en": "License identifier of the provider"
+        },
+        "Provider.attachment": {
+            "de": "Anhang (Datei) der Immobilie",
+            "en": "Attachment (file) of the property"
+        },
+        "Provider.realEstate": {
+            "de": "Einzelne Immobilie",
+            "en": "Single real estate property"
+        },
+        "Provider.imprint": {
+            "de": "Impressum des Anbieters",
+            "en": "Imprint of the provider"
+        },
+        "Provider.imprintStructure": {
+            "de": "Strukturiertes Impressum des Anbieters",
+            "en": "Structured imprint of the provider"
+        },
+        "Provider.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "Provider.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "Provider.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "PurchasePrice.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "RealEstate.propertyCategory": {
+            "de": "Objektkategorie mit Vermarktungsart und Typ",
+            "en": "Property category with marketing type and property type"
+        },
+        "RealEstate.geo": {
+            "de": "Geografische Angaben der Immobilie",
+            "en": "Geographic information of the property"
+        },
+        "RealEstate.contactPerson": {
+            "de": "Kontaktperson für die Immobilie",
+            "en": "Contact person for the property"
+        },
+        "RealEstate.additionalAddress": {
+            "de": "Weitere Adresse",
+            "en": "Additional address"
+        },
+        "RealEstate.prices": {
+            "de": "Preisangaben der Immobilie",
+            "en": "Price information of the property"
+        },
+        "RealEstate.biddingProcess": {
+            "de": "Bieterverfahren für die Immobilie",
+            "en": "Bidding process for the property"
+        },
+        "RealEstate.auction": {
+            "de": "Zwangsversteigerungsinformationen",
+            "en": "Foreclosure auction information"
+        },
+        "RealEstate.areas": {
+            "de": "Flächenangaben der Immobilie",
+            "en": "Area measurements of the property"
+        },
+        "RealEstate.equipment": {
+            "de": "Ausstattungsmerkmale der Immobilie",
+            "en": "Equipment and features of the property"
+        },
+        "RealEstate.conditionInformation": {
+            "de": "Zustandsangaben der Immobilie",
+            "en": "Condition information of the property"
+        },
+        "RealEstate.evaluation": {
+            "de": "Bewertungsinformationen der Immobilie",
+            "en": "Evaluation information of the property"
+        },
+        "RealEstate.infrastructure": {
+            "de": "Infrastrukturanbindung der Immobilie",
+            "en": "Infrastructure connections of the property"
+        },
+        "RealEstate.freeTexts": {
+            "de": "Freie Textbeschreibungen der Immobilie",
+            "en": "Free-text descriptions of the property"
+        },
+        "RealEstate.attachments": {
+            "de": "Liste der Anhänge der Immobilie",
+            "en": "List of attachments of the property"
+        },
+        "RealEstate.propertyManagement": {
+            "de": "Objektverwaltungsangaben",
+            "en": "Property management information"
+        },
+        "RealEstate.technicalManagement": {
+            "de": "Technische Verwaltungsdaten des Datentransfers",
+            "en": "Technical management data of the data transfer"
+        },
+        "RealEstate.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "RealEstate.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "RealEstate.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "SportDistances.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "TargetRentalIncome.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "TechnicalManagement.internalPropertyNumber": {
+            "de": "Interne Objektnummer des Anbieters",
+            "en": "Internal property number of the provider"
+        },
+        "TechnicalManagement.externalPropertyNumber": {
+            "de": "Externe Objektnummer des Anbieters",
+            "en": "External property number of the provider"
+        },
+        "TechnicalManagement.action": {
+            "de": "Datentransferaktion (z.B. Anlegen, Ändern, Löschen)",
+            "en": "Data transfer action (e.g. create, update, delete)"
+        },
+        "TechnicalManagement.activeFrom": {
+            "de": "Datum, ab dem das Inserat aktiv ist",
+            "en": "Date from which the listing is active"
+        },
+        "TechnicalManagement.activeTo": {
+            "de": "Datum, bis zu dem das Inserat aktiv ist",
+            "en": "Date until which the listing is active"
+        },
+        "TechnicalManagement.openImmoObjectId": {
+            "de": "OpenImmo-Objekt-ID",
+            "en": "OpenImmo object identifier"
+        },
+        "TechnicalManagement.originIdentifier": {
+            "de": "Herkunftskennung des Datensatzes",
+            "en": "Origin identifier of the data record"
+        },
+        "TechnicalManagement.statusFrom": {
+            "de": "Datum ab dem der Status gilt",
+            "en": "Date from which the status applies"
+        },
+        "TechnicalManagement.generalForwarding": {
+            "de": "Allgemeine Weiterleitungseinstellung",
+            "en": "General forwarding setting"
+        },
+        "TechnicalManagement.positiveForwarding": {
+            "de": "Weiterleitungseinstellung bei positivem Ergebnis",
+            "en": "Forwarding setting for a positive result"
+        },
+        "TechnicalManagement.negativeForwarding": {
+            "de": "Weiterleitungseinstellung bei negativem Ergebnis",
+            "en": "Forwarding setting for a negative result"
+        },
+        "TechnicalManagement.groupIdentifier": {
+            "de": "Bezeichner der Gruppe",
+            "en": "Identifier of the group"
+        },
+        "TechnicalManagement.master": {
+            "de": "Stammdaten des Datentransfers",
+            "en": "Master data of the data transfer"
+        },
+        "TechnicalManagement.language": {
+            "de": "Sprache des Textes (ISO-Sprachcode)",
+            "en": "Language of the text (ISO language code)"
+        },
+        "TechnicalManagement.userDefinedSimplefield": {
+            "de": "Benutzerdefiniertes einfaches Freifeld",
+            "en": "User-defined simple free field"
+        },
+        "TechnicalManagement.userDefinedAnyfield": {
+            "de": "Benutzerdefiniertes Freifeld mit beliebigem Inhalt",
+            "en": "User-defined free field with arbitrary content"
+        },
+        "TechnicalManagement.userDefinedExtend": {
+            "de": "Benutzerdefinierte Erweiterung",
+            "en": "User-defined extension"
+        },
+        "TotalCostsPerSqmFrom.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "UserDefinedAnyfield.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        },
+        "UserDefinedExtend.field": {
+            "de": "Datenfeld",
+            "en": "Data field"
+        },
+        "UserDefinedSimplefield.value": {
+            "de": "Wert des Feldes",
+            "en": "Value of the field"
+        }
+    },
+    "properties": {
+        "Action.actionType": {
+            "de": "Typ der Datentransferaktion",
+            "en": "Type of the data transfer action"
+        },
+        "ActualRentalIncome.period": {
+            "de": "Zeitraum oder Periode",
+            "en": "Time period"
+        },
+        "AdditionalAddress.addressType": {
+            "de": "Typ der Adresse",
+            "en": "Type of address"
+        },
+        "AdditionalCostsPerSqmFrom.additionalCostsPerSqmTo": {
+            "de": "Nebenkosten pro Quadratmeter bis zu einem Höchstwert",
+            "en": "Additional costs per square meter up to a maximum value"
+        },
+        "Age.ageAttribute": {
+            "de": "XML-Attribut zur Altersangabe",
+            "en": "XML attribute for the age value"
+        },
+        "AgricultureAndForestry.countryType": {
+            "de": "ISO-Länderkürzel",
+            "en": "ISO country code"
+        },
+        "Apartment.apartmentType": {
+            "de": "Wohnungstyp (z.B. Dachgeschoss, Maisonette, Erdgeschoss)",
+            "en": "Apartment type (e.g. attic, maisonette, ground floor)"
+        },
+        "ApartmentBuildingInvestmentProperty.interestType": {
+            "de": "Art des Interessenten (z.B. Käufer, Mieter)",
+            "en": "Type of interested party (e.g. buyer, tenant)"
+        },
+        "AttachedGastronomy.hotelRestaurant": {
+            "de": "Hotel oder Restaurant vorhanden",
+            "en": "Hotel or restaurant available"
+        },
+        "AttachedGastronomy.cash": {
+            "de": "Barzahlung möglich",
+            "en": "Cash payment possible"
+        },
+        "Attachment.location": {
+            "de": "Lagebeschreibung der Immobilie",
+            "en": "Location description of the property"
+        },
+        "Attachment.group": {
+            "de": "Gruppe oder Kategorie",
+            "en": "Group or category"
+        },
+        "BalconyTerraceOrientation.north": {
+            "de": "Ausrichtung Nord",
+            "en": "North orientation"
+        },
+        "BalconyTerraceOrientation.east": {
+            "de": "Ausrichtung Ost",
+            "en": "East orientation"
+        },
+        "BalconyTerraceOrientation.south": {
+            "de": "Ausrichtung Süd",
+            "en": "South orientation"
+        },
+        "BalconyTerraceOrientation.west": {
+            "de": "Ausrichtung West",
+            "en": "West orientation"
+        },
+        "BalconyTerraceOrientation.northeast": {
+            "de": "Ausrichtung Nordost",
+            "en": "Northeast orientation"
+        },
+        "BalconyTerraceOrientation.northwest": {
+            "de": "Ausrichtung Nordwest",
+            "en": "Northwest orientation"
+        },
+        "BalconyTerraceOrientation.southeast": {
+            "de": "Ausrichtung Südost",
+            "en": "Southeast orientation"
+        },
+        "BalconyTerraceOrientation.southwest": {
+            "de": "Ausrichtung Südwest",
+            "en": "Southwest orientation"
+        },
+        "Basement.basement": {
+            "de": "Keller- oder Unterkellerungsangabe",
+            "en": "Basement or cellar information"
+        },
+        "Bathroom.shower": {
+            "de": "Dusche vorhanden",
+            "en": "Shower available"
+        },
+        "Bathroom.bathtub": {
+            "de": "Badewanne vorhanden",
+            "en": "Bathtub available"
+        },
+        "Bathroom.window": {
+            "de": "Fensterausstattung der Immobilie",
+            "en": "Window equipment of the property"
+        },
+        "Bathroom.bidet": {
+            "de": "Bidet im Badezimmer vorhanden",
+            "en": "Bidet in bathroom available"
+        },
+        "Bathroom.urinal": {
+            "de": "Urinal im Badezimmer vorhanden",
+            "en": "Urinal in bathroom available"
+        },
+        "BroadbandAccess.type": {
+            "de": "Typ oder Art",
+            "en": "Type or kind"
+        },
+        "BroadbandAccess.speed": {
+            "de": "Geschwindigkeit (z.B. Breitbandgeschwindigkeit in Mbit/s)",
+            "en": "Speed (e.g. broadband speed in Mbit/s)"
+        },
+        "Check.contentType": {
+            "de": "MIME-Typ des Anhangs",
+            "en": "MIME content type of the attachment"
+        },
+        "CommercialLeisureProperty.leisureType": {
+            "de": "Freizeitobjekttyp",
+            "en": "Leisure property type"
+        },
+        "CommissionSplit.worth": {
+            "de": "Wert oder Bewertung der Immobilie",
+            "en": "Worth or valuation of the property"
+        },
+        "Condition.conditionType": {
+            "de": "Zustandstyp der Immobilie",
+            "en": "Condition type of the property"
+        },
+        "ConstructionMethod.solid": {
+            "de": "Massivbauweise",
+            "en": "Solid (masonry) construction method"
+        },
+        "ConstructionMethod.prefabricatedParts": {
+            "de": "Fertigteil-Bauweise",
+            "en": "Prefabricated parts construction method"
+        },
+        "ConstructionMethod.wood": {
+            "de": "Holz als Heizenergiequelle",
+            "en": "Wood as heating energy source"
+        },
+        "Country.isoCountry": {
+            "de": "ISO-Länderkürzel (z.B. DEU, AUT, CHE)",
+            "en": "ISO country code (e.g. DEU, AUT, CHE)"
+        },
+        "Currency.isoCurrency": {
+            "de": "ISO-Währungskürzel (z.B. EUR, CHF)",
+            "en": "ISO currency code (e.g. EUR, CHF)"
+        },
+        "DevelopableAccordingTo.developableAttribute": {
+            "de": "XML-Attribut zur Bebaubarkeit",
+            "en": "XML attribute for the developability value"
+        },
+        "Development.developmentAttribute": {
+            "de": "XML-Attribut zum Erschließungszustand",
+            "en": "XML attribute for the development status value"
+        },
+        "DevelopmentScope.developmentAttribute": {
+            "de": "XML-Attribut zum Erschließungszustand",
+            "en": "XML attribute for the development status value"
+        },
+        "DevelopmentStage.prefabricatedHouse": {
+            "de": "Fertighaus",
+            "en": "Prefabricated house"
+        },
+        "DevelopmentStage.expandableHouse": {
+            "de": "Haus ist ausbaufähig",
+            "en": "House is expandable"
+        },
+        "DevelopmentStage.turnkeyWithBasement": {
+            "de": "Schlüsselfertig mit Keller",
+            "en": "Turnkey with basement"
+        },
+        "DevelopmentStage.turnkeyWithoutFoundation": {
+            "de": "Schlüsselfertig ohne Bodenplatte",
+            "en": "Turnkey without foundation slab"
+        },
+        "DevelopmentStage.turnkeyWithFoundation": {
+            "de": "Schlüsselfertig mit Bodenplatte",
+            "en": "Turnkey with foundation slab"
+        },
+        "Distances.distanceTo": {
+            "de": "Entfernung zu einer bestimmten Einrichtung",
+            "en": "Distance to a specific facility"
+        },
+        "Elevator.persons": {
+            "de": "Anzahl der Personen",
+            "en": "Number of persons"
+        },
+        "Elevator.encumbrances": {
+            "de": "Grundstücksbelastungen (z.B. Grundpfandrechte)",
+            "en": "Encumbrances on the property (e.g. mortgages)"
+        },
+        "EnergyType.passiveHouse": {
+            "de": "Passivhaus-Standard erfüllt",
+            "en": "Passive house standard fulfilled"
+        },
+        "EnergyType.lowEnergy": {
+            "de": "Niedrigenergiehaus-Standard erfüllt",
+            "en": "Low-energy house standard fulfilled"
+        },
+        "EnergyType.newBuildingStandard": {
+            "de": "Neubaustandard der Immobilie",
+            "en": "New building standard of the property"
+        },
+        "EnergyType.kfw40": {
+            "de": "KfW-40-Standard erfüllt",
+            "en": "KfW-40 standard fulfilled"
+        },
+        "EnergyType.kfw60": {
+            "de": "KfW-60-Standard erfüllt",
+            "en": "KfW-60 standard fulfilled"
+        },
+        "EnergyType.kfw55": {
+            "de": "KfW-55-Standard erfüllt",
+            "en": "KfW-55 standard fulfilled"
+        },
+        "EnergyType.kfw70": {
+            "de": "KfW-70-Standard erfüllt",
+            "en": "KfW-70 standard fulfilled"
+        },
+        "EnergyType.minEnergieConstruction": {
+            "de": "MinEnergie-Bauweise vorhanden",
+            "en": "MinEnergie construction standard fulfilled"
+        },
+        "EnergyType.minEnergieCertified": {
+            "de": "MinEnergieHaus-Zertifizierung vorhanden",
+            "en": "MinEnergie certification available"
+        },
+        "ExternalCommission.withVAT": {
+            "de": "Preis inkl. Mehrwertsteuer",
+            "en": "Price including VAT"
+        },
+        "Floor.tiles": {
+            "de": "Fliesen als Bodenbelag",
+            "en": "Tiles as flooring"
+        },
+        "Floor.stone": {
+            "de": "Steinboden als Bodenbelag",
+            "en": "Stone flooring"
+        },
+        "Floor.carpet": {
+            "de": "Teppichboden als Bodenbelag",
+            "en": "Carpet as flooring"
+        },
+        "Floor.parquet": {
+            "de": "Parkett als Bodenbelag",
+            "en": "Parquet as flooring"
+        },
+        "Floor.finishedParquet": {
+            "de": "Fertigparkett als Bodenbelag",
+            "en": "Finished parquet as flooring"
+        },
+        "Floor.laminate": {
+            "de": "Laminat als Bodenbelag",
+            "en": "Laminate as flooring"
+        },
+        "Floor.floorboards": {
+            "de": "Dielenböden als Bodenbelag",
+            "en": "Floorboards as flooring"
+        },
+        "Floor.plastic": {
+            "de": "Kunststoffboden als Bodenbelag",
+            "en": "Plastic flooring"
+        },
+        "Floor.screed": {
+            "de": "Estrich als Bodenbelag",
+            "en": "Screed as flooring"
+        },
+        "Floor.raisedFloor": {
+            "de": "Doppelboden vorhanden",
+            "en": "Raised floor available"
+        },
+        "Floor.linoleum": {
+            "de": "Linoleum als Bodenbelag",
+            "en": "Linoleum as flooring"
+        },
+        "Floor.marble": {
+            "de": "Marmorboden als Bodenbelag",
+            "en": "Marble flooring"
+        },
+        "Floor.terracotta": {
+            "de": "Terrakottaboden als Bodenbelag",
+            "en": "Terracotta flooring"
+        },
+        "Floor.granite": {
+            "de": "Granitboden als Bodenbelag",
+            "en": "Granite flooring"
+        },
+        "Furnished.furnished": {
+            "de": "Möblierungsangabe der Immobilie",
+            "en": "Furnishing information of the property"
+        },
+        "Gender.genderAttribute": {
+            "de": "XML-Attribut zur Geschlechtsangabe",
+            "en": "XML attribute for the gender value"
+        },
+        "GeoCoordinates.latitude": {
+            "de": "Geografischer Breitengrad der Immobilie",
+            "en": "Geographic latitude of the property"
+        },
+        "GeoCoordinates.longitude": {
+            "de": "Geografischer Längengrad der Immobilie",
+            "en": "Geographic longitude of the property"
+        },
+        "HallsStorageProduction.hallType": {
+            "de": "Hallentyp (z.B. Produktions-, Lagerhalle)",
+            "en": "Hall type (e.g. production, storage hall)"
+        },
+        "HeatingSystem.oil": {
+            "de": "Öl als Heizenergiequelle",
+            "en": "Oil as heating energy source"
+        },
+        "HeatingSystem.gas": {
+            "de": "Gas als Heizenergiequelle",
+            "en": "Gas as heating energy source"
+        },
+        "HeatingSystem.electric": {
+            "de": "Elektrische Heizung vorhanden",
+            "en": "Electric heating available"
+        },
+        "HeatingSystem.alternative": {
+            "de": "Alternative Angabe",
+            "en": "Alternative value"
+        },
+        "HeatingSystem.solar": {
+            "de": "Solarenergie als Heizenergiequelle",
+            "en": "Solar energy as heating energy source"
+        },
+        "HeatingSystem.geothermal": {
+            "de": "Geothermie als Heizenergiequelle",
+            "en": "Geothermal energy as heating energy source"
+        },
+        "HeatingSystem.airHeatPump": {
+            "de": "Luftwärmepumpe als Heizsystem vorhanden",
+            "en": "Air heat pump as heating system available"
+        },
+        "HeatingSystem.remote": {
+            "de": "Abgelegene Lage der Immobilie",
+            "en": "Remote location of the property"
+        },
+        "HeatingSystem.block": {
+            "de": "Blockheizung vorhanden",
+            "en": "Block heating available"
+        },
+        "HeatingSystem.waterElectric": {
+            "de": "Wassererwärmung elektrisch",
+            "en": "Electric water heating"
+        },
+        "HeatingSystem.pellet": {
+            "de": "Holzpellets als Heizenergiequelle",
+            "en": "Wood pellets as heating energy source"
+        },
+        "HeatingSystem.coal": {
+            "de": "Kohle als Heizenergiequelle",
+            "en": "Coal as heating energy source"
+        },
+        "HeatingSystem.wood": {
+            "de": "Holz als Heizenergiequelle",
+            "en": "Wood as heating energy source"
+        },
+        "HeatingSystem.liquidGas": {
+            "de": "Flüssiggas als Heizenergiequelle",
+            "en": "Liquid gas as heating energy source"
+        },
+        "HeatingSystem.lightNaturalGas": {
+            "de": "Leichtes Erdgas als Heizenergiequelle",
+            "en": "Light natural gas as heating energy source"
+        },
+        "HeatingSystem.heavyNaturalGas": {
+            "de": "Schweres Erdgas als Heizenergiequelle",
+            "en": "Heavy natural gas as heating energy source"
+        },
+        "HeatingSystem.districtHeatingVapor": {
+            "de": "Fernwärme (Dampf) als Heizenergiequelle",
+            "en": "District heating (steam) as heating energy source"
+        },
+        "HeatingSystem.localHeating": {
+            "de": "Einzelraumheizung (Etagenheizung) vorhanden",
+            "en": "Local (floor-by-floor) heating available"
+        },
+        "HeatingSystem.heatSupply": {
+            "de": "Wärmeversorgungsart der Immobilie",
+            "en": "Heat supply type of the property"
+        },
+        "HeatingSystem.bioEnergy": {
+            "de": "Bioenergie als Heizenergiequelle",
+            "en": "Bio energy as heating energy source"
+        },
+        "HeatingSystem.windEnergy": {
+            "de": "Windenergie als Heizenergiequelle",
+            "en": "Wind energy as heating energy source"
+        },
+        "HeatingSystem.waterEnergy": {
+            "de": "Wasserenergie als Heizenergiequelle",
+            "en": "Water energy as heating energy source"
+        },
+        "HeatingSystem.environmentalHeat": {
+            "de": "Umweltwärme als Heizenergiequelle",
+            "en": "Environmental heat as heating energy source"
+        },
+        "HeatingSystem.chpFossil": {
+            "de": "Blockheizkraftwerk mit fossilem Brennstoff",
+            "en": "Combined heat and power with fossil fuel"
+        },
+        "HeatingSystem.chpRenewable": {
+            "de": "Blockheizkraftwerk mit erneuerbarem Brennstoff",
+            "en": "Combined heat and power with renewable fuel"
+        },
+        "HeatingSystem.chpRegenerative": {
+            "de": "Blockheizkraftwerk mit regenerativem Brennstoff",
+            "en": "Combined heat and power with regenerative fuel"
+        },
+        "HeatingSystem.chpBio": {
+            "de": "Blockheizkraftwerk mit Bio-Brennstoff",
+            "en": "Combined heat and power with bio fuel"
+        },
+        "HeatingType.stove": {
+            "de": "Ofen oder Kaminofen vorhanden",
+            "en": "Stove or wood-burning stove available"
+        },
+        "HeatingType.floor": {
+            "de": "Stockwerk der Wohnung im Gebäude",
+            "en": "Floor level of the unit within the building"
+        },
+        "HeatingType.central": {
+            "de": "Zentrale Heizungsanlage vorhanden",
+            "en": "Central heating system available"
+        },
+        "HeatingType.remote": {
+            "de": "Abgelegene Lage der Immobilie",
+            "en": "Remote location of the property"
+        },
+        "HeatingType.flooring": {
+            "de": "Bodenbelag der Immobilie",
+            "en": "Flooring of the property"
+        },
+        "Hospitality.hospitalityType": {
+            "de": "Typ des Gastronomie- oder Beherbergungsobjekts",
+            "en": "Type of hospitality or accommodation property"
+        },
+        "House.houseType": {
+            "de": "Haustyp (z.B. Einfamilienhaus, Reihenhaus, Doppelhaus)",
+            "en": "House type (e.g. detached, terraced, semi-detached)"
+        },
+        "InternalCommission.withVAT": {
+            "de": "Preis inkl. Mehrwertsteuer",
+            "en": "Price including VAT"
+        },
+        "Kitchen.builtInKitchen": {
+            "de": "Einbauküche vorhanden",
+            "en": "Built-in kitchen available"
+        },
+        "Kitchen.open": {
+            "de": "Offene Küche vorhanden",
+            "en": "Open kitchen available"
+        },
+        "Kitchen.pantry": {
+            "de": "Speisekammer vorhanden",
+            "en": "Pantry available"
+        },
+        "LocationArea.areas": {
+            "de": "Flächenangaben der Immobilie",
+            "en": "Area measurements of the property"
+        },
+        "LocationInBuilding.left": {
+            "de": "Lage links im Gebäude",
+            "en": "Left position in the building"
+        },
+        "LocationInBuilding.right": {
+            "de": "Lage rechts im Gebäude",
+            "en": "Right position in the building"
+        },
+        "LocationInBuilding.front": {
+            "de": "Frontseitige Ausrichtung oder Fassade",
+            "en": "Front orientation or facade"
+        },
+        "LocationInBuilding.rear": {
+            "de": "Rückseitige Ausrichtung",
+            "en": "Rear orientation"
+        },
+        "MarketingType.purchase": {
+            "de": "Kaufobjekt",
+            "en": "Purchase property"
+        },
+        "MarketingType.rentLease": {
+            "de": "Miet- oder Pachtangabe",
+            "en": "Rent or lease value"
+        },
+        "MarketingType.leasehold": {
+            "de": "Erbpacht der Immobilie",
+            "en": "Leasehold amount of the property"
+        },
+        "MarketingType.leasing": {
+            "de": "Leasing der Immobilie möglich",
+            "en": "Leasing of the property possible"
+        },
+        "Master.visible": {
+            "de": "Sichtbarkeit des Inserats oder Elements",
+            "en": "Visibility of the listing or element"
+        },
+        "MaxRentalPeriod.maxDuration": {
+            "de": "Maximale Mietdauer",
+            "en": "Maximum rental duration"
+        },
+        "MinRentalPeriod.minDuration": {
+            "de": "Minimale Mietdauer",
+            "en": "Minimum rental duration"
+        },
+        "NetCommission.commissionVAT": {
+            "de": "Mehrwertsteueranteil der Maklerprovision",
+            "en": "VAT portion of the broker commission"
+        },
+        "NetEVB.unitValueTaxVAT": {
+            "de": "Mehrwertsteuer auf den Einheitswert",
+            "en": "VAT on the unit value tax"
+        },
+        "NetHeatingCosts.heatingCostsVAT": {
+            "de": "Mehrwertsteueranteil der Heizkosten",
+            "en": "VAT portion of the heating costs"
+        },
+        "NetMainRent.mainRentVAT": {
+            "de": "Mehrwertsteueranteil des Hauptmietzinses",
+            "en": "VAT portion of the main rent"
+        },
+        "NetMonthlyCosts.monthlyCostsVAT": {
+            "de": "Mehrwertsteueranteil der monatlichen Gesamtkosten",
+            "en": "VAT portion of the monthly total costs"
+        },
+        "NetOperatingCosts.operatingCostsVAT": {
+            "de": "Mehrwertsteueranteil der Betriebskosten",
+            "en": "VAT portion of the operating costs"
+        },
+        "NetOtherCosts.otherCostsVAT": {
+            "de": "Mehrwertsteueranteil sonstiger Kosten",
+            "en": "VAT portion of other costs"
+        },
+        "NetOtherRent.otherRentVAT": {
+            "de": "Mehrwertsteueranteil sonstiger Miete",
+            "en": "VAT portion of other rent"
+        },
+        "NetPurchasePrice.purchasePriceVAT": {
+            "de": "Mehrwertsteueranteil des Kaufpreises",
+            "en": "VAT portion of the purchase price"
+        },
+        "NetRentPerSqmFrom.netRentPerSqmTo": {
+            "de": "Nettomiete pro Quadratmeter bis zu einem Höchstwert",
+            "en": "Net rent per square meter up to a maximum value"
+        },
+        "NetReserves.reserveVAT": {
+            "de": "Mehrwertsteueranteil der Rücklagen",
+            "en": "VAT portion of the reserves"
+        },
+        "NetTotalCost.totalCostVAT": {
+            "de": "Mehrwertsteueranteil der Gesamtbelastung",
+            "en": "VAT portion of the total cost burden"
+        },
+        "NetTotalRent.totalRentVAT": {
+            "de": "Mehrwertsteueranteil der Gesamtmiete",
+            "en": "VAT portion of the total rent"
+        },
+        "OfficePractices.officeType": {
+            "de": "Typ des Büro- oder Praxisobjekts",
+            "en": "Type of office or medical practice property"
+        },
+        "Other.otherType": {
+            "de": "Typ des sonstigen Objekts",
+            "en": "Type of the other property"
+        },
+        "OtherEmail.emailType": {
+            "de": "Typ der E-Mail-Adresse",
+            "en": "Type of email address"
+        },
+        "OtherEmail.remark": {
+            "de": "Bemerkung oder Hinweis",
+            "en": "Remark or note"
+        },
+        "OtherPhone.phoneType": {
+            "de": "Typ der Telefonnummer",
+            "en": "Type of phone number"
+        },
+        "OtherPhone.remark": {
+            "de": "Bemerkung oder Hinweis",
+            "en": "Remark or note"
+        },
+        "Parking.parkingType": {
+            "de": "Art des Stellplatzes",
+            "en": "Type of the parking area"
+        },
+        "ParkingCarport.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingCarport.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingCarport.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "ParkingDuplex.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingDuplex.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingDuplex.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "ParkingGarage.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingGarage.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingGarage.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "ParkingMultiStorey.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingMultiStorey.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingMultiStorey.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "ParkingOther.spaceType": {
+            "de": "Raumtyp (z.B. Büro, Lager, Verkauf)",
+            "en": "Space type (e.g. office, storage, retail)"
+        },
+        "ParkingOther.remark": {
+            "de": "Bemerkung oder Hinweis",
+            "en": "Remark or note"
+        },
+        "ParkingOutdoor.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingOutdoor.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingOutdoor.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "ParkingSpaceType.garage": {
+            "de": "Garage vorhanden",
+            "en": "Garage available"
+        },
+        "ParkingSpaceType.undergroundParking": {
+            "de": "Tiefgaragenstellplatz vorhanden",
+            "en": "Underground parking space available"
+        },
+        "ParkingSpaceType.carport": {
+            "de": "Carport vorhanden",
+            "en": "Carport available"
+        },
+        "ParkingSpaceType.openSpace": {
+            "de": "Freifläche in Quadratmetern",
+            "en": "Open space area in square meters"
+        },
+        "ParkingSpaceType.parkingGarage": {
+            "de": "Garagenstellplatz",
+            "en": "Garage parking space"
+        },
+        "ParkingSpaceType.duplex": {
+            "de": "Duplex-Stellplatz vorhanden",
+            "en": "Duplex parking space available"
+        },
+        "ParkingUnderground.parkingSpaceRent": {
+            "de": "Mietpreis des Stellplatzes",
+            "en": "Rental price of the parking space"
+        },
+        "ParkingUnderground.parkingSpacePurchasePrice": {
+            "de": "Kaufpreis des Stellplatzes",
+            "en": "Purchase price of the parking space"
+        },
+        "ParkingUnderground.quantity": {
+            "de": "Anzahl oder Menge",
+            "en": "Quantity or count"
+        },
+        "Photo.location": {
+            "de": "Lagebeschreibung der Immobilie",
+            "en": "Location description of the property"
+        },
+        "Plot.plotType": {
+            "de": "Typ des Grundstücksobjekts",
+            "en": "Type of the plot property"
+        },
+        "PriceTimeUnit.timeUnit": {
+            "de": "Zeiteinheit (z.B. Tag, Woche, Monat)",
+            "en": "Time unit (e.g. day, week, month)"
+        },
+        "PropertyText.language": {
+            "de": "Sprache des Textes (ISO-Sprachcode)",
+            "en": "Language of the text (ISO language code)"
+        },
+        "PurchasePrice.onRequest": {
+            "de": "Preis auf Anfrage",
+            "en": "Price on request"
+        },
+        "Retail.tradeType": {
+            "de": "Typ des Handelsgewerbes (z.B. Einzelhandel, Großhandel)",
+            "en": "Trade type (e.g. retail, wholesale)"
+        },
+        "RoofShape.truncatedHipRoof": {
+            "de": "Krüppelwalmdach vorhanden",
+            "en": "Truncated hip roof"
+        },
+        "RoofShape.mansardRoof": {
+            "de": "Mansarddach vorhanden",
+            "en": "Mansard roof"
+        },
+        "RoofShape.shedRoof": {
+            "de": "Pultdach vorhanden",
+            "en": "Shed (mono-pitched) roof"
+        },
+        "RoofShape.saddleRoof": {
+            "de": "Satteldach vorhanden",
+            "en": "Saddle (gabled) roof"
+        },
+        "RoofShape.hipRoof": {
+            "de": "Walmdach vorhanden",
+            "en": "Hip roof"
+        },
+        "RoofShape.flatRoof": {
+            "de": "Flachdach vorhanden",
+            "en": "Flat roof"
+        },
+        "RoofShape.pyramidRoof": {
+            "de": "Pyramidendach vorhanden",
+            "en": "Pyramid roof"
+        },
+        "Rooms.roomType": {
+            "de": "Raumtyp",
+            "en": "Room type"
+        },
+        "SalesStatus.status": {
+            "de": "Status der Immobilie oder des Datentransfers",
+            "en": "Status of the property or the data transfer"
+        },
+        "SecurityTechnology.alarmSystem": {
+            "de": "Alarmanlage vorhanden",
+            "en": "Alarm system available"
+        },
+        "SecurityTechnology.camera": {
+            "de": "Überwachungskamera vorhanden",
+            "en": "Surveillance camera available"
+        },
+        "SecurityTechnology.policeCall": {
+            "de": "Polizeirufanlage als Sicherheitstechnik vorhanden",
+            "en": "Police call system as security technology available"
+        },
+        "Services.assistedLiving": {
+            "de": "Betreutes Wohnen möglich",
+            "en": "Assisted living available"
+        },
+        "Services.catering": {
+            "de": "Catering-Service vorhanden",
+            "en": "Catering service available"
+        },
+        "Services.cleaning": {
+            "de": "Reinigungsservice vorhanden",
+            "en": "Cleaning service available"
+        },
+        "Services.shopping": {
+            "de": "Einkaufsmöglichkeiten in der Nähe",
+            "en": "Shopping facilities nearby"
+        },
+        "Services.securityService": {
+            "de": "Sicherheitsdienst vorhanden",
+            "en": "Security service available"
+        },
+        "SportDistances.distanceToSport": {
+            "de": "Entfernung zu Sportanlagen",
+            "en": "Distance to sports facilities"
+        },
+        "TargetRentalIncome.period": {
+            "de": "Zeitraum oder Periode",
+            "en": "Time period"
+        },
+        "TotalCostsPerSqmFrom.totalCostsPerSqmTo": {
+            "de": "Gesamtkosten pro Quadratmeter bis zu einem Höchstwert",
+            "en": "Total costs per square meter up to a maximum value"
+        },
+        "Transfer.type": {
+            "de": "Typ oder Art",
+            "en": "Type or kind"
+        },
+        "Transfer.scope": {
+            "de": "Umfang oder Geltungsbereich",
+            "en": "Scope or range"
+        },
+        "Transfer.mode": {
+            "de": "Modus des Datentransfers",
+            "en": "Mode of the data transfer"
+        },
+        "Transfer.version": {
+            "de": "Version des OpenImmo-Formats oder der Software",
+            "en": "Version of the OpenImmo format or software"
+        },
+        "Transfer.senderSoftware": {
+            "de": "Software des sendenden Systems",
+            "en": "Software of the sending system"
+        },
+        "Transfer.senderVersion": {
+            "de": "Version des sendenden Systems",
+            "en": "Version of the sending system"
+        },
+        "Transfer.technicalEmail": {
+            "de": "Technische E-Mail-Adresse des Systems",
+            "en": "Technical email address of the system"
+        },
+        "Transfer.regionId": {
+            "de": "Regions-ID der Immobilie",
+            "en": "Region ID of the property"
+        },
+        "Transfer.timestamp": {
+            "de": "Zeitstempel des Datentransfers",
+            "en": "Timestamp of the data transfer"
+        },
+        "TypeOfUse.living": {
+            "de": "Wohnbereich vorhanden",
+            "en": "Living area available"
+        },
+        "TypeOfUse.commercial": {
+            "de": "Gewerbliche Nutzung vorhanden",
+            "en": "Commercial use available"
+        },
+        "TypeOfUse.facility": {
+            "de": "Einrichtung oder Anlage",
+            "en": "Facility or amenity"
+        },
+        "TypeOfUse.waz": {
+            "de": "Wohn-Arbeits-Zimmer (Kombination aus Wohnen und Arbeiten)",
+            "en": "Living-working room (combination of living and working space)"
+        },
+        "UserDefinedSimplefield.fieldName": {
+            "de": "Name des Datenfeldes",
+            "en": "Name of the data field"
+        },
+        "View.view": {
+            "de": "Aussicht oder Blickrichtung der Immobilie",
+            "en": "View or outlook of the property"
         }
     }
 }
