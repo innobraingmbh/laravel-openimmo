@@ -171,16 +171,11 @@ class DtoGenerator
             $classComment .= PHP_EOL.$xsdDoc;
         }
 
-        if (! $this->skipTranslation) {
-            $enDesc = TranslationService::getClassDescription($className, 'en');
-            if ($enDesc !== '') {
-                $classComment .= PHP_EOL.'@description '.$enDesc;
-            }
-        } else {
-            $deDesc = TranslationService::getClassDescription($className, 'de');
-            if ($deDesc !== '') {
-                $classComment .= PHP_EOL.'@description '.$deDesc;
-            }
+        $desc = $this->skipTranslation
+            ? TranslationService::getClassDescription($className, 'de')
+            : TranslationService::getClassDescription($className, 'en');
+        if ($desc !== '') {
+            $classComment .= PHP_EOL.'@description '.$desc;
         }
 
         $class
@@ -332,12 +327,12 @@ class DtoGenerator
             );
         }
 
-        if (! $this->skipTranslation) {
-            $descKey = $class->getName().'.'.$propertyName;
-            $propDesc = TranslationService::getPropertyDescription($descKey, 'en');
-            if ($propDesc !== '') {
-                CodeGenUtil::addDescriptionPart($classProperty, '@description '.$propDesc);
-            }
+        $descKey = $class->getName().'.'.$propertyName;
+        $propDesc = $this->skipTranslation
+            ? TranslationService::getClassDescription($descKey, 'de')
+            : TranslationService::getClassDescription($descKey, 'en');
+        if ($propDesc !== '') {
+            CodeGenUtil::addDescriptionPart($classProperty, '@description '.$propDesc);
         }
 
         $propertyName = $property->getName();
