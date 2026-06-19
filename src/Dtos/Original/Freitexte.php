@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,57 +13,56 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Freitexte
- *
- * @description Freie Textbeschreibungen der Immobilie
  */
+#[Description('Freie Textbeschreibungen der Immobilie')]
 #[XmlRoot(name: 'freitexte')]
 class Freitexte
 {
     public function __construct(
-        /** @description Titel oder Überschrift der Immobilie */
         #[Type('string')]
+        #[Description('Titel oder Überschrift der Immobilie')]
         #[SerializedName('objekttitel')]
         protected ?string $objekttitel = null,
-        /** @description Dreizeiliger Freitext (z.B. für Inserate) */
         #[Type('string')]
+        #[Description('Dreizeiliger Freitext (z.B. für Inserate)')]
         #[SerializedName('dreizeiler')]
         protected ?string $dreizeiler = null,
-        /** @description Lagebeschreibung der Immobilie */
         #[Type('string')]
+        #[Description('Lagebeschreibung der Immobilie')]
         #[SerializedName('lage')]
         protected ?string $lage = null,
-        /** @description Beschreibung der Ausstattung */
         #[Type('string')]
+        #[Description('Beschreibung der Ausstattung')]
         #[SerializedName('ausstatt_beschr')]
         protected ?string $ausstattBeschr = null,
-        /** @description Objektbeschreibung als Freitext */
         #[Type('string')]
+        #[Description('Objektbeschreibung als Freitext')]
         #[SerializedName('objektbeschreibung')]
         protected ?string $objektbeschreibung = null,
-        /** @description Sonstige Informationen */
         #[Type('string')]
+        #[Description('Sonstige Informationen')]
         #[SerializedName('sonstige_angaben')]
         protected ?string $sonstigeAngaben = null,
-        /** @description Freitext zur Immobilie */
         #[Type(ObjektText::class)]
+        #[Description('Freitext zur Immobilie')]
         #[SerializedName('objekt_text')]
         protected ?ObjektText $objektText = null,
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

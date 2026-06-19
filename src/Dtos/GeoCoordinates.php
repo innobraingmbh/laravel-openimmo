@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,30 +13,23 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class GeoCoordinates
  * Geokoordinaten der Immobilie, Pflichtfeld, alternativ mit Ort, PLZ
- *
- * @description GPS coordinates of the property
  */
+#[Description('GPS coordinates of the property')]
 #[XmlRoot(name: 'geokoordinaten')]
 class GeoCoordinates
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Geographic latitude of the property
-         */
+        /** required */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('breitengrad')]
+        #[Description('Geographic latitude of the property')]
         protected float $latitude = 0.0,
-        /**
-         * required
-         *
-         * @description Geographic longitude of the property
-         */
+        /** required */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('laengengrad')]
+        #[Description('Geographic longitude of the property')]
         protected float $longitude = 0.0
     ) {}
 

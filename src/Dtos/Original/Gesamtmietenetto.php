@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Gesamtmietenetto
  * Summe alle Mietzins Zahlungen, UmSt. im Attribut.
- *
- * @description Netto-Gesamtmiete (ohne MwSt.)
  */
+#[Description('Netto-Gesamtmiete (ohne MwSt.)')]
 #[XmlRoot(name: 'gesamtmietenetto')]
 class Gesamtmietenetto
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Mehrwertsteueranteil der Gesamtmiete
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtmieteust')]
+        #[Description('Mehrwertsteueranteil der Gesamtmiete')]
         protected ?float $gesamtmieteust = null,
         #[Inline]
         #[Type('float')]

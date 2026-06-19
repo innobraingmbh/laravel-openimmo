@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -14,9 +15,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Aktion für Objekt. Wenn nicht vorhanden, dann "ADD", als neu.
  *  Change= Update der Objektdaten, Delete = Löschen des Objektes
  *  Referenz= Die Möglichkeit Objekte in Portalen als Verkauft oder Archiv zu definieren.
- *
- * @description Aktion für den Datentransfer (z.B. Anlegen, Ändern, Löschen)
  */
+#[Description('Aktion für den Datentransfer (z.B. Anlegen, Ändern, Löschen)')]
 #[XmlRoot(name: 'aktion')]
 class Aktion
 {
@@ -31,12 +31,11 @@ class Aktion
          * optional
          *
          * @see AKTIONART_* constants
-         *
-         * @description Typ der Datentransferaktion
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('aktionart')]
+        #[Description('Typ der Datentransferaktion')]
         protected string $aktionart = ''
     ) {}
 

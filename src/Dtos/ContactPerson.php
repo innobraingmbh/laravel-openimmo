@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,206 +13,178 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ContactPerson
- *
- * @description Contact person of the provider for the property
  */
+#[Description('Contact person of the provider for the property')]
 #[XmlRoot(name: 'kontaktperson')]
 class ContactPerson
 {
     public function __construct(
-        /**
-         * Minimum length: 1
-         *
-         * @description Central email address of the provider
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Central email address of the provider')]
         #[SerializedName('email_zentrale')]
         protected ?string $centralEmail = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Direct email address of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Direct email address of the contact person')]
         #[SerializedName('email_direkt')]
         protected ?string $directEmail = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Central phone number of the provider
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Central phone number of the provider')]
         #[SerializedName('tel_zentrale')]
         protected ?string $centralPhoneNumber = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Phone extension of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Phone extension of the contact person')]
         #[SerializedName('tel_durchw')]
         protected ?string $phoneExtension = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Fax number of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Fax number of the contact person')]
         #[SerializedName('tel_fax')]
         protected ?string $faxNumber = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Mobile phone number of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Mobile phone number of the contact person')]
         #[SerializedName('tel_handy')]
         protected ?string $mobileNumber = null,
-        /** @description Last name of the contact person */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Last name of the contact person')]
         #[SerializedName('name')]
         protected string $name = '',
-        /** @description First name of the contact person */
         #[Type('string')]
+        #[Description('First name of the contact person')]
         #[SerializedName('vorname')]
         protected ?string $firstName = null,
-        /** @description Title or academic degree of the contact person */
         #[Type('string')]
+        #[Description('Title or academic degree of the contact person')]
         #[SerializedName('titel')]
         protected ?string $title = null,
-        /** @description Salutation of the contact person */
         #[Type('string')]
+        #[Description('Salutation of the contact person')]
         #[SerializedName('anrede')]
         protected ?string $salutation = null,
-        /** @description Position or job title of the contact person */
         #[Type('string')]
+        #[Description('Position or job title of the contact person')]
         #[SerializedName('position')]
         protected ?string $position = null,
-        /** @description Letter salutation of the contact person */
         #[Type('string')]
+        #[Description('Letter salutation of the contact person')]
         #[SerializedName('anrede_brief')]
         protected ?string $letterSalutation = null,
-        /** @description Company name of the provider */
         #[Type('string')]
+        #[Description('Company name of the provider')]
         #[SerializedName('firma')]
         protected ?string $company = null,
-        /** @description Additional free-text field */
         #[Type('string')]
+        #[Description('Additional free-text field')]
         #[SerializedName('zusatzfeld')]
         protected ?string $additionalField = null,
-        /** @description Street of the property */
         #[Type('string')]
+        #[Description('Street of the property')]
         #[SerializedName('strasse')]
         protected ?string $street = null,
-        /** @description House number of the property */
         #[Type('string')]
+        #[Description('House number of the property')]
         #[SerializedName('hausnummer')]
         protected ?string $houseNumber = null,
-        /** @description Postal code of the property */
         #[Type('string')]
+        #[Description('Postal code of the property')]
         #[SerializedName('plz')]
         protected ?string $postalCode = null,
-        /** @description City or town of the property */
         #[Type('string')]
+        #[Description('City or town of the property')]
         #[SerializedName('ort')]
         protected ?string $city = null,
-        /** @description PO box number */
         #[Type('string')]
+        #[Description('PO box number')]
         #[SerializedName('postfach')]
         protected ?string $poBox = null,
-        /** @description Postal code of the PO box */
         #[Type('string')]
+        #[Description('Postal code of the PO box')]
         #[SerializedName('postf_plz')]
         protected ?string $poBoxPostalCode = null,
-        /** @description City of the PO box */
         #[Type('string')]
+        #[Description('City of the PO box')]
         #[SerializedName('postf_ort')]
         protected ?string $poBoxCity = null,
-        /** @description Country of the property */
         #[Type(Country::class)]
+        #[Description('Country of the property')]
         #[SerializedName('land')]
         protected ?Country $country = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Private email address of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Private email address of the contact person')]
         #[SerializedName('email_privat')]
         protected ?string $privateEmail = null,
-        /** @description Other email address */
         #[XmlList(entry: 'email_sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\OtherEmail>')]
         #[SkipWhenEmpty]
+        #[Description('Other email address')]
         #[SerializedName('email_sonstige')]
         protected array $otherEmail = [],
-        /**
-         * Minimum length: 1
-         *
-         * @description Email address for feedback
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Email address for feedback')]
         #[SerializedName('email_feedback')]
         protected ?string $feedbackEmail = null,
-        /**
-         * Minimum length: 1
-         *
-         * @description Private phone number of the contact person
-         */
+        /** Minimum length: 1 */
         #[Type('string')]
+        #[Description('Private phone number of the contact person')]
         #[SerializedName('tel_privat')]
         protected ?string $privatePhoneNumber = null,
-        /** @description Other phone number */
         #[XmlList(entry: 'tel_sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\OtherPhone>')]
         #[SkipWhenEmpty]
+        #[Description('Other phone number')]
         #[SerializedName('tel_sonstige')]
         protected array $otherPhoneNumber = [],
-        /** @description Website or URL of the contact person or provider */
         #[Type('string')]
+        #[Description('Website or URL of the contact person or provider')]
         #[SerializedName('url')]
         protected ?string $url = null,
-        /** @description Address released for publication */
         #[Type('bool')]
+        #[Description('Address released for publication')]
         #[SerializedName('adressfreigabe')]
         protected ?bool $addressRelease = null,
-        /** @description Person number of the contact person */
         #[Type('string')]
+        #[Description('Person number of the contact person')]
         #[SerializedName('personennummer')]
         protected ?string $personNumber = null,
-        /** @description Property trustee ID of the contact person */
         #[Type('string')]
+        #[Description('Property trustee ID of the contact person')]
         #[SerializedName('immobilientreuhaenderid')]
         protected ?string $propertyTrusteeId = null,
-        /** @description Photo of the contact person or property */
         #[Type(Photo::class)]
+        #[Description('Photo of the contact person or property')]
         #[SerializedName('foto')]
         protected ?Photo $photo = null,
-        /** @description Reference ID of the contact person */
         #[Type('string')]
+        #[Description('Reference ID of the contact person')]
         #[SerializedName('referenz_id')]
         protected ?string $referenceId = null,
-        /** @description Free text field */
         #[Type('string')]
+        #[Description('Free text field')]
         #[SerializedName('freitextfeld')]
         protected ?string $freeTextField = null,
-        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

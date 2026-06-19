@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class CommissionSplit
  * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
- *
- * @description Split of the broker commission between buyer and seller
  */
+#[Description('Split of the broker commission between buyer and seller')]
 #[XmlRoot(name: 'provision_teilen')]
 class CommissionSplit
 {
@@ -30,12 +30,11 @@ class CommissionSplit
          * optional
          *
          * @see VALUE_* constants
-         *
-         * @description Worth or valuation of the property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('wert')]
+        #[Description('Worth or valuation of the property')]
         protected string $worth = '',
         #[Inline]
         #[Type('string')]

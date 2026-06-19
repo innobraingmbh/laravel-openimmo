@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class CommercialLeisureProperty
  * Objektart / Typ f. gew. Freizeitimmobilen
- *
- * @description Commercial leisure property
  */
+#[Description('Commercial leisure property')]
 #[XmlRoot(name: 'freizeitimmobilie_gewerblich')]
 class CommercialLeisureProperty
 {
@@ -29,12 +29,11 @@ class CommercialLeisureProperty
          * optional
          *
          * @see LEISURE_TYPE_* constants
-         *
-         * @description Leisure property type
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('freizeit_typ')]
+        #[Description('Leisure property type')]
         protected string $leisureType = ''
     ) {}
 

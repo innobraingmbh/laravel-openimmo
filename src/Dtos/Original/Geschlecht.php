@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Geschlecht
  * Soll das Objekt nur an Frauen bzw. nur an Männer vermietet werden,
  *  fehlende Angabe wird als 'Ja' interpretiert
- *
- * @description Geschlechtsangabe einer Person
  */
+#[Description('Geschlechtsangabe einer Person')]
 #[XmlRoot(name: 'geschlecht')]
 class Geschlecht
 {
@@ -30,12 +30,11 @@ class Geschlecht
          * optional
          *
          * @see GESCHL_ATTR_* constants
-         *
-         * @description XML-Attribut zur Geschlechtsangabe
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('geschl_attr')]
+        #[Description('XML-Attribut zur Geschlechtsangabe')]
         protected string $geschlAttr = ''
     ) {}
 

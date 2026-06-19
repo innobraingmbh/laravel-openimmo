@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,41 +13,40 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Objektkategorie
- *
- * @description Objektkategorie mit Vermarktungsart und Immobilientyp
  */
+#[Description('Objektkategorie mit Vermarktungsart und Immobilientyp')]
 #[XmlRoot(name: 'objektkategorie')]
 class Objektkategorie
 {
     public function __construct(
-        /** @description Nutzungsart der Immobilie */
         #[Type(Nutzungsart::class)]
+        #[Description('Nutzungsart der Immobilie')]
         #[SerializedName('nutzungsart')]
         protected ?Nutzungsart $nutzungsart = null,
-        /** @description Vermarktungsart der Immobilie (Kauf oder Miete) */
         #[Type(Vermarktungsart::class)]
+        #[Description('Vermarktungsart der Immobilie (Kauf oder Miete)')]
         #[SerializedName('vermarktungsart')]
         protected ?Vermarktungsart $vermarktungsart = null,
-        /** @description Immobilientyp (z.B. Wohnung, Haus, Grundstück, Gewerbe) */
         #[Type(Objektart::class)]
+        #[Description('Immobilientyp (z.B. Wohnung, Haus, Grundstück, Gewerbe)')]
         #[SerializedName('objektart')]
         protected ?Objektart $objektart = null,
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetHeatingCosts
  * Die Heizkosten einer Einheit als Nettowert. Die Umsatzsteuer optional im Attribut
- *
- * @description Net heating costs (excluding VAT)
  */
+#[Description('Net heating costs (excluding VAT)')]
 #[XmlRoot(name: 'heizkostennetto')]
 class NetHeatingCosts
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description VAT portion of the heating costs
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('heizkostenust')]
+        #[Description('VAT portion of the heating costs')]
         protected ?float $heatingCostsVAT = null,
         #[Inline]
         #[Type('float')]

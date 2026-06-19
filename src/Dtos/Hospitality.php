@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Hospitality
  * Objektart / Typ f. Gastgewerbe
- *
- * @description Commercial property of type hospitality or accommodation
  */
+#[Description('Commercial property of type hospitality or accommodation')]
 #[XmlRoot(name: 'gastgewerbe')]
 class Hospitality
 {
@@ -45,12 +45,11 @@ class Hospitality
          * optional
          *
          * @see HOSPITALITY_TYPE_* constants
-         *
-         * @description Type of hospitality or accommodation property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gastgew_typ')]
+        #[Description('Type of hospitality or accommodation property')]
         protected string $hospitalityType = ''
     ) {}
 

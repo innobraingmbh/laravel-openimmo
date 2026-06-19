@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,35 +13,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Anhaenge
- *
- * @description Liste aller Anhänge der Immobilie
  */
+#[Description('Liste aller Anhänge der Immobilie')]
 #[XmlRoot(name: 'anhaenge')]
 class Anhaenge
 {
     public function __construct(
-        /** @description Anhang (Datei) der Immobilie */
         #[XmlList(entry: 'anhang', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Anhang>')]
         #[SkipWhenEmpty]
+        #[Description('Anhang (Datei) der Immobilie')]
         #[SerializedName('anhang')]
         protected array $anhang = [],
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

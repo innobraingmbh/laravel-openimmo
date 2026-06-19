@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class InnenCourtage
  * Maklercourtage, bei Vermittlungs- bzw. Nachweisgeschäften als Betrag in ? / % / MM, daher Textfeld
- *
- * @description Innenprovision (Verkäuferprovision) für die Immobilie
  */
+#[Description('Innenprovision (Verkäuferprovision) für die Immobilie')]
 #[XmlRoot(name: 'innen_courtage')]
 class InnenCourtage
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Preis inkl. Mehrwertsteuer
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]
+        #[Description('Preis inkl. Mehrwertsteuer')]
         protected ?bool $mitMwst = null,
         #[Inline]
         #[Type('string')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class OtherEmail
- *
- * @description Additional email address of a contact person
  */
+#[Description('Additional email address of a contact person')]
 #[XmlRoot(name: 'email_sonstige')]
 class OtherEmail
 {
@@ -31,21 +31,17 @@ class OtherEmail
          * optional
          *
          * @see EMAIL_TYPE_* constants
-         *
-         * @description Type of email address
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('emailart')]
+        #[Description('Type of email address')]
         protected string $emailType = '',
-        /**
-         * optional
-         *
-         * @description Remark or note
-         */
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]
+        #[Description('Remark or note')]
         protected ?string $remark = null,
         #[Inline]
         #[Type('string')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,9 +15,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Photo
  * Foto bei der Kontaktperson. Datentyp ähnlich "Anhang"
  * foto from the kontakt person of the sender
- *
- * @description Photo of a contact person or the property
  */
+#[Description('Photo of a contact person or the property')]
 #[XmlRoot(name: 'foto')]
 class Photo
 {
@@ -29,20 +29,19 @@ class Photo
          * required
          *
          * @see LOCATION_* constants
-         *
-         * @description Location description of the property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
+        #[Description('Location description of the property')]
         protected string $location = '',
-        /** @description File format of the attachment */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('File format of the attachment')]
         #[SerializedName('format')]
         protected string $format = '',
-        /** @description Data container */
         #[Type(Data::class)]
+        #[Description('Data container')]
         #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}

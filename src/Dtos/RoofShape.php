@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,75 +12,53 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class RoofShape
- *
- * @description Roof shape of the building
  */
+#[Description('Roof shape of the building')]
 #[XmlRoot(name: 'dachform')]
 class RoofShape
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Truncated hip roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KRUEPPELWALMDACH')]
+        #[Description('Truncated hip roof')]
         protected ?bool $truncatedHipRoof = null,
-        /**
-         * optional
-         *
-         * @description Mansard roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MANSARDDACH')]
+        #[Description('Mansard roof')]
         protected ?bool $mansardRoof = null,
-        /**
-         * optional
-         *
-         * @description Shed (mono-pitched) roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PULTDACH')]
+        #[Description('Shed (mono-pitched) roof')]
         protected ?bool $shedRoof = null,
-        /**
-         * optional
-         *
-         * @description Saddle (gabled) roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SATTELDACH')]
+        #[Description('Saddle (gabled) roof')]
         protected ?bool $saddleRoof = null,
-        /**
-         * optional
-         *
-         * @description Hip roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WALMDACH')]
+        #[Description('Hip roof')]
         protected ?bool $hipRoof = null,
-        /**
-         * optional
-         *
-         * @description Flat roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLACHDACH')]
+        #[Description('Flat roof')]
         protected ?bool $flatRoof = null,
-        /**
-         * optional
-         *
-         * @description Pyramid roof
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PYRAMIDENDACH')]
+        #[Description('Pyramid roof')]
         protected ?bool $pyramidRoof = null
     ) {}
 

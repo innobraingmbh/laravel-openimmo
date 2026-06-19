@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,30 +13,23 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BroadbandAccess
  * Informationen über die Breitbandmöglichkeiten.
- *
- * @description Broadband internet access details of the property
  */
+#[Description('Broadband internet access details of the property')]
 #[XmlRoot(name: 'breitband_zugang')]
 class BroadbandAccess
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Type or kind
-         */
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
+        #[Description('Type or kind')]
         protected ?string $type = null,
-        /**
-         * optional
-         *
-         * @description Speed (e.g. broadband speed in Mbit/s)
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('speed')]
+        #[Description('Speed (e.g. broadband speed in Mbit/s)')]
         protected ?float $speed = null
     ) {}
 

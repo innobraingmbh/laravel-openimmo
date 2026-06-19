@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,48 +13,35 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class TypeOfUse
  * nutzungsart
- *
- * @description Type of use of the property (e.g. residential, commercial)
  */
+#[Description('Type of use of the property (e.g. residential, commercial)')]
 #[XmlRoot(name: 'nutzungsart')]
 class TypeOfUse
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Living area available
-         */
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WOHNEN')]
+        #[Description('Living area available')]
         protected bool $living = false,
-        /**
-         * required
-         *
-         * @description Commercial use available
-         */
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GEWERBE')]
+        #[Description('Commercial use available')]
         protected bool $commercial = false,
-        /**
-         * optional
-         *
-         * @description Facility or amenity
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ANLAGE')]
+        #[Description('Facility or amenity')]
         protected ?bool $facility = null,
-        /**
-         * optional
-         *
-         * @description Living-working room (combination of living and working space)
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAZ')]
+        #[Description('Living-working room (combination of living and working space)')]
         protected ?bool $waz = null
     ) {}
 

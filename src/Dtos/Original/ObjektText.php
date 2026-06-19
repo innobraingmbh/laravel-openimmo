@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,21 +15,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ObjektText
  * Beschreibung in anderer Sprache. "lang" Attribut muss dann vorhanden sein. W3- Language Code
  * Description in other Languages
- *
- * @description Einzelner Freitext zur Immobilie mit Sprach- und Typangabe
  */
+#[Description('Einzelner Freitext zur Immobilie mit Sprach- und Typangabe')]
 #[XmlRoot(name: 'objekt_text')]
 class ObjektText
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Sprache des Textes (ISO-Sprachcode)
-         */
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('lang')]
+        #[Description('Sprache des Textes (ISO-Sprachcode)')]
         protected string $lang = '',
         #[Inline]
         #[Type('string')]

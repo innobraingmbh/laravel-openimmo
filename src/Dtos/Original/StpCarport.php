@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,41 +12,33 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class StpCarport
- *
- * @description Stellplatz vom Typ Carport
  */
+#[Description('Stellplatz vom Typ Carport')]
 #[XmlRoot(name: 'stp_carport')]
 class StpCarport
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Mietpreis des Stellplatzes
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzmiete')]
+        #[Description('Mietpreis des Stellplatzes')]
         protected ?float $stellplatzmiete = null,
-        /**
-         * optional
-         *
-         * @description Kaufpreis des Stellplatzes
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzkaufpreis')]
+        #[Description('Kaufpreis des Stellplatzes')]
         protected ?float $stellplatzkaufpreis = null,
         /**
          * optional
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
-         *
-         * @description Anzahl oder Menge
          */
         #[Type('int')]
         #[XmlAttribute]
         #[SerializedName('anzahl')]
+        #[Description('Anzahl oder Menge')]
         protected ?int $anzahl = null
     ) {}
 

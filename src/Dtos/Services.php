@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,57 +13,41 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Services
  * Welche Serviceleistungen werden angeboten? Optionen kombinierbar
- *
- * @description Services offered for the property or by the provider
  */
+#[Description('Services offered for the property or by the provider')]
 #[XmlRoot(name: 'serviceleistungen')]
 class Services
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Assisted living available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BETREUTES_WOHNEN')]
+        #[Description('Assisted living available')]
         protected ?bool $assistedLiving = null,
-        /**
-         * optional
-         *
-         * @description Catering service available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('CATERING')]
+        #[Description('Catering service available')]
         protected ?bool $catering = null,
-        /**
-         * optional
-         *
-         * @description Cleaning service available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('REINIGUNG')]
+        #[Description('Cleaning service available')]
         protected ?bool $cleaning = null,
-        /**
-         * optional
-         *
-         * @description Shopping facilities nearby
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('EINKAUF')]
+        #[Description('Shopping facilities nearby')]
         protected ?bool $shopping = null,
-        /**
-         * optional
-         *
-         * @description Security service available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WACHDIENST')]
+        #[Description('Security service available')]
         protected ?bool $securityService = null
     ) {}
 

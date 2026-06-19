@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,57 +15,56 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Bieterverfahren
  * Angaben zum Bieterverfahren
- *
- * @description Informationen zum Bieterverfahren der Immobilie
  */
+#[Description('Informationen zum Bieterverfahren der Immobilie')]
 #[XmlRoot(name: 'bieterverfahren')]
 class Bieterverfahren
 {
     public function __construct(
-        /** @description Beginn der Angebotsphase */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Beginn der Angebotsphase')]
         #[SerializedName('beginn_angebotsphase')]
         protected ?DateTime $beginnAngebotsphase = null,
-        /** @description Erstes Besichtigungstermin */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Erstes Besichtigungstermin')]
         #[SerializedName('besichtigungstermin')]
         protected ?DateTime $besichtigungstermin = null,
-        /** @description Zweiter Besichtigungstermin */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Zweiter Besichtigungstermin')]
         #[SerializedName('besichtigungstermin_2')]
         protected ?DateTime $besichtigungstermin2 = null,
-        /** @description Startzeitpunkt des Bieterverfahrens */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Startzeitpunkt des Bieterverfahrens')]
         #[SerializedName('beginn_bietzeit')]
         protected ?DateTime $beginnBietzeit = null,
-        /** @description Endzeitpunkt des Bieterverfahrens */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Endzeitpunkt des Bieterverfahrens')]
         #[SerializedName('ende_bietzeit')]
         protected ?DateTime $endeBietzeit = null,
-        /** @description Höchstgebot anzeigen */
         #[Type('bool')]
+        #[Description('Höchstgebot anzeigen')]
         #[SerializedName('hoechstgebot_zeigen')]
         protected ?bool $hoechstgebotZeigen = null,
-        /** @description Mindestpreis der Immobilie */
         #[Type('float')]
+        #[Description('Mindestpreis der Immobilie')]
         #[SerializedName('mindestpreis')]
         protected ?float $mindestpreis = null,
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

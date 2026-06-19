@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Development
  * Stand der Erschließung, Optionen nicht kombinierbar
- *
- * @description Development/utility connection status of the plot
  */
+#[Description('Development/utility connection status of the plot')]
 #[XmlRoot(name: 'erschliessung')]
 class Development
 {
@@ -31,12 +31,11 @@ class Development
          * optional
          *
          * @see DEVELOPMENT_ATTRIBUTE_* constants
-         *
-         * @description XML attribute for the development status value
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('erschl_attr')]
+        #[Description('XML attribute for the development status value')]
         protected string $developmentAttribute = ''
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Monatlichekostennetto
  * Summe der Monatlichen Kosten einer Wohnung als Information für einen Käufer (Netto), Umst im Attribut.
- *
- * @description Monatliche Netto-Gesamtkosten (ohne MwSt.)
  */
+#[Description('Monatliche Netto-Gesamtkosten (ohne MwSt.)')]
 #[XmlRoot(name: 'monatlichekostennetto')]
 class Monatlichekostennetto
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Mehrwertsteueranteil der monatlichen Gesamtkosten
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('monatlichekostenust')]
+        #[Description('Mehrwertsteueranteil der monatlichen Gesamtkosten')]
         protected ?float $monatlichekostenust = null,
         #[Inline]
         #[Type('float')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,66 +13,47 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ParkingSpaceType
  * Welche Stellplatzarten sind vorhanden, Optionen kombinierbar, als einfache Alternative zu den stp...Elementen
- *
- * @description Type of parking space
  */
+#[Description('Type of parking space')]
 #[XmlRoot(name: 'stellplatzart')]
 class ParkingSpaceType
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Garage available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GARAGE')]
+        #[Description('Garage available')]
         protected ?bool $garage = null,
-        /**
-         * optional
-         *
-         * @description Underground parking space available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TIEFGARAGE')]
+        #[Description('Underground parking space available')]
         protected ?bool $undergroundParking = null,
-        /**
-         * optional
-         *
-         * @description Carport available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('CARPORT')]
+        #[Description('Carport available')]
         protected ?bool $carport = null,
-        /**
-         * optional
-         *
-         * @description Open space area in square meters
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FREIPLATZ')]
+        #[Description('Open space area in square meters')]
         protected ?bool $openSpace = null,
-        /**
-         * optional
-         *
-         * @description Garage parking space
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKHAUS')]
+        #[Description('Garage parking space')]
         protected ?bool $parkingGarage = null,
-        /**
-         * optional
-         *
-         * @description Duplex parking space available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DUPLEX')]
+        #[Description('Duplex parking space available')]
         protected ?bool $duplex = null
     ) {}
 

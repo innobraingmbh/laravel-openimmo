@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetOtherRent
  * Ergänzenden Mietkosten, UmSt. im Attribut.
- *
- * @description Other net rent (excluding VAT)
  */
+#[Description('Other net rent (excluding VAT)')]
 #[XmlRoot(name: 'sonstigemietenetto')]
 class NetOtherRent
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description VAT portion of other rent
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('sonstigemieteust')]
+        #[Description('VAT portion of other rent')]
         protected ?float $otherRentVAT = null,
         #[Inline]
         #[Type('float')]

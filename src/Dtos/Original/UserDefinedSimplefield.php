@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class UserDefinedSimplefield
  * Benutzerdefinierte Angaben
- *
- * @description Benutzerdefiniertes einfaches Freifeld
  */
+#[Description('Benutzerdefiniertes einfaches Freifeld')]
 #[XmlRoot(name: 'user_defined_simplefield')]
 class UserDefinedSimplefield
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Name des Datenfeldes
-         */
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('feldname')]
+        #[Description('Name des Datenfeldes')]
         protected string $feldname = '',
         #[Inline]
         #[Type('string')]

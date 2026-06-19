@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,138 +13,95 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Floor
  * Welche Eigenschaft besitzt der Bodenbelag, Optionen kombinierbar
- *
- * @description Flooring information of the property
  */
+#[Description('Flooring information of the property')]
 #[XmlRoot(name: 'boden')]
 class Floor
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Tiles as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLIESEN')]
+        #[Description('Tiles as flooring')]
         protected ?bool $tiles = null,
-        /**
-         * optional
-         *
-         * @description Stone flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('STEIN')]
+        #[Description('Stone flooring')]
         protected ?bool $stone = null,
-        /**
-         * optional
-         *
-         * @description Carpet as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TEPPICH')]
+        #[Description('Carpet as flooring')]
         protected ?bool $carpet = null,
-        /**
-         * optional
-         *
-         * @description Parquet as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKETT')]
+        #[Description('Parquet as flooring')]
         protected ?bool $parquet = null,
-        /**
-         * optional
-         *
-         * @description Finished parquet as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGPARKETT')]
+        #[Description('Finished parquet as flooring')]
         protected ?bool $finishedParquet = null,
-        /**
-         * optional
-         *
-         * @description Laminate as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LAMINAT')]
+        #[Description('Laminate as flooring')]
         protected ?bool $laminate = null,
-        /**
-         * optional
-         *
-         * @description Floorboards as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DIELEN')]
+        #[Description('Floorboards as flooring')]
         protected ?bool $floorboards = null,
-        /**
-         * optional
-         *
-         * @description Plastic flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KUNSTSTOFF')]
+        #[Description('Plastic flooring')]
         protected ?bool $plastic = null,
-        /**
-         * optional
-         *
-         * @description Screed as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ESTRICH')]
+        #[Description('Screed as flooring')]
         protected ?bool $screed = null,
-        /**
-         * optional
-         *
-         * @description Raised floor available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DOPPELBODEN')]
+        #[Description('Raised floor available')]
         protected ?bool $raisedFloor = null,
-        /**
-         * optional
-         *
-         * @description Linoleum as flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINOLEUM')]
+        #[Description('Linoleum as flooring')]
         protected ?bool $linoleum = null,
-        /**
-         * optional
-         *
-         * @description Marble flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MARMOR')]
+        #[Description('Marble flooring')]
         protected ?bool $marble = null,
-        /**
-         * optional
-         *
-         * @description Terracotta flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TERRAKOTTA')]
+        #[Description('Terracotta flooring')]
         protected ?bool $terracotta = null,
-        /**
-         * optional
-         *
-         * @description Granite flooring
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GRANIT')]
+        #[Description('Granite flooring')]
         protected ?bool $granite = null
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Erschliessung
  * Stand der Erschließung, Optionen nicht kombinierbar
- *
- * @description Erschließungszustand des Grundstücks
  */
+#[Description('Erschließungszustand des Grundstücks')]
 #[XmlRoot(name: 'erschliessung')]
 class Erschliessung
 {
@@ -31,12 +31,11 @@ class Erschliessung
          * optional
          *
          * @see ERSCHL_ATTR_* constants
-         *
-         * @description XML-Attribut zum Erschließungszustand
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('erschl_attr')]
+        #[Description('XML-Attribut zum Erschließungszustand')]
         protected string $erschlAttr = ''
     ) {}
 

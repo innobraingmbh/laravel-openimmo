@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class MieteinnahmenSoll
  * Mieteinnahmen pro Periode, Normal-/Solleinnahmen (Ohne Periode = JAHR)
- *
- * @description Soll-Mieteinnahmen (angestrebte Mieteinnahmen) der Immobilie
  */
+#[Description('Soll-Mieteinnahmen (angestrebte Mieteinnahmen) der Immobilie')]
 #[XmlRoot(name: 'mieteinnahmen_soll')]
 class MieteinnahmenSoll
 {
@@ -32,12 +32,11 @@ class MieteinnahmenSoll
          * optional
          *
          * @see PERIODE_* constants
-         *
-         * @description Zeitraum oder Periode
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('periode')]
+        #[Description('Zeitraum oder Periode')]
         protected string $periode = '',
         #[Inline]
         #[Type('float')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,57 +12,41 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class DevelopmentStage
- *
- * @description Development stage or fit-out level of the building
  */
+#[Description('Development stage or fit-out level of the building')]
 #[XmlRoot(name: 'ausbaustufe')]
 class DevelopmentStage
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Prefabricated house
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAUSATZHAUS')]
+        #[Description('Prefabricated house')]
         protected ?bool $prefabricatedHouse = null,
-        /**
-         * optional
-         *
-         * @description House is expandable
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('AUSBAUHAUS')]
+        #[Description('House is expandable')]
         protected ?bool $expandableHouse = null,
-        /**
-         * optional
-         *
-         * @description Turnkey with basement
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
+        #[Description('Turnkey with basement')]
         protected ?bool $turnkeyWithBasement = null,
-        /**
-         * optional
-         *
-         * @description Turnkey without foundation slab
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
+        #[Description('Turnkey without foundation slab')]
         protected ?bool $turnkeyWithoutFoundation = null,
-        /**
-         * optional
-         *
-         * @description Turnkey with foundation slab
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]
+        #[Description('Turnkey with foundation slab')]
         protected ?bool $turnkeyWithFoundation = null
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Attachment
  * Element für Anhänge
- *
- * @description Single attachment (file) of the property
  */
+#[Description('Single attachment (file) of the property')]
 #[XmlRoot(name: 'anhang')]
 class Attachment
 {
@@ -60,39 +60,37 @@ class Attachment
          * required
          *
          * @see LOCATION_* constants
-         *
-         * @description Location description of the property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
+        #[Description('Location description of the property')]
         protected string $location = '',
         /**
          * optional
          *
          * @see GROUP_* constants
-         *
-         * @description Group or category
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]
+        #[Description('Group or category')]
         protected string $group = '',
-        /** @description Title of the attachment */
         #[Type('string')]
+        #[Description('Title of the attachment')]
         #[SerializedName('anhangtitel')]
         protected ?string $attachmentTitle = null,
-        /** @description File format of the attachment */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('File format of the attachment')]
         #[SerializedName('format')]
         protected string $format = '',
-        /** @description Check information */
         #[Type(Check::class)]
+        #[Description('Check information')]
         #[SerializedName('check')]
         protected ?Check $check = null,
-        /** @description Data container */
         #[Type(Data::class)]
+        #[Description('Data container')]
         #[SerializedName('daten')]
         protected ?Data $data = null
     ) {}

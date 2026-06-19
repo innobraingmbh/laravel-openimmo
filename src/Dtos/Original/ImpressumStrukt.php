@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,61 +13,60 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ImpressumStrukt
  * Ergänzung ($V120)
- *
- * @description Impressumsangaben des Anbieters
  */
+#[Description('Impressumsangaben des Anbieters')]
 #[XmlRoot(name: 'impressum_strukt')]
 class ImpressumStrukt
 {
     public function __construct(
-        /** @description Name des Unternehmens */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Name des Unternehmens')]
         #[SerializedName('firmenname')]
         protected string $firmenname = '',
-        /** @description Unternehmensadresse des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Unternehmensadresse des Anbieters')]
         #[SerializedName('firmenanschrift')]
         protected string $firmenanschrift = '',
-        /** @description Telefonnummer */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Telefonnummer')]
         #[SerializedName('telefon')]
         protected string $telefon = '',
-        /** @description Bevollmächtigter Vertreter des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Bevollmächtigter Vertreter des Anbieters')]
         #[SerializedName('vertretungsberechtigter')]
         protected string $vertretungsberechtigter = '',
-        /** @description Zuständige Aufsichtsbehörde des Maklers */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Zuständige Aufsichtsbehörde des Maklers')]
         #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $berufsaufsichtsbehoerde = '',
-        /** @description Handelsregisterangaben des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Handelsregisterangaben des Anbieters')]
         #[SerializedName('handelsregister')]
         protected string $handelsregister = '',
-        /** @description Handelsregisternummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Handelsregisternummer des Anbieters')]
         #[SerializedName('handelsregister_nr')]
         protected string $handelsregisterNr = '',
-        /** @description Umsatzsteuer-Identifikationsnummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Umsatzsteuer-Identifikationsnummer des Anbieters')]
         #[SerializedName('umsst-id')]
         protected string $umsstId = '',
-        /** @description Steuernummer des Anbieters */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Steuernummer des Anbieters')]
         #[SerializedName('steuernummer')]
         protected string $steuernummer = '',
-        /** @description Zusatzinformation */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Zusatzinformation')]
         #[SerializedName('weiteres')]
         protected string $weiteres = ''
     ) {}

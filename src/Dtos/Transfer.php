@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Transfer
  * Übertragungsangaben
- *
- * @description Data transfer metadata in the OpenImmo format
  */
+#[Description('Data transfer metadata in the OpenImmo format')]
 #[XmlRoot(name: 'uebertragung')]
 class Transfer
 {
@@ -38,88 +38,67 @@ class Transfer
          * required
          *
          * @see TYPE_* constants
-         *
-         * @description Type or kind
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('art')]
+        #[Description('Type or kind')]
         protected string $type = '',
         /**
          * required
          *
          * @see SCOPE_* constants
-         *
-         * @description Scope or range
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('umfang')]
+        #[Description('Scope or range')]
         protected string $scope = '',
         /**
          * optional
          *
          * @see MODE_* constants
-         *
-         * @description Mode of the data transfer
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('modus')]
+        #[Description('Mode of the data transfer')]
         protected string $mode = '',
-        /**
-         * required
-         *
-         * @description Version of the OpenImmo format or software
-         */
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('version')]
+        #[Description('Version of the OpenImmo format or software')]
         protected string $version = '',
-        /**
-         * required
-         *
-         * @description Software of the sending system
-         */
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sendersoftware')]
+        #[Description('Software of the sending system')]
         protected string $senderSoftware = '',
-        /**
-         * required
-         *
-         * @description Version of the sending system
-         */
+        /** required */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('senderversion')]
+        #[Description('Version of the sending system')]
         protected string $senderVersion = '',
-        /**
-         * optional
-         *
-         * @description Technical email address of the system
-         */
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('techn_email')]
+        #[Description('Technical email address of the system')]
         protected ?string $technicalEmail = null,
-        /**
-         * optional
-         *
-         * @description Region ID of the property
-         */
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('regi_id')]
+        #[Description('Region ID of the property')]
         protected ?string $regionId = null,
-        /**
-         * optional
-         *
-         * @description Timestamp of the data transfer
-         */
+        /** optional */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
         #[XmlAttribute]
         #[SerializedName('timestamp')]
+        #[Description('Timestamp of the data transfer')]
         protected ?DateTime $timestamp = null
     ) {}
 

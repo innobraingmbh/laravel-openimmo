@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Gesamtkostenprom2von
  * Gesamtkosten bei Gewerbeobjekten Von - Bis.
- *
- * @description Gesamtkosten pro Quadratmeter ab einem Mindestwert
  */
+#[Description('Gesamtkosten pro Quadratmeter ab einem Mindestwert')]
 #[XmlRoot(name: 'gesamtkostenprom2von')]
 class Gesamtkostenprom2von
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Gesamtkosten pro Quadratmeter bis zu einem Höchstwert
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtkostenprom2bis')]
+        #[Description('Gesamtkosten pro Quadratmeter bis zu einem Höchstwert')]
         protected ?float $gesamtkostenprom2bis = null,
         #[Inline]
         #[Type('float')]

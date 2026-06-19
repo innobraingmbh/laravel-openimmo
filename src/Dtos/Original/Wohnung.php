@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Wohnung
  * Objektart / Typ f. Wohnungen
- *
- * @description Wohnungsobjekt mit Typangabe
  */
+#[Description('Wohnungsobjekt mit Typangabe')]
 #[XmlRoot(name: 'wohnung')]
 class Wohnung
 {
@@ -51,12 +51,11 @@ class Wohnung
          * optional
          *
          * @see WOHNUNGTYP_* constants
-         *
-         * @description Wohnungstyp (z.B. Dachgeschoss, Maisonette, Erdgeschoss)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('wohnungtyp')]
+        #[Description('Wohnungstyp (z.B. Dachgeschoss, Maisonette, Erdgeschoss)')]
         protected string $wohnungtyp = ''
     ) {}
 

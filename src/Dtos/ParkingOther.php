@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,9 +12,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ParkingOther
- *
- * @description Other parking space type
  */
+#[Description('Other parking space type')]
 #[XmlRoot(name: 'stp_sonstige')]
 class ParkingOther
 {
@@ -36,21 +36,17 @@ class ParkingOther
          * optional
          *
          * @see PLACE_TYPE_* constants
-         *
-         * @description Space type (e.g. office, storage, retail)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('platzart')]
+        #[Description('Space type (e.g. office, storage, retail)')]
         protected string $spaceType = '',
-        /**
-         * optional
-         *
-         * @description Remark or note
-         */
+        /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]
+        #[Description('Remark or note')]
         protected ?string $remark = null
     ) {}
 

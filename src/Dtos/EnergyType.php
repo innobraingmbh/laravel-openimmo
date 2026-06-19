@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,93 +12,65 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class EnergyType
- *
- * @description Energy efficiency type of the property (e.g. low-energy, passive house)
  */
+#[Description('Energy efficiency type of the property (e.g. low-energy, passive house)')]
 #[XmlRoot(name: 'energietyp')]
 class EnergyType
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Passive house standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PASSIVHAUS')]
+        #[Description('Passive house standard fulfilled')]
         protected ?bool $passiveHouse = null,
-        /**
-         * optional
-         *
-         * @description Low-energy house standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NIEDRIGENERGIE')]
+        #[Description('Low-energy house standard fulfilled')]
         protected ?bool $lowEnergy = null,
-        /**
-         * optional
-         *
-         * @description New building standard of the property
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NEUBAUSTANDARD')]
+        #[Description('New building standard of the property')]
         protected ?bool $newBuildingStandard = null,
-        /**
-         * optional
-         *
-         * @description KfW-40 standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW40')]
+        #[Description('KfW-40 standard fulfilled')]
         protected ?bool $kfw40 = null,
-        /**
-         * optional
-         *
-         * @description KfW-60 standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW60')]
+        #[Description('KfW-60 standard fulfilled')]
         protected ?bool $kfw60 = null,
-        /**
-         * optional
-         *
-         * @description KfW-55 standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW55')]
+        #[Description('KfW-55 standard fulfilled')]
         protected ?bool $kfw55 = null,
-        /**
-         * optional
-         *
-         * @description KfW-70 standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW70')]
+        #[Description('KfW-70 standard fulfilled')]
         protected ?bool $kfw70 = null,
-        /**
-         * optional
-         *
-         * @description MinEnergie construction standard fulfilled
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIEBAUWEISE')]
+        #[Description('MinEnergie construction standard fulfilled')]
         protected ?bool $minEnergieConstruction = null,
-        /**
-         * optional
-         *
-         * @description MinEnergie certification available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIE_ZERTIFIZIERT')]
+        #[Description('MinEnergie certification available')]
         protected ?bool $minEnergieCertified = null
     ) {}
 

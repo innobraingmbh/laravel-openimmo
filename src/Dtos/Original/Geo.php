@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,123 +13,120 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Geo
- *
- * @description Geografische und adressbasierte Angaben der Immobilie
  */
+#[Description('Geografische und adressbasierte Angaben der Immobilie')]
 #[XmlRoot(name: 'geo')]
 class Geo
 {
     public function __construct(
-        /** @description Postleitzahl der Immobilie */
         #[Type('string')]
+        #[Description('Postleitzahl der Immobilie')]
         #[SerializedName('plz')]
         protected ?string $plz = null,
-        /** @description Stadt oder Ort der Immobilie */
         #[Type('string')]
+        #[Description('Stadt oder Ort der Immobilie')]
         #[SerializedName('ort')]
         protected ?string $ort = null,
-        /** @description GPS-Koordinaten der Immobilie */
         #[Type(Geokoordinaten::class)]
+        #[Description('GPS-Koordinaten der Immobilie')]
         #[SerializedName('geokoordinaten')]
         protected ?Geokoordinaten $geokoordinaten = null,
-        /** @description Straße der Immobilie */
         #[Type('string')]
+        #[Description('Straße der Immobilie')]
         #[SerializedName('strasse')]
         protected ?string $strasse = null,
-        /** @description Hausnummer der Immobilie */
         #[Type('string')]
+        #[Description('Hausnummer der Immobilie')]
         #[SerializedName('hausnummer')]
         protected ?string $hausnummer = null,
-        /** @description Bundesland der Immobilie */
         #[Type('string')]
+        #[Description('Bundesland der Immobilie')]
         #[SerializedName('bundesland')]
         protected ?string $bundesland = null,
-        /** @description Land der Immobilie */
         #[Type(Land::class)]
+        #[Description('Land der Immobilie')]
         #[SerializedName('land')]
         protected ?Land $land = null,
-        /** @description Amtlicher Gemeindeschlüssel (AGS) */
         #[Type('string')]
+        #[Description('Amtlicher Gemeindeschlüssel (AGS)')]
         #[SerializedName('gemeindecode')]
         protected ?string $gemeindecode = null,
-        /** @description Flurstück-Flur des Grundstücks */
         #[Type('string')]
+        #[Description('Flurstück-Flur des Grundstücks')]
         #[SerializedName('flur')]
         protected ?string $flur = null,
-        /** @description Flurstücknummer des Grundstücks */
         #[Type('string')]
+        #[Description('Flurstücknummer des Grundstücks')]
         #[SerializedName('flurstueck')]
         protected ?string $flurstueck = null,
-        /** @description Gemarkung des Grundstücks */
         #[Type('string')]
+        #[Description('Gemarkung des Grundstücks')]
         #[SerializedName('gemarkung')]
         protected ?string $gemarkung = null,
         /**
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
-         *
-         * @description Stockwerk der Wohnung im Gebäude
          */
         #[Type('int')]
+        #[Description('Stockwerk der Wohnung im Gebäude')]
         #[SerializedName('etage')]
         protected ?int $etage = null,
         /**
          * Minimum value (inclusive): -2147483648
          * Maximum value (inclusive): 2147483647
-         *
-         * @description Gesamte Stockwerkanzahl des Gebäudes
          */
         #[Type('int')]
+        #[Description('Gesamte Stockwerkanzahl des Gebäudes')]
         #[SerializedName('anzahl_etagen')]
         protected ?int $anzahlEtagen = null,
-        /** @description Lage der Wohnung im Gebäude */
         #[Type(LageImBau::class)]
+        #[Description('Lage der Wohnung im Gebäude')]
         #[SerializedName('lage_im_bau')]
         protected ?LageImBau $lageImBau = null,
-        /** @description Wohnungsnummer innerhalb des Gebäudes */
         #[Type('string')]
+        #[Description('Wohnungsnummer innerhalb des Gebäudes')]
         #[SerializedName('wohnungsnr')]
         protected ?string $wohnungsnr = null,
-        /** @description Lagegebiet der Immobilie */
         #[Type(LageGebiet::class)]
+        #[Description('Lagegebiet der Immobilie')]
         #[SerializedName('lage_gebiet')]
         protected ?LageGebiet $lageGebiet = null,
-        /** @description Regionaler Zusatz zur Ortsangabe (z.B. Stadtteil) */
         #[Type('string')]
+        #[Description('Regionaler Zusatz zur Ortsangabe (z.B. Stadtteil)')]
         #[SerializedName('regionaler_zusatz')]
         protected ?string $regionalerZusatz = null,
-        /** @description Makrokarte (Übersichtskarte) vorhanden */
         #[Type('bool')]
+        #[Description('Makrokarte (Übersichtskarte) vorhanden')]
         #[SerializedName('karten_makro')]
         protected ?bool $kartenMakro = null,
-        /** @description Mikrokarte (Detailkarte) vorhanden */
         #[Type('bool')]
+        #[Description('Mikrokarte (Detailkarte) vorhanden')]
         #[SerializedName('karten_mikro')]
         protected ?bool $kartenMikro = null,
-        /** @description Virtuelle Tour der Immobilie vorhanden */
         #[Type('bool')]
+        #[Description('Virtuelle Tour der Immobilie vorhanden')]
         #[SerializedName('virtuelletour')]
         protected ?bool $virtuelletour = null,
-        /** @description Luftbilder der Immobilie vorhanden */
         #[Type('bool')]
+        #[Description('Luftbilder der Immobilie vorhanden')]
         #[SerializedName('luftbildern')]
         protected ?bool $luftbildern = null,
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

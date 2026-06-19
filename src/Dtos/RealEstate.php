@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,95 +14,94 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class RealEstate
  * Angaben einer einzelnen Immobile
- *
- * @description Single real estate property with all its data
  */
+#[Description('Single real estate property with all its data')]
 #[XmlRoot(name: 'immobilie')]
 class RealEstate
 {
     public function __construct(
-        /** @description Property category with marketing type and property type */
         #[Type(PropertyCategory::class)]
+        #[Description('Property category with marketing type and property type')]
         #[SerializedName('objektkategorie')]
         protected ?PropertyCategory $propertyCategory = null,
-        /** @description Geographic information of the property */
         #[Type(Geo::class)]
+        #[Description('Geographic information of the property')]
         #[SerializedName('geo')]
         protected ?Geo $geo = null,
-        /** @description Contact person for the property */
         #[Type(ContactPerson::class)]
+        #[Description('Contact person for the property')]
         #[SerializedName('kontaktperson')]
         protected ?ContactPerson $contactPerson = null,
-        /** @description Additional address */
         #[XmlList(entry: 'weitere_adresse', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\AdditionalAddress>')]
         #[SkipWhenEmpty]
+        #[Description('Additional address')]
         #[SerializedName('weitere_adresse')]
         protected array $additionalAddress = [],
-        /** @description Price information of the property */
         #[Type(Prices::class)]
+        #[Description('Price information of the property')]
         #[SerializedName('preise')]
         protected ?Prices $prices = null,
-        /** @description Bidding process for the property */
         #[Type(BiddingProcess::class)]
+        #[Description('Bidding process for the property')]
         #[SerializedName('bieterverfahren')]
         protected ?BiddingProcess $biddingProcess = null,
-        /** @description Foreclosure auction information */
         #[Type(Auction::class)]
+        #[Description('Foreclosure auction information')]
         #[SerializedName('versteigerung')]
         protected ?Auction $auction = null,
-        /** @description Area measurements of the property */
         #[Type(Areas::class)]
+        #[Description('Area measurements of the property')]
         #[SerializedName('flaechen')]
         protected ?Areas $areas = null,
-        /** @description Equipment and features of the property */
         #[Type(Equipment::class)]
+        #[Description('Equipment and features of the property')]
         #[SerializedName('ausstattung')]
         protected ?Equipment $equipment = null,
-        /** @description Condition information of the property */
         #[Type(ConditionInformation::class)]
+        #[Description('Condition information of the property')]
         #[SerializedName('zustand_angaben')]
         protected ?ConditionInformation $conditionInformation = null,
-        /** @description Evaluation information of the property */
         #[Type(Evaluation::class)]
+        #[Description('Evaluation information of the property')]
         #[SerializedName('bewertung')]
         protected ?Evaluation $evaluation = null,
-        /** @description Infrastructure connections of the property */
         #[Type(Infrastructure::class)]
+        #[Description('Infrastructure connections of the property')]
         #[SerializedName('infrastruktur')]
         protected ?Infrastructure $infrastructure = null,
-        /** @description Free-text descriptions of the property */
         #[Type(FreeTexts::class)]
+        #[Description('Free-text descriptions of the property')]
         #[SerializedName('freitexte')]
         protected ?FreeTexts $freeTexts = null,
-        /** @description List of attachments of the property */
         #[Type(Attachments::class)]
+        #[Description('List of attachments of the property')]
         #[SerializedName('anhaenge')]
         protected ?Attachments $attachments = null,
-        /** @description Property management information */
         #[Type(PropertyManagement::class)]
+        #[Description('Property management information')]
         #[SerializedName('verwaltung_objekt')]
         protected ?PropertyManagement $propertyManagement = null,
-        /** @description Technical management data of the data transfer */
         #[Type(TechnicalManagement::class)]
+        #[Description('Technical management data of the data transfer')]
         #[SerializedName('verwaltung_techn')]
         protected ?TechnicalManagement $technicalManagement = null,
-        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AgricultureAndForestry
  * Objektart / Typ f. Land-/Forstwirtschaft
- *
- * @description Property type for agricultural and forestry real estate
  */
+#[Description('Property type for agricultural and forestry real estate')]
 #[XmlRoot(name: 'land_und_forstwirtschaft')]
 class AgricultureAndForestry
 {
@@ -51,12 +51,11 @@ class AgricultureAndForestry
          * optional
          *
          * @see LAND_TYPE_* constants
-         *
-         * @description ISO country code
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('land_typ')]
+        #[Description('ISO country code')]
         protected string $countryType = ''
     ) {}
 

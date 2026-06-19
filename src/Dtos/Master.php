@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -16,21 +17,17 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Das Eltern Objekte hat in "gruppen_kennung" die gleiche ID wie "master". Anwendung z.b. in Neubau Projekten.
  * Damit die Anzeige des Master Objektes gesteuert werden kann, wird im Master ein Flag
  *  visible eingesetzt. Das Attribut ist dann zwingend anzugeben
- *
- * @description Master data of the OpenImmo data transfer
  */
+#[Description('Master data of the OpenImmo data transfer')]
 #[XmlRoot(name: 'master')]
 class Master
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Visibility of the listing or element
-         */
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('visible')]
+        #[Description('Visibility of the listing or element')]
         protected bool $visible = false,
         #[Inline]
         #[Type('string')]

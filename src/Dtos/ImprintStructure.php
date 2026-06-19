@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,61 +13,60 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ImprintStructure
  * Ergänzung ($V120)
- *
- * @description Imprint information of the provider
  */
+#[Description('Imprint information of the provider')]
 #[XmlRoot(name: 'impressum_strukt')]
 class ImprintStructure
 {
     public function __construct(
-        /** @description Name of the company */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Name of the company')]
         #[SerializedName('firmenname')]
         protected string $companyName = '',
-        /** @description Company address of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Company address of the provider')]
         #[SerializedName('firmenanschrift')]
         protected string $companyAddress = '',
-        /** @description Phone number */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Phone number')]
         #[SerializedName('telefon')]
         protected string $phone = '',
-        /** @description Authorized representative of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Authorized representative of the provider')]
         #[SerializedName('vertretungsberechtigter')]
         protected string $authorizedRepresentative = '',
-        /** @description Professional supervisory authority of the broker */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Professional supervisory authority of the broker')]
         #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $professionalSupervisoryAuthority = '',
-        /** @description Commercial register information of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Commercial register information of the provider')]
         #[SerializedName('handelsregister')]
         protected string $commercialRegister = '',
-        /** @description Commercial register number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Commercial register number of the provider')]
         #[SerializedName('handelsregister_nr')]
         protected string $commercialRegisterNumber = '',
-        /** @description VAT identification number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('VAT identification number of the provider')]
         #[SerializedName('umsst-id')]
         protected string $vatId = '',
-        /** @description Tax number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Tax number of the provider')]
         #[SerializedName('steuernummer')]
         protected string $taxNumber = '',
-        /** @description Additional information */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Additional information')]
         #[SerializedName('weiteres')]
         protected string $additional = ''
     ) {}

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,17 +13,16 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedExtend
- *
- * @description User-defined extension of the OpenImmo data
  */
+#[Description('User-defined extension of the OpenImmo data')]
 #[XmlRoot(name: 'user_defined_extend')]
 class UserDefinedExtend
 {
     public function __construct(
-        /** @description Data field */
         #[XmlList(entry: 'feld', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Field>')]
         #[SkipWhenEmpty]
+        #[Description('Data field')]
         #[SerializedName('feld')]
         protected array $field = []
     ) {}

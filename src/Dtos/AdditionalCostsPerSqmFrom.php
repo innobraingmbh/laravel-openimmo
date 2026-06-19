@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class AdditionalCostsPerSqmFrom
  * Angaben bei Gewerbe Miete,UmSt. im Attribut.
- *
- * @description Additional costs per square meter starting from a given value
  */
+#[Description('Additional costs per square meter starting from a given value')]
 #[XmlRoot(name: 'nebenkostenprom2von')]
 class AdditionalCostsPerSqmFrom
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Additional costs per square meter up to a maximum value
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nebenkostenprom2bis')]
+        #[Description('Additional costs per square meter up to a maximum value')]
         protected ?float $additionalCostsPerSqmTo = null,
         #[Inline]
         #[Type('float')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,75 +12,53 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class Dachform
- *
- * @description Dachform des Gebäudes
  */
+#[Description('Dachform des Gebäudes')]
 #[XmlRoot(name: 'dachform')]
 class Dachform
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Krüppelwalmdach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KRUEPPELWALMDACH')]
+        #[Description('Krüppelwalmdach vorhanden')]
         protected ?bool $krueppelwalmdach = null,
-        /**
-         * optional
-         *
-         * @description Mansarddach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MANSARDDACH')]
+        #[Description('Mansarddach vorhanden')]
         protected ?bool $mansarddach = null,
-        /**
-         * optional
-         *
-         * @description Pultdach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PULTDACH')]
+        #[Description('Pultdach vorhanden')]
         protected ?bool $pultdach = null,
-        /**
-         * optional
-         *
-         * @description Satteldach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SATTELDACH')]
+        #[Description('Satteldach vorhanden')]
         protected ?bool $satteldach = null,
-        /**
-         * optional
-         *
-         * @description Walmdach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WALMDACH')]
+        #[Description('Walmdach vorhanden')]
         protected ?bool $walmdach = null,
-        /**
-         * optional
-         *
-         * @description Flachdach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLACHDACH')]
+        #[Description('Flachdach vorhanden')]
         protected ?bool $flachdach = null,
-        /**
-         * optional
-         *
-         * @description Pyramidendach vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PYRAMIDENDACH')]
+        #[Description('Pyramidendach vorhanden')]
         protected ?bool $pyramidendach = null
     ) {}
 

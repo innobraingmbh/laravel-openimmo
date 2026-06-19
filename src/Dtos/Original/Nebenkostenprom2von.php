@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Nebenkostenprom2von
  * Angaben bei Gewerbe Miete,UmSt. im Attribut.
- *
- * @description Nebenkosten pro Quadratmeter ab einem bestimmten Wert
  */
+#[Description('Nebenkosten pro Quadratmeter ab einem bestimmten Wert')]
 #[XmlRoot(name: 'nebenkostenprom2von')]
 class Nebenkostenprom2von
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Nebenkosten pro Quadratmeter bis zu einem Höchstwert
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nebenkostenprom2bis')]
+        #[Description('Nebenkosten pro Quadratmeter bis zu einem Höchstwert')]
         protected ?float $nebenkostenprom2bis = null,
         #[Inline]
         #[Type('float')]

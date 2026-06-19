@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,9 +15,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class SportDistances
  * Welche Distanz zu dem ausgewählen Sport-/Freizeitziel besteht(Angabe in km),
  *  Optionen nicht kombinierbar, Distanzelement ist mehrfach erfassbar
- *
- * @description Distances to sports facilities
  */
+#[Description('Distances to sports facilities')]
 #[XmlRoot(name: 'distanzen_sport')]
 class SportDistances
 {
@@ -39,12 +39,11 @@ class SportDistances
          * required
          *
          * @see DISTANCE_TO_SPORT_* constants
-         *
-         * @description Distance to sports facilities
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('distanz_zu_sport')]
+        #[Description('Distance to sports facilities')]
         protected string $distanceToSport = '',
         #[Inline]
         #[Type('float')]

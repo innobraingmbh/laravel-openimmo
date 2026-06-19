@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,75 +13,74 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ZustandAngaben
- *
- * @description Zustandsangaben der Immobilie (Baujahr, Modernisierung, Energieausweis)
  */
+#[Description('Zustandsangaben der Immobilie (Baujahr, Modernisierung, Energieausweis)')]
 #[XmlRoot(name: 'zustand_angaben')]
 class ZustandAngaben
 {
     public function __construct(
-        /** @description Baujahr der Immobilie */
         #[Type('string')]
+        #[Description('Baujahr der Immobilie')]
         #[SerializedName('baujahr')]
         protected ?string $baujahr = null,
-        /** @description Jahr der letzten Modernisierung */
         #[Type('string')]
+        #[Description('Jahr der letzten Modernisierung')]
         #[SerializedName('letztemodernisierung')]
         protected ?string $letztemodernisierung = null,
-        /** @description Zustand der Immobilie */
         #[Type(Zustand::class)]
+        #[Description('Zustand der Immobilie')]
         #[SerializedName('zustand')]
         protected ?Zustand $zustand = null,
-        /** @description Altersangabe der Immobilie */
         #[Type(Alter::class)]
+        #[Description('Altersangabe der Immobilie')]
         #[SerializedName('alter')]
         protected ?Alter $alter = null,
-        /** @description Bebaubarkeit gemäß Baurecht */
         #[Type(BebaubarNach::class)]
+        #[Description('Bebaubarkeit gemäß Baurecht')]
         #[SerializedName('bebaubar_nach')]
         protected ?BebaubarNach $bebaubarNach = null,
-        /** @description Erschließungszustand des Grundstücks */
         #[Type(Erschliessung::class)]
+        #[Description('Erschließungszustand des Grundstücks')]
         #[SerializedName('erschliessung')]
         protected ?Erschliessung $erschliessung = null,
-        /** @description Umfang der Erschließung des Grundstücks */
         #[Type(ErschliessungUmfang::class)]
+        #[Description('Umfang der Erschließung des Grundstücks')]
         #[SerializedName('erschliessung_umfang')]
         protected ?ErschliessungUmfang $erschliessungUmfang = null,
-        /** @description Bauzone des Grundstücks */
         #[Type('string')]
+        #[Description('Bauzone des Grundstücks')]
         #[SerializedName('bauzone')]
         protected ?string $bauzone = null,
-        /** @description Altlasten des Grundstücks */
         #[Type('string')]
+        #[Description('Altlasten des Grundstücks')]
         #[SerializedName('altlasten')]
         protected ?string $altlasten = null,
-        /** @description Energieausweis der Immobilie */
         #[XmlList(entry: 'energiepass', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Energiepass>')]
         #[SkipWhenEmpty]
+        #[Description('Energieausweis der Immobilie')]
         #[SerializedName('energiepass')]
         protected array $energiepass = [],
-        /** @description Verkaufsstatus der Immobilie */
         #[Type(Verkaufstatus::class)]
+        #[Description('Verkaufsstatus der Immobilie')]
         #[SerializedName('verkaufstatus')]
         protected ?Verkaufstatus $verkaufstatus = null,
-        /** @description Benutzerdefiniertes einfaches Freifeld */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description Benutzerdefinierte Erweiterung */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

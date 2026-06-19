@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,48 +13,35 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Vermarktungsart
  * Vermarktungsart, Optionen kombinierbar, Kauf + Miete
- *
- * @description Vermarktungsart der Immobilie (Kauf oder Miete)
  */
+#[Description('Vermarktungsart der Immobilie (Kauf oder Miete)')]
 #[XmlRoot(name: 'vermarktungsart')]
 class Vermarktungsart
 {
     public function __construct(
-        /**
-         * required
-         *
-         * @description Kaufobjekt
-         */
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAUF')]
+        #[Description('Kaufobjekt')]
         protected bool $kauf = false,
-        /**
-         * required
-         *
-         * @description Miet- oder Pachtangabe
-         */
+        /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MIETE_PACHT')]
+        #[Description('Miet- oder Pachtangabe')]
         protected bool $mietePacht = false,
-        /**
-         * optional
-         *
-         * @description Erbpacht der Immobilie
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ERBPACHT')]
+        #[Description('Erbpacht der Immobilie')]
         protected ?bool $erbpacht = null,
-        /**
-         * optional
-         *
-         * @description Leasing der Immobilie möglich
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LEASING')]
+        #[Description('Leasing der Immobilie möglich')]
         protected ?bool $leasing = null
     ) {}
 

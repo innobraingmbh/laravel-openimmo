@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class InternalCommission
  * Maklercourtage, bei Vermittlungs- bzw. Nachweisgeschäften als Betrag in ? / % / MM, daher Textfeld
- *
- * @description Internal commission (seller's commission) for the property
  */
+#[Description("Internal commission (seller's commission) for the property")]
 #[XmlRoot(name: 'innen_courtage')]
 class InternalCommission
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Price including VAT
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]
+        #[Description('Price including VAT')]
         protected ?bool $withVAT = null,
         #[Inline]
         #[Type('string')]

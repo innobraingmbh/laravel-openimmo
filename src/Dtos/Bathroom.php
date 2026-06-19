@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,57 +13,41 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Bathroom
  * Welche Eigenschaft besitzt das Bad, Optionen kombinierbar
- *
- * @description Equipment features of the bathroom
  */
+#[Description('Equipment features of the bathroom')]
 #[XmlRoot(name: 'bad')]
 class Bathroom
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Shower available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DUSCHE')]
+        #[Description('Shower available')]
         protected ?bool $shower = null,
-        /**
-         * optional
-         *
-         * @description Bathtub available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WANNE')]
+        #[Description('Bathtub available')]
         protected ?bool $bathtub = null,
-        /**
-         * optional
-         *
-         * @description Window equipment of the property
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FENSTER')]
+        #[Description('Window equipment of the property')]
         protected ?bool $window = null,
-        /**
-         * optional
-         *
-         * @description Bidet in bathroom available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BIDET')]
+        #[Description('Bidet in bathroom available')]
         protected ?bool $bidet = null,
-        /**
-         * optional
-         *
-         * @description Urinal in bathroom available
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PISSOIR')]
+        #[Description('Urinal in bathroom available')]
         protected ?bool $urinal = null
     ) {}
 

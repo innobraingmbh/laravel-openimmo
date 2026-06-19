@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class ZinshausRenditeobjekt
  * Objektyp / Typ f. Zins und Renditehäuser
- *
- * @description Mehrfamilienhaus als Anlageobjekt
  */
+#[Description('Mehrfamilienhaus als Anlageobjekt')]
 #[XmlRoot(name: 'zinshaus_renditeobjekt')]
 class ZinshausRenditeobjekt
 {
@@ -49,12 +49,11 @@ class ZinshausRenditeobjekt
          * optional
          *
          * @see ZINS_TYP_* constants
-         *
-         * @description Art des Interessenten (z.B. Käufer, Mieter)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zins_typ')]
+        #[Description('Art des Interessenten (z.B. Käufer, Mieter)')]
         protected string $zinsTyp = ''
     ) {}
 

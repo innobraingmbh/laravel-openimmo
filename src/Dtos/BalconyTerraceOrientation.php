@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,84 +13,59 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class BalconyTerraceOrientation
  * Ausrichtung der Balkone bzw. der Terrassen, Optionen kombinierbar
- *
- * @description Orientation of balcony or terrace
  */
+#[Description('Orientation of balcony or terrace')]
 #[XmlRoot(name: 'ausricht_balkon_terrasse')]
 class BalconyTerraceOrientation
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description North orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORD')]
+        #[Description('North orientation')]
         protected ?bool $north = null,
-        /**
-         * optional
-         *
-         * @description East orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OST')]
+        #[Description('East orientation')]
         protected ?bool $east = null,
-        /**
-         * optional
-         *
-         * @description South orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUED')]
+        #[Description('South orientation')]
         protected ?bool $south = null,
-        /**
-         * optional
-         *
-         * @description West orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WEST')]
+        #[Description('West orientation')]
         protected ?bool $west = null,
-        /**
-         * optional
-         *
-         * @description Northeast orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDOST')]
+        #[Description('Northeast orientation')]
         protected ?bool $northeast = null,
-        /**
-         * optional
-         *
-         * @description Northwest orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NORDWEST')]
+        #[Description('Northwest orientation')]
         protected ?bool $northwest = null,
-        /**
-         * optional
-         *
-         * @description Southeast orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDOST')]
+        #[Description('Southeast orientation')]
         protected ?bool $southeast = null,
-        /**
-         * optional
-         *
-         * @description Southwest orientation
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SUEDWEST')]
+        #[Description('Southwest orientation')]
         protected ?bool $southwest = null
     ) {}
 

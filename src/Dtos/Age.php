@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Age
  * Ist es ein Neu- oder Altbau, Optionen nicht kombinierbar
- *
- * @description Age information of the property or building
  */
+#[Description('Age information of the property or building')]
 #[XmlRoot(name: 'alter')]
 class Age
 {
@@ -27,12 +27,11 @@ class Age
          * optional
          *
          * @see AGE_ATTRIBUTE_* constants
-         *
-         * @description XML attribute for the age value
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('alter_attr')]
+        #[Description('XML attribute for the age value')]
         protected string $ageAttribute = ''
     ) {}
 

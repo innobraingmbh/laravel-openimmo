@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,9 +14,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Anhang
  * Element für Anhänge
- *
- * @description Einzelner Anhang (Datei) der Immobilie
  */
+#[Description('Einzelner Anhang (Datei) der Immobilie')]
 #[XmlRoot(name: 'anhang')]
 class Anhang
 {
@@ -60,39 +60,37 @@ class Anhang
          * required
          *
          * @see LOCATION_* constants
-         *
-         * @description Lagebeschreibung der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
+        #[Description('Lagebeschreibung der Immobilie')]
         protected string $location = '',
         /**
          * optional
          *
          * @see GRUPPE_* constants
-         *
-         * @description Gruppe oder Kategorie
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]
+        #[Description('Gruppe oder Kategorie')]
         protected string $gruppe = '',
-        /** @description Titel des Anhangs */
         #[Type('string')]
+        #[Description('Titel des Anhangs')]
         #[SerializedName('anhangtitel')]
         protected ?string $anhangtitel = null,
-        /** @description Dateiformat des Anhangs */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Dateiformat des Anhangs')]
         #[SerializedName('format')]
         protected string $format = '',
-        /** @description Prüfinformation */
         #[Type(Check::class)]
+        #[Description('Prüfinformation')]
         #[SerializedName('check')]
         protected ?Check $check = null,
-        /** @description Datenbehälter */
         #[Type(Daten::class)]
+        #[Description('Datenbehälter')]
         #[SerializedName('daten')]
         protected ?Daten $daten = null
     ) {}

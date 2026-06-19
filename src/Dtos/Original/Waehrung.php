@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Waehrung
  * Währung
- *
- * @description Währungsangabe für Preise
  */
+#[Description('Währungsangabe für Preise')]
 #[XmlRoot(name: 'waehrung')]
 class Waehrung
 {
@@ -387,12 +387,11 @@ class Waehrung
          * optional
          *
          * @see ISO_WAEHRUNG_* constants
-         *
-         * @description ISO-Währungskürzel (z.B. EUR, CHF)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('iso_waehrung')]
+        #[Description('ISO-Währungskürzel (z.B. EUR, CHF)')]
         protected string $isoWaehrung = ''
     ) {}
 

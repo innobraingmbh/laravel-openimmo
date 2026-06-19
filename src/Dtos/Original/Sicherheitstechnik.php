@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,39 +13,29 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Sicherheitstechnik
  * Welche Sicherheitstechnik ist geboten, Optionen kombinierbar
- *
- * @description Sicherheitstechnikausstattung der Immobilie
  */
+#[Description('Sicherheitstechnikausstattung der Immobilie')]
 #[XmlRoot(name: 'sicherheitstechnik')]
 class Sicherheitstechnik
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Alarmanlage vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ALARMANLAGE')]
+        #[Description('Alarmanlage vorhanden')]
         protected ?bool $alarmanlage = null,
-        /**
-         * optional
-         *
-         * @description Überwachungskamera vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KAMERA')]
+        #[Description('Überwachungskamera vorhanden')]
         protected ?bool $kamera = null,
-        /**
-         * optional
-         *
-         * @description Polizeirufanlage als Sicherheitstechnik vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('POLIZEIRUF')]
+        #[Description('Polizeirufanlage als Sicherheitstechnik vorhanden')]
         protected ?bool $polizeiruf = null
     ) {}
 

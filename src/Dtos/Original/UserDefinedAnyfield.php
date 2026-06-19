@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class UserDefinedAnyfield
- *
- * @description Benutzerdefiniertes Freifeld mit beliebigem Inhalt
  */
+#[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
 #[XmlRoot(name: 'user_defined_anyfield')]
 class UserDefinedAnyfield
 {

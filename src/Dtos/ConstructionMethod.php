@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -11,39 +12,29 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConstructionMethod
- *
- * @description Construction method of the property
  */
+#[Description('Construction method of the property')]
 #[XmlRoot(name: 'bauweise')]
 class ConstructionMethod
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Solid (masonry) construction method
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MASSIV')]
+        #[Description('Solid (masonry) construction method')]
         protected ?bool $solid = null,
-        /**
-         * optional
-         *
-         * @description Prefabricated parts construction method
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGTEILE')]
+        #[Description('Prefabricated parts construction method')]
         protected ?bool $prefabricatedParts = null,
-        /**
-         * optional
-         *
-         * @description Wood as heating energy source
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]
+        #[Description('Wood as heating energy source')]
         protected ?bool $wood = null
     ) {}
 

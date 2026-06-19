@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,57 +13,41 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Heizungsart
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
- *
- * @description Art des Heizsystems (z.B. Zentralheizung, Fußbodenheizung)
  */
+#[Description('Art des Heizsystems (z.B. Zentralheizung, Fußbodenheizung)')]
 #[XmlRoot(name: 'heizungsart')]
 class Heizungsart
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Ofen oder Kaminofen vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFEN')]
+        #[Description('Ofen oder Kaminofen vorhanden')]
         protected ?bool $ofen = null,
-        /**
-         * optional
-         *
-         * @description Stockwerk der Wohnung im Gebäude
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ETAGE')]
+        #[Description('Stockwerk der Wohnung im Gebäude')]
         protected ?bool $etage = null,
-        /**
-         * optional
-         *
-         * @description Zentrale Heizungsanlage vorhanden
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ZENTRAL')]
+        #[Description('Zentrale Heizungsanlage vorhanden')]
         protected ?bool $zentral = null,
-        /**
-         * optional
-         *
-         * @description Abgelegene Lage der Immobilie
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
+        #[Description('Abgelegene Lage der Immobilie')]
         protected ?bool $fern = null,
-        /**
-         * optional
-         *
-         * @description Bodenbelag der Immobilie
-         */
+        /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FUSSBODEN')]
+        #[Description('Bodenbelag der Immobilie')]
         protected ?bool $fussboden = null
     ) {}
 

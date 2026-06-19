@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class View
  * Welcher Ausblick ist vorhanden, Optionen nicht kombinierbar
- *
- * @description View information of the property (e.g. mountain view, lake view)
  */
+#[Description('View information of the property (e.g. mountain view, lake view)')]
 #[XmlRoot(name: 'ausblick')]
 class View
 {
@@ -31,12 +31,11 @@ class View
          * optional
          *
          * @see VIEW_* constants
-         *
-         * @description View or outlook of the property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('blick')]
+        #[Description('View or outlook of the property')]
         protected string $view = ''
     ) {}
 

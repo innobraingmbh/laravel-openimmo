@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,21 +14,17 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Ruecklagenetto
  * Vorhanden Rücklagen bei einem Kauf Objekt, UmSt. im Attribut.
- *
- * @description Netto-Rücklagen (ohne MwSt.)
  */
+#[Description('Netto-Rücklagen (ohne MwSt.)')]
 #[XmlRoot(name: 'ruecklagenetto')]
 class Ruecklagenetto
 {
     public function __construct(
-        /**
-         * optional
-         *
-         * @description Mehrwertsteueranteil der Rücklagen
-         */
+        /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('ruecklageust')]
+        #[Description('Mehrwertsteueranteil der Rücklagen')]
         protected ?float $ruecklageust = null,
         #[Inline]
         #[Type('float')]

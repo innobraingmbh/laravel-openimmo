@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Einzelhandel
  * Objektart / Typ f. Handel
- *
- * @description Gewerbeobjekt vom Typ Einzelhandel
  */
+#[Description('Gewerbeobjekt vom Typ Einzelhandel')]
 #[XmlRoot(name: 'einzelhandel')]
 class Einzelhandel
 {
@@ -41,12 +41,11 @@ class Einzelhandel
          * optional
          *
          * @see HANDEL_TYP_* constants
-         *
-         * @description Typ des Handelsgewerbes (z.B. Einzelhandel, Großhandel)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('handel_typ')]
+        #[Description('Typ des Handelsgewerbes (z.B. Einzelhandel, Großhandel)')]
         protected string $handelTyp = ''
     ) {}
 

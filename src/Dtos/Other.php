@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -16,9 +17,8 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Objekte befinden sich jetzt unter Element parken.
  * Aus kompatibilitätegründen bleiben die Attribute NOCH! erhalten.
  * In nachfolgenden Versionen wird die Unterstützung an dieser Stelle eingestellt.
- *
- * @description Other property type
  */
+#[Description('Other property type')]
 #[XmlRoot(name: 'sonstige')]
 class Other
 {
@@ -35,12 +35,11 @@ class Other
          * optional
          *
          * @see OTHER_TYPE_* constants
-         *
-         * @description Type of the other property
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('sonstige_typ')]
+        #[Description('Type of the other property')]
         protected string $otherType = ''
     ) {}
 

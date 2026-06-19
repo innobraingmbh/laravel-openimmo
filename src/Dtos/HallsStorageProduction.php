@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class HallsStorageProduction
  * Objektart / Typ f. Hallen/Lager/Produktion
- *
- * @description Commercial property of type hall, storage or production
  */
+#[Description('Commercial property of type hall, storage or production')]
 #[XmlRoot(name: 'hallen_lager_prod')]
 class HallsStorageProduction
 {
@@ -47,12 +47,11 @@ class HallsStorageProduction
          * optional
          *
          * @see HALL_TYPE_* constants
-         *
-         * @description Hall type (e.g. production, storage hall)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('hallen_typ')]
+        #[Description('Hall type (e.g. production, storage hall)')]
         protected string $hallType = ''
     ) {}
 

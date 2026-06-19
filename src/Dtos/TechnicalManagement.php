@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,87 +14,86 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class TechnicalManagement
- *
- * @description Technical management information of the data transfer
  */
+#[Description('Technical management information of the data transfer')]
 #[XmlRoot(name: 'verwaltung_techn')]
 class TechnicalManagement
 {
     public function __construct(
-        /** @description Internal property number of the provider */
         #[Type('string')]
+        #[Description('Internal property number of the provider')]
         #[SerializedName('objektnr_intern')]
         protected ?string $internalPropertyNumber = null,
-        /** @description External property number of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('External property number of the provider')]
         #[SerializedName('objektnr_extern')]
         protected string $externalPropertyNumber = '',
-        /** @description Data transfer action (e.g. create, update, delete) */
         #[Type(Action::class)]
+        #[Description('Data transfer action (e.g. create, update, delete)')]
         #[SerializedName('aktion')]
         protected ?Action $action = null,
-        /** @description Date from which the listing is active */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Date from which the listing is active')]
         #[SerializedName('aktiv_von')]
         protected ?DateTime $activeFrom = null,
-        /** @description Date until which the listing is active */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Date until which the listing is active')]
         #[SerializedName('aktiv_bis')]
         protected ?DateTime $activeTo = null,
-        /** @description OpenImmo object identifier */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('OpenImmo object identifier')]
         #[SerializedName('openimmo_obid')]
         protected string $openImmoObjectId = '',
-        /** @description Origin identifier of the data record */
         #[Type('string')]
+        #[Description('Origin identifier of the data record')]
         #[SerializedName('kennung_ursprung')]
         protected ?string $originIdentifier = null,
-        /** @description Date from which the status applies */
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Date from which the status applies')]
         #[SerializedName('stand_vom')]
         protected ?DateTime $statusFrom = null,
-        /** @description General forwarding setting */
         #[Type('bool')]
+        #[Description('General forwarding setting')]
         #[SerializedName('weitergabe_generell')]
         protected ?bool $generalForwarding = null,
-        /** @description Forwarding setting for a positive result */
         #[Type('string')]
+        #[Description('Forwarding setting for a positive result')]
         #[SerializedName('weitergabe_positiv')]
         protected ?string $positiveForwarding = null,
-        /** @description Forwarding setting for a negative result */
         #[Type('string')]
+        #[Description('Forwarding setting for a negative result')]
         #[SerializedName('weitergabe_negativ')]
         protected ?string $negativeForwarding = null,
-        /** @description Identifier of the group */
         #[Type('string')]
+        #[Description('Identifier of the group')]
         #[SerializedName('gruppen_kennung')]
         protected ?string $groupIdentifier = null,
-        /** @description Master data of the data transfer */
         #[Type(Master::class)]
+        #[Description('Master data of the data transfer')]
         #[SerializedName('master')]
         protected ?Master $master = null,
-        /** @description Language of the text (ISO language code) */
         #[Type('string')]
+        #[Description('Language of the text (ISO language code)')]
         #[SerializedName('sprache')]
         protected ?string $language = null,
-        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

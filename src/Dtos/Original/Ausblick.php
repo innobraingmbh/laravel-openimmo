@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Ausblick
  * Welcher Ausblick ist vorhanden, Optionen nicht kombinierbar
- *
- * @description Aussichtsangaben der Immobilie (z.B. Bergblick, Seeblick)
  */
+#[Description('Aussichtsangaben der Immobilie (z.B. Bergblick, Seeblick)')]
 #[XmlRoot(name: 'ausblick')]
 class Ausblick
 {
@@ -31,12 +31,11 @@ class Ausblick
          * optional
          *
          * @see BLICK_* constants
-         *
-         * @description Aussicht oder Blickrichtung der Immobilie
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('blick')]
+        #[Description('Aussicht oder Blickrichtung der Immobilie')]
         protected string $blick = ''
     ) {}
 

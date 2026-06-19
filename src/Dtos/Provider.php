@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,65 +14,64 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Provider
  * Anbieterangaben
- *
- * @description Provider (agent or owner) of the property
  */
+#[Description('Provider (agent or owner) of the property')]
 #[XmlRoot(name: 'anbieter')]
 class Provider
 {
     public function __construct(
-        /** @description Provider number */
         #[Type('string')]
+        #[Description('Provider number')]
         #[SerializedName('anbieternr')]
         protected ?string $providerNumber = null,
-        /** @description Company name of the provider */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Company name of the provider')]
         #[SerializedName('firma')]
         protected string $company = '',
-        /** @description OpenImmo provider identifier (ANID) */
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('OpenImmo provider identifier (ANID)')]
         #[SerializedName('openimmo_anid')]
         protected string $openImmoAnid = '',
-        /** @description License identifier of the provider */
         #[Type('string')]
+        #[Description('License identifier of the provider')]
         #[SerializedName('lizenzkennung')]
         protected ?string $licenseIdentifier = null,
-        /** @description Attachment (file) of the property */
         #[Type(Attachment::class)]
+        #[Description('Attachment (file) of the property')]
         #[SerializedName('anhang')]
         protected ?Attachment $attachment = null,
-        /** @description Single real estate property */
         #[XmlList(entry: 'immobilie', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\RealEstate>')]
         #[SkipWhenEmpty]
+        #[Description('Single real estate property')]
         #[SerializedName('immobilie')]
         protected array $realEstate = [],
-        /** @description Imprint of the provider */
         #[Type('string')]
+        #[Description('Imprint of the provider')]
         #[SerializedName('impressum')]
         protected ?string $imprint = null,
-        /** @description Structured imprint of the provider */
         #[Type(ImprintStructure::class)]
+        #[Description('Structured imprint of the provider')]
         #[SerializedName('impressum_strukt')]
         protected ?ImprintStructure $imprintStructure = null,
-        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

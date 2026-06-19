@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -11,19 +12,18 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Data
  * Anhangdaten
- *
- * @description General data container in the OpenImmo format
  */
+#[Description('General data container in the OpenImmo format')]
 #[XmlRoot(name: 'daten')]
 class Data
 {
     public function __construct(
-        /** @description File path of the attachment */
         #[Type('string')]
+        #[Description('File path of the attachment')]
         #[SerializedName('pfad')]
         protected ?string $path = null,
-        /** @description Binary content of the attachment */
         #[Type('string')]
+        #[Description('Binary content of the attachment')]
         #[SerializedName('anhanginhalt')]
         protected ?string $attachmentContent = null
     ) {}

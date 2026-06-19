@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -12,35 +13,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Versteigerung
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
- *
- * @description Zwangsversteigerungsinformationen der Immobilie
  */
+#[Description('Zwangsversteigerungsinformationen der Immobilie')]
 #[XmlRoot(name: 'versteigerung')]
 class Versteigerung
 {
     public function __construct(
-        /** @description Zwangsverkauf oder Notverkauf */
         #[Type('bool')]
+        #[Description('Zwangsverkauf oder Notverkauf')]
         #[SerializedName('zwangsversteigerung')]
         protected ?bool $zwangsversteigerung = null,
-        /** @description Aktenzeichen der Zwangsversteigerung */
         #[Type('string')]
+        #[Description('Aktenzeichen der Zwangsversteigerung')]
         #[SerializedName('aktenzeichen')]
         protected ?string $aktenzeichen = null,
-        /** @description Datum des Zwangsverkaufs */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Datum des Zwangsverkaufs')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $zvtermin = null,
-        /** @description Zusätzliches Datum */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Zusätzliches Datum')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $zusatztermin = null,
-        /** @description Zuständiges Amtsgericht */
         #[Type('string')]
+        #[Description('Zuständiges Amtsgericht')]
         #[SerializedName('amtsgericht')]
         protected ?string $amtsgericht = null,
-        /** @description Marktwert der Immobilie */
         #[Type('float')]
+        #[Description('Marktwert der Immobilie')]
         #[SerializedName('verkehrswert')]
         protected ?float $verkehrswert = null
     ) {}

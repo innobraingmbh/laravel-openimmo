@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -12,35 +13,34 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Auction
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
- *
- * @description Foreclosure auction information of the property
  */
+#[Description('Foreclosure auction information of the property')]
 #[XmlRoot(name: 'versteigerung')]
 class Auction
 {
     public function __construct(
-        /** @description Forced sale or distressed sale */
         #[Type('bool')]
+        #[Description('Forced sale or distressed sale')]
         #[SerializedName('zwangsversteigerung')]
         protected ?bool $forcedSale = null,
-        /** @description File number of the foreclosure auction */
         #[Type('string')]
+        #[Description('File number of the foreclosure auction')]
         #[SerializedName('aktenzeichen')]
         protected ?string $fileNumber = null,
-        /** @description Date of the forced sale */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Date of the forced sale')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $forcedSaleDate = null,
-        /** @description Additional date */
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Additional date')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $additionalDate = null,
-        /** @description Responsible district court */
         #[Type('string')]
+        #[Description('Responsible district court')]
         #[SerializedName('amtsgericht')]
         protected ?string $districtCourt = null,
-        /** @description Market value of the property */
         #[Type('float')]
+        #[Description('Market value of the property')]
         #[SerializedName('verkehrswert')]
         protected ?float $marketValue = null
     ) {}

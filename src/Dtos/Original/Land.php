@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,9 +13,8 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Land
  * Land
- *
- * @description Landesangabe (ISO-Länderkürzel)
  */
+#[Description('Landesangabe (ISO-Länderkürzel)')]
 #[XmlRoot(name: 'land')]
 class Land
 {
@@ -487,12 +487,11 @@ class Land
          * optional
          *
          * @see ISO_LAND_* constants
-         *
-         * @description ISO-Länderkürzel (z.B. DEU, AUT, CHE)
          */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('iso_land')]
+        #[Description('ISO-Länderkürzel (z.B. DEU, AUT, CHE)')]
         protected string $isoLand = ''
     ) {}
 

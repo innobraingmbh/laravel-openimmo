@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -12,75 +13,74 @@ use JMS\Serializer\Annotation\XmlRoot;
 
 /**
  * Class ConditionInformation
- *
- * @description Condition information of the property (year of construction, modernization, energy certificate)
  */
+#[Description('Condition information of the property (year of construction, modernization, energy certificate)')]
 #[XmlRoot(name: 'zustand_angaben')]
 class ConditionInformation
 {
     public function __construct(
-        /** @description Year of construction of the property */
         #[Type('string')]
+        #[Description('Year of construction of the property')]
         #[SerializedName('baujahr')]
         protected ?string $yearOfConstruction = null,
-        /** @description Year of the last modernization */
         #[Type('string')]
+        #[Description('Year of the last modernization')]
         #[SerializedName('letztemodernisierung')]
         protected ?string $lastModernization = null,
-        /** @description Condition of the property */
         #[Type(Condition::class)]
+        #[Description('Condition of the property')]
         #[SerializedName('zustand')]
         protected ?Condition $condition = null,
-        /** @description Age of the property */
         #[Type(Age::class)]
+        #[Description('Age of the property')]
         #[SerializedName('alter')]
         protected ?Age $age = null,
-        /** @description Developability according to building regulations */
         #[Type(DevelopableAccordingTo::class)]
+        #[Description('Developability according to building regulations')]
         #[SerializedName('bebaubar_nach')]
         protected ?DevelopableAccordingTo $developableAccordingTo = null,
-        /** @description Development/utility connection status of the plot */
         #[Type(Development::class)]
+        #[Description('Development/utility connection status of the plot')]
         #[SerializedName('erschliessung')]
         protected ?Development $development = null,
-        /** @description Scope of utilities and infrastructure connections of the plot */
         #[Type(DevelopmentScope::class)]
+        #[Description('Scope of utilities and infrastructure connections of the plot')]
         #[SerializedName('erschliessung_umfang')]
         protected ?DevelopmentScope $developmentScope = null,
-        /** @description Construction zone of the plot */
         #[Type('string')]
+        #[Description('Construction zone of the plot')]
         #[SerializedName('bauzone')]
         protected ?string $constructionZone = null,
-        /** @description Contamination or legacy pollution of the plot */
         #[Type('string')]
+        #[Description('Contamination or legacy pollution of the plot')]
         #[SerializedName('altlasten')]
         protected ?string $contamination = null,
-        /** @description Energy performance certificate of the property */
         #[XmlList(entry: 'energiepass', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\EnergyPerformanceCertificate>')]
         #[SkipWhenEmpty]
+        #[Description('Energy performance certificate of the property')]
         #[SerializedName('energiepass')]
         protected array $energyCertificate = [],
-        /** @description Sales status of the property */
         #[Type(SalesStatus::class)]
+        #[Description('Sales status of the property')]
         #[SerializedName('verkaufstatus')]
         protected ?SalesStatus $salesStatus = null,
-        /** @description User-defined simple free field */
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
-        /** @description User-defined free field with arbitrary content */
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
-        /** @description User-defined extension */
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}
