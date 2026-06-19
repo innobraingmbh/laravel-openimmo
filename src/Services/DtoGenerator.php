@@ -20,6 +20,7 @@ use GoetasWebservices\XML\XSDReader\Schema\Type\ComplexTypeSimpleContent;
 use GoetasWebservices\XML\XSDReader\Schema\Type\SimpleType;
 use GoetasWebservices\XML\XSDReader\SchemaReader;
 use Illuminate\Support\Facades\File;
+use Innobrain\OpenImmo\Attributes\Description;
 use Innobrain\OpenImmo\Facades\CodeGenUtil;
 use Innobrain\OpenImmo\Facades\TranslationService;
 use Innobrain\OpenImmo\Facades\TypeUtil;
@@ -174,13 +175,15 @@ class DtoGenerator
 
         $locale = $this->skipTranslation ? 'de' : 'en';
         $desc = TranslationService::getClassDescription($translatedClassName, $locale);
+
+        $class->addComment($classComment);
+
         if ($desc !== '') {
-            $classComment .= PHP_EOL.'@description '.$desc;
+            $class->addAttribute(Description::class, [$desc]);
+            $namespace->addUse(Description::class);
         }
 
-        $class
-            ->addComment($classComment)
-            ->addAttribute(XmlRoot::class, ['name' => $element->getName()]);
+        $class->addAttribute(XmlRoot::class, ['name' => $element->getName()]);
 
         /** @var Attribute[] $attributes */
         // @phpstan-ignore-next-line
@@ -330,7 +333,8 @@ class DtoGenerator
         $locale = $this->skipTranslation ? 'de' : 'en';
         $propDesc = TranslationService::getClassDescription($descKey, $locale);
         if ($propDesc !== '') {
-            CodeGenUtil::addDescriptionPart($classProperty, '@description '.$propDesc);
+            $classProperty->addAttribute(Description::class, [$propDesc]);
+            $namespace->addUse(Description::class);
         }
 
         $propertyName = $property->getName();
@@ -427,7 +431,8 @@ class DtoGenerator
         $locale = $this->skipTranslation ? 'de' : 'en';
         $attrDesc = TranslationService::getPropertyDescription($descKey, $locale);
         if ($attrDesc !== '') {
-            CodeGenUtil::addDescriptionPart($property, '@description '.$attrDesc);
+            $property->addAttribute(Description::class, [$attrDesc]);
+            $namespace->addUse(Description::class);
         }
 
         CodeGenUtil::generateGetterAndSetter($property, $class, true, $nullable, $this->namespace);

@@ -10,6 +10,7 @@
 !/skeleton/storage/app/OpenImmo/.gitkeep
 /skeleton/storage/app/Dtos/*
 !/skeleton/storage/app/Dtos/.gitkeep
+skeleton/vendor
 /.phpunit.cache/
 /build/
 docs/.vitepress/dist/

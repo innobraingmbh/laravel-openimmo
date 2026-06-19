@@ -1,0 +1,3 @@
+laravel: skeleton
+providers:
+  - Innobrain\OpenImmo\OpenImmoServiceProvider

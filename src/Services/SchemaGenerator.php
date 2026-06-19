@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Services;
 
 use Illuminate\Support\Str;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Type as SerializerType;
 use Prism\Prism\Contracts\Schema;
 use Prism\Prism\Schema\ArraySchema;
@@ -63,13 +64,14 @@ class SchemaGenerator
 
     private function getClassDescription(ReflectionClass $class): string
     {
+        $attrs = $class->getAttributes(Description::class);
+        if ($attrs !== []) {
+            return $attrs[0]->newInstance()->value;
+        }
+
         $docComment = $class->getDocComment();
         if ($docComment === false) {
             return '';
-        }
-
-        if (preg_match('/@description (.+)/', $docComment, $matches) === 1) {
-            return trim($matches[1]);
         }
 
         $matches = Str::matchAll('/^ * .+$/m', $docComment);
@@ -79,9 +81,9 @@ class SchemaGenerator
 
     private function getPropertyDescription(ReflectionProperty $property): string
     {
-        $doc = $property->getDocComment();
-        if ($doc !== false && preg_match('/@description (.+)/', $doc, $matches) === 1) {
-            return trim($matches[1]);
+        $attrs = $property->getAttributes(Description::class);
+        if ($attrs !== []) {
+            return $attrs[0]->newInstance()->value;
         }
 
         return $property->getName();
