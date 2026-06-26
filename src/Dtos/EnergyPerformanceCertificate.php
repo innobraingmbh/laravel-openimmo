@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class EnergyPerformanceCertificate
  * Energiepass/Ausweis ab 7/2008 vorgeschrieben
  */
+#[Description('Energy performance certificate of the property')]
 #[XmlRoot(name: 'energiepass')]
 class EnergyPerformanceCertificate
 {
@@ -37,62 +39,81 @@ class EnergyPerformanceCertificate
     public function __construct(
         /** @see PARTITION_* constants */
         #[Type('string')]
+        #[Description('Type of energy certificate (demand or consumption certificate)')]
         #[SerializedName('epart')]
         protected string $energyCertificateType = '',
         #[Type('string')]
+        #[Description('Validity date of the energy performance certificate')]
         #[SerializedName('gueltig_bis')]
         protected ?string $validUntil = null,
         #[Type('string')]
+        #[Description('Energy consumption characteristic value in kWh/(m²·a)')]
         #[SerializedName('energieverbrauchkennwert')]
         protected ?string $energyConsumptionValue = null,
         #[Type('bool')]
+        #[Description('Hot water included in the energy consumption value')]
         #[SerializedName('mitwarmwasser')]
         protected ?bool $withHotWater = null,
         #[Type('string')]
+        #[Description('Final energy demand in kWh/(m²·a)')]
         #[SerializedName('endenergiebedarf')]
         protected ?string $finalEnergyDemand = null,
         #[Type('string')]
+        #[Description('Primary energy source from the energy certificate')]
         #[SerializedName('primaerenergietraeger')]
         protected ?string $primaryEnergySource = null,
         #[Type('string')]
+        #[Description('Electricity consumption value from the energy certificate')]
         #[SerializedName('stromwert')]
         protected ?string $electricityValue = null,
         #[Type('string')]
+        #[Description('Heat consumption value from the energy certificate')]
         #[SerializedName('waermewert')]
         protected ?string $heatValue = null,
         #[Type('string')]
+        #[Description('Value class of the energy performance certificate')]
         #[SerializedName('wertklasse')]
         protected ?string $valueClass = null,
         #[Type('string')]
+        #[Description('Year of construction of the property')]
         #[SerializedName('baujahr')]
         protected ?string $yearOfConstruction = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Issue date of the energy performance certificate')]
         #[SerializedName('ausstelldatum')]
         protected ?DateTime $issueDate = null,
         /** @see VINTAGE_* constants */
         #[Type('string')]
+        #[Description('Vintage year of the energy performance certificate')]
         #[SerializedName('jahrgang')]
         protected string $year = '',
         /** @see BUILDING_TYPE_* constants */
         #[Type('string')]
+        #[Description('Building type (residential or non-residential)')]
         #[SerializedName('gebaeudeart')]
         protected string $buildingType = '',
         #[Type('string')]
+        #[Description('Free text about the energy performance certificate')]
         #[SerializedName('epasstext')]
         protected ?string $energyCertificateText = null,
         #[Type('string')]
+        #[Description('Information on the Building Energy Act 2018 (GEG)')]
         #[SerializedName('geg2018')]
         protected ?string $buildingEnergyAct2018 = null,
         #[Type('string')]
+        #[Description('Heating demand value (HWB) in kWh/(m²·a)')]
         #[SerializedName('hwbwert')]
         protected ?string $heatingDemandValue = null,
         #[Type('string')]
+        #[Description('Heating demand class (HWB class)')]
         #[SerializedName('hwbklasse')]
         protected ?string $heatingDemandClass = null,
         #[Type('string')]
+        #[Description('Energy efficiency value (fGEE value)')]
         #[SerializedName('fgeewert')]
         protected ?string $energyEfficiencyValue = null,
         #[Type('string')]
+        #[Description('Energy efficiency class (A+ to H)')]
         #[SerializedName('fgeeklasse')]
         protected ?string $energyEfficiencyClass = null
     ) {}

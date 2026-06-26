@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,26 +14,31 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Feld
  */
+#[Description('Einzelnes Datenfeld im OpenImmo-Format')]
 #[XmlRoot(name: 'feld')]
 class Feld
 {
     public function __construct(
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Nachname der Kontaktperson')]
         #[SerializedName('name')]
         protected string $name = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Wert des Feldes')]
         #[SerializedName('wert')]
         protected string $wert = '',
         #[XmlList(entry: 'typ', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
+        #[Description('Typ oder Art')]
         #[SerializedName('typ')]
         protected array $typ = [],
         #[XmlList(entry: 'modus', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
+        #[Description('Modus des Datentransfers')]
         #[SerializedName('modus')]
         protected array $modus = []
     ) {}

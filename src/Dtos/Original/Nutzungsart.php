@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Nutzungsart
  * nutzungsart
  */
+#[Description('Nutzungsart der Immobilie (z.B. Wohnen, Gewerbe)')]
 #[XmlRoot(name: 'nutzungsart')]
 class Nutzungsart
 {
@@ -21,21 +23,25 @@ class Nutzungsart
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WOHNEN')]
+        #[Description('Wohnbereich vorhanden')]
         protected bool $wohnen = false,
         /** required */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GEWERBE')]
+        #[Description('Gewerbliche Nutzung vorhanden')]
         protected bool $gewerbe = false,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ANLAGE')]
+        #[Description('Einrichtung oder Anlage')]
         protected ?bool $anlage = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WAZ')]
+        #[Description('Wohn-Arbeits-Zimmer (Kombination aus Wohnen und Arbeiten)')]
         protected ?bool $waz = null
     ) {}
 

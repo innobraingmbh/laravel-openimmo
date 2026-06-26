@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Zustand
  * Zustand des Objektes, Optionen nicht kombinierbar
  */
+#[Description('Zustandsbeschreibung der Immobilie')]
 #[XmlRoot(name: 'zustand')]
 class Zustand
 {
@@ -57,6 +59,7 @@ class Zustand
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zustand_art')]
+        #[Description('Zustandstyp der Immobilie')]
         protected string $zustandArt = ''
     ) {}
 

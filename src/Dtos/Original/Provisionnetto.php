@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Provisionnetto
  * Wenn unterschiedliche Provisionen anfallen, dann hier Netto und UmSt. einzeln
  */
+#[Description('Nettoprovision (ohne MwSt.)')]
 #[XmlRoot(name: 'provisionnetto')]
 class Provisionnetto
 {
@@ -22,6 +24,7 @@ class Provisionnetto
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('provisionust')]
+        #[Description('Mehrwertsteueranteil der Maklerprovision')]
         protected ?float $provisionust = null,
         #[Inline]
         #[Type('float')]

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -15,44 +16,55 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Bieterverfahren
  * Angaben zum Bieterverfahren
  */
+#[Description('Informationen zum Bieterverfahren der Immobilie')]
 #[XmlRoot(name: 'bieterverfahren')]
 class Bieterverfahren
 {
     public function __construct(
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Beginn der Angebotsphase')]
         #[SerializedName('beginn_angebotsphase')]
         protected ?DateTime $beginnAngebotsphase = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Erstes Besichtigungstermin')]
         #[SerializedName('besichtigungstermin')]
         protected ?DateTime $besichtigungstermin = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Zweiter Besichtigungstermin')]
         #[SerializedName('besichtigungstermin_2')]
         protected ?DateTime $besichtigungstermin2 = null,
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Startzeitpunkt des Bieterverfahrens')]
         #[SerializedName('beginn_bietzeit')]
         protected ?DateTime $beginnBietzeit = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Endzeitpunkt des Bieterverfahrens')]
         #[SerializedName('ende_bietzeit')]
         protected ?DateTime $endeBietzeit = null,
         #[Type('bool')]
+        #[Description('Höchstgebot anzeigen')]
         #[SerializedName('hoechstgebot_zeigen')]
         protected ?bool $hoechstgebotZeigen = null,
         #[Type('float')]
+        #[Description('Mindestpreis der Immobilie')]
         #[SerializedName('mindestpreis')]
         protected ?float $mindestpreis = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

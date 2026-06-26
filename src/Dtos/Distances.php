@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -15,6 +16,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Welche Distanz zu dem ausgewählten Ziel besteht (Angabe in km),
  *  Optionen nicht kombinierbar, Distanzelement ist mehrfach erfassbar
  */
+#[Description('Distance information to important facilities')]
 #[XmlRoot(name: 'distanzen')]
 class Distances
 {
@@ -55,6 +57,7 @@ class Distances
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('distanz_zu')]
+        #[Description('Distance to a specific facility')]
         protected string $distanceTo = '',
         #[Inline]
         #[Type('float')]

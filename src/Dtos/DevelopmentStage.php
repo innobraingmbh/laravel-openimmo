@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class DevelopmentStage
  */
+#[Description('Development stage or fit-out level of the building')]
 #[XmlRoot(name: 'ausbaustufe')]
 class DevelopmentStage
 {
@@ -20,26 +22,31 @@ class DevelopmentStage
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAUSATZHAUS')]
+        #[Description('Prefabricated house')]
         protected ?bool $prefabricatedHouse = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('AUSBAUHAUS')]
+        #[Description('House is expandable')]
         protected ?bool $expandableHouse = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
+        #[Description('Turnkey with basement')]
         protected ?bool $turnkeyWithBasement = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
+        #[Description('Turnkey without foundation slab')]
         protected ?bool $turnkeyWithoutFoundation = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]
+        #[Description('Turnkey with foundation slab')]
         protected ?bool $turnkeyWithFoundation = null
     ) {}
 

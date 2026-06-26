@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ProvisionTeilen
  * Aufteilen der provision bei Partnergeschäften. Auch "A Meta" Geschäft. Attribut zeigt, wie der Wert angegeben wird: fester wert, prozent, oder Text Information
  */
+#[Description('Aufteilung der Maklerprovision zwischen Käufer und Verkäufer')]
 #[XmlRoot(name: 'provision_teilen')]
 class ProvisionTeilen
 {
@@ -32,6 +34,7 @@ class ProvisionTeilen
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('wert')]
+        #[Description('Wert oder Bewertung der Immobilie')]
         protected string $wert = '',
         #[Inline]
         #[Type('string')]

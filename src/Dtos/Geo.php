@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,41 +14,53 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Geo
  */
+#[Description('Geographic and address-based information of the property')]
 #[XmlRoot(name: 'geo')]
 class Geo
 {
     public function __construct(
         #[Type('string')]
+        #[Description('Postal code of the property')]
         #[SerializedName('plz')]
         protected ?string $postalCode = null,
         #[Type('string')]
+        #[Description('City or town of the property')]
         #[SerializedName('ort')]
         protected ?string $city = null,
         #[Type(GeoCoordinates::class)]
+        #[Description('GPS coordinates of the property')]
         #[SerializedName('geokoordinaten')]
         protected ?GeoCoordinates $geoCoordinates = null,
         #[Type('string')]
+        #[Description('Street of the property')]
         #[SerializedName('strasse')]
         protected ?string $street = null,
         #[Type('string')]
+        #[Description('House number of the property')]
         #[SerializedName('hausnummer')]
         protected ?string $houseNumber = null,
         #[Type('string')]
+        #[Description('Federal state of the property')]
         #[SerializedName('bundesland')]
         protected ?string $state = null,
         #[Type(Country::class)]
+        #[Description('Country of the property')]
         #[SerializedName('land')]
         protected ?Country $country = null,
         #[Type('string')]
+        #[Description('Official municipality code (AGS)')]
         #[SerializedName('gemeindecode')]
         protected ?string $municipalityCode = null,
         #[Type('string')]
+        #[Description('Land parcel corridor of the plot')]
         #[SerializedName('flur')]
         protected ?string $corridor = null,
         #[Type('string')]
+        #[Description('Parcel number of the plot')]
         #[SerializedName('flurstueck')]
         protected ?string $parcel = null,
         #[Type('string')]
+        #[Description('Cadastral district of the plot')]
         #[SerializedName('gemarkung')]
         protected ?string $cadastralDistrict = null,
         /**
@@ -55,6 +68,7 @@ class Geo
          * Maximum value (inclusive): 2147483647
          */
         #[Type('int')]
+        #[Description('Floor level of the unit within the building')]
         #[SerializedName('etage')]
         protected ?int $floor = null,
         /**
@@ -62,45 +76,57 @@ class Geo
          * Maximum value (inclusive): 2147483647
          */
         #[Type('int')]
+        #[Description('Total number of floors of the building')]
         #[SerializedName('anzahl_etagen')]
         protected ?int $numberOfFloors = null,
         #[Type(LocationInBuilding::class)]
+        #[Description('Location of the unit within the building')]
         #[SerializedName('lage_im_bau')]
         protected ?LocationInBuilding $locationInBuilding = null,
         #[Type('string')]
+        #[Description('Apartment number within the building')]
         #[SerializedName('wohnungsnr')]
         protected ?string $apartmentNumber = null,
         #[Type(LocationArea::class)]
+        #[Description('Location area of the property')]
         #[SerializedName('lage_gebiet')]
         protected ?LocationArea $areaLocation = null,
         #[Type('string')]
+        #[Description('Regional addition to the location (e.g. district)')]
         #[SerializedName('regionaler_zusatz')]
         protected ?string $regionalAddition = null,
         #[Type('bool')]
+        #[Description('Macro map (overview map) available')]
         #[SerializedName('karten_makro')]
         protected ?bool $macroMap = null,
         #[Type('bool')]
+        #[Description('Micro map (detail map) available')]
         #[SerializedName('karten_mikro')]
         protected ?bool $microMap = null,
         #[Type('bool')]
+        #[Description('Virtual tour of the property available')]
         #[SerializedName('virtuelletour')]
         protected ?bool $virtualTour = null,
         #[Type('bool')]
+        #[Description('Aerial photos of the property available')]
         #[SerializedName('luftbildern')]
         protected ?bool $aerialPhotos = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

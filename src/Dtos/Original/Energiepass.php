@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Energiepass
  * Energiepass/Ausweis ab 7/2008 vorgeschrieben
  */
+#[Description('Energieausweis der Immobilie')]
 #[XmlRoot(name: 'energiepass')]
 class Energiepass
 {
@@ -37,62 +39,81 @@ class Energiepass
     public function __construct(
         /** @see EPART_* constants */
         #[Type('string')]
+        #[Description('Typ des Energieausweises (Bedarfs- oder Verbrauchsausweis)')]
         #[SerializedName('epart')]
         protected string $epart = '',
         #[Type('string')]
+        #[Description('Gültigkeitsdatum des Energieausweises')]
         #[SerializedName('gueltig_bis')]
         protected ?string $gueltigBis = null,
         #[Type('string')]
+        #[Description('Energieverbrauchskennwert in kWh/(m²·a)')]
         #[SerializedName('energieverbrauchkennwert')]
         protected ?string $energieverbrauchkennwert = null,
         #[Type('bool')]
+        #[Description('Warmwasser im Energieverbrauchskennwert enthalten')]
         #[SerializedName('mitwarmwasser')]
         protected ?bool $mitwarmwasser = null,
         #[Type('string')]
+        #[Description('Endenergiebedarf in kWh/(m²·a)')]
         #[SerializedName('endenergiebedarf')]
         protected ?string $endenergiebedarf = null,
         #[Type('string')]
+        #[Description('Primärer Energieträger aus dem Energieausweis')]
         #[SerializedName('primaerenergietraeger')]
         protected ?string $primaerenergietraeger = null,
         #[Type('string')]
+        #[Description('Stromverbrauchswert aus dem Energieausweis')]
         #[SerializedName('stromwert')]
         protected ?string $stromwert = null,
         #[Type('string')]
+        #[Description('Wärmeverbrauchswert aus dem Energieausweis')]
         #[SerializedName('waermewert')]
         protected ?string $waermewert = null,
         #[Type('string')]
+        #[Description('Wertklasse des Energieausweises')]
         #[SerializedName('wertklasse')]
         protected ?string $wertklasse = null,
         #[Type('string')]
+        #[Description('Baujahr der Immobilie')]
         #[SerializedName('baujahr')]
         protected ?string $baujahr = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Ausstellungsdatum des Energieausweises')]
         #[SerializedName('ausstelldatum')]
         protected ?DateTime $ausstelldatum = null,
         /** @see JAHRGANG_* constants */
         #[Type('string')]
+        #[Description('Jahrgang des Energieausweises')]
         #[SerializedName('jahrgang')]
         protected string $jahrgang = '',
         /** @see GEBAEUDEART_* constants */
         #[Type('string')]
+        #[Description('Gebäudetyp (Wohn- oder Nichtwohngebäude)')]
         #[SerializedName('gebaeudeart')]
         protected string $gebaeudeart = '',
         #[Type('string')]
+        #[Description('Freitext zum Energieausweis')]
         #[SerializedName('epasstext')]
         protected ?string $epasstext = null,
         #[Type('string')]
+        #[Description('Angabe zum Gebäudeenergiegesetz 2018')]
         #[SerializedName('geg2018')]
         protected ?string $geg2018 = null,
         #[Type('string')]
+        #[Description('Heizwärmebedarfswert (HWB-Wert) in kWh/(m²·a)')]
         #[SerializedName('hwbwert')]
         protected ?string $hwbwert = null,
         #[Type('string')]
+        #[Description('Heizwärmebedarfsklasse (HWB-Klasse)')]
         #[SerializedName('hwbklasse')]
         protected ?string $hwbklasse = null,
         #[Type('string')]
+        #[Description('Energieeffizienzwert (fGEE-Wert)')]
         #[SerializedName('fgeewert')]
         protected ?string $fgeewert = null,
         #[Type('string')]
+        #[Description('Energieeffizienzklasse (A+ bis H)')]
         #[SerializedName('fgeeklasse')]
         protected ?string $fgeeklasse = null
     ) {}

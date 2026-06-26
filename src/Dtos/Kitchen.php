@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Kitchen
  * Welche Eigenschaften besitzt die Küche, Optionen kombinierbar
  */
+#[Description('Kitchen equipment features of the property')]
 #[XmlRoot(name: 'kueche')]
 class Kitchen
 {
@@ -21,16 +23,19 @@ class Kitchen
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('EBK')]
+        #[Description('Built-in kitchen available')]
         protected ?bool $builtInKitchen = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFFEN')]
+        #[Description('Open kitchen available')]
         protected ?bool $open = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PANTRY')]
+        #[Description('Pantry available')]
         protected ?bool $pantry = null
     ) {}
 

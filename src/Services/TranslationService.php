@@ -17,6 +17,10 @@ class TranslationService
 
     protected Collection $constants;
 
+    protected Collection $classDescriptions;
+
+    protected Collection $propertyDescriptions;
+
     protected Collection $stubs;
 
     public function __construct()
@@ -28,6 +32,8 @@ class TranslationService
             'attributes' => collect(),
             'properties' => collect(),
             'constants' => collect(),
+            'class_descriptions' => collect(),
+            'property_descriptions' => collect(),
         ]);
     }
 
@@ -37,6 +43,7 @@ class TranslationService
         $this->loadAttributes();
         $this->loadProperties();
         $this->loadConstants();
+        $this->loadDescriptions();
     }
 
     protected function loadClasses(): void
@@ -65,6 +72,22 @@ class TranslationService
         $file = $this->readTranslationFile('constants.csv');
 
         $this->constants = $this->loadFile($file);
+    }
+
+    protected function loadDescriptions(): void
+    {
+        $path = storage_path('app/TranslationMapping/descriptions.json');
+
+        if (! file_exists($path)) {
+            $this->classDescriptions = collect();
+            $this->propertyDescriptions = collect();
+
+            return;
+        }
+
+        $data = json_decode((string) file_get_contents($path), true) ?? [];
+        $this->classDescriptions = collect(data_get($data, 'classes', []));
+        $this->propertyDescriptions = collect(data_get($data, 'properties', []));
     }
 
     protected function readTranslationFile(string $filename): string
@@ -144,6 +167,34 @@ class TranslationService
         return $value ?? $key;
     }
 
+    public function getClassDescription(string $className, string $locale = 'en'): string
+    {
+        /** @var array<string,string>|null $stub */
+        $stub = $this->stubs->get('class_descriptions')?->get($className);
+        if ($stub !== null) {
+            return (string) data_get($stub, $locale, '');
+        }
+
+        /** @var array<string,string>|null $entry */
+        $entry = $this->classDescriptions->get($className);
+
+        return (string) data_get($entry, $locale, '');
+    }
+
+    public function getPropertyDescription(string $key, string $locale = 'en'): string
+    {
+        /** @var array<string,string>|null $stub */
+        $stub = $this->stubs->get('property_descriptions')?->get($key);
+        if ($stub !== null) {
+            return (string) data_get($stub, $locale, '');
+        }
+
+        /** @var array<string,string>|null $entry */
+        $entry = $this->propertyDescriptions->get($key);
+
+        return (string) data_get($entry, $locale, '');
+    }
+
     public function fake(array $data): self
     {
         $this->stubs = collect([
@@ -151,6 +202,8 @@ class TranslationService
             'attributes' => collect(data_get($data, 'attributes', [])),
             'properties' => collect(data_get($data, 'properties', [])),
             'constants' => collect(data_get($data, 'constants', [])),
+            'class_descriptions' => collect(data_get($data, 'class_descriptions', [])),
+            'property_descriptions' => collect(data_get($data, 'property_descriptions', [])),
         ]);
 
         return $this;
@@ -196,6 +249,20 @@ class TranslationService
         }
 
         $this->stubs->get('constants')->put($key, $value);
+
+        return $this;
+    }
+
+    public function addFakeClassDescription(string $className, string $de = '', string $en = ''): self
+    {
+        $this->stubs->get('class_descriptions')->put($className, ['de' => $de, 'en' => $en]);
+
+        return $this;
+    }
+
+    public function addFakePropertyDescription(string $key, string $de = '', string $en = ''): self
+    {
+        $this->stubs->get('property_descriptions')->put($key, ['de' => $de, 'en' => $en]);
 
         return $this;
     }

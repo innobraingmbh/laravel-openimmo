@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class HeatingType
  * Welche Heizungsarten sind vorhanden, Optionen kombinierbar
  */
+#[Description('Type of heating system (e.g. central heating, underfloor heating)')]
 #[XmlRoot(name: 'heizungsart')]
 class HeatingType
 {
@@ -21,26 +23,31 @@ class HeatingType
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('OFEN')]
+        #[Description('Stove or wood-burning stove available')]
         protected ?bool $stove = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ETAGE')]
+        #[Description('Floor level of the unit within the building')]
         protected ?bool $floor = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ZENTRAL')]
+        #[Description('Central heating system available')]
         protected ?bool $central = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERN')]
+        #[Description('Remote location of the property')]
         protected ?bool $remote = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FUSSBODEN')]
+        #[Description('Flooring of the property')]
         protected ?bool $flooring = null
     ) {}
 

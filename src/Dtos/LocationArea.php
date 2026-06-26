@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class LocationArea
  * Lage Gebiet, Optionen nicht kombinierbar
  */
+#[Description('Location area of the property (e.g. city center, peripheral area)')]
 #[XmlRoot(name: 'lage_gebiet')]
 class LocationArea
 {
@@ -51,6 +53,7 @@ class LocationArea
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gebiete')]
+        #[Description('Area measurements of the property')]
         protected string $areas = ''
     ) {}
 

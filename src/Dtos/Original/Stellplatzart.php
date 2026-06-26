@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Stellplatzart
  * Welche Stellplatzarten sind vorhanden, Optionen kombinierbar, als einfache Alternative zu den stp...Elementen
  */
+#[Description('Typ des Stellplatzes')]
 #[XmlRoot(name: 'stellplatzart')]
 class Stellplatzart
 {
@@ -21,31 +23,37 @@ class Stellplatzart
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GARAGE')]
+        #[Description('Garage vorhanden')]
         protected ?bool $garage = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TIEFGARAGE')]
+        #[Description('Tiefgaragenstellplatz vorhanden')]
         protected ?bool $tiefgarage = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('CARPORT')]
+        #[Description('Carport vorhanden')]
         protected ?bool $carport = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FREIPLATZ')]
+        #[Description('Freifläche in Quadratmetern')]
         protected ?bool $freiplatz = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKHAUS')]
+        #[Description('Garagenstellplatz')]
         protected ?bool $parkhaus = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DUPLEX')]
+        #[Description('Duplex-Stellplatz vorhanden')]
         protected ?bool $duplex = null
     ) {}
 

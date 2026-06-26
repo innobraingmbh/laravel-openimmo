@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class House
  * Objektart / Typ f. Haus
  */
+#[Description('House property with type specification')]
 #[XmlRoot(name: 'haus')]
 class House
 {
@@ -75,6 +77,7 @@ class House
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('haustyp')]
+        #[Description('House type (e.g. detached, terraced, semi-detached)')]
         protected string $houseType = ''
     ) {}
 

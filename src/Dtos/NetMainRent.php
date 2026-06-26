@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class NetMainRent
  */
+#[Description('Net main rent (excluding VAT)')]
 #[XmlRoot(name: 'hauptmietzinsnetto')]
 class NetMainRent
 {
@@ -21,6 +23,7 @@ class NetMainRent
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('hauptmietzinsust')]
+        #[Description('VAT portion of the main rent')]
         protected ?float $mainRentVAT = null,
         #[Inline]
         #[Type('float')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class StpDuplex
  */
+#[Description('Stellplatz vom Typ Duplex-Parksystem')]
 #[XmlRoot(name: 'stp_duplex')]
 class StpDuplex
 {
@@ -20,11 +22,13 @@ class StpDuplex
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzmiete')]
+        #[Description('Mietpreis des Stellplatzes')]
         protected ?float $stellplatzmiete = null,
         /** optional */
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('stellplatzkaufpreis')]
+        #[Description('Kaufpreis des Stellplatzes')]
         protected ?float $stellplatzkaufpreis = null,
         /**
          * optional
@@ -34,6 +38,7 @@ class StpDuplex
         #[Type('int')]
         #[XmlAttribute]
         #[SerializedName('anzahl')]
+        #[Description('Anzahl oder Menge')]
         protected ?int $anzahl = null
     ) {}
 

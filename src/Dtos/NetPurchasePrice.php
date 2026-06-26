@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetPurchasePrice
  * Ausgewiesene Kaufpreis Netto, Optional mit Umst im Attribut. Speziell für Gewerbe
  */
+#[Description('Net purchase price (excluding VAT)')]
 #[XmlRoot(name: 'kaufpreisnetto')]
 class NetPurchasePrice
 {
@@ -22,6 +24,7 @@ class NetPurchasePrice
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('kaufpreisust')]
+        #[Description('VAT portion of the purchase price')]
         protected ?float $purchasePriceVAT = null,
         #[Inline]
         #[Type('float')]

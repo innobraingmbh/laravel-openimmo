@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Parken
  * Objektart für diverse Parkplatz Angaben
  */
+#[Description('Stellplatz- oder Parkflächen-Immobilie')]
 #[XmlRoot(name: 'parken')]
 class Parken
 {
@@ -45,6 +47,7 @@ class Parken
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('parken_typ')]
+        #[Description('Art des Stellplatzes')]
         protected string $parkenTyp = ''
     ) {}
 

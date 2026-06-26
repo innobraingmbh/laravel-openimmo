@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class NetRentPerSqmFrom
  * Angaben bei Gewerbe Miete, UmSt. im Attribut.
  */
+#[Description('Net rent per square meter starting from a minimum value')]
 #[XmlRoot(name: 'nettomieteprom2von')]
 class NetRentPerSqmFrom
 {
@@ -22,6 +24,7 @@ class NetRentPerSqmFrom
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('nettomieteprom2bis')]
+        #[Description('Net rent per square meter up to a maximum value')]
         protected ?float $netRentPerSqmTo = null,
         #[Inline]
         #[Type('float')]

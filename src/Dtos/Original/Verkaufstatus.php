@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Verkaufstatus
  * Anzeige ob z.B schon verkauft, Optionen nicht kombinierbar
  */
+#[Description('Verkaufsstatus der Immobilie (z.B. verfügbar, reserviert, verkauft)')]
 #[XmlRoot(name: 'verkaufstatus')]
 class Verkaufstatus
 {
@@ -31,6 +33,7 @@ class Verkaufstatus
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('stand')]
+        #[Description('Status der Immobilie oder des Datentransfers')]
         protected string $stand = ''
     ) {}
 

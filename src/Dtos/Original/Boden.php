@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Boden
  * Welche Eigenschaft besitzt der Bodenbelag, Optionen kombinierbar
  */
+#[Description('Bodenbelagsangaben der Immobilie')]
 #[XmlRoot(name: 'boden')]
 class Boden
 {
@@ -21,71 +23,85 @@ class Boden
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLIESEN')]
+        #[Description('Fliesen als Bodenbelag')]
         protected ?bool $fliesen = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('STEIN')]
+        #[Description('Steinboden als Bodenbelag')]
         protected ?bool $stein = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TEPPICH')]
+        #[Description('Teppichboden als Bodenbelag')]
         protected ?bool $teppich = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PARKETT')]
+        #[Description('Parkett als Bodenbelag')]
         protected ?bool $parkett = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGPARKETT')]
+        #[Description('Fertigparkett als Bodenbelag')]
         protected ?bool $fertigparkett = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LAMINAT')]
+        #[Description('Laminat als Bodenbelag')]
         protected ?bool $laminat = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DIELEN')]
+        #[Description('Dielenböden als Bodenbelag')]
         protected ?bool $dielen = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KUNSTSTOFF')]
+        #[Description('Kunststoffboden als Bodenbelag')]
         protected ?bool $kunststoff = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('ESTRICH')]
+        #[Description('Estrich als Bodenbelag')]
         protected ?bool $estrich = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('DOPPELBODEN')]
+        #[Description('Doppelboden vorhanden')]
         protected ?bool $doppelboden = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINOLEUM')]
+        #[Description('Linoleum als Bodenbelag')]
         protected ?bool $linoleum = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MARMOR')]
+        #[Description('Marmorboden als Bodenbelag')]
         protected ?bool $marmor = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('TERRAKOTTA')]
+        #[Description('Terrakottaboden als Bodenbelag')]
         protected ?bool $terrakotta = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('GRANIT')]
+        #[Description('Granitboden als Bodenbelag')]
         protected ?bool $granit = null
     ) {}
 

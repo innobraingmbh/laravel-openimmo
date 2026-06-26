@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,159 +14,208 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Areas
  */
+#[Description('Area measurements of the property')]
 #[XmlRoot(name: 'flaechen')]
 class Areas
 {
     public function __construct(
         #[Type('float')]
+        #[Description('Living area in square meters')]
         #[SerializedName('wohnflaeche')]
         protected ?float $livingArea = null,
         #[Type('float')]
+        #[Description('Usable area in square meters')]
         #[SerializedName('nutzflaeche')]
         protected ?float $usableArea = null,
         #[Type('float')]
+        #[Description('Total area in square meters')]
         #[SerializedName('gesamtflaeche')]
         protected ?float $totalArea = null,
         #[Type('float')]
+        #[Description('Shop area in square meters')]
         #[SerializedName('ladenflaeche')]
         protected ?float $shopArea = null,
         #[Type('float')]
+        #[Description('Storage area in square meters')]
         #[SerializedName('lagerflaeche')]
         protected ?float $storageArea = null,
         #[Type('float')]
+        #[Description('Sales area in square meters')]
         #[SerializedName('verkaufsflaeche')]
         protected ?float $salesArea = null,
         #[Type('float')]
+        #[Description('Open space area in square meters')]
         #[SerializedName('freiflaeche')]
         protected ?float $openSpace = null,
         #[Type('float')]
+        #[Description('Office area in square meters')]
         #[SerializedName('bueroflaeche')]
         protected ?float $officeArea = null,
         #[Type('float')]
+        #[Description('Partial office area in square meters')]
         #[SerializedName('bueroteilflaeche')]
         protected ?float $partialOfficeArea = null,
         #[Type('float')]
+        #[Description('Proportion of window front on the facade')]
         #[SerializedName('fensterfront')]
         protected ?float $windowFront = null,
         #[Type('float')]
+        #[Description('Administrative area in square meters')]
         #[SerializedName('verwaltungsflaeche')]
         protected ?float $administrativeArea = null,
         #[Type('float')]
+        #[Description('Gastronomy area in square meters')]
         #[SerializedName('gastroflaeche')]
         protected ?float $gastronomyArea = null,
         #[Type('string')]
+        #[Description('Site occupancy index (GRZ) of the plot')]
         #[SerializedName('grz')]
         protected ?string $siteOccupancyIndex = null,
         #[Type('string')]
+        #[Description('Floor area ratio (GFZ) of the plot')]
         #[SerializedName('gfz')]
         protected ?string $floorAreaRatio = null,
         #[Type('string')]
+        #[Description('Floor space index (BMZ) of the plot')]
         #[SerializedName('bmz')]
         protected ?string $floorSpaceIndex = null,
         #[Type('string')]
+        #[Description('Gross floor area (BGF) of the building')]
         #[SerializedName('bgf')]
         protected ?string $grossFloorArea = null,
         #[Type('float')]
+        #[Description('Plot area in square meters')]
         #[SerializedName('grundstuecksflaeche')]
         protected ?float $plotArea = null,
         #[Type('float')]
+        #[Description('Other area in square meters')]
         #[SerializedName('sonstflaeche')]
         protected ?float $otherArea = null,
         #[Type('float')]
+        #[Description('Number of rooms')]
         #[SerializedName('anzahl_zimmer')]
         protected ?float $numberOfRooms = null,
         #[Type('float')]
+        #[Description('Number of bedrooms')]
         #[SerializedName('anzahl_schlafzimmer')]
         protected ?float $numberOfBedrooms = null,
         #[Type('float')]
+        #[Description('Number of bathrooms')]
         #[SerializedName('anzahl_badezimmer')]
         protected ?float $numberOfBathrooms = null,
         #[Type('float')]
+        #[Description('Number of separate toilets')]
         #[SerializedName('anzahl_sep_wc')]
         protected ?float $numberOfSeparateToilets = null,
         #[Type('float')]
+        #[Description('Number of balconies')]
         #[SerializedName('anzahl_balkone')]
         protected ?float $numberOfBalconies = null,
         #[Type('float')]
+        #[Description('Number of terraces')]
         #[SerializedName('anzahl_terrassen')]
         protected ?float $numberOfTerraces = null,
         #[Type('float')]
+        #[Description('Number of loggias')]
         #[SerializedName('anzahl_logia')]
         protected ?float $numberOfLoggias = null,
         #[Type('float')]
+        #[Description('Balcony or terrace area in square meters')]
         #[SerializedName('balkon_terrasse_flaeche')]
         protected ?float $balconyTerraceArea = null,
         #[Type('float')]
+        #[Description('Number of living and bedrooms')]
         #[SerializedName('anzahl_wohn_schlafzimmer')]
         protected ?float $numberOfLivingBedrooms = null,
         #[Type('float')]
+        #[Description('Garden area in square meters')]
         #[SerializedName('gartenflaeche')]
         protected ?float $gardenArea = null,
         #[Type('float')]
+        #[Description('Basement area in square meters')]
         #[SerializedName('kellerflaeche')]
         protected ?float $basementArea = null,
         #[Type('float')]
+        #[Description('Window front area in square meters')]
         #[SerializedName('fensterfront_qm')]
         protected ?float $windowFrontSqm = null,
         #[Type('float')]
+        #[Description('Plot front (street frontage) in meters')]
         #[SerializedName('grundstuecksfront')]
         protected ?float $plotFront = null,
         #[Type('float')]
+        #[Description('Attic area in square meters')]
         #[SerializedName('dachbodenflaeche')]
         protected ?float $atticArea = null,
         #[Type('float')]
+        #[Description('Minimum area from which the property can be subdivided in square meters')]
         #[SerializedName('teilbar_ab')]
         protected ?float $divisibleFrom = null,
         #[Type('float')]
+        #[Description('Heated area in square meters')]
         #[SerializedName('beheizbare_flaeche')]
         protected ?float $heatedArea = null,
         /** Minimum value (inclusive): 1 */
         #[Type('int')]
+        #[Description('Number of parking spaces')]
         #[SerializedName('anzahl_stellplaetze')]
         protected ?int $numberOfParkingSpaces = null,
         #[Type('float')]
+        #[Description('Number of seats in the dining room')]
         #[SerializedName('plaetze_gastraum')]
         protected ?float $diningRoomSeats = null,
         #[Type('float')]
+        #[Description('Number of beds')]
         #[SerializedName('anzahl_betten')]
         protected ?float $numberOfBeds = null,
         #[Type('float')]
+        #[Description('Number of meeting rooms')]
         #[SerializedName('anzahl_tagungsraeume')]
         protected ?float $numberOfMeetingRooms = null,
         #[Type('float')]
+        #[Description('Rentable area in square meters')]
         #[SerializedName('vermietbare_flaeche')]
         protected ?float $rentableArea = null,
         #[Type('float')]
+        #[Description('Number of residential units')]
         #[SerializedName('anzahl_wohneinheiten')]
         protected ?float $numberOfResidentialUnits = null,
         #[Type('float')]
+        #[Description('Number of commercial units')]
         #[SerializedName('anzahl_gewerbeeinheiten')]
         protected ?float $numberOfCommercialUnits = null,
         #[Type('bool')]
+        #[Description('Granny flat (annexe apartment) available')]
         #[SerializedName('einliegerwohnung')]
         protected ?bool $grannyFlat = null,
         #[Type('float')]
+        #[Description('Cubature (volume) of the building in cubic meters')]
         #[SerializedName('kubatur')]
         protected ?float $cubature = null,
         #[Type('float')]
+        #[Description('Area starting from a minimum value in square meters')]
         #[SerializedName('flaechevon')]
         protected ?float $areaFrom = null,
         #[Type('float')]
+        #[Description('Area up to a maximum value in square meters')]
         #[SerializedName('flaechebis')]
         protected ?float $areaTo = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined extension')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

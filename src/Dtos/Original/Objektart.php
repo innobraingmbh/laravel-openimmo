@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Objektart
  * Objektarten
  */
+#[Description('Immobilientyp mit Untertyp-Angabe')]
 #[XmlRoot(name: 'objektart')]
 class Objektart
 {
@@ -21,71 +23,85 @@ class Objektart
         #[XmlList(entry: 'zimmer', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Zimmer>')]
         #[SkipWhenEmpty]
+        #[Description('Zimmeranzahl der Immobilie')]
         #[SerializedName('zimmer')]
         protected array $zimmer = [],
         #[XmlList(entry: 'wohnung', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Wohnung>')]
         #[SkipWhenEmpty]
+        #[Description('Wohnungsobjekt')]
         #[SerializedName('wohnung')]
         protected array $wohnung = [],
         #[XmlList(entry: 'haus', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Haus>')]
         #[SkipWhenEmpty]
+        #[Description('Hausobjekt')]
         #[SerializedName('haus')]
         protected array $haus = [],
         #[XmlList(entry: 'grundstueck', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Grundstueck>')]
         #[SkipWhenEmpty]
+        #[Description('Grundstücksobjekt')]
         #[SerializedName('grundstueck')]
         protected array $grundstueck = [],
         #[XmlList(entry: 'buero_praxen', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\BueroPraxen>')]
         #[SkipWhenEmpty]
+        #[Description('Büro- oder Praxisobjekt')]
         #[SerializedName('buero_praxen')]
         protected array $bueroPraxen = [],
         #[XmlList(entry: 'einzelhandel', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Einzelhandel>')]
         #[SkipWhenEmpty]
+        #[Description('Einzelhandelsobjekt')]
         #[SerializedName('einzelhandel')]
         protected array $einzelhandel = [],
         #[XmlList(entry: 'gastgewerbe', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Gastgewerbe>')]
         #[SkipWhenEmpty]
+        #[Description('Gastronomie- oder Beherbergungsobjekt')]
         #[SerializedName('gastgewerbe')]
         protected array $gastgewerbe = [],
         #[XmlList(entry: 'hallen_lager_prod', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\HallenLagerProd>')]
         #[SkipWhenEmpty]
+        #[Description('Hallen-, Lager- oder Produktionsobjekt')]
         #[SerializedName('hallen_lager_prod')]
         protected array $hallenLagerProd = [],
         #[XmlList(entry: 'land_und_forstwirtschaft', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\LandUndForstwirtschaft>')]
         #[SkipWhenEmpty]
+        #[Description('Land- und forstwirtschaftliches Objekt')]
         #[SerializedName('land_und_forstwirtschaft')]
         protected array $landUndForstwirtschaft = [],
         #[XmlList(entry: 'parken', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Parken>')]
         #[SkipWhenEmpty]
+        #[Description('Stellplatz oder Parkfläche')]
         #[SerializedName('parken')]
         protected array $parken = [],
         #[XmlList(entry: 'sonstige', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\Sonstige>')]
         #[SkipWhenEmpty]
+        #[Description('Sonstige Angabe')]
         #[SerializedName('sonstige')]
         protected array $sonstige = [],
         #[XmlList(entry: 'freizeitimmobilie_gewerblich', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\FreizeitimmobilieGewerblich>')]
         #[SkipWhenEmpty]
+        #[Description('Gewerbliches Freizeitobjekt')]
         #[SerializedName('freizeitimmobilie_gewerblich')]
         protected array $freizeitimmobilieGewerblich = [],
         #[XmlList(entry: 'zinshaus_renditeobjekt', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\ZinshausRenditeobjekt>')]
         #[SkipWhenEmpty]
+        #[Description('Mehrfamilienhaus als Anlageobjekt')]
         #[SerializedName('zinshaus_renditeobjekt')]
         protected array $zinshausRenditeobjekt = [],
         #[XmlList(entry: 'objektart_zusatz', inline: true)]
         #[Type('array<string>')]
         #[SkipWhenEmpty]
+        #[Description('Ergänzende Typangabe zur Immobilie')]
         #[SerializedName('objektart_zusatz')]
         protected array $objektartZusatz = []
     ) {}

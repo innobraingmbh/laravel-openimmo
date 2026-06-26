@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class PurchasePrice
  * Gesamt- (Angebots-)Kaufpreis der Immobilie. Wenn "Auf Anfrage" dann Wert = 0 und Attribut auf TRUE
  */
+#[Description('Purchase price of the property')]
 #[XmlRoot(name: 'kaufpreis')]
 class PurchasePrice
 {
@@ -22,6 +24,7 @@ class PurchasePrice
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('auf_anfrage')]
+        #[Description('Price on request')]
         protected ?bool $onRequest = null,
         #[Inline]
         #[Type('float')]

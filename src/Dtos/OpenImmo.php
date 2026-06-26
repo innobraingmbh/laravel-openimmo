@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -15,26 +16,31 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Dokument Element
  * Root Element
  */
+#[Description('Root element of the OpenImmo data format')]
 #[XmlRoot(name: 'openimmo')]
 class OpenImmo
 {
     public function __construct(
         #[Type(Transfer::class)]
+        #[Description('Data transfer metadata')]
         #[SerializedName('uebertragung')]
         protected ?Transfer $transfer = null,
         #[XmlList(entry: 'anbieter', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Provider>')]
         #[SkipWhenEmpty]
+        #[Description('Provider (agent or owner) of the property')]
         #[SerializedName('anbieter')]
         protected array $provider = [],
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined simple free field')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('User-defined free field with arbitrary content')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = []
     ) {}

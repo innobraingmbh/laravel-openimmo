@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Bauweise
  */
+#[Description('Bauweise der Immobilie')]
 #[XmlRoot(name: 'bauweise')]
 class Bauweise
 {
@@ -20,16 +22,19 @@ class Bauweise
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MASSIV')]
+        #[Description('Massivbauweise')]
         protected ?bool $massiv = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FERTIGTEILE')]
+        #[Description('Fertigteil-Bauweise')]
         protected ?bool $fertigteile = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HOLZ')]
+        #[Description('Holz als Heizenergiequelle')]
         protected ?bool $holz = null
     ) {}
 

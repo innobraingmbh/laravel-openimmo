@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ExternalCommission
  * Courtage, die der Kunde zu zahlen hat, als Betrag in ? / % / MM, daher Textfeld
  */
+#[Description("External commission (buyer's commission) for the property")]
 #[XmlRoot(name: 'aussen_courtage')]
 class ExternalCommission
 {
@@ -22,6 +24,7 @@ class ExternalCommission
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('mit_mwst')]
+        #[Description('Price including VAT')]
         protected ?bool $withVAT = null,
         #[Inline]
         #[Type('string')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -13,48 +14,59 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class ImprintStructure
  * Ergänzung ($V120)
  */
+#[Description('Imprint information of the provider')]
 #[XmlRoot(name: 'impressum_strukt')]
 class ImprintStructure
 {
     public function __construct(
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Name of the company')]
         #[SerializedName('firmenname')]
         protected string $companyName = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Company address of the provider')]
         #[SerializedName('firmenanschrift')]
         protected string $companyAddress = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Phone number')]
         #[SerializedName('telefon')]
         protected string $phone = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Authorized representative of the provider')]
         #[SerializedName('vertretungsberechtigter')]
         protected string $authorizedRepresentative = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Professional supervisory authority of the broker')]
         #[SerializedName('berufsaufsichtsbehoerde')]
         protected string $professionalSupervisoryAuthority = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Commercial register information of the provider')]
         #[SerializedName('handelsregister')]
         protected string $commercialRegister = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Commercial register number of the provider')]
         #[SerializedName('handelsregister_nr')]
         protected string $commercialRegisterNumber = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('VAT identification number of the provider')]
         #[SerializedName('umsst-id')]
         protected string $vatId = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Tax number of the provider')]
         #[SerializedName('steuernummer')]
         protected string $taxNumber = '',
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Additional information')]
         #[SerializedName('weiteres')]
         protected string $additional = ''
     ) {}

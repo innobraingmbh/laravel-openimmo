@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlRoot;
@@ -13,26 +14,33 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Auction
  * Angaben zu einer Versteigerung. Wenn es ein Objekt in Zwangsverteigerung ist, dann muss das element "zwangsversteigerung" auf true/1 gesetzt werden.
  */
+#[Description('Foreclosure auction information of the property')]
 #[XmlRoot(name: 'versteigerung')]
 class Auction
 {
     public function __construct(
         #[Type('bool')]
+        #[Description('Forced sale or distressed sale')]
         #[SerializedName('zwangsversteigerung')]
         protected ?bool $forcedSale = null,
         #[Type('string')]
+        #[Description('File number of the foreclosure auction')]
         #[SerializedName('aktenzeichen')]
         protected ?string $fileNumber = null,
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Date of the forced sale')]
         #[SerializedName('zvtermin')]
         protected ?DateTime $forcedSaleDate = null,
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]
+        #[Description('Additional date')]
         #[SerializedName('zusatztermin')]
         protected ?DateTime $additionalDate = null,
         #[Type('string')]
+        #[Description('Responsible district court')]
         #[SerializedName('amtsgericht')]
         protected ?string $districtCourt = null,
         #[Type('float')]
+        #[Description('Market value of the property')]
         #[SerializedName('verkehrswert')]
         protected ?float $marketValue = null
     ) {}

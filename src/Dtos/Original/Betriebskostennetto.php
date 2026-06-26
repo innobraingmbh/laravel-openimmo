@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Betriebskostennetto
  * Betriebskosten eines Objektes bei Vermietun, UmSt. im Attribut
  */
+#[Description('Netto-Betriebskosten (ohne MwSt.)')]
 #[XmlRoot(name: 'betriebskostennetto')]
 class Betriebskostennetto
 {
@@ -22,6 +24,7 @@ class Betriebskostennetto
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('betriebskostenust')]
+        #[Description('Mehrwertsteueranteil der Betriebskosten')]
         protected ?float $betriebskostenust = null,
         #[Inline]
         #[Type('float')]

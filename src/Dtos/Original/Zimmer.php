@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Zimmer
  * Objekart / Typ f. Zimmer
  */
+#[Description('Zimmeranzahl und Raumangaben der Immobilie')]
 #[XmlRoot(name: 'zimmer')]
 class Zimmer
 {
@@ -27,6 +29,7 @@ class Zimmer
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zimmertyp')]
+        #[Description('Raumtyp')]
         protected string $zimmertyp = ''
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class PriceTimeUnit
  * Zeiteinheit für die der Preis gilt, vorrangig bei Ferienobjekten
  */
+#[Description('Time unit for the price specification (e.g. per day, week, month)')]
 #[XmlRoot(name: 'preis_zeiteinheit')]
 class PriceTimeUnit
 {
@@ -33,6 +35,7 @@ class PriceTimeUnit
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('zeiteinheit')]
+        #[Description('Time unit (e.g. day, week, month)')]
         protected string $timeUnit = ''
     ) {}
 

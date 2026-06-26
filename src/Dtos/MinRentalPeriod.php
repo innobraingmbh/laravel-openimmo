@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class MinRentalPeriod
  * Mindestzeitraum für den die Immobilie gemietet werden muss, Optionen nicht kombinierbar, vorrangig bei WaZ
  */
+#[Description('Minimum rental period of the property')]
 #[XmlRoot(name: 'min_mietdauer')]
 class MinRentalPeriod
 {
@@ -34,6 +36,7 @@ class MinRentalPeriod
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('min_dauer')]
+        #[Description('Minimum rental duration')]
         protected string $minDuration = '',
         #[Inline]
         #[Type('string')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -15,6 +16,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  *  Change= Update der Objektdaten, Delete = Löschen des Objektes
  *  Referenz= Die Möglichkeit Objekte in Portalen als Verkauft oder Archiv zu definieren.
  */
+#[Description('Action for the data transfer (e.g. create, update, delete)')]
 #[XmlRoot(name: 'aktion')]
 class Action
 {
@@ -33,6 +35,7 @@ class Action
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('aktionart')]
+        #[Description('Type of the data transfer action')]
         protected string $actionType = ''
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class RoofShape
  */
+#[Description('Roof shape of the building')]
 #[XmlRoot(name: 'dachform')]
 class RoofShape
 {
@@ -20,36 +22,43 @@ class RoofShape
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KRUEPPELWALMDACH')]
+        #[Description('Truncated hip roof')]
         protected ?bool $truncatedHipRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MANSARDDACH')]
+        #[Description('Mansard roof')]
         protected ?bool $mansardRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PULTDACH')]
+        #[Description('Shed (mono-pitched) roof')]
         protected ?bool $shedRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SATTELDACH')]
+        #[Description('Saddle (gabled) roof')]
         protected ?bool $saddleRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('WALMDACH')]
+        #[Description('Hip roof')]
         protected ?bool $hipRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('FLACHDACH')]
+        #[Description('Flat roof')]
         protected ?bool $flatRoof = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PYRAMIDENDACH')]
+        #[Description('Pyramid roof')]
         protected ?bool $pyramidRoof = null
     ) {}
 

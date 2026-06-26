@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class EnergyType
  */
+#[Description('Energy efficiency type of the property (e.g. low-energy, passive house)')]
 #[XmlRoot(name: 'energietyp')]
 class EnergyType
 {
@@ -20,46 +22,55 @@ class EnergyType
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('PASSIVHAUS')]
+        #[Description('Passive house standard fulfilled')]
         protected ?bool $passiveHouse = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NIEDRIGENERGIE')]
+        #[Description('Low-energy house standard fulfilled')]
         protected ?bool $lowEnergy = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('NEUBAUSTANDARD')]
+        #[Description('New building standard of the property')]
         protected ?bool $newBuildingStandard = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW40')]
+        #[Description('KfW-40 standard fulfilled')]
         protected ?bool $kfw40 = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW60')]
+        #[Description('KfW-60 standard fulfilled')]
         protected ?bool $kfw60 = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW55')]
+        #[Description('KfW-55 standard fulfilled')]
         protected ?bool $kfw55 = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('KFW70')]
+        #[Description('KfW-70 standard fulfilled')]
         protected ?bool $kfw70 = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIEBAUWEISE')]
+        #[Description('MinEnergie construction standard fulfilled')]
         protected ?bool $minEnergieConstruction = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('MINERGIE_ZERTIFIZIERT')]
+        #[Description('MinEnergie certification available')]
         protected ?bool $minEnergieCertified = null
     ) {}
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class OtherPhone
  */
+#[Description('Additional phone number of a contact person')]
 #[XmlRoot(name: 'tel_sonstige')]
 class OtherPhone
 {
@@ -37,11 +39,13 @@ class OtherPhone
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('telefonart')]
+        #[Description('Type of phone number')]
         protected string $phoneType = '',
         /** optional */
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bemerkung')]
+        #[Description('Remark or note')]
         protected ?string $remark = null,
         #[Inline]
         #[Type('string')]

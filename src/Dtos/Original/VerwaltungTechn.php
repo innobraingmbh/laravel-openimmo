@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,67 +15,85 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class VerwaltungTechn
  */
+#[Description('Technische Verwaltungsangaben des Datentransfers')]
 #[XmlRoot(name: 'verwaltung_techn')]
 class VerwaltungTechn
 {
     public function __construct(
         #[Type('string')]
+        #[Description('Interne Objektnummer des Anbieters')]
         #[SerializedName('objektnr_intern')]
         protected ?string $objektnrIntern = null,
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Externe Objektnummer des Anbieters')]
         #[SerializedName('objektnr_extern')]
         protected string $objektnrExtern = '',
         #[Type(Aktion::class)]
+        #[Description('Datentransferaktion (z.B. Anlegen, Ändern, Löschen)')]
         #[SerializedName('aktion')]
         protected ?Aktion $aktion = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Datum, ab dem das Inserat aktiv ist')]
         #[SerializedName('aktiv_von')]
         protected ?DateTime $aktivVon = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Datum, bis zu dem das Inserat aktiv ist')]
         #[SerializedName('aktiv_bis')]
         protected ?DateTime $aktivBis = null,
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('OpenImmo-Objekt-ID')]
         #[SerializedName('openimmo_obid')]
         protected string $openimmoObid = '',
         #[Type('string')]
+        #[Description('Herkunftskennung des Datensatzes')]
         #[SerializedName('kennung_ursprung')]
         protected ?string $kennungUrsprung = null,
         #[Type("DateTime<'Y-m-d'>")]
+        #[Description('Datum ab dem der Status gilt')]
         #[SerializedName('stand_vom')]
         protected ?DateTime $standVom = null,
         #[Type('bool')]
+        #[Description('Allgemeine Weiterleitungseinstellung')]
         #[SerializedName('weitergabe_generell')]
         protected ?bool $weitergabeGenerell = null,
         #[Type('string')]
+        #[Description('Weiterleitungseinstellung bei positivem Ergebnis')]
         #[SerializedName('weitergabe_positiv')]
         protected ?string $weitergabePositiv = null,
         #[Type('string')]
+        #[Description('Weiterleitungseinstellung bei negativem Ergebnis')]
         #[SerializedName('weitergabe_negativ')]
         protected ?string $weitergabeNegativ = null,
         #[Type('string')]
+        #[Description('Bezeichner der Gruppe')]
         #[SerializedName('gruppen_kennung')]
         protected ?string $gruppenKennung = null,
         #[Type(Master::class)]
+        #[Description('Stammdaten des Datentransfers')]
         #[SerializedName('master')]
         protected ?Master $master = null,
         #[Type('string')]
+        #[Description('Sprache des Textes (ISO-Sprachcode)')]
         #[SerializedName('sprache')]
         protected ?string $sprache = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

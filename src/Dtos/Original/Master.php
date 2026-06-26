@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -17,6 +18,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Damit die Anzeige des Master Objektes gesteuert werden kann, wird im Master ein Flag
  *  visible eingesetzt. Das Attribut ist dann zwingend anzugeben
  */
+#[Description('Stammdaten des OpenImmo-Datentransfers')]
 #[XmlRoot(name: 'master')]
 class Master
 {
@@ -25,6 +27,7 @@ class Master
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('visible')]
+        #[Description('Sichtbarkeit des Inserats oder Elements')]
         protected bool $visible = false,
         #[Inline]
         #[Type('string')]

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Grundstueck
  * Objektart / Typ f. Grundstücke
  */
+#[Description('Grundstücksobjekt mit Typangabe')]
 #[XmlRoot(name: 'grundstueck')]
 class Grundstueck
 {
@@ -43,6 +45,7 @@ class Grundstueck
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('grundst_typ')]
+        #[Description('Typ des Grundstücksobjekts')]
         protected string $grundstTyp = ''
     ) {}
 

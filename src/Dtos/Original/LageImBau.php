@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class LageImBau
  * Angabe über die Lage der Immobilie im Gesamtgebäude, Optionen kombinierbar
  */
+#[Description('Position der Wohnung im Gebäude (z.B. links, rechts, Mitte)')]
 #[XmlRoot(name: 'lage_im_bau')]
 class LageImBau
 {
@@ -21,21 +23,25 @@ class LageImBau
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('LINKS')]
+        #[Description('Lage links im Gebäude')]
         protected ?bool $links = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('RECHTS')]
+        #[Description('Lage rechts im Gebäude')]
         protected ?bool $rechts = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('VORNE')]
+        #[Description('Frontseitige Ausrichtung oder Fassade')]
         protected ?bool $vorne = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('HINTEN')]
+        #[Description('Rückseitige Ausrichtung')]
         protected ?bool $hinten = null
     ) {}
 

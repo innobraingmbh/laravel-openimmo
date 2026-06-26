@@ -36,7 +36,7 @@ describe('generation', function () {
         $class = new ReflectionClass(HeatingType::class);
         $description = $method->invoke($schemaGenerator, $class);
 
-        expect($description)->toBe('Welche Heizungsarten sind vorhanden, Optionen kombinierbar');
+        expect($description)->toBe('Type of heating system (e.g. central heating, underfloor heating)');
     });
 
     test('nullable field types', function () {

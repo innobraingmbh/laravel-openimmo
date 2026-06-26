@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Evbnetto
  * Erhaltungs- und Verbesserungsbeitrag. Ähnlich Instanthaltungsrücklage, UmSt. im Attribut.
  */
+#[Description('Netto-Einheitswertbescheid (EVB)')]
 #[XmlRoot(name: 'evbnetto')]
 class Evbnetto
 {
@@ -22,6 +24,7 @@ class Evbnetto
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('evbust')]
+        #[Description('Mehrwertsteuer auf den Einheitswert')]
         protected ?float $evbust = null,
         #[Inline]
         #[Type('float')]

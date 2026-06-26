@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Anhang
  * Element für Anhänge
  */
+#[Description('Einzelner Anhang (Datei) der Immobilie')]
 #[XmlRoot(name: 'anhang')]
 class Anhang
 {
@@ -62,6 +64,7 @@ class Anhang
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('location')]
+        #[Description('Lagebeschreibung der Immobilie')]
         protected string $location = '',
         /**
          * optional
@@ -71,18 +74,23 @@ class Anhang
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('gruppe')]
+        #[Description('Gruppe oder Kategorie')]
         protected string $gruppe = '',
         #[Type('string')]
+        #[Description('Titel des Anhangs')]
         #[SerializedName('anhangtitel')]
         protected ?string $anhangtitel = null,
         #[Type('string')]
         #[SkipWhenEmpty]
+        #[Description('Dateiformat des Anhangs')]
         #[SerializedName('format')]
         protected string $format = '',
         #[Type(Check::class)]
+        #[Description('Prüfinformation')]
         #[SerializedName('check')]
         protected ?Check $check = null,
         #[Type(Daten::class)]
+        #[Description('Datenbehälter')]
         #[SerializedName('daten')]
         protected ?Daten $daten = null
     ) {}

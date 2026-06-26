@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Dtos\Original;
 
 use DateTime;
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -15,6 +16,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Check
  * Angabe von Daten für die Prüfung auf ein Update
  */
+#[Description('Prüfinformation im Datentransferprozess')]
 #[XmlRoot(name: 'check')]
 class Check
 {
@@ -33,6 +35,7 @@ class Check
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('ctype')]
+        #[Description('MIME-Typ des Anhangs')]
         protected string $ctype = '',
         #[Inline]
         #[Type('DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>')]

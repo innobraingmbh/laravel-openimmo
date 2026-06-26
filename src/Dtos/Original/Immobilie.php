@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\SkipWhenEmpty;
 use JMS\Serializer\Annotation\Type;
@@ -14,73 +15,93 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Immobilie
  * Angaben einer einzelnen Immobile
  */
+#[Description('Einzelne Immobilie mit allen Angaben')]
 #[XmlRoot(name: 'immobilie')]
 class Immobilie
 {
     public function __construct(
         #[Type(Objektkategorie::class)]
+        #[Description('Objektkategorie mit Vermarktungsart und Typ')]
         #[SerializedName('objektkategorie')]
         protected ?Objektkategorie $objektkategorie = null,
         #[Type(Geo::class)]
+        #[Description('Geografische Angaben der Immobilie')]
         #[SerializedName('geo')]
         protected ?Geo $geo = null,
         #[Type(Kontaktperson::class)]
+        #[Description('Kontaktperson für die Immobilie')]
         #[SerializedName('kontaktperson')]
         protected ?Kontaktperson $kontaktperson = null,
         #[XmlList(entry: 'weitere_adresse', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\WeitereAdresse>')]
         #[SkipWhenEmpty]
+        #[Description('Weitere Adresse')]
         #[SerializedName('weitere_adresse')]
         protected array $weitereAdresse = [],
         #[Type(Preise::class)]
+        #[Description('Preisangaben der Immobilie')]
         #[SerializedName('preise')]
         protected ?Preise $preise = null,
         #[Type(Bieterverfahren::class)]
+        #[Description('Bieterverfahren für die Immobilie')]
         #[SerializedName('bieterverfahren')]
         protected ?Bieterverfahren $bieterverfahren = null,
         #[Type(Versteigerung::class)]
+        #[Description('Zwangsversteigerungsinformationen')]
         #[SerializedName('versteigerung')]
         protected ?Versteigerung $versteigerung = null,
         #[Type(Flaechen::class)]
+        #[Description('Flächenangaben der Immobilie')]
         #[SerializedName('flaechen')]
         protected ?Flaechen $flaechen = null,
         #[Type(Ausstattung::class)]
+        #[Description('Ausstattungsmerkmale der Immobilie')]
         #[SerializedName('ausstattung')]
         protected ?Ausstattung $ausstattung = null,
         #[Type(ZustandAngaben::class)]
+        #[Description('Zustandsangaben der Immobilie')]
         #[SerializedName('zustand_angaben')]
         protected ?ZustandAngaben $zustandAngaben = null,
         #[Type(Bewertung::class)]
+        #[Description('Bewertungsinformationen der Immobilie')]
         #[SerializedName('bewertung')]
         protected ?Bewertung $bewertung = null,
         #[Type(Infrastruktur::class)]
+        #[Description('Infrastrukturanbindung der Immobilie')]
         #[SerializedName('infrastruktur')]
         protected ?Infrastruktur $infrastruktur = null,
         #[Type(Freitexte::class)]
+        #[Description('Freie Textbeschreibungen der Immobilie')]
         #[SerializedName('freitexte')]
         protected ?Freitexte $freitexte = null,
         #[Type(Anhaenge::class)]
+        #[Description('Liste der Anhänge der Immobilie')]
         #[SerializedName('anhaenge')]
         protected ?Anhaenge $anhaenge = null,
         #[Type(VerwaltungObjekt::class)]
+        #[Description('Objektverwaltungsangaben')]
         #[SerializedName('verwaltung_objekt')]
         protected ?VerwaltungObjekt $verwaltungObjekt = null,
         #[Type(VerwaltungTechn::class)]
+        #[Description('Technische Verwaltungsdaten des Datentransfers')]
         #[SerializedName('verwaltung_techn')]
         protected ?VerwaltungTechn $verwaltungTechn = null,
         #[XmlList(entry: 'user_defined_simplefield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedSimplefield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes einfaches Freifeld')]
         #[SerializedName('user_defined_simplefield')]
         protected array $userDefinedSimplefield = [],
         #[XmlList(entry: 'user_defined_anyfield', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedAnyfield>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefiniertes Freifeld mit beliebigem Inhalt')]
         #[SerializedName('user_defined_anyfield')]
         protected array $userDefinedAnyfield = [],
         #[XmlList(entry: 'user_defined_extend', inline: true)]
         #[Type('array<Innobrain\OpenImmo\Dtos\Original\UserDefinedExtend>')]
         #[SkipWhenEmpty]
+        #[Description('Benutzerdefinierte Erweiterung')]
         #[SerializedName('user_defined_extend')]
         protected array $userDefinedExtend = []
     ) {}

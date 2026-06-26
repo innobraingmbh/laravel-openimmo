@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Sonstigekostennetto
  * Anganen bei Miet-Objekten, UmSt. im Attribut.
  */
+#[Description('Sonstige Netto-Kosten (ohne MwSt.)')]
 #[XmlRoot(name: 'sonstigekostennetto')]
 class Sonstigekostennetto
 {
@@ -22,6 +24,7 @@ class Sonstigekostennetto
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('sonstigekostenust')]
+        #[Description('Mehrwertsteueranteil sonstiger Kosten')]
         protected ?float $sonstigekostenust = null,
         #[Inline]
         #[Type('float')]

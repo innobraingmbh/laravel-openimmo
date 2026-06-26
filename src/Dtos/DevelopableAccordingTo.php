@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class DevelopableAccordingTo
  * Bebaubar nach Bebauungsrichtlinien, Optionen nicht kombinierbar
  */
+#[Description('Developability according to building law (e.g. BauGB, BauNVO)')]
 #[XmlRoot(name: 'bebaubar_nach')]
 class DevelopableAccordingTo
 {
@@ -39,6 +41,7 @@ class DevelopableAccordingTo
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('bebaubar_attr')]
+        #[Description('XML attribute for the developability value')]
         protected string $developableAttribute = ''
     ) {}
 

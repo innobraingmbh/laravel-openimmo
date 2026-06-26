@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -12,6 +13,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Ausbaustufe
  */
+#[Description('Ausbaustufe des Gebäudes')]
 #[XmlRoot(name: 'ausbaustufe')]
 class Ausbaustufe
 {
@@ -20,26 +22,31 @@ class Ausbaustufe
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('BAUSATZHAUS')]
+        #[Description('Fertighaus')]
         protected ?bool $bausatzhaus = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('AUSBAUHAUS')]
+        #[Description('Haus ist ausbaufähig')]
         protected ?bool $ausbauhaus = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITKELLER')]
+        #[Description('Schlüsselfertig mit Keller')]
         protected ?bool $schluesselfertigmitkeller = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGOHNEBODENPLATTE')]
+        #[Description('Schlüsselfertig ohne Bodenplatte')]
         protected ?bool $schluesselfertigohnebodenplatte = null,
         /** optional */
         #[Type('bool')]
         #[XmlAttribute]
         #[SerializedName('SCHLUESSELFERTIGMITBODENPLATTE')]
+        #[Description('Schlüsselfertig mit Bodenplatte')]
         protected ?bool $schluesselfertigmitbodenplatte = null
     ) {}
 

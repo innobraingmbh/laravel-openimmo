@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class OfficePractices
  * Objektart / Typ f. Büro/Praxen
  */
+#[Description('Commercial property of type office or medical practice')]
 #[XmlRoot(name: 'buero_praxen')]
 class OfficePractices
 {
@@ -45,6 +47,7 @@ class OfficePractices
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('buero_typ')]
+        #[Description('Type of office or medical practice property')]
         protected string $officeType = ''
     ) {}
 

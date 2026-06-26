@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class MaxMietdauer
  * Maximalzeitraum für den die Immobilie gemietet werdenkann, Optionen nicht kombinierbar, vorrangig bei WaZ
  */
+#[Description('Maximale Mietdauer der Immobilie')]
 #[XmlRoot(name: 'max_mietdauer')]
 class MaxMietdauer
 {
@@ -34,6 +36,7 @@ class MaxMietdauer
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('max_dauer')]
+        #[Description('Maximale Mietdauer')]
         protected string $maxDauer = '',
         #[Inline]
         #[Type('string')]

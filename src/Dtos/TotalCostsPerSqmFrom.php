@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,6 +15,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class TotalCostsPerSqmFrom
  * Gesamtkosten bei Gewerbeobjekten Von - Bis.
  */
+#[Description('Total costs per square meter starting from a minimum value')]
 #[XmlRoot(name: 'gesamtkostenprom2von')]
 class TotalCostsPerSqmFrom
 {
@@ -22,6 +24,7 @@ class TotalCostsPerSqmFrom
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('gesamtkostenprom2bis')]
+        #[Description('Total costs per square meter up to a maximum value')]
         protected ?float $totalCostsPerSqmTo = null,
         #[Inline]
         #[Type('float')]

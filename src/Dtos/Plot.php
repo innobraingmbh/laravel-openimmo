@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Plot
  * Objektart / Typ f. Grundstücke
  */
+#[Description('Plot property with type specification')]
 #[XmlRoot(name: 'grundstueck')]
 class Plot
 {
@@ -43,6 +45,7 @@ class Plot
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('grundst_typ')]
+        #[Description('Type of the plot property')]
         protected string $plotType = ''
     ) {}
 

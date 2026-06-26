@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos\Original;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\Inline;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
 /**
  * Class Hauptmietzinsnetto
  */
+#[Description('Netto-Hauptmietzins (ohne MwSt.)')]
 #[XmlRoot(name: 'hauptmietzinsnetto')]
 class Hauptmietzinsnetto
 {
@@ -21,6 +23,7 @@ class Hauptmietzinsnetto
         #[Type('float')]
         #[XmlAttribute]
         #[SerializedName('hauptmietzinsust')]
+        #[Description('Mehrwertsteueranteil des Hauptmietzinses')]
         protected ?float $hauptmietzinsust = null,
         #[Inline]
         #[Type('float')]

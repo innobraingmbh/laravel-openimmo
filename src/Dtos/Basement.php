@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Dtos;
 
+use Innobrain\OpenImmo\Attributes\Description;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -13,6 +14,7 @@ use JMS\Serializer\Annotation\XmlRoot;
  * Class Basement
  * Ist das Objekt unterkellert? Optionen nicht kombinierbar
  */
+#[Description('Basement or cellar information of the property')]
 #[XmlRoot(name: 'unterkellert')]
 class Basement
 {
@@ -31,6 +33,7 @@ class Basement
         #[Type('string')]
         #[XmlAttribute]
         #[SerializedName('keller')]
+        #[Description('Basement or cellar information')]
         protected string $basement = ''
     ) {}
 
