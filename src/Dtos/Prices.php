@@ -169,7 +169,7 @@ class Prices
         #[SerializedName('kaufpreis_pro_qm')]
         protected ?float $purchasePricePerSqm = null,
         #[Type('bool')]
-        #[Description('Broker commission is charged')]
+        #[Description('Whether broker commission applies: true = provisionspflichtig, false = provisionsfrei (commission-free)')]
         #[SerializedName('provisionspflichtig')]
         protected ?bool $commissionRequired = null,
         #[Type(CommissionSplit::class)]

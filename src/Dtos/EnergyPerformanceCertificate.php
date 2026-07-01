@@ -39,7 +39,7 @@ class EnergyPerformanceCertificate
     public function __construct(
         /** @see PARTITION_* constants */
         #[Type('string')]
-        #[Description('Type of energy certificate (demand or consumption certificate)')]
+        #[Description('Type of energy certificate: "BEDARF" for Energiebedarfsausweis, "VERBRAUCH" for Energieverbrauchsausweis')]
         #[SerializedName('epart')]
         protected string $energyCertificateType = '',
         #[Type('string')]
@@ -47,7 +47,7 @@ class EnergyPerformanceCertificate
         #[SerializedName('gueltig_bis')]
         protected ?string $validUntil = null,
         #[Type('string')]
-        #[Description('Energy consumption characteristic value in kWh/(m²·a)')]
+        #[Description('Energy consumption value (Energieverbrauchskennwert) in kWh/(m²·a) — use only for Verbrauchsausweis; null for Bedarfsausweis')]
         #[SerializedName('energieverbrauchkennwert')]
         protected ?string $energyConsumptionValue = null,
         #[Type('bool')]
@@ -55,7 +55,7 @@ class EnergyPerformanceCertificate
         #[SerializedName('mitwarmwasser')]
         protected ?bool $withHotWater = null,
         #[Type('string')]
-        #[Description('Final energy demand in kWh/(m²·a)')]
+        #[Description('Final energy demand (Endenergiebedarf) in kWh/(m²·a) — use only for Bedarfsausweis; null for Verbrauchsausweis')]
         #[SerializedName('endenergiebedarf')]
         protected ?string $finalEnergyDemand = null,
         #[Type('string')]

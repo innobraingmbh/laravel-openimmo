@@ -37,7 +37,7 @@ trait ConditionInformation
                 $result['energieausweistyp'] = $energyCertificateType;
             }
 
-            $result['energyClass'] = $energyPass->getValueClass();
+            $result['energyClass'] = $energyPass->getEnergyEfficiencyClass();
             $result['energieverbrauchskennwert'] = $energyPass->getEnergyConsumptionValue();
             $result['warmwasserEnthalten'] = $energyPass->getWithHotWater();
             $result['endenergiebedarf'] = $energyPass->getFinalEnergyDemand();
