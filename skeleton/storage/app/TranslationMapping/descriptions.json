@@ -1110,7 +1110,7 @@
         },
         "EnergyPerformanceCertificate.energyCertificateType": {
             "de": "Typ des Energieausweises (Bedarfs- oder Verbrauchsausweis)",
-            "en": "Type of energy certificate (demand or consumption certificate)"
+            "en": "Type of energy certificate: \"BEDARF\" for Energiebedarfsausweis, \"VERBRAUCH\" for Energieverbrauchsausweis"
         },
         "EnergyPerformanceCertificate.validUntil": {
             "de": "Gültigkeitsdatum des Energieausweises",
@@ -1118,7 +1118,7 @@
         },
         "EnergyPerformanceCertificate.energyConsumptionValue": {
             "de": "Energieverbrauchskennwert in kWh/(m²·a)",
-            "en": "Energy consumption characteristic value in kWh/(m²·a)"
+            "en": "Energy consumption value (Energieverbrauchskennwert) in kWh/(m²·a) — use only for Verbrauchsausweis; null for Bedarfsausweis"
         },
         "EnergyPerformanceCertificate.withHotWater": {
             "de": "Warmwasser im Energieverbrauchskennwert enthalten",
@@ -1126,7 +1126,7 @@
         },
         "EnergyPerformanceCertificate.finalEnergyDemand": {
             "de": "Endenergiebedarf in kWh/(m²·a)",
-            "en": "Final energy demand in kWh/(m²·a)"
+            "en": "Final energy demand (Endenergiebedarf) in kWh/(m²·a) — use only for Bedarfsausweis; null for Verbrauchsausweis"
         },
         "EnergyPerformanceCertificate.primaryEnergySource": {
             "de": "Primärer Energieträger aus dem Energieausweis",
@@ -1890,7 +1890,7 @@
         },
         "Prices.commissionRequired": {
             "de": "Maklerprovision wird erhoben",
-            "en": "Broker commission is charged"
+            "en": "Whether broker commission applies: true = provisionspflichtig, false = provisionsfrei (commission-free)"
         },
         "Prices.commissionSplit": {
             "de": "Aufteilung der Maklerprovision",
