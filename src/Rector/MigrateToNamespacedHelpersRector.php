@@ -17,7 +17,7 @@ final class MigrateToNamespacedHelpersRector extends AbstractRector
     private const string HELPERS_NAMESPACE = 'Innobrain\\OpenImmo\\Helpers';
 
     /** @var array<string, true> */
-    private array $helperFunctions = [];
+    private array $helperFunctions;
 
     public function __construct()
     {
