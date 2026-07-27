@@ -16,6 +16,24 @@
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
             }
         },
+        "composer/pcre": {
+            "3.4.0": {
+                "sha256": "dc9cbb5032338c0efd6a1e50d0a263f1d5aa162452259f56f031f7e16b327135",
+                "sourceReference": "d5a341b3fb61f3001970940afb1d332968a183ed",
+                "sourceUrl": "https://github.com/composer/pcre.git",
+                "distUrl": "https://api.github.com/repos/composer/pcre/zipball/d5a341b3fb61f3001970940afb1d332968a183ed",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "friendsofphp/php-cs-fixer": {
+            "v3.95.15": {
+                "sha256": "5a0b031f7da41595f878650c2ed561d117e3bcf66c11afb2b5add0a4d2d637c4",
+                "sourceReference": "3e47e5d50046f87e3244acde2fe655d1a3b72555",
+                "sourceUrl": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
+                "distUrl": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/3e47e5d50046f87e3244acde2fe655d1a3b72555",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
         "guzzlehttp/guzzle": {
             "7.15.1": {
                 "sha256": "b848d662b9995850c3bcba00ceff4f01d85b4f68fe0e6480778e52b0f62ece0d",
@@ -52,6 +70,24 @@
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
             }
         },
+        "infection/infection": {
+            "0.34.0": {
+                "sha256": "283614ac2abecb04512d27856c5871731fed82bf4512525e85a465ce36dfdb89",
+                "sourceReference": "373c2ab1689696ac6969013a04bdbccae74d7e08",
+                "sourceUrl": "https://github.com/infection/infection.git",
+                "distUrl": "https://api.github.com/repos/infection/infection/zipball/373c2ab1689696ac6969013a04bdbccae74d7e08",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
+        "justinrainbow/json-schema": {
+            "6.10.0": {
+                "sha256": "e6e065f5d3d5e10483ab02e40b79b6856eb4fd720dde336acd42b7dd0710f794",
+                "sourceReference": "8b1308a9d7bdbdb20ce87ef920f82b4564bb2d33",
+                "sourceUrl": "https://github.com/jsonrainbow/json-schema.git",
+                "distUrl": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/8b1308a9d7bdbdb20ce87ef920f82b4564bb2d33",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
         "laravel/framework": {
             "v13.20.0": {
                 "sha256": "b778a6ffaff9f6f01df566685d503ddaf69e2494d75b3e42723274888a3c4203",
@@ -59,6 +95,15 @@
                 "sourceUrl": "https://github.com/laravel/framework.git",
                 "distUrl": "https://api.github.com/repos/laravel/framework/zipball/b9d1bccad5fbc32578dca22566bb11e7c0e545d7",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            }
+        },
+        "laravel/pint": {
+            "v1.29.3": {
+                "sha256": "17dd42aadebf6f3bb7032aa3ceb2ba1576064aae0b0c06d4eb9cfa230d7d83f5",
+                "sourceReference": "da1d1111a6aa2e082d2a388b194afe1ba0a05d14",
+                "sourceUrl": "https://github.com/laravel/pint.git",
+                "distUrl": "https://api.github.com/repos/laravel/pint/zipball/da1d1111a6aa2e082d2a388b194afe1ba0a05d14",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
             }
         },
         "laravel/prompts": {
@@ -115,6 +160,87 @@
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
             }
         },
+        "nikic/php-parser": {
+            "v5.8.0": {
+                "sha256": "29959bfd0fc7fd750d7c33c6663af8b656efc4d171a1514b0a42d2dd1116b9af",
+                "sourceReference": "044a6a392ff8ad0d61f14370a5fbbd0a0107152f",
+                "sourceUrl": "https://github.com/nikic/PHP-Parser.git",
+                "distUrl": "https://api.github.com/repos/nikic/PHP-Parser/zipball/044a6a392ff8ad0d61f14370a5fbbd0a0107152f",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "nunomaduro/collision": {
+            "v8.9.5": {
+                "sha256": "46bc0f0d3c562d848075a5a4c46f490ab0c13f0bc3efe7142d4cabdac41be27e",
+                "sourceReference": "fb53eacd509a1d303858e2d20cfebf2d630254ec",
+                "sourceUrl": "https://github.com/nunomaduro/collision.git",
+                "distUrl": "https://api.github.com/repos/nunomaduro/collision/zipball/fb53eacd509a1d303858e2d20cfebf2d630254ec",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "orchestra/testbench-core": {
+            "v11.3.5": {
+                "sha256": "f54e260a160cb716fc83a5b35e26b7b327cca20f7893f1235ea5e5346ec1ba04",
+                "sourceReference": "a6773cd554177edb800f1e610d128b5acf813783",
+                "sourceUrl": "https://github.com/orchestral/testbench-core.git",
+                "distUrl": "https://api.github.com/repos/orchestral/testbench-core/zipball/a6773cd554177edb800f1e610d128b5acf813783",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
+        "pestphp/pest": {
+            "v4.7.5": {
+                "sha256": "290294f5d2c3a170fdd5bc856965242df7360ed8be22c6d07ef384361e796ef4",
+                "sourceReference": "5dc49a71d63602a9b98fed0f2017c4679ef9f8e0",
+                "sourceUrl": "https://github.com/pestphp/pest.git",
+                "distUrl": "https://api.github.com/repos/pestphp/pest/zipball/5dc49a71d63602a9b98fed0f2017c4679ef9f8e0",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "phpstan/phpdoc-parser": {
+            "2.3.3": {
+                "sha256": "9e717f836b296b4bfdc7207815fc07e616d173e55dd51d4da9499d500903566c",
+                "sourceReference": "fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
+                "sourceUrl": "https://github.com/phpstan/phpdoc-parser.git",
+                "distUrl": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "phpstan/phpstan": {
+            "2.2.5": {
+                "sha256": "c003a502352da0734235e94228f378c91237d65a24283350747ee47074596e77",
+                "sourceReference": null,
+                "sourceUrl": null,
+                "distUrl": "https://api.github.com/repos/phpstan/phpstan/zipball/909c1e5fef7989ac0d0c1c5c42e32a5c4f6198a0",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "phpstan/phpstan-phpunit": {
+            "2.0.18": {
+                "sha256": "4a5f982378c28faa8b9f0b937631147b952f2132fa5a22ec75b01a2c5989814c",
+                "sourceReference": "f5dc20ff8082d02339b60cab68ec3eb0d859fb30",
+                "sourceUrl": "https://github.com/phpstan/phpstan-phpunit.git",
+                "distUrl": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/f5dc20ff8082d02339b60cab68ec3eb0d859fb30",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
+        "phpunit/phpunit": {
+            "12.5.30": {
+                "sha256": "3b7fc3bd14dec6bebb24ca34d47b5bdf4a7541c44129fcae24f0d4a7f8860204",
+                "sourceReference": "900400a5b616d6fb306f9549f6da33ba615d3fbb",
+                "sourceUrl": "https://github.com/sebastianbergmann/phpunit.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/900400a5b616d6fb306f9549f6da33ba615d3fbb",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
+        "psy/psysh": {
+            "v0.12.24": {
+                "sha256": "eeb0730d48f146848b83f443714deae605921a2aaa0d56ebd940314608a5cef8",
+                "sourceReference": "ca0fdcf8a7617afa3adfdf1b5fef573dffb69ca1",
+                "sourceUrl": "https://github.com/bobthecow/psysh.git",
+                "distUrl": "https://api.github.com/repos/bobthecow/psysh/zipball/ca0fdcf8a7617afa3adfdf1b5fef573dffb69ca1",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            }
+        },
         "ramsey/uuid": {
             "4.9.3": {
                 "sha256": "71d718c3530ed9e2d6526198b562ced882b9e547ffd5a24ef9c5aeb67d174c25",
@@ -122,6 +248,15 @@
                 "sourceUrl": "https://github.com/ramsey/uuid.git",
                 "distUrl": "https://api.github.com/repos/ramsey/uuid/zipball/1df15849d00943a67d677dc9cfd80795f038c9f8",
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
+            }
+        },
+        "rector/rector": {
+            "2.5.7": {
+                "sha256": "872a3aa652cbc4a66a54d6b25d3ab27661663757536482cca231bcdf8d5b2ef6",
+                "sourceReference": "ba22f8c087848278fed6b4910d4cf1108096d8d3",
+                "sourceUrl": "https://github.com/rectorphp/rector.git",
+                "distUrl": "https://api.github.com/repos/rectorphp/rector/zipball/ba22f8c087848278fed6b4910d4cf1108096d8d3",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
             }
         },
         "symfony/console": {
@@ -196,6 +331,15 @@
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
             }
         },
+        "symfony/serializer": {
+            "v8.1.1": {
+                "sha256": "f2dcd128c2aaf110b9faffb28735ba2dfb97c940ce2e3c87b6d42abb5c36cc3f",
+                "sourceReference": "f911b744bc24658f435ea30439cfe536f0173a3a",
+                "sourceUrl": "https://github.com/symfony/serializer.git",
+                "distUrl": "https://api.github.com/repos/symfony/serializer/zipball/f911b744bc24658f435ea30439cfe536f0173a3a",
+                "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            }
+        },
         "symfony/service-contracts": {
             "v3.7.1": {
                 "sha256": "b09bbb37d2b358cc2075dde62fea7cccaf8c4c4a3d5848812504e6bc44035afa",
@@ -230,6 +374,15 @@
                 "sourceUrl": "https://github.com/symfony/var-dumper.git",
                 "distUrl": "https://api.github.com/repos/symfony/var-dumper/zipball/40096a2515a979f3125c5c928603995b8664c62a",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            }
+        },
+        "symfony/yaml": {
+            "v8.1.1": {
+                "sha256": "670e2712a4771748234efd7e305b3b5214c48be870a6075c66ab7c45f4eb21d4",
+                "sourceReference": "8e4cdd4311683516be06944f4b85244063cdb886",
+                "sourceUrl": "https://github.com/symfony/yaml.git",
+                "distUrl": "https://api.github.com/repos/symfony/yaml/zipball/8e4cdd4311683516be06944f4b85244063cdb886",
+                "firstSeenAt": "2026-07-27T12:05:05+00:00"
             }
         },
         "vlucas/phpdotenv": {
