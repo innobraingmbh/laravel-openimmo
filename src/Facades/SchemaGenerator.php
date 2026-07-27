@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Innobrain\OpenImmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Prism\Prism\Schema\ArraySchema;
-use Prism\Prism\Schema\ObjectSchema;
+use Innobrain\OpenImmo\Enums\SchemaDriver;
 
 /**
  * @see \Innobrain\OpenImmo\Services\SchemaGenerator
  *
- * @method static ObjectSchema|ArraySchema generateFor(string $className)
- * @method static \Innobrain\OpenImmo\Services\SchemaGenerator skipUserDefinedFields(bool $skip = true)
+ * @method static mixed generateFor(string $className)
+ * @method static \Innobrain\OpenImmo\Converters\Concerns\SchemaConverterInterface skipUserDefinedFields(bool $skip = true)
+ * @method static \Innobrain\OpenImmo\Converters\Concerns\SchemaConverterInterface driver(SchemaDriver $driver)
  */
 class SchemaGenerator extends Facade
 {

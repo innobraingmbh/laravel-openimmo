@@ -2,12 +2,15 @@
 
 declare(strict_types=1);
 
+use Illuminate\JsonSchema\Types\ObjectType;
+use Illuminate\Support\Arr;
 use Innobrain\OpenImmo\Dtos\Apartment;
 use Innobrain\OpenImmo\Dtos\ConditionInformation;
 use Innobrain\OpenImmo\Dtos\Floor;
 use Innobrain\OpenImmo\Dtos\HeatingType;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Dtos\Prices;
+use Innobrain\OpenImmo\Enums\SchemaDriver;
 use Innobrain\OpenImmo\Facades\SchemaGenerator;
 use Prism\Prism\Contracts\Schema;
 use Prism\Prism\Schema\ArraySchema;
@@ -31,10 +34,10 @@ describe('generation', function () {
     });
 
     test('get class description', function () {
-        $schemaGenerator = resolve(Innobrain\OpenImmo\Services\SchemaGenerator::class);
-        $method = new ReflectionMethod($schemaGenerator, 'getClassDescription');
+        $driver = resolve(Innobrain\OpenImmo\Services\SchemaGenerator::class)->driver();
+        $method = new ReflectionMethod($driver, 'getClassDescription');
         $class = new ReflectionClass(HeatingType::class);
-        $description = $method->invoke($schemaGenerator, $class);
+        $description = $method->invoke($driver, $class);
 
         expect($description)->toBe('Type of heating system (e.g. central heating, underfloor heating)');
     });
@@ -119,5 +122,82 @@ describe('generation', function () {
         expect($nonNullableProperty)
             ->toBeInstanceOf(ObjectSchema::class)
             ->and($nonNullableProperty->nullable)->toBeFalse();
+    });
+});
+
+describe('json schema driver generation', function () {
+    test('can generate', function () {
+        $type = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(OpenImmo::class);
+
+        expect($type)->toBeInstanceOf(ObjectType::class);
+    });
+
+    test('can skip user defined fields', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)
+            ->skipUserDefinedFields()
+            ->generateFor(OpenImmo::class)
+            ->toArray();
+
+        expect(array_keys($array['properties']))->not->toContain('userDefinedAnyfield', 'userDefinedSimplefield', 'userDefinedExtend');
+    });
+
+    test('wraps a class into a single ObjectType', function () {
+        $type = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Floor::class);
+
+        expect($type)->toBeInstanceOf(ObjectType::class);
+
+        $array = $type->toArray();
+
+        expect($array['type'])->toBe('object')
+            ->and($array['properties'])->toBeArray();
+    });
+
+    test('enum constants become a string type with enum values', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Apartment::class)->toArray();
+        $first = reset($array['properties']);
+
+        expect($first['type'])->toBe('string')
+            ->and($first['enum'])->toContain('DACHGESCHOSS', 'MAISONETTE');
+    });
+
+    test('DateTime properties become string types', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Prices::class)->toArray();
+
+        expect(Arr::wrap($array['properties']['priceTimeRangeFrom']['type']))->toContain('string')
+            ->and(Arr::wrap($array['properties']['priceTimeRangeTo']['type']))->toContain('string');
+    });
+
+    test('array DTO properties become array type', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(ConditionInformation::class)->toArray();
+
+        expect($array['properties']['EnergyPerformanceCertificate']['type'])->toBe('array');
+    });
+
+    test('naming mismatches resolve to correct DTO class', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Prices::class)->toArray();
+
+        expect(array_keys($array['properties']))->toContain(
+            'NetPurchasePrice',
+            'NetEVB',
+            'NetTotalRent',
+            'NetTotalCost',
+            'NetMonthlyCosts',
+            'NetReserves',
+            'NetOtherCosts',
+            'NetOtherRent',
+            'NetCommission',
+        );
+    });
+
+    test('nullable properties are marked as nullable', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Prices::class)->toArray();
+
+        expect($array['properties']['purchasePriceGross']['type'])->toBe(['number', 'null']);
+    });
+
+    test('non-nullable nested DTO properties become a non-nullable object type', function () {
+        $array = SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(Prices::class)->toArray();
+
+        expect($array['properties']['PurchasePrice']['type'])->toBe('object');
     });
 });
