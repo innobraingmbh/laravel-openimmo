@@ -43,7 +43,7 @@ The DTOs in `src/Dtos/` (~115 files) and `src/helpers.php` are **auto-generated*
 
 ### Schema Generator
 
-`SchemaGenerator` generates Prism PHP schemas from DTO reflection, useful for LLM structured output.
+`SchemaGenerator` extends Laravel's `Manager` class to generate structured-output schemas from DTO reflection. It ships with a `Prism` driver (default, `prism-php/prism` schemas for LLM structured output) and a `JsonSchema` driver (`illuminate/json-schema` `Type` objects). Shared reflection/traversal logic lives in `Converters/Concerns/BaseSchemaConverter`; each driver (`Converters/PrismSchemaConverter`, `Converters/JsonSchemaConverter`) only implements the node-construction methods. Selected via a `SchemaDriver` enum, e.g. `SchemaGenerator::driver(SchemaDriver::JsonSchema)->generateFor(OpenImmo::class)`.
 
 ### Facades
 

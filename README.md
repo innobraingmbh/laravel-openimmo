@@ -6,7 +6,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/innobraingmbh/laravel-openimmo/code-style.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/innobraingmbh/laravel-openimmo/actions/workflows/code-style.yml?query=branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/innobrain/laravel-openimmo.svg?style=flat-square)](https://packagist.org/packages/innobrain/laravel-openimmo)
 
-A Laravel package for working with the [OpenImmo](https://www.openimmo.de/) XML standard. Provides typed PHP DTOs, XML/JSON serialization, format converters, and Prism schema generation.
+A Laravel package for working with the [OpenImmo](https://www.openimmo.de/) XML standard. Provides typed PHP DTOs, XML/JSON serialization, format converters, and driver-based schema generation (Prism, JSON Schema).
 
 Forked from [ujamii/openimmo](https://github.com/ujamii/openimmo) with all German names translated to English and full Laravel integration.
 
@@ -54,7 +54,7 @@ Helper functions (`get{DtoName}`) are available for all DTOs in the OpenImmo tre
 - **Serialization** — Deserialize/serialize OpenImmo XML and JSON via `OpenImmoService`
 - **115+ typed DTOs** — Auto-generated from the OpenImmo XSD schema with English property names
 - **Format converters** — Convert OpenImmo DTOs to other formats (ships with onOffice Enterprise converter)
-- **Schema generation** — Generate [Prism](https://prismphp.com/) schemas from DTOs for LLM structured output
+- **Schema generation** — Generate schemas from DTOs via pluggable drivers: [Prism](https://prismphp.com/) (default, LLM structured output) or JSON Schema
 - **Helper functions** — Fluent getter helpers for navigating and building the DTO tree
 
 ## Documentation

@@ -4,172 +4,50 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Services;
 
-use Illuminate\Support\Str;
-use Innobrain\OpenImmo\Attributes\Description;
-use JMS\Serializer\Annotation\Type as SerializerType;
-use Prism\Prism\Contracts\Schema;
-use Prism\Prism\Schema\ArraySchema;
-use Prism\Prism\Schema\BooleanSchema;
-use Prism\Prism\Schema\EnumSchema;
-use Prism\Prism\Schema\NumberSchema;
-use Prism\Prism\Schema\ObjectSchema;
-use Prism\Prism\Schema\StringSchema;
-use ReflectionClass;
-use ReflectionNamedType;
-use ReflectionProperty;
+use Illuminate\Support\Manager;
+use Innobrain\OpenImmo\Converters\Concerns\SchemaConverterInterface;
+use Innobrain\OpenImmo\Converters\JsonSchemaConverter;
+use Innobrain\OpenImmo\Converters\PrismSchemaConverter;
+use Innobrain\OpenImmo\Enums\SchemaDriver;
+use Override;
 
-class SchemaGenerator
+class SchemaGenerator extends Manager
 {
-    private bool $skipUserDefinedFields = false;
-
-    public function skipUserDefinedFields(bool $skip = true): self
+    public function createPrismDriver(): PrismSchemaConverter
     {
-        $this->skipUserDefinedFields = $skip;
-
-        return $this;
+        return new PrismSchemaConverter;
     }
 
-    public function generateFor(string $className): ObjectSchema|ArraySchema
+    public function createJsonSchemaDriver(): JsonSchemaConverter
     {
-        return $this->handleClass(new ReflectionClass($className));
-    }
-
-    private function handleClass(ReflectionClass $class, ?string $path = null, bool $isArray = false): ArraySchema|ObjectSchema
-    {
-        $properties = $class->getProperties();
-        $path = in_array($path, [null, '', '0'], true) ? $class->getShortName() : $path.'.'.$class->getShortName();
-
-        $schemas = [];
-
-        foreach ($properties as $property) {
-            if (($schema = $this->handleProperty($property, $path)) instanceof Schema) {
-                $schemas[] = $schema;
-            }
-        }
-
-        $objectSchema = new ObjectSchema(
-            name: $class->getShortName(),
-            description: $this->getClassDescription($class),
-            properties: $schemas,
-        );
-
-        return $isArray
-            ? new ArraySchema(
-                name: $class->getShortName(),
-                description: $this->getClassDescription($class),
-                items: $objectSchema,
-            )
-            : $objectSchema;
-    }
-
-    private function getClassDescription(ReflectionClass $class): string
-    {
-        $attrs = $class->getAttributes(Description::class);
-        if ($attrs !== []) {
-            return $attrs[0]->newInstance()->value;
-        }
-
-        $docComment = $class->getDocComment();
-        if ($docComment === false) {
-            return '';
-        }
-
-        $matches = Str::matchAll('/^ * .+$/m', $docComment);
-
-        return collect($matches)->map(fn (string $match) => Str::substr($match, 3))->get(1) ?? '';
-    }
-
-    private function getPropertyDescription(ReflectionProperty $property): string
-    {
-        $attrs = $property->getAttributes(Description::class);
-        if ($attrs !== []) {
-            return $attrs[0]->newInstance()->value;
-        }
-
-        return $property->getName();
-    }
-
-    private function handleProperty(ReflectionProperty $property, ?string $path = null): ?Schema
-    {
-        $name = $property->getName();
-
-        if ($this->skipUserDefinedFields && in_array($name, [
-            'userDefinedAnyfield',
-            'userDefinedSimplefield',
-            'userDefinedExtend',
-        ], true)) {
-            return null;
-        }
-
-        $type = (string) $property->getType();
-        $isNullable = $property->getType()?->allowsNull() ?? false;
-
-        if ($type === 'array') {
-            $serializerType = $this->getSerializerType($property);
-            if ($serializerType && preg_match('/^array<(.+)>$/', $serializerType, $matches) === 1 && class_exists($matches[1])) {
-                return $this->handleClass(new ReflectionClass($matches[1]), $path, true);
-            }
-        }
-
-        $propertyType = $property->getType();
-        if ($propertyType instanceof ReflectionNamedType && ! $propertyType->isBuiltin()) {
-            $typeName = $propertyType->getName();
-
-            if ($typeName === 'DateTime' || $typeName === 'DateTimeImmutable') {
-                return new StringSchema($name, $this->getPropertyDescription($property), $isNullable);
-            }
-
-            return $this->handleClass(new ReflectionClass($typeName), $path);
-        }
-
-        $enumOptions = $this->getEnumOptions($property);
-        $description = $this->getPropertyDescription($property);
-
-        return match ($type) {
-            'int', '?int', 'float', '?float' => new NumberSchema($name, $description, $isNullable),
-            'bool', '?bool' => new BooleanSchema($name, $description, $isNullable),
-            default => $enumOptions !== null
-                ? new EnumSchema($name, $description, $enumOptions, $isNullable)
-                : new StringSchema($name, $description, $isNullable),
-        };
+        return new JsonSchemaConverter;
     }
 
     /**
-     * @return array<int, string>|null
+     * @param  string|null|SchemaDriver  $driver
      */
-    private function getEnumOptions(ReflectionProperty $property): ?array
+    #[Override]
+    public function driver($driver = null): mixed
     {
-        $doc = $property->getDocComment();
-        if ($doc === false) {
-            return null;
+        if ($driver instanceof SchemaDriver) {
+            return parent::driver($driver->value);
         }
 
-        if (preg_match('/@see ([A-Z][A-Z0-9_]+)\* constants/', $doc, $matches) !== 1) {
-            return null;
-        }
-
-        $prefix = $matches[1];
-        $constants = $property->getDeclaringClass()->getConstants();
-
-        $options = array_values(array_filter(
-            $constants,
-            fn (string $name) => str_starts_with($name, $prefix),
-            ARRAY_FILTER_USE_KEY,
-        ));
-
-        return $options !== [] ? $options : null;
+        return parent::driver($driver);
     }
 
-    private function getSerializerType(ReflectionProperty $property): ?string
+    public function getDefaultDriver(): string
     {
-        $attributes = $property->getAttributes(SerializerType::class);
-        if ($attributes === []) {
-            return null;
-        }
+        return SchemaDriver::Prism->value;
+    }
 
-        /** @var SerializerType $serializerType */
-        $serializerType = $attributes[0]->newInstance();
+    public function generateFor(string $className): mixed
+    {
+        return $this->driver()->generateFor($className);
+    }
 
-        return is_string($serializerType->name) ? $serializerType->name : null;
+    public function skipUserDefinedFields(bool $skip = true): SchemaConverterInterface
+    {
+        return $this->driver()->skipUserDefinedFields($skip);
     }
 }
