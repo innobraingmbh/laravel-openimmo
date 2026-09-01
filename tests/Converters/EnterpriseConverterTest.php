@@ -78,6 +78,25 @@ test('can overwrite open immo property', function () {
     expect($result['wohnflaeche'])->toBe('120.50');
 });
 
+test('maps usable area and floor space index to the correct enterprise fields', function () {
+    $openImmo = new OpenImmo;
+    $areas = getAreas($openImmo);
+    $areas->setUsableArea(205.0);
+    $areas->setFloorAreaRatio('1.2');
+    $areas->setFloorSpaceIndex('3.4');
+
+    /** @var EnterpriseConverter $enterpriseConverter */
+    $enterpriseConverter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $enterpriseConverter->convertAreas();
+
+    expect($result['nutzflaeche'])->toBe('205.00')
+        ->and($result)->not->toHaveKey('wohnfnutzflaechelaeche')
+        ->and($result['gfz'])->toBe('1.2')
+        ->and($result['bmz'])->toBe('3.4');
+});
+
 test('can start convert with original dto', function () {
     $openImmo = new OriginalOpenimmo;
 

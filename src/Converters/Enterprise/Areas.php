@@ -14,7 +14,7 @@ trait Areas
 
         return [
             'wohnflaeche' => $this->parseFloat($areas->getLivingArea()),
-            'wohnfnutzflaechelaeche' => $this->parseFloat($areas->getUsableArea()),
+            'nutzflaeche' => $this->parseFloat($areas->getUsableArea()),
             'gesamtflaeche' => $this->parseFloat($areas->getTotalArea()),
             'ladenflaeche' => $this->parseFloat($areas->getShopArea()),
             'lagerflaeche' => $this->parseFloat($areas->getStorageArea()),
@@ -28,7 +28,7 @@ trait Areas
             'anzahl_terrassen' => $this->parseFloat($areas->getNumberOfTerraces()),
             'grz' => $areas->getSiteOccupancyIndex(),
             'gfz' => $areas->getFloorAreaRatio(),
-            'bmz' => $areas->getFloorAreaRatio(),
+            'bmz' => $areas->getFloorSpaceIndex(),
             'bgf' => $areas->getGrossFloorArea(),
             'grundstuecksflaeche' => $this->parseFloat($areas->getPlotArea()),
             'sonstflaeche' => $this->parseFloat($areas->getOtherArea()),
