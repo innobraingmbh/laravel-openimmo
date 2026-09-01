@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Services;
 
-use Doctrine\Common\Annotations\AnnotationReader;
 use Innobrain\OpenImmo\Dtos\OpenImmo;
 use Innobrain\OpenImmo\Handler\DateTimeHandler;
 use JMS\Serializer\Handler\HandlerRegistryInterface;
@@ -24,8 +23,6 @@ readonly class OpenImmoService
 
     public function __construct()
     {
-        AnnotationReader::addGlobalIgnoredName('description');
-
         $this->serializer = SerializerBuilder::create()
             ->configureHandlers(function (HandlerRegistryInterface $registry): void {
                 $registry->registerSubscribingHandler(new DateTimeHandler);
