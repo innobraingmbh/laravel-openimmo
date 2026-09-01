@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Innobrain\OpenImmo\Converters\Enterprise;
 
+use function Innobrain\OpenImmo\Helpers\getPropertyManagement;
 use function Innobrain\OpenImmo\Helpers\getTechnicalManagement;
 
 trait TechnicalManagement
@@ -15,6 +16,7 @@ trait TechnicalManagement
         return [
             'erstellt_am' => $technicalManagement->getStatusFrom()?->format('Y-m-d H:i:s'),
             'importId' => $technicalManagement->getExternalPropertyNumber(),
+            'verfuegbar_ab' => getPropertyManagement($this->openImmo)->getAvailableFrom(),
         ];
     }
 }

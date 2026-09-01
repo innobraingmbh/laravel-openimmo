@@ -16,6 +16,7 @@ use Innobrain\OpenImmo\Facades\OpenImmoService;
 use function Innobrain\OpenImmo\Helpers\getAreas;
 use function Innobrain\OpenImmo\Helpers\getConditionInformation;
 use function Innobrain\OpenImmo\Helpers\getEquipment;
+use function Innobrain\OpenImmo\Helpers\getPropertyManagement;
 use function Innobrain\OpenImmo\Helpers\Original\getFlaechen;
 
 test('can start convert', function () {
@@ -366,4 +367,41 @@ test('can convert energy source fern to fernwaerme', function () {
     $result = $converter->convertConditionInformation();
 
     expect($result)->toHaveKey('energietraeger', 'fernwaerme');
+});
+
+test('normalizes umlauts in energy sources to onoffice keys', function (string $source, string $expected) {
+    $openImmo = new OpenImmo;
+    $condition = getConditionInformation($openImmo);
+
+    $energyPass = new EnergyPerformanceCertificate;
+    $energyPass->setPrimaryEnergySource($source);
+
+    $condition->setEnergyCertificate([$energyPass]);
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertConditionInformation();
+
+    expect($result)->toHaveKey('energietraeger', $expected);
+})->with([
+    ['FERNWÄRME', 'fernwaerme'],
+    ['Fernwärme', 'fernwaerme'],
+    ['Erdwärme', 'erdwaerme'],
+    ['Öl', 'oel'],
+    ['Flüssiggas', 'fluessiggas'],
+]);
+
+test('maps available from to verfuegbar ab', function () {
+    $openImmo = new OpenImmo;
+    getPropertyManagement($openImmo)->setAvailableFrom('01.09.2026');
+
+    /** @var EnterpriseConverter $converter */
+    $converter = FormatConverterService::driver(ConverterDriver::Enterprise)
+        ->setOpenImmo($openImmo);
+
+    $result = $converter->convertTechnicalManagement();
+
+    expect($result)->toHaveKey('verfuegbar_ab', '01.09.2026');
 });

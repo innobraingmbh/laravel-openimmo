@@ -81,9 +81,11 @@ trait ConditionInformation
 
     private function mapEnergySource(string $source): string
     {
-        return match ($source) {
-            'FERN' => 'fernwaerme',
-            default => strtolower($source),
+        $normalized = str_replace(['ä', 'ö', 'ü', 'ß'], ['ae', 'oe', 'ue', 'ss'], mb_strtolower($source));
+
+        return match ($normalized) {
+            'fern' => 'fernwaerme',
+            default => $normalized,
         };
     }
 }
