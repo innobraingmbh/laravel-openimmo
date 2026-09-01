@@ -7,6 +7,15 @@
     ],
     "_version": 2,
     "packages": {
+        "brianium/paratest": {
+            "v7.20.0": {
+                "sha256": "ab39be607a309eb46ba6658f98d70f1019d6a9085466c747fca65137860a9a29",
+                "sourceReference": "81c80677c9ec0ed4ef16b246167f11dec81a6e3d",
+                "sourceUrl": "https://github.com/paratestphp/paratest.git",
+                "distUrl": "https://api.github.com/repos/paratestphp/paratest/zipball/81c80677c9ec0ed4ef16b246167f11dec81a6e3d",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
         "brick/math": {
             "0.18.0": {
                 "sha256": "6ed7b8668630df853aad5b8249932d351120829bf88d58f86ef4d1a4c32c9b2a",
@@ -34,6 +43,24 @@
                 "firstSeenAt": "2026-09-01T07:20:30+00:00"
             }
         },
+        "driftingly/rector-laravel": {
+            "2.5.0": {
+                "sha256": "88537d9a3cafab2bdc2455dec429107933b45bb55ae4e93aec4570a083ef0253",
+                "sourceReference": "0dbdd842dfdbc821cfe5f47ca7326e2502b2a107",
+                "sourceUrl": "https://github.com/driftingly/rector-laravel.git",
+                "distUrl": "https://api.github.com/repos/driftingly/rector-laravel/zipball/0dbdd842dfdbc821cfe5f47ca7326e2502b2a107",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "ergebnis/agent-detector": {
+            "1.2.0": {
+                "sha256": "5df1a21da2310f71b020c8e5f322674b537b6c0f63b4052bf6ec7c9e3def3e11",
+                "sourceReference": "e211f17928c8b95a51e06040792d57f5462fb271",
+                "sourceUrl": "https://github.com/ergebnis/agent-detector.git",
+                "distUrl": "https://api.github.com/repos/ergebnis/agent-detector/zipball/e211f17928c8b95a51e06040792d57f5462fb271",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
         "friendsofphp/php-cs-fixer": {
             "v3.95.15": {
                 "sha256": "5a0b031f7da41595f878650c2ed561d117e3bcf66c11afb2b5add0a4d2d637c4",
@@ -41,6 +68,13 @@
                 "sourceUrl": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
                 "distUrl": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/3e47e5d50046f87e3244acde2fe655d1a3b72555",
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            },
+            "v3.95.22": {
+                "sha256": "2eec629629a0d381a65b6a4632013f813255f231dedbbb88f99858181bebabfc",
+                "sourceReference": "482722e0783c16325a07a998a0d9eda560f9be99",
+                "sourceUrl": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
+                "distUrl": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/482722e0783c16325a07a998a0d9eda560f9be99",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "graham-campbell/result-type": {
@@ -66,6 +100,13 @@
                 "sourceUrl": "https://github.com/guzzle/guzzle.git",
                 "distUrl": "https://api.github.com/repos/guzzle/guzzle/zipball/ee80339fd9177ba44c49cdb653ff02a4d1106b9a",
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
+            },
+            "8.1.0": {
+                "sha256": "4b425934248a84a4386110d393488956932c87c7196cebc5659fe9476c89cc3f",
+                "sourceReference": "2cdae51a4a02c3fe2c38d42e25a7bb952e27b768",
+                "sourceUrl": "https://github.com/guzzle/guzzle.git",
+                "distUrl": "https://api.github.com/repos/guzzle/guzzle/zipball/2cdae51a4a02c3fe2c38d42e25a7bb952e27b768",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "guzzlehttp/promises": {
@@ -82,6 +123,13 @@
                 "sourceUrl": "https://github.com/guzzle/promises.git",
                 "distUrl": "https://api.github.com/repos/guzzle/promises/zipball/cde49999552d185d64715fe9c1f77a2aadd2f9f1",
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
+            },
+            "3.0.2": {
+                "sha256": "34951add67af77204421b335c571199a2cf90c6202c5c64ae35e533c9db14f46",
+                "sourceReference": "42118e66a53c492effaf92bc357e931985d5c6f9",
+                "sourceUrl": "https://github.com/guzzle/promises.git",
+                "distUrl": "https://api.github.com/repos/guzzle/promises/zipball/42118e66a53c492effaf92bc357e931985d5c6f9",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "guzzlehttp/psr7": {
@@ -98,6 +146,13 @@
                 "sourceUrl": "https://github.com/guzzle/psr7.git",
                 "distUrl": "https://api.github.com/repos/guzzle/psr7/zipball/95e7828100de18b4e269fb1703be530082d5166d",
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
+            },
+            "3.1.0": {
+                "sha256": "8e45b0ed2ef6683990aa0db3b874be1d0e7ab10a9a33087ab37e4082a634b801",
+                "sourceReference": "a3059ba1a84c9139c4ae03cf0f45bea276c97c74",
+                "sourceUrl": "https://github.com/guzzle/psr7.git",
+                "distUrl": "https://api.github.com/repos/guzzle/psr7/zipball/a3059ba1a84c9139c4ae03cf0f45bea276c97c74",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "guzzlehttp/uri-template": {
@@ -114,6 +169,40 @@
                 "sourceUrl": "https://github.com/guzzle/uri-template.git",
                 "distUrl": "https://api.github.com/repos/guzzle/uri-template/zipball/d0058dccf4299d70c3d9da3378b8908b32780368",
                 "firstSeenAt": "2026-09-01T07:20:30+00:00"
+            },
+            "v2.0.1": {
+                "sha256": "92ef39e1bb85a2bdb85812220f38fb54038bcaff81a27d75f05676c5a58795e2",
+                "sourceReference": "7a466ad606491eb6528c717482f7cca77f1851f3",
+                "sourceUrl": "https://github.com/guzzle/uri-template.git",
+                "distUrl": "https://api.github.com/repos/guzzle/uri-template/zipball/7a466ad606491eb6528c717482f7cca77f1851f3",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "hamcrest/hamcrest-php": {
+            "v3.0.0": {
+                "sha256": "c17a1a19b79468364d3a78ff2e62e6107c9c74470e3a3dcf36213a7e90f8a993",
+                "sourceReference": "b61cd040da1a4925bc90a51c074f5297e7c0fa52",
+                "sourceUrl": "https://github.com/hamcrest/hamcrest-php.git",
+                "distUrl": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/b61cd040da1a4925bc90a51c074f5297e7c0fa52",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "infection/abstract-testframework-adapter": {
+            "0.5.1": {
+                "sha256": "4d7b6ef15c8026841ead2f2d58c8150487664bb29050d48e609945666b797155",
+                "sourceReference": "b24bf3e850f70cd20a10621f08c3cef66f147ac8",
+                "sourceUrl": "https://github.com/infection/abstract-testframework-adapter.git",
+                "distUrl": "https://api.github.com/repos/infection/abstract-testframework-adapter/zipball/b24bf3e850f70cd20a10621f08c3cef66f147ac8",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "infection/include-interceptor": {
+            "1.0.0": {
+                "sha256": "de155119fe7afa53d158941090353ddf8b92747ce2eec4f2a88360cbe8e554a6",
+                "sourceReference": "c083331bc0cd1cd319ac1b7a08e3ad4a34aa7992",
+                "sourceUrl": "https://github.com/infection/include-interceptor.git",
+                "distUrl": "https://api.github.com/repos/infection/include-interceptor/zipball/c083331bc0cd1cd319ac1b7a08e3ad4a34aa7992",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "infection/infection": {
@@ -123,6 +212,22 @@
                 "sourceUrl": "https://github.com/infection/infection.git",
                 "distUrl": "https://api.github.com/repos/infection/infection/zipball/373c2ab1689696ac6969013a04bdbccae74d7e08",
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            },
+            "0.35.2": {
+                "sha256": "3ebce5c892db3e6078498f0c1d32abf3ac5b603aca19215b2c6604fb752301c3",
+                "sourceReference": "c7ad005fc541b36952781b3ab602a4648cd9e9c8",
+                "sourceUrl": "https://github.com/infection/infection.git",
+                "distUrl": "https://api.github.com/repos/infection/infection/zipball/c7ad005fc541b36952781b3ab602a4648cd9e9c8",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "jms/serializer": {
+            "3.32.7": {
+                "sha256": "94fa90cea5db1917f977c3d0d6bf052ab2a3890275727f2dcb10dd2ddb5fe57e",
+                "sourceReference": "d725ebd288688bb24f47ee467b1299b0fc6d04f8",
+                "sourceUrl": "https://github.com/schmittjoh/serializer.git",
+                "distUrl": "https://api.github.com/repos/schmittjoh/serializer/zipball/d725ebd288688bb24f47ee467b1299b0fc6d04f8",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
             }
         },
         "justinrainbow/json-schema": {
@@ -132,6 +237,22 @@
                 "sourceUrl": "https://github.com/jsonrainbow/json-schema.git",
                 "distUrl": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/8b1308a9d7bdbdb20ce87ef920f82b4564bb2d33",
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            },
+            "6.11.0": {
+                "sha256": "e161d01ee4a7fb7858e39c25c9e64ae38fb6311ec5a343c25d2e7d60f3e6715c",
+                "sourceReference": "7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
+                "sourceUrl": "https://github.com/jsonrainbow/json-schema.git",
+                "distUrl": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "larastan/larastan": {
+            "v3.10.0": {
+                "sha256": "b5d2b1a596f381f631da88882e35e220914b8638da267396dce89afb43236968",
+                "sourceReference": "2970f83398154178a739609c244577267c7ee8eb",
+                "sourceUrl": "https://github.com/larastan/larastan.git",
+                "distUrl": "https://api.github.com/repos/larastan/larastan/zipball/2970f83398154178a739609c244577267c7ee8eb",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "laravel/framework": {
@@ -148,6 +269,22 @@
                 "sourceUrl": "https://github.com/laravel/framework.git",
                 "distUrl": "https://api.github.com/repos/laravel/framework/zipball/b9d1bccad5fbc32578dca22566bb11e7c0e545d7",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            },
+            "v13.26.1": {
+                "sha256": "0529b5afdec0a72d4d05cf5866818f0312636472e57095131bd87496be3489b8",
+                "sourceReference": "e4a1bc52ef551d52e60244bb004256d6861da7ab",
+                "sourceUrl": "https://github.com/laravel/framework.git",
+                "distUrl": "https://api.github.com/repos/laravel/framework/zipball/e4a1bc52ef551d52e60244bb004256d6861da7ab",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "laravel/pail": {
+            "v1.2.7": {
+                "sha256": "17f226a856ffca79295e130f232990ec62351bc54d4b5c51572c67b7e612d0f4",
+                "sourceReference": "2f7d27dada8effc48b8c424445a69cca7007daaa",
+                "sourceUrl": "https://github.com/laravel/pail.git",
+                "distUrl": "https://api.github.com/repos/laravel/pail/zipball/2f7d27dada8effc48b8c424445a69cca7007daaa",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "laravel/pint": {
@@ -157,6 +294,13 @@
                 "sourceUrl": "https://github.com/laravel/pint.git",
                 "distUrl": "https://api.github.com/repos/laravel/pint/zipball/da1d1111a6aa2e082d2a388b194afe1ba0a05d14",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "v1.30.5": {
+                "sha256": "b7adce2417836f4bc4d79b604619b5573a76bda63353bcd09dbe47b00ac51d15",
+                "sourceReference": "fe4148c503a0e266353d61396b79bbf7f35122df",
+                "sourceUrl": "https://github.com/laravel/pint.git",
+                "distUrl": "https://api.github.com/repos/laravel/pint/zipball/fe4148c503a0e266353d61396b79bbf7f35122df",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "laravel/prompts": {
@@ -182,6 +326,15 @@
                 "sourceUrl": "https://github.com/laravel/serializable-closure.git",
                 "distUrl": "https://api.github.com/repos/laravel/serializable-closure/zipball/dccd8bcb851bb03fcc005df650b708b57cc52661",
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
+            }
+        },
+        "laravel/tinker": {
+            "v3.0.2": {
+                "sha256": "1ea1997d4079179103f484cdbf17ac5c83143796018e484ef6c5310aabde86b3",
+                "sourceReference": "4faba77764bd33411735936acdf30446d058c78b",
+                "sourceUrl": "https://github.com/laravel/tinker.git",
+                "distUrl": "https://api.github.com/repos/laravel/tinker/zipball/4faba77764bd33411735936acdf30446d058c78b",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "league/commonmark": {
@@ -252,6 +405,24 @@
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
             }
         },
+        "mockery/mockery": {
+            "1.6.15": {
+                "sha256": "ff83086cb5af969611de33bc2a457388dac7a5e28058d38b93c6d782e22f0b98",
+                "sourceReference": "967a801bd188989a5669bd280f252d51c0fdc9ee",
+                "sourceUrl": "https://github.com/mockery/mockery.git",
+                "distUrl": "https://api.github.com/repos/mockery/mockery/zipball/967a801bd188989a5669bd280f252d51c0fdc9ee",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "myclabs/deep-copy": {
+            "1.14.0": {
+                "sha256": "56bd5cff0d8ac15818301fcc26712dfeffef322d2120bb4f4d67dca8089e6380",
+                "sourceReference": "8680aa248f8e07bc8fb43f56f0f5fc77a0c96aae",
+                "sourceUrl": "https://github.com/myclabs/DeepCopy.git",
+                "distUrl": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8680aa248f8e07bc8fb43f56f0f5fc77a0c96aae",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
         "nesbot/carbon": {
             "3.13.1": {
                 "sha256": "07ca1863dfec955c682070c0be29bf45fa3939e834e7284aebfcf739fb89a9b6",
@@ -304,6 +475,42 @@
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
             }
         },
+        "orchestra/canvas": {
+            "v11.1.0": {
+                "sha256": "0b5c142b1ca07edfda88ce3dcef96e3cee750dc79931fd039bcbfad5b02ab787",
+                "sourceReference": "d13e6ec66cb1a285fcc7f092c804abaaf2e24ede",
+                "sourceUrl": "https://github.com/orchestral/canvas.git",
+                "distUrl": "https://api.github.com/repos/orchestral/canvas/zipball/d13e6ec66cb1a285fcc7f092c804abaaf2e24ede",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
+            }
+        },
+        "orchestra/canvas-core": {
+            "v11.0.0": {
+                "sha256": "8a004165991b225d163ba9537bc49b8ca5416001ed1db310ba53dc2bb8278802",
+                "sourceReference": "88d091ff989748e2ca447bca0cd06ab14671ba82",
+                "sourceUrl": "https://github.com/orchestral/canvas-core.git",
+                "distUrl": "https://api.github.com/repos/orchestral/canvas-core/zipball/88d091ff989748e2ca447bca0cd06ab14671ba82",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "orchestra/sidekick": {
+            "v1.2.21": {
+                "sha256": "9fb84f3b835436cc39b8f8776c90468450bedfd3abd04df4f1a32d73077c5e9a",
+                "sourceReference": "fcf69fe227b52beca2e0fe9777d4af4d44ab46a5",
+                "sourceUrl": "https://github.com/orchestral/sidekick.git",
+                "distUrl": "https://api.github.com/repos/orchestral/sidekick/zipball/fcf69fe227b52beca2e0fe9777d4af4d44ab46a5",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "orchestra/testbench": {
+            "v11.2.0": {
+                "sha256": "b052fe5a215c60b633d61dfc42e64b8246c722735315a9f0f4b5a39e84aa7967",
+                "sourceReference": "a326be05fc2375b6240b4ab5279a796e05b6d535",
+                "sourceUrl": "https://github.com/orchestral/testbench.git",
+                "distUrl": "https://api.github.com/repos/orchestral/testbench/zipball/a326be05fc2375b6240b4ab5279a796e05b6d535",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
+            }
+        },
         "orchestra/testbench-core": {
             "v11.3.5": {
                 "sha256": "f54e260a160cb716fc83a5b35e26b7b327cca20f7893f1235ea5e5346ec1ba04",
@@ -311,6 +518,22 @@
                 "sourceUrl": "https://github.com/orchestral/testbench-core.git",
                 "distUrl": "https://api.github.com/repos/orchestral/testbench-core/zipball/a6773cd554177edb800f1e610d128b5acf813783",
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            },
+            "v11.4.0": {
+                "sha256": "74b9e78a1dec1fd876217f9c8013fdfec71a81581adb4c4d7917df3673ba82aa",
+                "sourceReference": "632dc141b25414804ceb1de09be7a9eaf8d61663",
+                "sourceUrl": "https://github.com/orchestral/testbench-core.git",
+                "distUrl": "https://api.github.com/repos/orchestral/testbench-core/zipball/632dc141b25414804ceb1de09be7a9eaf8d61663",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "orchestra/workbench": {
+            "v11.2.0": {
+                "sha256": "7568757fa47ba1abaffb730445b28d3ad900061cf1f839103a9db22921d8ba02",
+                "sourceReference": "78f27959b8e5caa72c996c6ccd0ddfeff462cb2b",
+                "sourceUrl": "https://github.com/orchestral/workbench.git",
+                "distUrl": "https://api.github.com/repos/orchestral/workbench/zipball/78f27959b8e5caa72c996c6ccd0ddfeff462cb2b",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
             }
         },
         "pestphp/pest": {
@@ -320,6 +543,40 @@
                 "sourceUrl": "https://github.com/pestphp/pest.git",
                 "distUrl": "https://api.github.com/repos/pestphp/pest/zipball/5dc49a71d63602a9b98fed0f2017c4679ef9f8e0",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "v4.7.8": {
+                "sha256": "8fa86e05856b86f7ecc6435e6bcd553e718fb5acec686e392f4a14bf5f1156fb",
+                "sourceReference": "5b2293f67adcf1b2320b33f521b94a692d18f360",
+                "sourceUrl": "https://github.com/pestphp/pest.git",
+                "distUrl": "https://api.github.com/repos/pestphp/pest/zipball/5b2293f67adcf1b2320b33f521b94a692d18f360",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
+            }
+        },
+        "pestphp/pest-plugin-arch": {
+            "v4.0.2": {
+                "sha256": "150c219af1fe2964d887cd955a807397e88a8aff3cdad59f430065952ad7dae2",
+                "sourceReference": "3fb0d02a91b9da504b139dc7ab2a31efb7c3215c",
+                "sourceUrl": "https://github.com/pestphp/pest-plugin-arch.git",
+                "distUrl": "https://api.github.com/repos/pestphp/pest-plugin-arch/zipball/3fb0d02a91b9da504b139dc7ab2a31efb7c3215c",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
+            }
+        },
+        "phpdocumentor/reflection-docblock": {
+            "6.0.3": {
+                "sha256": "86ab303f5fa29859601422f4ccbc66e014a8348ffce8a9f47877795686b889e8",
+                "sourceReference": "7bae67520aa9f5ecc506d646810bd40d9da54582",
+                "sourceUrl": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "distUrl": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/7bae67520aa9f5ecc506d646810bd40d9da54582",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "phpdocumentor/type-resolver": {
+            "2.0.0": {
+                "sha256": "d332d8a893916642985e5f257aaa5f2a69600b4fd4485dc198efba340c9beccd",
+                "sourceReference": "327a05bbee54120d4786a0dc67aad30226ad4cf9",
+                "sourceUrl": "https://github.com/phpDocumentor/TypeResolver.git",
+                "distUrl": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/327a05bbee54120d4786a0dc67aad30226ad4cf9",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "phpoption/phpoption": {
@@ -347,6 +604,22 @@
                 "sourceUrl": null,
                 "distUrl": "https://api.github.com/repos/phpstan/phpstan/zipball/909c1e5fef7989ac0d0c1c5c42e32a5c4f6198a0",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "2.2.9": {
+                "sha256": "a25be5f6cff87287f1dbf9cd940db2dfbab4f1b196b060175222e72c4b2c7559",
+                "sourceReference": null,
+                "sourceUrl": null,
+                "distUrl": "https://api.github.com/repos/phpstan/phpstan/zipball/13d6b4f347bad222da436580c8304fa6f83e6bd0",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "phpstan/phpstan-deprecation-rules": {
+            "2.0.5": {
+                "sha256": "f6e451c95113c35c1291943b88590913a67e0a90887a3df44a75b9e8339ecd79",
+                "sourceReference": "67bedd65c24bc72840afc45aed48b1059dd44bec",
+                "sourceUrl": "https://github.com/phpstan/phpstan-deprecation-rules.git",
+                "distUrl": "https://api.github.com/repos/phpstan/phpstan-deprecation-rules/zipball/67bedd65c24bc72840afc45aed48b1059dd44bec",
+                "firstSeenAt": "2026-09-01T07:38:15+00:00"
             }
         },
         "phpstan/phpstan-phpunit": {
@@ -358,6 +631,15 @@
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
             }
         },
+        "phpunit/php-code-coverage": {
+            "12.5.7": {
+                "sha256": "c3fc8e01e072234b67e7847f01d934263e2a19092612c139d579598a591c2ba7",
+                "sourceReference": "186dab580576598076de6818596d12b61801880e",
+                "sourceUrl": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/186dab580576598076de6818596d12b61801880e",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
         "phpunit/phpunit": {
             "12.5.30": {
                 "sha256": "3b7fc3bd14dec6bebb24ca34d47b5bdf4a7541c44129fcae24f0d4a7f8860204",
@@ -365,6 +647,13 @@
                 "sourceUrl": "https://github.com/sebastianbergmann/phpunit.git",
                 "distUrl": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/900400a5b616d6fb306f9549f6da33ba615d3fbb",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "12.5.33": {
+                "sha256": "38a9fd9e1bb974da08914add13f841a1e73ecf96f120683c5329d8819544ff0d",
+                "sourceReference": "b98e028a26c5c5ba7e4a54be96ccf35f2914d184",
+                "sourceUrl": "https://github.com/sebastianbergmann/phpunit.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b98e028a26c5c5ba7e4a54be96ccf35f2914d184",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
             }
         },
         "prism-php/prism": {
@@ -410,6 +699,112 @@
                 "sourceUrl": "https://github.com/rectorphp/rector.git",
                 "distUrl": "https://api.github.com/repos/rectorphp/rector/zipball/ba22f8c087848278fed6b4910d4cf1108096d8d3",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "2.6.3": {
+                "sha256": "8879d418fb3d8b593f372a566dd191c0d0225a7b579999674da9e6b61a756803",
+                "sourceReference": "7e46709996a4b3dc59e1d6ecbb6a38ace335bd58",
+                "sourceUrl": "https://github.com/rectorphp/rector.git",
+                "distUrl": "https://api.github.com/repos/rectorphp/rector/zipball/7e46709996a4b3dc59e1d6ecbb6a38ace335bd58",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "sanmai/di-container": {
+            "0.2": {
+                "sha256": "77ff80cbda49e46d9b0f7c27e3204fd60b00b3c4ec34796847cccf4bfda6e9a4",
+                "sourceReference": "c14ca816bb5527e2361e3dc554a20829674c7ee1",
+                "sourceUrl": "https://github.com/sanmai/di-container.git",
+                "distUrl": "https://api.github.com/repos/sanmai/di-container/zipball/c14ca816bb5527e2361e3dc554a20829674c7ee1",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "sanmai/later": {
+            "0.1.8": {
+                "sha256": "20e3f42d271bc9d85303c5b2e109ab0df74222ad304a7ea9cc5d7cd43a27288e",
+                "sourceReference": "c56aeb8fa7fdf81eda2640a68b51884685963d13",
+                "sourceUrl": "https://github.com/sanmai/later.git",
+                "distUrl": "https://api.github.com/repos/sanmai/later/zipball/c56aeb8fa7fdf81eda2640a68b51884685963d13",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "sanmai/pipeline": {
+            "7.10": {
+                "sha256": "9825eaf2cca4a1b5b7bb9b1f5fe08f546036d3601017002a67c7993d1a36afd0",
+                "sourceReference": "a8e4e57a6031efc7a92defd13fed9c1c4c73fc71",
+                "sourceUrl": "https://github.com/sanmai/pipeline.git",
+                "distUrl": "https://api.github.com/repos/sanmai/pipeline/zipball/a8e4e57a6031efc7a92defd13fed9c1c4c73fc71",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
+        "sebastian/cli-parser": {
+            "4.2.1": {
+                "sha256": "2b22108c4c0fef57209bf7d285db27d059356c695fa718e9a237e646dbeeaa6b",
+                "sourceReference": "7d05781b13f7dec9043a629a21d086ed74582a15",
+                "sourceUrl": "https://github.com/sebastianbergmann/cli-parser.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/cli-parser/zipball/7d05781b13f7dec9043a629a21d086ed74582a15",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/comparator": {
+            "7.1.8": {
+                "sha256": "86841e308bb2a2fcdba30b86e9027576d0a57fdbe96863cec9ee0a5c14e8ea3a",
+                "sourceReference": "7c65c1e79836812819705b473a90c12399542485",
+                "sourceUrl": "https://github.com/sebastianbergmann/comparator.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/7c65c1e79836812819705b473a90c12399542485",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/environment": {
+            "8.1.2": {
+                "sha256": "1684e7b30ffaf77f405ccb27703839abb16880e476ed7024006ed9c339dc9d0a",
+                "sourceReference": "9d32c685773823b1983e256ae4ecd48a10d6e439",
+                "sourceUrl": "https://github.com/sebastianbergmann/environment.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/environment/zipball/9d32c685773823b1983e256ae4ecd48a10d6e439",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/exporter": {
+            "7.0.3": {
+                "sha256": "c207456be013cfe14d890896cb0a15290ca07d39c9ea7794b9154574e8bda84f",
+                "sourceReference": "c5e21b5de653ce0a769fb36f5cdfcb5e7a32cf23",
+                "sourceUrl": "https://github.com/sebastianbergmann/exporter.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/c5e21b5de653ce0a769fb36f5cdfcb5e7a32cf23",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/global-state": {
+            "8.0.3": {
+                "sha256": "1965cc5dc7f865815d1e17e42e34a750ec0c8dbdc2650a284b237d12ad225019",
+                "sourceReference": "b164d3274d6537ab462591c5755f76a8f5b1aae9",
+                "sourceUrl": "https://github.com/sebastianbergmann/global-state.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/b164d3274d6537ab462591c5755f76a8f5b1aae9",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/lines-of-code": {
+            "4.0.1": {
+                "sha256": "9dfad7a8811c332c387130bc09f29f3c489dfa07e562e7fa61ae1aecb778bf11",
+                "sourceReference": "d543b8ef219dcd8da262cbb958639a96bedba10e",
+                "sourceUrl": "https://github.com/sebastianbergmann/lines-of-code.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/lines-of-code/zipball/d543b8ef219dcd8da262cbb958639a96bedba10e",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "sebastian/type": {
+            "6.0.4": {
+                "sha256": "301c822219ed505cd1e38dbdbb095e22f1a4aae8cf00de06856481a037b1c664",
+                "sourceReference": "82ff822c2edc46724be9f7411d3163021f602773",
+                "sourceUrl": "https://github.com/sebastianbergmann/type.git",
+                "distUrl": "https://api.github.com/repos/sebastianbergmann/type/zipball/82ff822c2edc46724be9f7411d3163021f602773",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
+            }
+        },
+        "spatie/laravel-package-tools": {
+            "1.93.1": {
+                "sha256": "cacabba9237eb7ef66d629884399f9d5532970fcd365977eac052aeed14517d8",
+                "sourceReference": "d5552849801f2642aea710557463234b59ef65eb",
+                "sourceUrl": "https://github.com/spatie/laravel-package-tools.git",
+                "distUrl": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/d5552849801f2642aea710557463234b59ef65eb",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/clock": {
@@ -435,6 +830,13 @@
                 "sourceUrl": "https://github.com/symfony/console.git",
                 "distUrl": "https://api.github.com/repos/symfony/console/zipball/b711a8ab808b6c074c6b8caef70d0fd8d6b6d07d",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "e5512d36799b858c5b26b59c298db9924bff3d3f5d586ef22b36d4c9e5981a71",
+                "sourceReference": "d07c06839e33047e2c894a6793248f3fb66c8129",
+                "sourceUrl": "https://github.com/symfony/console.git",
+                "distUrl": "https://api.github.com/repos/symfony/console/zipball/d07c06839e33047e2c894a6793248f3fb66c8129",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
             }
         },
         "symfony/css-selector": {
@@ -462,6 +864,13 @@
                 "sourceUrl": "https://github.com/symfony/error-handler.git",
                 "distUrl": "https://api.github.com/repos/symfony/error-handler/zipball/8373921e231e190a88e2ad526951bbaa791576fa",
                 "firstSeenAt": "2026-09-01T07:20:31+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "c6e43787fd70507b03eff0cb7b3e7a6846231d0001befe6f1ab60645b368226c",
+                "sourceReference": "8b2a4289ffe5e2dc8fcf645b8e7870e1fa0325ce",
+                "sourceUrl": "https://github.com/symfony/error-handler.git",
+                "distUrl": "https://api.github.com/repos/symfony/error-handler/zipball/8b2a4289ffe5e2dc8fcf645b8e7870e1fa0325ce",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/event-dispatcher": {
@@ -489,6 +898,15 @@
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
             }
         },
+        "symfony/filesystem": {
+            "v8.1.5": {
+                "sha256": "28ee9f7129ba776ecf699b3c7a44fecf7d4e35935382e81ff7e2fbd804eef3fa",
+                "sourceReference": "6b2f4a0eeb28b5d74f90862592923a654bc629b3",
+                "sourceUrl": "https://github.com/symfony/filesystem.git",
+                "distUrl": "https://api.github.com/repos/symfony/filesystem/zipball/6b2f4a0eeb28b5d74f90862592923a654bc629b3",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
+            }
+        },
         "symfony/finder": {
             "v7.4.17": {
                 "sha256": "bc3b2bb87d438d11061b0d9a07a1b2b730e66eab5d83e259f21a001c72fb4853",
@@ -503,6 +921,13 @@
                 "sourceUrl": "https://github.com/symfony/finder.git",
                 "distUrl": "https://api.github.com/repos/symfony/finder/zipball/e2989e762c70f9490fa3a00a0ac0fae5aa97a531",
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "69efb71fce9b7e253c9a90563eb87df72e211580e2ccbb8dd5ee06a2622b3cf7",
+                "sourceReference": "8d7acede2b2ae07605783d1c43e49b5767036474",
+                "sourceUrl": "https://github.com/symfony/finder.git",
+                "distUrl": "https://api.github.com/repos/symfony/finder/zipball/8d7acede2b2ae07605783d1c43e49b5767036474",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/http-foundation": {
@@ -519,6 +944,13 @@
                 "sourceUrl": "https://github.com/symfony/http-foundation.git",
                 "distUrl": "https://api.github.com/repos/symfony/http-foundation/zipball/6a168c8fcee806b57ac020244da14293d1f9a883",
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "84d7a703d719dfa70acdbe9775f319cc8da4be0cb3c6b96ec2c078f5b2b0114b",
+                "sourceReference": "ee16f97e95cfa011a742714d7c8c8f70fe7423f4",
+                "sourceUrl": "https://github.com/symfony/http-foundation.git",
+                "distUrl": "https://api.github.com/repos/symfony/http-foundation/zipball/ee16f97e95cfa011a742714d7c8c8f70fe7423f4",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/http-kernel": {
@@ -535,6 +967,13 @@
                 "sourceUrl": "https://github.com/symfony/http-kernel.git",
                 "distUrl": "https://api.github.com/repos/symfony/http-kernel/zipball/89d8d6e7fbab3d9eda89ccb5ecdf44a74c4ec9d2",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "f7752879487a817b6befe6fb57d6334c7adf7dbe6aae330ef82349604a5ae30e",
+                "sourceReference": "0306e1e65b90023fe40de6c6be95d06396bcb2e6",
+                "sourceUrl": "https://github.com/symfony/http-kernel.git",
+                "distUrl": "https://api.github.com/repos/symfony/http-kernel/zipball/0306e1e65b90023fe40de6c6be95d06396bcb2e6",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/mailer": {
@@ -551,6 +990,13 @@
                 "sourceUrl": "https://github.com/symfony/mailer.git",
                 "distUrl": "https://api.github.com/repos/symfony/mailer/zipball/4fa583a7377f28d54e4de442fba76375b2e20a12",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "c2c33ed4fead54f942bce43c0e098719cfc5793a784772017006fcccdcc9049f",
+                "sourceReference": "89f43137da74b8f1aab37c99926482b7084f51b9",
+                "sourceUrl": "https://github.com/symfony/mailer.git",
+                "distUrl": "https://api.github.com/repos/symfony/mailer/zipball/89f43137da74b8f1aab37c99926482b7084f51b9",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/mime": {
@@ -560,6 +1006,22 @@
                 "sourceUrl": "https://github.com/symfony/mime.git",
                 "distUrl": "https://api.github.com/repos/symfony/mime/zipball/bf328d82105831db3e409195db0540ff57f27c80",
                 "firstSeenAt": "2026-09-01T07:20:31+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "b5f49d6b6c645afb84a8d8881d78ae189a7f6d88b134ffc1698345f3036b23ee",
+                "sourceReference": "1b36ccfd7ccb9ad1d6eafb9024b3dd3d9606b15f",
+                "sourceUrl": "https://github.com/symfony/mime.git",
+                "distUrl": "https://api.github.com/repos/symfony/mime/zipball/1b36ccfd7ccb9ad1d6eafb9024b3dd3d9606b15f",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
+        "symfony/options-resolver": {
+            "v8.1.0": {
+                "sha256": "998cb94f44e7753fef61320338d4ebdb4ecaa41c10c23a8b6c38e907dbd2016b",
+                "sourceReference": "88f9c561f678a02d54b897014049fa839e33ff82",
+                "sourceUrl": "https://github.com/symfony/options-resolver.git",
+                "distUrl": "https://api.github.com/repos/symfony/options-resolver/zipball/88f9c561f678a02d54b897014049fa839e33ff82",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/polyfill-ctype": {
@@ -625,6 +1087,15 @@
                 "firstSeenAt": "2026-09-01T07:20:30+00:00"
             }
         },
+        "symfony/polyfill-php82": {
+            "v1.38.1": {
+                "sha256": "3eafee3159d67ed2b1e26bf7968dd390c2921d565a8f699676b66af5486b35f3",
+                "sourceReference": "002dc0cfe5fd4ed6033d48f27d4f19a486c4b04b",
+                "sourceUrl": "https://github.com/symfony/polyfill-php82.git",
+                "distUrl": "https://api.github.com/repos/symfony/polyfill-php82/zipball/002dc0cfe5fd4ed6033d48f27d4f19a486c4b04b",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
         "symfony/polyfill-php83": {
             "v1.41.0": {
                 "sha256": "9a171f0e0c7223f26306ac51b88f8c84444d9f4aeeb822e9213ba2a110de09c3",
@@ -652,6 +1123,15 @@
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
             }
         },
+        "symfony/polyfill-php86": {
+            "v1.41.0": {
+                "sha256": "0a579c5bdf97792a8a7a7cad89641ca84006b95a5fbe8a57e14ecf2fc46028ff",
+                "sourceReference": "6bc356ed3d8dbfeea8f0de235e34d670704e880e",
+                "sourceUrl": "https://github.com/symfony/polyfill-php86.git",
+                "distUrl": "https://api.github.com/repos/symfony/polyfill-php86/zipball/6bc356ed3d8dbfeea8f0de235e34d670704e880e",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
+            }
+        },
         "symfony/polyfill-uuid": {
             "v1.37.0": {
                 "sha256": "63eb40bd0033a55c155fc4a281036f58b59e74200f8bb8ef863448983176d642",
@@ -668,6 +1148,13 @@
                 "sourceUrl": "https://github.com/symfony/process.git",
                 "distUrl": "https://api.github.com/repos/symfony/process/zipball/058d17fc284cce14efb2385783b55014a461b176",
                 "firstSeenAt": "2026-09-01T07:20:29+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "5206d128322a66b8b60b653a8f7fb94fe9e79289b4b9bf26f9695901eff12758",
+                "sourceReference": "d863f5e70d7c87abb906ac11b61f83036093000b",
+                "sourceUrl": "https://github.com/symfony/process.git",
+                "distUrl": "https://api.github.com/repos/symfony/process/zipball/d863f5e70d7c87abb906ac11b61f83036093000b",
+                "firstSeenAt": "2026-09-01T07:38:12+00:00"
             }
         },
         "symfony/routing": {
@@ -677,6 +1164,13 @@
                 "sourceUrl": "https://github.com/symfony/routing.git",
                 "distUrl": "https://api.github.com/repos/symfony/routing/zipball/ddd558991e98f693ae6bf5063cc1b0362c6bbec3",
                 "firstSeenAt": "2026-09-01T07:20:31+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "9e6c462c3501f9b9e54a26f0cbd563ed0381b2a8b997ac36af087b240fb16535",
+                "sourceReference": "3c188091b6b4fa2e4bc83a135caede12deb8576c",
+                "sourceUrl": "https://github.com/symfony/routing.git",
+                "distUrl": "https://api.github.com/repos/symfony/routing/zipball/3c188091b6b4fa2e4bc83a135caede12deb8576c",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/serializer": {
@@ -686,6 +1180,13 @@
                 "sourceUrl": "https://github.com/symfony/serializer.git",
                 "distUrl": "https://api.github.com/repos/symfony/serializer/zipball/f911b744bc24658f435ea30439cfe536f0173a3a",
                 "firstSeenAt": "2026-07-27T12:05:06+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "d8ca0eeeaf073d589ef60f883b583c0625ca402c803f8adb751542675b672deb",
+                "sourceReference": "9c064d505c661e3e17aa8999870f4fb0ed05e024",
+                "sourceUrl": "https://github.com/symfony/serializer.git",
+                "distUrl": "https://api.github.com/repos/symfony/serializer/zipball/9c064d505c661e3e17aa8999870f4fb0ed05e024",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/service-contracts": {
@@ -695,6 +1196,15 @@
                 "sourceUrl": "https://github.com/symfony/service-contracts.git",
                 "distUrl": "https://api.github.com/repos/symfony/service-contracts/zipball/c0a284bab1ed8aa0417e3d69250ab437739563a0",
                 "firstSeenAt": "2026-07-26T14:44:56+00:00"
+            }
+        },
+        "symfony/stopwatch": {
+            "v8.1.0": {
+                "sha256": "86dbbf5ab5a2e1940b3cf3230dcd7227654285b36bce14cdaa115896fff6d0f6",
+                "sourceReference": "21c07b026905d596e8379caeb115d87aa479499d",
+                "sourceUrl": "https://github.com/symfony/stopwatch.git",
+                "distUrl": "https://api.github.com/repos/symfony/stopwatch/zipball/21c07b026905d596e8379caeb115d87aa479499d",
+                "firstSeenAt": "2026-09-01T07:38:14+00:00"
             }
         },
         "symfony/string": {
@@ -738,6 +1248,13 @@
                 "sourceUrl": "https://github.com/symfony/uid.git",
                 "distUrl": "https://api.github.com/repos/symfony/uid/zipball/69d732355a139c6f8881337d28515aa01f12b8be",
                 "firstSeenAt": "2026-09-01T07:20:30+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "1d0f9cdda60cc23bd2ce3918ab06a32105d48d19a5dda8c5fe7818ff8c349d18",
+                "sourceReference": "a08aef47989093f32fe50fd11859be1b427df389",
+                "sourceUrl": "https://github.com/symfony/uid.git",
+                "distUrl": "https://api.github.com/repos/symfony/uid/zipball/a08aef47989093f32fe50fd11859be1b427df389",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/var-dumper": {
@@ -754,6 +1271,13 @@
                 "sourceUrl": "https://github.com/symfony/var-dumper.git",
                 "distUrl": "https://api.github.com/repos/symfony/var-dumper/zipball/40096a2515a979f3125c5c928603995b8664c62a",
                 "firstSeenAt": "2026-07-26T14:44:57+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "1f7d116868fe624b0b394c1b3ceb6936db5bc6945460fef5c64b0a86cb41743a",
+                "sourceReference": "61743d9bc7ab23b194527ca1be2fafd7dc93b74a",
+                "sourceUrl": "https://github.com/symfony/var-dumper.git",
+                "distUrl": "https://api.github.com/repos/symfony/var-dumper/zipball/61743d9bc7ab23b194527ca1be2fafd7dc93b74a",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "symfony/yaml": {
@@ -763,6 +1287,13 @@
                 "sourceUrl": "https://github.com/symfony/yaml.git",
                 "distUrl": "https://api.github.com/repos/symfony/yaml/zipball/8e4cdd4311683516be06944f4b85244063cdb886",
                 "firstSeenAt": "2026-07-27T12:05:05+00:00"
+            },
+            "v8.1.5": {
+                "sha256": "a5c8664ea18092cb7875f7b69680d70ec729ad9a63235a099b62acf371843c2e",
+                "sourceReference": "b3fc9e8888eeb9daddc33bfbd15d282a61f543cd",
+                "sourceUrl": "https://github.com/symfony/yaml.git",
+                "distUrl": "https://api.github.com/repos/symfony/yaml/zipball/b3fc9e8888eeb9daddc33bfbd15d282a61f543cd",
+                "firstSeenAt": "2026-09-01T07:38:13+00:00"
             }
         },
         "vlucas/phpdotenv": {
