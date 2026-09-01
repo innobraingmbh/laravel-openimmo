@@ -23,9 +23,7 @@ trait GeneratorHelper
 
     public function getGenerator(): DtoGenerator
     {
-        if (! isset($this->generator)) {
-            $this->generator = new DtoGenerator;
-        }
+        $this->generator ??= new DtoGenerator;
 
         return $this->generator;
     }
